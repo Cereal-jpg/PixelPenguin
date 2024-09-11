@@ -101,12 +101,12 @@ public class Alumno extends Persona {
     }
     
     public String verEstadoMatricula(){
-        
+        return "";
     }
     
     @Override
     public String consultarInformacion(){
-        
+        return "";
     }
     
 }

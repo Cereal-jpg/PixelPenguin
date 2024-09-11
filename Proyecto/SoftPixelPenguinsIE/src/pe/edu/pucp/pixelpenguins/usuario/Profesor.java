@@ -50,12 +50,12 @@ public class Profesor extends Persona {
     }
     
     public String verHorario(){
-        
+        return "";
     }
     
     @Override
     public String consultarInformacion(){
-        
+        return "";
     }
     
 }

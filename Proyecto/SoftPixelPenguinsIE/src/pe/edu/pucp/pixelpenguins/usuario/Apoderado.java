@@ -22,7 +22,7 @@ public class Apoderado extends Persona {
     
     @Override
     public String consultarInformacion(){
-        
+        return "";
     }
     
 }

@@ -98,7 +98,7 @@ public class InstitucionEducativa {
     
     
     public String buscarPersona(int id){
-        
+        return "";
     }
     
     public void agregarPersona(Persona persona){
@@ -110,14 +110,14 @@ public class InstitucionEducativa {
     }
     
     public String reporteDeNotasPorAlumno(){
-        
+        return "";
     }
     
     public String reporteDeNotasPorGrado(){
-        
+        return "";
     }
     
     public String reporteDePagosPorAlumno(){
-        
+        return "";
     }
 }

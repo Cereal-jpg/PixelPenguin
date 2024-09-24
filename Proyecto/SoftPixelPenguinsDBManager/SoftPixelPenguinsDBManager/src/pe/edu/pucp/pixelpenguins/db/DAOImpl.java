@@ -47,6 +47,11 @@ public abstract class DAOImpl {
         this.statement = this.conexion.createStatement();
         return this.statement.executeUpdate(sql);
     }
+    
+    protected void ejecutarConsultaEnBD(String sql) throws SQLException {
+        this.statement = this.conexion.createStatement();
+        this.resultSet = this.statement.executeQuery(sql);
+    }
 
     public int insertar() {
         Integer resultado = 0;

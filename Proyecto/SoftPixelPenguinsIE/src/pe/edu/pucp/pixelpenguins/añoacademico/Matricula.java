@@ -3,20 +3,23 @@ package pe.edu.pucp.pixelpenguins.añoacademico;
 
 import java.util.ArrayList;
 import java.util.Date;
-import pe.edu.pucp.pixelpenguins.IConsultable;
+import pe.edu.pucp.pixelpenguins.institucioneducativa.IConsultable;
 
 public class Matricula implements IConsultable{
     private int idMatricula;
     private boolean cumpleRequisitos;
     private Date fechaInicio;
     private Date fechaFin;
+    private EstadoDeMatricula estado;
     private ArrayList <Pago> pagos;
-
-    public Matricula(int idMatricula, boolean cumpleRequisitos, Date fechaInicio, Date fechaFin) {
+    
+    public Matricula(int idMatricula, boolean cumpleRequisitos, Date fechaInicio, Date fechaFin,
+            EstadoDeMatricula estado) {
         this.idMatricula = idMatricula;
         this.cumpleRequisitos = cumpleRequisitos;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
+        this.estado=estado;
         this.pagos=new ArrayList<Pago>();
     }
 
@@ -50,6 +53,14 @@ public class Matricula implements IConsultable{
 
     public void setFechaFin(Date fechaFin) {
         this.fechaFin = fechaFin;
+    }
+
+    public EstadoDeMatricula getEstado() {
+        return estado;
+    }
+
+    public void setEstado(EstadoDeMatricula estado) {
+        this.estado = estado;
     }
 
     @Override

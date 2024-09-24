@@ -1,7 +1,7 @@
-package pe.edu.pucp.PixelPenguins.Curricula;
+package pe.edu.pucp.pixelpenguins.curricula;
 
 import java.util.ArrayList;
-import pe.edu.pucp.pixelpenguins.IConsultable;
+import pe.edu.pucp.pixelpenguins.institucioneducativa.IConsultable;
 import pe.edu.pucp.pixelpenguins.usuario.Alumno;
 
 public class GradoAcademico implements IConsultable{
@@ -12,13 +12,16 @@ public class GradoAcademico implements IConsultable{
     private int vacantes;
     private ArrayList<SeccionAcademica> secciones;
     private ArrayList<Alumno> alumnos;
+    private JornadaEscolar jornada;
     
-    public GradoAcademico(int idGradoAcademico, int numeroGrado, NivelEducativo nivel, int cantidadAlumnos, int vacantes) {
+    public GradoAcademico(int idGradoAcademico, int numeroGrado, NivelEducativo nivel, int cantidadAlumnos, 
+            int vacantes,JornadaEscolar jornada) {
         this.idGradoAcademico = idGradoAcademico;
         this.numeroGrado = numeroGrado;
         this.nivel = nivel;
         this.cantidadAlumnos = cantidadAlumnos;
         this.vacantes = vacantes;
+        this.jornada=jornada;
         secciones = new ArrayList<SeccionAcademica>();
         alumnos = new ArrayList<Alumno>();
     }

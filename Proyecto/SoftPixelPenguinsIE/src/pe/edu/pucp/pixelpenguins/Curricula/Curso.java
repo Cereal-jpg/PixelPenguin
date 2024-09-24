@@ -1,7 +1,7 @@
-package pe.edu.pucp.PixelPenguins.Curricula;
+package pe.edu.pucp.pixelpenguins.curricula;
 
 import java.util.ArrayList;
-import pe.edu.pucp.pixelpenguins.IConsultable;
+import pe.edu.pucp.pixelpenguins.institucioneducativa.IConsultable;
 
 public class Curso implements IConsultable{
     private String idCurso;
@@ -10,7 +10,7 @@ public class Curso implements IConsultable{
     private int horasTotales;
     private ArrayList<Competencia> competencias;
     private ArrayList<Nota> notas;
-    private ArrayList<ClaseAcademica> clases;
+    private ArrayList<HoraAcademica> horasAcademicas;
 
     public Curso(String idCurso, String nombre, int horasPorSemana, int horasTotales) {
         this.idCurso = idCurso;
@@ -19,7 +19,7 @@ public class Curso implements IConsultable{
         this.horasTotales = horasTotales;
         competencias = new ArrayList<Competencia>();
         notas = new ArrayList<Nota>();
-        clases = new ArrayList<ClaseAcademica>();
+        horasAcademicas = new ArrayList<HoraAcademica>();
     }
 
     public String getIdCurso() {

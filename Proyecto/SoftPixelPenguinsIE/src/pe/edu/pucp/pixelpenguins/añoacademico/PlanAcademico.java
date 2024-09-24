@@ -2,25 +2,26 @@ package pe.edu.pucp.pixelpenguins.añoacademico;
 
 import java.util.ArrayList;
 import java.util.Date;
-import pe.edu.pucp.PixelPenguins.Curricula.Curso;
-import pe.edu.pucp.PixelPenguins.Curricula.GradoAcademico;
-import pe.edu.pucp.pixelpenguins.IConsultable;
+import pe.edu.pucp.pixelpenguins.curricula.Curso;
+import pe.edu.pucp.pixelpenguins.curricula.GradoAcademico;
+import pe.edu.pucp.pixelpenguins.institucioneducativa.IConsultable;
 
 public class PlanAcademico implements IConsultable{
     private int idPlanAcademico;
     private int anio;
     private Date fechaInicio;
     private Date fechaFin;
-    private Matricula matricula;
     private GradoAcademico gradoAcademico;
+    private ArrayList<Matricula> matriculas;
     private ArrayList<Curso> cursos;
 
-    public PlanAcademico(int idPlanAcademico, int anio, Date fechaInicio, Date fechaFin, Matricula matricula) {
+    public PlanAcademico(int idPlanAcademico, int anio, Date fechaInicio, Date fechaFin) {
         this.idPlanAcademico = idPlanAcademico;
         this.anio = anio;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
-        this.matricula=matricula;
+        this.matriculas=new ArrayList<Matricula>();
+        this.cursos=new ArrayList<Curso>();
     }
 
     public int getIdPlanAcademico() {
@@ -53,14 +54,6 @@ public class PlanAcademico implements IConsultable{
 
     public void setFechaFin(Date fechaFin) {
         this.fechaFin = fechaFin;
-    }
-
-    public Matricula getMatricula() {
-        return matricula;
-    }
-
-    public void setMatricula(Matricula matricula) {
-        this.matricula = matricula;
     }
 
     public GradoAcademico getGradoAcademico() {

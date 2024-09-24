@@ -2,26 +2,25 @@ package pe.edu.pucp.pixelpenguins.usuario;
 
 import java.util.ArrayList;
 import java.util.Date;
-import pe.edu.pucp.PixelPenguins.Curricula.GradoAcademico;
-import pe.edu.pucp.PixelPenguins.Curricula.SeccionAcademica;
+import pe.edu.pucp.pixelpenguins.curricula.GradoAcademico;
+import pe.edu.pucp.pixelpenguins.curricula.HoraAcademica;
 
-public class Profesor extends Persona {
+public class Profesor extends Usuario {
     
     private int codigoProfesor;
     private boolean certificadoHistorialEducativo;
     private String especialidad;
-    private SeccionAcademica seccionAsignada;
+    private ArrayList<HoraAcademica> horasAcademicas;
     private ArrayList<GradoAcademico> gradosDeDictado;
 
     public Profesor(int codigoProfesor, boolean certificadoHistorialEducativo,
-            String especialidad, SeccionAcademica seccionAsignada, int dni,
-            String nombre, Date fechaNacimiento, String direccion, String email,
-            String sexo) {
-        super(dni, nombre, fechaNacimiento, direccion, email, sexo);
+            String especialidad, int dni, String nombre, Date fechaNacimiento, 
+            String direccion, String email, String sexo,String username,String password) {
+        super(dni, nombre, fechaNacimiento, direccion, email, sexo,username,password);
         this.codigoProfesor = codigoProfesor;
         this.certificadoHistorialEducativo = certificadoHistorialEducativo;
         this.especialidad = especialidad;
-        this.seccionAsignada = seccionAsignada;
+        this.horasAcademicas=new ArrayList<>();
         this.gradosDeDictado = new ArrayList<>();
     }
     

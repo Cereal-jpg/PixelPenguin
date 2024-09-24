@@ -1,11 +1,13 @@
 package pe.edu.pucp.pixelpenguins.usuario;
 
+import java.util.ArrayList;
 import java.util.Date;
-import pe.edu.pucp.PixelPenguins.Curricula.GradoAcademico;
-import pe.edu.pucp.PixelPenguins.Curricula.SeccionAcademica;
+import pe.edu.pucp.pixelpenguins.curricula.Curso;
+import pe.edu.pucp.pixelpenguins.curricula.GradoAcademico;
+import pe.edu.pucp.pixelpenguins.curricula.SeccionAcademica;
 import pe.edu.pucp.pixelpenguins.añoacademico.Matricula;
 
-public class Alumno extends Persona {
+public class Alumno extends Usuario {
     
     private int codigoAlumno;
     private boolean certificadoDeEstudios;
@@ -15,13 +17,14 @@ public class Alumno extends Persona {
     private Matricula matricula;
     private SeccionAcademica seccion;
     private GradoAcademico grado;
+    private ArrayList<Curso> cursosMatriculado;
 
     public Alumno(int codigoAlumno, boolean certificadoDeEstudios, 
             boolean certificadoDeSalud, boolean deuda, Apoderado apoderado, 
             Matricula matricula, SeccionAcademica seccion, GradoAcademico grado, 
             int dni, String nombre, Date fechaNacimiento, String direccion, 
-            String email, String sexo) {
-        super(dni, nombre, fechaNacimiento, direccion, email, sexo);
+            String email, String sexo,String username,String password) {
+        super(dni, nombre, fechaNacimiento, direccion, email, sexo,username,password);
         this.codigoAlumno = codigoAlumno;
         this.certificadoDeEstudios = certificadoDeEstudios;
         this.certificadoDeSalud = certificadoDeSalud;
@@ -30,6 +33,7 @@ public class Alumno extends Persona {
         this.matricula = matricula;
         this.seccion = seccion;
         this.grado = grado;
+        this.cursosMatriculado=new ArrayList<>();
     }
 
     public int getCodigoAlumno() {

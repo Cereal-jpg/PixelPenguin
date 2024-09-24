@@ -1,11 +1,15 @@
-package pe.edu.pucp.PixelPenguins.Curricula;
+package pe.edu.pucp.pixelpenguins.curricula;
+
+import java.util.ArrayList;
 
 public class Competencia {
     private static int idCompetencia;
     private String descripcion;
+    private ArrayList<Nota> notas;
 
     public Competencia(String descripcion) {
         this.descripcion = descripcion;
+        this.notas=new ArrayList<>();
     }
 
     public static int getIdCompetencia() {

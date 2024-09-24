@@ -1,4 +1,4 @@
-package pe.edu.pucp.PixelPenguins.Curricula;
+package pe.edu.pucp.pixelpenguins.curricula;
 
 public class Nota {
     private int idNota;

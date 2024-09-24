@@ -1,4 +1,4 @@
-package pe.edu.pucp.PixelPenguins.Curricula;
+package pe.edu.pucp.pixelpenguins.curricula;
 
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -9,15 +9,17 @@ public class JornadaEscolar {
     private LocalTime horaFin;
     private int horasDeEstudio;
     private DiaSemana dia;
-    private ArrayList<ClaseAcademica> clasesAcademicas;
-
+    private ArrayList<HoraAcademica> clasesAcademicas;
+    private ArrayList<GradoAcademico> gradosAcademicos;
+    
     public JornadaEscolar(int idJornadaEscolar, LocalTime horaInicio, LocalTime horaFin, int horasDeEstudio, DiaSemana dia) {
         this.idJornadaEscolar = idJornadaEscolar;
         this.horaInicio = horaInicio;
         this.horaFin = horaFin;
         this.horasDeEstudio = horasDeEstudio;
         this.dia = dia;
-        clasesAcademicas = new ArrayList<ClaseAcademica>();
+        this.clasesAcademicas = new ArrayList<HoraAcademica>();
+        this.gradosAcademicos = new ArrayList<GradoAcademico>();
     }
 
     public int getIdJornadaEscolar() {

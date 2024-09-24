@@ -1,17 +1,24 @@
 package pe.edu.pucp.pixelpenguins.usuario;
 
-import java.util.Date;
 
-public class Apoderado extends Persona {
+public class Apoderado {
     
+    private int dni;
     private String telefono;
-
-    public Apoderado(String telefono, int dni, String nombre,
-            Date fechaNacimiento, String direccion, String email, String sexo) {
-        super(dni, nombre, fechaNacimiento, direccion, email, sexo);
+    
+    public Apoderado(int dni, String telefono) {
+        this.dni = dni;
         this.telefono = telefono;
     }
 
+    public int getDni() {
+        return dni;
+    }
+
+    public void setDni(int dni) {
+        this.dni = dni;
+    }
+    
     public String getTelefono() {
         return telefono;
     }
@@ -19,10 +26,4 @@ public class Apoderado extends Persona {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-    
-    @Override
-    public String consultarInformacion(){
-        return "";
-    }
-    
 }

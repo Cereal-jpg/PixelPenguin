@@ -1,8 +1,8 @@
 package pe.edu.pucp.pixelpenguins.curricula.model;
 
 import java.util.ArrayList;
-import pe.edu.pucp.pixelpenguins.institucioneducativa.IConsultable;
-import pe.edu.pucp.pixelpenguins.usuario.Alumno;
+import pe.edu.pucp.pixelpenguins.institucioneducativa.model.IConsultable;
+import pe.edu.pucp.pixelpenguins.usuario.model.Alumno;
 
 public class GradoAcademico implements IConsultable{
     private int idGradoAcademico;

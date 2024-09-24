@@ -2,7 +2,7 @@
 package pe.edu.pucp.pixelpenguins.añoacademico.model;
 
 import java.util.Date;
-import pe.edu.pucp.pixelpenguins.institucioneducativa.IConsultable;
+import pe.edu.pucp.pixelpenguins.institucioneducativa.model.IConsultable;
 
 public class Pago implements IConsultable{
     private int idPago;

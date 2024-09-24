@@ -2,9 +2,9 @@ package pe.edu.pucp.pixelpenguins.añoacademico.model;
 
 import java.util.ArrayList;
 import java.util.Date;
-import pe.edu.pucp.pixelpenguins.curricula.Curso;
-import pe.edu.pucp.pixelpenguins.curricula.GradoAcademico;
-import pe.edu.pucp.pixelpenguins.institucioneducativa.IConsultable;
+import pe.edu.pucp.pixelpenguins.curricula.model.Curso;
+import pe.edu.pucp.pixelpenguins.curricula.model.GradoAcademico;
+import pe.edu.pucp.pixelpenguins.institucioneducativa.model.IConsultable;
 
 public class PlanAcademico implements IConsultable{
     private int idPlanAcademico;

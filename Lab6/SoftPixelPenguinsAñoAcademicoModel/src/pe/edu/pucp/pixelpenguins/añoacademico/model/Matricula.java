@@ -3,7 +3,7 @@ package pe.edu.pucp.pixelpenguins.añoacademico.model;
 
 import java.util.ArrayList;
 import java.util.Date;
-import pe.edu.pucp.pixelpenguins.institucioneducativa.IConsultable;
+import pe.edu.pucp.pixelpenguins.institucioneducativa.model.IConsultable;
 
 public class Matricula implements IConsultable{
     private int idMatricula;

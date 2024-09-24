@@ -12,11 +12,11 @@ import pe.edu.pucp.pixelpenguins.curricula.model.Nota;
  * @author User
  */
 public interface NotaDAO {
-    public Integer insertar(Nota seccion);
+    public Integer insertar(Nota nota);
     
-    public Integer modificar(Nota seccion);
+    public Integer modificar(Nota nota);
     
-    public Integer eliminar(Nota seccion);
+    public Integer eliminar(Nota nota);
     
     public ArrayList<Nota> listarTodos();
     

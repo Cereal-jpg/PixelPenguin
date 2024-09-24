@@ -48,7 +48,7 @@ public abstract class DAOImpl {
         return this.statement.executeUpdate(sql);
     }
 
-    public Integer insertar() {
+    public int insertar() {
         Integer resultado = 0;
         try {
             this.iniciarTransaccion();

@@ -26,9 +26,10 @@ public class InstitucioneducativaDAOImpl implements InstitucioneducativaDAO{
             cs = con.prepareCall("{call INSERTAR_INSTITUCION(?,?,?,?,?)}");
             cs.setInt(1,institucion.getIdInstitucion());
             cs.setString(2,institucion.getNombre());
-            cs.setInt(3,institucion.getCantidadAlumnos());
-            cs.setString(4,institucion.getDireccion());
-            cs.setInt(5,institucion.getRuc());
+            cs.setString(3,institucion.getDireccion());
+            cs.setInt(4,institucion.getCantidadAlumnos());
+            cs.setInt(5,institucion.getRuc());      
+            resultado = cs.executeUpdate();
                     
             resultado = cs.executeUpdate();
         } catch (SQLException e) {
@@ -45,7 +46,26 @@ public class InstitucioneducativaDAOImpl implements InstitucioneducativaDAO{
 
     @Override
     public int modificar(InstitucionEducativa institucion) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        int resultado =0;
+          try {
+            con = DBManager.getInstance().getConnection();
+            cs = con.prepareCall("{call MODIFICAR_INSTITUCION(?,?,?,?,?)}");
+            cs.setInt(1,institucion.getIdInstitucion());
+            cs.setString(2,institucion.getNombre());
+            cs.setString(3,institucion.getDireccion());
+            cs.setInt(4,institucion.getCantidadAlumnos());
+            cs.setInt(5,institucion.getRuc());      
+            resultado = cs.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        } finally{
+            try {
+                con.close();
+            } catch (SQLException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        return resultado;
     }
 
     @Override

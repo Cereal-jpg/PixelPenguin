@@ -30,8 +30,6 @@ public class InstitucioneducativaDAOImpl implements InstitucioneducativaDAO{
             cs.setInt(4,institucion.getCantidadAlumnos());
             cs.setInt(5,institucion.getRuc());      
             resultado = cs.executeUpdate();
-                    
-            resultado = cs.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         } finally{

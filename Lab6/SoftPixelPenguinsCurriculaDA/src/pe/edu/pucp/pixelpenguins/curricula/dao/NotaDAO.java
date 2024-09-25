@@ -20,5 +20,5 @@ public interface NotaDAO {
     
     public ArrayList<Nota> listarTodos();
     
-    public Nota obtenerPorId(String idNota);
+    public Nota obtenerPorId(Integer idNota);
 }

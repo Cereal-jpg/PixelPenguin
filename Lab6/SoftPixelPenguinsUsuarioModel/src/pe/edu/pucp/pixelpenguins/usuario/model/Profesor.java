@@ -24,6 +24,10 @@ public class Profesor extends Usuario {
         this.gradosDeDictado = new ArrayList<>();
     }
     
+    public Profesor(){
+        super();
+    }
+    
     public int getCodigoProfesor() {
         return codigoProfesor;
     }

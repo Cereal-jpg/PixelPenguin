@@ -9,6 +9,6 @@ public interface EquipoAdministrativoDAO {
     public int modificar(EquipoAdministrativo equipoAdministrativo);
     public int eliminar(EquipoAdministrativo equipoAdministrativo);
     public ArrayList<EquipoAdministrativo> listarTodos();
-    public EquipoAdministrativo obtenerPorId(String a);
+    public EquipoAdministrativo obtenerPorId(int id);
     
 }

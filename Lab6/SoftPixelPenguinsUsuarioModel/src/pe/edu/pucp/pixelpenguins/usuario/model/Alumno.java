@@ -2,7 +2,7 @@ package pe.edu.pucp.pixelpenguins.usuario.model;
 
 import java.util.ArrayList;
 import java.util.Date;
-import pe.edu.pucp.pixelpenguins.añoacademico.model.Matricula;
+import pe.edu.pucp.pixelpenguins.anioacademico.model.Matricula;
 import pe.edu.pucp.pixelpenguins.curricula.model.Curso;
 import pe.edu.pucp.pixelpenguins.curricula.model.GradoAcademico;
 import pe.edu.pucp.pixelpenguins.curricula.model.SeccionAcademica;
@@ -35,7 +35,11 @@ public class Alumno extends Usuario {
         this.grado = grado;
         this.cursosMatriculado=new ArrayList<>();
     }
-
+    
+    public Alumno(){
+        super();
+    }
+    
     public int getCodigoAlumno() {
         return codigoAlumno;
     }
@@ -71,9 +75,17 @@ public class Alumno extends Usuario {
     public Apoderado getApoderado() {
         return apoderado;
     }
+    
+    public Integer getDniApoderado(){
+        return null;
+    }
 
     public void setApoderado(Apoderado apoderado) {
         this.apoderado = apoderado;
+    }
+    
+    public void setApoderado(int dni){
+        this.apoderado.setDni(dni);
     }
 
     public Matricula getMatricula() {
@@ -87,11 +99,19 @@ public class Alumno extends Usuario {
     public SeccionAcademica getSeccion() {
         return seccion;
     }
+    
+    public Integer getIDSeccion(){
+        return null;
+    }
 
     public void setSeccion(SeccionAcademica seccion) {
         this.seccion = seccion;
     }
-
+    
+    public void setSeccion(int id){
+        this.seccion.setIdSeccionAcademica(id);
+    }
+    
     public GradoAcademico getGrado() {
         return grado;
     }

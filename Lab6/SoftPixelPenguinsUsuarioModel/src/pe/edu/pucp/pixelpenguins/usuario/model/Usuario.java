@@ -25,7 +25,10 @@ public abstract class Usuario implements IConsultable {
         this.username=username;
         this.passsword=password;
     }
-
+    
+    public Usuario(){
+        
+    }
     public int getDni() {
         return dni;
     }

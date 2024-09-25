@@ -2,7 +2,7 @@
 package pe.edu.pucp.pixelpenguins.usuario.bo;
 
 import java.util.Date;
-import pe.edu.pucp.pixelpenguins.añoacademico.model.Matricula;
+import pe.edu.pucp.pixelpenguins.anioacademico.model.Matricula;
 import pe.edu.pucp.pixelpenguins.curricula.model.GradoAcademico;
 import pe.edu.pucp.pixelpenguins.curricula.model.SeccionAcademica;
 import pe.edu.pucp.pixelpenguins.usuario.dao.AlumnoDAO;

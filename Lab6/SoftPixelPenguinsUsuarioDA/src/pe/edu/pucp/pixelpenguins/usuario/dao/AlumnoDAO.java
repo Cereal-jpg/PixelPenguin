@@ -16,5 +16,5 @@ public interface AlumnoDAO {
     public int modificar(Alumno equipoAdministrativo);
     public int eliminar(Alumno equipoAdministrativo);
     public ArrayList<Alumno> listarTodos();
-    public Alumno obtenerPorId(String a);
+    public Alumno obtenerPorId(int codigo);
 }

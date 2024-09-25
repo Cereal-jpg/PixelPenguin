@@ -9,5 +9,5 @@ public interface ProfesorDAO {
     public int modificar(Profesor profesor);
     public int eliminar(Profesor profesor);
     public ArrayList<Profesor> listarTodos();
-    public Profesor obtenerPorId(String a);
+    public Profesor obtenerPorId(int id);
 }

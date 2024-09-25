@@ -21,5 +21,5 @@ public interface CompetenciaDAO {
     
     public ArrayList<Competencia> listarTodos();
     
-    public Competencia obtenerPorId(String idCompetencia);
+    public Competencia obtenerPorId(int idCompetencia);
 }

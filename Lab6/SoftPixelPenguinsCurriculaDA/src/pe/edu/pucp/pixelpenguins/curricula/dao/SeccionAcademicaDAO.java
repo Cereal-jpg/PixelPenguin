@@ -21,5 +21,5 @@ public interface SeccionAcademicaDAO {
     
     public ArrayList<SeccionAcademica> listarTodos();
     
-    public SeccionAcademica obtenerPorId(String idSeccionAcademica);
+    public SeccionAcademica obtenerPorId(Integer idSeccionAcademica);
 }

@@ -2,18 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package pe.edu.pucp.pixelpenguins.añoacademico.daoimpl;
+package pe.edu.pucp.pixelpenguins.anioacademico.daoimpl;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import pe.edu.pucp.pixelpenguins.añoacademico.dao.PagoDAO;
-import pe.edu.pucp.pixelpenguins.añoacademico.model.EstadoDePago;
-import pe.edu.pucp.pixelpenguins.añoacademico.model.Pago;
-import pe.edu.pucp.pixelpenguins.añoacademico.model.TipoDeComprobante;
-import pe.edu.pucp.pixelpenguins.añoacademico.model.TipoDePago;
+import pe.edu.pucp.pixelpenguins.anioacademico.dao.PagoDAO;
+import pe.edu.pucp.pixelpenguins.anioacademico.model.EstadoDePago;
+import pe.edu.pucp.pixelpenguins.anioacademico.model.Pago;
+import pe.edu.pucp.pixelpenguins.anioacademico.model.TipoDeComprobante;
+import pe.edu.pucp.pixelpenguins.anioacademico.model.TipoDePago;
 import pe.edu.pucp.pixelpenguins.config.DBManager;
 
 public class PagoDAOImpl implements PagoDAO{

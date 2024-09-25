@@ -1,17 +1,16 @@
-package pe.edu.pucp.pixelpenguins.añoacademico.bo;
+package pe.edu.pucp.pixelpenguins.anioacademico.bo;
 
 import java.util.ArrayList;
 import java.util.Date;
-import pe.edu.pucp.pixelpenguins.añoacademico.dao.PlanAcademicoDAO;
-import pe.edu.pucp.pixelpenguins.añoacademico.daoimpl.PlanAcademicoDAOImpl;
-import pe.edu.pucp.pixelpenguins.añoacademico.model.PlanAcademico;
+import pe.edu.pucp.pixelpenguins.anioacademico.dao.PlanAcademicoDAO;
+import pe.edu.pucp.pixelpenguins.anioacademico.daoimpl.PlanAcademicoDAOImpl;
+import pe.edu.pucp.pixelpenguins.anioacademico.model.PlanAcademico;
 
 public class PlanAcademicoBO {
     private PlanAcademicoDAO planAcademicoDAO;
     
     public PlanAcademicoBO(){
         this.planAcademicoDAO = new PlanAcademicoDAOImpl();
-        
     }
     
     public int insertar(int idPlanAcademico, int año, Date fechaInicio, Date fechaFin,Integer idInstitucion){

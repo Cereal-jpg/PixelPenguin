@@ -1,14 +1,14 @@
-package pe.edu.pucp.pixelpenguins.añoacademico.bo;
+package pe.edu.pucp.pixelpenguins.anioacademico.bo;
 
 
 import java.util.ArrayList;
 import java.util.Date;
-import pe.edu.pucp.pixelpenguins.añoacademico.dao.PagoDAO;
-import pe.edu.pucp.pixelpenguins.añoacademico.daoimpl.PagoDAOImpl;
-import pe.edu.pucp.pixelpenguins.añoacademico.model.EstadoDePago;
-import pe.edu.pucp.pixelpenguins.añoacademico.model.Pago;
-import pe.edu.pucp.pixelpenguins.añoacademico.model.TipoDeComprobante;
-import pe.edu.pucp.pixelpenguins.añoacademico.model.TipoDePago;
+import pe.edu.pucp.pixelpenguins.anioacademico.dao.PagoDAO;
+import pe.edu.pucp.pixelpenguins.anioacademico.daoimpl.PagoDAOImpl;
+import pe.edu.pucp.pixelpenguins.anioacademico.model.EstadoDePago;
+import pe.edu.pucp.pixelpenguins.anioacademico.model.Pago;
+import pe.edu.pucp.pixelpenguins.anioacademico.model.TipoDeComprobante;
+import pe.edu.pucp.pixelpenguins.anioacademico.model.TipoDePago;
 
 public class PagoBO {
     private PagoDAO pagoDAO;

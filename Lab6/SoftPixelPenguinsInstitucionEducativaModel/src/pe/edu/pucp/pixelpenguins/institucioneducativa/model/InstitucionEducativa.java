@@ -6,7 +6,7 @@ package pe.edu.pucp.pixelpenguins.institucioneducativa.model;
 
 import java.util.ArrayList;
 
-import pe.edu.pucp.pixelpenguins.añoacademico.model.PlanAcademico;
+import pe.edu.pucp.pixelpenguins.anioacademico.model.PlanAcademico;
 import pe.edu.pucp.pixelpenguins.curricula.model.GradoAcademico;
 import pe.edu.pucp.pixelpenguins.usuario.model.Usuario;
 

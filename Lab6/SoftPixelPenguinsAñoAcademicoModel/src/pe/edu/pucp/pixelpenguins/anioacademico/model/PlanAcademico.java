@@ -1,4 +1,4 @@
-package pe.edu.pucp.pixelpenguins.añoacademico.model;
+package pe.edu.pucp.pixelpenguins.anioacademico.model;
 
 import java.util.ArrayList;
 import java.util.Date;

@@ -33,6 +33,10 @@ public class InstitucionEducativa {
         this.ruc = ruc;
     }
 
+    public InstitucionEducativa() {
+        
+    }
+
     public int getIdInstitucion() {
         return idInstitucion;
     }

@@ -90,7 +90,35 @@ public class InstitucioneducativaDAOImpl implements InstitucioneducativaDAO{
 
     @Override
     public ArrayList<InstitucionEducativa> listarTodos() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        ArrayList<InstitucionEducativa> institutosE = new ArrayList<>();
+        try {
+               
+            con = DBManager.getInstance().getConnection();
+            cs = con.prepareCall("{call LISTAR_TODOS_INSTITUCION()}");
+            rs = cs.executeQuery();
+            
+            while(rs.next()){
+                InstitucionEducativa instituto = new InstitucionEducativa();
+                instituto.setIdInstitucion(rs.getInt("idInstitucion"));
+                instituto.setNombre(rs.getString("nombre"));
+                instituto.setDireccion(rs.getString("direccion")); // Asegúrate de que tu modelo tenga este campo
+                instituto.setCantidadAlumnos(rs.getInt("cantidadAlumnos")); // Asegúrate de tener este campo también
+                instituto.setRuc(rs.getInt("ruc"));
+                
+                institutosE.add(instituto);
+            }
+                
+            
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        } finally{
+            try {
+                con.close();
+            } catch (SQLException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        return institutosE;
     }
     
     

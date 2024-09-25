@@ -158,6 +158,7 @@ CREATE TABLE Pago (
     monto DOUBLE NOT NULL,
     tipoPago VARCHAR(30) NOT NULL,
     estado VARCHAR(30) NOT NULL,
+    tipoDeComprobante VARCHAR(30) NOT NULL,
     idMatricula INT NOT NULL,
     FOREIGN KEY (idMatricula) REFERENCES Matricula(idMatricula)
 );

@@ -24,6 +24,7 @@ public class MatriculaDAOImpl implements MatriculaDAO {
     public Integer insertar(Matricula matricula) {
         int resultado =0;
           try {
+            con = DBManager.getInstance().getConnection();
             cs = con.prepareCall("{call INSERTAR_MATRICULA(?,?,?,?,?,?,?,?)}");
             cs.setInt(1,matricula.getIdMatricula());
             cs.setBoolean(2,matricula.isCumpleRequisitos());

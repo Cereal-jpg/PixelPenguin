@@ -27,6 +27,9 @@ public class Pago implements IConsultable{
         this.idMatricula = idMatricula;
     }
 
+    public Pago() {}
+    
+
     public int getIdPago() {
         return idPago;
     }

@@ -3,26 +3,29 @@ package pe.edu.pucp.pixelpenguins.añoacademico.model;
 import java.util.ArrayList;
 import java.util.Date;
 import pe.edu.pucp.pixelpenguins.curricula.model.Curso;
-import pe.edu.pucp.pixelpenguins.curricula.model.GradoAcademico;
 import pe.edu.pucp.pixelpenguins.institucioneducativa.model.IConsultable;
 
 public class PlanAcademico implements IConsultable{
     private int idPlanAcademico;
-    private int anio;
+    private int año;
     private Date fechaInicio;
     private Date fechaFin;
-    private GradoAcademico gradoAcademico;
+    private Integer idInstitucion;
     private ArrayList<Matricula> matriculas;
     private ArrayList<Curso> cursos;
 
-    public PlanAcademico(int idPlanAcademico, int anio, Date fechaInicio, Date fechaFin) {
+    public PlanAcademico(int idPlanAcademico, int año, Date fechaInicio, Date fechaFin,Integer idInstitucion) {
         this.idPlanAcademico = idPlanAcademico;
-        this.anio = anio;
+        this.año = año;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
+        this.idInstitucion = idInstitucion;
         this.matriculas=new ArrayList<Matricula>();
         this.cursos=new ArrayList<Curso>();
     }
+
+    public PlanAcademico() {}
+    
 
     public int getIdPlanAcademico() {
         return idPlanAcademico;
@@ -32,12 +35,12 @@ public class PlanAcademico implements IConsultable{
         this.idPlanAcademico = idPlanAcademico;
     }
 
-    public int getAnio() {
-        return anio;
+    public int getAño() {
+        return año;
     }
 
-    public void setAnio(int anio) {
-        this.anio = anio;
+    public void setAño(int año) {
+        this.año = año;
     }
 
     public Date getFechaInicio() {
@@ -56,13 +59,14 @@ public class PlanAcademico implements IConsultable{
         this.fechaFin = fechaFin;
     }
 
-    public GradoAcademico getGradoAcademico() {
-        return gradoAcademico;
+    public Integer getIdInstitucion() {
+        return idInstitucion;
     }
 
-    public void setGradoAcademico(GradoAcademico gradoAcademico) {
-        this.gradoAcademico = gradoAcademico;
+    public void setIdInstitucion(Integer idInstitucion) {
+        this.idInstitucion = idInstitucion;
     }
+    
 
     @Override
     public String consultarInformacion() {

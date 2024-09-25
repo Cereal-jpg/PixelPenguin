@@ -20,5 +20,5 @@ public interface PlanAcademicoDAO {
     
     public ArrayList<PlanAcademico> listarTodos();
     
-    public PlanAcademico obtenerPorId(String idPlanAcademico);
+    public PlanAcademico obtenerPorId(int idPlanAcademico);
 }

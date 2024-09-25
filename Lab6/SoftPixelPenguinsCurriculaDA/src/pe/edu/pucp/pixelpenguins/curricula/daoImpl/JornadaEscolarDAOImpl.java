@@ -45,12 +45,32 @@ public class JornadaEscolarDAOImpl implements JornadaEscolarDAO{
         int resultado =0;
           try {
             con = DBManager.getInstance().getConnection();
-            cs = con.prepareCall("{call MODIFICAR_JORNADAESCOLAR(?,?,?,?,?)}");
+            CallableStatement cs = con.prepareCall("{call MODIFICAR_JORNADAESCOLAR(?,?,?,?,?)}");
             cs.setInt(1, jornadaEscolar.getIdJornadaEscolar());
-            cs.setTime(2, Time.valueOf(jornadaEscolar.getHoraInicio()));
-            cs.setTime(3, Time.valueOf(jornadaEscolar.getHoraFin()));
-            cs.setInt(4, jornadaEscolar.getHorasDeEstudio());
-            cs.setString(5, jornadaEscolar.getDia().toString());     
+
+            if (jornadaEscolar.getHoraInicio() != null) {
+                cs.setTime(2, Time.valueOf(jornadaEscolar.getHoraInicio()));
+            } else {
+                cs.setNull(2, java.sql.Types.TIME);
+            }
+
+            if (jornadaEscolar.getHoraFin() != null) {
+                cs.setTime(3, Time.valueOf(jornadaEscolar.getHoraFin()));
+            } else {
+                cs.setNull(3, java.sql.Types.TIME);
+            }
+
+            if (jornadaEscolar.getHorasDeEstudio() != -1) {
+                cs.setInt(4, jornadaEscolar.getHorasDeEstudio());
+            } else {
+                cs.setNull(4, java.sql.Types.INTEGER); 
+            }
+
+            if (jornadaEscolar.getDia() != null) {
+                cs.setString(5, jornadaEscolar.getDia().toString());
+            } else {
+                cs.setNull(5, java.sql.Types.VARCHAR); 
+            }
             resultado = cs.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e.getMessage());

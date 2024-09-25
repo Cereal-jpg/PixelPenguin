@@ -2,6 +2,7 @@ package pe.edu.pucp.softiepixelpenguins.program;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.Date;
 import pe.edu.pucp.pixelpenguins.anioacademico.bo.MatriculaBO;
@@ -13,6 +14,9 @@ import pe.edu.pucp.pixelpenguins.anioacademico.model.Matricula;
 import pe.edu.pucp.pixelpenguins.anioacademico.model.PlanAcademico;
 import pe.edu.pucp.pixelpenguins.anioacademico.model.TipoDeComprobante;
 import pe.edu.pucp.pixelpenguins.anioacademico.model.TipoDePago;
+import pe.edu.pucp.pixelpenguins.curricula.bo.JornadaEscolarBO;
+import pe.edu.pucp.pixelpenguins.curricula.model.DiaSemana;
+import pe.edu.pucp.pixelpenguins.curricula.model.JornadaEscolar;
 import pe.edu.pucp.pixelpenguins.institucioneducativa.bo.InstitucioneducativaBO;
 import pe.edu.pucp.pixelpenguins.institucioneducativa.model.InstitucionEducativa;
 
@@ -22,8 +26,24 @@ public class SoftIEPixelPenguinsTest {
         
         InstitucioneducativaBO institucionBO = new InstitucioneducativaBO();
         MatriculaBO matriculaBO = new MatriculaBO();
+        JornadaEscolarBO jornadaBO = new JornadaEscolarBO();
         PlanAcademicoBO planAcademicoBO = new PlanAcademicoBO();
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        
+//        if(jornadaBO.insertar(1, LocalTime.of(8,0), LocalTime.of(15,0), 6, DiaSemana.LUNES)==1)
+//            System.out.println("La jornada fue agregada correctamente");
+
+//        if(jornadaBO.modificar(1,null, null, -1, DiaSemana.MARTES)==1)
+//            System.out.println("La jornada fue modificada correctamente");
+
+//        ArrayList<JornadaEscolar> listJornada = jornadaBO.listarTodos();
+//            System.out.println(listJornada.get(0).getDia().toString());
+
+//        JornadaEscolar jornada = jornadaBO.obtenerPorId(1);
+//        System.out.println(jornada.getDia().toString());
+
+        if(jornadaBO.eliminar(1, null, null, -1, null)==1)
+            System.out.println("La jornada fue eliminada correctamente");
         
 //        if(matriculaBO.insertar(1, true, sdf.parse("02/21/2024"), sdf.parse("02/28/2024"), EstadoDeMatricula.PENDIENTE)==1)
 //            System.out.println("La matricula fue agregada correctamente");

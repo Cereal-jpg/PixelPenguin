@@ -423,7 +423,7 @@ BEGIN
         idSeccionAcademica, 
         seccion, 
         aula, 
-        idGradoAcademico, 
+        idGradoAcademico
     FROM 
         SeccionAcademica
     WHERE 
@@ -506,4 +506,86 @@ BEGIN
         idCompetencia = p_idCompetencia;
 END $$
 
+DELIMITER ;
+
+DELIMITER //
+
+CREATE PROCEDURE INSERTAR_JORNADAESCOLAR(
+    IN p_idJornadaEscolar INT,
+    IN p_horaInicio TIME,
+    IN p_horaFin TIME,
+    IN p_horasDeEstudio INT,
+    IN p_dia VARCHAR(20) 
+)
+BEGIN
+    INSERT INTO JornadaEscolar (idJornadaEscolar, horaInicio, horaFin, horasDeEstudio, dia)
+    VALUES (p_idJornadaEscolar, p_horaInicio, p_horaFin, p_horasDeEstudio, p_dia);
+END //
+
+DELIMITER ;
+drop procedure INSERTAR_JORNADAESCOLAR;
+
+DELIMITER //
+
+DELIMITER $$
+CREATE PROCEDURE MODIFICAR_JORNADAESCOLAR(
+    IN p_id_jornada_escolar INT,
+    IN p_hora_inicio TIME,
+    IN p_hora_fin TIME,
+    IN p_horas_de_estudio INT,
+    IN p_dia VARCHAR(20)
+)
+BEGIN
+    DECLARE v_hora_inicio TIME;
+    DECLARE v_hora_fin TIME;
+    DECLARE v_horas_de_estudio INT;
+    DECLARE v_dia VARCHAR(20);
+
+    SELECT horaInicio, horaFin, horasDeEstudio, dia
+    INTO v_hora_inicio, v_hora_fin, v_horas_de_estudio, v_dia
+    FROM JornadaEscolar
+    WHERE idJornadaEscolar = p_id_jornada_escolar;
+
+    UPDATE JornadaEscolar
+    SET horaInicio = IF(p_hora_inicio IS NOT NULL, p_hora_inicio, v_hora_inicio),
+        horaFin = IF(p_hora_fin IS NOT NULL, p_hora_fin, v_hora_fin),
+        horasDeEstudio = IF(p_horas_de_estudio != -1, p_horas_de_estudio, v_horas_de_estudio),
+        dia = IF(p_dia IS NOT NULL, p_dia, v_dia)
+    WHERE idJornadaEscolar = p_id_jornada_escolar;
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE LISTAR_TODOS_JORNADAESCOLAR()
+BEGIN
+    SELECT 
+        idJornadaEscolar,
+        horaInicio,
+        horaFin,
+        horasDeEstudio,
+        dia
+    FROM JornadaEscolar;
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE LISTAR_JORNADAESCOLAR_POR_ID(IN p_idJornadaEscolar INT)
+BEGIN
+    SELECT 
+        idJornadaEscolar,
+        horaInicio,
+        horaFin,
+        horasDeEstudio,
+        dia
+    FROM JornadaEscolar
+    WHERE idJornadaEscolar = p_idJornadaEscolar;
+END$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE ELIMINAR_JORNADAESCOLAR(IN p_idJornadaEscolar INT)
+BEGIN
+    DELETE FROM JornadaEscolar
+    WHERE idJornadaEscolar = p_idJornadaEscolar;
+END$$
 DELIMITER ;

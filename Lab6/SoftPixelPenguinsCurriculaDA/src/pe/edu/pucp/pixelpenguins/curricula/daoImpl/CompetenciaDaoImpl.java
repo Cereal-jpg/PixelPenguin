@@ -127,7 +127,7 @@ public class CompetenciaDaoImpl implements CompetenciaDAO{
                 Competencia competencia = null;
          try {
             con = DBManager.getInstance().getConnection();
-            cs = con.prepareCall("{call LISTAR_INSTITUCION(?)}");
+            cs = con.prepareCall("{call LISTAR_COMPETENCIA_POR_ID(?)}");
             cs.setInt(1,idCompetencia);    
             rs = cs.executeQuery();
             

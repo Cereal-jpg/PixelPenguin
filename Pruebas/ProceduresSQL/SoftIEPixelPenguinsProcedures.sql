@@ -430,4 +430,80 @@ BEGIN
         idSeccionAcademica = p_id_seccion_academica;
 END //
 
+
+
+DELIMITER $$
+
+CREATE PROCEDURE INSERTAR_COMPETENCIA(
+    IN p_id_competencia INT,
+    IN p_descruocuib VARCHAR(100),
+    IN p_idcurso VARCHAR(200)
+)
+BEGIN
+    INSERT INTO Competencias (idCompetencia, descripcion, idCurso)
+    VALUES (p_id_competencia, p_descruocuib, p_idcurso);
+END $$
+
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE MODIFICAR_COMPETENCIA(
+    IN p_id_competencia INT,
+    IN p_descruocuib VARCHAR(100),
+    IN p_idcurso VARCHAR(200)
+)
+BEGIN
+    DECLARE v_descruocuib VARCHAR(200);
+    DECLARE v_idcurso INT;
+    
+    SELECT  descripcion, idCurso
+    INTO  p_descruocuib, p_idcurso
+    FROM Competencias
+    WHERE idCompetencia = p_id_competencia;
+
+    UPDATE Competencias
+    SET descripcion = IFNULL(p_descruocuib, v_descruocuib),
+        idCurso = IF(p_idcurso != -1, p_idcurso, idCurso)
+    WHERE idInstitucion = p_id_institucion;
+END $$
+DELIMITER ;
+
+DELIMITER $$
+
+CREATE PROCEDURE ELIMINAR_COMPETENCIA(
+	IN p_id_competencia INT
+)
+BEGIN 
+	DELETE FROM Competencias
+    WHERE idCompetencia =p_id_competencia;
+END $$
+
+DELIMITER ;
+
+DELIMITER $$
+
+CREATE PROCEDURE LISTAR_TODOS_COMPETENCIA()
+BEGIN
+	SELECT idCompetencia, descripcion, idCurso
+    FROM Competencias;
+END$$
+
+DELIMITER ;
+
+DELIMITER $$
+
+CREATE PROCEDURE LISTAR_COMPETENCIA_POR_ID(
+    IN p_idCompetencia INT
+)
+BEGIN
+    SELECT 
+        idCompetencia, 
+        descripcion, 
+        idCurso
+    FROM 
+        Competencias
+    WHERE 
+        idCompetencia = p_idCompetencia;
+END $$
+
 DELIMITER ;

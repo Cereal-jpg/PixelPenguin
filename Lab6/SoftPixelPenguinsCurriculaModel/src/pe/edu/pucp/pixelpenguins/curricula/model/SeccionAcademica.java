@@ -5,6 +5,10 @@ public class SeccionAcademica {
     private char seccion;
     private String aula;
     private GradoAcademico grado;
+    
+    public SeccionAcademica(){
+        
+    }
 
     public SeccionAcademica(int idSeccionAcademica, char seccion, String aula, GradoAcademico grado) {
         this.idSeccionAcademica = idSeccionAcademica;
@@ -44,5 +48,11 @@ public class SeccionAcademica {
     public void setGrado(GradoAcademico grado) {
         this.grado = grado;
     }
+    
+    public int getIdGrado(){
+        return grado.getIdGradoAcademico();
+    }
+    
+
     
 }

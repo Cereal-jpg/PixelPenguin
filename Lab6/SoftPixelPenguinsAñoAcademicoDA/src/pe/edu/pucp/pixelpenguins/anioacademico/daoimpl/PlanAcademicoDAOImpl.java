@@ -47,9 +47,18 @@ public class PlanAcademicoDAOImpl implements PlanAcademicoDAO {
             cs = con.prepareCall("{call MODIFICAR_PLAN_ACADEMICO(?,?,?,?,?)}");
             cs.setInt(1, planAcademico.getIdPlanAcademico());
             cs.setInt(2, planAcademico.getAño());
-            cs.setDate(3, new java.sql.Date(planAcademico.getFechaInicio().getTime()));
-            cs.setDate(4, new java.sql.Date(planAcademico.getFechaFin().getTime()));
-            cs.setObject(5, planAcademico.getIdInstitucion()); 
+            if (planAcademico.getFechaInicio() != null) {
+                cs.setDate(3, new java.sql.Date(planAcademico.getFechaInicio().getTime()));
+            } else {
+                cs.setNull(3, java.sql.Types.DATE);
+            }
+            if (planAcademico.getFechaFin() != null) {
+                cs.setDate(4, new java.sql.Date(planAcademico.getFechaFin().getTime()));
+            } else {
+                cs.setNull(4, java.sql.Types.DATE);
+            }
+            cs.setObject(5, planAcademico.getIdInstitucion());
+            resultado = cs.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         } finally{

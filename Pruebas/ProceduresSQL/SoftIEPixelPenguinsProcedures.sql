@@ -245,3 +245,74 @@ BEGIN
     WHERE idPago = p_idPago;
 END $$
 DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE INSERTAR_PLAN_ACADEMICO(
+    IN p_id_plan_academico INT,
+    IN p_año INT,
+    IN p_fecha_inicio DATE,
+    IN p_fecha_fin DATE,
+    IN p_id_institucion INT
+)
+BEGIN
+    INSERT INTO PlanAcademico (idPlanAcademico, año, fechaInicio, fechaFin, idInstitucion)
+    VALUES (p_id_plan_academico, p_año, p_fecha_inicio, p_fecha_fin, p_id_institucion);
+END $$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE MODIFICAR_PLAN_ACADEMICO(
+    IN p_id_plan_academico INT,
+    IN p_año INT,
+    IN p_fecha_inicio DATE,
+    IN p_fecha_fin DATE,
+    IN p_id_institucion INT
+)
+BEGIN
+    DECLARE v_año INT;
+    DECLARE v_fecha_inicio DATE;
+    DECLARE v_fecha_fin DATE;
+    DECLARE v_id_institucion INT;
+
+    SELECT año, fechaInicio, fechaFin, idInstitucion
+    INTO v_año, v_fecha_inicio, v_fecha_fin, v_id_institucion
+    FROM PlanAcademico
+    WHERE idPlanAcademico = p_id_plan_academico;
+
+    UPDATE PlanAcademico
+    SET año = IF(p_año != -1, p_año, v_año),
+        fechaInicio = IFNULL(p_fecha_inicio, v_fecha_inicio),
+        fechaFin = IFNULL(p_fecha_fin, v_fecha_fin),
+        idInstitucion = IF(p_id_institucion != -1, p_id_institucion, v_id_institucion)
+    WHERE idPlanAcademico = p_id_plan_academico;
+END $$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE ELIMINAR_PLAN_ACADEMICO(
+    IN p_id_plan_academico INT
+)
+BEGIN
+    DELETE FROM PlanAcademico
+    WHERE idPlanAcademico = p_id_plan_academico;
+END $$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE LISTAR_TODOS_PLANES_ACADEMICOS()
+BEGIN
+    SELECT idPlanAcademico, año, fechaInicio, fechaFin, idInstitucion 
+    FROM PlanAcademico;
+END $$
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE LISTAR_PLAN_POR_ID(
+    IN p_idPlanAcademico INT
+)
+BEGIN
+    SELECT idPlanAcademico, año, fechaInicio, fechaFin, idInstitucion 
+    FROM PlanAcademico
+    WHERE idPlanAcademico = p_idPlanAcademico;
+END $$
+DELIMITER ;

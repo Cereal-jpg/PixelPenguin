@@ -101,8 +101,8 @@ public class InstitucioneducativaDAOImpl implements InstitucioneducativaDAO{
                 InstitucionEducativa instituto = new InstitucionEducativa();
                 instituto.setIdInstitucion(rs.getInt("idInstitucion"));
                 instituto.setNombre(rs.getString("nombre"));
-                instituto.setDireccion(rs.getString("direccion")); // Asegúrate de que tu modelo tenga este campo
-                instituto.setCantidadAlumnos(rs.getInt("cantidadAlumnos")); // Asegúrate de tener este campo también
+                instituto.setDireccion(rs.getString("direccion")); 
+                instituto.setCantidadAlumnos(rs.getInt("cantidadAlumnos")); 
                 instituto.setRuc(rs.getInt("ruc"));
                 
                 institutosE.add(instituto);
@@ -134,8 +134,8 @@ public class InstitucioneducativaDAOImpl implements InstitucioneducativaDAO{
                 instituto = new InstitucionEducativa();
                 instituto.setIdInstitucion(rs.getInt("idInstitucion"));
                 instituto.setNombre(rs.getString("nombre"));
-                instituto.setDireccion(rs.getString("direccion")); // Asegúrate de que tu modelo tenga este campo
-                instituto.setCantidadAlumnos(rs.getInt("cantidadAlumnos")); // Asegúrate de tener este campo también
+                instituto.setDireccion(rs.getString("direccion")); 
+                instituto.setCantidadAlumnos(rs.getInt("cantidadAlumnos"));
                 instituto.setRuc(rs.getInt("ruc"));
             }
         } catch (SQLException e) {

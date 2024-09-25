@@ -5,6 +5,7 @@
 package pe.edu.pucp.pixelpenguins.añoacademico.dao;
 
 import java.util.ArrayList;
+import pe.edu.pucp.pixelpenguins.añoacademico.model.Pago;
 
 /**
  *
@@ -19,5 +20,5 @@ public interface PagoDAO {
     
     public ArrayList<Pago> listarTodos();
     
-    public Pago obtenerPorId(String idPago);
+    public Pago obtenerPorId(int idPago);
 }

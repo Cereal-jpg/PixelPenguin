@@ -12,8 +12,11 @@ public class Pago implements IConsultable{
     private TipoDePago tipoPago;
     private EstadoDePago estado;
     private TipoDeComprobante tipoDeComprobante;
+    private Integer idMatricula;
 
-    public Pago(int idPago, Date fechaCreacion, Date fechaPago, double monto, TipoDePago tipoPago, EstadoDePago estado, TipoDeComprobante tipoDeComprobante) {
+    public Pago(int idPago, Date fechaCreacion, Date fechaPago, double monto,
+            TipoDePago tipoPago, EstadoDePago estado, TipoDeComprobante tipoDeComprobante,
+            int idMatricula) {
         this.idPago = idPago;
         this.fechaCreacion = fechaCreacion;
         this.fechaPago = fechaPago;
@@ -21,6 +24,7 @@ public class Pago implements IConsultable{
         this.tipoPago = tipoPago;
         this.estado = estado;
         this.tipoDeComprobante = tipoDeComprobante;
+        this.idMatricula = idMatricula;
     }
 
     public int getIdPago() {
@@ -79,6 +83,14 @@ public class Pago implements IConsultable{
         this.tipoDeComprobante = tipoDeComprobante;
     }
 
+    public Integer getIdMatricula() {
+        return idMatricula;
+    }
+
+    public void setIdMatricula(Integer idMatricula) {
+        this.idMatricula = idMatricula;
+    }
+    
     @Override
     public String consultarInformacion() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody

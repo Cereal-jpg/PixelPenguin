@@ -20,5 +20,5 @@ public interface MatriculaDAO {
     
     public ArrayList<Matricula> listarTodos();
     
-    public Matricula obtenerPorId(String idMatricula);
+    public Matricula obtenerPorId(int idMatricula);
 }

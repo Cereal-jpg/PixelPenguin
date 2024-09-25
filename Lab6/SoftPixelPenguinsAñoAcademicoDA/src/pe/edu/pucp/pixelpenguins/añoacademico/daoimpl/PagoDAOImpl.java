@@ -4,6 +4,35 @@
  */
 package pe.edu.pucp.pixelpenguins.añoacademico.daoimpl;
 
-public class PagoDAOImpl {
+import java.util.ArrayList;
+import pe.edu.pucp.pixelpenguins.añoacademico.dao.PagoDAO;
+import pe.edu.pucp.pixelpenguins.añoacademico.model.Pago;
+
+public class PagoDAOImpl implements PagoDAO{
+
+    @Override
+    public Integer insertar(Pago pago) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public Integer modificar(Pago pago) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public Integer eliminar(Pago pago) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public ArrayList<Pago> listarTodos() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public Pago obtenerPorId(int idPago) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
     
 }

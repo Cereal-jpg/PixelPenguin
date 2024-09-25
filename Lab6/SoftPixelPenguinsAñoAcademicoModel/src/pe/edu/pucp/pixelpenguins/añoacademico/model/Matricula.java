@@ -7,7 +7,7 @@ import pe.edu.pucp.pixelpenguins.institucioneducativa.model.IConsultable;
 
 public class Matricula implements IConsultable{
     private int idMatricula;
-    private boolean cumpleRequisitos;
+    private Boolean cumpleRequisitos;
     private Date fechaInicio;
     private Date fechaFin;
     private EstadoDeMatricula estado;
@@ -26,6 +26,9 @@ public class Matricula implements IConsultable{
         this.pagos=new ArrayList<Pago>();
     }
 
+    public Matricula() {}
+    
+
     public int getIdMatricula() {
         return idMatricula;
     }
@@ -34,7 +37,7 @@ public class Matricula implements IConsultable{
         this.idMatricula = idMatricula;
     }
 
-    public boolean isCumpleRequisitos() {
+    public Boolean isCumpleRequisitos() {
         return cumpleRequisitos;
     }
 

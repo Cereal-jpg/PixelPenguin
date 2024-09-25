@@ -70,7 +70,7 @@ public class InstitucioneducativaDAOImpl implements InstitucioneducativaDAO{
 
     @Override
     public int eliminar(InstitucionEducativa institucion) {
-    int resultado =0;
+        int resultado =0;
           try {
             con = DBManager.getInstance().getConnection();
             cs = con.prepareCall("{call ELIMINAR_INSTITUCION(?)}");

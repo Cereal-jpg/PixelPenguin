@@ -1,3 +1,5 @@
+package pe.edu.pucp.pixelpenguins.añoacademico.bo;
+
 
 import java.util.ArrayList;
 import java.util.Date;

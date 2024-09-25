@@ -31,9 +31,23 @@ public class MatriculaDAOImpl implements MatriculaDAO {
             cs.setDate(3,new java.sql.Date(matricula.getFechaInicio().getTime()));
             cs.setDate(4,new java.sql.Date(matricula.getFechaFin().getTime()));
             cs.setString(5,matricula.getEstado().toString());  
-            cs.setInt(6,matricula.getIdGradoAcademico());
-            cs.setInt(7,matricula.getCodigoAlumno());
-            cs.setInt(8,matricula.getIdPlanAcademico());
+            if (matricula.getIdGradoAcademico() != null) {
+                cs.setInt(6, matricula.getIdGradoAcademico());
+            } else {
+                cs.setNull(6, java.sql.Types.INTEGER);
+            }
+
+            if (matricula.getCodigoAlumno() != null) {
+                cs.setInt(7, matricula.getCodigoAlumno());
+            } else {
+                cs.setNull(7, java.sql.Types.INTEGER);
+            }
+
+            if (matricula.getIdPlanAcademico() != null) {
+                cs.setInt(8, matricula.getIdPlanAcademico());
+            } else {
+                cs.setNull(8, java.sql.Types.INTEGER);
+            }
             resultado = cs.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -55,12 +69,35 @@ public class MatriculaDAOImpl implements MatriculaDAO {
             cs = con.prepareCall("{call MODIFICAR_MATRICULA(?,?,?,?,?,?,?,?)}");
             cs.setInt(1,matricula.getIdMatricula());
             cs.setBoolean(2,matricula.isCumpleRequisitos());
-            cs.setDate(3,new java.sql.Date(matricula.getFechaInicio().getTime()));
-            cs.setDate(4,new java.sql.Date(matricula.getFechaFin().getTime()));
+            if (matricula.getFechaInicio() != null) {
+                cs.setDate(3, new java.sql.Date(matricula.getFechaInicio().getTime()));
+            } else {
+                cs.setNull(3, java.sql.Types.DATE);
+            }
+
+            if (matricula.getFechaFin() != null) {
+                cs.setDate(4, new java.sql.Date(matricula.getFechaFin().getTime()));
+            } else {
+                cs.setNull(4, java.sql.Types.DATE);
+            }
             cs.setString(5,matricula.getEstado().toString());  
-            cs.setInt(6,matricula.getIdGradoAcademico());
-            cs.setInt(7,matricula.getCodigoAlumno());
-            cs.setInt(8,matricula.getIdPlanAcademico());
+            if (matricula.getIdGradoAcademico() != null) {
+                cs.setInt(6, matricula.getIdGradoAcademico());
+            } else {
+                cs.setNull(6, java.sql.Types.INTEGER);
+            }
+
+            if (matricula.getCodigoAlumno() != null) {
+                cs.setInt(7, matricula.getCodigoAlumno());
+            } else {
+                cs.setNull(7, java.sql.Types.INTEGER);
+            }
+
+            if (matricula.getIdPlanAcademico() != null) {
+                cs.setInt(8, matricula.getIdPlanAcademico());
+            } else {
+                cs.setNull(8, java.sql.Types.INTEGER);
+            }
             resultado = cs.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e.getMessage());

@@ -33,4 +33,11 @@ public class InstitucioneducativaBO {
                                         nombre, cantidadAlumnos, direccion, ruc);
         return institucionEducativaDAO.modificar(institucion);
     }
+    
+    public int eliminar(int idInstitucion,String nombre,int cantidadAlumnos,
+                String direccion,int ruc){
+        InstitucionEducativa institucion = new InstitucionEducativa(idInstitucion, 
+                                        nombre, cantidadAlumnos, direccion, ruc);
+        return institucionEducativaDAO.eliminar(institucion);
+    }
 }

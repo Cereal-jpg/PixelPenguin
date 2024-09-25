@@ -22,6 +22,9 @@ public class JornadaEscolar {
         this.gradosAcademicos = new ArrayList<GradoAcademico>();
     }
 
+    public JornadaEscolar() {
+    }
+
     public int getIdJornadaEscolar() {
         return idJornadaEscolar;
     }

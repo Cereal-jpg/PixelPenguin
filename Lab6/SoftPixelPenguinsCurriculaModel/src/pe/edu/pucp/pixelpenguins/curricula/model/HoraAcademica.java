@@ -7,12 +7,34 @@ public class HoraAcademica {
     private int idHoraAcademica;
     private LocalTime horaInicio;
     private LocalTime horaFin;
-    private Curso curso;
+    private Integer idCurso;
+    private Integer codigoProfesor;
 
     public HoraAcademica(int idHoraAcademica, LocalTime horaInicio, LocalTime horaFin) {
         this.idHoraAcademica = idHoraAcademica;
         this.horaInicio = horaInicio;
         this.horaFin = horaFin;
+        idCurso = null;
+        codigoProfesor = null;
+    }
+
+    public HoraAcademica() {
+    }
+
+    public Integer getIdCurso() {
+        return idCurso;
+    }
+
+    public void setIdCurso(Integer idCurso) {
+        this.idCurso = idCurso;
+    }
+
+    public Integer getCodigoProfesor() {
+        return codigoProfesor;
+    }
+
+    public void setCodigoProfesor(Integer codigoProfesor) {
+        this.codigoProfesor = codigoProfesor;
     }
 
     public int getIdHoraAcademica() {
@@ -21,14 +43,6 @@ public class HoraAcademica {
 
     public void setIdHoraAcademica(int idHoraAcademica) {
         this.idHoraAcademica = idHoraAcademica;
-    }
-
-    public Curso getCurso() {
-        return curso;
-    }
-
-    public void setCurso(Curso curso) {
-        this.curso = curso;
     }
 
 

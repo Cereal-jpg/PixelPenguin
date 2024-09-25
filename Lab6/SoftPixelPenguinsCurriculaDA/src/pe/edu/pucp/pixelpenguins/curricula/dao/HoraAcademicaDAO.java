@@ -12,13 +12,13 @@ import pe.edu.pucp.pixelpenguins.curricula.model.HoraAcademica;
  * @author Angel
  */
 public interface HoraAcademicaDAO {
-    public Integer insertar(HoraAcademica horaAcademica);
+    public int insertar(HoraAcademica horaAcademica);
     
-    public Integer modificar(HoraAcademica horaAcademica);
+    public int modificar(HoraAcademica horaAcademica);
     
-    public Integer eliminar(HoraAcademica horaAcademica);
+    public int eliminar(HoraAcademica horaAcademica);
     
     public ArrayList<HoraAcademica> listarTodos();
     
-    public HoraAcademica obtenerPorId(String idHoraAcademica);
+    public HoraAcademica obtenerPorId(int idHoraAcademica);
 }

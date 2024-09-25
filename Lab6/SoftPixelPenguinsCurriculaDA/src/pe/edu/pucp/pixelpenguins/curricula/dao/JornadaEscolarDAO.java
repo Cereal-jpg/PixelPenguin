@@ -13,13 +13,13 @@ import pe.edu.pucp.pixelpenguins.curricula.model.JornadaEscolar;
  * @author Angel
  */
 public interface JornadaEscolarDAO {
-    public Integer insertar(JornadaEscolar jornadaEscolar);
+    public int insertar(JornadaEscolar jornadaEscolar);
     
-    public Integer modificar(JornadaEscolar jornadaEscolar);
+    public int modificar(JornadaEscolar jornadaEscolar);
     
-    public Integer eliminar(JornadaEscolar jornadaEscolar);
+    public int eliminar(JornadaEscolar jornadaEscolar);
     
     public ArrayList<JornadaEscolar> listarTodos();
     
-    public JornadaEscolar obtenerPorId(String idJornadaEscolar);
+    public JornadaEscolar obtenerPorId(int idJornadaEscolar);
 }

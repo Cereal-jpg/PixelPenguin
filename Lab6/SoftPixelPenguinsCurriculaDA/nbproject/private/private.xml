@@ -3,13 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/C:/Users/User/Documents/PUCP%202024-2/PixelPenguin/Lab6/SoftPixelPenguinsCurriculaDA/src/pe/edu/pucp/pixelpenguins/curricula/daoImpl/NotaDaoImpl.java</file>
-            <file>file:/C:/Users/User/Documents/PUCP%202024-2/PixelPenguin/Lab6/SoftPixelPenguinsCurriculaDA/src/pe/edu/pucp/pixelpenguins/curricula/daoImpl/SeccionAcademicaDAOImpl.java</file>
-=======
-            <file>file:/D:/PixelPenguin/Lab6/SoftPixelPenguinsCurriculaDA/src/pe/edu/pucp/pixelpenguins/curricula/daoImpl/CompetenciaDaoImpl.java</file>
-            <file>file:/D:/PixelPenguin/Lab6/SoftPixelPenguinsCurriculaDA/src/pe/edu/pucp/pixelpenguins/curricula/dao/CompetenciaDAO.java</file>
->>>>>>> 4f7c7287874be3a29bbe9c480d53a54c396fc9e0
+            <file>file:/C:/Users/papar/PixelPenguin/Lab6/SoftPixelPenguinsCurriculaDA/src/pe/edu/pucp/pixelpenguins/curricula/dao/JornadaEscolarDAO.java</file>
+            <file>file:/C:/Users/papar/PixelPenguin/Lab6/SoftPixelPenguinsCurriculaDA/src/pe/edu/pucp/pixelpenguins/curricula/daoImpl/HoraAcademicaDAOImpl.java</file>
+            <file>file:/C:/Users/papar/PixelPenguin/Lab6/SoftPixelPenguinsCurriculaDA/src/pe/edu/pucp/pixelpenguins/curricula/daoImpl/JornadaEscolarDAOImpl.java</file>
+            <file>file:/C:/Users/papar/PixelPenguin/Lab6/SoftPixelPenguinsCurriculaDA/src/pe/edu/pucp/pixelpenguins/curricula/dao/HoraAcademicaDAO.java</file>
         </group>
     </open-files>
 </project-private>

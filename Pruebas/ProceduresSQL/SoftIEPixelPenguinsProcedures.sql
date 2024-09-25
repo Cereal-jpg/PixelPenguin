@@ -316,3 +316,118 @@ BEGIN
     WHERE idPlanAcademico = p_idPlanAcademico;
 END $$
 DELIMITER ;
+
+DELIMITER $$
+
+CREATE PROCEDURE INSERTAR_NOTA(
+    IN p_id_nota INT,
+    IN p_nota VARCHAR(10),
+    IN p_bimestre INT,
+    IN p_id_curso VARCHAR(20),
+    IN p_id_competencia INT
+)
+BEGIN
+    INSERT INTO Nota (idNota, nota, bimestre, idCurso, idCompetencia)
+    VALUES (p_id_nota, p_nota, p_bimestre, p_id_curso, p_id_competencia);
+END $$
+
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE MODIFICAR_NOTA(
+    IN p_id_nota INT,
+    IN p_nota VARCHAR(10),
+    IN p_bimestre INT,
+    IN p_id_curso VARCHAR(20),
+    IN p_id_competencia INT
+)
+BEGIN
+	UPDATE Nota 
+    SET nota = p_nota,
+		bimestre = p_bimestre,
+        idCurso = p_id_curso,
+        idCompetencia = p_id_competencia
+	WHERE idNota = p_id_nota;
+END;
+
+CREATE PROCEDURE ELIMINAR_NOTA(
+	IN p_id_nota INT
+)
+BEGIN 
+	DELETE FROM Nota
+    WHERE idNota =p_id_nota;
+END;
+
+CREATE PROCEDURE LISTAR_TODOS_NOTA()
+BEGIN
+	SELECT idNota, nota, bimestre, idCurso, idCompetencia
+    FROM Nota;
+END;
+
+DELIMITER //
+
+CREATE PROCEDURE LISTAR_NOTA_POR_ID(
+    IN p_idNota INT
+)
+BEGIN
+    SELECT 
+        idNota, 
+        nota, 
+        bimestre, 
+        idCurso, 
+        idCompetencia
+    FROM 
+        Nota
+    WHERE 
+        idNota = p_idNota;
+END //
+
+DELIMITER ;
+
+DELIMITER $$
+CREATE PROCEDURE MODIFICAR_SECCION_ACADEMICA(
+    IN p_id_seccion_academica INT,
+    IN p_seccion VARCHAR(1),
+    IN p_aula VARCHAR(50),
+    IN p_grado INT,
+)
+BEGIN
+	UPDATE SeccionAcademica 
+    SET seccion = p_seccion,
+		aula = p_aula,
+        idGradoAcademico = p_grado,
+	WHERE idSeccionAcademica = p_id_seccion_academica;
+END;
+
+CREATE PROCEDURE ELIMINAR_SECCION_ACADEMICA(
+	IN p_id_seccion_academica INT
+)
+BEGIN 
+	DELETE FROM SeccionAcademica
+    WHERE idSeccionAcademica =p_id_seccion_academica;
+END;
+
+CREATE PROCEDURE LISTAR_TODOS_SECCION_ACADEMICA()
+BEGIN
+	SELECT idSeccionAcademica, seccion, aula, idGradoAcademico
+        FROM SeccionAcademica;
+END;
+
+DELIMITER //
+
+CREATE PROCEDURE LISTAR_SECCION_ACADEMICA_POR_ID(
+    IN p_id_seccion_academica INT
+)
+BEGIN
+    SELECT 
+        idSeccionAcademica, 
+        seccion, 
+        aula, 
+        idGradoAcademico, 
+    FROM 
+        SeccionAcademica
+    WHERE 
+        idSeccionAcademica = p_id_seccion_academica;
+END //
+
+DELIMITER ;

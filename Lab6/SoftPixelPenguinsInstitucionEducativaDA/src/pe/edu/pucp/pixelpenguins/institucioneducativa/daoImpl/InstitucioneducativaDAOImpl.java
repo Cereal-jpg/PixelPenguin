@@ -121,5 +121,34 @@ public class InstitucioneducativaDAOImpl implements InstitucioneducativaDAO{
         return institutosE;
     }
     
-    
+    @Override
+    public InstitucionEducativa obtenerPorId(int id_inst){
+        InstitucionEducativa instituto = null;
+         try {
+            con = DBManager.getInstance().getConnection();
+            cs = con.prepareCall("{call LISTAR_INSTITUCION(?)}");
+            cs.setInt(1,id_inst);    
+            rs = cs.executeQuery();
+            
+            if(rs.next()){
+                instituto = new InstitucionEducativa();
+                instituto.setIdInstitucion(rs.getInt("idInstitucion"));
+                instituto.setNombre(rs.getString("nombre"));
+                instituto.setDireccion(rs.getString("direccion")); // Asegúrate de que tu modelo tenga este campo
+                instituto.setCantidadAlumnos(rs.getInt("cantidadAlumnos")); // Asegúrate de tener este campo también
+                instituto.setRuc(rs.getInt("ruc"));
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        } finally{
+            try {
+                if (rs != null) rs.close();
+                if (cs != null) cs.close();
+                if (con != null) con.close();
+            } catch (SQLException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        return instituto;
+    }
 }

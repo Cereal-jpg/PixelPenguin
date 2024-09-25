@@ -70,7 +70,22 @@ public class InstitucioneducativaDAOImpl implements InstitucioneducativaDAO{
 
     @Override
     public int eliminar(InstitucionEducativa institucion) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    int resultado =0;
+          try {
+            con = DBManager.getInstance().getConnection();
+            cs = con.prepareCall("{call ELIMINAR_INSTITUCION(?)}");
+            cs.setInt(1,institucion.getIdInstitucion());     
+            resultado = cs.executeUpdate();
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        } finally{
+            try {
+                con.close();
+            } catch (SQLException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+        return resultado;       
     }
 
     @Override

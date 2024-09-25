@@ -126,7 +126,7 @@ public class InstitucioneducativaDAOImpl implements InstitucioneducativaDAO{
         InstitucionEducativa instituto = null;
          try {
             con = DBManager.getInstance().getConnection();
-            cs = con.prepareCall("{call LISTAR_INSTITUCION(?)}");
+            cs = con.prepareCall("{call LISTAR_INSTITUCION_POR_ID(?)}");
             cs.setInt(1,id_inst);    
             rs = cs.executeQuery();
             

@@ -13,7 +13,7 @@ public class DBManager {
     "softiepixelpenguins-1inf30-0682.cz2bk0coctwl.us-east-1.rds.amazonaws.com" + 
             ":3306/" + "softiepixelpenguins";
     private String usuario = "admin";
-    private String password = "PddCHv14qTj7gQgQyfzMYB+bSmh6cTUNTBJLM7LGKzE=";
+    private String password = "1inf30softiepixelpenguins";
     private Connection con;
     
     // constructor privado para que no se pueda instanciar
@@ -32,7 +32,7 @@ public class DBManager {
     public Connection getConnection(){
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection(url, usuario,descifrarMD5(password));
+            con = DriverManager.getConnection(url, usuario,password);
         }catch(ClassNotFoundException | SQLException ex){
             System.out.println(ex.getMessage());
         }

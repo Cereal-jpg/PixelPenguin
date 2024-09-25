@@ -12,6 +12,9 @@ public class Matricula implements IConsultable{
     private Date fechaFin;
     private EstadoDeMatricula estado;
     private ArrayList <Pago> pagos;
+    private Integer idGradoAcademico; 
+    private Integer codigoAlumno;
+    private Integer idPlanAcademico;
     
     public Matricula(int idMatricula, boolean cumpleRequisitos, Date fechaInicio, Date fechaFin,
             EstadoDeMatricula estado) {
@@ -66,6 +69,30 @@ public class Matricula implements IConsultable{
     @Override
     public String consultarInformacion() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public Integer getIdGradoAcademico() {
+        return idGradoAcademico;
+    }
+
+    public void setIdGradoAcademico(Integer idGradoAcademico) {
+        this.idGradoAcademico = idGradoAcademico;
+    }
+
+    public Integer getCodigoAlumno() {
+        return codigoAlumno;
+    }
+
+    public void setCodigoAlumno(Integer codigoAlumno) {
+        this.codigoAlumno = codigoAlumno;
+    }
+
+    public Integer getIdPlanAcademico() {
+        return idPlanAcademico;
+    }
+
+    public void setIdPlanAcademico(Integer idPlanAcademico) {
+        this.idPlanAcademico = idPlanAcademico;
     }
     
     

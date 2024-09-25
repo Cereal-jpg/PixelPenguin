@@ -1,12 +1,12 @@
-package pe.edu.pucp.pixelpenguins.añoacademico.daoimpl;
+package pe.edu.pucp.pixelpenguins.anioacademico.daoimpl;
 
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import pe.edu.pucp.pixelpenguins.añoacademico.dao.PlanAcademicoDAO;
-import pe.edu.pucp.pixelpenguins.añoacademico.model.PlanAcademico;
+import pe.edu.pucp.pixelpenguins.anioacademico.dao.PlanAcademicoDAO;
+import pe.edu.pucp.pixelpenguins.anioacademico.model.PlanAcademico;
 import pe.edu.pucp.pixelpenguins.config.DBManager;
 
 public class PlanAcademicoDAOImpl implements PlanAcademicoDAO {
@@ -16,8 +16,8 @@ public class PlanAcademicoDAOImpl implements PlanAcademicoDAO {
     private ResultSet rs;
     
     @Override
-    public Integer insertar(PlanAcademico planAcademico) {
-        int resultado =0;
+    public int insertar(PlanAcademico planAcademico) {
+        int resultado = 0;
           try {
             con = DBManager.getInstance().getConnection();
             cs = con.prepareCall("{call INSERTAR_PLAN_ACADEMICO(?,?,?,?,?)}");
@@ -40,7 +40,7 @@ public class PlanAcademicoDAOImpl implements PlanAcademicoDAO {
     }
 
     @Override
-    public Integer modificar(PlanAcademico planAcademico) {
+    public int modificar(PlanAcademico planAcademico) {
         int resultado = 0;
           try {
             con = DBManager.getInstance().getConnection();
@@ -63,7 +63,7 @@ public class PlanAcademicoDAOImpl implements PlanAcademicoDAO {
     }
 
     @Override
-    public Integer eliminar(PlanAcademico planAcademico) {
+    public int eliminar(PlanAcademico planAcademico) {
         int resultado =0;
           try {
             con = DBManager.getInstance().getConnection();

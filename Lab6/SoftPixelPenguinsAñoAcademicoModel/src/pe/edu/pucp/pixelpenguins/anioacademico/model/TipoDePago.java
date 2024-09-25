@@ -1,5 +1,5 @@
 
-package pe.edu.pucp.pixelpenguins.añoacademico.model;
+package pe.edu.pucp.pixelpenguins.anioacademico.model;
 
 
 public enum TipoDePago {

@@ -1,12 +1,12 @@
-package pe.edu.pucp.pixelpenguins.añoacademico.bo;
+package pe.edu.pucp.pixelpenguins.anioacademico.bo;
 
 
 import java.util.ArrayList;
 import java.util.Date;
-import pe.edu.pucp.pixelpenguins.añoacademico.dao.MatriculaDAO;
-import pe.edu.pucp.pixelpenguins.añoacademico.daoimpl.MatriculaDAOImpl;
-import pe.edu.pucp.pixelpenguins.añoacademico.model.EstadoDeMatricula;
-import pe.edu.pucp.pixelpenguins.añoacademico.model.Matricula;
+import pe.edu.pucp.pixelpenguins.anioacademico.dao.MatriculaDAO;
+import pe.edu.pucp.pixelpenguins.anioacademico.daoimpl.MatriculaDAOImpl;
+import pe.edu.pucp.pixelpenguins.anioacademico.model.EstadoDeMatricula;
+import pe.edu.pucp.pixelpenguins.anioacademico.model.Matricula;
 
 public class MatriculaBO {
     private MatriculaDAO matriculaDAO;

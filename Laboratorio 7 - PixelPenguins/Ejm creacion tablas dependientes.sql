@@ -26,3 +26,10 @@ CREATE TABLE empleado{
 	FOREIGN KEY(id_empleado) REFERENCES persona(id_persona),
 	FOREIGN KEY(fid_area) REFERENCES area(id_area),
 }ENGINE=InnoDB;
+
+-- Mostrar solo atributos del empleado:
+--SELECT * FROM empleado;
+
+--Para mostrar todos los datos propios del empleado junto a los de persona y a los de su área:
+--SELECT * FROM persona INNER JOIN empleado ON persona.id_persona=empleado.id_empleado
+--	INNER JOIN area ON area.id_area=empleado.fid_area;

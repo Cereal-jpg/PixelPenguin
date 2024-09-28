@@ -33,3 +33,8 @@ CREATE TABLE empleado{
 --Para mostrar todos los datos propios del empleado junto a los de persona y a los de su área:
 --SELECT * FROM persona INNER JOIN empleado ON persona.id_persona=empleado.id_empleado
 --	INNER JOIN area ON area.id_area=empleado.fid_area;
+
+--Para eliminar, se recomienda cambiar el estado con una nueva columna boolean en
+-- SQL (tinyint(1)) que sea activo 
+
+--Activando todas las áreas: UPDATE area SET activo = 1 where id_area>=1;

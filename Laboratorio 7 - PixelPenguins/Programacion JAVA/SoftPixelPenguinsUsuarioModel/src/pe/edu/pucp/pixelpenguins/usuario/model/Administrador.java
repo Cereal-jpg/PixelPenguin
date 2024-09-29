@@ -6,7 +6,11 @@ import java.util.Date;
 public class Administrador extends Usuario {
     
     private int codigoAdministrador;
-
+    
+    public Administrador(){
+        //super();
+    }
+    
     public Administrador(int codigoAdministrador, int dni, String nombre, Date fechaNacimiento,
             String direccion, String email, String sexo, String username, String passsword) {
         super(dni, nombre, fechaNacimiento, direccion, email, sexo, username, passsword);

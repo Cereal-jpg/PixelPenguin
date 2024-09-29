@@ -1,6 +1,9 @@
 
 package pe.edu.pucp.pixelpenguins.usuario.model;
 
+import pe.edu.pucp.pixelpenguins.curricula.model.GradoAcademico;
+import pe.edu.pucp.pixelpenguins.curricula.model.HoraAcademica;
+
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -12,7 +15,7 @@ public class Profesor extends Usuario {
     private ArrayList<GradoAcademico> gradosDeDictado;
 
     public Profesor(){
-        super();
+        //super();
     }
     
     public Profesor(int codigoProfesor, boolean certificadoHistorialEducativo,

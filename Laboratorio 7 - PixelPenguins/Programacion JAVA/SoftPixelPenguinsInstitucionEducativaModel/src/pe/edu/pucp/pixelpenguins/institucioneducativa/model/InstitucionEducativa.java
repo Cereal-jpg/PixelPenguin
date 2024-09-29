@@ -1,6 +1,8 @@
 
 package pe.edu.pucp.pixelpenguins.institucioneducativa.model;
 
+import pe.edu.pucp.pixelpenguins.usuario.model.Usuario;
+import pe.edu.pucp.pixelpenguins.anioacademico.model.PlanAcademico;
 
 public class InstitucionEducativa {
     private int idInstitucion;
@@ -66,13 +68,13 @@ public class InstitucionEducativa {
         return user;
     }
     
-    public int agregarUsuario(){
+    public int agregarUsuario(Usuario usuario){
         int resultado=0;
         
         return resultado;
     }
     
-    public int agregarPlanAcademico(){
+    public int agregarPlanAcademico(PlanAcademico planAcademico){
         int resultado=0;
         
         return resultado;

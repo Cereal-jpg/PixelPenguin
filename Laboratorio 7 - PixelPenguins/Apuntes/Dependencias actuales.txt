@@ -1,0 +1,52 @@
+
+DEPENDENCIAS:					
+					
+Paquete ANIOACADEMICO:
+	Matrícula: CURRICULA.model.GradoAcademico, USUARIO.model.Alumno & INSTITUCIONEDUCATIVA.model.IConsultable
+	Pago: INSTITUCIONEDUCATIVA.model.IConsultable
+	PlanAcademico: CURRICULA.model.Curso & INSTITUCIONEDUCATIVA.model.IConsultable
+	
+Paquete CURRICULA:
+	Curso: INSTITUCIONEDUCATIVA.model.IConsultable
+	GradoAcademico: INSTITUCIONEDUCATIVA.model.IConsultable & USUARIO.model.Alumno
+	HoraAcademica: USUARIO.model.Profesor
+	SeccionAcademica: USUARIO.model.Alumno
+	
+Paquete USUARIO:
+	Alumno: ANIOACADEMICO.model.Matricula, CURRICULA.model.SeccionAcademica, CURRICULA.model.GradoAcademico
+	PersonalAdministrativo: ANIOACADEMICO.model.PlanAcademico
+	Profesor: CURRICULA.model.GradoAcademico, CURRICULA.model.HoraAcademica
+	Usuario: INSTITUCIONEDUCATIVA.model.IConsultable
+
+Paquete INSTITUCIONEDUCATIVA:
+	InstitucionEducativa: USUARIO.model.Usuario, ANIOACADEMICO.model.PlanAcademico, etc (funcionará como nexo para usar todas las clases)
+	
+Solución 1: Mover la interfaz a un nuevo paquete de contratos
+	-> ANIOACADEMICO solo tendría dependencia circular con USUARIO
+	-> CURRICULA aún tendría dependencia circular con USUARIO
+Solución 2: 
+
+Comentarios de la JP: 
+	Rendimiento-GradoAcademico * a 1
+	Rendimiento-Alumno: * a 1
+	Rendimiento-Curso: * a 1
+	Rendimiento-Nota: * a 1
+	
+	AnioAcademico que tiene que ver con cada año lectivo. El año está compuesto por todas las matrículas de los alumnos en tal año.
+	Se puede considerar que solo hay un plan académico para dejar la relación 1 a 1 con la instituciónEducativa, de 1 a muchos con AnioAcademico.
+	
+	
+	
+Notas de teoría:
+	
+	Patrón Singleton: Garantiza que una clase tenga una instancia y proporcionar un punto de acceso a ella
+
+	Patrón DAO: separa la lógica de negocio de la lógica para acceder a base de datos, proporcionando una capa de 
+		abstracción entre ellos.
+	
+	BusinessObject <>------ Data Access Object --------Model
+									|
+									|
+									|
+						DataAccessObjectImplementation ----------- MySQL
+						

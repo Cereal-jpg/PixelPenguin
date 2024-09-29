@@ -2,10 +2,12 @@
 package pe.edu.pucp.pixelpenguins.usuario.model;
 
 import pe.edu.pucp.pixelpenguins.anioacademico.model.Matricula;
-import pe.edu.pucp.pixelpenguins.curricula.model.SeccionAcademica;
+import pe.edu.pucp.pixelpenguins.curricula.model.Curso;
 import pe.edu.pucp.pixelpenguins.curricula.model.GradoAcademico;
+
 import java.util.ArrayList;
 import java.util.Date;
+
 
 public class Alumno extends Usuario {
     
@@ -14,9 +16,9 @@ public class Alumno extends Usuario {
     private boolean conCertificadoDeSalud;
     private boolean conDeuda;
     private Apoderado apoderado; //necesita un FK fid_apoderado
-    private Matricula matricula; // fid_matricula
-    private SeccionAcademica seccionAcademica; //fis_seccionAcademica
     private GradoAcademico gradoAcademico; // fid_gradoAcademico
+    // array de matriculas para almacenar un registro por años
+    private ArrayList<Matricula> matriculas; 
     private ArrayList<Curso> cursosMatriculado;
 
     public Alumno(){
@@ -24,18 +26,18 @@ public class Alumno extends Usuario {
     }
 
     public Alumno(int codigoAlumno, boolean conCertificadoDeEstudios, boolean conCertificadoDeSalud,
-            boolean conDeuda, Apoderado apoderado, Matricula matricula, SeccionAcademica seccionAcademica,
-            GradoAcademico gradoAcademico, int dni, String nombre, Date fechaNacimiento, String direccion,
+            boolean conDeuda, Apoderado apoderado,GradoAcademico gradoAcademico,
+            int idUsuario, String dni, String nombre, Date fechaNacimiento, String direccion,
             String email, String sexo, String username, String passsword) {
-        super(dni, nombre, fechaNacimiento, direccion, email, sexo, username, passsword);
+        super(idUsuario,dni, nombre, fechaNacimiento, direccion, email, sexo, username, passsword);
         this.codigoAlumno = codigoAlumno;
         this.conCertificadoDeEstudios = conCertificadoDeEstudios;
         this.conCertificadoDeSalud = conCertificadoDeSalud;
         this.conDeuda = conDeuda;
         this.apoderado = apoderado;
-        this.matricula = matricula;
-        this.seccionAcademica = seccionAcademica;
         this.gradoAcademico = gradoAcademico;
+        this.matriculas=new ArrayList<Matricula>();
+        this.cursosMatriculado=new ArrayList<Curso>();
     }
 
     public int getCodigoAlumno() {
@@ -76,22 +78,6 @@ public class Alumno extends Usuario {
 
     public void setApoderado(Apoderado apoderado) {
         this.apoderado = apoderado;
-    }
-
-    public Matricula getMatricula() {
-        return matricula;
-    }
-
-    public void setMatricula(Matricula matricula) {
-        this.matricula = matricula;
-    }
-
-    public SeccionAcademica getSeccionAcademica() {
-        return seccionAcademica;
-    }
-
-    public void setSeccionAcademica(SeccionAcademica seccionAcademica) {
-        this.seccionAcademica = seccionAcademica;
     }
 
     public GradoAcademico getGradoAcademico() {

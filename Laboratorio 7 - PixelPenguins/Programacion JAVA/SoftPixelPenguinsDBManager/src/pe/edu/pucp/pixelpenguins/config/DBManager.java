@@ -10,9 +10,13 @@ import static pe.edu.pucp.pixelpenguins.util.Cifrado.descifrarMD5;
 public class DBManager {
     
     private static DBManager dbManager=null;
-    private String url = "jdbc:mysql://" +
+    /*private String url = "jdbc:mysql://" +
     "softiepixelpenguins-1inf30-0682.cz2bk0coctwl.us-east-1.rds.amazonaws.com" + 
-            ":3306/" + "softiepixelpenguins";
+            ":3306/" + "softiepixelpenguins";*/
+    private String url = "jdbc:mysql://" +
+    "mysql-softiepixelpenguins-1inf30-682.cduaj8hcagsx.us-east-1.rds.amazonaws.com" + 
+    //         ":3306/" + "softiepixelpenguins";
+               ":3306/" + "pixelPenguins";
     private String username = "admin";
     private String password; //la contraseña debe estar cifrada
     private Connection con;

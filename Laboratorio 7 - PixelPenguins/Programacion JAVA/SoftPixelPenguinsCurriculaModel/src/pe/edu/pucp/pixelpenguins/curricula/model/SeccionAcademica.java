@@ -1,16 +1,11 @@
 
 package pe.edu.pucp.pixelpenguins.curricula.model;
 
-import java.util.ArrayList;
-// falta enlazar bien
-import pe.edu.pucp.pixelpenguins.usuario.model.Alumno;
-
 public class SeccionAcademica {
     private int idSeccionAcademica;
     private char seccion;
     private String aula;
     private GradoAcademico gradoAcademico; // tendrá un FK fid_gradoAcademico
-    private ArrayList<Alumno> alumnosPorSeccion; // según el UML estaba así, aunque está complicado
 
     public SeccionAcademica(){}
     

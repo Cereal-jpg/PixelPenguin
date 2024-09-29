@@ -1,8 +1,12 @@
 
 package pe.edu.pucp.pixelpenguins.institucioneducativa.model;
 
+import pe.edu.pucp.pixelpenguins.anioacademico.model.AnioAcademico;
+import pe.edu.pucp.pixelpenguins.usuario.model.Alumno;
+import pe.edu.pucp.pixelpenguins.usuario.model.Apoderado;
+import pe.edu.pucp.pixelpenguins.usuario.model.PersonalAdministrativo;
+import pe.edu.pucp.pixelpenguins.usuario.model.Profesor;
 import pe.edu.pucp.pixelpenguins.usuario.model.Usuario;
-import pe.edu.pucp.pixelpenguins.anioacademico.model.PlanAcademico;
 
 public class InstitucionEducativa {
     private int idInstitucion;
@@ -18,7 +22,7 @@ public class InstitucionEducativa {
         this.direccion = direccion;
         this.ruc = ruc;
     }
-
+    
     public int getIdInstitucion() {
         return idInstitucion;
     }
@@ -64,7 +68,9 @@ public class InstitucionEducativa {
     }
     
     public Usuario buscarUsuario(int codigo){
-        Usuario user;
+        Usuario user=new Alumno();
+        Usuario user2=new Profesor();
+        Usuario user3=new PersonalAdministrativo();
         return user;
     }
     
@@ -74,7 +80,7 @@ public class InstitucionEducativa {
         return resultado;
     }
     
-    public int agregarPlanAcademico(PlanAcademico planAcademico){
+    public int agregarAnioAcademico(AnioAcademico anioAcademico){
         int resultado=0;
         
         return resultado;

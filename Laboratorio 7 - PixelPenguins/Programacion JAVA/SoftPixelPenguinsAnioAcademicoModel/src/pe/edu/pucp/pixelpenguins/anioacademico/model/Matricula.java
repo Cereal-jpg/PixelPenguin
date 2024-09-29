@@ -3,11 +3,11 @@ package pe.edu.pucp.pixelpenguins.anioacademico.model;
 
 import java.util.ArrayList;
 import java.util.Date;
+import pe.edu.pucp.pixelpenguins.contrato.model.IConsultable;
 
 // falta enlazar bien
 import pe.edu.pucp.pixelpenguins.curricula.model.GradoAcademico;
-import pe.edu.pucp.pixelpenguins.usuario.model.Alumno;
-import pe.edu.pucp.pixelpenguins.institucioneducativa.model.IConsultable;
+
 
 public class Matricula implements IConsultable{
     private int idMatricula;
@@ -16,21 +16,20 @@ public class Matricula implements IConsultable{
     private Date fechaFin;
     private EstadoDeMatricula estado;
     private GradoAcademico gradoAcademico; // tendrá un FK fid_gradoAcademico en la BD
-    private Alumno alumno; // tendrá un FK fid_alumno en la BD
-    private PlanAcademico planAcademico; // tendrá un FK fid_planAcademico en la BD
+    private AnioAcademico planAcademico; // tendrá un FK fid_planAcademico en la BD
     private ArrayList <Pago> pagos;
 
     public Matricula(){}
     
-    public Matricula(int idMatricula, boolean cumpleRequisitos, Date fechaInicio, Date fechaFin, EstadoDeMatricula estado, GradoAcademico gradoAcademico, Alumno alumno, PlanAcademico planAcademico) {
+    public Matricula(int idMatricula, boolean cumpleRequisitos, Date fechaInicio, Date fechaFin,
+            EstadoDeMatricula estado, GradoAcademico gradoAcademico, AnioAcademico anioAcademico) {
         this.idMatricula = idMatricula;
         this.cumpleRequisitos = cumpleRequisitos;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
         this.estado = estado;
         this.gradoAcademico = gradoAcademico;
-        this.alumno = alumno;
-        this.planAcademico = planAcademico;
+        this.planAcademico = anioAcademico;
         this.pagos=new ArrayList<Pago>();
     }
 
@@ -82,19 +81,11 @@ public class Matricula implements IConsultable{
         this.gradoAcademico = gradoAcademico;
     }
 
-    public Alumno getAlumno() {
-        return alumno;
-    }
-
-    public void setAlumno(Alumno alumno) {
-        this.alumno = alumno;
-    }
-
-    public PlanAcademico getPlanAcademico() {
+    public AnioAcademico getPlanAcademico() {
         return planAcademico;
     }
 
-    public void setPlanAcademico(PlanAcademico planAcademico) {
+    public void setPlanAcademico(AnioAcademico planAcademico) {
         this.planAcademico = planAcademico;
     }
     

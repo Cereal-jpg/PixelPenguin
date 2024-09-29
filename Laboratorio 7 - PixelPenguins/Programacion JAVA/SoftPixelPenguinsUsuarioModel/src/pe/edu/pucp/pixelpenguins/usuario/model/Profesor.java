@@ -11,6 +11,7 @@ public class Profesor extends Usuario {
     private int codigoProfesor;
     private boolean certificadoHistorialEducativo;
     private String especialidad;
+    // profesor tiene un listado de horasAcademicas en gradosAcademicos distintos
     private ArrayList<HoraAcademica> horasAcademicas;
     private ArrayList<GradoAcademico> gradosDeDictado;
 
@@ -19,9 +20,9 @@ public class Profesor extends Usuario {
     }
     
     public Profesor(int codigoProfesor, boolean certificadoHistorialEducativo,
-            String especialidad, int dni, String nombre, Date fechaNacimiento, 
+            String especialidad, int idUsuario, String dni, String nombre, Date fechaNacimiento, 
             String direccion, String email, String sexo,String username,String password) {
-        super(dni, nombre, fechaNacimiento, direccion, email, sexo,username,password);
+        super(idUsuario, dni, nombre, fechaNacimiento, direccion, email, sexo,username,password);
         this.codigoProfesor = codigoProfesor;
         this.certificadoHistorialEducativo = certificadoHistorialEducativo;
         this.especialidad = especialidad;

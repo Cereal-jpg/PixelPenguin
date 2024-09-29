@@ -2,10 +2,12 @@
 package pe.edu.pucp.pixelpenguins.usuario.model;
 
 import java.util.Date;
+import pe.edu.pucp.pixelpenguins.contrato.model.IConsultable;
 
 public abstract class Usuario implements IConsultable{
-    private int dni;
-    private String nombre;
+    private int idUsuario;
+    private String dni;
+    private String nombreCompleto;
     private Date fechaNacimiento;
     private String direccion;
     private String email;
@@ -15,9 +17,10 @@ public abstract class Usuario implements IConsultable{
     
     public Usuario(){}
     
-    public Usuario(int dni, String nombre, Date fechaNacimiento, String direccion, String email, String sexo, String username, String passsword) {
+    public Usuario(int idUsuario,String dni, String nombre, Date fechaNacimiento, String direccion, String email, String sexo, String username, String passsword) {
+        this.idUsuario = idUsuario;
         this.dni = dni;
-        this.nombre = nombre;
+        this.nombreCompleto = nombre;
         this.fechaNacimiento = fechaNacimiento;
         this.direccion = direccion;
         this.email = email;
@@ -26,20 +29,28 @@ public abstract class Usuario implements IConsultable{
         this.passsword = passsword;
     }
 
-    public int getDni() {
+    public int getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
+    }
+    
+    public String getDni() {
         return dni;
     }
 
-    public void setDni(int dni) {
+    public void setDni(String dni) {
         this.dni = dni;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getNombreCompleto() {
+        return nombreCompleto;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombreCompleto(String nombre) {
+        this.nombreCompleto = nombre;
     }
 
     public Date getFechaNacimiento() {

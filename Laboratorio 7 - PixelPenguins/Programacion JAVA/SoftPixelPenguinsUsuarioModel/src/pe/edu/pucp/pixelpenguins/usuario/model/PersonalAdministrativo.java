@@ -1,7 +1,7 @@
 
 package pe.edu.pucp.pixelpenguins.usuario.model;
 
-import pe.edu.pucp.pixelpenguins.anioacademico.model.PlanAcademico;
+import pe.edu.pucp.pixelpenguins.anioacademico.model.AnioAcademico;
 import java.util.Date;
 
 // es un miembro del EquipoAdministrativo
@@ -12,8 +12,11 @@ public class PersonalAdministrativo extends Usuario{
         super();
     }
 
-    public PersonalAdministrativo(int dni, String nombre, Date fechaNacimiento, String direccion, String email, String sexo, String username, String passsword) {
-        super(dni, nombre, fechaNacimiento, direccion, email, sexo, username, passsword);
+    public PersonalAdministrativo(int idPersonalAdministrativo, int idUsuario,
+            String dni, String nombre, Date fechaNacimiento, String direccion,
+            String email, String sexo, String username, String passsword) {
+        super(idUsuario, dni, nombre, fechaNacimiento, direccion, email, sexo, username, passsword);
+        this.idPersonalAdministrativo = idPersonalAdministrativo;
     }
 
     public int getIdPersonalAdministrativo() {
@@ -58,7 +61,7 @@ public class PersonalAdministrativo extends Usuario{
         return "";
     }
     
-    public int agregarPlanAcademico(PlanAcademico plan){
+    public int agregarAnioAcademico(AnioAcademico anioAcademico){
         int resultado=0;
         /*codigo*/
         return resultado;

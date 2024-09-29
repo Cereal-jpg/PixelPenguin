@@ -10,19 +10,18 @@ public class JornadaEscolar {
     private LocalTime horaInicio;
     private LocalTime horaFin;
     private DiaSemana dia;
-    private ArrayList<HoraAcademica> clasesAcademicas;
-    private ArrayList<GradoAcademico> gradosAcademicos;
+    private ArrayList<HoraAcademica> horasAcademicas;
     
     public JornadaEscolar(){}
     
-    public JornadaEscolar(int idJornadaEscolar, int horasDeEstudio, LocalTime horaInicio, LocalTime horaFin, DiaSemana dia, ArrayList<HoraAcademica> clasesAcademicas, ArrayList<GradoAcademico> gradosAcademicos) {
+    public JornadaEscolar(int idJornadaEscolar, int horasDeEstudio, LocalTime horaInicio,
+            LocalTime horaFin, DiaSemana dia) {
         this.idJornadaEscolar = idJornadaEscolar;
         this.horasDeEstudio = horasDeEstudio;
         this.horaInicio = horaInicio;
         this.horaFin = horaFin;
         this.dia = dia;
-        this.clasesAcademicas = clasesAcademicas;
-        this.gradosAcademicos = gradosAcademicos;
+        this.horasAcademicas = new ArrayList<HoraAcademica>();
     }
 
     public int getIdJornadaEscolar() {
@@ -63,22 +62,6 @@ public class JornadaEscolar {
 
     public void setDia(DiaSemana dia) {
         this.dia = dia;
-    }
-
-    public ArrayList<HoraAcademica> getClasesAcademicas() {
-        return clasesAcademicas;
-    }
-
-    public void setClasesAcademicas(ArrayList<HoraAcademica> clasesAcademicas) {
-        this.clasesAcademicas = clasesAcademicas;
-    }
-
-    public ArrayList<GradoAcademico> getGradosAcademicos() {
-        return gradosAcademicos;
-    }
-
-    public void setGradosAcademicos(ArrayList<GradoAcademico> gradosAcademicos) {
-        this.gradosAcademicos = gradosAcademicos;
     }
     
 }

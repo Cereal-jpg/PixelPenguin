@@ -11,9 +11,9 @@ public class Administrador extends Usuario {
         //super();
     }
     
-    public Administrador(int codigoAdministrador, int dni, String nombre, Date fechaNacimiento,
+    public Administrador(int codigoAdministrador, int idUsuario,String dni, String nombre, Date fechaNacimiento,
             String direccion, String email, String sexo, String username, String passsword) {
-        super(dni, nombre, fechaNacimiento, direccion, email, sexo, username, passsword);
+        super(idUsuario, dni, nombre, fechaNacimiento, direccion, email, sexo, username, passsword);
         this.codigoAdministrador = codigoAdministrador;
     }
 

@@ -2,9 +2,7 @@
 package pe.edu.pucp.pixelpenguins.curricula.model;
 
 import java.util.ArrayList;
-// faltan enlazar bien
-import pe.edu.pucp.pixelpenguins.institucioneducativa.model.IConsultable;
-import pe.edu.pucp.pixelpenguins.usuario.model.Alumno;
+import pe.edu.pucp.pixelpenguins.contrato.model.IConsultable;
 
 public class GradoAcademico implements IConsultable{
     private int idGradoAcademico;
@@ -13,22 +11,24 @@ public class GradoAcademico implements IConsultable{
     private int cantidadAlumnos;
     private int vacantes;
     private JornadaEscolar jornadaEscolar;
-    private ArrayList<SeccionAcademica> seccionesAcademicas;
-    private ArrayList<Alumno> alumnos;
-    
+    private SeccionAcademica seccionAcademicas;
+    private ArrayList<Curso> cursosGrado;
+    private ArrayList<JornadaEscolar> jornadasPorDia;
     
     public GradoAcademico(){}
     
     public GradoAcademico(int idGradoAcademico, int numeroGrado, NivelEducativo nivel,
-            int cantidadAlumnos, int vacantes, JornadaEscolar jornadaEscolar) {
+            int cantidadAlumnos, int vacantes, JornadaEscolar jornadaEscolar,
+            SeccionAcademica seccionAcademica) {
         this.idGradoAcademico = idGradoAcademico;
         this.numeroGrado = numeroGrado;
         this.nivel = nivel;
         this.cantidadAlumnos = cantidadAlumnos;
         this.vacantes = vacantes;
         this.jornadaEscolar = jornadaEscolar;
-        this.seccionesAcademicas=new ArrayList<SeccionAcademica>();
-        this.alumnos=new ArrayList<Alumno>();
+        this.seccionAcademicas=seccionAcademica;
+        this.cursosGrado=new ArrayList<>();
+        this.jornadasPorDia=new ArrayList<>();
     }
 
     public int getIdGradoAcademico() {

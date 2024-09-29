@@ -1,6 +1,7 @@
 
 package pe.edu.pucp.pixelpenguins.usuario.model;
 
+import pe.edu.pucp.pixelpenguins.anioacademico.model.PlanAcademico;
 import java.util.Date;
 
 // es un miembro del EquipoAdministrativo

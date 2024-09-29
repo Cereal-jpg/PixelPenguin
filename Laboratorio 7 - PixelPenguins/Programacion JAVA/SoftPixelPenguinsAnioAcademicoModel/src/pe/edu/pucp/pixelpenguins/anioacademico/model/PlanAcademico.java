@@ -6,26 +6,25 @@ import java.util.Date;
 // faltan enlazar bien
 import pe.edu.pucp.pixelpenguins.curricula.model.Curso;
 import pe.edu.pucp.pixelpenguins.institucioneducativa.model.IConsultable;
-import pe.edu.pucp.pixelpenguins.institucioneducativa.model.InstitucionEducativa;
+// import pe.edu.pucp.pixelpenguins.institucioneducativa.model.InstitucionEducativa;
 
 public class PlanAcademico implements IConsultable{
     private int idPlanAcademico;
     private int año;
     private Date fechaInicio;
     private Date fechaFin;
-    private InstitucionEducativa institucionEducativa; //tendrá una FK fid_institucionEducativa en la BD
+    // NO ES NECESARIO ESTE ATRIBUTO
+    // private InstitucionEducativa institucionEducativa;
     private ArrayList<Matricula> matriculas;
     private ArrayList<Curso> cursos;
 
     public PlanAcademico(){}
     
-    public PlanAcademico(int idPlanAcademico, int año, Date fechaInicio, Date fechaFin,
-            Integer idInstitucion, InstitucionEducativa institucionEducativa) {
+    public PlanAcademico(int idPlanAcademico, int año, Date fechaInicio, Date fechaFin) {
         this.idPlanAcademico = idPlanAcademico;
         this.año = año;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
-        this.institucionEducativa = institucionEducativa;
         this.matriculas=new ArrayList<Matricula>();
         this.cursos=new ArrayList<Curso>();
     }
@@ -60,14 +59,6 @@ public class PlanAcademico implements IConsultable{
 
     public void setFechaFin(Date fechaFin) {
         this.fechaFin = fechaFin;
-    }
-
-    public InstitucionEducativa getInstitucionEducativa() {
-        return institucionEducativa;
-    }
-
-    public void setInstitucionEducativa(InstitucionEducativa institucionEducativa) {
-        this.institucionEducativa = institucionEducativa;
     }
     
     @Override

@@ -1,6 +1,9 @@
 
 package pe.edu.pucp.pixelpenguins.usuario.model;
 
+import pe.edu.pucp.pixelpenguins.anioacademico.model.Matricula;
+import pe.edu.pucp.pixelpenguins.curricula.model.SeccionAcademica;
+import pe.edu.pucp.pixelpenguins.curricula.model.GradoAcademico;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -17,7 +20,7 @@ public class Alumno extends Usuario {
     private ArrayList<Curso> cursosMatriculado;
 
     public Alumno(){
-        super();
+        //super();
     }
 
     public Alumno(int codigoAlumno, boolean conCertificadoDeEstudios, boolean conCertificadoDeSalud,

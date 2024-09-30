@@ -13,9 +13,9 @@ public class InstitucionEducativa {
     private String nombre;
     private int cantidadAlumnos;
     private String direccion;
-    private int ruc;
+    private String ruc;
 
-    public InstitucionEducativa(int idInstitucion, String nombre, int cantidadAlumnos, String direccion, int ruc) {
+    public InstitucionEducativa(int idInstitucion, String nombre, int cantidadAlumnos, String direccion, String ruc) {
         this.idInstitucion = idInstitucion;
         this.nombre = nombre;
         this.cantidadAlumnos = cantidadAlumnos;
@@ -55,11 +55,11 @@ public class InstitucionEducativa {
         this.direccion = direccion;
     }
 
-    public int getRuc() {
+    public String getRuc() {
         return ruc;
     }
 
-    public void setRuc(int ruc) {
+    public void setRuc(String ruc) {
         this.ruc = ruc;
     }
     

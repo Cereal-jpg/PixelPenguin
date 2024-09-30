@@ -14,10 +14,12 @@ public abstract class Usuario implements IConsultable{
     private String sexo;
     private String username;
     private String passsword;
-    
+    private Rol rol;
     public Usuario(){}
     
-    public Usuario(int idUsuario,String dni, String nombre, Date fechaNacimiento, String direccion, String email, String sexo, String username, String passsword) {
+    public Usuario(int idUsuario,String dni, String nombre, Date fechaNacimiento,
+            String direccion, String email, String sexo, String username, 
+            String passsword, Rol rol) {
         this.idUsuario = idUsuario;
         this.dni = dni;
         this.nombreCompleto = nombre;
@@ -27,6 +29,7 @@ public abstract class Usuario implements IConsultable{
         this.sexo = sexo;
         this.username = username;
         this.passsword = passsword;
+        this.rol=rol;
     }
 
     public int getIdUsuario() {
@@ -99,6 +102,14 @@ public abstract class Usuario implements IConsultable{
 
     public void setPasssword(String passsword) {
         this.passsword = passsword;
+    }
+
+    public Rol getRol() {
+        return rol;
+    }
+
+    public void setRol(Rol rol) {
+        this.rol = rol;
     }
     
     @Override

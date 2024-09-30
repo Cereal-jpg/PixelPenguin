@@ -21,8 +21,8 @@ public class Profesor extends Usuario {
     
     public Profesor(int codigoProfesor, boolean certificadoHistorialEducativo,
             String especialidad, int idUsuario, String dni, String nombre, Date fechaNacimiento, 
-            String direccion, String email, String sexo,String username,String password) {
-        super(idUsuario, dni, nombre, fechaNacimiento, direccion, email, sexo,username,password);
+            String direccion, String email, String sexo,String username,String password,Rol rol) {
+        super(idUsuario, dni, nombre, fechaNacimiento, direccion, email, sexo,username,password,rol);
         this.codigoProfesor = codigoProfesor;
         this.certificadoHistorialEducativo = certificadoHistorialEducativo;
         this.especialidad = especialidad;

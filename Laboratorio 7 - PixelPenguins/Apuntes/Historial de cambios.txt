@@ -1,0 +1,70 @@
+Cambios al código anterior:
+
+Un alumno tiene varias matrículas por cada año, en cada año hay varias matrículas de diferentes alumnos.
+En cada año académico hay varios grados Académicos, en cada gradoAcadémico hay varias secciones Académicas
+Todos los Boolean se pasaron a TINYINT (en SQL), se les colocó una ID a cada clase como PK autoincremental
+
+1. Creación paquete SoftPixelPenguinsContratoModel con interfaz IConsultable
+2. En Usuario, se agrega idUsuario (int) y se cambia DNI de int a String.
+3. Arreglar todos los constructores, setters y getters con el cambio.	
+4. Cambio de nombre de la clase PlanAcademico a AnioAcademico.
+5. Borra atributo Array cursos de PlanAcademico (y el tipo InstitucionEducativa que no tenía nada que ver)
+6. Borra atributo alumno de Matricula, solo se podrá acceder desde un Alumno a su matricula
+7. Cambio nombre atributo "año" a "anio"
+8. Borra atributo Array alumnos de SeccionAcademica, solo se accede del otro sentido a partir de Matricula->GradoAcademico->SeccionAcademica
+9. Agregar atributo Array cursosGrado, para almacenar todos los cursos que están dentro de la malla de un determinado grado
+	(es independiente de las secciones si se piensa bien xd)
+10. Borrar atributo SeccionAcademica de Alumno
+11. Cambiar atributo matricula a uno Array matriculas para guardar el histórico
+12. Se está dejando el Array de cursos matriculados para que se pueda acceder directo, aunque está para pensarlo
+13. Borrar atributo de Profesor a HoraAcademica para evitar dependencia circular, es más importante que de profesor 
+	se acceda a una HoraAcademica que al revés (¿)
+14. Borrar atributo de alumnos de SeccionAcademica, se buscará otra forma que no genere dependencia circular
+15. Ahora el paquete Curricula es completamente independiente de otros.
+16. Paquete AnioAcademico solo dependía de Curricula, entonces ya funciona
+17. Importar AnioAcademico y Curricula en Usuario
+18. Importar todos en InstitucionEducativa
+19. Cambio int dni a String en Apoderado, y crear más atributos.
+20. Es el gradoAcadémico el que contiene jornadas Escolares por cada día, no al revés (borrado atributo relacionado en JornadaEscolar)
+21. Se agregó Array jornadasPorDia en GradoAcademico.
+22. Cambio atributo RUC de int a String.
+23. Agregar idAlumno,idProfesor,etc. aparte del codigo que ya tienen
+24. Agregar Rol como atributo de Usuario (relación 1 a 1)
+25. Nvm, estaba bien la relación de uno a muchos entre GradoAcademico y SeccionAcademica y la de AnioAcademico con muchos GradoAcademicos.
+26. No sé cómo arreglar la relación Entre GradoAcademico y AnioAcademico, GradoAcademico debería tener un atributo de ese clase, 
+	pero no se debería importar el paquete de AnioAcademico a Curricula, por ahora solo un atributo como identificador.
+27. Borrar atributo GradoAcademico de Alumno para tener una relación muchos a muchos
+28. cambiar idCurso a int y agregarle atributo de codigoCurso como String a reemplazar
+29. Creación atributo int idProfesorRelacionado a HoraAcademica para de alguna manera tener un profe.
+30. Cambiar atributo idCurso en Competencia por uno de tipo Curso en sí.
+
+Tablas Creadas en SQL: (Si o No)
+---------------------
+
+InstitucionEducativa: 			Si
+Matricula:						Si
+AnioAcademico: 					Si
+Pago:							Si
+Usuario:						Si
+Alumno:							Si
+Apoderado:						Si
+Profesor:						Si
+Administrador:					Si
+PersonalAdministrativo:			Si
+Rol:							Si
+GradoAcademico:					Si
+SeccionAcademica:				Si
+JornadaEscolar:					Si
+HoraAcademica: 					Si
+Curso:							Si
+Competencias:					Si
+Notas:							Si
+
+
+¿Cómo arreglan este error al conectarse a la BD?
+
+Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.sql.Connection.close()" because "this.con" is null
+	at pe.edu.pucp.pixelpenguins.usuario.daoImp.RolDAOImp.insertar(RolDAOImp.java:38)
+	at pe.edu.pucp.pixelpenguins.usuario.bo.RolBO.insertar(RolBO.java:17)
+	at pe.edu.pucp.pixelpenguins.main.Principal.main(Principal.java:13)
+

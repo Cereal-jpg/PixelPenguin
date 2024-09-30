@@ -4,6 +4,7 @@ package pe.edu.pucp.pixelpenguins.anioacademico.model;
 import java.util.ArrayList;
 import java.util.Date;
 import pe.edu.pucp.pixelpenguins.contrato.model.IConsultable;
+import pe.edu.pucp.pixelpenguins.curricula.model.GradoAcademico;
 
 public class AnioAcademico implements IConsultable{
     private int idAnioAcademico;
@@ -12,6 +13,7 @@ public class AnioAcademico implements IConsultable{
     private Date fechaFin;
     // una AnioAcademico tiene varias matrículas de diferente alumnos
     private ArrayList<Matricula> matriculas;
+    private ArrayList<GradoAcademico> gradosAcademicos;
 
     public AnioAcademico(){}
     

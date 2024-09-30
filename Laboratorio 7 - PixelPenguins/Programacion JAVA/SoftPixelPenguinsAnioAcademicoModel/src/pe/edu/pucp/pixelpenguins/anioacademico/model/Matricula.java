@@ -4,10 +4,7 @@ package pe.edu.pucp.pixelpenguins.anioacademico.model;
 import java.util.ArrayList;
 import java.util.Date;
 import pe.edu.pucp.pixelpenguins.contrato.model.IConsultable;
-
-// falta enlazar bien
 import pe.edu.pucp.pixelpenguins.curricula.model.GradoAcademico;
-
 
 public class Matricula implements IConsultable{
     private int idMatricula;
@@ -15,8 +12,8 @@ public class Matricula implements IConsultable{
     private Date fechaInicio;
     private Date fechaFin;
     private EstadoDeMatricula estado;
-    private GradoAcademico gradoAcademico; // tendrá un FK fid_gradoAcademico en la BD
-    private AnioAcademico planAcademico; // tendrá un FK fid_planAcademico en la BD
+    private GradoAcademico gradoAcademico; // tendrá un FK fid_GradoAcademico en la BD
+    private AnioAcademico anioAcademico; // tendrá un FK fid_AnioAcademico en la BD
     private ArrayList <Pago> pagos;
 
     public Matricula(){}
@@ -29,7 +26,7 @@ public class Matricula implements IConsultable{
         this.fechaFin = fechaFin;
         this.estado = estado;
         this.gradoAcademico = gradoAcademico;
-        this.planAcademico = anioAcademico;
+        this.anioAcademico = anioAcademico;
         this.pagos=new ArrayList<Pago>();
     }
 
@@ -81,12 +78,12 @@ public class Matricula implements IConsultable{
         this.gradoAcademico = gradoAcademico;
     }
 
-    public AnioAcademico getPlanAcademico() {
-        return planAcademico;
+    public AnioAcademico getAnioAcademico() {
+        return anioAcademico;
     }
 
-    public void setPlanAcademico(AnioAcademico planAcademico) {
-        this.planAcademico = planAcademico;
+    public void setAnioAcademico(AnioAcademico anioAcademico) {
+        this.anioAcademico = anioAcademico;
     }
     
     @Override

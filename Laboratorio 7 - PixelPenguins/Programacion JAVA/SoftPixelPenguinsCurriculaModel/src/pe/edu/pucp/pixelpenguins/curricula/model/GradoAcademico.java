@@ -11,24 +11,25 @@ public class GradoAcademico implements IConsultable{
     private int cantidadAlumnos;
     private int vacantes;
     private JornadaEscolar jornadaEscolar;
-    private SeccionAcademica seccionAcademicas;
+    private int idAnioAcademicoRelacionado;
+    private ArrayList<SeccionAcademica> seccionesAcademicas;
     private ArrayList<Curso> cursosGrado;
     private ArrayList<JornadaEscolar> jornadasPorDia;
     
     public GradoAcademico(){}
     
     public GradoAcademico(int idGradoAcademico, int numeroGrado, NivelEducativo nivel,
-            int cantidadAlumnos, int vacantes, JornadaEscolar jornadaEscolar,
-            SeccionAcademica seccionAcademica) {
+            int cantidadAlumnos, int vacantes, JornadaEscolar jornadaEscolar,int idAnio) {
         this.idGradoAcademico = idGradoAcademico;
         this.numeroGrado = numeroGrado;
         this.nivel = nivel;
         this.cantidadAlumnos = cantidadAlumnos;
         this.vacantes = vacantes;
         this.jornadaEscolar = jornadaEscolar;
-        this.seccionAcademicas=seccionAcademica;
+        this.idAnioAcademicoRelacionado=idAnio;
         this.cursosGrado=new ArrayList<>();
         this.jornadasPorDia=new ArrayList<>();
+        this.seccionesAcademicas=new ArrayList<>();
     }
 
     public int getIdGradoAcademico() {
@@ -78,7 +79,15 @@ public class GradoAcademico implements IConsultable{
     public void setJornadaEscolar(JornadaEscolar jornadaEscolar) {
         this.jornadaEscolar = jornadaEscolar;
     }
-    
+
+    public int getIdAnioAcademicoRelacionado() {
+        return idAnioAcademicoRelacionado;
+    }
+
+    public void setIdAnioAcademicoRelacionado(int idAnioAcademicoRelacionado) {
+        this.idAnioAcademicoRelacionado = idAnioAcademicoRelacionado;
+    }
+
     @Override
     public String consultarInformacion() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody

@@ -10,7 +10,6 @@ public class GradoAcademico implements IConsultable{
     private NivelEducativo nivel;
     private int cantidadAlumnos;
     private int vacantes;
-    private JornadaEscolar jornadaEscolar;
     private int idAnioAcademicoRelacionado;
     private ArrayList<SeccionAcademica> seccionesAcademicas;
     private ArrayList<Curso> cursosGrado;
@@ -19,13 +18,12 @@ public class GradoAcademico implements IConsultable{
     public GradoAcademico(){}
     
     public GradoAcademico(int numeroGrado, NivelEducativo nivel,
-            int cantidadAlumnos, int vacantes, JornadaEscolar jornadaEscolar,int idAnio) {
+            int cantidadAlumnos, int vacantes, int idAnio) {
         //this.idGradoAcademico = idGradoAcademico;
         this.numeroGrado = numeroGrado;
         this.nivel = nivel;
         this.cantidadAlumnos = cantidadAlumnos;
         this.vacantes = vacantes;
-        this.jornadaEscolar = jornadaEscolar;
         this.idAnioAcademicoRelacionado=idAnio;
         this.cursosGrado=new ArrayList<>();
         this.jornadasPorDia=new ArrayList<>();
@@ -70,14 +68,6 @@ public class GradoAcademico implements IConsultable{
 
     public void setVacantes(int vacantes) {
         this.vacantes = vacantes;
-    }
-
-    public JornadaEscolar getJornadaEscolar() {
-        return jornadaEscolar;
-    }
-
-    public void setJornadaEscolar(JornadaEscolar jornadaEscolar) {
-        this.jornadaEscolar = jornadaEscolar;
     }
 
     public int getIdAnioAcademicoRelacionado() {

@@ -8,8 +8,7 @@ public class Principal {
 
     public static void main(String[] args) throws ParseException{
         RolBO rolBO=new RolBO();
-        if(rolBO.insertar(1, "Estudiante")==1)
+        if(rolBO.insertar("Profesor")==1)
             System.out.println("El rol fue agregado correctamente");
     }
-
 }

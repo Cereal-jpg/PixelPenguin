@@ -69,6 +69,7 @@ CREATE TABLE PersonalAdministrativo(
 DROP TABLE IF EXISTS Profesor;
 CREATE TABLE Profesor(
 	idProfesor INT,
+    codigoProfesor INT NOT NULL,
     certificadoHistorialEducativo TINYINT NOT NULL,
     especialidad VARCHAR(20) NOT NULL,
     activo TINYINT,
@@ -88,21 +89,9 @@ CREATE TABLE Apoderado(
     PRIMARY KEY (idApoderado)
 );
 
-DROP TABLE IF EXISTS JornadaEscolar;
-CREATE TABLE JornadaEscolar(
-	idJornadaEscolar INT AUTO_INCREMENT,
-    horasDeEstudio INT NOT NULL,
-    horaInicio TIME NOT NULL,
-    horaFin TIME NOT NULL,
-    dia ENUM ('LUNES','MARTES','MIERCOLES','JUEVES','VIERNES') NOT NULL,
-    activo TINYINT,
-    PRIMARY KEY (idJornadaEscolar)
-);
-
 DROP TABLE IF EXISTS GradoAcademico;
 CREATE TABLE GradoAcademico(
 	idGradoAcademico INT AUTO_INCREMENT,
-    fid_JornadaEscolar INT NOT NULL,
     idAnioAcademicoRelacionado INT NOT NULL,
     numeroGrado INT NOT NULL,
     nivel ENUM ('PRIMARIO','SECUNDARIO') NOT NULL,
@@ -110,8 +99,20 @@ CREATE TABLE GradoAcademico(
     vacantes INT NOT NULL,
     activo TINYINT,
     PRIMARY KEY (idGradoAcademico),
-    FOREIGN KEY (fid_JornadaEscolar) REFERENCES JornadaEscolar (idJornadaEscolar),
     FOREIGN KEY (idAnioAcademicoRelacionado) REFERENCES AnioAcademico (idAnioAcademico)
+);
+
+DROP TABLE IF EXISTS JornadaEscolar;
+CREATE TABLE JornadaEscolar(
+	idJornadaEscolar INT AUTO_INCREMENT,
+    fid_GradoAcademico INT NOT NULL,
+    horasDeEstudio INT NOT NULL,
+    horaInicio TIME NOT NULL,
+    horaFin TIME NOT NULL,
+    dia ENUM ('LUNES','MARTES','MIERCOLES','JUEVES','VIERNES') NOT NULL,
+    activo TINYINT,
+    PRIMARY KEY (idJornadaEscolar),
+    FOREIGN KEY (fid_GradoAcademico) REFERENCES GradoAcademico (idGradoAcademico)
 );
 
 DROP TABLE IF EXISTS Alumno;

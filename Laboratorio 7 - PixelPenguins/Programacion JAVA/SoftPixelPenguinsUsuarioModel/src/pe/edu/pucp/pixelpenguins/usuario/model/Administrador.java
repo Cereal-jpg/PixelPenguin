@@ -4,29 +4,21 @@ package pe.edu.pucp.pixelpenguins.usuario.model;
 import java.util.Date;
 
 public class Administrador extends Usuario {
-    private int idAdministrador;
+    // Solo en la BD, se hereda del idUsuario
+    // private int idAdministrador;
     private int codigoAdministrador;
     
     public Administrador(){
         //super();
     }
     
-    public Administrador(int idAdministrador,int codigoAdministrador, int idUsuario,
-            String dni, String nombre, Date fechaNacimiento,String direccion, 
-            String email, String sexo, String username, String passsword, Rol rol) {
-        super(idUsuario, dni, nombre, fechaNacimiento, direccion, email, sexo, username, passsword, rol);
-        this.idAdministrador = idAdministrador;
+    public Administrador(int codigoAdministrador,String dni, String nombre, 
+            Date fechaNacimiento,String direccion,String email, String sexo, 
+            String username, String passsword, Rol rol) {
+        super(dni, nombre, fechaNacimiento, direccion, email, sexo, username, passsword, rol);
         this.codigoAdministrador = codigoAdministrador;
     }
 
-    public int getIdAdministrador() {
-        return idAdministrador;
-    }
-
-    public void setIdAdministrador(int idAdministrador) {
-        this.idAdministrador = idAdministrador;
-    }
-    
     public int getCodigoAdministrador() {
         return codigoAdministrador;
     }

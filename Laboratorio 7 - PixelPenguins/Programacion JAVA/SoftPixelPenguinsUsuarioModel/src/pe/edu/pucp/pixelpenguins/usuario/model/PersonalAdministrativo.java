@@ -6,27 +6,19 @@ import java.util.Date;
 
 // es un miembro del EquipoAdministrativo
 public class PersonalAdministrativo extends Usuario{
-    private int idPersonalAdministrativo;
+    // solo en la BD, lo hereda de idUsuario
+    // private int idPersonalAdministrativo;
     private int codigoPersonalAdministrativo;
     
     public PersonalAdministrativo() {
         super();
     }
 
-    public PersonalAdministrativo(int idPersonalAdministrativo,int codigoPersonalAdministrativo,
-            int idUsuario, String dni, String nombre, Date fechaNacimiento, String direccion,
+    public PersonalAdministrativo(int codigoPersonalAdministrativo,
+            String dni, String nombre, Date fechaNacimiento, String direccion,
             String email, String sexo, String username, String passsword, Rol rol) {
-        super(idUsuario, dni, nombre, fechaNacimiento, direccion, email, sexo, username, passsword,rol);
-        this.idPersonalAdministrativo = idPersonalAdministrativo;
+        super(dni, nombre, fechaNacimiento, direccion, email, sexo, username, passsword,rol);
         this.codigoPersonalAdministrativo=codigoPersonalAdministrativo;
-    }
-
-    public int getIdPersonalAdministrativo() {
-        return idPersonalAdministrativo;
-    }
-
-    public void setIdPersonalAdministrativo(int idPersonalAdministrativo) {
-        this.idPersonalAdministrativo = idPersonalAdministrativo;
     }
 
     public int getCodigoPersonalAdministrativo() {

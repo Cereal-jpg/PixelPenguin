@@ -15,8 +15,9 @@ public class InstitucionEducativa {
     private String direccion;
     private String ruc;
 
-    public InstitucionEducativa(int idInstitucion, String nombre, int cantidadAlumnos, String direccion, String ruc) {
-        this.idInstitucion = idInstitucion;
+    // es autoincremental el ID
+    public InstitucionEducativa(String nombre, int cantidadAlumnos, String direccion, String ruc) {
+        //this.idInstitucion = idInstitucion;
         this.nombre = nombre;
         this.cantidadAlumnos = cantidadAlumnos;
         this.direccion = direccion;

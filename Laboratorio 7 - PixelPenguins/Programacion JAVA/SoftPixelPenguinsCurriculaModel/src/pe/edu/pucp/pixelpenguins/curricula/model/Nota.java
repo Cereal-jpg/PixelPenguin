@@ -10,8 +10,8 @@ public class Nota {
     
     public Nota(){}
 
-    public Nota(int idNota, String nota, int bimestre, Curso curso, Competencia competencia) {
-        this.idNota = idNota;
+    public Nota(String nota, int bimestre, Curso curso, Competencia competencia) {
+        //this.idNota = idNota;
         this.nota = nota;
         this.bimestre = bimestre;
         this.curso = curso;

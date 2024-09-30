@@ -18,9 +18,9 @@ public class GradoAcademico implements IConsultable{
     
     public GradoAcademico(){}
     
-    public GradoAcademico(int idGradoAcademico, int numeroGrado, NivelEducativo nivel,
+    public GradoAcademico(int numeroGrado, NivelEducativo nivel,
             int cantidadAlumnos, int vacantes, JornadaEscolar jornadaEscolar,int idAnio) {
-        this.idGradoAcademico = idGradoAcademico;
+        //this.idGradoAcademico = idGradoAcademico;
         this.numeroGrado = numeroGrado;
         this.nivel = nivel;
         this.cantidadAlumnos = cantidadAlumnos;

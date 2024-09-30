@@ -11,8 +11,8 @@ public class Competencia {
     
     public Competencia(){}
     
-    public Competencia(int idCompetencia, String descripcion, Curso curso) {
-        this.idCompetencia = idCompetencia;
+    public Competencia(String descripcion, Curso curso) {
+        //this.idCompetencia = idCompetencia;
         this.descripcion = descripcion;
         this.curso = curso;
         this.notas=new ArrayList<Nota>();

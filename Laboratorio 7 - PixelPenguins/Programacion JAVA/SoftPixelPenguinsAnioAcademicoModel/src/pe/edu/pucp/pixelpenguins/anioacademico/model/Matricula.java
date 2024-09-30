@@ -18,9 +18,9 @@ public class Matricula implements IConsultable{
 
     public Matricula(){}
     
-    public Matricula(int idMatricula, boolean cumpleRequisitos, Date fechaInicio, Date fechaFin,
+    public Matricula(boolean cumpleRequisitos, Date fechaInicio, Date fechaFin,
             EstadoDeMatricula estado, GradoAcademico gradoAcademico, AnioAcademico anioAcademico) {
-        this.idMatricula = idMatricula;
+        //this.idMatricula = idMatricula;
         this.cumpleRequisitos = cumpleRequisitos;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;

@@ -6,8 +6,6 @@ import java.sql.CallableStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import pe.edu.pucp.pixelpenguins.config.DBManager;
 import pe.edu.pucp.pixelpenguins.usuario.dao.RolDAO;
 import pe.edu.pucp.pixelpenguins.usuario.model.Rol;
@@ -21,8 +19,9 @@ public class RolDAOImp implements RolDAO{
     @Override
     public int insertar(Rol rol) {
         int resultado=0;
+        Connection con = null;
         try {
-            Connection con=DBManager.getInstance().getConnection();
+            con=DBManager.getInstance().getConnection();
             CallableStatement cs=con.prepareCall("{call INSERTAR_ROL (?,?)}");
             cs.registerOutParameter("p_idRol", java.sql.Types.INTEGER);
             cs.setString("p_nombre", rol.getNombre());

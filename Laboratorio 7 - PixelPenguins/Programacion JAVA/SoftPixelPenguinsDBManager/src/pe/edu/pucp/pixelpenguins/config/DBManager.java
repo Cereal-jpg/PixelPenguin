@@ -10,12 +10,9 @@ import static pe.edu.pucp.pixelpenguins.util.Cifrado.descifrarMD5;
 public class DBManager {
     
     private static DBManager dbManager;
-    /*private String url = "jdbc:mysql://" +
-    "softiepixelpenguins-1inf30-0682.cz2bk0coctwl.us-east-1.rds.amazonaws.com" + 
-            ":3306/" + "softiepixelpenguins";*/
     private String url = "jdbc:mysql://" +
-    "mysql-softiepixelpenguins-1inf30-682.cduaj8hcagsx.us-east-1.rds.amazonaws.com" + 
-            ":3306/" + "pixelPenguins";
+    "softiepixelpenguins-1inf30-0682.cz2bk0coctwl.us-east-1.rds.amazonaws.com" + 
+            ":3306/" + "pixelpenguins";
     private String username = "admin";
     private String password = "1inf30softiepixelpenguins";
     private Connection con;
@@ -36,7 +33,7 @@ public class DBManager {
     public Connection getConnection(){
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection(url, username,password);
+            con = DriverManager.getConnection(url, username, password);
         }catch(ClassNotFoundException | SQLException ex){
             System.out.println(ex.getMessage());
         }

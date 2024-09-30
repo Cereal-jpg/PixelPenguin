@@ -2,8 +2,6 @@
 package pe.edu.pucp.pixelpenguins.main;
 
 import java.text.ParseException;
-import pe.edu.pucp.pixelpenguins.usuario.model.Rol;
-import pe.edu.pucp.pixelpenguins.usuario.dao.RolDAO;
 import pe.edu.pucp.pixelpenguins.usuario.bo.RolBO;
 
 public class Principal {

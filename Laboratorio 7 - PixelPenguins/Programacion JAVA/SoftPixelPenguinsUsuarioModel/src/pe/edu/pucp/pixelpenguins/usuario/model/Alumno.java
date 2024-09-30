@@ -10,7 +10,7 @@ import java.util.Date;
 
 
 public class Alumno extends Usuario {
-    
+    private int idAlumno;
     private int codigoAlumno;
     private boolean conCertificadoDeEstudios;
     private boolean conCertificadoDeSalud;
@@ -25,11 +25,12 @@ public class Alumno extends Usuario {
         //super();
     }
 
-    public Alumno(int codigoAlumno, boolean conCertificadoDeEstudios, boolean conCertificadoDeSalud,
+    public Alumno(int idAlumno, int codigoAlumno, boolean conCertificadoDeEstudios, boolean conCertificadoDeSalud,
             boolean conDeuda, Apoderado apoderado,GradoAcademico gradoAcademico,
             int idUsuario, String dni, String nombre, Date fechaNacimiento, String direccion,
-            String email, String sexo, String username, String passsword) {
-        super(idUsuario,dni, nombre, fechaNacimiento, direccion, email, sexo, username, passsword);
+            String email, String sexo, String username, String passsword, Rol rol) {
+        super(idUsuario,dni, nombre, fechaNacimiento, direccion, email, sexo, username, passsword, rol);
+        this.idAlumno = idAlumno;
         this.codigoAlumno = codigoAlumno;
         this.conCertificadoDeEstudios = conCertificadoDeEstudios;
         this.conCertificadoDeSalud = conCertificadoDeSalud;
@@ -40,6 +41,14 @@ public class Alumno extends Usuario {
         this.cursosMatriculado=new ArrayList<Curso>();
     }
 
+    public int getIdAlumno() {
+        return idAlumno;
+    }
+
+    public void setIdAlumno(int idAlumno) {
+        this.idAlumno = idAlumno;
+    }
+    
     public int getCodigoAlumno() {
         return codigoAlumno;
     }

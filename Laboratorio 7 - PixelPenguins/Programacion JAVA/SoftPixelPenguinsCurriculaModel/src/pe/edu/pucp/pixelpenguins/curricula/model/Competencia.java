@@ -6,15 +6,15 @@ import java.util.ArrayList;
 public class Competencia {
     private int idCompetencia;
     private String descripcion;
-    private String idCurso;
+    private Curso curso;
     private ArrayList<Nota> notas;
     
     public Competencia(){}
     
-    public Competencia(int idCompetencia, String descripcion, String idCurso) {
+    public Competencia(int idCompetencia, String descripcion, Curso curso) {
         this.idCompetencia = idCompetencia;
         this.descripcion = descripcion;
-        this.idCurso = idCurso;
+        this.curso = curso;
         this.notas=new ArrayList<Nota>();
     }
 
@@ -34,12 +34,12 @@ public class Competencia {
         this.descripcion = descripcion;
     }
 
-    public String getIdCurso() {
-        return idCurso;
+    public Curso getCurso() {
+        return curso;
     }
 
-    public void setIdCurso(String idCurso) {
-        this.idCurso = idCurso;
+    public void setCurso(Curso curso) {
+        this.curso = curso;
     }
     
 }

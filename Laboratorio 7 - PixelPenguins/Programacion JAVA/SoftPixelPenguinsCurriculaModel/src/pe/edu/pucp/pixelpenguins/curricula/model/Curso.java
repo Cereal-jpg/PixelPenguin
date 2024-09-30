@@ -5,7 +5,8 @@ import java.util.ArrayList;
 import pe.edu.pucp.pixelpenguins.contrato.model.IConsultable;
 
 public class Curso implements IConsultable{
-    private String idCurso;
+    private int idCurso;
+    private String codigoCurso;
     private String nombre;
     private int horasPorSemana;
     private int horasTotales;
@@ -15,7 +16,7 @@ public class Curso implements IConsultable{
     
     public Curso(){}
     
-    public Curso(String idCurso, String nombre, int horasPorSemana, int horasTotales) {
+    public Curso(int idCurso, String codigoCurso, String nombre, int horasPorSemana, int horasTotales) {
         this.idCurso = idCurso;
         this.nombre = nombre;
         this.horasPorSemana = horasPorSemana;
@@ -25,14 +26,22 @@ public class Curso implements IConsultable{
         horasAcademicas = new ArrayList<HoraAcademica>();
     }
 
-    public String getIdCurso() {
+    public int getIdCurso() {
         return idCurso;
     }
 
-    public void setIdCurso(String idCurso) {
+    public void setIdCurso(int idCurso) {
         this.idCurso = idCurso;
     }
 
+    public String getCodigoCurso() {
+        return codigoCurso;
+    }
+
+    public void setCodigoCurso(String codigoCurso) {
+        this.codigoCurso = codigoCurso;
+    }
+    
     public String getNombre() {
         return nombre;
     }

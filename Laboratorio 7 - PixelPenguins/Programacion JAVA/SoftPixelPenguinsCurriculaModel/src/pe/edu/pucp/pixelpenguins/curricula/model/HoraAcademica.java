@@ -2,17 +2,20 @@
 package pe.edu.pucp.pixelpenguins.curricula.model;
 
 import java.time.LocalTime;
-import java.util.ArrayList;
 
 public class HoraAcademica {
     private int idHoraAcademica;
+    private int idProfesorRelacionado;
     private LocalTime horaInicio;
     private LocalTime horaFin;
     private Curso curso; //tendrá asignada una FK fid_curso en la BD
+    
     public HoraAcademica(){}
     
-    public HoraAcademica(int idHoraAcademica, LocalTime horaInicio, LocalTime horaFin, Curso curso) {
+    public HoraAcademica(int idHoraAcademica, int idProfesorRelacionado,
+            LocalTime horaInicio, LocalTime horaFin, Curso curso) {
         this.idHoraAcademica = idHoraAcademica;
+        this.idProfesorRelacionado = idProfesorRelacionado;
         this.horaInicio = horaInicio;
         this.horaFin = horaFin;
         this.curso = curso;
@@ -26,6 +29,14 @@ public class HoraAcademica {
         this.idHoraAcademica = idHoraAcademica;
     }
 
+    public int getIdProfesorRelacionado() {
+        return idProfesorRelacionado;
+    }
+
+    public void setIdProfesorRelacionado(int idProfesorRelacionado) {
+        this.idProfesorRelacionado = idProfesorRelacionado;
+    }
+    
     public LocalTime getHoraInicio() {
         return horaInicio;
     }

@@ -4,3 +4,4 @@ Host: mysql-softiepixelpenguins-1inf30-682.cduaj8hcagsx.us-east-1.rds.amazonaws.
 User: admin
 Password: 1inf30softiepixelpenguins
 Puerto: 3306
+Nombre BD: pixelPenguins

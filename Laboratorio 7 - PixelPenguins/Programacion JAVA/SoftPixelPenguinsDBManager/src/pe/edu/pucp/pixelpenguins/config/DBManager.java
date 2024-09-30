@@ -9,20 +9,19 @@ import static pe.edu.pucp.pixelpenguins.util.Cifrado.descifrarMD5;
 
 public class DBManager {
     
-    private static DBManager dbManager=null;
+    private static DBManager dbManager;
     /*private String url = "jdbc:mysql://" +
     "softiepixelpenguins-1inf30-0682.cz2bk0coctwl.us-east-1.rds.amazonaws.com" + 
             ":3306/" + "softiepixelpenguins";*/
     private String url = "jdbc:mysql://" +
     "mysql-softiepixelpenguins-1inf30-682.cduaj8hcagsx.us-east-1.rds.amazonaws.com" + 
-    //         ":3306/" + "softiepixelpenguins";
-               ":3306/" + "pixelPenguins";
+            ":3306/" + "pixelPenguins";
     private String username = "admin";
-    private String password; //la contraseña debe estar cifrada
+    private String password = "1inf30softiepixelpenguins";
     private Connection con;
     
     // para que no se pueda instanciar y se use necesariamente el getInstance()
-    private DBManager(){}
+    private DBManager(){};
     
     public static DBManager getInstance(){
         if(DBManager.dbManager == null)
@@ -31,14 +30,13 @@ public class DBManager {
     }
     
     private static void createInstance(){
-        if(DBManager.dbManager==null)
-            DBManager.dbManager = new DBManager();
+        DBManager.dbManager = new DBManager();
     }
     
     public Connection getConnection(){
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection(url, username,descifrarMD5(password));
+            con = DriverManager.getConnection(url, username,password);
         }catch(ClassNotFoundException | SQLException ex){
             System.out.println(ex.getMessage());
         }

@@ -9,8 +9,8 @@ public class SeccionAcademica {
 
     public SeccionAcademica(){}
     
-    public SeccionAcademica(int idSeccionAcademica, char seccion, String aula, GradoAcademico gradoAcademico) {
-        this.idSeccionAcademica = idSeccionAcademica;
+    public SeccionAcademica(char seccion, String aula, GradoAcademico gradoAcademico) {
+        //this.idSeccionAcademica = idSeccionAcademica;
         this.seccion = seccion;
         this.aula = aula;
         this.gradoAcademico = gradoAcademico;

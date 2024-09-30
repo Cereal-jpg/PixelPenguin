@@ -14,9 +14,9 @@ public class JornadaEscolar {
     
     public JornadaEscolar(){}
     
-    public JornadaEscolar(int idJornadaEscolar, int horasDeEstudio, LocalTime horaInicio,
+    public JornadaEscolar(int horasDeEstudio, LocalTime horaInicio,
             LocalTime horaFin, DiaSemana dia) {
-        this.idJornadaEscolar = idJornadaEscolar;
+        //this.idJornadaEscolar = idJornadaEscolar;
         this.horasDeEstudio = horasDeEstudio;
         this.horaInicio = horaInicio;
         this.horaFin = horaFin;

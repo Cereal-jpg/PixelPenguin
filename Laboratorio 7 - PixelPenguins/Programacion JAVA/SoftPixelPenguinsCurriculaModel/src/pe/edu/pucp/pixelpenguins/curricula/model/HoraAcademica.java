@@ -12,9 +12,9 @@ public class HoraAcademica {
     
     public HoraAcademica(){}
     
-    public HoraAcademica(int idHoraAcademica, int idProfesorRelacionado,
+    public HoraAcademica(int idProfesorRelacionado,
             LocalTime horaInicio, LocalTime horaFin, Curso curso) {
-        this.idHoraAcademica = idHoraAcademica;
+        //this.idHoraAcademica = idHoraAcademica;
         this.idProfesorRelacionado = idProfesorRelacionado;
         this.horaInicio = horaInicio;
         this.horaFin = horaFin;

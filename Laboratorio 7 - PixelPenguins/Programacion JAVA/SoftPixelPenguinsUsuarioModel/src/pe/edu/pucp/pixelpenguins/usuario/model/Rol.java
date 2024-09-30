@@ -9,8 +9,8 @@ public class Rol {
     
     // los constructores al estar con AUTO_INCREMENT para su id, 
     // deberían ser omitidos (solo nombre)
-    public Rol(int idRol, String nombre) {
-        this.idRol = idRol;
+    public Rol(String nombre) {
+        //this.idRol=idRol;
         this.nombre = nombre;
     }
     

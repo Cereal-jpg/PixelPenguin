@@ -16,8 +16,8 @@ public class Pago implements IConsultable{
 
     public Pago(){}
     
-    public Pago(int idPago, Date fechaCreacion, Date fechaPago, double monto, TipoDePago tipoPago, EstadoDePago estado, TipoDeComprobante tipoDeComprobante, Matricula matricula) {
-        this.idPago = idPago;
+    public Pago(Date fechaCreacion, Date fechaPago, double monto, TipoDePago tipoPago, EstadoDePago estado, TipoDeComprobante tipoDeComprobante, Matricula matricula) {
+        //this.idPago = idPago;
         this.fechaCreacion = fechaCreacion;
         this.fechaPago = fechaPago;
         this.monto = monto;

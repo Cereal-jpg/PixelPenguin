@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Profesor extends Usuario {
+    // solo en la BD
+    // private int idProfesor;
     private int codigoProfesor;
     private boolean certificadoHistorialEducativo;
     private String especialidad;
@@ -20,9 +22,9 @@ public class Profesor extends Usuario {
     }
     
     public Profesor(int codigoProfesor, boolean certificadoHistorialEducativo,
-            String especialidad, int idUsuario, String dni, String nombre, Date fechaNacimiento, 
+            String especialidad, String dni, String nombre, Date fechaNacimiento, 
             String direccion, String email, String sexo,String username,String password,Rol rol) {
-        super(idUsuario, dni, nombre, fechaNacimiento, direccion, email, sexo,username,password,rol);
+        super(dni, nombre, fechaNacimiento, direccion, email, sexo,username,password,rol);
         this.codigoProfesor = codigoProfesor;
         this.certificadoHistorialEducativo = certificadoHistorialEducativo;
         this.especialidad = especialidad;

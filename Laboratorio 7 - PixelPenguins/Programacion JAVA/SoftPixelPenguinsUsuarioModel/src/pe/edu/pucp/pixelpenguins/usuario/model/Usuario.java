@@ -17,10 +17,10 @@ public abstract class Usuario implements IConsultable{
     private Rol rol;
     public Usuario(){}
     
-    public Usuario(int idUsuario,String dni, String nombre, Date fechaNacimiento,
+    public Usuario(String dni, String nombre, Date fechaNacimiento,
             String direccion, String email, String sexo, String username, 
             String passsword, Rol rol) {
-        this.idUsuario = idUsuario;
+        //this.idUsuario = idUsuario;
         this.dni = dni;
         this.nombreCompleto = nombre;
         this.fechaNacimiento = fechaNacimiento;

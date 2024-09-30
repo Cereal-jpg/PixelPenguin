@@ -16,8 +16,8 @@ public class Curso implements IConsultable{
     
     public Curso(){}
     
-    public Curso(int idCurso, String codigoCurso, String nombre, int horasPorSemana, int horasTotales) {
-        this.idCurso = idCurso;
+    public Curso(String codigoCurso, String nombre, int horasPorSemana, int horasTotales) {
+        //this.idCurso = idCurso;
         this.nombre = nombre;
         this.horasPorSemana = horasPorSemana;
         this.horasTotales = horasTotales;

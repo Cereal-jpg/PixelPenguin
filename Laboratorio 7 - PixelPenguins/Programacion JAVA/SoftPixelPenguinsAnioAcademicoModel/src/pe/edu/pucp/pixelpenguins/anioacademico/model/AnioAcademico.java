@@ -17,8 +17,8 @@ public class AnioAcademico implements IConsultable{
 
     public AnioAcademico(){}
     
-    public AnioAcademico(int idAnioAcademico, int anio, Date fechaInicio, Date fechaFin) {
-        this.idAnioAcademico = idAnioAcademico;
+    public AnioAcademico(int anio, Date fechaInicio, Date fechaFin) {
+        //this.idAnioAcademico = idAnioAcademico;
         this.anio= anio;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;

@@ -10,7 +10,8 @@ import java.util.Date;
 
 
 public class Alumno extends Usuario {
-    private int idAlumno;
+    // solo tiene este dato en la BD, se hereda del idUsuario
+    // private int idAlumno; 
     private int codigoAlumno;
     private boolean conCertificadoDeEstudios;
     private boolean conCertificadoDeSalud;
@@ -25,12 +26,11 @@ public class Alumno extends Usuario {
         //super();
     }
 
-    public Alumno(int idAlumno, int codigoAlumno, boolean conCertificadoDeEstudios, boolean conCertificadoDeSalud,
+    public Alumno(int codigoAlumno, boolean conCertificadoDeEstudios, boolean conCertificadoDeSalud,
             boolean conDeuda, Apoderado apoderado,GradoAcademico gradoAcademico,
-            int idUsuario, String dni, String nombre, Date fechaNacimiento, String direccion,
+            String dni, String nombre, Date fechaNacimiento, String direccion,
             String email, String sexo, String username, String passsword, Rol rol) {
-        super(idUsuario,dni, nombre, fechaNacimiento, direccion, email, sexo, username, passsword, rol);
-        this.idAlumno = idAlumno;
+        super(dni, nombre, fechaNacimiento, direccion, email, sexo, username, passsword, rol);
         this.codigoAlumno = codigoAlumno;
         this.conCertificadoDeEstudios = conCertificadoDeEstudios;
         this.conCertificadoDeSalud = conCertificadoDeSalud;
@@ -39,14 +39,6 @@ public class Alumno extends Usuario {
         this.gradoAcademico = gradoAcademico;
         this.matriculas=new ArrayList<Matricula>();
         this.cursosMatriculado=new ArrayList<Curso>();
-    }
-
-    public int getIdAlumno() {
-        return idAlumno;
-    }
-
-    public void setIdAlumno(int idAlumno) {
-        this.idAlumno = idAlumno;
     }
     
     public int getCodigoAlumno() {

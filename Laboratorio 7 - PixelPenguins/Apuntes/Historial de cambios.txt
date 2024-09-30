@@ -37,6 +37,9 @@ Todos los Boolean se pasaron a TINYINT (en SQL), se les colocó una ID a cada cl
 28. cambiar idCurso a int y agregarle atributo de codigoCurso como String a reemplazar
 29. Creación atributo int idProfesorRelacionado a HoraAcademica para de alguna manera tener un profe.
 30. Cambiar atributo idCurso en Competencia por uno de tipo Curso en sí.
+31. Se crearon algunos procedimientos
+32. En todos los constructores se borraron los id, ya que estos se obtienen de manera autoincremental. (igual se puede volver a lo anterior 
+	si es necesario)
 
 Tablas Creadas en SQL: (Si o No)
 ---------------------
@@ -68,3 +71,25 @@ Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.s
 	at pe.edu.pucp.pixelpenguins.usuario.bo.RolBO.insertar(RolBO.java:17)
 	at pe.edu.pucp.pixelpenguins.main.Principal.main(Principal.java:13)
 
+
+Procedimientos (Si o No)
+aún faltan probarlos
+
+InstitucionEducativa: 			Si
+Matricula:						No
+AnioAcademico: 					Si
+Pago:							No
+Usuario:						Si
+Alumno:							No
+Apoderado:						No
+Profesor:						No
+Administrador:					Si (creo que está bien ¿)
+PersonalAdministrativo:			No
+Rol:							Si
+GradoAcademico:					No
+SeccionAcademica:				No
+JornadaEscolar:					No
+HoraAcademica: 					No
+Curso:							No
+Competencias:					No
+Notas:							No

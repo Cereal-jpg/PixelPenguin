@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import pe.edu.pucp.pixelpenguins.usuario.model.Rol;
 
 public interface RolDAO {
-    public int insertar(Rol rol);
-    public int modificar(Rol rol);
-    public int eliminar(Rol rol);
+    public Integer insertar(Rol rol);
+    public Integer modificar(Rol rol);
+    public Integer eliminar(Rol rol);
     public ArrayList<Rol> listarTodos();
     public Rol obtenerPorId (int idRol);
 }

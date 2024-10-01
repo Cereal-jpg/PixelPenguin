@@ -18,7 +18,8 @@ public class Principal {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         
         RolBO rolBO=new RolBO();
-        if(rolBO.insertar("Rol 1")==1) System.out.println("El rol fue agregado correctamente");
+        Integer id = rolBO.insertar("Rol 1");
+        System.out.println(id);
 //        if(rolBO.insertar("Rol 2")==1) System.out.println("El rol fue agregado correctamente");
 //        if(rolBO.insertar("Rol 3")==1) System.out.println("El rol fue agregado correctamente");
 //        if(rolBO.insertar("Rol 4")==1) System.out.println("El rol fue agregado correctamente");

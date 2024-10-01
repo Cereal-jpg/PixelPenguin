@@ -13,7 +13,7 @@ public class RolBO {
         this.rolDAO=new RolDAOImp();
     }
     
-    public int insertar(String nombre){
+    public Integer insertar(String nombre){
         Rol rol = new Rol(nombre);
         return rolDAO.insertar(rol);
     }

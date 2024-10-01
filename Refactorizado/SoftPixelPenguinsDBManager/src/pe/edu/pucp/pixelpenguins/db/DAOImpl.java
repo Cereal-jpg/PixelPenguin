@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.PreparedStatement;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import pe.edu.pucp.pixelpenguins.config.DBManager;
@@ -165,12 +166,32 @@ public abstract class DAOImpl<T> {
         return entidad;         
     }
     
-    private String generarSQLParaListarUno() {
-        String sql = " select " + obtenerListaAtributosParaListar() + " from ";
-        sql = sql.concat(this.nombre_tabla);
-        sql = sql.concat(" where ");
-        sql = sql.concat(this.obtenerIdentificador());
-        return sql;
+    protected ArrayList<T> listarTodos() {
+        ArrayList<T> lista = new ArrayList<>();
+        try {
+            this.iniciarTransaccion();
+            String sql = generarSQLParaListarTodos();
+            ejecutarConsultaEnBD(sql);
+            while (resultSet.next()) {
+                T objeto = mapearEntidadDesdeResultSet(resultSet);
+                lista.add(objeto);
+            }
+            this.comitarTransaccion();
+        } catch (SQLException ex) {
+            try {
+                this.rollbackTransaccion();
+                Logger.getLogger(DAOImpl.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SQLException ex1) {
+                Logger.getLogger(DAOImpl.class.getName()).log(Level.SEVERE, null, ex1);
+            }
+        } finally {
+            try {
+                this.cerrarConexion();
+            } catch (SQLException ex) {
+                Logger.getLogger(DAOImpl.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        return lista;
     }
     
     
@@ -203,6 +224,20 @@ public abstract class DAOImpl<T> {
         return sql;
     }
     
+    private String generarSQLParaListarUno() {
+        String sql = " select " + obtenerListaAtributosParaListar() + " from ";
+        sql = sql.concat(this.nombre_tabla);
+        sql = sql.concat(" where ");
+        sql = sql.concat(this.obtenerIdentificador());
+        return sql;
+    }
+    
+    private String generarSQLParaListarTodos() {
+        String sql = " select " + obtenerListaAtributosParaListar() + " from ";
+        sql = sql.concat(this.nombre_tabla);
+        return sql;
+    }
+    
     protected abstract String obtenerListaAtributosParaInsertar();
 
     protected abstract String obtenerListaValoresParaInsertar();
@@ -223,5 +258,5 @@ public abstract class DAOImpl<T> {
         }
         return resultado;
     }
-    
+
 }

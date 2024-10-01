@@ -24,8 +24,8 @@ public class RolBO {
         return rolDAO.modificar(rol);
     }
     
-    public Integer eliminar(int id, String nombre){
-        Rol rol = new Rol(id,nombre);
+    public Integer eliminar(int id){
+        Rol rol = new Rol(id);
         return rolDAO.eliminar(rol);
     }
     

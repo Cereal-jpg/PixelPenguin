@@ -21,6 +21,10 @@ public class Rol {
         this.idRol = idRol;
         this.nombre = nombre;
     }
+
+    public Rol(int id) {
+        this.idRol = id;
+    }
     
     public int getIdRol() {
         return idRol;

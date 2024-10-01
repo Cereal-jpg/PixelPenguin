@@ -18,7 +18,8 @@ public class Principal {
         
         RolBO rolBO=new RolBO();
 //        rolBO.insertar("Rol 1");
-        rolBO.modificar(19, "Estudiante",false);
+//        rolBO.modificar(19, "Estudiante",false);
+        rolBO.eliminar(19);
 
         InstitucionEducativaBO ieBO=new InstitucionEducativaBO();
 //        if(ieBO.insertar("Institucion Prueba 1", 200, "Av. Bolivar", "20604816123")==1) System.out.println("La institucion educativa fue insertada correctamente");

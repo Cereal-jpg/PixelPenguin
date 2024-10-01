@@ -34,7 +34,8 @@ public class RolDAOImp extends DAOImpl implements RolDAO{
 
     @Override
     public Integer eliminar(Rol rol) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        this.rol = rol;
+        return this.eliminar();
     }
 
     @Override
@@ -67,7 +68,7 @@ public class RolDAOImp extends DAOImpl implements RolDAO{
     }
 
     @Override
-    protected String obtenerCondicionesParaModificar() {
+    protected String obtenerIdentificador() {
         return "idRol = " + rol.getIdRol();
     }
     

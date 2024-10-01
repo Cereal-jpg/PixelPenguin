@@ -7,9 +7,15 @@ public class Apoderado {
     private String nombreCompleto;
     private String telefono;
     private String relacion; //padre,madre,etc.
-    
     public Apoderado(){}
-
+    
+    public Apoderado(String dni, String nombreCompleto, String telefono,String relacion) {
+        this.dni = dni;
+        this.nombreCompleto = nombreCompleto;
+        this.telefono = telefono;
+        this.relacion=relacion;
+    }
+    
     public Apoderado(int idApoderado, String dni, String nombreCompleto, String telefono,
             String relacion) {
         this.idApoderado = idApoderado;
@@ -58,5 +64,5 @@ public class Apoderado {
     public void setRelacion(String relacion) {
         this.relacion = relacion;
     }
-    
+
 }

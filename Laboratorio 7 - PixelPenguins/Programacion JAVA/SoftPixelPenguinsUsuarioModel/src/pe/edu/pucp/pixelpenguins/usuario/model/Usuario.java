@@ -15,6 +15,7 @@ public abstract class Usuario implements IConsultable{
     private String username;
     private String passsword;
     private Rol rol;
+    
     public Usuario(){}
     
     public Usuario(String dni, String nombre, Date fechaNacimiento,
@@ -32,6 +33,21 @@ public abstract class Usuario implements IConsultable{
         this.rol=rol;
     }
 
+    public Usuario(int idUsuario, String dni, String nombreCompleto, Date fechaNacimiento,
+            String direccion, String email, String sexo, String username, 
+            String passsword, Rol rol) {
+        this.idUsuario = idUsuario;
+        this.dni = dni;
+        this.nombreCompleto = nombreCompleto;
+        this.fechaNacimiento = fechaNacimiento;
+        this.direccion = direccion;
+        this.email = email;
+        this.sexo = sexo;
+        this.username = username;
+        this.passsword = passsword;
+        this.rol = rol;
+    }
+    
     public int getIdUsuario() {
         return idUsuario;
     }

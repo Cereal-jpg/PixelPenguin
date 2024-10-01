@@ -18,12 +18,13 @@ public class RolBO {
         return rolDAO.insertar(rol);
     }
     
-    public int modificar(int id, String nombre){
+    public Integer modificar(int id, String nombre,boolean activo){
         Rol rol = new Rol(id,nombre);
+        rol.setActivo(false);
         return rolDAO.modificar(rol);
     }
     
-    public int eliminar(int id, String nombre){
+    public Integer eliminar(int id, String nombre){
         Rol rol = new Rol(id,nombre);
         return rolDAO.eliminar(rol);
     }

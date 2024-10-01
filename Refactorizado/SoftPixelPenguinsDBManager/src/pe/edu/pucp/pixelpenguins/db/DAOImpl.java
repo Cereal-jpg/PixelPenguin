@@ -81,6 +81,34 @@ public abstract class DAOImpl {
         }
         return resultado;
     }
+    
+    public Integer modificar(){
+        Integer resultado = 0;
+        try {
+            this.iniciarTransaccion();
+            String sql = this.generarSQLParaModificacion();
+            resultado = this.ejecutarModificacionesEnBD(sql);
+            if (this.retornarLlavePrimaria){
+                Integer id = this.retornarUltimoAutoGenerado();
+                resultado = id;
+            }
+            this.comitarTransaccion();
+        } catch (SQLException ex) {
+            try {
+                this.rollbackTransaccion();
+                Logger.getLogger(DAOImpl.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SQLException ex1) {
+                Logger.getLogger(DAOImpl.class.getName()).log(Level.SEVERE, null, ex1);
+            }
+        } finally {
+            try {
+                this.cerrarConexion();
+            } catch (SQLException ex) {
+                Logger.getLogger(DAOImpl.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        return resultado;
+    }
 
     private String generarSQLParaInsercion() {
         String sql = "insert into ";
@@ -92,11 +120,25 @@ public abstract class DAOImpl {
         sql = sql.concat(")");      
         return sql;
     }
+    
+    private String generarSQLParaModificacion() {
+        String sql = "update ";
+        sql = sql.concat(this.nombre_tabla);
+        sql = sql.concat(" set ");
+        sql = sql.concat(this.obtenerListaAtributosYValoresParaModificar()); 
+        sql = sql.concat(" where ");
+        sql = sql.concat(this.obtenerCondicionesParaModificar());
+        return sql;
+    }
 
     protected abstract String obtenerListaAtributosParaInsertar();
 
     protected abstract String obtenerListaValoresParaInsertar();
+    
+    protected abstract String obtenerListaAtributosYValoresParaModificar();
 
+    protected abstract String obtenerCondicionesParaModificar();
+    
     protected Integer retornarUltimoAutoGenerado() throws SQLException {
         Integer resultado = null;
         ResultSet generatedKeys = statement.getGeneratedKeys();
@@ -105,5 +147,5 @@ public abstract class DAOImpl {
         }
         return resultado;
     }
-
+    
 }

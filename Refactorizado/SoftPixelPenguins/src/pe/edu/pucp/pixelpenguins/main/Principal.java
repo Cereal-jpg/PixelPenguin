@@ -10,7 +10,6 @@ import pe.edu.pucp.pixelpenguins.institucioneducativa.bo.InstitucionEducativaBO;
 import pe.edu.pucp.pixelpenguins.institucioneducativa.model.InstitucionEducativa;
 import pe.edu.pucp.pixelpenguins.usuario.bo.RolBO;
 import pe.edu.pucp.pixelpenguins.usuario.model.Rol;
-
 public class Principal {
 
     public static void main(String[] args) throws ParseException{
@@ -18,15 +17,8 @@ public class Principal {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         
         RolBO rolBO=new RolBO();
-        Integer id = rolBO.insertar("Rol 1");
-        System.out.println(id);
-//        if(rolBO.insertar("Rol 2")==1) System.out.println("El rol fue agregado correctamente");
-//        if(rolBO.insertar("Rol 3")==1) System.out.println("El rol fue agregado correctamente");
-//        if(rolBO.insertar("Rol 4")==1) System.out.println("El rol fue agregado correctamente");
-//        if(rolBO.modificar(1, "Rol -1")==1) System.out.println("El rol fue modificado correctamente");
-//        if(rolBO.eliminar(2, "")==1) System.out.println("El rol fue eliminado correctamente");
-//        ArrayList <Rol> roles = rolBO.listarTodos(); for(Rol r: roles) System.out.println(r.getNombre());
-//        Rol rol =rolBO.obtenerPorId(5); System.out.println("Rol obtenido: " + rol.getNombre());
+//        rolBO.insertar("Rol 1");
+        rolBO.modificar(19, "Estudiante",false);
 
         InstitucionEducativaBO ieBO=new InstitucionEducativaBO();
 //        if(ieBO.insertar("Institucion Prueba 1", 200, "Av. Bolivar", "20604816123")==1) System.out.println("La institucion educativa fue insertada correctamente");

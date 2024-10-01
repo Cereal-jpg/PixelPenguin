@@ -10,7 +10,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import pe.edu.pucp.pixelpenguins.config.DBManager;
 
-public abstract class DAOImpl {
+public abstract class DAOImpl<T> {
 
     protected String nombre_tabla;
     protected Connection conexion;
@@ -54,7 +54,7 @@ public abstract class DAOImpl {
         this.resultSet = this.statement.executeQuery();
     }
 
-    public Integer insertar() {
+    protected Integer insertar() {
         Integer resultado = 0;
         try {
             this.iniciarTransaccion();
@@ -82,7 +82,7 @@ public abstract class DAOImpl {
         return resultado;
     }
     
-    public Integer modificar(){
+    protected Integer modificar(){
         Integer resultado = 0;
         try {
             this.iniciarTransaccion();
@@ -110,7 +110,7 @@ public abstract class DAOImpl {
         return resultado;
     }
     
-    public Integer eliminar(){
+    protected Integer eliminar(){
         Integer resultado = 0;
         try {
             this.iniciarTransaccion();
@@ -138,40 +138,38 @@ public abstract class DAOImpl {
         return resultado;
     }
     
-    public Object obtenerPorId(int id){
-        Object entidad = null;
+    protected T obtenerPorId(){
+        T entidad = null;
         try {
-            this.iniciarTransaccion();  // Iniciar la transacción
-            String sql = this.generarSQLParaListarUno(id);  // Generar el SQL para seleccionar un registro por id
-            this.ejecutarConsultaEnBD(sql);  // Ejecutar la consulta
-
+            this.iniciarTransaccion();  
+            String sql = this.generarSQLParaListarUno();  
+            this.ejecutarConsultaEnBD(sql); 
             if (this.resultSet.next()) {
-                entidad = this.mapearEntidadDesdeResultSet(this.resultSet);  // Mapear el resultado a un objeto
+                entidad = this.mapearEntidadDesdeResultSet(this.resultSet);
             }
-
-            this.comitarTransaccion();  // Confirmar la transacción
+            this.comitarTransaccion();
         } catch (SQLException ex) {
             try {
-                this.rollbackTransaccion();  // Hacer rollback en caso de error
+                this.rollbackTransaccion(); 
                 Logger.getLogger(DAOImpl.class.getName()).log(Level.SEVERE, null, ex);
             } catch (SQLException ex1) {
                 Logger.getLogger(DAOImpl.class.getName()).log(Level.SEVERE, null, ex1);
             }
         } finally {
             try {
-                this.cerrarConexion();  // Cerrar la conexión
+                this.cerrarConexion();  
             } catch (SQLException ex) {
                 Logger.getLogger(DAOImpl.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-            return entidad;         
+        return entidad;         
     }
     
-    private String generarSQLParaListarUno(int id) {
-        String sql = "SELECT " + obtenerListaAtributosParaInsertar() + " FROM ";
-        sql = sql.concat(this.nombre_tabla);  // Asignar el nombre de la tabla
-        sql = sql.concat(" WHERE " + obtenerNombrePrimaryKey() + "  = ");  // Agregar la condición para filtrar por id
-        sql = sql.concat(String.valueOf(id));
+    private String generarSQLParaListarUno() {
+        String sql = " select " + obtenerListaAtributosParaListar() + " from ";
+        sql = sql.concat(this.nombre_tabla);
+        sql = sql.concat(" where ");
+        sql = sql.concat(this.obtenerIdentificador());
         return sql;
     }
     
@@ -209,13 +207,14 @@ public abstract class DAOImpl {
 
     protected abstract String obtenerListaValoresParaInsertar();
     
+    protected abstract String obtenerListaAtributosParaListar();
+    
     protected abstract String obtenerListaAtributosYValoresParaModificar();
 
     protected abstract String obtenerIdentificador();
-        // copiar los datos en la entidad
-    protected abstract Object mapearEntidadDesdeResultSet(ResultSet resultSet);
     
-    protected abstract String obtenerNombrePrimaryKey();
+    protected abstract T mapearEntidadDesdeResultSet(ResultSet resultSet);
+        
     protected Integer retornarUltimoAutoGenerado() throws SQLException {
         Integer resultado = null;
         ResultSet generatedKeys = statement.getGeneratedKeys();

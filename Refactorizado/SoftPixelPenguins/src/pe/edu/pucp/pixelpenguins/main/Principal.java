@@ -19,7 +19,12 @@ public class Principal {
         RolBO rolBO=new RolBO();
 //        rolBO.insertar("Rol 1");
 //        rolBO.modificar(19, "Estudiante",false);
-        rolBO.eliminar(19);
+//        rolBO.eliminar(19);
+        Rol rol = rolBO.obtenerPorId(20);
+        System.out.println(rol.getIdRol());
+        System.out.println(rol.getNombre());
+        System.out.println(rol.isActivo());
+
 
         InstitucionEducativaBO ieBO=new InstitucionEducativaBO();
 //        if(ieBO.insertar("Institucion Prueba 1", 200, "Av. Bolivar", "20604816123")==1) System.out.println("La institucion educativa fue insertada correctamente");

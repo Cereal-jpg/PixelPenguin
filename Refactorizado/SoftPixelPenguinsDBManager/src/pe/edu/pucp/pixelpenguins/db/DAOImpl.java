@@ -170,7 +170,7 @@ public abstract class DAOImpl {
     private String generarSQLParaListarUno(int id) {
         String sql = "SELECT " + obtenerListaAtributosParaInsertar() + " FROM ";
         sql = sql.concat(this.nombre_tabla);  // Asignar el nombre de la tabla
-        sql = sql.concat(" WHERE id = ");  // Agregar la condición para filtrar por id
+        sql = sql.concat(" WHERE " + obtenerNombrePrimaryKey() + "  = ");  // Agregar la condición para filtrar por id
         sql = sql.concat(String.valueOf(id));
         return sql;
     }
@@ -215,6 +215,7 @@ public abstract class DAOImpl {
         // copiar los datos en la entidad
     protected abstract Object mapearEntidadDesdeResultSet(ResultSet resultSet);
     
+    protected abstract String obtenerNombrePrimaryKey();
     protected Integer retornarUltimoAutoGenerado() throws SQLException {
         Integer resultado = null;
         ResultSet generatedKeys = statement.getGeneratedKeys();

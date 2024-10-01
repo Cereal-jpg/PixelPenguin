@@ -14,15 +14,26 @@ public class InstitucionEducativa {
     private int cantidadAlumnos;
     private String direccion;
     private String ruc;
-
-    // es autoincremental el ID
+    
+    public InstitucionEducativa(){}
+    
+     // es autoincremental el ID
     public InstitucionEducativa(String nombre, int cantidadAlumnos, String direccion, String ruc) {
-        //this.idInstitucion = idInstitucion;
         this.nombre = nombre;
         this.cantidadAlumnos = cantidadAlumnos;
         this.direccion = direccion;
         this.ruc = ruc;
     }
+    
+    public InstitucionEducativa(int idInstitucion, String nombre, int cantidadAlumnos, String direccion, String ruc) {
+        this.idInstitucion = idInstitucion;
+        this.nombre = nombre;
+        this.cantidadAlumnos = cantidadAlumnos;
+        this.direccion = direccion;
+        this.ruc = ruc;
+    }
+     
+   
     
     public int getIdInstitucion() {
         return idInstitucion;
@@ -68,24 +79,24 @@ public class InstitucionEducativa {
         
     }
     
-    public Usuario buscarUsuario(int codigo){
-        Usuario user=new Alumno();
-        Usuario user2=new Profesor();
-        Usuario user3=new PersonalAdministrativo();
-        return user;
-    }
-    
-    public int agregarUsuario(Usuario usuario){
-        int resultado=0;
-        
-        return resultado;
-    }
-    
-    public int agregarAnioAcademico(AnioAcademico anioAcademico){
-        int resultado=0;
-        
-        return resultado;
-    }
+//    public Usuario buscarUsuario(int codigo){
+//        Usuario user=new Alumno();
+//        Usuario user2=new Profesor();
+//        Usuario user3=new PersonalAdministrativo();
+//        return user;
+//    }
+//    
+//    public int agregarUsuario(Usuario usuario){
+//        int resultado=0;
+//        
+//        return resultado;
+//    }
+//    
+//    public int agregarAnioAcademico(AnioAcademico anioAcademico){
+//        int resultado=0;
+//        
+//        return resultado;
+//    }
     
     public int eliminarUsuario(){
         int resultado=0;

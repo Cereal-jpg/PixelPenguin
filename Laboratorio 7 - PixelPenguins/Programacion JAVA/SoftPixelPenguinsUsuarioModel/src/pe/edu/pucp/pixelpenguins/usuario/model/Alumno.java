@@ -40,6 +40,18 @@ public class Alumno extends Usuario {
         this.matriculas=new ArrayList<Matricula>();
         this.cursosMatriculado=new ArrayList<Curso>();
     }
+
+    public Alumno(int codigoAlumno, boolean conCertificadoDeEstudios, boolean conCertificadoDeSalud, boolean conDeuda, Apoderado apoderado, GradoAcademico gradoAcademico, int idUsuario, String dni, String nombreCompleto, Date fechaNacimiento, String direccion, String email, String sexo, String username, String passsword, Rol rol) {
+        super(idUsuario, dni, nombreCompleto, fechaNacimiento, direccion, email, sexo, username, passsword, rol);
+        this.codigoAlumno = codigoAlumno;
+        this.conCertificadoDeEstudios = conCertificadoDeEstudios;
+        this.conCertificadoDeSalud = conCertificadoDeSalud;
+        this.conDeuda = conDeuda;
+        this.apoderado = apoderado;
+        this.gradoAcademico = gradoAcademico;
+        this.matriculas=new ArrayList<Matricula>();
+        this.cursosMatriculado=new ArrayList<Curso>();
+    }
     
     public int getCodigoAlumno() {
         return codigoAlumno;
@@ -88,7 +100,7 @@ public class Alumno extends Usuario {
     public void setGradoAcademico(GradoAcademico gradoAcademico) {
         this.gradoAcademico = gradoAcademico;
     }
-    
+
     public int matricularse(){
         int resultado=0;
         /*codigo*/

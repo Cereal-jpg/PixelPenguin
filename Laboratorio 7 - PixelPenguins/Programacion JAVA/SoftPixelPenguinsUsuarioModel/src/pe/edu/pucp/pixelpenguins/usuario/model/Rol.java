@@ -7,10 +7,16 @@ public class Rol {
     
     public Rol(){}
     
-    // los constructores al estar con AUTO_INCREMENT para su id, 
-    // deberían ser omitidos (solo nombre)
+    // para casos de INSERT, se deberían hacer sin asignar una id
+    // en específico, ya que esta se genera automáticamente
     public Rol(String nombre) {
-        //this.idRol=idRol;
+        this.nombre = nombre;
+    }
+    
+    // aún así, se está dejando su constructor normal para 
+    // casos como MODIFICAR, ELIMINAR, etc que requieran otro con la misma id
+    public Rol(int idRol, String nombre) {
+        this.idRol = idRol;
         this.nombre = nombre;
     }
     
@@ -29,6 +35,5 @@ public class Rol {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    
     
 }

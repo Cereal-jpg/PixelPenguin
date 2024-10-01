@@ -33,9 +33,15 @@ BEGIN
 END $
 DELIMITER ;
 
+DROP PROCEDURE IF EXISTS INSERTAR_INSTITUCIONEDUCATIVA;
+DROP PROCEDURE IF EXISTS MODIFICAR_INSTITUCIONEDUCATIVA;
+DROP PROCEDURE IF EXISTS ELIMINAR_INSTITUCIONEDUCATIVA;
+DROP PROCEDURE IF EXISTS LISTAR_TODOS_INSTITUCIONEDUCATIVA;
+DROP PROCEDURE IF EXISTS OBTENER_POR_ID_INSTITUCIONEDUCATIVA;
+
 DELIMITER $ 
 CREATE PROCEDURE INSERTAR_INSTITUCIONEDUCATIVA(
-    OUT p_idInstitucionEducativa INT,
+    OUT p_idInstitucion INT,
 	IN p_nombre VARCHAR(100),
     IN p_cantidadAlumnos INT,
     IN p_direccion VARCHAR(100),
@@ -44,10 +50,10 @@ CREATE PROCEDURE INSERTAR_INSTITUCIONEDUCATIVA(
 BEGIN
 	INSERT INTO InstitucionEducativa (nombre,cantidadAlumnos,direccion,ruc,activo)
     VALUES (p_nombre,p_cantidadAlumnos,p_direccion,p_ruc,1);
-    SET p_idInstitucionEducativa = @@last_insert_id;
+    SET p_idInstitucion = @@last_insert_id;
 END $
 CREATE PROCEDURE MODIFICAR_INSTITUCIONEDUCATIVA(
-	IN p_idInstitucionEducativa INT,
+	IN p_idInstitucion INT,
 	IN p_nombre VARCHAR(100),
     IN p_cantidadAlumnos INT,
     IN p_direccion VARCHAR(100),
@@ -56,26 +62,26 @@ CREATE PROCEDURE MODIFICAR_INSTITUCIONEDUCATIVA(
 BEGIN
 	UPDATE InstitucionEducativa SET 
     nombre = p_nombre, cantidadAlumnos=p_cantidadAlumnos, direccion=p_direccion, ruc=p_ruc 
-    WHERE idInstitucionEducativa=p_idInstitucionEducativa;
+    WHERE idInstitucion=p_idInstitucion;
 END $
 CREATE PROCEDURE ELIMINAR_INSTITUCIONEDUCATIVA(
-	IN p_idInstitucionEducativa INT
+	IN p_idInstitucion INT
 )
 BEGIN
 	UPDATE InstitucionEducativa SET activo = 0 
-    WHERE idInstitucionEducativa=p_idInstitucionEducativa;
+    WHERE idInstitucion=p_idInstitucion;
 END $
 CREATE PROCEDURE LISTAR_TODOS_INSTITUCIONEDUCATIVA()
 BEGIN
-	SELECT idInstitucionEducativa, nombre, cantidadAlumnos, direccion, ruc
+	SELECT idInstitucion, nombre, cantidadAlumnos, direccion, ruc
     FROM InstitucionEducativa WHERE activo=1;
 END $
 CREATE PROCEDURE OBTENER_POR_ID_INSTITUCIONEDUCATIVA(
-	IN p_idInstitucionEducativa INT
+	IN p_idInstitucion INT
 )
 BEGIN
-	SELECT idInstitucionEducativa, nombre, cantidadAlumnos, direccion, ruc
-    FROM InstitucionEducativa WHERE idInstitucionEducativa=p_idInstitucionEducativa;
+	SELECT idInstitucion, nombre, cantidadAlumnos, direccion, ruc
+    FROM InstitucionEducativa WHERE idInstitucion=p_idInstitucion;
 END $
 DELIMITER ;
 

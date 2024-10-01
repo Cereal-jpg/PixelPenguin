@@ -9,5 +9,5 @@ public interface AnioAcademicoDAO {
     public int modificar(AnioAcademico anioAcademico);
     public int eliminar(AnioAcademico anioAcademico);
     public ArrayList<AnioAcademico> listarTodos();
-    public AnioAcademico obtenerPorId(int idAnioAcademico);
+    public AnioAcademico obtenerPorId(int id);
 }

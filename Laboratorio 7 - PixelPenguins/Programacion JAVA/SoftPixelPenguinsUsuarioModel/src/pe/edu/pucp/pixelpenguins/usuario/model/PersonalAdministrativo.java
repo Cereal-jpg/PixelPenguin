@@ -21,6 +21,13 @@ public class PersonalAdministrativo extends Usuario{
         this.codigoPersonalAdministrativo=codigoPersonalAdministrativo;
     }
 
+    public PersonalAdministrativo(int codigoPersonalAdministrativo, int idUsuario,
+            String dni, String nombreCompleto, Date fechaNacimiento, String direccion,
+            String email, String sexo, String username, String passsword, Rol rol) {
+        super(idUsuario, dni, nombreCompleto, fechaNacimiento, direccion, email, sexo, username, passsword, rol);
+        this.codigoPersonalAdministrativo = codigoPersonalAdministrativo;
+    }
+
     public int getCodigoPersonalAdministrativo() {
         return codigoPersonalAdministrativo;
     }
@@ -28,7 +35,7 @@ public class PersonalAdministrativo extends Usuario{
     public void setCodigoPersonalAdministrativo(int codigoPersonalAdministrativo) {
         this.codigoPersonalAdministrativo = codigoPersonalAdministrativo;
     }
-    
+
     public int insertarAlumno(){
         int resultado=0;
         /*codigo*/

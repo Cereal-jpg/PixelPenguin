@@ -1,5 +1,5 @@
 
-package pe.edu.pucp.pixelpenguins.anioacademico.daoImp;
+// en los BO, se debe enlazar con el paquete DAO y el Model de su clase
 
 import java.sql.Connection;
 import java.sql.CallableStatement;
@@ -7,28 +7,26 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import pe.edu.pucp.pixelpenguins.config.DBManager;
-import pe.edu.pucp.pixelpenguins.anioacademico.dao.AnioAcademicoDAO;
-import pe.edu.pucp.pixelpenguins.anioacademico.model.AnioAcademico;
+// import pe.edu.pucp.pixelpenguins.usuario.dao.RolDAO;
+// import pe.edu.pucp.pixelpenguins.usuario.model.Rol;
 
-public class AnioAcademicoDAOImp implements AnioAcademicoDAO {
+public class RolDAOImp implements RolDAO{
     
     private Connection con;
     private CallableStatement cs;
     private ResultSet rs;
     
     @Override
-    public int insertar(AnioAcademico anioAcademico) {
+    public int insertar(Clase clase) {
         int resultado=0;
         Connection con = null;
         try {
             con=DBManager.getInstance().getConnection();
-            cs=con.prepareCall("{call INSERTAR_ANIOACADEMICO (?,?,?,?)}");
+            cs=con.prepareCall("{call INSERTAR_CLASE (?)}");
             cs.registerOutParameter("p_id", java.sql.Types.INTEGER);
-            cs.setInt("p_anio", anioAcademico.getAnio());
-            cs.setDate("p_fechaInicio", new java.sql.Date(anioAcademico.getFechaInicio().getTime()));
-            cs.setDate("p_fechaFin", new java.sql.Date(anioAcademico.getFechaFin().getTime()));
+            // cs.setString("p_nombre", rol.getNombre());
             cs.executeUpdate();
-            anioAcademico.setIdAnioAcademico(cs.getInt("p_id"));
+            // rol.setIdRol(cs.getInt("p_id"));
             resultado=1;
         } catch (SQLException ex) { 
             System.out.println(ex.getMessage());
@@ -40,15 +38,13 @@ public class AnioAcademicoDAOImp implements AnioAcademicoDAO {
     }
 
     @Override
-    public int modificar(AnioAcademico anioAcademico) {
+    public int modificar(Clase clase) {
         int resultado=0;
         try {
             con=DBManager.getInstance().getConnection();
-            cs=con.prepareCall("{call MODIFICAR_ANIOACADEMICO (?,?,?,?)}");
-            cs.setInt("p_id", anioAcademico.getIdAnioAcademico());
-            cs.setInt("p_anio", anioAcademico.getAnio());
-            cs.setDate("p_fechaInicio", new java.sql.Date(anioAcademico.getFechaInicio().getTime()));
-            cs.setDate("p_fechaFin", new java.sql.Date(anioAcademico.getFechaFin().getTime()));
+            cs=con.prepareCall("{call MODIFICAR_CLASE (?,?)}");
+            cs.setInt("p_id", clase.getId);
+            // cs.setString("p_nombre", rol.getNombre());
             cs.executeUpdate();
             resultado=1;
             cs.close();
@@ -62,12 +58,12 @@ public class AnioAcademicoDAOImp implements AnioAcademicoDAO {
     }
 
     @Override
-    public int eliminar(AnioAcademico anioAcademico) {
+    public int eliminar(Clase clase) {
         int resultado=0;
         try {
             con=DBManager.getInstance().getConnection();
-            cs=con.prepareCall("{call ELIMINAR_ANIOACADEMICO (?)}");
-            cs.setInt("p_id", anioAcademico.getIdAnioAcademico());
+            cs=con.prepareCall("{call ELIMINAR_CLASE (?)}");
+            cs.setInt("p_id", clase.getId());
             cs.executeUpdate();
             resultado=1;
             cs.close();
@@ -81,19 +77,19 @@ public class AnioAcademicoDAOImp implements AnioAcademicoDAO {
     }
 
     @Override
-    public ArrayList<AnioAcademico> listarTodos() {
-        ArrayList<AnioAcademico> aniosAcademicos= new ArrayList<>();
+    public ArrayList<Clase> listarTodos() {
+        ArrayList<Clase> clases= new ArrayList<>();
         try {
             con=DBManager.getInstance().getConnection();
-            cs=con.prepareCall("{call LISTAR_TODOS_ANIOACADEMICO ()}");
+            cs=con.prepareCall("{call LISTAR_TODOS_CLASE ()}");
             rs=cs.executeQuery();
             while(rs.next()){
-                AnioAcademico auxAnio = new AnioAcademico();
-                auxAnio.setIdAnioAcademico(rs.getInt("idAnioAcademico"));
-                auxAnio.setAnio(rs.getInt("anio"));
-                auxAnio.setFechaInicio(rs.getDate("fechaInicio"));
-                auxAnio.setFechaFin(rs.getDate("fechaFin"));
-                aniosAcademicos.add(auxAnio);
+                /* Rol rol = new Rol();
+				(se setean todos los atributos sacándolos de 
+				las columnas de las tablas en la BD)
+                rol.setIdRol(rs.getInt("idRol"));
+                rol.setNombre(rs.getString("nombre"));
+                roles.add(rol); */
             }
             rs.close();
             cs.close();
@@ -103,23 +99,22 @@ public class AnioAcademicoDAOImp implements AnioAcademicoDAO {
         finally{
             try {con.close();} catch (SQLException ex) {System.out.println(ex.getMessage());}
         }
-        return aniosAcademicos;
+        return clases;
     }
 
     @Override
-    public AnioAcademico obtenerPorId(int id) {
-        AnioAcademico auxAnio=null;
+    public Clase obtenerPorId(int id) {
+        Clase clase=null;
         try {
             con=DBManager.getInstance().getConnection();
-            cs=con.prepareCall("{call OBTENER_POR_ID_ANIOACADEMICO (?)}");
+            cs=con.prepareCall("{call OBTENER_POR_ID_CLASE (?)}");
             cs.setInt("p_id", id);
             rs=cs.executeQuery();
             if(rs.next()){
-                auxAnio=new AnioAcademico();
-                auxAnio.setIdAnioAcademico(rs.getInt("idAnioAcademico"));
-                auxAnio.setAnio(rs.getInt("anio"));
-                auxAnio.setFechaInicio(rs.getDate("fechaInicio"));
-                auxAnio.setFechaFin(rs.getDate("fechaFin"));
+                /*rol = new Rol();
+				(Lo mismo que en listar)
+                rol.setIdRol(rs.getInt("idRol"));
+                rol.setNombre(rs.getString("nombre"));*/ 
             }
         } catch (SQLException ex) { 
             System.out.println(ex.getMessage());
@@ -133,7 +128,7 @@ public class AnioAcademicoDAOImp implements AnioAcademicoDAO {
                 System.out.println(ex.getMessage());
             }
         }
-        return auxAnio;
+        return clase;
     }
     
 }

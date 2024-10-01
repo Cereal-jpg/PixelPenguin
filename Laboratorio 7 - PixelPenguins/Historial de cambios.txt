@@ -44,6 +44,9 @@ Todos los Boolean se pasaron a TINYINT (en SQL), se les colocó una ID a cada cl
 34. En la BD también se borra su FK a esa clase al no ser necesario
 35. Se agregó atributo de GradoAcademico en JornadaEscolar, se interpreta como una jornada está relacionada a un gradoAcadémico
 36. Se agregó FK fid_GradoAcademico en JornadaEscolar
+37. Se dejó con 2 constructores a cada clase, uno con id para auxiliar cuando se quiera modificar otros y el normal 
+	para que se actualice con el autoincrement al hacer insert
+
 
 
 Tablas Creadas en SQL: (Si o No)

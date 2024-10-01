@@ -22,43 +22,110 @@ public class RolDAOImp implements RolDAO{
         Connection con = null;
         try {
             con=DBManager.getInstance().getConnection();
-            CallableStatement cs=con.prepareCall("{call INSERTAR_ROL (?,?)}");
+            cs=con.prepareCall("{call INSERTAR_ROL (?,?)}");
             cs.registerOutParameter("p_idRol", java.sql.Types.INTEGER);
             cs.setString("p_nombre", rol.getNombre());
             cs.executeUpdate();
             rol.setIdRol(cs.getInt("p_idRol"));
             resultado=1;
-        } catch (SQLException ex) {
+        } catch (SQLException ex) { 
             System.out.println(ex.getMessage());
         } 
         finally{
-            try {
-                con.close();
-            } catch (SQLException ex) {
-                System.out.println(ex.getMessage());
-            }
+            try {con.close();} catch (SQLException ex) {System.out.println(ex.getMessage());}
         }
         return resultado;
     }
 
     @Override
     public int modificar(Rol rol) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        int resultado=0;
+        try {
+            con=DBManager.getInstance().getConnection();
+            cs=con.prepareCall("{call MODIFICAR_ROL (?,?)}");
+            cs.setInt("p_idRol", rol.getIdRol());
+            cs.setString("p_nombre", rol.getNombre());
+            cs.executeUpdate();
+            resultado=1;
+            cs.close();
+        } catch (SQLException ex) { 
+            System.out.println(ex.getMessage());
+        } 
+        finally{
+            try {con.close();} catch (SQLException ex) {System.out.println(ex.getMessage());}
+        }
+        return resultado;
     }
 
     @Override
     public int eliminar(Rol rol) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        int resultado=0;
+        try {
+            con=DBManager.getInstance().getConnection();
+            cs=con.prepareCall("{call ELIMINAR_ROL (?)}");
+            cs.setInt("p_idRol", rol.getIdRol());
+            cs.executeUpdate();
+            resultado=1;
+            cs.close();
+        } catch (SQLException ex) { 
+            System.out.println(ex.getMessage());
+        } 
+        finally{
+            try {con.close();} catch (SQLException ex) {System.out.println(ex.getMessage());}
+        }
+        return resultado;
     }
 
     @Override
     public ArrayList<Rol> listarTodos() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        ArrayList<Rol> roles= new ArrayList<>();
+        try {
+            con=DBManager.getInstance().getConnection();
+            cs=con.prepareCall("{call LISTAR_TODOS_ROL ()}");
+            rs=cs.executeQuery();
+            while(rs.next()){
+                Rol rol = new Rol();
+                rol.setIdRol(rs.getInt("idRol"));
+                rol.setNombre(rs.getString("nombre"));
+                roles.add(rol);
+            }
+            rs.close();
+            cs.close();
+        } catch (SQLException ex) { 
+            System.out.println(ex.getMessage());
+        } 
+        finally{
+            try {con.close();} catch (SQLException ex) {System.out.println(ex.getMessage());}
+        }
+        return roles;
     }
 
     @Override
     public Rol obtenerPorId(int idRol) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        Rol rol=null;
+        try {
+            con=DBManager.getInstance().getConnection();
+            cs=con.prepareCall("{call OBTENER_POR_ID_ROL (?)}");
+            cs.setInt("p_idRol", idRol);
+            rs=cs.executeQuery();
+            if(rs.next()){
+                rol = new Rol();
+                rol.setIdRol(rs.getInt("idRol"));
+                rol.setNombre(rs.getString("nombre"));
+            }
+        } catch (SQLException ex) { 
+            System.out.println(ex.getMessage());
+        } 
+        finally{
+            try {
+                if(rs!=null) rs.close();
+                if(cs!=null) cs.close();
+                if(con!=null) con.close();
+            } catch (SQLException ex){
+                System.out.println(ex.getMessage());
+            }
+        }
+        return rol;
     }
     
 }

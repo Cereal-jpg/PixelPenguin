@@ -28,7 +28,8 @@ public class RolDAOImp extends DAOImpl implements RolDAO{
 
     @Override
     public Integer modificar(Rol rol) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        this.rol = rol;
+        return this.modificar();
     }
 
     @Override
@@ -58,6 +59,16 @@ public class RolDAOImp extends DAOImpl implements RolDAO{
         sql = sql.concat(", ");
         sql = sql.concat("'" + (this.rol.isActivo()? 1 : 0) + "'");
         return sql;
+    }
+
+    @Override
+    protected String obtenerListaAtributosYValoresParaModificar() {
+        return "nombre = '" + rol.getNombre() + "' , activo = '" + (this.rol.isActivo()? 1 : 0) + "'";
+    }
+
+    @Override
+    protected String obtenerCondicionesParaModificar() {
+        return "idRol = " + rol.getIdRol();
     }
     
 }

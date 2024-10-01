@@ -137,7 +137,45 @@ public abstract class DAOImpl {
         }
         return resultado;
     }
+    
+    public Object obtenerPorId(int id){
+        Object entidad = null;
+        try {
+            this.iniciarTransaccion();  // Iniciar la transacción
+            String sql = this.generarSQLParaListarUno(id);  // Generar el SQL para seleccionar un registro por id
+            this.ejecutarConsultaEnBD(sql);  // Ejecutar la consulta
 
+            if (this.resultSet.next()) {
+                entidad = this.mapearEntidadDesdeResultSet(this.resultSet);  // Mapear el resultado a un objeto
+            }
+
+            this.comitarTransaccion();  // Confirmar la transacción
+        } catch (SQLException ex) {
+            try {
+                this.rollbackTransaccion();  // Hacer rollback en caso de error
+                Logger.getLogger(DAOImpl.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SQLException ex1) {
+                Logger.getLogger(DAOImpl.class.getName()).log(Level.SEVERE, null, ex1);
+            }
+        } finally {
+            try {
+                this.cerrarConexion();  // Cerrar la conexión
+            } catch (SQLException ex) {
+                Logger.getLogger(DAOImpl.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+            return entidad;         
+    }
+    
+    private String generarSQLParaListarUno(int id) {
+        String sql = "SELECT " + obtenerListaAtributosParaInsertar() + " FROM ";
+        sql = sql.concat(this.nombre_tabla);  // Asignar el nombre de la tabla
+        sql = sql.concat(" WHERE id = ");  // Agregar la condición para filtrar por id
+        sql = sql.concat(String.valueOf(id));
+        return sql;
+    }
+    
+    
     private String generarSQLParaInsercion() {
         String sql = "insert into ";
         sql = sql.concat(this.nombre_tabla);
@@ -166,7 +204,7 @@ public abstract class DAOImpl {
         sql = sql.concat(this.obtenerIdentificador());
         return sql;
     }
-
+    
     protected abstract String obtenerListaAtributosParaInsertar();
 
     protected abstract String obtenerListaValoresParaInsertar();
@@ -174,6 +212,8 @@ public abstract class DAOImpl {
     protected abstract String obtenerListaAtributosYValoresParaModificar();
 
     protected abstract String obtenerIdentificador();
+        // copiar los datos en la entidad
+    protected abstract Object mapearEntidadDesdeResultSet(ResultSet resultSet);
     
     protected Integer retornarUltimoAutoGenerado() throws SQLException {
         Integer resultado = null;

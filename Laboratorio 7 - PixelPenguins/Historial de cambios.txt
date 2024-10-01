@@ -77,24 +77,24 @@ Exception in thread "main" java.lang.NullPointerException: Cannot invoke "java.s
 	at pe.edu.pucp.pixelpenguins.main.Principal.main(Principal.java:13)
 
 
-Procedimientos (Si o No)
+Procedimientos (Si o No): Ya están todos
 aún faltan probarlos
 
 InstitucionEducativa: 			Si
-Matricula:						No
+Matricula:						Si
 AnioAcademico: 					Si
-Pago:							No
+Pago:							Si
 Usuario:						Si
-Alumno:							No
+Alumno:							Si
 Apoderado:						Si
 Profesor:						Si
 Administrador:					Si 
 PersonalAdministrativo:			Si
 Rol:							Si
-GradoAcademico:					No
-SeccionAcademica:				No
+GradoAcademico:					Si
+SeccionAcademica:				Si
 JornadaEscolar:					Si
-HoraAcademica: 					No
-Curso:							No
-Competencias:					No
-Notas:							No
+HoraAcademica: 					Si
+Curso:							Si
+Competencia:					Si
+Nota:							Si

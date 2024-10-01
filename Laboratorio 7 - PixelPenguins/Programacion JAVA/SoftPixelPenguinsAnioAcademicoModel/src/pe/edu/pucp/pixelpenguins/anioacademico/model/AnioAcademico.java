@@ -12,8 +12,8 @@ public class AnioAcademico implements IConsultable{
     private Date fechaInicio;
     private Date fechaFin;
     // una AnioAcademico tiene varias matrículas de diferente alumnos
-//    private ArrayList<Matricula> matriculas;
-//    private ArrayList<GradoAcademico> gradosAcademicos;
+    private ArrayList<Matricula> matriculas;
+    private ArrayList<GradoAcademico> gradosAcademicos;
 
     public AnioAcademico(){}
     
@@ -21,7 +21,8 @@ public class AnioAcademico implements IConsultable{
         this.anio= anio;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
-//        this.matriculas=new ArrayList<Matricula>();
+        this.matriculas=new ArrayList<>();
+        this.gradosAcademicos=new ArrayList<>();
     }
 
     public AnioAcademico(int idAnioAcademico, int anio, Date fechaInicio, Date fechaFin) {

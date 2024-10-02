@@ -1,17 +1,16 @@
 
 package pe.edu.pucp.pixelpenguins.usuario.daoImp;
 
-import java.sql.Connection;
-import java.sql.CallableStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
-import pe.edu.pucp.pixelpenguins.config.DBManager;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import pe.edu.pucp.pixelpenguins.db.DAOImpl;
 import pe.edu.pucp.pixelpenguins.usuario.dao.RolDAO;
 import pe.edu.pucp.pixelpenguins.usuario.model.Rol;
 
-public class RolDAOImp extends DAOImpl implements RolDAO{
+public class RolDAOImp extends DAOImpl<Rol> implements RolDAO{
     
     private Rol rol;
 
@@ -37,20 +36,40 @@ public class RolDAOImp extends DAOImpl implements RolDAO{
         this.rol = rol;
         return this.eliminar();
     }
-
+    
     @Override
-    public ArrayList<Rol> listarTodos() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public Rol obtenerPorId(int idRol) {
+        this.rol = new Rol(idRol);
+        return this.obtenerPorId();
     }
 
     @Override
-    public Rol obtenerPorId(int idRol) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public ArrayList<Rol> listarTodos() {
+        return super.listarTodos();
+    }
+    
+    @Override
+    protected Rol mapearEntidadDesdeResultSet(ResultSet rs) {
+        Rol aux = null;
+        try {
+            aux = new Rol();
+            aux.setIdRol(rs.getInt("idRol"));
+            aux.setNombre(rs.getString("nombre"));
+            aux.setActivo(rs.getBoolean("activo"));
+        } catch (SQLException ex) {
+            Logger.getLogger(RolDAOImp.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return aux;
     }
     
     @Override
     protected String obtenerListaAtributosParaInsertar() {
         return "nombre, activo";
+    }
+    
+    @Override
+    protected String obtenerListaAtributosParaListar() {
+        return "idRol, nombre, activo";
     }
 
     @Override

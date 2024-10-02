@@ -6,11 +6,12 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.PreparedStatement;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import pe.edu.pucp.pixelpenguins.config.DBManager;
 
-public abstract class DAOImpl {
+public abstract class DAOImpl<T> {
 
     protected String nombre_tabla;
     protected Connection conexion;
@@ -54,7 +55,7 @@ public abstract class DAOImpl {
         this.resultSet = this.statement.executeQuery();
     }
 
-    public Integer insertar() {
+    protected Integer insertar() {
         Integer resultado = 0;
         try {
             this.iniciarTransaccion();
@@ -82,7 +83,7 @@ public abstract class DAOImpl {
         return resultado;
     }
     
-    public Integer modificar(){
+    protected Integer modificar(){
         Integer resultado = 0;
         try {
             this.iniciarTransaccion();
@@ -110,7 +111,7 @@ public abstract class DAOImpl {
         return resultado;
     }
     
-    public Integer eliminar(){
+    protected Integer eliminar(){
         Integer resultado = 0;
         try {
             this.iniciarTransaccion();
@@ -137,7 +138,63 @@ public abstract class DAOImpl {
         }
         return resultado;
     }
-
+    
+    protected T obtenerPorId(){
+        T entidad = null;
+        try {
+            this.iniciarTransaccion();  
+            String sql = this.generarSQLParaListarUno();  
+            this.ejecutarConsultaEnBD(sql); 
+            if (this.resultSet.next()) {
+                entidad = this.mapearEntidadDesdeResultSet(this.resultSet);
+            }
+            this.comitarTransaccion();
+        } catch (SQLException ex) {
+            try {
+                this.rollbackTransaccion(); 
+                Logger.getLogger(DAOImpl.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SQLException ex1) {
+                Logger.getLogger(DAOImpl.class.getName()).log(Level.SEVERE, null, ex1);
+            }
+        } finally {
+            try {
+                this.cerrarConexion();  
+            } catch (SQLException ex) {
+                Logger.getLogger(DAOImpl.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        return entidad;         
+    }
+    
+    protected ArrayList<T> listarTodos() {
+        ArrayList<T> lista = new ArrayList<>();
+        try {
+            this.iniciarTransaccion();
+            String sql = generarSQLParaListarTodos();
+            ejecutarConsultaEnBD(sql);
+            while (resultSet.next()) {
+                T objeto = mapearEntidadDesdeResultSet(resultSet);
+                lista.add(objeto);
+            }
+            this.comitarTransaccion();
+        } catch (SQLException ex) {
+            try {
+                this.rollbackTransaccion();
+                Logger.getLogger(DAOImpl.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SQLException ex1) {
+                Logger.getLogger(DAOImpl.class.getName()).log(Level.SEVERE, null, ex1);
+            }
+        } finally {
+            try {
+                this.cerrarConexion();
+            } catch (SQLException ex) {
+                Logger.getLogger(DAOImpl.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        return lista;
+    }
+    
+    
     private String generarSQLParaInsercion() {
         String sql = "insert into ";
         sql = sql.concat(this.nombre_tabla);
@@ -166,15 +223,33 @@ public abstract class DAOImpl {
         sql = sql.concat(this.obtenerIdentificador());
         return sql;
     }
-
+    
+    private String generarSQLParaListarUno() {
+        String sql = " select " + obtenerListaAtributosParaListar() + " from ";
+        sql = sql.concat(this.nombre_tabla);
+        sql = sql.concat(" where ");
+        sql = sql.concat(this.obtenerIdentificador());
+        return sql;
+    }
+    
+    private String generarSQLParaListarTodos() {
+        String sql = " select " + obtenerListaAtributosParaListar() + " from ";
+        sql = sql.concat(this.nombre_tabla);
+        return sql;
+    }
+    
     protected abstract String obtenerListaAtributosParaInsertar();
 
     protected abstract String obtenerListaValoresParaInsertar();
+    
+    protected abstract String obtenerListaAtributosParaListar();
     
     protected abstract String obtenerListaAtributosYValoresParaModificar();
 
     protected abstract String obtenerIdentificador();
     
+    protected abstract T mapearEntidadDesdeResultSet(ResultSet resultSet);
+        
     protected Integer retornarUltimoAutoGenerado() throws SQLException {
         Integer resultado = null;
         ResultSet generatedKeys = statement.getGeneratedKeys();
@@ -183,5 +258,5 @@ public abstract class DAOImpl {
         }
         return resultado;
     }
-    
+
 }

@@ -530,6 +530,11 @@ BEGIN
 END $
 DELIMITER ;
 
+DROP PROCEDURE IF EXISTS INSERTAR_GRADOACADEMICO;
+DROP PROCEDURE IF EXISTS MODIFICAR_GRADOACADEMICO;
+DROP PROCEDURE IF EXISTS ELIMINAR_GRADOACADEMICO;
+DROP PROCEDURE IF EXISTS LISTAR_TODOS_GRADOACADEMICO;
+DROP PROCEDURE IF EXISTS OBTENER_POR_ID_GRADOACADEMICO;
 
 DELIMITER $ 
 CREATE PROCEDURE INSERTAR_GRADOACADEMICO(
@@ -548,7 +553,7 @@ BEGIN
     SET p_id = @@last_insert_id;
 END $
 CREATE PROCEDURE MODIFICAR_GRADOACADEMICO(
-	OUT p_id INT,
+	IN p_id INT,
     IN p_idAnioAcademicoRelacionado INT ,
     IN p_numeroGrado INT ,
     IN p_nivel ENUM ('PRIMARIO','SECUNDARIO') ,
@@ -557,9 +562,9 @@ CREATE PROCEDURE MODIFICAR_GRADOACADEMICO(
 )
 BEGIN
 	UPDATE GradoAcademico SET 
-    idAnioAcademicoRelacionado=p_idAnioAcademicoRelacionado,numeroGrado=p_numeroGrado,
-    nivel=p_nivel,cantidadAlumnos=p_cantidadAlumnos,vacantes=p_vacantes
-    WHERE idUsuario=p_id; 
+    idAnioAcademicoRelacionado = p_idAnioAcademicoRelacionado, numeroGrado=p_numeroGrado,
+    nivel=p_nivel, cantidadAlumnos=p_cantidadAlumnos, vacantes=p_vacantes
+    WHERE idGradoAcademico=p_id; 
 END $
 CREATE PROCEDURE ELIMINAR_GRADOACADEMICO(
 	IN p_id INT
@@ -572,25 +577,30 @@ CREATE PROCEDURE LISTAR_TODOS_GRADOACADEMICO()
 -- forma de hacer select a una tabla que depende de otra
 BEGIN
 	SELECT 
-    g.idGradoAcademico,g.numeroGrado,g.nivel,g.cantidadAlumnos,g.vacantes,
+    g.idGradoAcademico, g.numeroGrado, g.nivel, g.cantidadAlumnos, g.vacantes, g.idAnioAcademicoRelacionado,
     a.anio as anioAcademico  -- columna que mostrará el año
     FROM GradoAcademico g
-    INNER JOIN AnioAcademico a ON g.idAnioAcademicoRelacionado=a.idAnioAcademico -- incorporando datos de otra tabla
-    WHERE g.activo=1;
+    INNER JOIN AnioAcademico a ON g.idAnioAcademicoRelacionado = a.idAnioAcademico -- incorporando datos de otra tabla
+    WHERE g.activo = 1;
 END $
 CREATE PROCEDURE OBTENER_POR_ID_GRADOACADEMICO(
 	IN p_id INT
 )
 BEGIN
 	SELECT 
-    g.idGradoAcademico,g.numeroGrado,g.nivel,g.cantidadAlumnos,g.vacantes,
+    g.idGradoAcademico, g.numeroGrado, g.nivel, g.cantidadAlumnos, g.vacantes, g.idAnioAcademicoRelacionado,
     a.anio as anioAcademico
     FROM GradoAcademico g
-    INNER JOIN AnioAcademico a ON g.idAnioAcademicoRelacionado=a.idAnioAcademico -- incorporando datos de otra tabla
-    WHERE g.idGradoAcademico=p_id;
+    INNER JOIN AnioAcademico a ON g.idAnioAcademicoRelacionado = a.idAnioAcademico -- incorporando datos de otra tabla
+    WHERE g.idGradoAcademico = p_id;
 END $
 DELIMITER ;
 
+DROP PROCEDURE IF EXISTS INSERTAR_JORNADAESCOLAR;
+DROP PROCEDURE IF EXISTS MODIFICAR_JORNADAESCOLAR;
+DROP PROCEDURE IF EXISTS ELIMINAR_JORNADAESCOLAR;
+DROP PROCEDURE IF EXISTS LISTAR_TODOS_JORNADAESCOLAR;
+DROP PROCEDURE IF EXISTS OBTENER_POR_ID_JORNADAESCOLAR;
 
 DELIMITER $ 
 CREATE PROCEDURE INSERTAR_JORNADAESCOLAR(
@@ -618,8 +628,8 @@ CREATE PROCEDURE MODIFICAR_JORNADAESCOLAR(
 )
 BEGIN
 	UPDATE JornadaEscolar SET 
-    p_fid_GradoAcademico=fid_GradoAcademico,horasDeEstudio=p_horasDeEstudio,
-    horaInicio=p_horaInicio,horaFin=p_horaFin,dia=p_dia
+    fid_GradoAcademico = p_fid_GradoAcademico, horasDeEstudio=p_horasDeEstudio,
+    horaInicio= p_horaInicio, horaFin=p_horaFin, dia=p_dia
     WHERE idJornadaEscolar=p_id; 
 END $
 CREATE PROCEDURE ELIMINAR_JORNADAESCOLAR(
@@ -632,7 +642,8 @@ END $
 CREATE PROCEDURE LISTAR_TODOS_JORNADAESCOLAR()
 BEGIN
 	SELECT 
-    j.idJornadaEscolar,j.horasDeEstudio,j.horaInicio,j.horaFin,j.dia,g.numeroGrado
+    j.idJornadaEscolar, j.horasDeEstudio, j.horaInicio,
+    j.horaFin, j.dia, j.fid_GradoAcademico, g.numeroGrado
     FROM JornadaEscolar j 
     INNER JOIN GradoAcademico g ON j.fid_GradoAcademico=g.idGradoAcademico
     WHERE j.activo=1;
@@ -642,7 +653,8 @@ CREATE PROCEDURE OBTENER_POR_ID_JORNADAESCOLAR(
 )
 BEGIN
 	SELECT 
-    j.idJornadaEscolar,j.horasDeEstudio,j.horaInicio,j.horaFin,j.dia,g.numeroGrado
+    j.idJornadaEscolar, j.horasDeEstudio, j.horaInicio,
+    j.horaFin, j.dia, j.fid_GradoAcademico, g.numeroGrado
     FROM JornadaEscolar j 
     INNER JOIN GradoAcademico g ON j.fid_GradoAcademico=g.idGradoAcademico
     WHERE j.idJornadaEscolar=p_id;

@@ -19,7 +19,6 @@ public class GradoAcademico implements IConsultable{
     
     public GradoAcademico(int numeroGrado, NivelEducativo nivel,
             int cantidadAlumnos, int vacantes, int idAnio) {
-        //this.idGradoAcademico = idGradoAcademico;
         this.numeroGrado = numeroGrado;
         this.nivel = nivel;
         this.cantidadAlumnos = cantidadAlumnos;
@@ -28,6 +27,16 @@ public class GradoAcademico implements IConsultable{
         this.cursosGrado=new ArrayList<>();
         this.jornadasPorDia=new ArrayList<>();
         this.seccionesAcademicas=new ArrayList<>();
+    }
+
+    public GradoAcademico(int idGradoAcademico, int numeroGrado, NivelEducativo nivel,
+            int cantidadAlumnos, int vacantes, int idAnioAcademicoRelacionado) {
+        this.idGradoAcademico = idGradoAcademico;
+        this.numeroGrado = numeroGrado;
+        this.nivel = nivel;
+        this.cantidadAlumnos = cantidadAlumnos;
+        this.vacantes = vacantes;
+        this.idAnioAcademicoRelacionado = idAnioAcademicoRelacionado;
     }
 
     public int getIdGradoAcademico() {

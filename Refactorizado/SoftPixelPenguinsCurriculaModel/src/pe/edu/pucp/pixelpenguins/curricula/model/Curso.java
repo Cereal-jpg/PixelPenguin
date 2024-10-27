@@ -17,13 +17,21 @@ public class Curso implements IConsultable{
     public Curso(){}
     
     public Curso(String codigoCurso, String nombre, int horasPorSemana, int horasTotales) {
-        //this.idCurso = idCurso;
+        this.codigoCurso=codigoCurso;
         this.nombre = nombre;
         this.horasPorSemana = horasPorSemana;
         this.horasTotales = horasTotales;
         competencias = new ArrayList<Competencia>();
         notas = new ArrayList<Nota>();
         horasAcademicas = new ArrayList<HoraAcademica>();
+    }
+
+    public Curso(int idCurso, String codigoCurso, String nombre, int horasPorSemana, int horasTotales) {
+        this.idCurso = idCurso;
+        this.codigoCurso = codigoCurso;
+        this.nombre = nombre;
+        this.horasPorSemana = horasPorSemana;
+        this.horasTotales = horasTotales;
     }
 
     public int getIdCurso() {

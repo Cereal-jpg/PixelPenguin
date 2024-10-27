@@ -1,4 +1,3 @@
-
 package pe.edu.pucp.pixelpenguins.anioacademico.model;
 
 import java.util.ArrayList;

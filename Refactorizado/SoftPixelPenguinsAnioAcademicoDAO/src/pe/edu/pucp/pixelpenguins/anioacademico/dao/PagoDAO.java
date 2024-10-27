@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import pe.edu.pucp.pixelpenguins.anioacademico.model.Pago;
 
 public interface PagoDAO {
-    public int insertar(Pago pago);
-    public int modificar(Pago pago);
-    public int eliminar(Pago pago);
+    public Integer insertar(Pago pago);
+    public Integer modificar(Pago pago);
+    public Integer eliminar(Pago pago);
     public ArrayList<Pago> listarTodos();
-    public int obtenerPorId(int idPago);
+    public Pago obtenerPorId(Integer idPago);
 }

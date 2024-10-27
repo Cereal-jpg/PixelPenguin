@@ -17,7 +17,6 @@ public class JornadaEscolar {
     
     public JornadaEscolar(int horasDeEstudio, LocalTime horaInicio,
             LocalTime horaFin, DiaSemana dia, GradoAcademico gradoRelacionado) {
-        //this.idJornadaEscolar = idJornadaEscolar;
         this.horasDeEstudio = horasDeEstudio;
         this.horaInicio = horaInicio;
         this.horaFin = horaFin;
@@ -25,6 +24,15 @@ public class JornadaEscolar {
         this.gradoRelacionado=gradoRelacionado;
         this.horasAcademicas = new ArrayList<HoraAcademica>();
     }
+
+    public JornadaEscolar(int idJornadaEscolar, int horasDeEstudio, LocalTime horaInicio, LocalTime horaFin, DiaSemana dia, GradoAcademico gradoRelacionado) {
+        this.idJornadaEscolar = idJornadaEscolar;
+        this.horasDeEstudio = horasDeEstudio;
+        this.horaInicio = horaInicio;
+        this.horaFin = horaFin;
+        this.dia = dia;
+        this.gradoRelacionado = gradoRelacionado;
+    } 
 
     public int getIdJornadaEscolar() {
         return idJornadaEscolar;

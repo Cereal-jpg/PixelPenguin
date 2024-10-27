@@ -1,4 +1,3 @@
-
 package pe.edu.pucp.pixelpenguins.config;
 
 import java.io.File;

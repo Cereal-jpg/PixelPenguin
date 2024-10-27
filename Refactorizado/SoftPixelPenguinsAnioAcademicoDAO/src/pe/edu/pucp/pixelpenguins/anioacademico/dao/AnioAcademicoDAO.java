@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import pe.edu.pucp.pixelpenguins.anioacademico.model.AnioAcademico;
 
 public interface AnioAcademicoDAO {
-    public int insertar(AnioAcademico anioAcademico);
-    public int modificar(AnioAcademico anioAcademico);
-    public int eliminar(AnioAcademico anioAcademico);
+    public Integer insertar(AnioAcademico anioAcademico);
+    public Integer modificar(AnioAcademico anioAcademico);
+    public Integer eliminar(AnioAcademico anioAcademico);
     public ArrayList<AnioAcademico> listarTodos();
-    public AnioAcademico obtenerPorId(int id);
+    public AnioAcademico obtenerPorId(Integer idAnioAcademico);
 }

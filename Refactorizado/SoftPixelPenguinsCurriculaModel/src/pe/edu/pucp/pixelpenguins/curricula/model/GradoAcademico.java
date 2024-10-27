@@ -10,7 +10,7 @@ public class GradoAcademico implements IConsultable{
     private NivelEducativo nivel;
     private int cantidadAlumnos;
     private int vacantes;
-    private int idAnioAcademicoRelacionado;
+    private int fid_AnioAcademico;
     private ArrayList<SeccionAcademica> seccionesAcademicas;
     private ArrayList<Curso> cursosGrado;
     private ArrayList<JornadaEscolar> jornadasPorDia;
@@ -19,15 +19,24 @@ public class GradoAcademico implements IConsultable{
     
     public GradoAcademico(int numeroGrado, NivelEducativo nivel,
             int cantidadAlumnos, int vacantes, int idAnio) {
-        //this.idGradoAcademico = idGradoAcademico;
         this.numeroGrado = numeroGrado;
         this.nivel = nivel;
         this.cantidadAlumnos = cantidadAlumnos;
         this.vacantes = vacantes;
-        this.idAnioAcademicoRelacionado=idAnio;
+        this.fid_AnioAcademico=idAnio;
         this.cursosGrado=new ArrayList<>();
         this.jornadasPorDia=new ArrayList<>();
         this.seccionesAcademicas=new ArrayList<>();
+    }
+
+    public GradoAcademico(int idGradoAcademico, int numeroGrado, NivelEducativo nivel,
+            int cantidadAlumnos, int vacantes, int fid_AnioAcademico) {
+        this.idGradoAcademico = idGradoAcademico;
+        this.numeroGrado = numeroGrado;
+        this.nivel = nivel;
+        this.cantidadAlumnos = cantidadAlumnos;
+        this.vacantes = vacantes;
+        this.fid_AnioAcademico = fid_AnioAcademico;
     }
 
     public int getIdGradoAcademico() {
@@ -70,12 +79,12 @@ public class GradoAcademico implements IConsultable{
         this.vacantes = vacantes;
     }
 
-    public int getIdAnioAcademicoRelacionado() {
-        return idAnioAcademicoRelacionado;
+    public int getFid_AnioAcademico() {
+        return fid_AnioAcademico;
     }
 
-    public void setIdAnioAcademicoRelacionado(int idAnioAcademicoRelacionado) {
-        this.idAnioAcademicoRelacionado = idAnioAcademicoRelacionado;
+    public void setFid_AnioAcademico(int idAnioAcademicoRelacionado) {
+        this.fid_AnioAcademico = idAnioAcademicoRelacionado;
     }
 
     @Override

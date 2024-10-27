@@ -1,4 +1,3 @@
-
 package pe.edu.pucp.pixelpenguins.curricula.model;
 
 import java.util.ArrayList;

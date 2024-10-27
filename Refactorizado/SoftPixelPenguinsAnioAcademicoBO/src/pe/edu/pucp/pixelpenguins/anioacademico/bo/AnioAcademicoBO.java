@@ -4,36 +4,37 @@ package pe.edu.pucp.pixelpenguins.anioacademico.bo;
 import java.util.ArrayList;
 import java.util.Date;
 import pe.edu.pucp.pixelpenguins.anioacademico.dao.AnioAcademicoDAO;
-import pe.edu.pucp.pixelpenguins.anioacademico.daoImp.AnioAcademicoDAOImp;
+import pe.edu.pucp.pixelpenguins.anioacademico.daoImp.AnioAcademicoDAOImpl;
 import pe.edu.pucp.pixelpenguins.anioacademico.model.AnioAcademico;
 
 public class AnioAcademicoBO {
-    private AnioAcademicoDAO anioDAO;
+    private final AnioAcademicoDAO anioDAO;
     
     public AnioAcademicoBO(){
-        this.anioDAO=new AnioAcademicoDAOImp();
+        this.anioDAO = new AnioAcademicoDAOImpl();
     }
     
-    public int insertar(int anio, Date fechaInicio, Date fechaFin){
-        AnioAcademico anioAux= new AnioAcademico(anio, fechaInicio, fechaFin);
-        return anioDAO.insertar(anioAux);
+    public Integer insertar(int anio, Date fechaInicio, Date fechaFin){
+        AnioAcademico anioAcademico= new AnioAcademico(anio, fechaInicio, fechaFin);
+        return anioDAO.insertar(anioAcademico);
     }
     
-    public int modificar(int idAnioAcademico, int anio, Date fechaInicio, Date fechaFin){
-        AnioAcademico anioAux= new AnioAcademico(idAnioAcademico, anio, fechaInicio, fechaFin);
-        return anioDAO.modificar(anioAux);
+    public Integer modificar(int idAnioAcademico, int anio, Date fechaInicio, Date fechaFin){
+        AnioAcademico anioAcademico = new AnioAcademico(idAnioAcademico, anio, fechaInicio, fechaFin);
+        return anioDAO.modificar(anioAcademico);
     }
     
-    public int eliminar(int idAnioAcademico, int anio, Date fechaInicio, Date fechaFin){
-        AnioAcademico anioAux= new AnioAcademico(idAnioAcademico, anio, fechaInicio, fechaFin);
-        return anioDAO.eliminar(anioAux);
+    public Integer eliminar(Integer idAnioAcademico){
+        AnioAcademico anioAcademico = new AnioAcademico();
+        anioAcademico.setIdAnioAcademico(idAnioAcademico);
+        return anioDAO.eliminar(anioAcademico);
     }
     
     public ArrayList<AnioAcademico> listarTodos(){
         return anioDAO.listarTodos();
     }
     
-    public AnioAcademico obtenerPorId(int id){
-        return anioDAO.obtenerPorId(id);
+    public AnioAcademico obtenerPorId(Integer idAnioAcademico){
+        return anioDAO.obtenerPorId(idAnioAcademico);
     }
 }

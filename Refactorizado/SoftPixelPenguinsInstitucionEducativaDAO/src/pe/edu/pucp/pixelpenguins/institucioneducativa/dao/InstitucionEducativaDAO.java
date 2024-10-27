@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import pe.edu.pucp.pixelpenguins.institucioneducativa.model.InstitucionEducativa;
 
 public interface InstitucionEducativaDAO {
-    public int insertar(InstitucionEducativa ie);
-    public int modificar(InstitucionEducativa ie);
-    public int eliminar(InstitucionEducativa ie);
+    public Integer insertar(InstitucionEducativa ie);
+    public Integer modificar(InstitucionEducativa ie);
+    public Integer eliminar(InstitucionEducativa ie);
     public ArrayList<InstitucionEducativa> listarTodos();
-    public InstitucionEducativa obtenerPorId (int idInstitucionEducativa);
+    public InstitucionEducativa obtenerPorId (Integer idInstitucionEducativa);
 }

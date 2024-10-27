@@ -4,7 +4,6 @@ package pe.edu.pucp.pixelpenguins.usuario.model;
 public class Rol {
     private int idRol;
     private String nombre;
-    private boolean activo;
     
     public Rol(){}
     
@@ -12,7 +11,6 @@ public class Rol {
     // en específico, ya que esta se genera automáticamente
     public Rol(String nombre) {
         this.nombre = nombre;
-        this.activo = true;
     }
     
     // aún así, se está dejando su constructor normal para 
@@ -40,14 +38,6 @@ public class Rol {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public boolean isActivo() {
-        return activo;
-    }
-
-    public void setActivo(boolean activo) {
-        this.activo = activo;
     }
     
 }

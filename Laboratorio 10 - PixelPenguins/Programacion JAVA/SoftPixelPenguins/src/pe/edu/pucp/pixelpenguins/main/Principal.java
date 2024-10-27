@@ -19,21 +19,20 @@ import pe.edu.pucp.pixelpenguins.institucioneducativa.bo.InstitucionEducativaBO;
 import pe.edu.pucp.pixelpenguins.institucioneducativa.model.InstitucionEducativa;
 import pe.edu.pucp.pixelpenguins.usuario.bo.RolBO;
 import pe.edu.pucp.pixelpenguins.usuario.model.Rol;
-import static pe.edu.pucp.pixelpenguins.util.CifradoAux.cifrar;
-import static pe.edu.pucp.pixelpenguins.util.CifradoAux.descifrar;
+import pe.edu.pucp.pixelpenguins.util.CifradoAux;
 
 public class Principal {
 
     public static void main(String[] args) throws ParseException{
         
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        String password="1inf30";
+        String password="1inf30softiepixelpenguins";
         int desplazamiento = 3;
         // Cifrar el texto
-        String textoCifrado = cifrar(password, 3);
+        String textoCifrado = CifradoAux.cifrar(password, 3);
         System.out.println("Texto cifrado: " + textoCifrado);
         // Descifrar el texto
-        String textoDescifrado = descifrar(password, 3);
+        String textoDescifrado = CifradoAux.descifrar(textoCifrado, 3);
         System.out.println("Texto descifrado: " + textoDescifrado);
         RolBO rolBO=new RolBO();
 //        if(rolBO.insertar("Rol 1")==1) System.out.println("El rol fue agregado correctamente");

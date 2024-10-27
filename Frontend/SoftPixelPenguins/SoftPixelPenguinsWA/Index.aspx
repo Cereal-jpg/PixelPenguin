@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftPixelPenguins.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="SoftPixelPenguinsWA.Index" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
-    Home
+    Home - Estudiante
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphScripts" runat="server">
 </asp:Content>

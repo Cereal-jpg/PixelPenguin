@@ -128,4 +128,7 @@ public abstract class Usuario implements IConsultable {
         this.rol = rol;
     }
     
+    @Override
+    public abstract String consultarInformacion();
+    
 }

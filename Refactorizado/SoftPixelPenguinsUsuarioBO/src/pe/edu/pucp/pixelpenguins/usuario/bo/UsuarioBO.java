@@ -18,21 +18,24 @@ public class UsuarioBO {
     public Integer insertar(String dni, String nombre, Date fechaNacimiento,
             String direccion, String email, String sexo,
             String username, String password, Rol rol) {
-        Usuario usuario = new Usuario(dni, nombre, fechaNacimiento, direccion, email, sexo, username, password, rol) {};
-        return this.usuarioDAO.insertar(usuario);
+//        Usuario usuario = new Usuario(dni, nombre, fechaNacimiento, direccion, email, sexo, username, password, rol){};
+//        return this.usuarioDAO.insertar(usuario);
+        return 1;
     }
 
     public Integer modificar(Integer idUsuario, String dni, String nombre, Date fechaNacimiento,
             String direccion, String email, String sexo,
             String username, String password, Rol rol) {
-        Usuario usuario = new Usuario(idUsuario, dni, nombre, fechaNacimiento, direccion, email, sexo, username, password, rol) {};
-        return this.usuarioDAO.modificar(usuario);
+//        Usuario usuario = new Usuario(idUsuario, dni, nombre, fechaNacimiento, direccion, email, sexo, username, password, rol){};
+//        return this.usuarioDAO.modificar(usuario);
+        return 1;
     }
 
     public Integer eliminar(Integer idUsuario) {
-        Usuario usuario = new Usuario() {};
-        usuario.setIdUsuario(idUsuario);
-        return this.usuarioDAO.eliminar(usuario);
+        //Usuario usuario = new Usuario() {};
+        //usuario.setIdUsuario(idUsuario);
+        //return this.usuarioDAO.eliminar(usuario);
+        return 1;
     }
 
     public ArrayList<Usuario> listarTodos() {

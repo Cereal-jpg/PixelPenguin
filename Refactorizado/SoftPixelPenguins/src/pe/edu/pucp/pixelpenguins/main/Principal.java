@@ -6,6 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import pe.edu.pucp.pixelpenguins.anioacademico.bo.AnioAcademicoBO;
 import pe.edu.pucp.pixelpenguins.anioacademico.model.AnioAcademico;
+import pe.edu.pucp.pixelpenguins.config.DBManager;
 
 public class Principal {
 
@@ -15,6 +16,6 @@ public class Principal {
         
         AnioAcademicoBO anio = new AnioAcademicoBO();
         anio.modificar(5,2026, sdf.parse("2026-03-14"), sdf.parse("2026-11-10"));
-
+        //DBManager.getInstance().getConnection();
     }
 }

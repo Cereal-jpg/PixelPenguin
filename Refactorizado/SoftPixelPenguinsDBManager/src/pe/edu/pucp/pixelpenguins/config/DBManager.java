@@ -12,6 +12,8 @@ import java.sql.SQLException;
 import java.util.Properties;
 import static pe.edu.pucp.pixelpenguins.util.Cifrado.descifrarMD5;
 import static pe.edu.pucp.pixelpenguins.util.Cifrado.cifrarMD5;
+import static pe.edu.pucp.pixelpenguins.util.CifradoAux.cifrar;
+import static pe.edu.pucp.pixelpenguins.util.CifradoAux.descifrar;
 
 public class DBManager {
     
@@ -42,7 +44,8 @@ public class DBManager {
         leer_archivo_propiedades();
         try{
             Class.forName(this.driver);
-            con = DriverManager.getConnection(getURL(), username, descifrarMD5(this.password));
+            con = DriverManager.getConnection(getURL(), username, this.password);
+            System.out.println(this.password);
         }catch(ClassNotFoundException | SQLException ex){
             System.out.println(ex.getMessage());
         }

@@ -1,13 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
- */
 package pe.edu.pucp.pixelpenguins.usuario.dao;
 
-/**
- *
- * @author Enzo
- */
+import java.util.ArrayList;
+import pe.edu.pucp.pixelpenguins.usuario.model.Apoderado;
+
 public interface ApoderadoDAO {
-    
+    public Integer insertar(Apoderado apoderado);
+    public Integer modificar(Apoderado apoderado);
+    public Integer eliminar(Apoderado apoderado);
+    public ArrayList<Apoderado> listarTodos();
+    public Apoderado obtenerPorId (Integer idApoderado);
 }

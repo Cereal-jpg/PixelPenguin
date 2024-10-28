@@ -9,33 +9,41 @@ import pe.edu.pucp.pixelpenguins.usuario.model.Usuario;
 
 public class UsuarioBO {
 
-    private UsuarioDAO usuarioDAO;
+    private final UsuarioDAO usuarioDAO;
 
     public UsuarioBO() {
         this.usuarioDAO = new UsuarioDAOImpl();
     }
 
-    public Integer insertar(String dni, String nombre, Date fechaNacimiento,
-            String direccion, String email, String sexo,
-            String username, String password, Rol rol) {
-//        Usuario usuario = new Usuario(dni, nombre, fechaNacimiento, direccion, email, sexo, username, password, rol){};
-//        return this.usuarioDAO.insertar(usuario);
-        return 1;
+    public Integer insertar(String dni, String nombreCompleto, Date fechaNacimiento, String direccion, String email, String sexo, String username, String password, Rol rol) {
+        Usuario usuario = new Usuario(dni, nombreCompleto, fechaNacimiento, direccion, email, sexo, username, password, rol) {
+            @Override
+            public String consultarInformacion() {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+        };
+        return this.usuarioDAO.insertar(usuario);
     }
 
-    public Integer modificar(Integer idUsuario, String dni, String nombre, Date fechaNacimiento,
-            String direccion, String email, String sexo,
-            String username, String password, Rol rol) {
-//        Usuario usuario = new Usuario(idUsuario, dni, nombre, fechaNacimiento, direccion, email, sexo, username, password, rol){};
-//        return this.usuarioDAO.modificar(usuario);
-        return 1;
+    public Integer modificar(Integer idUsuario, String dni, String nombreCompleto, Date fechaNacimiento, String direccion, String email, String sexo, String username, String password, Rol rol) {
+        Usuario usuario = new Usuario(idUsuario, dni, nombreCompleto, fechaNacimiento, direccion, email, sexo, username, password, rol) {
+            @Override
+            public String consultarInformacion() {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+        };
+        return this.usuarioDAO.modificar(usuario);
     }
 
     public Integer eliminar(Integer idUsuario) {
-        //Usuario usuario = new Usuario() {};
-        //usuario.setIdUsuario(idUsuario);
-        //return this.usuarioDAO.eliminar(usuario);
-        return 1;
+        Usuario usuario = new Usuario() {
+            @Override
+            public String consultarInformacion() {
+                throw new UnsupportedOperationException("Not supported yet.");
+            }
+        };
+        usuario.setIdUsuario(idUsuario);
+        return this.usuarioDAO.eliminar(usuario);
     }
 
     public ArrayList<Usuario> listarTodos() {

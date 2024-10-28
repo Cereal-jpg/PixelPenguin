@@ -2,6 +2,7 @@ package pe.edu.pucp.pixelpenguins.usuario.daoImp;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
 import pe.edu.pucp.pixelpenguins.db.DAOImpl;
@@ -29,6 +30,13 @@ public class UsuarioDAOImpl extends DAOImpl implements UsuarioDAO {
     }
 
     @Override
+    public Integer insertar(Usuario usuario, Boolean usarTransaccion, Connection conexion) {
+        this.usarTransaccion = usarTransaccion;
+        this.conexion = conexion;
+        return this.insertar(usuario);
+    }
+    
+    @Override
     protected String obtenerListaDeAtributosParaInsercion() {
         return "dni, nombreCompleto, fechaNacimiento, direccion, email, sexo, username, passsword, fid_rol";
     }
@@ -47,7 +55,7 @@ public class UsuarioDAOImpl extends DAOImpl implements UsuarioDAO {
         this.incluirParametroString(5, usuario.getEmail());
         this.incluirParametroString(6, usuario.getSexo());
         this.incluirParametroString(7, usuario.getUsername());
-        this.incluirParametroString(8, usuario.getPasssword());
+        this.incluirParametroString(8, usuario.getPassword());
         this.incluirParametroInt(9, usuario.getRol().getIdRol());
     }
 
@@ -57,6 +65,13 @@ public class UsuarioDAOImpl extends DAOImpl implements UsuarioDAO {
         return super.modificar();
     }
 
+    @Override
+    public Integer modificar(Usuario usuario, Boolean usarTransaccion, Connection conexion) {
+        this.usarTransaccion = usarTransaccion;
+        this.conexion = conexion;
+        return this.modificar(usuario);
+    }
+    
     @Override
     protected String obtenerListaDeValoresYAtributosParaModificacion() {
         return "dni=?, nombreCompleto=?, fechaNacimiento=?, direccion=?, email=?, sexo=?, username=?, passsword=?, fid_rol=?";
@@ -76,7 +91,7 @@ public class UsuarioDAOImpl extends DAOImpl implements UsuarioDAO {
         this.incluirParametroString(5, usuario.getEmail());
         this.incluirParametroString(6, usuario.getSexo());
         this.incluirParametroString(7, usuario.getUsername());
-        this.incluirParametroString(8, usuario.getPasssword());
+        this.incluirParametroString(8, usuario.getPassword());
         this.incluirParametroInt(9, usuario.getRol().getIdRol());
         this.incluirParametroInt(10, usuario.getIdUsuario());
     }
@@ -85,6 +100,13 @@ public class UsuarioDAOImpl extends DAOImpl implements UsuarioDAO {
     public Integer eliminar(Usuario usuario) {
         this.usuario = usuario;
         return super.eliminar();
+    }
+    
+    @Override
+    public Integer eliminar(Usuario usuario, Boolean usarTransaccion, Connection conexion) {
+        this.usarTransaccion = usarTransaccion;
+        this.conexion = conexion;
+        return this.eliminar(usuario);
     }
 
     @Override
@@ -124,7 +146,7 @@ public class UsuarioDAOImpl extends DAOImpl implements UsuarioDAO {
         usuario.setEmail(resultSet.getString("email"));
         usuario.setSexo(resultSet.getString("sexo"));
         usuario.setUsername(resultSet.getString("username"));
-        usuario.setPasssword(resultSet.getString("passsword"));
+        usuario.setPassword(resultSet.getString("passsword"));
         usuario.setRol(new Rol(resultSet.getInt("fid_rol")));
     }
 
@@ -149,6 +171,33 @@ public class UsuarioDAOImpl extends DAOImpl implements UsuarioDAO {
     @Override
     protected void limpiarObjetoDelResultSet() {
         this.usuario = null;
+    }
+    
+    @Override
+    public Boolean existeUsuario(Usuario usuario) {
+        this.usuario = usuario;
+        Integer idUsuario = null;
+        try {
+            this.abrirConexion();
+            String sql = "select idUsuario from Usuario where ";
+            sql = sql.concat("nombreCompleto=? ");
+            this.colocarSQLenStatement(sql);
+            this.incluirParametroString(1, this.usuario.getNombreCompleto());
+            this.ejecutarConsultaEnBD(sql);
+            if (this.resultSet.next()) {
+                idUsuario = this.resultSet.getInt("idUsuario");
+            }
+        } catch (SQLException ex) {
+            System.err.println("Error al consultar si existe usuario - " + ex);
+        } finally {
+            try {
+                this.cerrarConexion();
+            } catch (SQLException ex) {
+                System.err.println("Error al cerrar la conexión - " + ex);
+            }
+        }
+        this.usuario.setIdUsuario(idUsuario);
+        return idUsuario != null;
     }
     
 }

@@ -15,8 +15,8 @@
                 <img src="Images/PIXEL.png" alt="Logo" />
                 <h1>Pixel Penguins</h1>
                 <div class="nav">
-                    <a href="#">Intranet</a>
-                    <a href="#">Matrícula</a>
+                    <a href="Login.aspx">Intranet</a>
+                    <a href="Matricularce.aspx">Matrícula</a>
                 </div>
             </div>
             <div class="content">

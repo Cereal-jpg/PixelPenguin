@@ -17,13 +17,25 @@ public class CursoBO {
         return cursoDAO.insertar(curso);
     }
     
+    public Integer insertar(Curso curso){
+        return cursoDAO.insertar(curso);
+    }
+    
     public Integer modificar(int idCurso, String codigoCurso, String nombre, int horasPorSemana, int horasTotales){
         Curso curso=new Curso(idCurso, codigoCurso, nombre, horasPorSemana, horasTotales);
         return cursoDAO.modificar(curso);
     }
     
+    public Integer modificar(Curso curso){
+        return cursoDAO.modificar(curso);
+    }
+    
     public Integer eliminar(int idCurso, String codigoCurso, String nombre, int horasPorSemana, int horasTotales){
         Curso curso=new Curso(idCurso, codigoCurso, nombre, horasPorSemana, horasTotales);
+        return cursoDAO.eliminar(curso);
+    }
+    
+    public Integer eliminar(Curso curso){
         return cursoDAO.eliminar(curso);
     }
     

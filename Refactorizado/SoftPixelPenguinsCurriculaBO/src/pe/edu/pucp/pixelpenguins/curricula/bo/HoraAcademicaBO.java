@@ -19,16 +19,28 @@ public class HoraAcademicaBO {
         HoraAcademica horaAcademica = this.crearHoraAcademica(idProfesorRelacionado, horaInicio, horaFin, fidCurso);
         return this.horaAcademicaDAO.insertar(horaAcademica);
     }
+    
+    public Integer insertar(HoraAcademica horaAcademica) {
+        return this.horaAcademicaDAO.insertar(horaAcademica);
+    }
 
     public Integer modificar(Integer idHoraAcademica, Integer idProfesorRelacionado, LocalTime horaInicio, LocalTime horaFin, Integer fidCurso) {
         HoraAcademica horaAcademica = this.crearHoraAcademica(idProfesorRelacionado, horaInicio, horaFin, fidCurso);
         horaAcademica.setIdHoraAcademica(idHoraAcademica);
         return this.horaAcademicaDAO.modificar(horaAcademica);
     }
+    
+    public Integer modificar(HoraAcademica horaAcademica) {
+        return this.horaAcademicaDAO.modificar(horaAcademica);
+    }
 
     public Integer eliminar(Integer idHoraAcademica) {
         HoraAcademica horaAcademica = new HoraAcademica();
         horaAcademica.setIdHoraAcademica(idHoraAcademica);
+        return this.horaAcademicaDAO.eliminar(horaAcademica);
+    }
+    
+    public Integer eliminar(HoraAcademica horaAcademica) {
         return this.horaAcademicaDAO.eliminar(horaAcademica);
     }
 

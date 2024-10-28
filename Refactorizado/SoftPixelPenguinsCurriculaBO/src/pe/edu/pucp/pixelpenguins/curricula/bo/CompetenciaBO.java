@@ -19,14 +19,26 @@ public class CompetenciaBO {
         return this.competenciaDAO.insertar(competencia);
     }
     
+    public Integer insertar(Competencia competencia) {
+        return this.competenciaDAO.insertar(competencia);
+    }
+    
     public Integer modificar(Integer idCompetencia, String descripcion, Integer idCurso) {
         Competencia competencia = this.crearCompetencia(idCompetencia,descripcion, idCurso);
+        return this.competenciaDAO.modificar(competencia);
+    }
+    
+    public Integer modificar(Competencia competencia) {
         return this.competenciaDAO.modificar(competencia);
     }
     
     public Integer eliminar(Integer idCompetencia) {
         Competencia competencia = new Competencia();
         competencia.setIdCompetencia(idCompetencia);
+        return this.competenciaDAO.eliminar(competencia);
+    }
+    
+    public Integer eliminar(Competencia competencia) {
         return this.competenciaDAO.eliminar(competencia);
     }
     

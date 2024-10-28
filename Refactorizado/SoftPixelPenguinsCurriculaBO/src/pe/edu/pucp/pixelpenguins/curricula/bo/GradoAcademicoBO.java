@@ -19,15 +19,27 @@ public class GradoAcademicoBO {
         GradoAcademico gradoAcademico = this.crearGradoAcademico(null, numeroGrado, nivel, cantidadAlumnos, vacantes, fidAnioAcademico);
         return this.gradoAcademicoDAO.insertar(gradoAcademico);
     }
+    
+    public Integer insertar(GradoAcademico gradoAcademico) {
+        return this.gradoAcademicoDAO.insertar(gradoAcademico);
+    }
 
     public Integer modificar(int idGradoAcademico, int numeroGrado, NivelEducativo nivel, int cantidadAlumnos, int vacantes, int fidAnioAcademico) {
         GradoAcademico gradoAcademico = this.crearGradoAcademico(idGradoAcademico, numeroGrado, nivel, cantidadAlumnos, vacantes, fidAnioAcademico);
+        return this.gradoAcademicoDAO.modificar(gradoAcademico);
+    }
+    
+    public Integer modificar(GradoAcademico gradoAcademico) {
         return this.gradoAcademicoDAO.modificar(gradoAcademico);
     }
 
     public Integer eliminar(int idGradoAcademico) {
         GradoAcademico gradoAcademico = new GradoAcademico();
         gradoAcademico.setIdGradoAcademico(idGradoAcademico);
+        return this.gradoAcademicoDAO.eliminar(gradoAcademico);
+    }
+    
+    public Integer eliminar(GradoAcademico gradoAcademico) {
         return this.gradoAcademicoDAO.eliminar(gradoAcademico);
     }
 

@@ -7,7 +7,8 @@ import java.util.ArrayList;
 import pe.edu.pucp.pixelpenguins.institucioneducativa.bo.InstitucionEducativaBO;
 import pe.edu.pucp.pixelpenguins.institucioneducativa.model.InstitucionEducativa;
 
-@WebService(serviceName = "InstitucionEducativaWS")
+@WebService(serviceName = "InstitucionEducativaWS", targetNamespace
+        = "http://services.institucioneducativa.pixelpenguins.pucp.edu.pe")
 public class InstitucionEducativaWS {
 
     InstitucionEducativaBO institucionEducativaBO = new InstitucionEducativaBO();

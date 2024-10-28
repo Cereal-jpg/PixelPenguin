@@ -20,16 +20,28 @@ public class NotaBO {
         return this.notaDAO.insertar(nuevaNota);
     }
 
+    public Integer insertar(Nota nota) {
+        return this.notaDAO.insertar(nota);
+    }
+    
     public Integer modificar(Integer idNota, Integer bimestre, String nota, Integer idCurso, Integer idCompetencia) {
         Nota notaModificada = this.crearNota(bimestre, nota, idCurso, idCompetencia);
         notaModificada.setIdNota(idNota);
         return this.notaDAO.modificar(notaModificada);
+    }
+    
+    public Integer modificar(Nota nota) {
+        return this.notaDAO.modificar(nota);
     }
 
     public Integer eliminar(Integer idNota) {
         Nota notaAEliminar = new Nota();
         notaAEliminar.setIdNota(idNota);
         return this.notaDAO.eliminar(notaAEliminar);
+    }
+    
+    public Integer eliminar(Nota nota) {
+        return this.notaDAO.eliminar(nota);
     }
 
     public ArrayList<Nota> listarTodos() {

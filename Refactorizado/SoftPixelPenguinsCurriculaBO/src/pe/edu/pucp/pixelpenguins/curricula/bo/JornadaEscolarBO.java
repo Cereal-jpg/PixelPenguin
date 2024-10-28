@@ -20,16 +20,28 @@ public class JornadaEscolarBO {
         JornadaEscolar jornadaEscolar = this.crearJornadaEscolar(horasDeEstudio, horaInicio, horaFin, dia, idGradoAcademico);
         return this.jornadaEscolarDAO.insertar(jornadaEscolar);
     }
+    
+    public Integer insertar(JornadaEscolar jornadaEscolar) {
+        return this.jornadaEscolarDAO.insertar(jornadaEscolar);
+    }
 
     public Integer modificar(Integer idJornadaEscolar, Integer horasDeEstudio, LocalTime horaInicio, LocalTime horaFin, DiaSemana dia, Integer idGradoAcademico) {
         JornadaEscolar jornadaEscolar = this.crearJornadaEscolar(horasDeEstudio, horaInicio, horaFin, dia, idGradoAcademico);
         jornadaEscolar.setIdJornadaEscolar(idJornadaEscolar);
         return this.jornadaEscolarDAO.modificar(jornadaEscolar);
     }
+    
+    public Integer modificar(JornadaEscolar jornadaEscolar) {
+        return this.jornadaEscolarDAO.modificar(jornadaEscolar);
+    }
 
     public Integer eliminar(Integer idJornadaEscolar) {
         JornadaEscolar jornadaEscolar = new JornadaEscolar();
         jornadaEscolar.setIdJornadaEscolar(idJornadaEscolar);
+        return this.jornadaEscolarDAO.eliminar(jornadaEscolar);
+    }
+    
+    public Integer eliminar(JornadaEscolar jornadaEscolar) {
         return this.jornadaEscolarDAO.eliminar(jornadaEscolar);
     }
 

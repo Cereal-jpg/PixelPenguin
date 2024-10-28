@@ -19,14 +19,26 @@ public class SeccionAcademicaBO {
         return this.seccionAcademicaDAO.insertar(seccionAcademica);
     }
 
+    public Integer insertar(SeccionAcademica seccionAcademica) {
+        return this.seccionAcademicaDAO.insertar(seccionAcademica);
+    }
+    
     public Integer modificar(Integer idSeccionAcademica, char seccion, String aula, Integer idGradoAcademico) {
         SeccionAcademica seccionAcademica = this.crearSeccionAcademica(idSeccionAcademica, seccion, aula, idGradoAcademico);
+        return this.seccionAcademicaDAO.modificar(seccionAcademica);
+    }
+    
+    public Integer modificar(SeccionAcademica seccionAcademica) {
         return this.seccionAcademicaDAO.modificar(seccionAcademica);
     }
 
     public Integer eliminar(Integer idSeccionAcademica) {
         SeccionAcademica seccionAcademica = new SeccionAcademica();
         seccionAcademica.setIdSeccionAcademica(idSeccionAcademica);
+        return this.seccionAcademicaDAO.eliminar(seccionAcademica);
+    }
+    
+    public Integer eliminar(SeccionAcademica seccionAcademica) {
         return this.seccionAcademicaDAO.eliminar(seccionAcademica);
     }
 

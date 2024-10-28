@@ -3,10 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< Updated upstream
             <file>file:/C:/Users/Enzo/Desktop/PUCP/Github/PixelPenguin/Refactorizado/SoftPixelPenguinsUsuarioModel/src/pe/edu/pucp/pixelpenguins/usuario/model/Administrador.java</file>
             <file>file:/C:/Users/Enzo/Desktop/PUCP/Github/PixelPenguin/Refactorizado/SoftPixelPenguinsUsuarioModel/src/pe/edu/pucp/pixelpenguins/usuario/model/Usuario.java</file>
             <file>file:/C:/Users/Enzo/Desktop/PUCP/Github/PixelPenguin/Refactorizado/SoftPixelPenguinsUsuarioModel/src/pe/edu/pucp/pixelpenguins/usuario/model/PersonalAdministrativo.java</file>
             <file>file:/C:/Users/Enzo/Desktop/PUCP/Github/PixelPenguin/Refactorizado/SoftPixelPenguinsUsuarioModel/src/pe/edu/pucp/pixelpenguins/usuario/model/Alumno.java</file>
+=======
+            <file>file:/C:/Users/papar/PixelPenguin/Refactorizado/SoftPixelPenguinsUsuarioModel/src/pe/edu/pucp/pixelpenguins/usuario/model/Usuario.java</file>
+            <file>file:/C:/Users/papar/PixelPenguin/Refactorizado/SoftPixelPenguinsUsuarioModel/src/pe/edu/pucp/pixelpenguins/usuario/model/Profesor.java</file>
+>>>>>>> Stashed changes
         </group>
     </open-files>
 </project-private>

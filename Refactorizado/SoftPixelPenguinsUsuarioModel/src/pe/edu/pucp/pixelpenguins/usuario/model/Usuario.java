@@ -5,22 +5,22 @@ import java.util.Date;
 import pe.edu.pucp.pixelpenguins.contrato.model.IConsultable;
 
 public abstract class Usuario implements IConsultable {
-    private int idUsuario;
-    private String dni;
-    private String nombreCompleto;
-    private Date fechaNacimiento;
-    private String direccion;
-    private String email;
-    private String sexo;
-    private String username;
-    private String passsword;
-    private Rol rol;
+    protected int idUsuario;
+    protected String dni;
+    protected String nombreCompleto;
+    protected Date fechaNacimiento;
+    protected String direccion;
+    protected String email;
+    protected String sexo;
+    protected String username;
+    protected String password;
+    protected Rol rol;
     
     public Usuario(){}
     
     public Usuario(String dni, String nombre, Date fechaNacimiento,
             String direccion, String email, String sexo, String username, 
-            String passsword, Rol rol) {
+            String password, Rol rol) {
         //this.idUsuario = idUsuario;
         this.dni = dni;
         this.nombreCompleto = nombre;
@@ -29,13 +29,13 @@ public abstract class Usuario implements IConsultable {
         this.email = email;
         this.sexo = sexo;
         this.username = username;
-        this.passsword = passsword;
+        this.password = password;
         this.rol=rol;
     }
 
     public Usuario(int idUsuario, String dni, String nombreCompleto, Date fechaNacimiento,
             String direccion, String email, String sexo, String username, 
-            String passsword, Rol rol) {
+            String password, Rol rol) {
         this.idUsuario = idUsuario;
         this.dni = dni;
         this.nombreCompleto = nombreCompleto;
@@ -44,7 +44,7 @@ public abstract class Usuario implements IConsultable {
         this.email = email;
         this.sexo = sexo;
         this.username = username;
-        this.passsword = passsword;
+        this.password = password;
         this.rol = rol;
     }
     
@@ -112,12 +112,12 @@ public abstract class Usuario implements IConsultable {
         this.username = username;
     }
 
-    public String getPasssword() {
-        return passsword;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPasssword(String passsword) {
-        this.passsword = passsword;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public Rol getRol() {

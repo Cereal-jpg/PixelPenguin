@@ -1,13 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
- */
 package pe.edu.pucp.pixelpenguins.usuario.dao;
 
-/**
- *
- * @author Enzo
- */
+import java.util.ArrayList;
+import pe.edu.pucp.pixelpenguins.usuario.model.Alumno;
+
 public interface AlumnoDAO {
-    
+    public Integer insertar(Alumno alumno);
+    public Integer modificar(Alumno alumno);
+    public Integer eliminar(Alumno alumno);
+    public ArrayList<Alumno> listarTodos();
+    public Alumno obtenerPorId (Integer idAlumno);
+    public Boolean existeAlumno(Alumno alumno);
+    public Boolean existeAlumno(Alumno alumno, Boolean abreConexion);
 }

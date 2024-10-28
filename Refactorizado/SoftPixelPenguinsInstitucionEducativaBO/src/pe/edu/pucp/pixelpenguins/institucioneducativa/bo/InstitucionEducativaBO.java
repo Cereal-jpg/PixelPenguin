@@ -17,16 +17,28 @@ public class InstitucionEducativaBO {
         InstitucionEducativa institucion = new InstitucionEducativa(nombre, cantidadAlumnos, direccion, ruc);
         return this.institucionDAO.insertar(institucion);
     }
+     
+    public Integer insertar(InstitucionEducativa institucionEducativa) {
+        return this.institucionDAO.insertar(institucionEducativa);
+    }
 
     public Integer modificar(Integer idInstitucion, String nombre, int cantidadAlumnos, String direccion, String ruc) {
         InstitucionEducativa institucion = new InstitucionEducativa(idInstitucion, nombre, cantidadAlumnos, direccion, ruc);
         return this.institucionDAO.modificar(institucion);
+    }
+    
+    public Integer modificar(InstitucionEducativa institucionEducativa) {
+        return this.institucionDAO.modificar(institucionEducativa);
     }
 
     public Integer eliminar(Integer idInstitucion) {
         InstitucionEducativa institucion = new InstitucionEducativa();
         institucion.setIdInstitucion(idInstitucion);
         return this.institucionDAO.eliminar(institucion);
+    }
+    
+    public Integer eliminar(InstitucionEducativa institucionEducativa) {
+        return this.institucionDAO.eliminar(institucionEducativa);
     }
 
     public ArrayList<InstitucionEducativa> listarTodos() {

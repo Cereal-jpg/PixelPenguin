@@ -116,3 +116,13 @@ C:\Users\User\Documents\PUCP 2024-2\PixelPenguin\Frontend\SoftPixelPenguins\Soft
 C:\Users\User\Documents\PUCP 2024-2\PixelPenguin\Frontend\SoftPixelPenguins\SoftPixelPenguinsWA\obj\Debug\SoftPixe.9F367AAF.Up2Date
 C:\Users\User\Documents\PUCP 2024-2\PixelPenguin\Frontend\SoftPixelPenguins\SoftPixelPenguinsWA\obj\Debug\SoftPixelPenguinsWA.dll
 C:\Users\User\Documents\PUCP 2024-2\PixelPenguin\Frontend\SoftPixelPenguins\SoftPixelPenguinsWA\obj\Debug\SoftPixelPenguinsWA.pdb
+C:\Users\papar\PixelPenguin\Frontend\SoftPixelPenguins\SoftPixelPenguinsWA\bin\SoftPixelPenguinsWA.dll.config
+C:\Users\papar\PixelPenguin\Frontend\SoftPixelPenguins\SoftPixelPenguinsWA\bin\SoftPixelPenguinsWA.dll
+C:\Users\papar\PixelPenguin\Frontend\SoftPixelPenguins\SoftPixelPenguinsWA\bin\SoftPixelPenguinsWA.pdb
+C:\Users\papar\PixelPenguin\Frontend\SoftPixelPenguins\SoftPixelPenguinsWA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\papar\PixelPenguin\Frontend\SoftPixelPenguins\SoftPixelPenguinsWA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\papar\PixelPenguin\Frontend\SoftPixelPenguins\SoftPixelPenguinsWA\obj\Debug\SoftPixelPenguinsWA.csproj.AssemblyReference.cache
+C:\Users\papar\PixelPenguin\Frontend\SoftPixelPenguins\SoftPixelPenguinsWA\obj\Debug\SoftPixelPenguinsWA.csproj.CoreCompileInputs.cache
+C:\Users\papar\PixelPenguin\Frontend\SoftPixelPenguins\SoftPixelPenguinsWA\obj\Debug\SoftPixe.9F367AAF.Up2Date
+C:\Users\papar\PixelPenguin\Frontend\SoftPixelPenguins\SoftPixelPenguinsWA\obj\Debug\SoftPixelPenguinsWA.dll
+C:\Users\papar\PixelPenguin\Frontend\SoftPixelPenguins\SoftPixelPenguinsWA\obj\Debug\SoftPixelPenguinsWA.pdb

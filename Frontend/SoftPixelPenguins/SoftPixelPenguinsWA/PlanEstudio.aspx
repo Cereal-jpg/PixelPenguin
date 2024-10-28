@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PlanEstudio.aspx.cs" Inherits="SoftPixelPenguinsWA.PlanEstudio" %>
+﻿ <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PlanEstudio.aspx.cs" Inherits="SoftPixelPenguinsWA.PlanEstudio" %>
 
 
 <!DOCTYPE html>

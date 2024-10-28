@@ -14,12 +14,13 @@
             height: 400px;
             padding: 50px;
             position: absolute; /* Posición fija en la página */
-            right: 300px; /* Alínea el contenedor al borde derecho */
             top: 100px; /* Ajusta la distancia desde el borde superior */
             background-color: #a1d7f7; /* Color de fondo original */
             border-radius: 10px;
-            display: block;
+            display: flex;
             overflow: hidden; 
+            align-content: flex-end;
+            margin-left: 20px;
         }
 
         .form-title {

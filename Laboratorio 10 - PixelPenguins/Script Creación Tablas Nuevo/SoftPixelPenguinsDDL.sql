@@ -6,7 +6,6 @@ CREATE TABLE InstitucionEducativa(
     cantidadAlumnos INT NOT NULL,
     direccion VARCHAR(100) NOT NULL,
     ruc VARCHAR(11) NOT NULL,
-    activo TINYINT,
     PRIMARY KEY (idInstitucion)
 );
 
@@ -16,7 +15,6 @@ CREATE TABLE AnioAcademico(
     anio INT NOT NULL,
     fechaInicio DATE NOT NULL,
     fechaFin DATE NOT NULL,
-	activo TINYINT,
     PRIMARY KEY (idAnioAcademico)
 );
 
@@ -24,7 +22,6 @@ DROP TABLE IF EXISTS Rol;
 CREATE TABLE Rol(
 	idRol INT AUTO_INCREMENT,
     nombre VARCHAR(10) NOT NULL,
-    activo TINYINT,
 	PRIMARY KEY (idRol)
 );
 
@@ -40,7 +37,6 @@ CREATE TABLE Usuario(
     sexo VARCHAR(10) NOT NULL,
     username VARCHAR(10) NOT NULL,
     password VARCHAR(10) NOT NULL,
-    activo TINYINT,
     PRIMARY KEY (idUsuario),
     FOREIGN KEY (fid_rol) REFERENCES Rol (idRol)
 );
@@ -49,7 +45,6 @@ DROP TABLE IF EXISTS Administrador;
 CREATE TABLE Administrador(
 	idAdministrador INT, -- el autoincrement lo tiene de Usuario
     codigoAdministrador INT NOT NULL,
-    activo TINYINT,
     PRIMARY KEY (idAdministrador),
     FOREIGN KEY (idAdministrador) REFERENCES Usuario (idUsuario)
     ON DELETE CASCADE
@@ -60,7 +55,6 @@ DROP TABLE IF EXISTS PersonalAdministrativo;
 CREATE TABLE PersonalAdministrativo(
 	idPersonalAdministrativo INT, 
     codigoPersonalAdministrativo INT NOT NULL,
-    activo TINYINT,
     PRIMARY KEY (idPersonalAdministrativo),
     FOREIGN KEY (idPersonalAdministrativo) REFERENCES Usuario (idUsuario)
     ON DELETE CASCADE
@@ -72,7 +66,6 @@ CREATE TABLE Profesor(
     codigoProfesor INT NOT NULL,
     certificadoHistorialEducativo TINYINT NOT NULL,
     especialidad VARCHAR(20) NOT NULL,
-    activo TINYINT,
     PRIMARY KEY (idProfesor),
     FOREIGN KEY (idProfesor) REFERENCES Usuario (idUsuario)
     ON DELETE CASCADE
@@ -85,21 +78,19 @@ CREATE TABLE Apoderado(
     nombreCompleto VARCHAR(100) NOT NULL,
     telefono VARCHAR(20) NOT NULL,
     relacion VARCHAR(20) NOT NULL,
-    activo TINYINT,
     PRIMARY KEY (idApoderado)
 );
 
 DROP TABLE IF EXISTS GradoAcademico;
 CREATE TABLE GradoAcademico(
 	idGradoAcademico INT AUTO_INCREMENT,
-    idAnioAcademicoRelacionado INT NOT NULL,
+    fid_AnioAcademico INT NOT NULL,
     numeroGrado INT NOT NULL,
     nivel ENUM ('PRIMARIO','SECUNDARIO') NOT NULL,
     cantidadAlumnos INT NOT NULL,
     vacantes INT NOT NULL,
-    activo TINYINT,
     PRIMARY KEY (idGradoAcademico),
-    FOREIGN KEY (idAnioAcademicoRelacionado) REFERENCES AnioAcademico (idAnioAcademico)
+    FOREIGN KEY (fid_AnioAcademico) REFERENCES AnioAcademico (idAnioAcademico)
 );
 
 DROP TABLE IF EXISTS JornadaEscolar;
@@ -110,7 +101,6 @@ CREATE TABLE JornadaEscolar(
     horaInicio TIME NOT NULL,
     horaFin TIME NOT NULL,
     dia ENUM ('LUNES','MARTES','MIERCOLES','JUEVES','VIERNES') NOT NULL,
-    activo TINYINT,
     PRIMARY KEY (idJornadaEscolar),
     FOREIGN KEY (fid_GradoAcademico) REFERENCES GradoAcademico (idGradoAcademico)
 );
@@ -124,7 +114,6 @@ CREATE TABLE Alumno(
     conCertificadoDeEstudios TINYINT NOT NULL,
     conCertificadoDeSalud TINYINT NOT NULL,
     conDeuda TINYINT NOT NULL,
-    activo TINYINT,
     PRIMARY KEY (idAlumno),
     FOREIGN KEY (idAlumno) 
 		REFERENCES Usuario (idUsuario) 
@@ -147,7 +136,6 @@ CREATE TABLE Matricula(
     fechaInicio DATE NOT NULL,
     fechaFin DATE NOT NULL,
     estado ENUM('PENDIENTE','CANCELADA','RECHAZADA'),
-    activo TINYINT,
     PRIMARY KEY (idMatricula),
     FOREIGN KEY (fid_Alumno) REFERENCES Alumno(idAlumno),
     FOREIGN KEY (fid_AnioAcademico) REFERENCES AnioAcademico(idAnioAcademico),
@@ -160,7 +148,6 @@ CREATE TABLE SeccionAcademica(
     fid_GradoAcademico INT NOT NULL,
     seccion CHAR NOT NULL,
     aula VARCHAR(50) NOT NULL,
-    activo TINYINT,
     PRIMARY KEY (idSeccionAcademica),
     FOREIGN KEY (fid_GradoAcademico) REFERENCES GradoAcademico(idGradoAcademico)
 );
@@ -172,7 +159,6 @@ CREATE TABLE Curso(
     nombre VARCHAR(100) NOT NULL,
     horasPorSemana INT NOT NULL,
     horasTotales INT NOT NULL,
-    activo TINYINT,
     PRIMARY KEY (idCurso)
 );
 
@@ -181,7 +167,6 @@ CREATE TABLE Competencia(
 	idCompetencia INT AUTO_INCREMENT,
     fid_Curso INT NOT NULL,
     descripcion VARCHAR(255) NOT NULL,
-    activo TINYINT,
     PRIMARY KEY (idCompetencia),
     FOREIGN KEY (fid_Curso) REFERENCES Curso (idCurso)
 );
@@ -193,7 +178,6 @@ CREATE TABLE Nota(
     fid_Competencia INT NOT NULL,
     nota VARCHAR(10) NOT NULL,
     bimestre INT NOT NULL,
-    activo TINYINT,
     PRIMARY KEY (idNota),
     FOREIGN KEY (fid_Curso) REFERENCES Curso (idCurso),
     FOREIGN KEY (fid_Competencia) REFERENCES Competencia (idCompetencia)
@@ -206,7 +190,6 @@ CREATE TABLE HoraAcademica(
     idProfesorRelacionado INT NOT NULL,
     horaInicio TIME NOT NULL,
     horaFin TIME NOT NULL,
-    activo TINYINT,
     PRIMARY KEY (idHoraAcademica),
     FOREIGN KEY (fid_Curso) REFERENCES Curso (idCurso) ON DELETE CASCADE,
     FOREIGN KEY (idProfesorRelacionado) REFERENCES Profesor (idProfesor) ON DELETE CASCADE
@@ -222,7 +205,6 @@ CREATE TABLE Pago(
     tipoPago ENUM('BANCOS_ASOCIADOS','TRANSFERENCIA_BANCARIA'),
     estado ENUM('PENDIENTE','CANCELADO','ATRASADO','PAGO_PARCIAL','RECHAZADO'),
     tipoDeComprobante ENUM('BOLETA','FACTURA'),
-    activo TINYINT,
     PRIMARY KEY (idPago),
     FOREIGN KEY (fid_Matricula) REFERENCES Matricula (idMatricula) ON DELETE CASCADE
 );

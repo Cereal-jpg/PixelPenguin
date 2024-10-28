@@ -38,7 +38,7 @@ public class UsuarioDAOImpl extends DAOImpl implements UsuarioDAO {
     
     @Override
     protected String obtenerListaDeAtributosParaInsercion() {
-        return "dni, nombreCompleto, fechaNacimiento, direccion, email, sexo, username, passsword, fid_rol";
+        return "dni, nombreCompleto, fechaNacimiento, direccion, email, sexo, username, password, fid_rol";
     }
 
     @Override
@@ -74,7 +74,7 @@ public class UsuarioDAOImpl extends DAOImpl implements UsuarioDAO {
     
     @Override
     protected String obtenerListaDeValoresYAtributosParaModificacion() {
-        return "dni=?, nombreCompleto=?, fechaNacimiento=?, direccion=?, email=?, sexo=?, username=?, passsword=?, fid_rol=?";
+        return "dni=?, nombreCompleto=?, fechaNacimiento=?, direccion=?, email=?, sexo=?, username=?, password=?, fid_rol=?";
     }
 
     @Override
@@ -180,9 +180,9 @@ public class UsuarioDAOImpl extends DAOImpl implements UsuarioDAO {
         try {
             this.abrirConexion();
             String sql = "select idUsuario from Usuario where ";
-            sql = sql.concat("nombreCompleto=? ");
+            sql = sql.concat("dni=? ");
             this.colocarSQLenStatement(sql);
-            this.incluirParametroString(1, this.usuario.getNombreCompleto());
+            this.incluirParametroString(1, this.usuario.getDni());
             this.ejecutarConsultaEnBD(sql);
             if (this.resultSet.next()) {
                 idUsuario = this.resultSet.getInt("idUsuario");

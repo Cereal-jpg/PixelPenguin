@@ -1,27 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
   <services>
-    <service name="CompetenciaWS">
-      <implementation-class>pe.edu.pucp.pixelpenguins.curricula.services.CompetenciaWS</implementation-class>
-    </service>
-    <service name="CursoWS">
-      <implementation-class>pe.edu.pucp.pixelpenguins.curricula.services.CursoWS</implementation-class>
-    </service>
-    <service name="GradoAcademicoWS">
-      <implementation-class>pe.edu.pucp.pixelpenguins.curricula.services.GradoAcademicoWS</implementation-class>
-    </service>
-    <service name="HoraAcademicaWS">
-      <implementation-class>pe.edu.pucp.pixelpenguins.curricula.services.HoraAcademicaWS</implementation-class>
-    </service>
-    <service name="JornadaEscolarWS">
-      <implementation-class>pe.edu.pucp.pixelpenguins.curricula.services.JornadaEscolarWS</implementation-class>
-    </service>
-    <service name="NotaWS">
-      <implementation-class>pe.edu.pucp.pixelpenguins.curricula.services.NotaWS</implementation-class>
-    </service>
-    <service name="SeccionAcademicaWS">
-      <implementation-class>pe.edu.pucp.pixelpenguins.curricula.services.SeccionAcademicaWS</implementation-class>
-    </service>
   </services>
   <clients/>
 </jax-ws>

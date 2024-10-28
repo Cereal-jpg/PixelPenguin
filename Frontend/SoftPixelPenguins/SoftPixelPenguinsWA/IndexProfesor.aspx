@@ -15,6 +15,7 @@
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem4" runat="server">
     <a href="ListarCursosAlumno.aspx"><i class="fa-solid fa-archive"></i>Personal</a>
+    </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <h2 style="text-align: left; color: #000f;">Página principal profesor</h2>
     <link rel="stylesheet" href="Content/Estilos-Alumno.css" />

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace SoftPixelPenguinsWA
 {
-    public partial class Index : System.Web.UI.Page
+    public partial class IndexAlumno : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

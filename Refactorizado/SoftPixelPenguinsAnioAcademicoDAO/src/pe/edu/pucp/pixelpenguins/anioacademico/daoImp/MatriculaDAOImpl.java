@@ -31,12 +31,12 @@ public class MatriculaDAOImpl extends DAOImpl implements MatriculaDAO {
 
     @Override
     protected String obtenerListaDeAtributosParaInsercion() {
-        return "cumpleRequisitos, fechaInicio, fechaFin, estado, fid_GradoAcademico, fid_AnioAcademico";
+        return "cumpleRequisitos, fechaInicio, fechaFin, estado, fid_Alumno, fid_GradoAcademico, fid_AnioAcademico";
     }
 
     @Override
     protected String incluirListaDeParametrosParaInsercion() {
-        return "?, ?, ?, ?, ?, ?";
+        return "?, ?, ?, ?, ?, ?, ?";
     }
 
     @Override
@@ -45,8 +45,9 @@ public class MatriculaDAOImpl extends DAOImpl implements MatriculaDAO {
         this.incluirParametroDate(2, this.matricula.getFechaInicio());
         this.incluirParametroDate(3, this.matricula.getFechaFin());
         this.incluirParametroInt(4, this.matricula.getEstado().ordinal()); // Enum como entero
-        this.incluirParametroInt(5, this.matricula.getGradoAcademico().getIdGradoAcademico());
-        this.incluirParametroInt(6, this.matricula.getAnioAcademico().getIdAnioAcademico());
+        this.incluirParametroInt(5, this.matricula.getFidAlumno());
+        this.incluirParametroInt(6, this.matricula.getGradoAcademico().getIdGradoAcademico());
+        this.incluirParametroInt(7, this.matricula.getAnioAcademico().getIdAnioAcademico());
     }
 
     @Override
@@ -57,7 +58,7 @@ public class MatriculaDAOImpl extends DAOImpl implements MatriculaDAO {
 
     @Override
     protected String obtenerListaDeValoresYAtributosParaModificacion() {
-        return "cumpleRequisitos=?, fechaInicio=?, fechaFin=?, estado=?, fid_GradoAcademico=?, fid_AnioAcademico=?";
+        return "cumpleRequisitos=?, fechaInicio=?, fechaFin=?, estado=?, fid_Alumno=?, fid_GradoAcademico=?, fid_AnioAcademico=?";
     }
 
     @Override
@@ -68,7 +69,7 @@ public class MatriculaDAOImpl extends DAOImpl implements MatriculaDAO {
     @Override
     protected void incluirValorDeParametrosParaModificacion() throws SQLException {
         incluirValorDeParametrosParaInsercion();
-        this.incluirParametroInt(7, this.matricula.getIdMatricula()); // Llave primaria al final
+        this.incluirParametroInt(8, this.matricula.getIdMatricula()); // Llave primaria al final
     }
 
     @Override
@@ -89,7 +90,7 @@ public class MatriculaDAOImpl extends DAOImpl implements MatriculaDAO {
 
     @Override
     protected String obtenerProyeccionParaSelect() {
-        return "idMatricula, cumpleRequisitos, fechaInicio, fechaFin, estado, fid_GradoAcademico, fid_AnioAcademico";
+        return "idMatricula, cumpleRequisitos, fechaInicio, fechaFin, estado, fid_Alumno, fid_GradoAcademico, fid_AnioAcademico";
     }
 
     @Override
@@ -106,7 +107,7 @@ public class MatriculaDAOImpl extends DAOImpl implements MatriculaDAO {
         this.matricula.setFechaInicio(this.resultSet.getDate("fechaInicio"));
         this.matricula.setFechaFin(this.resultSet.getDate("fechaFin"));
         this.matricula.setEstado(EstadoDeMatricula.values()[this.resultSet.getInt("estado")]);
-
+        this.matricula.setFidAlumno(this.resultSet.getInt("fid_Alumno"));
         GradoAcademico grado = new GradoAcademico();
         grado.setIdGradoAcademico(this.resultSet.getInt("fid_GradoAcademico"));
         this.matricula.setGradoAcademico(grado);

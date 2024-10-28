@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cphScripts" runat="server">
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem1" runat="server">
-    <a href="Index.aspx"><i class="fa-solid fa-home"></i>Pagina principal</a>
+    <a href="Index.aspx"><i class="fa-solid fa-home"></i>Inicio</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem2" runat="server">
     <a href="ListarCursosAlumno.aspx"><i class="fa-solid fa-book"></i>Mis cursos</a>

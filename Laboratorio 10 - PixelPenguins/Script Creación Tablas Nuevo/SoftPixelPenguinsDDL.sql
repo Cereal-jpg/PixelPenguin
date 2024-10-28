@@ -140,6 +140,7 @@ CREATE TABLE Alumno(
 DROP TABLE IF EXISTS Matricula;
 CREATE TABLE Matricula(
 	idMatricula INT AUTO_INCREMENT,
+    fid_Alumno INT NOT NULL,
     fid_AnioAcademico INT NOT NULL,
     fid_GradoAcademico INT NOT NULL,
     cumpleRequisitos TINYINT NOT NULL,
@@ -148,6 +149,7 @@ CREATE TABLE Matricula(
     estado ENUM('PENDIENTE','CANCELADA','RECHAZADA'),
     activo TINYINT,
     PRIMARY KEY (idMatricula),
+    FOREIGN KEY (fid_Alumno) REFERENCES Alumno(idAlumno),
     FOREIGN KEY (fid_AnioAcademico) REFERENCES AnioAcademico(idAnioAcademico),
     FOREIGN KEY (fid_GradoAcademico) REFERENCES GradoAcademico(idGradoAcademico)
 );

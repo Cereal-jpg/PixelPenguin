@@ -18,18 +18,18 @@ public class MatriculaBO {
     }
     
     public Integer insertar(Integer idGradoAcademico, Integer idAnioAcademico,
-            boolean cumpleRequisitos, Date fechaInicio, Date fechaFin,
+            Integer idAlumno, boolean cumpleRequisitos, Date fechaInicio, Date fechaFin,
             EstadoDeMatricula estado) {
         Matricula matricula = this.crearMatricula(null, idGradoAcademico, 
-                idAnioAcademico, cumpleRequisitos, fechaInicio, fechaFin, estado);
+                idAnioAcademico, idAlumno, cumpleRequisitos, fechaInicio, fechaFin, estado);
         return this.matriculaDAO.insertar(matricula);
     }
     
     public Integer modificar(Integer idMatricula, Integer idGradoAcademico,
-            Integer idAnioAcademico, boolean cumpleRequisitos, Date fechaInicio,
+            Integer idAnioAcademico, Integer idAlumno, boolean cumpleRequisitos, Date fechaInicio,
             Date fechaFin, EstadoDeMatricula estado) {
         Matricula matricula = this.crearMatricula(idMatricula, idGradoAcademico,
-                idAnioAcademico, cumpleRequisitos, fechaInicio, fechaFin, estado);
+                idAnioAcademico, idAlumno, cumpleRequisitos, fechaInicio, fechaFin, estado);
         return this.matriculaDAO.modificar(matricula);
     }
     
@@ -48,7 +48,7 @@ public class MatriculaBO {
     }
     
     private Matricula crearMatricula(Integer idMatricula, Integer idGradoAcademico,
-            Integer idAnioAcademico, boolean cumpleRequisitos, Date fechaInicio,
+            Integer idAnioAcademico, Integer idAlumno, boolean cumpleRequisitos, Date fechaInicio,
             Date fechaFin, EstadoDeMatricula estado) {
         
         Matricula matricula = new Matricula();
@@ -57,7 +57,7 @@ public class MatriculaBO {
         matricula.setFechaInicio(fechaInicio);
         matricula.setFechaFin(fechaFin);
         matricula.setEstado(estado);
-        
+        matricula.setFidAlumno(idAlumno);
         GradoAcademico grado = new GradoAcademico();
         grado.setIdGradoAcademico(idGradoAcademico);
         matricula.setGradoAcademico(grado);

@@ -28,7 +28,7 @@ namespace SoftPixelPenguinsWA
             // Ejemplo simple de validación.
             if (validarCredenciales(Email,Password))
             {
-                Response.Redirect("Index.aspx");
+                Response.Redirect("IndexAdmin.aspx");
             }
             else
             {

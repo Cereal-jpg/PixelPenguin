@@ -28,7 +28,7 @@
         <!--Menu Lateral-->
         <div id="bdSidebar" class="d-flex flex-column flex-shrink-0 p-3 bg-primary text-white offcanvas-md offcanvas-start">
             <a href="#" class="navbar-brand">
-                <img src="Images/Logo.jpg" width="200" class: "logo-circular"/>
+                <img src="Images/PIXEL.png" width="200" class: "logo-circular"/>
             </a>
             <hr>
             

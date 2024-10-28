@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services>
+    <service name="AnioAcademicoWS">
+      <implementation-class>pe.edu.pucp.pixelpenguins.anioacademico.services.AnioAcademicoWS</implementation-class>
+    </service>
+    <service name="MatriculaWS">
+      <implementation-class>pe.edu.pucp.pixelpenguins.anioacademico.services.MatriculaWS</implementation-class>
+    </service>
+    <service name="PagoWS">
+      <implementation-class>pe.edu.pucp.pixelpenguins.anioacademico.services.PagoWS</implementation-class>
+    </service>
+  </services>
+  <clients/>
+</jax-ws>

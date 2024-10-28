@@ -19,14 +19,26 @@ public class AnioAcademicoBO {
         return anioDAO.insertar(anioAcademico);
     }
     
+    public Integer insertar(AnioAcademico anioAcademico){
+        return anioDAO.insertar(anioAcademico);
+    }
+    
     public Integer modificar(int idAnioAcademico, int anio, Date fechaInicio, Date fechaFin){
         AnioAcademico anioAcademico = new AnioAcademico(idAnioAcademico, anio, fechaInicio, fechaFin);
+        return anioDAO.modificar(anioAcademico);
+    }
+    
+    public Integer modificar(AnioAcademico anioAcademico){
         return anioDAO.modificar(anioAcademico);
     }
     
     public Integer eliminar(Integer idAnioAcademico){
         AnioAcademico anioAcademico = new AnioAcademico();
         anioAcademico.setIdAnioAcademico(idAnioAcademico);
+        return anioDAO.eliminar(anioAcademico);
+    }
+    
+    public Integer eliminar(AnioAcademico anioAcademico){
         return anioDAO.eliminar(anioAcademico);
     }
     

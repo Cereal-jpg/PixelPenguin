@@ -24,6 +24,10 @@ public class PagoBO {
         return this.pagoDAO.insertar(pago);
     }
     
+    public Integer insertar(Pago pago) {
+        return this.pagoDAO.insertar(pago);
+    }
+    
     public Integer modificar(Integer idPago, Integer idMatricula,Date fechaCreacion,
             Date fechaPago, double monto, TipoDePago tipoPago, EstadoDePago estado,
             TipoDeComprobante tipoDeComprobante){
@@ -32,9 +36,17 @@ public class PagoBO {
         return this.pagoDAO.modificar(pago);
     }
     
+    public Integer modificar(Pago pago) {
+        return this.pagoDAO.modificar(pago);
+    }
+    
     public Integer eliminar(Integer idMatricula, Integer idPago){
         Pago pago = new Pago();
         pago.setIdPago(idPago);
+        return this.pagoDAO.eliminar(pago);
+    }
+    
+    public Integer eliminar(Pago pago) {
         return this.pagoDAO.eliminar(pago);
     }
     

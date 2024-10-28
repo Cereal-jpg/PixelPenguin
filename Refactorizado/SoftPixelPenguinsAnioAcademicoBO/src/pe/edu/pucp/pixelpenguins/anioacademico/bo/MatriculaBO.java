@@ -25,6 +25,10 @@ public class MatriculaBO {
         return this.matriculaDAO.insertar(matricula);
     }
     
+    public Integer insertar(Matricula matricula) {
+        return this.matriculaDAO.insertar(matricula);
+    }
+    
     public Integer modificar(Integer idMatricula, Integer idGradoAcademico,
             Integer idAnioAcademico, Integer idAlumno, boolean cumpleRequisitos, Date fechaInicio,
             Date fechaFin, EstadoDeMatricula estado) {
@@ -33,9 +37,17 @@ public class MatriculaBO {
         return this.matriculaDAO.modificar(matricula);
     }
     
+    public Integer modificar(Matricula matricula) {
+        return this.matriculaDAO.modificar(matricula);
+    }
+    
     public Integer eliminar(Integer idMatricula) {
         Matricula matricula = new Matricula();
         matricula.setIdMatricula(idMatricula);
+        return this.matriculaDAO.eliminar(matricula);
+    }
+    
+    public Integer eliminar(Matricula matricula) {
         return this.matriculaDAO.eliminar(matricula);
     }
     

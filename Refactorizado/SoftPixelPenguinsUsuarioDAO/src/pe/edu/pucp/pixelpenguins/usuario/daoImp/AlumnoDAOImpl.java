@@ -81,7 +81,7 @@ public class AlumnoDAOImpl extends DAOImpl implements AlumnoDAO {
 
     @Override
     protected String obtenerListaDeAtributosParaInsercion() {
-        return "idUsuario, codigoAlumno, conCertificadoDeEstudios, conCertificadoDeSalud, conDeuda, fid_Apoderado, fid_GradoAcademico";        
+        return "idAlumno, codigoAlumno, conCertificadoDeEstudios, conCertificadoDeSalud, conDeuda, fid_Apoderado, fid_GradoAcademico";        
     }
 
     @Override
@@ -165,7 +165,7 @@ public class AlumnoDAOImpl extends DAOImpl implements AlumnoDAO {
 
     @Override
     protected String obtenerPredicadoParaLlavePrimaria() {
-        return "idUsuario=?";
+        return "idAlumno=?";
     }
 
     @Override
@@ -282,7 +282,7 @@ public class AlumnoDAOImpl extends DAOImpl implements AlumnoDAO {
         String sql = "select ";
         sql = sql.concat(obtenerProyeccionParaSelect());
         sql = sql.concat(" from ").concat(this.nombre_tabla).concat(" alu ");
-        sql = sql.concat("join usuario usr on usr.idUsuario = alu.idUsuario ");
+        sql = sql.concat("join usuario usr on usr.idUsuario = alu.idAlumno ");
         sql = sql.concat(" where ");
         sql = sql.concat(this.obtenerPredicadoParaLlavePrimaria());
         return sql;
@@ -312,13 +312,13 @@ public class AlumnoDAOImpl extends DAOImpl implements AlumnoDAO {
             if (abreConexion) {
                 this.abrirConexion();
             }
-            String sql = "select idUsuario from Alumno where ";
+            String sql = "select idAlumno from Alumno where ";
             sql = sql.concat("idUsuario=? ");
             this.colocarSQLenStatement(sql);
             this.incluirParametroInt(1, this.alumno.getIdUsuario());
             this.ejecutarConsultaEnBD(sql);
             if (this.resultSet.next()) {
-                idPersona = this.resultSet.getInt("idUsuario");
+                idPersona = this.resultSet.getInt("idAlumno");
             }
         } catch (SQLException ex) {
             System.err.println("Error al consultar si existe alumno - " + ex);

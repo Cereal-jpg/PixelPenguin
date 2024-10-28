@@ -58,7 +58,7 @@ public class ApoderadoWS {
     }
     
     @WebMethod(operationName = "obtenerApoderadoPorId")
-    public Apoderado obtenerUsuarioPorId(@WebParam(name = "idApoderado") Integer idApoderado) {
+    public Apoderado obtenerApoderadoPorId(@WebParam(name = "idApoderado") Integer idApoderado) {
         Apoderado apoderado = null;
         try {
             apoderado = apoderadoBO.obtenerPorId(idApoderado);

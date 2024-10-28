@@ -17,15 +17,27 @@ public class ApoderadoBO {
         Apoderado apoderado = new Apoderado(dni, nombreCompleto, telefono, relacion);
         return this.apoderadoDAO.insertar(apoderado);
     }
+    
+    public Integer insertar(Apoderado apoderado) {
+        return this.apoderadoDAO.insertar(apoderado);
+    }
 
     public Integer modificar(int idApoderado, String dni, String nombreCompleto, String telefono, String relacion) {
         Apoderado apoderado = new Apoderado(idApoderado, dni, nombreCompleto, telefono, relacion);
+        return this.apoderadoDAO.modificar(apoderado);
+    }
+    
+    public Integer modificar(Apoderado apoderado) {
         return this.apoderadoDAO.modificar(apoderado);
     }
 
     public Integer eliminar(int idApoderado) {
         Apoderado apoderado = new Apoderado();
         apoderado.setIdApoderado(idApoderado);
+        return this.apoderadoDAO.eliminar(apoderado);
+    }
+    
+    public Integer eliminar(Apoderado apoderado) {
         return this.apoderadoDAO.eliminar(apoderado);
     }
 

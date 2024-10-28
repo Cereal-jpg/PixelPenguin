@@ -19,15 +19,27 @@ public class PersonalAdministrativoBO {
         PersonalAdministrativo personalAdministrativo = new PersonalAdministrativo(codigoPersonalAdministrativo, dni, nombreCompleto, fechaNacimiento, direccion, email, sexo, username, password, rol);
         return this.personalAdministrativoDAO.insertar(personalAdministrativo);
     }
+    
+    public Integer insertar(PersonalAdministrativo personalAdministrativo) {
+        return this.personalAdministrativoDAO.insertar(personalAdministrativo);
+    }
 
     public Integer modificar(int codigoPersonalAdministrativo, Integer idUsuario, String dni, String nombreCompleto, Date fechaNacimiento, String direccion, String email, String sexo, String username, String password, Rol rol) {
         PersonalAdministrativo personalAdministrativo = new PersonalAdministrativo(codigoPersonalAdministrativo, idUsuario, dni, nombreCompleto, fechaNacimiento, direccion, email, sexo, username, password, rol);
+        return this.personalAdministrativoDAO.modificar(personalAdministrativo);
+    }
+    
+    public Integer modificar(PersonalAdministrativo personalAdministrativo) {
         return this.personalAdministrativoDAO.modificar(personalAdministrativo);
     }
 
     public Integer eliminar(Integer idUsuario) {
         PersonalAdministrativo personalAdministrativo = new PersonalAdministrativo();
         personalAdministrativo.setIdUsuario(idUsuario);
+        return this.personalAdministrativoDAO.eliminar(personalAdministrativo);
+    }
+    
+    public Integer eliminar(PersonalAdministrativo personalAdministrativo) {
         return this.personalAdministrativoDAO.eliminar(personalAdministrativo);
     }
 

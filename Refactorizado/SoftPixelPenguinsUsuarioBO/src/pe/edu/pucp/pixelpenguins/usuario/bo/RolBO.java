@@ -18,14 +18,26 @@ public class RolBO {
         Rol rol = new Rol(nombre);
         return this.rolDAO.insertar(rol);
     }
+    
+    public Integer insertar(Rol rol) {
+        return this.rolDAO.insertar(rol);
+    }
 
     public Integer modificar(int idRol, String nombre) {
         Rol rol = new Rol(idRol, nombre);
         return this.rolDAO.modificar(rol);
     }
+    
+    public Integer modificar(Rol rol) {
+        return this.rolDAO.modificar(rol);
+    }
 
     public Integer eliminar(int idRol) {
         Rol rol = new Rol(idRol);
+        return this.rolDAO.eliminar(rol);
+    }
+    
+    public Integer eliminar(Rol rol) {
         return this.rolDAO.eliminar(rol);
     }
 

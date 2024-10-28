@@ -19,15 +19,27 @@ public class ProfesorBO {
         Profesor profesor = new Profesor(codigoProfesor, certificadoHistorialEducativo, especialidad, dni, nombreCompleto, fechaNacimiento, direccion, email, sexo, username, password, rol);
         return this.profesorDAO.insertar(profesor);
     }
+    
+    public Integer insertar(Profesor profesor) {
+        return this.profesorDAO.insertar(profesor);
+    }
 
     public Integer modificar(int codigoProfesor, Integer idUsuario, String dni, String nombreCompleto, Date fechaNacimiento, String direccion, String email, String sexo, String username, String password, Rol rol) {
         Profesor profesor = new Profesor(codigoProfesor, false, null, idUsuario, dni, nombreCompleto, fechaNacimiento, direccion, email, sexo, username, password, rol);
+        return this.profesorDAO.modificar(profesor);
+    }
+    
+    public Integer modificar(Profesor profesor) {
         return this.profesorDAO.modificar(profesor);
     }
 
     public Integer eliminar(Integer idUsuario) {
         Profesor profesor = new Profesor();
         profesor.setIdUsuario(idUsuario);
+        return this.profesorDAO.eliminar(profesor);
+    }
+    
+    public Integer eliminar(Profesor profesor) {
         return this.profesorDAO.eliminar(profesor);
     }
 

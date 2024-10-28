@@ -23,6 +23,10 @@ public class AdministradorBO {
         return this.administradorDAO.insertar(administrador);
     }
 
+    public Integer insertar(Administrador administrador) {
+        return this.administradorDAO.insertar(administrador);
+    }
+    
     public Integer modificar(int codigoAdministrador, int idUsuario, String dni,
                              String nombreCompleto, Date fechaNacimiento, String direccion,
                              String email, String sexo, String username, String password, Rol rol) {
@@ -30,10 +34,18 @@ public class AdministradorBO {
                 nombreCompleto, fechaNacimiento, direccion, email, sexo, username, password, rol);
         return this.administradorDAO.modificar(administrador);
     }
+    
+    public Integer modificar(Administrador administrador) {
+        return this.administradorDAO.modificar(administrador);
+    }
 
     public Integer eliminar(Integer idUsuario) {
         Administrador administrador = new Administrador();
         administrador.setIdUsuario(idUsuario);
+        return this.administradorDAO.eliminar(administrador);
+    }
+    
+    public Integer eliminar(Administrador administrador) {
         return this.administradorDAO.eliminar(administrador);
     }
     

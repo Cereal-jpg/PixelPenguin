@@ -26,6 +26,10 @@ public class AlumnoBO {
                                     fechaNacimiento, direccion, email, sexo, username, password, rol);
         return this.alumnoDAO.insertar(alumno);
     }
+    
+    public Integer insertar(Alumno alumno) {
+        return this.alumnoDAO.insertar(alumno);
+    }
 
     public Integer modificar(int codigoAlumno, boolean conCertificadoDeEstudios, boolean conCertificadoDeSalud,
                              boolean conDeuda, Apoderado apoderado, GradoAcademico gradoAcademico,
@@ -38,10 +42,18 @@ public class AlumnoBO {
                                     username, password, rol);
         return this.alumnoDAO.modificar(alumno);
     }
+    
+    public Integer modificar(Alumno alumno) {
+        return this.alumnoDAO.modificar(alumno);
+    }
 
     public Integer eliminar(Integer idUsuario) {
         Alumno alumno = new Alumno();
         alumno.setIdUsuario(idUsuario);
+        return this.alumnoDAO.eliminar(alumno);
+    }
+    
+    public Integer eliminar(Alumno alumno) {
         return this.alumnoDAO.eliminar(alumno);
     }
 

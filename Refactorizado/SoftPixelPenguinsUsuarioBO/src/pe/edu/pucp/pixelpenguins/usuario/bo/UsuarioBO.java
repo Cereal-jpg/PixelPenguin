@@ -14,6 +14,10 @@ public class UsuarioBO {
     public UsuarioBO() {
         this.usuarioDAO = new UsuarioDAOImpl();
     }
+    
+    public Integer insertar(Usuario usuario) {
+        return this.usuarioDAO.insertar(usuario);
+    }
 
     public Integer insertar(String dni, String nombreCompleto, Date fechaNacimiento, String direccion, String email, String sexo, String username, String password, Rol rol) {
         Usuario usuario = new Usuario(dni, nombreCompleto, fechaNacimiento, direccion, email, sexo, username, password, rol) {
@@ -34,6 +38,10 @@ public class UsuarioBO {
         };
         return this.usuarioDAO.modificar(usuario);
     }
+    
+    public Integer modificar(Usuario usuario) {
+        return this.usuarioDAO.modificar(usuario);
+    }
 
     public Integer eliminar(Integer idUsuario) {
         Usuario usuario = new Usuario() {
@@ -45,6 +53,10 @@ public class UsuarioBO {
         usuario.setIdUsuario(idUsuario);
         return this.usuarioDAO.eliminar(usuario);
     }
+    
+    public Integer eliminar(Usuario usuario) {
+        return this.usuarioDAO.eliminar(usuario);
+    }
 
     public ArrayList<Usuario> listarTodos() {
         return this.usuarioDAO.listarTodos();
@@ -54,4 +66,8 @@ public class UsuarioBO {
         return this.usuarioDAO.obtenerPorId(idUsuario);
     }
 
+    public Boolean existeUsuario(Usuario usuario) {
+        return this.usuarioDAO.existeUsuario(usuario);
+    }
+    
 }

@@ -11,70 +11,61 @@ namespace SoftPixelPenguinsWA
 {
 
 
-    public partial class SoftPixelPenguins
+    public partial class Login
     {
 
         /// <summary>
-        /// Control cphTitulo.
+        /// Control form1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphTitulo;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control cphScripts.
+        /// Control errorMessage.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphScripts;
+        protected global::System.Web.UI.WebControls.Label errorMessage;
 
         /// <summary>
-        /// Control menuItem1.
+        /// Control email.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder menuItem1;
+        protected global::System.Web.UI.WebControls.TextBox email;
 
         /// <summary>
-        /// Control menuItem2.
+        /// Control password.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder menuItem2;
+        protected global::System.Web.UI.WebControls.TextBox password;
 
         /// <summary>
-        /// Control menuItem3.
+        /// Control forgotPasswordButton.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder menuItem3;
+        protected global::System.Web.UI.WebControls.Button forgotPasswordButton;
 
         /// <summary>
-        /// Control menuItem4.
+        /// Control loginButton.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder menuItem4;
-
-        /// <summary>
-        /// Control cphContenido.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder cphContenido;
+        protected global::System.Web.UI.WebControls.Button loginButton;
     }
 }

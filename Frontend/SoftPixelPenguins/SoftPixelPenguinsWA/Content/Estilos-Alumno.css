@@ -1,0 +1,61 @@
+﻿body {
+    margin: 0;
+    font-family: Arial, sans-serif; /* Cambiar fuente por defecto */
+}
+
+.container-al {
+    display: flex; /* Usar flexbox para organizar el layout */
+    width: 100%; /* Ancho completo */
+    margin-top: 20px; /* Espacio arriba */
+    background-color: transparent;
+}
+
+.schedule {
+    flex: 3; /* Ocupa 3 partes del contenedor */
+    padding: 20px; /* Espacio interno */
+    background-color: #fff; /* Color de fondo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.notifications {
+    flex: 1; /* Ocupa 1 parte del contenedor */
+    margin-left: 20px; /* Espacio a la izquierda */
+    padding: 20px; /* Espacio interno */
+    background-color: #fff; /* Color de fondo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h2 {
+    color: #4CAF50; /* Color verde para el título principal */
+    font-size: 24px; /* Tamaño del texto */
+    text-align: left; /* Alineación a la izquierda */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    border-bottom: 2px solid #ccc; /* Línea debajo del título */
+    padding-bottom: 10px; /* Espacio interno debajo del título */
+}
+
+h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 20px; /* Tamaño del texto */
+}
+
+.notification-list {
+    list-style-type: none; /* Quitar los puntos de la lista solo en la sección de notificaciones */
+    padding: 0;
+}
+
+    .notification-list li {
+        background-color: #e3f2fd; /* Color de fondo para las notificaciones */
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra para las notificaciones */
+    }

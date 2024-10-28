@@ -10,6 +10,7 @@
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Content/site.css" rel="stylesheet" />
     <link href="Content/Fonts/css/all.css" rel="stylesheet" />
+    <link href="Content/Estilos.css" rel="stylesheet" />
 
     <script src="Scripts/bootstrap.js"></script>
     <script src="Scripts/bootstrap.bundle.js"></script>
@@ -27,27 +28,37 @@
         <!--Menu Lateral-->
         <div id="bdSidebar" class="d-flex flex-column flex-shrink-0 p-3 bg-primary text-white offcanvas-md offcanvas-start">
             <a href="#" class="navbar-brand">
-                <img src="Images/Logo.jpg" width="150" />
+                <img src="Images/Logo.jpg" width="200" class: "logo-circular"/>
             </a>
             <hr>
+            
             <ul class="mynav nav nav-pills flex-column mb-auto">
                 <li class="nav-item mb-1">
-                    <a href="Index.aspx"><i class="fa-solid fa-grid-2"></i>Inicio</a>
+                    <asp:ContentPlaceHolder ID="menuItem1" runat="server">
+                        <a href="#"><i class="fa-solid fa-home"></i>Inicio</a>
+                    </asp:ContentPlaceHolder>
                 </li>
                 <li class="nav-item mb-1">
-                    <a href="ListarCursos.aspx"><i class="fa-solid fa-grid-2"></i>Mis cursos</a>
+                    <asp:ContentPlaceHolder ID="menuItem2" runat="server">
+                        <a href="#"><i class="fa-solid fa-book"></i>Mis cursos</a>
+                    </asp:ContentPlaceHolder>
                 </li>
                 <li class="nav-item mb-1">
-                    <a href="ListarNotas.aspx"><i class="fa-solid fa-grid-2"></i>Reporte de notas</a>
+                    <asp:ContentPlaceHolder ID="menuItem3" runat="server">
+                        <a href="#"><i class="fa-solid fa-book"></i>Reporte de Notas</a>
+                    </asp:ContentPlaceHolder>
                 </li>
                 <li class="nav-item mb-1">
-                    <a href="ListarMatriculas.aspx"><i class="fa-solid fa-grid-2"></i>Mis tramites</a>
+                    <asp:ContentPlaceHolder ID="menuItem4" runat="server">
+                        <a href="#"><i class="fa-solid fa-book"></i>Mis Tramites</a>
+                    </asp:ContentPlaceHolder>
                 </li>
+                <!-- Agrega más elementos según sea necesario -->
             </ul>
             <hr>
             <div class="d-flex">
-                <i class="fa-solid fa-book me-2"></i>
-                <h6 class="mt-1 mb-0">PUCP - Programación 3</h6>
+                <i class="fa-solid fa-book me-3"></i>
+                <h6 class="mt-1 mb-0">Pixel-Penguins</h6>
             </div>
         </div>
         <!-- Contenido Derecha -->
@@ -62,7 +73,7 @@
             <!-- Barra de Usuario -->
             <nav class="navbar navbar-dark bg-primary">
                 <div class="container-fluid">
-                    <a class="navbar-brand d-sm-none d-md-block d-none d-sm-block">Software del Curso de Prog. 3</a>
+                    <a class="navbar-brand d-sm-none d-md-block d-none d-sm-block">I.E Pixel Penguins</a>
                     <form class="d-flex">
                         <div class="dropdown ps-3">
                             <button class="btn btn-outline-light dropdown-toggle"

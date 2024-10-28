@@ -83,6 +83,8 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\Estilos-Alumno.css" />
+    <Content Include="Content\Estilos.css" />
     <Content Include="Content\Fonts\css\all.css" />
     <Content Include="Content\Fonts\css\all.min.css" />
     <Content Include="Content\Fonts\css\brands.css" />
@@ -109,10 +111,13 @@
     <Content Include="Content\Fonts\css\v5-font-face.min.css" />
     <Content Include="Content\site.css" />
     <Content Include="Images\Logo.jpg" />
-    <Content Include="Index.aspx" />
+    <Content Include="IndexAdmin.aspx" />
+    <Content Include="IndexAlumno.aspx" />
+    <Content Include="IndexProfesor.aspx" />
     <Content Include="ListarCursos.aspx" />
     <Content Include="ListarMatriculas.aspx" />
     <Content Include="ListarNotas.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -147,12 +152,26 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Index.aspx.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
+    <Compile Include="IndexAdmin.aspx.cs">
+      <DependentUpon>IndexAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Index.aspx.designer.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
+    <Compile Include="IndexAdmin.aspx.designer.cs">
+      <DependentUpon>IndexAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IndexAlumno.aspx.cs">
+      <DependentUpon>IndexAlumno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndexAlumno.aspx.designer.cs">
+      <DependentUpon>IndexAlumno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="IndexProfesor.aspx.cs">
+      <DependentUpon>IndexProfesor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="IndexProfesor.aspx.designer.cs">
+      <DependentUpon>IndexProfesor.aspx</DependentUpon>
     </Compile>
     <Compile Include="ListarCursos.aspx.cs">
       <DependentUpon>ListarCursos.aspx</DependentUpon>
@@ -174,6 +193,13 @@
     </Compile>
     <Compile Include="ListarNotas.aspx.designer.cs">
       <DependentUpon>ListarNotas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SoftPixelPenguins.Master.cs">

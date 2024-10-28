@@ -29,7 +29,7 @@ public class CompetenciaDAOImpl extends DAOImpl implements CompetenciaDAO {
 
     @Override
     protected String obtenerListaDeAtributosParaInsercion() {
-        return "descripcion, fid_Curso"; // 'fid_Curso' es el FK correspondiente al curso
+        return "descripcion, fid_Curso";
     }
 
     @Override
@@ -84,7 +84,7 @@ public class CompetenciaDAOImpl extends DAOImpl implements CompetenciaDAO {
 
     @Override
     protected String obtenerProyeccionParaSelect() {
-        return "idCompetencia, descripcion, fid_Curso"; // Asegúrate de que estos campos coincidan con tu DB
+        return "idCompetencia, descripcion, fid_Curso";
     }
 
     @Override
@@ -100,7 +100,7 @@ public class CompetenciaDAOImpl extends DAOImpl implements CompetenciaDAO {
         competencia.setDescripcion(this.resultSet.getString("descripcion"));
         
         Curso curso = new Curso();
-        curso.setIdCurso(this.resultSet.getInt("fid_Curso")); // Set ID, other properties can be fetched as needed
+        curso.setIdCurso(this.resultSet.getInt("fid_Curso"));
         competencia.setCurso(curso);
     }
 

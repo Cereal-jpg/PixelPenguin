@@ -102,7 +102,7 @@ public class GradoAcademicoDAOImpl extends DAOImpl implements GradoAcademicoDAO{
         this.gradoAcademico = new GradoAcademico();
         this.gradoAcademico.setIdGradoAcademico(resultSet.getInt("idGradoAcademico"));
         this.gradoAcademico.setNumeroGrado(resultSet.getInt("numeroGrado"));
-        this.gradoAcademico.setNivel(NivelEducativo.values()[resultSet.getInt("nivel")]);
+        this.gradoAcademico.setNivel(NivelEducativo.valueOf(resultSet.getString("nivel")));
         this.gradoAcademico.setCantidadAlumnos(resultSet.getInt("cantidadAlumnos"));
         this.gradoAcademico.setVacantes(resultSet.getInt("vacantes"));
         this.gradoAcademico.setFid_AnioAcademico(resultSet.getInt("fid_AnioAcademico"));

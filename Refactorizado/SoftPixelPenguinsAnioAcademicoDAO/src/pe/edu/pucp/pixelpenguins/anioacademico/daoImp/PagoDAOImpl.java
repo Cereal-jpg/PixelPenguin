@@ -70,7 +70,7 @@ public class PagoDAOImpl extends DAOImpl implements PagoDAO {
     @Override
     protected void incluirValorDeParametrosParaModificacion() throws SQLException {
         incluirValorDeParametrosParaInsercion();
-        this.incluirParametroInt(8, this.pago.getIdPago()); // Llave primaria al final
+        this.incluirParametroInt(8, this.pago.getIdPago()); 
     }
 
     @Override
@@ -107,9 +107,9 @@ public class PagoDAOImpl extends DAOImpl implements PagoDAO {
         this.pago.setFechaCreacion(this.resultSet.getDate("fechaCreacion"));
         this.pago.setFechaPago(this.resultSet.getDate("fechaPago"));
         this.pago.setMonto(this.resultSet.getDouble("monto"));
-        this.pago.setTipoPago(TipoDePago.values()[this.resultSet.getInt("tipoPago")]);
-        this.pago.setEstado(EstadoDePago.values()[this.resultSet.getInt("estado")]);
-        this.pago.setTipoDeComprobante(TipoDeComprobante.values()[this.resultSet.getInt("tipoDeComprobante")]);
+        this.pago.setTipoPago(TipoDePago.valueOf(this.resultSet.getString("tipoPago")));
+        this.pago.setEstado(EstadoDePago.valueOf(this.resultSet.getString("estado")));
+        this.pago.setTipoDeComprobante(TipoDeComprobante.valueOf(this.resultSet.getString("tipoDeComprobante")));
 
         Matricula matricula = new Matricula();
         matricula.setIdMatricula(this.resultSet.getInt("fid_matricula"));

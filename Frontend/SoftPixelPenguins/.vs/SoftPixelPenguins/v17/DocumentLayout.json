@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< Updated upstream
   "WorkspaceRootPath": "C:\\Users\\Angel\\Documents\\GitHub\\PixelPenguin\\Frontend\\SoftPixelPenguins\\",
   "Documents": [
     {
@@ -44,6 +45,16 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|C:\\Users\\Angel\\Documents\\GitHub\\PixelPenguin\\Frontend\\SoftPixelPenguins\\softpixelpenguinswa\\procesomatricula.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+=======
+  "WorkspaceRootPath": "C:\\Users\\User\\Documents\\GitHub\\PixelPenguin\\Frontend\\SoftPixelPenguins\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|c:\\users\\user\\documents\\github\\pixelpenguin\\frontend\\softpixelpenguins\\softpixelpenguinswa\\gestionarusuarios.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\gestionarusuarios.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|c:\\users\\user\\documents\\github\\pixelpenguin\\frontend\\softpixelpenguins\\softpixelpenguinswa\\procesomatricula.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+>>>>>>> Stashed changes
       "RelativeMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\procesomatricula.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
@@ -127,6 +138,7 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< Updated upstream
               "Title": "SoftPixelPenguins.Master",
               "DocumentMoniker": "C:\\Users\\Angel\\Documents\\GitHub\\PixelPenguin\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\SoftPixelPenguins.Master",
               "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\SoftPixelPenguins.Master",
@@ -135,11 +147,22 @@
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2024-10-27T13:43:58.69Z",
+=======
+              "Title": "GestionarUsuarios.aspx",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\PixelPenguin\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\GestionarUsuarios.aspx",
+              "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\GestionarUsuarios.aspx",
+              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\PixelPenguin\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\GestionarUsuarios.aspx",
+              "RelativeToolTip": "SoftPixelPenguinsWA\\GestionarUsuarios.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-10-29T03:29:38.154Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+<<<<<<< Updated upstream
               "Title": "IndexAdmin.aspx",
               "DocumentMoniker": "C:\\Users\\Angel\\Documents\\GitHub\\PixelPenguin\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\IndexAdmin.aspx",
               "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\IndexAdmin.aspx",
@@ -205,6 +228,12 @@
               "DocumentMoniker": "C:\\Users\\Angel\\Documents\\GitHub\\PixelPenguin\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\ProcesoMatricula.aspx",
               "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\ProcesoMatricula.aspx",
               "ToolTip": "C:\\Users\\Angel\\Documents\\GitHub\\PixelPenguin\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\ProcesoMatricula.aspx",
+=======
+              "Title": "ProcesoMatricula.aspx",
+              "DocumentMoniker": "C:\\Users\\User\\Documents\\GitHub\\PixelPenguin\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\ProcesoMatricula.aspx",
+              "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\ProcesoMatricula.aspx",
+              "ToolTip": "C:\\Users\\User\\Documents\\GitHub\\PixelPenguin\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\ProcesoMatricula.aspx",
+>>>>>>> Stashed changes
               "RelativeToolTip": "SoftPixelPenguinsWA\\ProcesoMatricula.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",

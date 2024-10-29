@@ -76,7 +76,7 @@ body {
 .content {
     display: flex; /* Flexbox para el contenido */
     flex-direction: row; /* Disposición en fila */
-    gap: 30px; /* Espacio entre el formulario y la imagen */
+    gap: 20px; /* Espacio entre el formulario y la imagen */
     padding: 30px; /* Espaciado interno */
 }
 
@@ -123,9 +123,9 @@ body {
     display: flex; /* Flexbox para centrar texto */
     justify-content: center; /* Centrado */
     background-color: white; /* Fondo blanco */
-    color: #007BFF; /* Color azul */
+    color: #000072; /* Color azul */
     cursor: pointer; /* Cambia el cursor al pasar */
-    border: 1px solid #007BFF; /* Borde azul */
+    border: 1px solid #000072; /* Borde azul */
     border-radius: 5px; /* Bordes redondeados */
     transition: background-color 0.3s, color 0.3s; /* Efecto de transición */
 }
@@ -134,10 +134,10 @@ body {
 .login-button {
     display: flex; /* Flexbox para centrar texto */
     justify-content: center; /* Centrado */
-    background-color: #007BFF; /* Color azul */
+    background-color: #000072; /* Color azul */
     color: white; /* Texto blanco */
     cursor: pointer; /* Cambia el cursor al pasar */
-    border: 1px solid #007BFF; /* Borde azul */
+    border: 1px solid #000072; /* Borde azul */
     border-radius: 5px; /* Bordes redondeados */
     padding: 10px 15px; /* Espaciado interno */
     transition: background-color 0.3s, color 0.3s; /* Efecto de transición */
@@ -148,5 +148,5 @@ body {
     flex: 1; /* Ocupa menos espacio en comparación con el formulario */
     border: 1px solid white; /* Borde blanco (puedes cambiarlo) */
     border-radius: 8px; /* Bordes redondeados */
-    background-color: #cce4ff; /* Color azul claro como fondo */
+    background-color: transparent; /* Color azul claro como fondo */
 }

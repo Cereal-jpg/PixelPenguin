@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\papar\\PixelPenguin\\Frontend\\SoftPixelPenguins\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|c:\\users\\papar\\pixelpenguin\\frontend\\softpixelpenguins\\softpixelpenguinswa\\softpixelpenguins.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\softpixelpenguins.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +14,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SoftPixelPenguins.Master",
+              "DocumentMoniker": "C:\\Users\\papar\\PixelPenguin\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\SoftPixelPenguins.Master",
+              "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\SoftPixelPenguins.Master",
+              "ToolTip": "C:\\Users\\papar\\PixelPenguin\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\SoftPixelPenguins.Master",
+              "RelativeToolTip": "SoftPixelPenguinsWA\\SoftPixelPenguins.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-10-29T00:52:14.924Z",
+              "EditorCaption": ""
             }
           ]
         }

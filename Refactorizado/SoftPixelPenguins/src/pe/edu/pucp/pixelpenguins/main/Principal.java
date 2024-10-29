@@ -57,7 +57,7 @@ public class Principal {
 //        if(usuarioBO.insertar("12346", "Manuel Perez", sdf.parse("10-05-2005"), "Av. prueba", "manuel@pucp.edu.pe", "Masculino", "a12345", "password", roles.get(0))!=0)
 //            System.out.println("El usuario fue insertado correctamente");
         AlumnoBO alumnoBO=new AlumnoBO();
-        if(alumnoBO.insertar(2022, true, true, true, apoderados.get(0),grados.get(0),"12346","Manuel Perez",sdf.parse("10-15-2005"),"Av. prueba", "manuel@pucp.edu.pe","Masculino","a12345","password", roles.get(0))!=0)
-            System.out.println("El alumno fue insertado correctamente");
+//        if(alumnoBO.insertar(2022, true, true, true, apoderados.get(0),grados.get(0),"12346","Manuel Perez",sdf.parse("10-15-2005"),"Av. prueba", "manuel@pucp.edu.pe","Masculino","a12345","password", roles.get(0))!=0)
+//            System.out.println("El alumno fue insertado correctamente");
     }
 }

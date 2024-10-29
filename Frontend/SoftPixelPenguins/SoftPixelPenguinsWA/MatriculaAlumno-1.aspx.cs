@@ -13,5 +13,12 @@ namespace SoftPixelPenguinsWA
         {
 
         }
+
+        protected void btnTerminarProceso_Click(object sender, EventArgs e)
+        {
+            // Redirigir a IndexAlumno.aspx
+            Response.Redirect("IndexAlumno.aspx");
+        }
+
     }
 }

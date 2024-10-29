@@ -838,16 +838,37 @@ exists or setup the property manually. For example like this:
                 COMPILATION SECTION
             -->
     <target depends="init" if="no.dist.ear.dir" name="deps-module-jar" unless="no.deps">
+        <ant antfile="${project.SoftPixelPenguinsAnioAcademicoBO}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
+        <ant antfile="${project.SoftPixelPenguinsAnioAcademicoDAO}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
         <ant antfile="${project.SoftPixelPenguinsAnioAcademicoModel}/build.xml" inheritall="false" target="jar">
             <property name="deploy.on.save" value="false"/>
         </ant>
         <ant antfile="${project.SoftPixelPenguinsContratoModel}/build.xml" inheritall="false" target="jar">
             <property name="deploy.on.save" value="false"/>
         </ant>
+        <ant antfile="${project.SoftPixelPenguinsCurriculaBO}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
+        <ant antfile="${project.SoftPixelPenguinsCurriculaDAO}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
         <ant antfile="${project.SoftPixelPenguinsCurriculaModel}/build.xml" inheritall="false" target="jar">
             <property name="deploy.on.save" value="false"/>
         </ant>
         <ant antfile="${project.SoftPixelPenguinsDBManager}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
+        <ant antfile="${project.SoftPixelPenguinsInstitucionEducativaBO}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
+        <ant antfile="${project.SoftPixelPenguinsInstitucionEducativaDAO}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
+        <ant antfile="${project.SoftPixelPenguinsInstitucionEducativaModel}/build.xml" inheritall="false" target="jar">
             <property name="deploy.on.save" value="false"/>
         </ant>
         <ant antfile="${project.SoftPixelPenguinsUsuarioBO}/build.xml" inheritall="false" target="jar">
@@ -861,16 +882,37 @@ exists or setup the property manually. For example like this:
         </ant>
     </target>
     <target depends="init" if="dist.ear.dir" name="deps-ear-jar" unless="no.deps">
+        <ant antfile="${project.SoftPixelPenguinsAnioAcademicoBO}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
+        <ant antfile="${project.SoftPixelPenguinsAnioAcademicoDAO}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
         <ant antfile="${project.SoftPixelPenguinsAnioAcademicoModel}/build.xml" inheritall="false" target="jar">
             <property name="deploy.on.save" value="false"/>
         </ant>
         <ant antfile="${project.SoftPixelPenguinsContratoModel}/build.xml" inheritall="false" target="jar">
             <property name="deploy.on.save" value="false"/>
         </ant>
+        <ant antfile="${project.SoftPixelPenguinsCurriculaBO}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
+        <ant antfile="${project.SoftPixelPenguinsCurriculaDAO}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
         <ant antfile="${project.SoftPixelPenguinsCurriculaModel}/build.xml" inheritall="false" target="jar">
             <property name="deploy.on.save" value="false"/>
         </ant>
         <ant antfile="${project.SoftPixelPenguinsDBManager}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
+        <ant antfile="${project.SoftPixelPenguinsInstitucionEducativaBO}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
+        <ant antfile="${project.SoftPixelPenguinsInstitucionEducativaDAO}/build.xml" inheritall="false" target="jar">
+            <property name="deploy.on.save" value="false"/>
+        </ant>
+        <ant antfile="${project.SoftPixelPenguinsInstitucionEducativaModel}/build.xml" inheritall="false" target="jar">
             <property name="deploy.on.save" value="false"/>
         </ant>
         <ant antfile="${project.SoftPixelPenguinsUsuarioBO}/build.xml" inheritall="false" target="jar">
@@ -1026,8 +1068,6 @@ exists or setup the property manually. For example like this:
     </target>
     <target depends="init,compile,compile-jsps,-pre-dist,-do-dist-with-manifest,-do-dist-without-manifest" name="do-dist"/>
     <target depends="init" if="dist.ear.dir" name="library-inclusion-in-manifest">
-        <copyfiles files="${file.reference.jakarta.xml.ws-api-4.0.2.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
-        <copyfiles files="${file.reference.mysql-connector-j-9.1.0.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <copyfiles files="${reference.SoftPixelPenguinsUsuarioBO.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <copyfiles files="${reference.SoftPixelPenguinsUsuarioDAO.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <copyfiles files="${reference.SoftPixelPenguinsUsuarioModel.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
@@ -1035,13 +1075,20 @@ exists or setup the property manually. For example like this:
         <copyfiles files="${reference.SoftPixelPenguinsContratoModel.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <copyfiles files="${reference.SoftPixelPenguinsCurriculaModel.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <copyfiles files="${reference.SoftPixelPenguinsAnioAcademicoModel.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
-        <copyfiles files="${file.reference.commons-codec-1.17.1.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+        <copyfiles files="${reference.SoftPixelPenguinsAnioAcademicoBO.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+        <copyfiles files="${file.reference.commons-codec-1.17.1.jar-1}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+        <copyfiles files="${file.reference.jakarta.xml.ws-api-4.0.2.jar-1}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+        <copyfiles files="${file.reference.mysql-connector-j-9.1.0.jar-1}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+        <copyfiles files="${reference.SoftPixelPenguinsCurriculaBO.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+        <copyfiles files="${reference.SoftPixelPenguinsInstitucionEducativaDAO.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+        <copyfiles files="${reference.SoftPixelPenguinsInstitucionEducativaBO.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+        <copyfiles files="${reference.SoftPixelPenguinsInstitucionEducativaModel.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+        <copyfiles files="${reference.SoftPixelPenguinsAnioAcademicoDAO.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
+        <copyfiles files="${reference.SoftPixelPenguinsCurriculaDAO.jar}" iftldtodir="${build.web.dir}/WEB-INF" todir="${dist.ear.dir}/lib"/>
         <mkdir dir="${build.web.dir}/META-INF"/>
         <manifest file="${build.web.dir}/META-INF/MANIFEST.MF" mode="update"/>
     </target>
     <target depends="init" name="library-inclusion-in-archive" unless="dist.ear.dir">
-        <copyfiles files="${file.reference.jakarta.xml.ws-api-4.0.2.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.mysql-connector-j-9.1.0.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${reference.SoftPixelPenguinsUsuarioBO.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${reference.SoftPixelPenguinsUsuarioDAO.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${reference.SoftPixelPenguinsUsuarioModel.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
@@ -1049,7 +1096,16 @@ exists or setup the property manually. For example like this:
         <copyfiles files="${reference.SoftPixelPenguinsContratoModel.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${reference.SoftPixelPenguinsCurriculaModel.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
         <copyfiles files="${reference.SoftPixelPenguinsAnioAcademicoModel.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
-        <copyfiles files="${file.reference.commons-codec-1.17.1.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${reference.SoftPixelPenguinsAnioAcademicoBO.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.commons-codec-1.17.1.jar-1}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.jakarta.xml.ws-api-4.0.2.jar-1}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${file.reference.mysql-connector-j-9.1.0.jar-1}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${reference.SoftPixelPenguinsCurriculaBO.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${reference.SoftPixelPenguinsInstitucionEducativaDAO.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${reference.SoftPixelPenguinsInstitucionEducativaBO.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${reference.SoftPixelPenguinsInstitucionEducativaModel.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${reference.SoftPixelPenguinsAnioAcademicoDAO.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
+        <copyfiles files="${reference.SoftPixelPenguinsCurriculaDAO.jar}" todir="${build.web.dir}/WEB-INF/lib"/>
     </target>
     <target depends="init" if="dist.ear.dir" name="-clean-webinf-lib">
         <delete dir="${build.web.dir}/WEB-INF/lib"/>
@@ -1464,10 +1520,17 @@ exists or setup the property manually. For example like this:
                 CLEANUP SECTION
             -->
     <target depends="init" name="deps-clean" unless="no.deps">
+        <ant antfile="${project.SoftPixelPenguinsAnioAcademicoBO}/build.xml" inheritall="false" target="clean"/>
+        <ant antfile="${project.SoftPixelPenguinsAnioAcademicoDAO}/build.xml" inheritall="false" target="clean"/>
         <ant antfile="${project.SoftPixelPenguinsAnioAcademicoModel}/build.xml" inheritall="false" target="clean"/>
         <ant antfile="${project.SoftPixelPenguinsContratoModel}/build.xml" inheritall="false" target="clean"/>
+        <ant antfile="${project.SoftPixelPenguinsCurriculaBO}/build.xml" inheritall="false" target="clean"/>
+        <ant antfile="${project.SoftPixelPenguinsCurriculaDAO}/build.xml" inheritall="false" target="clean"/>
         <ant antfile="${project.SoftPixelPenguinsCurriculaModel}/build.xml" inheritall="false" target="clean"/>
         <ant antfile="${project.SoftPixelPenguinsDBManager}/build.xml" inheritall="false" target="clean"/>
+        <ant antfile="${project.SoftPixelPenguinsInstitucionEducativaBO}/build.xml" inheritall="false" target="clean"/>
+        <ant antfile="${project.SoftPixelPenguinsInstitucionEducativaDAO}/build.xml" inheritall="false" target="clean"/>
+        <ant antfile="${project.SoftPixelPenguinsInstitucionEducativaModel}/build.xml" inheritall="false" target="clean"/>
         <ant antfile="${project.SoftPixelPenguinsUsuarioBO}/build.xml" inheritall="false" target="clean"/>
         <ant antfile="${project.SoftPixelPenguinsUsuarioDAO}/build.xml" inheritall="false" target="clean"/>
         <ant antfile="${project.SoftPixelPenguinsUsuarioModel}/build.xml" inheritall="false" target="clean"/>

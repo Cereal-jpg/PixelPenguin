@@ -282,7 +282,7 @@ public class AlumnoDAOImpl extends DAOImpl implements AlumnoDAO {
         String sql = "select ";
         sql = sql.concat(obtenerProyeccionParaSelect());
         sql = sql.concat(" from ").concat(this.nombre_tabla).concat(" alu ");
-        sql = sql.concat("join usuario usr on usr.idUsuario = alu.idAlumno ");
+        sql = sql.concat("join Usuario usr on usr.idUsuario = alu.idAlumno ");
         sql = sql.concat(" where ");
         sql = sql.concat(this.obtenerPredicadoParaLlavePrimaria());
         return sql;

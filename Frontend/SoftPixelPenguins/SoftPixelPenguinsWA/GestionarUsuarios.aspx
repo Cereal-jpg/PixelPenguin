@@ -95,12 +95,9 @@
                     </div>
                     <div class="mb-3">
                         <label for="ddlRoles" class="form-label">Rol</label>
-                        <select id="ddlRoles" class="form-select" onchange="toggleRoleFields()">
-                            <option value="">Seleccione un rol</option>
-                            <option value="Alumno">Alumno</option>
-                            <option value="Profesor">Profesor</option>
-                            <option value="PersonalAdministrativo">Personal Administrativo</option>
-                        </select>
+                        <asp:DropDownList ID="ddlRoles" runat="server" CssClass="form-select" OnSelectedIndexChanged="ddlRoles_SelectedIndexChanged" AutoPostBack="false">
+                            <asp:ListItem Text="Seleccione un rol" Value=""></asp:ListItem>
+                        </asp:DropDownList>
                     </div>
 
                     <!-- Campos específicos para Alumno -->
@@ -163,20 +160,6 @@
         </div>
     </div>
 </div>
-
-<script>
-    function toggleRoleFields() {
-        const role = document.getElementById("ddlRoles").value;
-        const alumnoFields = document.getElementById("alumnoFields");
-        const profesorFields = document.getElementById("profesorFields");
-        const personalFields = document.getElementById("personalFields");
-
-        alumnoFields.style.display = role === "Alumno" ? "block" : "none";
-        profesorFields.style.display = role === "Profesor" ? "block" : "none";
-        personalFields.style.display = role === "PersonalAdministrativo" ? "block" : "none";
-    }
-</script>
-
 
 </asp:Content>
 

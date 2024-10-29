@@ -121,7 +121,7 @@ public class UsuarioDAOImpl extends DAOImpl implements UsuarioDAO {
 
     @Override
     protected String obtenerProyeccionParaSelect() {
-        return "idUsuario, dni, nombreCompleto, fechaNacimiento, direccion, email, sexo, username, passsword, fid_rol";
+        return "idUsuario, dni, nombreCompleto, fechaNacimiento, direccion, email, sexo, username, password, fid_rol";
     }
 
     @Override
@@ -146,7 +146,7 @@ public class UsuarioDAOImpl extends DAOImpl implements UsuarioDAO {
         usuario.setEmail(resultSet.getString("email"));
         usuario.setSexo(resultSet.getString("sexo"));
         usuario.setUsername(resultSet.getString("username"));
-        usuario.setPassword(resultSet.getString("passsword"));
+        usuario.setPassword(resultSet.getString("password"));
         usuario.setRol(new Rol(resultSet.getInt("fid_rol")));
     }
 

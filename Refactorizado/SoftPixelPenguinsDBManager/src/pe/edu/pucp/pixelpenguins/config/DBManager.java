@@ -57,12 +57,15 @@ public class DBManager {
         url = url.concat(this.puerto);
         url = url.concat("/");
         url = url.concat(this.base_de_datos);
+        // añadir para que no se quede con conexión segura
+        url=url.concat("?useSSL=false");
         return url;
     }
     
     private void leer_archivo_propiedades(){
         Properties properties = new Properties();
-        String nmArchivoConf = "resources/"+ARCHIVO_CONFIGURACION;
+        // el archivo de la base de datos debe estar en C//
+        String nmArchivoConf = "c:"+"\\"+ARCHIVO_CONFIGURACION;
         try {
             properties.load(new FileInputStream(new File(nmArchivoConf)));
             this.driver = properties.getProperty("driver");

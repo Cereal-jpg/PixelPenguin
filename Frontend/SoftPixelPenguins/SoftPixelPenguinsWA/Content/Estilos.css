@@ -163,7 +163,9 @@ body {
 hr {
     border: 1px solid black;
     width: 100%;
-    margin: 20px auto;
+    margin: 10px auto;
+    margin-bottom: 3px;
+    margin-top: 0;
 }
 .logo{
     width: 150px;

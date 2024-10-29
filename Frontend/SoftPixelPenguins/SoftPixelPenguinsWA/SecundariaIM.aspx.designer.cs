@@ -11,7 +11,7 @@ namespace SoftPixelPenguinsWA
 {
 
 
-    public partial class PlanEstudio
+    public partial class SecundariaIM
     {
 
         /// <summary>

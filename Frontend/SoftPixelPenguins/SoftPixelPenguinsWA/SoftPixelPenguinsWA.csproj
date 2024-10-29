@@ -589,6 +589,7 @@
     <Content Include="Scripts\jquery-3.7.1.min.js" />
     <Content Include="Scripts\jquery-3.7.1.slim.js" />
     <Content Include="Scripts\jquery-3.7.1.slim.min.js" />
+    <Content Include="SecundariaIM.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -696,6 +697,13 @@
       <DependentUpon>ProcesoMatricula.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SecundariaIM.aspx.cs">
+      <DependentUpon>SecundariaIM.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SecundariaIM.aspx.designer.cs">
+      <DependentUpon>SecundariaIM.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SoftPixelPenguins.Master.cs">
       <DependentUpon>SoftPixelPenguins.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

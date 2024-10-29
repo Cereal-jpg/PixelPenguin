@@ -1,5 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PlanEstudio.aspx.cs" Inherits="SoftPixelPenguinsWA.PlanEstudio" %>
-
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SecundariaIM.aspx.cs" Inherits="SoftPixelPenguinsWA.SecundariaIM" %>
 
 <!DOCTYPE html>
 <html lang="es">
@@ -117,11 +116,10 @@
                     </div>
                     <!-- Contenedor de la imagen a la derecha -->
                     <div class="image-containerP">
-                        <img src="Images/Primaria.png" alt="Horario primaria" />
+                        <img src="Images/Secundaria.png" alt="Horario primaria" />
                     </div>
                 </div>
             </div>
     </form>
 </body>
 </html>
-

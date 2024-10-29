@@ -1,24 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
   <services>
-    <service name="AlumnoWS">
-      <implementation-class>pe.edu.pucp.pixelpenguins.usuario.services.AlumnoWS</implementation-class>
-    </service>
-    <service name="AdministradorWS">
-      <implementation-class>pe.edu.pucp.pixelpenguins.usuario.services.AdministradorWS</implementation-class>
-    </service>
-    <service name="ApoderadoWS">
-      <implementation-class>pe.edu.pucp.pixelpenguins.usuario.services.ApoderadoWS</implementation-class>
-    </service>
-    <service name="PersonalAdministrativoWS">
-      <implementation-class>pe.edu.pucp.pixelpenguins.usuario.services.PersonalAdministrativoWS</implementation-class>
-    </service>
-    <service name="ProfesorWS">
-      <implementation-class>pe.edu.pucp.pixelpenguins.usuario.services.ProfesorWS</implementation-class>
-    </service>
-    <service name="RolWS">
-      <implementation-class>pe.edu.pucp.pixelpenguins.usuario.services.RolWS</implementation-class>
-    </service>
   </services>
   <clients/>
 </jax-ws>

@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< Updated upstream
   "WorkspaceRootPath": "C:\\Users\\User\\Documents\\PUCP 2024-2\\PixelPenguin\\Frontend\\SoftPixelPenguins\\",
   "Documents": [
     {
@@ -41,6 +42,13 @@
     {
       "AbsoluteMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|C:\\Users\\User\\Documents\\PUCP 2024-2\\PixelPenguin\\Frontend\\SoftPixelPenguins\\softpixelpenguinswa\\listarmatriculas.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\listarmatriculas.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+=======
+  "WorkspaceRootPath": "C:\\Users\\Danicela\\Documents\\GitHub\\PixelPenguin\\Frontend\\SoftPixelPenguins\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|C:\\Users\\Danicela\\Documents\\GitHub\\PixelPenguin\\Frontend\\SoftPixelPenguins\\softpixelpenguinswa\\gestionarusuarios.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\gestionarusuarios.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> Stashed changes
     }
   ],
   "DocumentGroupContainers": [
@@ -50,6 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< Updated upstream
           "SelectedChildIndex": 1,
           "Children": [
             {
@@ -76,6 +85,21 @@
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2024-10-28T04:54:38.361Z",
+=======
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GestionarUsuarios.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Danicela\\Documents\\GitHub\\PixelPenguin\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\GestionarUsuarios.aspx.cs",
+              "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\GestionarUsuarios.aspx.cs",
+              "ToolTip": "C:\\Users\\Danicela\\Documents\\GitHub\\PixelPenguin\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\GestionarUsuarios.aspx.cs",
+              "RelativeToolTip": "SoftPixelPenguinsWA\\GestionarUsuarios.aspx.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAmwCQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-29T18:56:36.843Z",
+>>>>>>> Stashed changes
               "EditorCaption": ""
             },
             {

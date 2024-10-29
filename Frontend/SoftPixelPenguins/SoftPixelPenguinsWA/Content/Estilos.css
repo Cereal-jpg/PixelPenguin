@@ -30,7 +30,7 @@ body {
 
 /* Estilos del header */
 .header {
-    background-color: #007BFF; /* Color de fondo azul */
+    background-color: #000072; /* Color de fondo azul */
     display: flex; /* Flexbox para alineación */
     left: 0;
     padding: 15px; /* Espaciado interno */

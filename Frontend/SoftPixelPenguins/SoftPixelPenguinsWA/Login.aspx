@@ -7,6 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de Sesión - Pixel Penguins</title>
     <link rel="stylesheet" href="Content/Estilos.css" />
+    <style>
+        body {
+            background-image: url("Images/Escuela.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -37,7 +44,7 @@
                     </div>
                 </div>
                 <div class="image-placeholder">
-                    <img src="Images/Colegio.png" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;"/>
+                    <img src="Images/PIXEL.png" style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;"/>
                 </div>
             </div>
         </div>

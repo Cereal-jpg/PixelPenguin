@@ -16,12 +16,12 @@ namespace SoftPixelPenguinsWA
 
         protected void IniciarProceso_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("ProcesoMatricula.aspx");
         }
 
         protected void PlanEstudios_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("PlanEstudio.aspx");
         }
     }
 }

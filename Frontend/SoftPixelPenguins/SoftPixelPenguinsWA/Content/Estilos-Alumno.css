@@ -110,3 +110,14 @@ h3 {
     .icon-color:hover {
         color: #ff6600; /* Cambia el color al pasar el mouse */
     }
+/*  estilos dorplist*/
+.form-select {
+    color: white; /* Color del texto */
+    background-color: #007bff; /* Color de fondo azul */
+    border-color: #007bff; /* Color del borde */
+}
+
+    .form-select option {
+        color: black; /* Color de texto de las opciones */
+        background-color: white; /* Fondo de las opciones */
+    }

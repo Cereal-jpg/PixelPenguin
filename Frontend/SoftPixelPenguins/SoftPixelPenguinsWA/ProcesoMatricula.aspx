@@ -51,7 +51,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="containerTwo">
+        <div class="container">
             <div class="header">
                 <img src="Images/PIXEL.png" alt="Logo" />
                 <h1>Pixel Penguins</h1>

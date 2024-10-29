@@ -14,14 +14,14 @@
     <a href="ListarCursosAlumno.aspx"><i class="fa-solid fa-bar-chart"></i>Reporte de Notas</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem4" runat="server">
-    <a href="ListarCursosAlumno.aspx"><i class="fa-solid fa-archive"></i>Trámites</a>
+    <a href="ListarCursosAlumno.aspx"><i class="fa-solid fa-archive"></i>Matrícula Online</a>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
-    <h2 style="text-align: left; color: #000f;">Página principal alumno</h2>
+    <h2 style="text-align: left; color: #000f;">Inicio Alumno</h2>
     <link rel="stylesheet" href="Content/Estilos-Alumno.css" />
     <div class="container-al">
         <div class="schedule">
-            <h3>Horario del Alumno</h3>
+            <h3>Horario Académico</h3>
             <img src="Images/Horario.jpg" alt="Horario Académico" />
         </div>
         <div class="notifications">

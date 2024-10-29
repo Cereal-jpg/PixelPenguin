@@ -40,7 +40,6 @@ public class DBManager {
         try{
             Class.forName(this.driver);
             con = DriverManager.getConnection(getURL(), username, descifrarMD5(this.password));
-            //System.out.println(this.username);
         }catch(ClassNotFoundException | SQLException ex){
             System.out.println(ex.getMessage());
         }

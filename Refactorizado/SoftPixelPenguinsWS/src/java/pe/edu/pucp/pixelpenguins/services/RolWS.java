@@ -4,7 +4,6 @@ import jakarta.jws.WebService;
 import jakarta.jws.WebMethod;
 import jakarta.jws.WebParam;
 import java.util.ArrayList;
-import pe.edu.pucp.pixelpenguins.config.DBManager;
 import pe.edu.pucp.pixelpenguins.usuario.bo.RolBO;
 import pe.edu.pucp.pixelpenguins.usuario.model.Rol;
 

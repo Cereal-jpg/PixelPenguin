@@ -154,7 +154,7 @@ public class AlumnoDAOImpl extends DAOImpl implements AlumnoDAO {
 
     @Override
     protected void incluirValorDeParametrosParaModificacion() throws SQLException {
-        this.incluirParametroInt(6, this.alumno.getIdUsuario());
+        this.incluirParametroInt(7, this.alumno.getIdUsuario());
         this.incluirParametroInt(1, this.alumno.getCodigoAlumno());
         this.incluirParametroBoolean(2, this.alumno.isConCertificadoDeEstudios());
         this.incluirParametroBoolean(3, this.alumno.isConCertificadoDeSalud());
@@ -220,7 +220,7 @@ public class AlumnoDAOImpl extends DAOImpl implements AlumnoDAO {
         String sql = "select ";
         sql = sql.concat(obtenerProyeccionParaSelect());
         sql = sql.concat(" from ").concat(this.nombre_tabla).concat(" alu ");
-        sql = sql.concat("join usuario usr on usr.idUsuario = alu.idUsuario ");
+        sql = sql.concat("join Usuario usr on usr.idUsuario = alu.idAlumno ");
         if (limite != null && limite > 0) {
             sql = sql.concat(" limit ").concat(limite.toString());
         }
@@ -229,8 +229,8 @@ public class AlumnoDAOImpl extends DAOImpl implements AlumnoDAO {
 
     @Override
     protected String obtenerProyeccionParaSelect() {
-        String sql = "usr.idUsuario, usr.dni, usr.nombre, usr.fechaNacimiento, ";
-        sql = sql.concat("usr.direccion, usr.email, usr.sexo, usr.username, ");
+        String sql = "usr.idUsuario, usr.dni, usr.nombreCompleto, usr.fechaNacimiento, ";
+        sql = sql.concat("usr.direccion, usr.email, usr.sexo, usr.username, usr.password, usr.fid_rol, ");
         sql = sql.concat("alu.codigoAlumno, alu.conCertificadoDeEstudios, alu.conCertificadoDeSalud, alu.conDeuda, ");
         sql = sql.concat("alu.fid_Apoderado, alu.fid_GradoAcademico");
         return sql;
@@ -253,7 +253,7 @@ public class AlumnoDAOImpl extends DAOImpl implements AlumnoDAO {
         this.alumno.setEmail(resultSet.getString("email"));
         this.alumno.setSexo(resultSet.getString("sexo"));
         this.alumno.setUsername(resultSet.getString("username"));
-        this.alumno.setPassword(resultSet.getString("passsword"));
+        this.alumno.setPassword(resultSet.getString("password"));
         this.alumno.setRol(new Rol(resultSet.getInt("fid_rol")));
         this.alumno.setCodigoAlumno(resultSet.getInt("codigoAlumno"));
         this.alumno.setConCertificadoDeEstudios(resultSet.getBoolean("conCertificadoDeEstudios"));

@@ -11,7 +11,11 @@ import pe.edu.pucp.pixelpenguins.usuario.model.Alumno;
         = "http://services.pixelpenguins.pucp.edu.pe")
 public class AlumnoWS {
 
-    private AlumnoBO alumnoBO = new AlumnoBO();
+    private AlumnoBO alumnoBO;
+    
+    public AlumnoWS(){
+        this.alumnoBO=new AlumnoBO();
+    }
     
     @WebMethod(operationName = "insertarAlumno")
     public Integer insertarAlumno(@WebParam(name = "alumno") Alumno alumno) {

@@ -21,6 +21,9 @@ public class AlumnoBO {
                             boolean conDeuda, Apoderado apoderado, GradoAcademico gradoAcademico,
                             String dni, String nombreCompleto, Date fechaNacimiento, String direccion,
                             String email, String sexo, String username, String password, Rol rol) {
+        UsuarioBO usuarioBO=new UsuarioBO();
+        if(usuarioBO.insertar(dni, nombreCompleto, fechaNacimiento, direccion, email, sexo, username, password, rol)!=0)
+            System.out.println("El usuario fue insertado correctamente");
         Alumno alumno = new Alumno(codigoAlumno, conCertificadoDeEstudios, conCertificadoDeSalud, 
                                     conDeuda, apoderado, gradoAcademico, dni, nombreCompleto, 
                                     fechaNacimiento, direccion, email, sexo, username, password, rol);

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Xml.Linq;
 
 namespace SoftPixelPenguinsWA
 {
@@ -25,7 +26,8 @@ namespace SoftPixelPenguinsWA
 
         private void CargarUsuarios()
         {
-            
+            gvUsuarios.DataSource = new BindingList<usuario>(usuarioBO.listarTodosUsuarios());
+            gvUsuarios.DataBind();
         }
 
         private void CargarRoles()
@@ -34,26 +36,7 @@ namespace SoftPixelPenguinsWA
             ddlRoles.DataTextField = "nombre"; 
             ddlRoles.DataValueField = "IdRol";
             ddlRoles.DataBind();
-        }
-
-        protected void ddlRoles_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Aquí puedes manejar la lógica que deseas ejecutar al cambiar el rol seleccionado
-            int selectedId = int.Parse(ddlRoles.SelectedValue);
-            // Por ejemplo, podrías filtrar usuarios según el rol seleccionado
-            if (selectedId > 0) // Asegúrate de que se ha seleccionado un rol válido
-            {
-                // Lógica para manejar el rol seleccionado
-                // Podrías, por ejemplo, cargar usuarios que tienen ese rol
-                // gvUsuarios.DataSource = usuarioBO.ListarUsuariosPorRol(selectedId);
-                // gvUsuarios.DataBind();
-            }
-            else
-            {
-                // Maneja el caso en que no se seleccionó un rol válido
-                // gvUsuarios.DataSource = usuarioBO.ListarTodosUsuarios();
-                // gvUsuarios.DataBind();
-            }
+            ddlRoles.Items.Insert(0, new ListItem("Seleccione un rol", ""));
         }
 
         protected void gvUsuarios_RowCommand(object sender, GridViewCommandEventArgs e)

@@ -4,7 +4,7 @@ package pe.edu.pucp.pixelpenguins.usuario.model;
 import java.util.Date;
 import pe.edu.pucp.pixelpenguins.contrato.model.IConsultable;
 
-public abstract class Usuario implements IConsultable {
+public class Usuario implements IConsultable {
     protected int idUsuario;
     protected String dni;
     protected String nombreCompleto;
@@ -129,6 +129,8 @@ public abstract class Usuario implements IConsultable {
     }
     
     @Override
-    public abstract String consultarInformacion();
+    public String consultarInformacion(){
+        return null;
+    };
     
 }

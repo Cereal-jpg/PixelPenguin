@@ -14,8 +14,10 @@ import pe.edu.pucp.pixelpenguins.usuario.bo.AlumnoBO;
 import pe.edu.pucp.pixelpenguins.usuario.bo.ApoderadoBO;
 import pe.edu.pucp.pixelpenguins.usuario.bo.RolBO;
 import pe.edu.pucp.pixelpenguins.usuario.bo.UsuarioBO;
+import pe.edu.pucp.pixelpenguins.usuario.model.Alumno;
 import pe.edu.pucp.pixelpenguins.usuario.model.Apoderado;
 import pe.edu.pucp.pixelpenguins.usuario.model.Rol;
+import pe.edu.pucp.pixelpenguins.usuario.model.Usuario;
 import pe.edu.pucp.pixelpenguins.util.Cifrado;
 
 public class Principal {
@@ -54,7 +56,9 @@ public class Principal {
         for(Rol aux:roles)
             System.out.println(aux.getNombre());
         UsuarioBO usuarioBO=new UsuarioBO();
-        System.out.println(usuarioBO.obtenerPorId(1).getNombreCompleto());
+        for(Usuario u : usuarioBO.listarTodos()){
+            System.out.println(u.getNombreCompleto());
+        }
 //        if(usuarioBO.insertar("12346", "Manuel Perez", sdf.parse("10-05-2005"), "Av. prueba", "manuel@pucp.edu.pe", "Masculino", "a12345", "password", roles.get(0))!=0)
 //            System.out.println("El usuario fue insertado correctamente");
 //        AlumnoBO alumnoBO=new AlumnoBO();

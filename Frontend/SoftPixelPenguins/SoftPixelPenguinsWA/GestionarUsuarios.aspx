@@ -94,61 +94,62 @@
                         <input type="password" class="form-control" id="password" placeholder="Ingrese la contraseña" required />
                     </div>
                     <div class="mb-3">
-                        <label for="ddlRoles" class="form-label">Rol</label>
-                        <asp:DropDownList ID="ddlRoles" runat="server" CssClass="form-select" OnSelectedIndexChanged="ddlRoles_SelectedIndexChanged" AutoPostBack="false">
-                            <asp:ListItem Text="Seleccione un rol" Value=""></asp:ListItem>
-                        </asp:DropDownList>
+                        <label for="ddlRoles" class="form-label">Seleccione un rol</label>
+                        <div class="input-group">
+                            <asp:DropDownList ID="ddlRoles" runat="server" AutoPostBack="false" OnChange="mostrarCampos()" CssClass="form-select">
+                            </asp:DropDownList>
+                        </div>
                     </div>
 
                     <!-- Campos específicos para Alumno -->
-                    <div id="alumnoFields" class="role-specific-fields" style="display: none;">
+                    <div id="alumnoFields" class="mb-3" style="display: none;">
                         <div class="mb-3">
                             <label for="codigoAlumno" class="form-label">Código Alumno</label>
-                            <input type="number" class="form-control" id="codigoAlumno" placeholder="Ingrese el código del alumno" />
+                            <asp:TextBox ID="codigoAlumno" runat="server" CssClass="form-control" placeholder="Ingrese el código del alumno"></asp:TextBox>
                         </div>
                         <div class="form-check mb-3">
-                            <input class="form-check-input" type="checkbox" id="conCertificadoDeEstudios" />
+                            <asp:CheckBox ID="conCertificadoDeEstudios" runat="server" CssClass="form-check-input" />
                             <label class="form-check-label" for="conCertificadoDeEstudios">Con Certificado de Estudios</label>
                         </div>
                         <div class="form-check mb-3">
-                            <input class="form-check-input" type="checkbox" id="conCertificadoDeSalud" />
+                            <asp:CheckBox ID="conCertificadoDeSalud" runat="server" CssClass="form-check-input" />
                             <label class="form-check-label" for="conCertificadoDeSalud">Con Certificado de Salud</label>
                         </div>
                         <div class="form-check mb-3">
-                            <input class="form-check-input" type="checkbox" id="conDeuda" />
+                            <asp:CheckBox ID="conDeuda" runat="server" CssClass="form-check-input" />
                             <label class="form-check-label" for="conDeuda">Con Deuda</label>
                         </div>
                         <div class="mb-3">
                             <label for="apoderado" class="form-label">Apoderado (ID)</label>
-                            <input type="number" class="form-control" id="apoderado" placeholder="Ingrese el ID del apoderado" />
+                            <asp:TextBox ID="apoderado" runat="server" CssClass="form-control" placeholder="Ingrese el ID del apoderado"></asp:TextBox>
                         </div>
                         <div class="mb-3">
                             <label for="gradoAcademico" class="form-label">Grado Académico (ID)</label>
-                            <input type="number" class="form-control" id="gradoAcademico" placeholder="Ingrese el ID del grado académico" />
+                            <asp:TextBox ID="gradoAcademico" runat="server" CssClass="form-control" placeholder="Ingrese el ID del grado académico"></asp:TextBox>
                         </div>
                     </div>
 
                     <!-- Campos específicos para Profesor -->
-                    <div id="profesorFields" class="role-specific-fields" style="display: none;">
+                    <div id="profesorFields" class="mb-3" style="display: none;">
                         <div class="mb-3">
                             <label for="codigoProfesor" class="form-label">Código Profesor</label>
-                            <input type="number" class="form-control" id="codigoProfesor" placeholder="Ingrese el código del profesor" />
+                            <asp:TextBox ID="codigoProfesor" runat="server" CssClass="form-control" placeholder="Ingrese el código del profesor"></asp:TextBox>
                         </div>
                         <div class="form-check mb-3">
-                            <input class="form-check-input" type="checkbox" id="certificadoHistorialEducativo" />
+                            <asp:CheckBox ID="certificadoHistorialEducativo" runat="server" CssClass="form-check-input" />
                             <label class="form-check-label" for="certificadoHistorialEducativo">Con Certificado de Historial Educativo</label>
                         </div>
                         <div class="mb-3">
                             <label for="especialidad" class="form-label">Especialidad</label>
-                            <input type="text" class="form-control" id="especialidad" placeholder="Ingrese la especialidad" />
+                            <asp:TextBox ID="especialidad" runat="server" CssClass="form-control" placeholder="Ingrese la especialidad"></asp:TextBox>
                         </div>
                     </div>
 
                     <!-- Campos específicos para Personal Administrativo -->
-                    <div id="personalFields" class="role-specific-fields" style="display: none;">
+                    <div id="personalFields" class="mb-3" style="display: none;">
                         <div class="mb-3">
                             <label for="codigoPersonalAdministrativo" class="form-label">Código Personal Administrativo</label>
-                            <input type="number" class="form-control" id="codigoPersonalAdministrativo" placeholder="Ingrese el código del personal administrativo" />
+                            <asp:TextBox ID="codigoPersonalAdministrativo" runat="server" CssClass="form-control" placeholder="Ingrese el código del personal administrativo"></asp:TextBox>
                         </div>
                     </div>
                 </form>
@@ -160,6 +161,25 @@
         </div>
     </div>
 </div>
+
+    <script type="text/javascript">
+        function mostrarCampos() {
+            var rolSeleccionado = document.getElementById('<%= ddlRoles.ClientID %>').value;
+            // Ocultar todos los campos
+            document.getElementById('alumnoFields').style.display = 'none';
+            document.getElementById('profesorFields').style.display = 'none';
+            document.getElementById('personalFields').style.display = 'none';
+
+            // Mostrar campos basados en el rol seleccionado
+            if (rolSeleccionado === "1") { // Alumno
+                document.getElementById('alumnoFields').style.display = 'block';
+            } else if (rolSeleccionado === "2") { // Profesor
+                document.getElementById('profesorFields').style.display = 'block';
+            } else if (rolSeleccionado === "3") { // Personal Administrativo
+                document.getElementById('personalFields').style.display = 'block';
+            }
+        }
+    </script>
 
 </asp:Content>
 

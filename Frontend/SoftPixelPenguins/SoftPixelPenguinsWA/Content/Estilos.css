@@ -28,6 +28,16 @@ body {
     overflow: hidden; /* Oculta cualquier contenido desbordado */
 }
 
+/* Contenedor secundario */
+.containerTwo {
+    width: 150%; /* Ancho completo */
+    max-width: 1200px; /* Ancho máximo */
+    background-color: white; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    overflow: hidden; /* Oculta cualquier contenido desbordado */
+}
+
 /* Estilos del header */
 .header {
     background-color: #000072; /* Color de fondo azul */

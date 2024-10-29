@@ -28,6 +28,16 @@ body {
     overflow: hidden; /* Oculta cualquier contenido desbordado */
 }
 
+/* Contenedor secundario */
+.containerTwo {
+    width: 150%; /* Ancho completo */
+    max-width: 1200px; /* Ancho máximo */
+    background-color: white; /* Fondo blanco */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    overflow: hidden; /* Oculta cualquier contenido desbordado */
+}
+
 /* Estilos del header */
 .header {
     background-color: #000072; /* Color de fondo azul */
@@ -149,4 +159,19 @@ body {
     border: 1px solid white; /* Borde blanco (puedes cambiarlo) */
     border-radius: 8px; /* Bordes redondeados */
     background-color: transparent; /* Color azul claro como fondo */
+}
+hr {
+    border: 1px solid black;
+    width: 100%;
+    margin: 10px auto;
+    margin-bottom: 3px;
+    margin-top: 0;
+}
+.logo{
+    width: 150px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover{
+    transform: scale(1.2);
 }

@@ -38,7 +38,7 @@ public class UsuarioDAOImpl extends DAOImpl implements UsuarioDAO {
     
     @Override
     protected String obtenerListaDeAtributosParaInsercion() {
-        return "dni, nombreCompleto, fechaNacimiento, direccion, email, sexo, username, passsword, fid_rol";
+        return "dni, nombreCompleto, fechaNacimiento, direccion, email, sexo, username, password, fid_rol";
     }
 
     @Override
@@ -74,7 +74,7 @@ public class UsuarioDAOImpl extends DAOImpl implements UsuarioDAO {
     
     @Override
     protected String obtenerListaDeValoresYAtributosParaModificacion() {
-        return "dni=?, nombreCompleto=?, fechaNacimiento=?, direccion=?, email=?, sexo=?, username=?, passsword=?, fid_rol=?";
+        return "dni=?, nombreCompleto=?, fechaNacimiento=?, direccion=?, email=?, sexo=?, username=?, password=?, fid_rol=?";
     }
 
     @Override
@@ -121,7 +121,7 @@ public class UsuarioDAOImpl extends DAOImpl implements UsuarioDAO {
 
     @Override
     protected String obtenerProyeccionParaSelect() {
-        return "idUsuario, dni, nombreCompleto, fechaNacimiento, direccion, email, sexo, username, passsword, fid_rol";
+        return "idUsuario, dni, nombreCompleto, fechaNacimiento, direccion, email, sexo, username, password, fid_rol";
     }
 
     @Override
@@ -146,7 +146,7 @@ public class UsuarioDAOImpl extends DAOImpl implements UsuarioDAO {
         usuario.setEmail(resultSet.getString("email"));
         usuario.setSexo(resultSet.getString("sexo"));
         usuario.setUsername(resultSet.getString("username"));
-        usuario.setPassword(resultSet.getString("passsword"));
+        usuario.setPassword(resultSet.getString("password"));
         usuario.setRol(new Rol(resultSet.getInt("fid_rol")));
     }
 
@@ -180,12 +180,13 @@ public class UsuarioDAOImpl extends DAOImpl implements UsuarioDAO {
         try {
             this.abrirConexion();
             String sql = "select idUsuario from Usuario where ";
-            sql = sql.concat("nombreCompleto=? ");
+            sql = sql.concat("dni=? ");
             this.colocarSQLenStatement(sql);
-            this.incluirParametroString(1, this.usuario.getNombreCompleto());
+            this.incluirParametroString(1, this.usuario.getDni());
             this.ejecutarConsultaEnBD(sql);
             if (this.resultSet.next()) {
                 idUsuario = this.resultSet.getInt("idUsuario");
+                this.usuario.setIdUsuario(idUsuario);
             }
         } catch (SQLException ex) {
             System.err.println("Error al consultar si existe usuario - " + ex);
@@ -196,7 +197,6 @@ public class UsuarioDAOImpl extends DAOImpl implements UsuarioDAO {
                 System.err.println("Error al cerrar la conexión - " + ex);
             }
         }
-        this.usuario.setIdUsuario(idUsuario);
         return idUsuario != null;
     }
     

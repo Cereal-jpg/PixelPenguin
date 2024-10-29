@@ -9,7 +9,7 @@ import pe.edu.pucp.pixelpenguins.usuario.model.Usuario;
 
 public class UsuarioBO {
 
-    private final UsuarioDAO usuarioDAO;
+    private UsuarioDAO usuarioDAO;
 
     public UsuarioBO() {
         this.usuarioDAO = new UsuarioDAOImpl();
@@ -20,22 +20,12 @@ public class UsuarioBO {
     }
 
     public Integer insertar(String dni, String nombreCompleto, Date fechaNacimiento, String direccion, String email, String sexo, String username, String password, Rol rol) {
-        Usuario usuario = new Usuario(dni, nombreCompleto, fechaNacimiento, direccion, email, sexo, username, password, rol) {
-            @Override
-            public String consultarInformacion() {
-                throw new UnsupportedOperationException("Not supported yet.");
-            }
-        };
+        Usuario usuario = new Usuario(dni, nombreCompleto, fechaNacimiento, direccion, email, sexo, username, password, rol);
         return this.usuarioDAO.insertar(usuario);
     }
 
     public Integer modificar(Integer idUsuario, String dni, String nombreCompleto, Date fechaNacimiento, String direccion, String email, String sexo, String username, String password, Rol rol) {
-        Usuario usuario = new Usuario(idUsuario, dni, nombreCompleto, fechaNacimiento, direccion, email, sexo, username, password, rol) {
-            @Override
-            public String consultarInformacion() {
-                throw new UnsupportedOperationException("Not supported yet.");
-            }
-        };
+        Usuario usuario = new Usuario(idUsuario, dni, nombreCompleto, fechaNacimiento, direccion, email, sexo, username, password, rol);
         return this.usuarioDAO.modificar(usuario);
     }
     
@@ -44,12 +34,7 @@ public class UsuarioBO {
     }
 
     public Integer eliminar(Integer idUsuario) {
-        Usuario usuario = new Usuario() {
-            @Override
-            public String consultarInformacion() {
-                throw new UnsupportedOperationException("Not supported yet.");
-            }
-        };
+        Usuario usuario = new Usuario();
         usuario.setIdUsuario(idUsuario);
         return this.usuarioDAO.eliminar(usuario);
     }

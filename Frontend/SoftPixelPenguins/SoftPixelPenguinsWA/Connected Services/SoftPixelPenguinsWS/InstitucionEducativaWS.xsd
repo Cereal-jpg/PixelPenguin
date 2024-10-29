@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.pixelpenguins.pucp.edu.pe" targetNamespace="http://services.pixelpenguins.pucp.edu.pe" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarInstitucionEducativa" type="tns:eliminarInstitucionEducativa" />
+  <xs:element name="eliminarInstitucionEducativaResponse" type="tns:eliminarInstitucionEducativaResponse" />
+  <xs:element name="insertarInstitucionEducativa" type="tns:insertarInstitucionEducativa" />
+  <xs:element name="insertarInstitucionEducativaResponse" type="tns:insertarInstitucionEducativaResponse" />
+  <xs:element name="listarTodosInstitucionesEducativas" type="tns:listarTodosInstitucionesEducativas" />
+  <xs:element name="listarTodosInstitucionesEducativasResponse" type="tns:listarTodosInstitucionesEducativasResponse" />
+  <xs:element name="modificarInstitucionEducativa" type="tns:modificarInstitucionEducativa" />
+  <xs:element name="modificarInstitucionEducativaResponse" type="tns:modificarInstitucionEducativaResponse" />
+  <xs:element name="obtenerInstitucionEducativaPorId" type="tns:obtenerInstitucionEducativaPorId" />
+  <xs:element name="obtenerInstitucionEducativaPorIdResponse" type="tns:obtenerInstitucionEducativaPorIdResponse" />
+  <xs:complexType name="eliminarInstitucionEducativa">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="institucionEducativa" type="tns:institucionEducativa" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="institucionEducativa">
+    <xs:sequence>
+      <xs:element name="cantidadAlumnos" type="xs:int" />
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element name="idInstitucion" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="ruc" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarInstitucionEducativaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarInstitucionEducativa">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="institucionEducativa" type="tns:institucionEducativa" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarInstitucionEducativaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerInstitucionEducativaPorId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idInstitucionEducativa" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerInstitucionEducativaPorIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:institucionEducativa" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarInstitucionEducativa">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="institucionEducativa" type="tns:institucionEducativa" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarInstitucionEducativaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodosInstitucionesEducativas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosInstitucionesEducativasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:institucionEducativa" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

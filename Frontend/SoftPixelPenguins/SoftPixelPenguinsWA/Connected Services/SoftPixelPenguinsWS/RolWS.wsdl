@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.pixelpenguins.pucp.edu.pe" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="RolWS" targetNamespace="http://services.pixelpenguins.pucp.edu.pe" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/SoftPixelPenguinsWS/RolWS?xsd=1" namespace="http://services.pixelpenguins.pucp.edu.pe" />
+    </xsd:schema>
+  </types>
+  <message name="modificarRol">
+    <part name="parameters" element="tns:modificarRol" />
+  </message>
+  <message name="modificarRolResponse">
+    <part name="parameters" element="tns:modificarRolResponse" />
+  </message>
+  <message name="obtenerRolPorId">
+    <part name="parameters" element="tns:obtenerRolPorId" />
+  </message>
+  <message name="obtenerRolPorIdResponse">
+    <part name="parameters" element="tns:obtenerRolPorIdResponse" />
+  </message>
+  <message name="rol_listarTodos">
+    <part name="parameters" element="tns:rol_listarTodos" />
+  </message>
+  <message name="rol_listarTodosResponse">
+    <part name="parameters" element="tns:rol_listarTodosResponse" />
+  </message>
+  <message name="insertarRol">
+    <part name="parameters" element="tns:insertarRol" />
+  </message>
+  <message name="insertarRolResponse">
+    <part name="parameters" element="tns:insertarRolResponse" />
+  </message>
+  <message name="rol_obtenerPorId">
+    <part name="parameters" element="tns:rol_obtenerPorId" />
+  </message>
+  <message name="rol_obtenerPorIdResponse">
+    <part name="parameters" element="tns:rol_obtenerPorIdResponse" />
+  </message>
+  <message name="rol_insertar">
+    <part name="parameters" element="tns:rol_insertar" />
+  </message>
+  <message name="rol_insertarResponse">
+    <part name="parameters" element="tns:rol_insertarResponse" />
+  </message>
+  <message name="eliminarRol">
+    <part name="parameters" element="tns:eliminarRol" />
+  </message>
+  <message name="eliminarRolResponse">
+    <part name="parameters" element="tns:eliminarRolResponse" />
+  </message>
+  <message name="listarTodosRoles">
+    <part name="parameters" element="tns:listarTodosRoles" />
+  </message>
+  <message name="listarTodosRolesResponse">
+    <part name="parameters" element="tns:listarTodosRolesResponse" />
+  </message>
+  <message name="rol_eliminar">
+    <part name="parameters" element="tns:rol_eliminar" />
+  </message>
+  <message name="rol_eliminarResponse">
+    <part name="parameters" element="tns:rol_eliminarResponse" />
+  </message>
+  <portType name="RolWS">
+    <operation name="modificarRol">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/modificarRolRequest" message="tns:modificarRol" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/modificarRolResponse" message="tns:modificarRolResponse" />
+    </operation>
+    <operation name="obtenerRolPorId">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/obtenerRolPorIdRequest" message="tns:obtenerRolPorId" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/obtenerRolPorIdResponse" message="tns:obtenerRolPorIdResponse" />
+    </operation>
+    <operation name="rol_listarTodos">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/rol_listarTodosRequest" message="tns:rol_listarTodos" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/rol_listarTodosResponse" message="tns:rol_listarTodosResponse" />
+    </operation>
+    <operation name="insertarRol">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/insertarRolRequest" message="tns:insertarRol" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/insertarRolResponse" message="tns:insertarRolResponse" />
+    </operation>
+    <operation name="rol_obtenerPorId">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/rol_obtenerPorIdRequest" message="tns:rol_obtenerPorId" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/rol_obtenerPorIdResponse" message="tns:rol_obtenerPorIdResponse" />
+    </operation>
+    <operation name="rol_insertar">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/rol_insertarRequest" message="tns:rol_insertar" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/rol_insertarResponse" message="tns:rol_insertarResponse" />
+    </operation>
+    <operation name="eliminarRol">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/eliminarRolRequest" message="tns:eliminarRol" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/eliminarRolResponse" message="tns:eliminarRolResponse" />
+    </operation>
+    <operation name="listarTodosRoles">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/listarTodosRolesRequest" message="tns:listarTodosRoles" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/listarTodosRolesResponse" message="tns:listarTodosRolesResponse" />
+    </operation>
+    <operation name="rol_eliminar">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/rol_eliminarRequest" message="tns:rol_eliminar" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/rol_eliminarResponse" message="tns:rol_eliminarResponse" />
+    </operation>
+  </portType>
+  <binding name="RolWSPortBinding" type="tns:RolWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="modificarRol">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerRolPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="rol_listarTodos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarRol">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="rol_obtenerPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="rol_insertar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarRol">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosRoles">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="rol_eliminar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="RolWS">
+    <port name="RolWSPort" binding="tns:RolWSPortBinding">
+      <soap:address location="http://localhost:8080/SoftPixelPenguinsWS/RolWS" />
+    </port>
+  </service>
+</definitions>

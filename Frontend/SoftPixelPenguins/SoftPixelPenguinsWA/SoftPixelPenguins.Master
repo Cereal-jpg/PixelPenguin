@@ -11,10 +11,11 @@
     <link href="Content/site.css" rel="stylesheet" />
     <link href="Content/Fonts/css/all.css" rel="stylesheet" />
     <link href="Content/Estilos.css" rel="stylesheet" />
-
+    <link href="Content/Estilos-Alumno.css" rel="stylesheet" />
     <script src="Scripts/bootstrap.js"></script>
     <script src="Scripts/bootstrap.bundle.js"></script>
     <script src="Scripts/jquery-3.7.1.js"></script>
+    <script src="Scripts/BarraProgreso.js"></script>
 
     <title>
         <asp:ContentPlaceHolder ID="cphTitulo" runat="server">
@@ -68,7 +69,7 @@
                 <a data-bs-toggle="offcanvas" data-bs-target="#bdSidebar" class="text-white" href="#">
                     <i class="fa-solid fa-bars"></i>
                 </a>
-                <img src="Images/Logo.jpg" class="ms-3" width="75">
+                <img src="Images/Logo.jpg" class="logo"/>
             </div>
             <!-- Barra de Usuario -->
             <nav class="navbar navbar-dark bg-primary">

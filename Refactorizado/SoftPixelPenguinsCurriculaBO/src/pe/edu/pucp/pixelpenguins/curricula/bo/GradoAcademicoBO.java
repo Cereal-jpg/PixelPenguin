@@ -53,7 +53,7 @@ public class GradoAcademicoBO {
 
     private GradoAcademico crearGradoAcademico(Integer idGradoAcademico, int numeroGrado, NivelEducativo nivel, int cantidadAlumnos, int vacantes, int fidAnioAcademico) {
         GradoAcademico gradoAcademico = new GradoAcademico();
-        gradoAcademico.setIdGradoAcademico(idGradoAcademico);
+        //gradoAcademico.setIdGradoAcademico(idGradoAcademico);
         gradoAcademico.setNumeroGrado(numeroGrado);
         gradoAcademico.setNivel(nivel);
         gradoAcademico.setCantidadAlumnos(cantidadAlumnos);

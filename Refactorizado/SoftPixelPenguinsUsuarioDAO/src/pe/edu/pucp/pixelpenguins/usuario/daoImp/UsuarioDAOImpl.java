@@ -186,6 +186,7 @@ public class UsuarioDAOImpl extends DAOImpl implements UsuarioDAO {
             this.ejecutarConsultaEnBD(sql);
             if (this.resultSet.next()) {
                 idUsuario = this.resultSet.getInt("idUsuario");
+                this.usuario.setIdUsuario(idUsuario);
             }
         } catch (SQLException ex) {
             System.err.println("Error al consultar si existe usuario - " + ex);
@@ -196,7 +197,6 @@ public class UsuarioDAOImpl extends DAOImpl implements UsuarioDAO {
                 System.err.println("Error al cerrar la conexión - " + ex);
             }
         }
-        this.usuario.setIdUsuario(idUsuario);
         return idUsuario != null;
     }
     

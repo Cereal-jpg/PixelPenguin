@@ -35,18 +35,18 @@ public class Principal {
 //        System.out.println(prueba);
         DBManager.getInstance().getConnection();
         System.out.println(DBManager.getInstance());
-//        ApoderadoBO apoderadoBO= new ApoderadoBO();
+        ApoderadoBO apoderadoBO= new ApoderadoBO();
 //        if(apoderadoBO.insertar("1234", "Juan Perez", "999888777", "Padre")!=0)
 //            System.out.println("El apoderado se inserto correctamente");
-//        ArrayList<Apoderado> apoderados=apoderadoBO.listarTodos();
+        ArrayList<Apoderado> apoderados=apoderadoBO.listarTodos();
 //        for(Apoderado aux:apoderados){
 //            System.out.println(aux.getDni());
 //        }
         
-//        GradoAcademicoBO gradoBO=new GradoAcademicoBO();
+        GradoAcademicoBO gradoBO=new GradoAcademicoBO();
 //        if(gradoBO.insertar(2, NivelEducativo.PRIMARIO, 60, 90, 1)!=0)
 //            System.out.println("El grado academico se inserto correctamente");
-//        ArrayList<GradoAcademico> grados=gradoBO.listarTodos();
+        ArrayList<GradoAcademico> grados=gradoBO.listarTodos();
         RolBO rolBO=new RolBO();
 //        rolBO.insertar("Estudiante");
 //        rolBO.insertar("Profesor");
@@ -61,8 +61,8 @@ public class Principal {
         }
 //        if(usuarioBO.insertar("12346", "Manuel Perez", sdf.parse("10-05-2005"), "Av. prueba", "manuel@pucp.edu.pe", "Masculino", "a12345", "password", roles.get(0))!=0)
 //            System.out.println("El usuario fue insertado correctamente");
-//        AlumnoBO alumnoBO=new AlumnoBO();
-//        if(alumnoBO.insertar(2022, true, true, true, apoderados.get(0),grados.get(0),"12346","Manuel Perez",sdf.parse("10-15-2005"),"Av. prueba", "manuel@pucp.edu.pe","Masculino","a12345","password", roles.get(0))!=0)
-//            System.out.println("El alumno fue insertado correctamente");
+        AlumnoBO alumnoBO=new AlumnoBO();
+        if(alumnoBO.insertar(2022, true, true, true, apoderados.get(0),grados.get(0),"12348","Manuel Prueba 2",sdf.parse("10-15-2005"),"Av. prueba", "manuel@pucp.edu.pe","Masculino","a12345","password", roles.get(0))!=0)
+            System.out.println("El alumno fue insertado correctamente");
     }
 }

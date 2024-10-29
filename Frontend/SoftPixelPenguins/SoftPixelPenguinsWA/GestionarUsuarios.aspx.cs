@@ -26,7 +26,9 @@ namespace SoftPixelPenguinsWA
 
         private void CargarUsuarios()
         {
-            gvUsuarios.DataSource = new BindingList<usuario>(usuarioBO.listarTodosUsuarios());
+            BindingList<usuario> usuarios = new BindingList <usuario>(usuarioBO.listarTodosUsuarios());
+            foreach (usuario usu in usuarios) usu.rol = rolBO.obtenerRolPorId(usu.rol.idRol);
+            gvUsuarios.DataSource = usuarios;
             gvUsuarios.DataBind();
         }
 

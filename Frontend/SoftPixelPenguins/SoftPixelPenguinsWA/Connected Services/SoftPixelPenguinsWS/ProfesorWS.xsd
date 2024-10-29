@@ -28,7 +28,7 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
-  <xs:complexType name="usuario" abstract="true">
+  <xs:complexType name="usuario">
     <xs:sequence>
       <xs:element minOccurs="0" name="direccion" type="xs:string" />
       <xs:element minOccurs="0" name="dni" type="xs:string" />

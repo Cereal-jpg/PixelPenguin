@@ -22,27 +22,28 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-12 d-flex justify-content-between align-items-center mb-4">
-                <h2>Lista de Usuarios</h2>
+                <h2>Gestionar Usuarios</h2>
                 <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addUserModal">
                     <i class="fa-solid fa-user-plus"></i> Agregar Nuevo Usuario
                 </button>
             </div>
-
-            <div class="col-12">
-                <asp:GridView ID="gvUsuarios" runat="server" AutoGenerateColumns="False" OnRowCommand="gvUsuarios_RowCommand">
-                    <Columns>
-                        <asp:BoundField HeaderText="Email" DataField="email" />
-                         <asp:BoundField HeaderText="Usuario" DataField="username" />
-                        <asp:BoundField HeaderText="Nombre Completo" DataField="nombreCompleto" />
-                        <asp:BoundField HeaderText="Rol" DataField="rol.nombre" />
-                        <asp:TemplateField HeaderText="Acciones">
-                            <ItemTemplate>
-                                <asp:Button ID="btnEdit" runat="server" CommandName="Edit" CommandArgument='<%# Eval("idUsuario") %>' Text="Editar" CssClass="btn btn-warning btn-sm" />
-                                <asp:Button ID="btnDelete" runat="server" CommandName="Delete" CommandArgument='<%# Eval("idUsuario") %>' Text="Eliminar" CssClass="btn btn-danger btn-sm" />
-                            </ItemTemplate>
-                        </asp:TemplateField>
-                    </Columns>
-                </asp:GridView>
+            <div class="row">
+                <div class="col-12">
+                    <asp:GridView ID="gvUsuarios" runat="server" AutoGenerateColumns="False" OnRowCommand="gvUsuarios_RowCommand" CssClass="table table-striped table-bordered" Style="background-color: transparent;">
+                        <Columns>
+                            <asp:BoundField HeaderText="Email" DataField="email" />
+                            <asp:BoundField HeaderText="Usuario" DataField="username" />
+                            <asp:BoundField HeaderText="Nombre Completo" DataField="nombreCompleto" />
+                            <asp:BoundField HeaderText="Rol" DataField="rol.nombre" />
+                            <asp:TemplateField HeaderText="Acciones">
+                                <ItemTemplate>
+                                    <asp:Button ID="btnEdit" runat="server" CommandName="Edit" CommandArgument='<%# Eval("idUsuario") %>' Text="Editar" CssClass="btn btn-warning btn-sm me-1" />
+                                    <asp:Button ID="btnDelete" runat="server" CommandName="Delete" CommandArgument='<%# Eval("idUsuario") %>' Text="Eliminar" CssClass="btn btn-danger btn-sm" />
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                        </Columns>
+                    </asp:GridView>
+                </div>
             </div>
         </div>
     </div>

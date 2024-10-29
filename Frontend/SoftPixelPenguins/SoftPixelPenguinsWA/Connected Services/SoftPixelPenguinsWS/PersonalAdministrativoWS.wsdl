@@ -5,23 +5,23 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftPixelPenguinsWS/PersonalAdministrativoWS?xsd=1" namespace="http://services.pixelpenguins.pucp.edu.pe" />
     </xsd:schema>
   </types>
-  <message name="insertarPersonalAdministrativo">
-    <part name="parameters" element="tns:insertarPersonalAdministrativo" />
-  </message>
-  <message name="insertarPersonalAdministrativoResponse">
-    <part name="parameters" element="tns:insertarPersonalAdministrativoResponse" />
-  </message>
   <message name="existePersonalAdministrativo">
     <part name="parameters" element="tns:existePersonalAdministrativo" />
   </message>
   <message name="existePersonalAdministrativoResponse">
     <part name="parameters" element="tns:existePersonalAdministrativoResponse" />
   </message>
-  <message name="obtenerPersonalAdministrativoPorId">
-    <part name="parameters" element="tns:obtenerPersonalAdministrativoPorId" />
+  <message name="insertarPersonalAdministrativo">
+    <part name="parameters" element="tns:insertarPersonalAdministrativo" />
   </message>
-  <message name="obtenerPersonalAdministrativoPorIdResponse">
-    <part name="parameters" element="tns:obtenerPersonalAdministrativoPorIdResponse" />
+  <message name="insertarPersonalAdministrativoResponse">
+    <part name="parameters" element="tns:insertarPersonalAdministrativoResponse" />
+  </message>
+  <message name="listarTodosPersonalAdministrativo">
+    <part name="parameters" element="tns:listarTodosPersonalAdministrativo" />
+  </message>
+  <message name="listarTodosPersonalAdministrativoResponse">
+    <part name="parameters" element="tns:listarTodosPersonalAdministrativoResponse" />
   </message>
   <message name="modificarPersonalAdministrativo">
     <part name="parameters" element="tns:modificarPersonalAdministrativo" />
@@ -35,24 +35,24 @@
   <message name="eliminarPersonalAdministrativoResponse">
     <part name="parameters" element="tns:eliminarPersonalAdministrativoResponse" />
   </message>
-  <message name="listarTodosPersonalAdministrativo">
-    <part name="parameters" element="tns:listarTodosPersonalAdministrativo" />
+  <message name="obtenerPersonalAdministrativoPorId">
+    <part name="parameters" element="tns:obtenerPersonalAdministrativoPorId" />
   </message>
-  <message name="listarTodosPersonalAdministrativoResponse">
-    <part name="parameters" element="tns:listarTodosPersonalAdministrativoResponse" />
+  <message name="obtenerPersonalAdministrativoPorIdResponse">
+    <part name="parameters" element="tns:obtenerPersonalAdministrativoPorIdResponse" />
   </message>
   <portType name="PersonalAdministrativoWS">
-    <operation name="insertarPersonalAdministrativo">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/insertarPersonalAdministrativoRequest" message="tns:insertarPersonalAdministrativo" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/insertarPersonalAdministrativoResponse" message="tns:insertarPersonalAdministrativoResponse" />
-    </operation>
     <operation name="existePersonalAdministrativo">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/existePersonalAdministrativoRequest" message="tns:existePersonalAdministrativo" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/existePersonalAdministrativoResponse" message="tns:existePersonalAdministrativoResponse" />
     </operation>
-    <operation name="obtenerPersonalAdministrativoPorId">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/obtenerPersonalAdministrativoPorIdRequest" message="tns:obtenerPersonalAdministrativoPorId" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/obtenerPersonalAdministrativoPorIdResponse" message="tns:obtenerPersonalAdministrativoPorIdResponse" />
+    <operation name="insertarPersonalAdministrativo">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/insertarPersonalAdministrativoRequest" message="tns:insertarPersonalAdministrativo" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/insertarPersonalAdministrativoResponse" message="tns:insertarPersonalAdministrativoResponse" />
+    </operation>
+    <operation name="listarTodosPersonalAdministrativo">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/listarTodosPersonalAdministrativoRequest" message="tns:listarTodosPersonalAdministrativo" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/listarTodosPersonalAdministrativoResponse" message="tns:listarTodosPersonalAdministrativoResponse" />
     </operation>
     <operation name="modificarPersonalAdministrativo">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/modificarPersonalAdministrativoRequest" message="tns:modificarPersonalAdministrativo" />
@@ -62,22 +62,13 @@
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/eliminarPersonalAdministrativoRequest" message="tns:eliminarPersonalAdministrativo" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/eliminarPersonalAdministrativoResponse" message="tns:eliminarPersonalAdministrativoResponse" />
     </operation>
-    <operation name="listarTodosPersonalAdministrativo">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/listarTodosPersonalAdministrativoRequest" message="tns:listarTodosPersonalAdministrativo" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/listarTodosPersonalAdministrativoResponse" message="tns:listarTodosPersonalAdministrativoResponse" />
+    <operation name="obtenerPersonalAdministrativoPorId">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/obtenerPersonalAdministrativoPorIdRequest" message="tns:obtenerPersonalAdministrativoPorId" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/obtenerPersonalAdministrativoPorIdResponse" message="tns:obtenerPersonalAdministrativoPorIdResponse" />
     </operation>
   </portType>
   <binding name="PersonalAdministrativoWSPortBinding" type="tns:PersonalAdministrativoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="insertarPersonalAdministrativo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="existePersonalAdministrativo">
       <soap:operation soapAction="" />
       <input>
@@ -87,7 +78,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="obtenerPersonalAdministrativoPorId">
+    <operation name="insertarPersonalAdministrativo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosPersonalAdministrativo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -114,7 +114,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarTodosPersonalAdministrativo">
+    <operation name="obtenerPersonalAdministrativoPorId">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

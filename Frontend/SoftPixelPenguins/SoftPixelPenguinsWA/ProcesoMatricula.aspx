@@ -8,11 +8,7 @@
     <title>Inicio de Sesión - Pixel Penguins</title>
     <link rel="stylesheet" href="Content/Estilos.css" />
     <style>
-        hr{
-            border: 1px solid black;
-            width: 100%;
-            margin: 20px auto;
-        }
+       
         .container-Matricula {
             width: 100%; /* Ancho completo */
             max-width: 1200px; /* Ancho máximo */
@@ -80,6 +76,8 @@
             width: 100%;
             background-color: #000072;
         }
+
+         
     </style>
 </head>
 <body>

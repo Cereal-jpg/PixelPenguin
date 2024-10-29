@@ -1,4 +1,4 @@
-﻿ <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PlanEstudio.aspx.cs" Inherits="SoftPixelPenguinsWA.PlanEstudio" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PlanEstudio.aspx.cs" Inherits="SoftPixelPenguinsWA.PlanEstudio" %>
 
 
 <!DOCTYPE html>
@@ -20,31 +20,34 @@
         }
 
         .form-containerDentro {
-             max-width: 600px;
-              max-height: 800px;
-                 display: flex;
-             flex-direction: column;
-             background-color: white;
-             padding: 20px;
-             border-radius: 6px;
-          margin-bottom: 6px;
-             gap: 2px;
+            max-width: 600px;
+            max-height: 800px;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 6px;
+            gap: 2px;
         }
+
         .form-select {
-             color: white;                   /* Color del texto */
-             background-color: #000072;      /* Color de fondo */
-             border: 2px solid #000072;      /* Color y grosor del borde */
-             border-radius: 20px;            /* Bordes redondeados */
-             padding: 10px 20px;             /* Tamaño interno más grande */
-             font-size: 16px;                /* Tamaño de fuente */
-             width: 30%; 
-             text-align: center;             /* Centrar texto */
-            text-align-last: center; 
-         }
-        .form-select option {
-            color: black;             /* Color de texto de las opciones */
-            background-color: white;  /* Fondo de las opciones */
+            color: white; /* Color del texto */
+            background-color: #000072; /* Color de fondo */
+            border: 2px solid #000072; /* Color y grosor del borde */
+            border-radius: 20px; /* Bordes redondeados */
+            padding: 10px 20px; /* Tamaño interno más grande */
+            font-size: 16px; /* Tamaño de fuente */
+            width: 30%;
+            text-align: center; /* Centrar texto */
+            text-align-last: center;
         }
+
+            .form-select option {
+                color: black; /* Color de texto de las opciones */
+                background-color: white; /* Fondo de las opciones */
+            }
+
         .button-container {
             display: flex;
             flex-direction: column;
@@ -54,19 +57,20 @@
         .login-button {
             width: 100%;
             background-color: #000072;
-            width: 31%; 
+            width: 31%;
             height: 45px;
-            border-radius: 20px; 
-            margin-top: 20px;     
+            border-radius: 20px;
+            margin-top: 20px;
         }
-        .image-container {
+
+        .image-containerP {
             display: flex;
             align-items: center;
-            width: 35%;
+            width: 100%;
         }
 
         .image-container img {
-            width: 100%;
+            width: 50%;
             border-radius: 8px;
             max-height: 250px;
             object-fit: cover;
@@ -76,7 +80,7 @@
 <body>
     <form id="form1" runat="server">
         <div class="container">
-            <div class="header" >
+            <div class="header">
                 <img src="Images/PIXEL.png" alt="Logo" />
                 <h1>Pixel Penguins</h1>
                 <div class="nav">
@@ -84,28 +88,30 @@
                     <a href="Matricularce.aspx">Matrícula</a>
                 </div>
             </div>
-            <div class="form-containerDentro"> 
+            <div class="form-containerDentro">
                 <h2 class="titulo">Plan de Estudios</h2>
                 <hr>
-                <p>En Pixel Penguins contamos con un plan académico pensado en que nuestros alumnos
+                <p>
+                    En Pixel Penguins contamos con un plan académico pensado en que nuestros alumnos
                     obtengan las mejores competencias y habilidades. Si quieres ver detalle de las 
-                    competencias de cada curso, haga click en”Ver competencias </p>
+                    competencias de cada curso, haga click en”Ver competencias
+                </p>
                 <br>
                 <div class="col-md-12 mb-3">
-                <asp:Label ID="lblDepartamento" runat="server"  CssClass="col-form-label" />
-                <asp:DropDownList ID="ddlDepartamento" CssClass="form-select" runat="server">
-                     <asp:ListItem Text="Primaria" Value="1"></asp:ListItem>
-                     <asp:ListItem Text="Secundaria" Value="2"></asp:ListItem>
-                </asp:DropDownList>
+                    <asp:Label ID="lblDepartamento" runat="server" CssClass="col-form-label" />
+                    <asp:DropDownList ID="ddlDepartamento" CssClass="form-select" runat="server">
+                        <asp:ListItem Text="Primaria" Value="1"></asp:ListItem>
+                        <asp:ListItem Text="Secundaria" Value="2"></asp:ListItem>
+                    </asp:DropDownList>
                 </div>
                 <div class="button-container">
-               <asp:Button ID="VerCompetencias" runat="server" Text="Ver competencias" CssClass="login-button"  />
-            </div>
-                <div class="image-container">
+                    <asp:Button ID="VerCompetencias" runat="server" Text="Ver competencias" CssClass="login-button" />
+                </div>
+                <div class="image-containerP">
                     <img src="Images/Primaria.png" alt="Horario primaria" />
                 </div>
             </div>
-            </form>
+    </form>
 
 </body>
 </html>

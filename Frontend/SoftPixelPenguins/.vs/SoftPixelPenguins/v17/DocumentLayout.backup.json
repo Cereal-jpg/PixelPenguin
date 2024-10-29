@@ -1,13 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\papar\\PixelPenguin\\Frontend\\SoftPixelPenguins\\",
+  "WorkspaceRootPath": "C:\\Users\\Danicela\\Documents\\GitHub\\PixelPenguin\\Frontend\\SoftPixelPenguins\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|C:\\Users\\papar\\PixelPenguin\\Frontend\\SoftPixelPenguins\\softpixelpenguinswa\\gestionarusuarios.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|c:\\users\\danicela\\documents\\github\\pixelpenguin\\frontend\\softpixelpenguins\\softpixelpenguinswa\\matriculaalumno-1.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\matriculaalumno-1.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|c:\\users\\danicela\\documents\\github\\pixelpenguin\\frontend\\softpixelpenguins\\softpixelpenguinswa\\indexalumno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\indexalumno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|c:\\users\\danicela\\documents\\github\\pixelpenguin\\frontend\\softpixelpenguins\\softpixelpenguinswa\\gestionarusuarios.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\gestionarusuarios.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|C:\\Users\\papar\\PixelPenguin\\Frontend\\SoftPixelPenguins\\softpixelpenguinswa\\gestionarusuarios.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|C:\\Users\\Danicela\\Documents\\GitHub\\PixelPenguin\\Frontend\\SoftPixelPenguins\\softpixelpenguinswa\\gestionarusuarios.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\gestionarusuarios.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
@@ -18,32 +26,54 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MatriculaAlumno-1.aspx",
+              "DocumentMoniker": "C:\\Users\\Danicela\\Documents\\GitHub\\PixelPenguin\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\MatriculaAlumno-1.aspx",
+              "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\MatriculaAlumno-1.aspx",
+              "ToolTip": "C:\\Users\\Danicela\\Documents\\GitHub\\PixelPenguin\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\MatriculaAlumno-1.aspx",
+              "RelativeToolTip": "SoftPixelPenguinsWA\\MatriculaAlumno-1.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-10-29T15:36:07.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IndexAlumno.aspx",
+              "DocumentMoniker": "C:\\Users\\Danicela\\Documents\\GitHub\\PixelPenguin\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\IndexAlumno.aspx",
+              "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\IndexAlumno.aspx",
+              "ToolTip": "C:\\Users\\Danicela\\Documents\\GitHub\\PixelPenguin\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\IndexAlumno.aspx",
+              "RelativeToolTip": "SoftPixelPenguinsWA\\IndexAlumno.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-10-29T15:35:07.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "GestionarUsuarios.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\papar\\PixelPenguin\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\GestionarUsuarios.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Danicela\\Documents\\GitHub\\PixelPenguin\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\GestionarUsuarios.aspx.cs",
               "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\GestionarUsuarios.aspx.cs",
-              "ToolTip": "C:\\Users\\papar\\PixelPenguin\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\GestionarUsuarios.aspx.cs",
+              "ToolTip": "C:\\Users\\Danicela\\Documents\\GitHub\\PixelPenguin\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\GestionarUsuarios.aspx.cs",
               "RelativeToolTip": "SoftPixelPenguinsWA\\GestionarUsuarios.aspx.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAIA4wB4AAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAAAAAAAAAAASwC4AAABLAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-29T14:41:31.339Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "GestionarUsuarios.aspx",
-              "DocumentMoniker": "C:\\Users\\papar\\PixelPenguin\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\GestionarUsuarios.aspx",
+              "DocumentMoniker": "C:\\Users\\Danicela\\Documents\\GitHub\\PixelPenguin\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\GestionarUsuarios.aspx",
               "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\GestionarUsuarios.aspx",
-              "ToolTip": "C:\\Users\\papar\\PixelPenguin\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\GestionarUsuarios.aspx",
+              "ToolTip": "C:\\Users\\Danicela\\Documents\\GitHub\\PixelPenguin\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\GestionarUsuarios.aspx",
               "RelativeToolTip": "SoftPixelPenguinsWA\\GestionarUsuarios.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",

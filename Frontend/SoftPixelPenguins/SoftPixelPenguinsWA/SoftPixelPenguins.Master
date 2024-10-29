@@ -28,8 +28,8 @@
     <div class="container-fluid d-flex p-0 h-100">
         <!--Menu Lateral-->
         <div id="bdSidebar" class="d-flex flex-column flex-shrink-0 p-3 bg-primary text-white offcanvas-md offcanvas-start">
-            <a href="#" class="navbar-brand">
-                <img src="Images/PIXEL.png" width="200" class: "logo-circular"/>
+            <a href="#" class="logo">
+                <img src="Images/PIXEL.png" class: "logo"/>
             </a>
             <hr>
             
@@ -69,7 +69,7 @@
                 <a data-bs-toggle="offcanvas" data-bs-target="#bdSidebar" class="text-white" href="#">
                     <i class="fa-solid fa-bars"></i>
                 </a>
-                <img src="Images/Logo.jpg" class="logo"/>
+                <img src="Images/PIXEL.png" class="logo"/>
             </div>
             <!-- Barra de Usuario -->
             <nav class="navbar navbar-dark bg-primary">

@@ -73,7 +73,7 @@ public class RolWS {
         return rol;
     }
 
-        // metodos estándar
+    // metodos estándar
     @WebMethod(operationName="rol_listarTodos")
     public ArrayList<Rol> rol_listarTodos(){
         return rolBO.listarTodos();

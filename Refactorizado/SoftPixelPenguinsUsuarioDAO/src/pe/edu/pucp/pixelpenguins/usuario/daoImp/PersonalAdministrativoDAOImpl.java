@@ -217,7 +217,7 @@ public class PersonalAdministrativoDAOImpl extends DAOImpl implements PersonalAd
         String sql = "select ";
         sql = sql.concat(obtenerProyeccionParaSelect());
         sql = sql.concat(" from ").concat(this.nombre_tabla).concat(" pa ");
-        sql = sql.concat("join Usuario usu on usu.idUsuario = pa.idUsuario ");
+        sql = sql.concat("join Usuario usu on usu.idUsuario = pa.idPersonalAdministrativo ");
         if (limite != null && limite > 0) {
             sql = sql.concat(" limit ").concat(limite.toString());
         }

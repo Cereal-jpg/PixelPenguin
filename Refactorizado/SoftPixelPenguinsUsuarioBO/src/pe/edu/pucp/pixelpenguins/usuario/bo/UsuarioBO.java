@@ -9,7 +9,7 @@ import pe.edu.pucp.pixelpenguins.usuario.model.Usuario;
 
 public class UsuarioBO {
 
-    private final UsuarioDAO usuarioDAO;
+    private UsuarioDAO usuarioDAO;
 
     public UsuarioBO() {
         this.usuarioDAO = new UsuarioDAOImpl();

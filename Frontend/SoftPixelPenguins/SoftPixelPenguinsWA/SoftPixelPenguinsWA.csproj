@@ -93,7 +93,6 @@
     </None>
     <Content Include="MatriculaAlumno-0.aspx" />
     <Content Include="MatriculaAlumno-1.aspx" />
-    <Content Include="MatriculaAlumno-2.aspx" />
     <Content Include="RecuperarContraseña.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -667,13 +666,6 @@
     </Compile>
     <Compile Include="MatriculaAlumno-1.aspx.designer.cs">
       <DependentUpon>MatriculaAlumno-1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="MatriculaAlumno-2.aspx.cs">
-      <DependentUpon>MatriculaAlumno-2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="MatriculaAlumno-2.aspx.designer.cs">
-      <DependentUpon>MatriculaAlumno-2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Matricularce.aspx.cs">
       <DependentUpon>Matricularce.aspx</DependentUpon>

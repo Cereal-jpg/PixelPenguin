@@ -42,8 +42,7 @@ namespace SoftPixelPenguinsWA
             }
             else
             {
-                // Mostrar un mensaje de error si las credenciales son incorrectas.
-                errorMessage.Text = "Correo electrónico o contraseña incorrectos.";
+                errorMessage.Text = "<span class='error-icon'>⚠️</span><span class='error-text'>Ocurrió un error al procesar su solicitud. Por favor, inténtelo de nuevo más tarde.</span>";
                 errorMessage.Visible = true;
             }
         }

@@ -27,13 +27,13 @@
     </asp:ContentPlaceHolder>
     <div class="container-fluid d-flex p-0 h-100">
         <!--Menu Lateral-->
-        <div id="bdSidebar" class="d-flex flex-column flex-shrink-0 p-3 bg-primary text-white offcanvas-md offcanvas-start">
+        <div id="bdSidebar" class="d-flex flex-column flex-shrink-0 p-3 bg-primary text-white offcanvas-md offcanvas-start" >
             <a href="#" class="logo">
                 <img src="Images/PIXEL.png" class: "logo"/>
             </a>
             <hr>
             
-            <ul class="mynav nav nav-pills flex-column mb-auto">
+            <ul class="mynav nav nav-pills flex-column mb-auto" >
                 <li class="nav-item mb-1">
                     <asp:ContentPlaceHolder ID="menuItem1" runat="server">
                         <a href="#"><i class="fa-solid fa-home"></i>Inicio</a>

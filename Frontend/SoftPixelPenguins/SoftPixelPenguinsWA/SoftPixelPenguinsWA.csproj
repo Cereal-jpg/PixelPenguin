@@ -583,6 +583,9 @@
     <Content Include="Connected Services\SoftPixelPenguinsWS\SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarUsuariosPorNombreResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\SoftPixelPenguinsWS\SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarDatosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\SoftPixelPenguinsWS\UsuarioWS.wsdl" />
     <None Include="Connected Services\SoftPixelPenguinsWS\UsuarioWS.xsd">
       <SubType>Designer</SubType>

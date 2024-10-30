@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SoftPixelPenguinsWA.SoftPixelPenguinsWS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,14 +10,10 @@ namespace SoftPixelPenguinsWA
 {
     public partial class Login : System.Web.UI.Page
     {
+        private UsuarioWSClient usuarioWSClient = new UsuarioWSClient();
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-
-        protected bool validarCredenciales(string Email, string Password)
-        {
-            return true;
         }
 
         protected void loginButton_Click(object sender, EventArgs e)
@@ -25,10 +22,23 @@ namespace SoftPixelPenguinsWA
             string Email = email.Text.Trim();
             string Password = password.Text.Trim();
 
-            // Ejemplo simple de validación.
-            if (validarCredenciales(Email,Password))
+            int id;
+            id = usuarioWSClient.ValidarDatos(Email, Password);
+            if (id != 0)
             {
-                Response.Redirect("IndexAdmin.aspx");
+                char tipo = Email[0];
+                switch (tipo)
+                {
+                    case 'a':
+                        Response.Redirect("IndexAlumno.aspx");
+                        break;
+                    case 'm':
+                        Response.Redirect("IndexAdmin.aspx");
+                        break;
+                    case 'p':
+                        Response.Redirect("IndexProfesor.aspx");
+                        break;
+                }
             }
             else
             {

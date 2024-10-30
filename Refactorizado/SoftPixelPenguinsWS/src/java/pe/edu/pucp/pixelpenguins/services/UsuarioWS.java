@@ -90,4 +90,18 @@ public class UsuarioWS {
         return usuarios;
     }
     
+    @WebMethod(operationName = "ValidarDatos")
+    public Integer ValidarDatos(@WebParam(name = "email")String email,@WebParam(name = "password")String password) {
+        Integer id=null;
+        
+        try {
+            id = usuarioBO.ValidarDatos(email, password);
+        }
+        catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        if(id==null) return 0;
+        return id;
+    }
+    
 }

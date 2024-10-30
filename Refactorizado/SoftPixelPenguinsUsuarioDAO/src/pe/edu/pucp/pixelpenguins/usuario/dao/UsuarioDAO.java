@@ -15,4 +15,5 @@ public interface UsuarioDAO {
     public Usuario obtenerPorId (Integer idUsuario);
     public Boolean existeUsuario(Usuario usuario);
     public ArrayList<Usuario>listarUsuariosPorNombre(String nombre); 
+    public Integer ValidarDatos(String correo,String contra);
 }

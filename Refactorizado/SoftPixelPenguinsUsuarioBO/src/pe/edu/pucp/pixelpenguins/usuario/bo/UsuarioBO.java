@@ -59,4 +59,8 @@ public class UsuarioBO {
         return this.usuarioDAO.listarUsuariosPorNombre(nombre);
     }
     
+    public Integer ValidarDatos(String email,String password){
+        return this.usuarioDAO.ValidarDatos(email, password);
+    }
+    
 }

@@ -4,14 +4,11 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.logging.Logger;
-import java.util.logging.Level;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 import static pe.edu.pucp.pixelpenguins.util.Cifrado.descifrarMD5;
-import static pe.edu.pucp.pixelpenguins.util.Cifrado.cifrarMD5;
 
 public class DBManager {
     
@@ -57,13 +54,14 @@ public class DBManager {
         url = url.concat(this.puerto);
         url = url.concat("/");
         url = url.concat(this.base_de_datos);
+        url = url.concat("?useSSL=false");
         return url;
     }
     
     private void leer_archivo_propiedades(){
         Properties properties = new Properties();
-        String nmArchivoConf = "resources/"+ARCHIVO_CONFIGURACION;
         try {
+            String nmArchivoConf = "c:" + "\\" + ARCHIVO_CONFIGURACION;
             properties.load(new FileInputStream(new File(nmArchivoConf)));
             this.driver = properties.getProperty("driver");
             this.tipo_de_driver = properties.getProperty("tipo_de_driver");
@@ -73,10 +71,10 @@ public class DBManager {
             this.username = properties.getProperty("usuario");
             this.password = properties.getProperty("contrasenha");
         } catch (FileNotFoundException ex) {
-            Logger.getLogger(DBManager.class.getName()).log(Level.SEVERE, null, ex);
+            System.err.println("Error al leer el archivo de propiedades - " + ex);
         } catch (IOException ex) {
-            Logger.getLogger(DBManager.class.getName()).log(Level.SEVERE, null, ex);
-        }                
+            System.err.println("Error al leer el archivo de propiedades - " + ex);
+        }               
     }
     
 }

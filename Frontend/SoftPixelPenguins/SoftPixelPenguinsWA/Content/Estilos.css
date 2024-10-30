@@ -160,3 +160,16 @@ body {
     border-radius: 8px; /* Bordes redondeados */
     background-color: transparent; /* Color azul claro como fondo */
 }
+hr {
+    border: 1px solid black;
+    width: 100%;
+    margin: 20px auto;
+}
+.logo{
+    width: 150px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover{
+    transform: scale(1.2);
+}

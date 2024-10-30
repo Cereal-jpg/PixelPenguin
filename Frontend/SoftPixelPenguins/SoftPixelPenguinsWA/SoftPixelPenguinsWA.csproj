@@ -69,6 +69,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MatriculaAlumno-0.aspx" />
+    <Content Include="MatriculaAlumno-1.aspx" />
+    <Content Include="MatriculaAlumno-2.aspx" />
+    <Content Include="RecuperarContraseña.aspx" />
     <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
     <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
     <None Include="Connected Services\ServiceReference1\Reference.svcmap">
@@ -276,6 +280,27 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MatriculaAlumno-0.aspx.cs">
+      <DependentUpon>MatriculaAlumno-0.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MatriculaAlumno-0.aspx.designer.cs">
+      <DependentUpon>MatriculaAlumno-0.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MatriculaAlumno-1.aspx.cs">
+      <DependentUpon>MatriculaAlumno-1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MatriculaAlumno-1.aspx.designer.cs">
+      <DependentUpon>MatriculaAlumno-1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MatriculaAlumno-2.aspx.cs">
+      <DependentUpon>MatriculaAlumno-2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MatriculaAlumno-2.aspx.designer.cs">
+      <DependentUpon>MatriculaAlumno-2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Matricularce.aspx.cs">
       <DependentUpon>Matricularce.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -311,6 +336,13 @@
     </Compile>
     <Compile Include="SoftPixelPenguins.Master.designer.cs">
       <DependentUpon>SoftPixelPenguins.Master</DependentUpon>
+    </Compile>
+    <Compile Include="RecuperarContraseña.aspx.cs">
+      <DependentUpon>RecuperarContraseña.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecuperarContraseña.aspx.designer.cs">
+      <DependentUpon>RecuperarContraseña.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

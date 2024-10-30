@@ -5,13 +5,13 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cphScripts" runat="server">
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem1" runat="server">
-    <a href="Index.aspx"><i class="fa-solid fa-home"></i>Inicio</a>
+    <a href="IndexAdmin.aspx"><i class="fa-solid fa-home"></i>Inicio</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem2" runat="server">
-    <a href="ListarCursosAlumno.aspx"><i class="fa-solid fa-database"></i>Consultas</a>
+    <a href="#"><i class="fa-solid fa-database"></i>Consultas</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem3" runat="server">
-    <a href="ListarCursosAlumno.aspx"><i class="fa-solid fa-search"></i>Busquedas</a>
+    <a href="#"><i class="fa-solid fa-search"></i>Busquedas</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem4" runat="server">
     <a href="GestionarUsuarios.aspx"><i class="fa-solid fa-plus-circle"></i>Gestionar Usuario</a>

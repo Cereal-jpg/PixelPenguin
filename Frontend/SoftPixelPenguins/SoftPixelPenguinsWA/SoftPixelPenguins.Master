@@ -68,7 +68,7 @@
                 <a data-bs-toggle="offcanvas" data-bs-target="#bdSidebar" class="text-white" href="#">
                     <i class="fa-solid fa-bars"></i>
                 </a>
-                <img src="Images/Logo.jpg" class="ms-3" width="75">
+                <img src="Images/Logo.jpg" class="logo"/>
             </div>
             <!-- Barra de Usuario -->
             <nav class="navbar navbar-dark bg-primary">

@@ -18,6 +18,46 @@
     border-radius: 8px; /* Bordes redondeados */
 }
 
+.container-matricula {
+    display: flex; /* Usar flexbox para organizar el layout */
+    width: 100%; /* Ancho completo */
+    margin-top: 20px; /* Espacio arriba */
+    background-color: aliceblue;
+}
+
+.matricula-section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.button-container {
+    margin-top: 20px; /* Espacio entre el texto y el botón */
+    display: flex;
+    justify-content: center;
+}
+
+.image-section {
+    flex: 1;
+    text-align: center; /* Centrar la imagen */
+}
+
+.btn-matricula {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px 15px; /* Espaciado interno ajustado */
+    text-align: center; /* Centrando el texto */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Para que funcione el padding */
+    font-size: 16px; /* Tamaño de fuente */
+    margin: 4px 0; /* Margen alrededor */
+    cursor: pointer; /* Cambiar cursor al pasar el mouse */
+    border-radius: 5px; /* Bordes redondeados */
+    max-width: 150px; /* Ancho máximo del botón */
+    width: auto; /* Ancho automático según contenido */
+}
+
+
 .notifications {
     flex: 1; /* Ocupa 1 parte del contenedor */
     margin-left: 20px; /* Espacio a la izquierda */
@@ -58,4 +98,26 @@ h3 {
         padding: 10px;
         border-radius: 4px;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra para las notificaciones */
+    }
+
+.icon-color {
+    color: #ffcc00; /* Color del ícono (puedes cambiarlo) */
+    font-size: 24px; /* Tamaño del ícono */
+    margin-right: 8px; /* Espacio entre el ícono y el texto */
+    transition: color 0.3s; /* Efecto de transición al pasar el mouse */
+}
+
+    .icon-color:hover {
+        color: #ff6600; /* Cambia el color al pasar el mouse */
+    }
+/*  estilos dorplist*/
+.form-select {
+    color: white; /* Color del texto */
+    background-color: #007bff; /* Color de fondo azul */
+    border-color: #007bff; /* Color del borde */
+}
+
+    .form-select option {
+        color: black; /* Color de texto de las opciones */
+        background-color: white; /* Fondo de las opciones */
     }

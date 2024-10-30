@@ -200,4 +200,24 @@ public class UsuarioDAOImpl extends DAOImpl implements UsuarioDAO {
         return idUsuario != null;
     }
     
+    @Override
+    protected String obtenerPredicadoParaListado() {
+        return " WHERE nombreCompleto LIKE CONCAT('%',?,'%')";
+    }
+    
+    @Override
+    protected void incluirValorDeParametrosParaListado() throws SQLException {
+        this.incluirParametroString(1, usuario.getNombreCompleto());
+    }
+    
+    @Override
+    public ArrayList<Usuario>listarUsuariosPorNombre(String nombre){
+        this.usarPredicadoParaListado = true;
+        this.usuario = new Usuario();
+        usuario.setNombreCompleto(nombre);
+        ArrayList<Usuario>usuarios = (ArrayList<Usuario>)super.listarTodos(null);
+        this.usarPredicadoParaListado = false;
+        return usuarios;
+    }
+    
 }

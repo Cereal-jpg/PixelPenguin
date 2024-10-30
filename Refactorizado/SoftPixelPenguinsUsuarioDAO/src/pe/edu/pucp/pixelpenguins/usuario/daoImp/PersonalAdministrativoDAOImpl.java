@@ -81,7 +81,7 @@ public class PersonalAdministrativoDAOImpl extends DAOImpl implements PersonalAd
 
     @Override
     protected String obtenerListaDeAtributosParaInsercion() {
-        return "idUsuario, codigoPersonalAdministrativo";
+        return "idPersonalAdministrativo, codigoPersonalAdministrativo";
     }
 
     @Override
@@ -156,13 +156,7 @@ public class PersonalAdministrativoDAOImpl extends DAOImpl implements PersonalAd
     
     @Override
     protected String obtenerPredicadoParaLlavePrimaria() {
-        String sql = "";
-        if (this.tipo_Operacion == Tipo_Operacion.MODIFICAR || this.tipo_Operacion == Tipo_Operacion.ELIMINAR) {
-            sql = "idUsuario=?";
-        } else {
-            sql = "usu.idUsuario=?";
-        }
-        return sql;
+        return "idPersonalAdministrativo=?";
     }
 
     @Override
@@ -267,7 +261,7 @@ public class PersonalAdministrativoDAOImpl extends DAOImpl implements PersonalAd
         String sql = "select ";
         sql = sql.concat(obtenerProyeccionParaSelect());
         sql = sql.concat(" from ").concat(this.nombre_tabla).concat(" pa ");
-        sql = sql.concat("join Usuario usu on usu.idUsuario = pa.idUsuario ");
+        sql = sql.concat("join Usuario usu on usu.idUsuario = pa.idPersonalAdministrativo ");
         sql = sql.concat(" where ");
         sql = sql.concat(this.obtenerPredicadoParaLlavePrimaria());
         return sql;
@@ -296,13 +290,13 @@ public class PersonalAdministrativoDAOImpl extends DAOImpl implements PersonalAd
 
         try {
             if (abreConexion) this.abrirConexion();
-            String sql = "select idUsuario from PersonalAdministrativo where idUsuario=?";
+            String sql = "select idPersonalAdministrativo from PersonalAdministrativo where idPersonalAdministrativo=?";
             this.colocarSQLenStatement(sql);
             this.incluirParametroInt(1, personalAdministrativo.getIdUsuario());
             this.ejecutarConsultaEnBD(sql);
 
             if (this.resultSet.next()) {
-                idUsuario = this.resultSet.getInt("idUsuario");
+                idUsuario = this.resultSet.getInt("idPersonalAdministrativo");
             }
         } catch (SQLException ex) {
             System.err.println("Error al verificar existencia de personal - " + ex);

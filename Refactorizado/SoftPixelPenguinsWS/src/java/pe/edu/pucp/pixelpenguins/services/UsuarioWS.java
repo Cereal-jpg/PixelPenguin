@@ -79,4 +79,15 @@ public class UsuarioWS {
         return resultado;
     }
     
+    @WebMethod(operationName = "listarUsuariosPorNombre")
+    public ArrayList<Usuario> listarUsuariosPorNombre(@WebParam(name = "nombre") String nombre) {
+        ArrayList<Usuario> usuarios = null;
+        try {
+            usuarios = usuarioBO.listarUsuariosPorNombre(nombre);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return usuarios;
+    }
+    
 }

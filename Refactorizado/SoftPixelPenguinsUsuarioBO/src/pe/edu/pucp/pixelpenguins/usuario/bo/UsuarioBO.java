@@ -55,4 +55,8 @@ public class UsuarioBO {
         return this.usuarioDAO.existeUsuario(usuario);
     }
     
+    public ArrayList<Usuario> listarUsuariosPorNombre(String nombre) {
+        return this.usuarioDAO.listarUsuariosPorNombre(nombre);
+    }
+    
 }

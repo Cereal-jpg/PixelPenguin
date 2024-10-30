@@ -8,6 +8,8 @@
   <xs:element name="insertarUsuarioResponse" type="tns:insertarUsuarioResponse" />
   <xs:element name="listarTodosUsuarios" type="tns:listarTodosUsuarios" />
   <xs:element name="listarTodosUsuariosResponse" type="tns:listarTodosUsuariosResponse" />
+  <xs:element name="listarUsuariosPorNombre" type="tns:listarUsuariosPorNombre" />
+  <xs:element name="listarUsuariosPorNombreResponse" type="tns:listarUsuariosPorNombreResponse" />
   <xs:element name="modificarUsuario" type="tns:modificarUsuario" />
   <xs:element name="modificarUsuarioResponse" type="tns:modificarUsuarioResponse" />
   <xs:element name="obtenerUsuarioPorId" type="tns:obtenerUsuarioPorId" />
@@ -78,6 +80,16 @@
   <xs:complexType name="insertarUsuarioResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarUsuariosPorNombre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarUsuariosPorNombreResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:usuario" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarUsuario">

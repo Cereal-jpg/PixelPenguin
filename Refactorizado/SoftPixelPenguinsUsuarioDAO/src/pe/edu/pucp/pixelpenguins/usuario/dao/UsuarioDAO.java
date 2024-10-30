@@ -14,4 +14,5 @@ public interface UsuarioDAO {
     public ArrayList<Usuario> listarTodos();
     public Usuario obtenerPorId (Integer idUsuario);
     public Boolean existeUsuario(Usuario usuario);
+    public ArrayList<Usuario>listarUsuariosPorNombre(String nombre); 
 }

@@ -82,7 +82,7 @@ public class ProfesorDAOImpl extends DAOImpl implements ProfesorDAO {
 
     @Override
     protected String obtenerListaDeAtributosParaInsercion() {
-        return "idUsuario, codigoProfesor, certificadoHistorialEducativo, especialidad";
+        return "idProfesor, codigoProfesor, certificadoHistorialEducativo, especialidad";
     }
 
     @Override
@@ -161,13 +161,7 @@ public class ProfesorDAOImpl extends DAOImpl implements ProfesorDAO {
     
     @Override
     protected String obtenerPredicadoParaLlavePrimaria() {
-        String sql = "";
-        if (this.tipo_Operacion == Tipo_Operacion.MODIFICAR || this.tipo_Operacion == Tipo_Operacion.ELIMINAR) {
-            sql = "idUsuario=?";
-        } else {
-            sql = "usu.idUsuario=?";
-        }
-        return sql;
+        return "idProfesor=?";
     }
 
     @Override
@@ -232,7 +226,7 @@ public class ProfesorDAOImpl extends DAOImpl implements ProfesorDAO {
     @Override
     protected String obtenerProyeccionParaSelect() {
         String sql = "usu.idUsuario, usu.dni, usu.nombreCompleto, usu.fechaNacimiento,"
-                + " usu.direccion, usu.email, usu.sexo, usu.username, usu.passsword, usu.fid_rol";
+                + " usu.direccion, usu.email, usu.sexo, usu.username, usu.password, usu.fid_rol";
         sql = sql.concat(", pro.idProfesor, pro.codigoProfesor, pro.certificadoHistorialEducativo, pro.especialidad");
         return sql;
     }
@@ -254,7 +248,7 @@ public class ProfesorDAOImpl extends DAOImpl implements ProfesorDAO {
         this.profesor.setEmail(resultSet.getString("email"));
         this.profesor.setSexo(resultSet.getString("sexo"));
         this.profesor.setUsername(resultSet.getString("username"));
-        this.profesor.setPassword(resultSet.getString("passsword"));
+        this.profesor.setPassword(resultSet.getString("password"));
         this.profesor.setRol(new Rol(resultSet.getInt("fid_rol")));
         this.profesor.setCodigoProfesor(this.resultSet.getInt("codigoProfesor"));
         this.profesor.setCertificadoHistorialEducativo(this.resultSet.getBoolean("certificadoHistorialEducativo"));
@@ -274,7 +268,7 @@ public class ProfesorDAOImpl extends DAOImpl implements ProfesorDAO {
         String sql = "select ";
         sql = sql.concat(obtenerProyeccionParaSelect());
         sql = sql.concat(" from ").concat(this.nombre_tabla).concat(" pro ");
-        sql = sql.concat("join Usuario usu on usu.idUsuario = pro.idUsuario ");
+        sql = sql.concat("join Usuario usu on usu.idUsuario = pro.idProfesor ");
         sql = sql.concat(" where ");
         sql = sql.concat(this.obtenerPredicadoParaLlavePrimaria());
         return sql;
@@ -303,13 +297,13 @@ public class ProfesorDAOImpl extends DAOImpl implements ProfesorDAO {
 
         try {
             if (abreConexion) this.abrirConexion();
-            String sql = "select idUsuario from Profesor where idUsuario=?";
+            String sql = "select idProfesor from Profesor where idProfesor=?";
             this.colocarSQLenStatement(sql);
             this.incluirParametroInt(1, profesor.getIdUsuario());
             this.ejecutarConsultaEnBD(sql);
 
             if (this.resultSet.next()) {
-                idUsuario = this.resultSet.getInt("idUsuario");
+                idUsuario = this.resultSet.getInt("idProfesor");
             }
         } catch (SQLException ex) {
             System.err.println("Error al verificar existencia de profesor - " + ex);

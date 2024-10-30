@@ -154,7 +154,7 @@ public class AlumnoDAOImpl extends DAOImpl implements AlumnoDAO {
 
     @Override
     protected void incluirValorDeParametrosParaModificacion() throws SQLException {
-        this.incluirParametroInt(6, this.alumno.getIdUsuario());
+        this.incluirParametroInt(7, this.alumno.getIdUsuario());
         this.incluirParametroInt(1, this.alumno.getCodigoAlumno());
         this.incluirParametroBoolean(2, this.alumno.isConCertificadoDeEstudios());
         this.incluirParametroBoolean(3, this.alumno.isConCertificadoDeSalud());
@@ -313,7 +313,7 @@ public class AlumnoDAOImpl extends DAOImpl implements AlumnoDAO {
                 this.abrirConexion();
             }
             String sql = "select idAlumno from Alumno where ";
-            sql = sql.concat("idUsuario=? ");
+            sql = sql.concat("idAlumno=? ");
             this.colocarSQLenStatement(sql);
             this.incluirParametroInt(1, this.alumno.getIdUsuario());
             this.ejecutarConsultaEnBD(sql);

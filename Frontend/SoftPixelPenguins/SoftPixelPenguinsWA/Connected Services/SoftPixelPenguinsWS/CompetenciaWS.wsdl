@@ -17,17 +17,17 @@
   <message name="modificarCompetenciaResponse">
     <part name="parameters" element="tns:modificarCompetenciaResponse" />
   </message>
-  <message name="listarTodosCompetencias">
-    <part name="parameters" element="tns:listarTodosCompetencias" />
-  </message>
-  <message name="listarTodosCompetenciasResponse">
-    <part name="parameters" element="tns:listarTodosCompetenciasResponse" />
-  </message>
   <message name="obtenerCompetenciaPorId">
     <part name="parameters" element="tns:obtenerCompetenciaPorId" />
   </message>
   <message name="obtenerCompetenciaPorIdResponse">
     <part name="parameters" element="tns:obtenerCompetenciaPorIdResponse" />
+  </message>
+  <message name="listarTodosCompetencias">
+    <part name="parameters" element="tns:listarTodosCompetencias" />
+  </message>
+  <message name="listarTodosCompetenciasResponse">
+    <part name="parameters" element="tns:listarTodosCompetenciasResponse" />
   </message>
   <message name="insertarCompetencia">
     <part name="parameters" element="tns:insertarCompetencia" />
@@ -44,13 +44,13 @@
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/modificarCompetenciaRequest" message="tns:modificarCompetencia" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/modificarCompetenciaResponse" message="tns:modificarCompetenciaResponse" />
     </operation>
-    <operation name="listarTodosCompetencias">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/listarTodosCompetenciasRequest" message="tns:listarTodosCompetencias" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/listarTodosCompetenciasResponse" message="tns:listarTodosCompetenciasResponse" />
-    </operation>
     <operation name="obtenerCompetenciaPorId">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/obtenerCompetenciaPorIdRequest" message="tns:obtenerCompetenciaPorId" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/obtenerCompetenciaPorIdResponse" message="tns:obtenerCompetenciaPorIdResponse" />
+    </operation>
+    <operation name="listarTodosCompetencias">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/listarTodosCompetenciasRequest" message="tns:listarTodosCompetencias" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/listarTodosCompetenciasResponse" message="tns:listarTodosCompetenciasResponse" />
     </operation>
     <operation name="insertarCompetencia">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/insertarCompetenciaRequest" message="tns:insertarCompetencia" />
@@ -77,7 +77,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarTodosCompetencias">
+    <operation name="obtenerCompetenciaPorId">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -86,7 +86,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="obtenerCompetenciaPorId">
+    <operation name="listarTodosCompetencias">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

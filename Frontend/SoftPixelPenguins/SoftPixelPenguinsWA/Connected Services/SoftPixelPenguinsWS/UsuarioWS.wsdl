@@ -5,17 +5,17 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftPixelPenguinsWS/UsuarioWS?xsd=1" namespace="http://services.pixelpenguins.pucp.edu.pe" />
     </xsd:schema>
   </types>
-  <message name="modificarUsuario">
-    <part name="parameters" element="tns:modificarUsuario" />
-  </message>
-  <message name="modificarUsuarioResponse">
-    <part name="parameters" element="tns:modificarUsuarioResponse" />
-  </message>
   <message name="eliminarUsuario">
     <part name="parameters" element="tns:eliminarUsuario" />
   </message>
   <message name="eliminarUsuarioResponse">
     <part name="parameters" element="tns:eliminarUsuarioResponse" />
+  </message>
+  <message name="modificarUsuario">
+    <part name="parameters" element="tns:modificarUsuario" />
+  </message>
+  <message name="modificarUsuarioResponse">
+    <part name="parameters" element="tns:modificarUsuarioResponse" />
   </message>
   <message name="insertarUsuario">
     <part name="parameters" element="tns:insertarUsuario" />
@@ -41,14 +41,20 @@
   <message name="listarTodosUsuariosResponse">
     <part name="parameters" element="tns:listarTodosUsuariosResponse" />
   </message>
+  <message name="listarUsuariosPorNombre">
+    <part name="parameters" element="tns:listarUsuariosPorNombre" />
+  </message>
+  <message name="listarUsuariosPorNombreResponse">
+    <part name="parameters" element="tns:listarUsuariosPorNombreResponse" />
+  </message>
   <portType name="UsuarioWS">
-    <operation name="modificarUsuario">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/modificarUsuarioRequest" message="tns:modificarUsuario" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/modificarUsuarioResponse" message="tns:modificarUsuarioResponse" />
-    </operation>
     <operation name="eliminarUsuario">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/eliminarUsuarioRequest" message="tns:eliminarUsuario" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/eliminarUsuarioResponse" message="tns:eliminarUsuarioResponse" />
+    </operation>
+    <operation name="modificarUsuario">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/modificarUsuarioRequest" message="tns:modificarUsuario" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/modificarUsuarioResponse" message="tns:modificarUsuarioResponse" />
     </operation>
     <operation name="insertarUsuario">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/insertarUsuarioRequest" message="tns:insertarUsuario" />
@@ -66,10 +72,14 @@
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/listarTodosUsuariosRequest" message="tns:listarTodosUsuarios" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/listarTodosUsuariosResponse" message="tns:listarTodosUsuariosResponse" />
     </operation>
+    <operation name="listarUsuariosPorNombre">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/listarUsuariosPorNombreRequest" message="tns:listarUsuariosPorNombre" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/listarUsuariosPorNombreResponse" message="tns:listarUsuariosPorNombreResponse" />
+    </operation>
   </portType>
   <binding name="UsuarioWSPortBinding" type="tns:UsuarioWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="modificarUsuario">
+    <operation name="eliminarUsuario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -78,7 +88,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarUsuario">
+    <operation name="modificarUsuario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -115,6 +125,15 @@
       </output>
     </operation>
     <operation name="listarTodosUsuarios">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarUsuariosPorNombre">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

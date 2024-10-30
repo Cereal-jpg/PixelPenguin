@@ -93,6 +93,7 @@
     </None>
     <Content Include="MatriculaAlumno-0.aspx" />
     <Content Include="MatriculaAlumno-1.aspx" />
+    <Content Include="MatriculaGenerica-1.aspx" />
     <Content Include="RecuperarContraseña.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -579,6 +580,9 @@
     <Content Include="Connected Services\SoftPixelPenguinsWS\SoftPixelPenguinsWA.SoftPixelPenguinsWS.usuario.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\SoftPixelPenguinsWS\SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarUsuariosPorNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\SoftPixelPenguinsWS\SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarDatosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -663,6 +667,13 @@
     </Compile>
     <Compile Include="MatriculaAlumno-1.aspx.designer.cs">
       <DependentUpon>MatriculaAlumno-1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MatriculaGenerica-1.aspx.cs">
+      <DependentUpon>MatriculaGenerica-1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MatriculaGenerica-1.aspx.designer.cs">
+      <DependentUpon>MatriculaGenerica-1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Matricularce.aspx.cs">
       <DependentUpon>Matricularce.aspx</DependentUpon>

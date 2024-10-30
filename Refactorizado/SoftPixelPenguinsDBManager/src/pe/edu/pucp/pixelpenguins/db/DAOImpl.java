@@ -24,12 +24,14 @@ public abstract class DAOImpl {
     protected Boolean mostrarSentenciaSQL;
     protected Boolean retornarLlavePrimaria;
     protected Boolean usarTransaccion;
+    protected Boolean usarPredicadoParaListado;
     protected Tipo_Operacion tipo_Operacion;
 
     public DAOImpl(String nombre_tabla) {
         this.nombre_tabla = nombre_tabla;
         this.mostrarSentenciaSQL = true;
         this.retornarLlavePrimaria = false;
+        this.usarPredicadoParaListado = false;
         this.usarTransaccion = true;
         this.tipo_Operacion = null;
     }
@@ -192,7 +194,8 @@ public abstract class DAOImpl {
             this.abrirConexion();
             String sql = this.generarSQLParaListarTodos(limite);
             this.colocarSQLenStatement(sql);
-            this.incluirValorDeParametrosParaListado();
+            if(this.usarPredicadoParaListado)
+                this.incluirValorDeParametrosParaListado();
             this.ejecutarConsultaEnBD(sql);
             while (this.resultSet.next()) {
                 agregarObjetoALaLista(lista, this.resultSet);
@@ -213,7 +216,8 @@ public abstract class DAOImpl {
         String sql = "select ";
         sql = sql.concat(this.obtenerProyeccionParaSelect());
         sql = sql.concat(" from ").concat(this.nombre_tabla);
-        sql = sql.concat(this.obtenerPredicadoParaListado());
+        if(this.usarPredicadoParaListado)
+            sql = sql.concat(this.obtenerPredicadoParaListado());
         if (limite != null && limite > 0) {
             sql = sql.concat(" limit ").concat(limite.toString());
         }

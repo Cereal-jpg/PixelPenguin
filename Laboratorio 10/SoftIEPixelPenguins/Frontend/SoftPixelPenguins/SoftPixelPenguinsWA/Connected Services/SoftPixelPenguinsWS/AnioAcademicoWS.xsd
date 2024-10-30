@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.pixelpenguins.pucp.edu.pe" targetNamespace="http://services.pixelpenguins.pucp.edu.pe" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarAnioAcademico" type="tns:eliminarAnioAcademico" />
+  <xs:element name="eliminarAnioAcademicoResponse" type="tns:eliminarAnioAcademicoResponse" />
+  <xs:element name="insertarAnioAcademico" type="tns:insertarAnioAcademico" />
+  <xs:element name="insertarAnioAcademicoResponse" type="tns:insertarAnioAcademicoResponse" />
+  <xs:element name="listarTodosAniosAcademicos" type="tns:listarTodosAniosAcademicos" />
+  <xs:element name="listarTodosAniosAcademicosResponse" type="tns:listarTodosAniosAcademicosResponse" />
+  <xs:element name="modificarAnioAcademico" type="tns:modificarAnioAcademico" />
+  <xs:element name="modificarAnioAcademicoResponse" type="tns:modificarAnioAcademicoResponse" />
+  <xs:element name="obtenerAnioAcademicoPorId" type="tns:obtenerAnioAcademicoPorId" />
+  <xs:element name="obtenerAnioAcademicoPorIdResponse" type="tns:obtenerAnioAcademicoPorIdResponse" />
+  <xs:complexType name="modificarAnioAcademico">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="anioAcademico" type="tns:anioAcademico" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="anioAcademico">
+    <xs:sequence>
+      <xs:element name="anio" type="xs:int" />
+      <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
+      <xs:element name="idAnioAcademico" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarAnioAcademicoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAnioAcademico">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="anioAcademico" type="tns:anioAcademico" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAnioAcademicoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarAnioAcademico">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="anioAcademico" type="tns:anioAcademico" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarAnioAcademicoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerAnioAcademicoPorId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idAnioAcademico" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerAnioAcademicoPorIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:anioAcademico" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodosAniosAcademicos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosAniosAcademicosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:anioAcademico" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

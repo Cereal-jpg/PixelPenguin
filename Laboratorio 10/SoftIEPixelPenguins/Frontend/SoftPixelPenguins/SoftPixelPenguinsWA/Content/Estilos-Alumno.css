@@ -1,0 +1,163 @@
+﻿body {
+    margin: 0;
+    font-family: Arial, sans-serif; /* Cambiar fuente por defecto */
+}
+
+.container-al {
+    display: flex; /* Usar flexbox para organizar el layout */
+    width: 100%; /* Ancho completo */
+    margin-top: 20px; /* Espacio arriba */
+    background-color: transparent;
+}
+
+.schedule {
+    flex: 3; /* Ocupa 3 partes del contenedor */
+    padding: 20px; /* Espacio interno */
+    background-color: #fff; /* Color de fondo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.container-matricula {
+    display: flex; /* Usar flexbox para organizar el layout */
+    width: 100%; /* Ancho completo */
+    margin-top: 20px; /* Espacio arriba */
+    background-color: aliceblue;
+    padding: 20px;
+}
+
+.matricula-section {
+    flex: 1;
+    margin-right: 5px;
+}
+
+.button-container {
+    margin-top: 20px; /* Espacio entre el texto y el botón */
+    display: flex;
+    justify-content: center;
+}
+
+.image-section {
+    flex: 1;
+    text-align: center; /* Centrar la imagen */
+}
+
+.btn-matricula {
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px 15px; /* Espaciado interno ajustado */
+    text-align: center; /* Centrando el texto */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Para que funcione el padding */
+    font-size: 16px; /* Tamaño de fuente */
+    margin: 4px 0; /* Margen alrededor */
+    cursor: pointer; /* Cambiar cursor al pasar el mouse */
+    border-radius: 5px; /* Bordes redondeados */
+    max-width: 150px; /* Ancho máximo del botón */
+    width: auto; /* Ancho automático según contenido */
+}
+
+
+.notifications {
+    flex: 1; /* Ocupa 1 parte del contenedor */
+    margin-left: 20px; /* Espacio a la izquierda */
+    padding: 20px; /* Espacio interno */
+    background-color: #fff; /* Color de fondo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h2 {
+    color: #4CAF50; /* Color verde para el título principal */
+    font-size: 24px; /* Tamaño del texto */
+    text-align: left; /* Alineación a la izquierda */
+    margin-bottom: 20px; /* Espacio debajo del título */
+    border-bottom: 2px solid #000000; /* Línea debajo del título */
+    padding-bottom: 10px; /* Espacio interno debajo del título */
+}
+
+h3 {
+    color: #333;
+    margin-bottom: 15px;
+    text-align: left; /* Alineación a la izquierda */
+    font-size: 20px; /* Tamaño del texto */
+    border-bottom: 2px solid #000000; /* Línea debajo del título */
+    padding-bottom: 10px; /* Espacio interno debajo del título */
+}
+
+
+.notification-list {
+    list-style-type: none; /* Quitar los puntos de la lista solo en la sección de notificaciones */
+    padding: 0;
+}
+
+    .notification-list li {
+        background-color: #e3f2fd; /* Color de fondo para las notificaciones */
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra para las notificaciones */
+    }
+
+.icon-color {
+    color: #ffcc00; /* Color del ícono (puedes cambiarlo) */
+    font-size: 24px; /* Tamaño del ícono */
+    margin-right: 8px; /* Espacio entre el ícono y el texto */
+    transition: color 0.3s; /* Efecto de transición al pasar el mouse */
+}
+
+    .icon-color:hover {
+        color: #ff6600; /* Cambia el color al pasar el mouse */
+    }
+
+
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 400px;
+}
+
+.progress-bar {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 4px;
+    background-color: #4CAF50;
+    z-index: 0;
+    transition: width 0.3s ease;
+    width: 0%;
+}
+
+.progress-step {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ccc;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: white;
+}
+
+    .progress-step.active {
+        background-color: #4CAF50;
+    }
+
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}

@@ -327,7 +327,7 @@
                         <div class="progress-step active">4</div>
                     </div>
                 </div>
-                <p style="text-align:center;">Gracias por concluir con los pasos correspondientes para el proceso de matrícula. Usted ha sido matriculado en el periodo 2025 con éxito. Se le enviará un correo con toda la información de su matrícula.</p>
+                <p style="text-align:center;">Gracias por concluir con los pasos correspondientes para el proceso de matrícula. Los datos han pasado al proceso de revisión. Se le enviará un correo con toda la información de su matrícula.</p>
 
                 <div class="buttons">
     <asp:Button ID="btnTerminarProceso" runat="server" Text="Terminar proceso de matrícula"

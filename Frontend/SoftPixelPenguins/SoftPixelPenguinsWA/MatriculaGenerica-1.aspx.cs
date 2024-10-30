@@ -7,16 +7,16 @@ using System.Web.UI.WebControls;
 
 namespace SoftPixelPenguinsWA
 {
-    public partial class ProcesoMatricula : System.Web.UI.Page
+    public partial class MatriculaGenerica_1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
-        protected void IniciarMatricula_Click(object sender, EventArgs e)
+        protected void btnTerminarProceso_Click(object sender, EventArgs e)
         {
-            Response.Redirect("MatriculaGenerica-1.aspx");
+            // Redirigir a IndexAlumno.aspx
+            Response.Redirect("Login.aspx");
         }
     }
 }

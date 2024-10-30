@@ -5,12 +5,6 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftPixelPenguinsWS/HoraAcademicaWS?xsd=1" namespace="http://services.pixelpenguins.pucp.edu.pe" />
     </xsd:schema>
   </types>
-  <message name="modificarHoraAcademica">
-    <part name="parameters" element="tns:modificarHoraAcademica" />
-  </message>
-  <message name="modificarHoraAcademicaResponse">
-    <part name="parameters" element="tns:modificarHoraAcademicaResponse" />
-  </message>
   <message name="eliminarHoraAcademica">
     <part name="parameters" element="tns:eliminarHoraAcademica" />
   </message>
@@ -35,11 +29,13 @@
   <message name="obtenerHoraAcademicaPorIdResponse">
     <part name="parameters" element="tns:obtenerHoraAcademicaPorIdResponse" />
   </message>
+  <message name="modificarHoraAcademica">
+    <part name="parameters" element="tns:modificarHoraAcademica" />
+  </message>
+  <message name="modificarHoraAcademicaResponse">
+    <part name="parameters" element="tns:modificarHoraAcademicaResponse" />
+  </message>
   <portType name="HoraAcademicaWS">
-    <operation name="modificarHoraAcademica">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/modificarHoraAcademicaRequest" message="tns:modificarHoraAcademica" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/modificarHoraAcademicaResponse" message="tns:modificarHoraAcademicaResponse" />
-    </operation>
     <operation name="eliminarHoraAcademica">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/eliminarHoraAcademicaRequest" message="tns:eliminarHoraAcademica" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/eliminarHoraAcademicaResponse" message="tns:eliminarHoraAcademicaResponse" />
@@ -56,18 +52,13 @@
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/obtenerHoraAcademicaPorIdRequest" message="tns:obtenerHoraAcademicaPorId" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/obtenerHoraAcademicaPorIdResponse" message="tns:obtenerHoraAcademicaPorIdResponse" />
     </operation>
+    <operation name="modificarHoraAcademica">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/modificarHoraAcademicaRequest" message="tns:modificarHoraAcademica" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/modificarHoraAcademicaResponse" message="tns:modificarHoraAcademicaResponse" />
+    </operation>
   </portType>
   <binding name="HoraAcademicaWSPortBinding" type="tns:HoraAcademicaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="modificarHoraAcademica">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="eliminarHoraAcademica">
       <soap:operation soapAction="" />
       <input>
@@ -96,6 +87,15 @@
       </output>
     </operation>
     <operation name="obtenerHoraAcademicaPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarHoraAcademica">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

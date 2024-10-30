@@ -167,7 +167,7 @@ public class UsuarioDAOImpl extends DAOImpl implements UsuarioDAO {
     protected void incluirValorDeParametrosParaObtenerPorId() throws SQLException {
         this.incluirParametroInt(1, usuario.getIdUsuario());
     }
-
+    
     @Override
     protected void limpiarObjetoDelResultSet() {
         this.usuario = null;
@@ -199,5 +199,38 @@ public class UsuarioDAOImpl extends DAOImpl implements UsuarioDAO {
         }
         return idUsuario != null;
     }
+
+    @Override
+    
+
+    public Integer ValidarDatos(String email, String contra) {
+        Integer userId = null;
+
+        try {
+            this.abrirConexion();
+            String sql = "SELECT idUsuario FROM Usuario WHERE email = ? AND password = ?";
+            this.colocarSQLenStatement(sql);
+            this.incluirParametroString(1, email);
+            this.incluirParametroString(2, contra);
+            this.ejecutarConsultaEnBD(sql);
+
+            if (this.resultSet.next()) {
+                userId = this.resultSet.getInt("idUsuario");
+            }
+        } catch (SQLException ex) {
+            System.err.println("Error al consultar si existe usuario - " + ex);
+        } finally {
+            try {
+                this.cerrarConexion();
+            } catch (SQLException ex) {
+                System.err.println("Error al cerrar la conexión - " + ex);
+            }
+        }
+
+        return userId;
+    }
+
+
+    
     
 }

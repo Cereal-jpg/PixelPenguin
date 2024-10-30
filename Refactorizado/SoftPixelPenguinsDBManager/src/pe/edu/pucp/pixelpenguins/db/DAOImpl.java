@@ -253,7 +253,9 @@ public abstract class DAOImpl {
             }
         }
     }
+    // obtener por usuario y contrase;a
 
+    
     protected String generarSQLParaListarPorId() {
         String sql = "select ";
         sql = sql.concat(this.obtenerProyeccionParaSelect());

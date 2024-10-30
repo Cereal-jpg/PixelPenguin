@@ -55,4 +55,7 @@ public class UsuarioBO {
         return this.usuarioDAO.existeUsuario(usuario);
     }
     
+    public Integer ValidarDatos(String email,String password){
+        return this.usuarioDAO.ValidarDatos(email, password);
+    }
 }

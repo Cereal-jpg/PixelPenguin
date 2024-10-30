@@ -33,36 +33,43 @@ public class Principal {
 //            System.out.println("El anio academico fue modificado correctamente");
 //        String prueba=Cifrado.descifrarMD5("Fi2ehKwkNK/vyG9ZtsV/NG17zoM7l9Zl1qMHzitTmvQ=");
 //        System.out.println(prueba);
-        DBManager.getInstance().getConnection();
-        System.out.println(DBManager.getInstance());
-        ApoderadoBO apoderadoBO= new ApoderadoBO();
-//        if(apoderadoBO.insertar("1234", "Juan Perez", "999888777", "Padre")!=0)
-//            System.out.println("El apoderado se inserto correctamente");
-        ArrayList<Apoderado> apoderados=apoderadoBO.listarTodos();
-//        for(Apoderado aux:apoderados){
-//            System.out.println(aux.getDni());
-//        }
-        
-        GradoAcademicoBO gradoBO=new GradoAcademicoBO();
-//        if(gradoBO.insertar(2, NivelEducativo.PRIMARIO, 60, 90, 1)!=0)
-//            System.out.println("El grado academico se inserto correctamente");
-        ArrayList<GradoAcademico> grados=gradoBO.listarTodos();
-        RolBO rolBO=new RolBO();
+//        DBManager.getInstance().getConnection();
+//        System.out.println(DBManager.getInstance());
+//        ApoderadoBO apoderadoBO= new ApoderadoBO();
+////        if(apoderadoBO.insertar("1234", "Juan Perez", "999888777", "Padre")!=0)
+////            System.out.println("El apoderado se inserto correctamente");
+//        ArrayList<Apoderado> apoderados=apoderadoBO.listarTodos();
+////        for(Apoderado aux:apoderados){
+////            System.out.println(aux.getDni());
+////        }
+//        
+//        GradoAcademicoBO gradoBO=new GradoAcademicoBO();
+////        if(gradoBO.insertar(2, NivelEducativo.PRIMARIO, 60, 90, 1)!=0)
+////            System.out.println("El grado academico se inserto correctamente");
+//        ArrayList<GradoAcademico> grados=gradoBO.listarTodos();
+//        RolBO rolBO=new RolBO();
 //        rolBO.insertar("Estudiante");
 //        rolBO.insertar("Profesor");
 //        if(rolBO.insertar("P. Admin.")!=0)
 //            System.out.println("El rol se inserto correctamente");
-        ArrayList<Rol> roles=rolBO.listarTodos();
-        for(Rol aux:roles)
-            System.out.println(aux.getNombre());
-        UsuarioBO usuarioBO=new UsuarioBO();
-        for(Usuario u : usuarioBO.listarTodos()){
-            System.out.println(u.getNombreCompleto());
-        }
+//        ArrayList<Rol> roles=rolBO.listarTodos();
+//        for(Rol aux:roles)
+//            System.out.println(aux.getNombre());
+//        UsuarioBO usuarioBO=new UsuarioBO();
+//        for(Usuario u : usuarioBO.listarTodos()){
+//            System.out.println(u.getNombreCompleto());
+//        }
 //        if(usuarioBO.insertar("12346", "Manuel Perez", sdf.parse("10-05-2005"), "Av. prueba", "manuel@pucp.edu.pe", "Masculino", "a12345", "password", roles.get(0))!=0)
 //            System.out.println("El usuario fue insertado correctamente");
-        AlumnoBO alumnoBO=new AlumnoBO();
-        if(alumnoBO.insertar(2022, true, true, true, apoderados.get(0),grados.get(0),"12348","Manuel Prueba 2",sdf.parse("10-15-2005"),"Av. prueba", "manuel@pucp.edu.pe","Masculino","a12345","password", roles.get(0))!=0)
-            System.out.println("El alumno fue insertado correctamente");
+//        AlumnoBO alumnoBO=new AlumnoBO();
+//        if(alumnoBO.insertar(2022, true, true, true, apoderados.get(0),grados.get(0),"12348","Manuel Prueba 2",sdf.parse("10-15-2005"),"Av. prueba", "manuel@pucp.edu.pe","Masculino","a12345","password", roles.get(0))!=0)
+//            System.out.println("El alumno fue insertado correctamente");
+        
+        
+        UsuarioBO usuarioBO = new UsuarioBO();
+        Integer a =usuarioBO.ValidarDatos("a", "a");
+        if(a!=null)
+        System.out.println(a);
+        
     }
 }

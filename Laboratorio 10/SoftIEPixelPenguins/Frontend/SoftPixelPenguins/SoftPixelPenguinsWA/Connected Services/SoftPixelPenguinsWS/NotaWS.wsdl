@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.pixelpenguins.pucp.edu.pe" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="NotaWS" targetNamespace="http://services.pixelpenguins.pucp.edu.pe" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/SoftPixelPenguinsWS/NotaWS?xsd=1" namespace="http://services.pixelpenguins.pucp.edu.pe" />
+    </xsd:schema>
+  </types>
+  <message name="obtenerNotaPorId">
+    <part name="parameters" element="tns:obtenerNotaPorId" />
+  </message>
+  <message name="obtenerNotaPorIdResponse">
+    <part name="parameters" element="tns:obtenerNotaPorIdResponse" />
+  </message>
+  <message name="listarTodosNotas">
+    <part name="parameters" element="tns:listarTodosNotas" />
+  </message>
+  <message name="listarTodosNotasResponse">
+    <part name="parameters" element="tns:listarTodosNotasResponse" />
+  </message>
+  <message name="modificarNota">
+    <part name="parameters" element="tns:modificarNota" />
+  </message>
+  <message name="modificarNotaResponse">
+    <part name="parameters" element="tns:modificarNotaResponse" />
+  </message>
+  <message name="eliminarNota">
+    <part name="parameters" element="tns:eliminarNota" />
+  </message>
+  <message name="eliminarNotaResponse">
+    <part name="parameters" element="tns:eliminarNotaResponse" />
+  </message>
+  <message name="insertarNota">
+    <part name="parameters" element="tns:insertarNota" />
+  </message>
+  <message name="insertarNotaResponse">
+    <part name="parameters" element="tns:insertarNotaResponse" />
+  </message>
+  <portType name="NotaWS">
+    <operation name="obtenerNotaPorId">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/obtenerNotaPorIdRequest" message="tns:obtenerNotaPorId" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/obtenerNotaPorIdResponse" message="tns:obtenerNotaPorIdResponse" />
+    </operation>
+    <operation name="listarTodosNotas">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/listarTodosNotasRequest" message="tns:listarTodosNotas" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/listarTodosNotasResponse" message="tns:listarTodosNotasResponse" />
+    </operation>
+    <operation name="modificarNota">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/modificarNotaRequest" message="tns:modificarNota" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/modificarNotaResponse" message="tns:modificarNotaResponse" />
+    </operation>
+    <operation name="eliminarNota">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/eliminarNotaRequest" message="tns:eliminarNota" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/eliminarNotaResponse" message="tns:eliminarNotaResponse" />
+    </operation>
+    <operation name="insertarNota">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/insertarNotaRequest" message="tns:insertarNota" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/insertarNotaResponse" message="tns:insertarNotaResponse" />
+    </operation>
+  </portType>
+  <binding name="NotaWSPortBinding" type="tns:NotaWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="obtenerNotaPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosNotas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarNota">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarNota">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarNota">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="NotaWS">
+    <port name="NotaWSPort" binding="tns:NotaWSPortBinding">
+      <soap:address location="http://localhost:8080/SoftPixelPenguinsWS/NotaWS" />
+    </port>
+  </service>
+</definitions>

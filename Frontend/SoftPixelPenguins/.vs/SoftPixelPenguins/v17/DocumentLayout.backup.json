@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\papar\\PixelPenguin\\Frontend\\SoftPixelPenguins\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|C:\\Users\\papar\\PixelPenguin\\Frontend\\SoftPixelPenguins\\softpixelpenguinswa\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|c:\\users\\papar\\pixelpenguin\\frontend\\softpixelpenguins\\softpixelpenguinswa\\procesomatricula.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\procesomatricula.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|C:\\Users\\papar\\PixelPenguin\\Frontend\\SoftPixelPenguins\\softpixelpenguinswa\\indexalumno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\indexalumno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|C:\\Users\\papar\\PixelPenguin\\Frontend\\SoftPixelPenguins\\softpixelpenguinswa\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\login.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|C:\\Users\\papar\\PixelPenguin\\Frontend\\SoftPixelPenguins\\softpixelpenguinswa\\gestionarusuarios.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,7 +58,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ProcesoMatricula.aspx",
               "DocumentMoniker": "C:\\Users\\papar\\PixelPenguin\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\ProcesoMatricula.aspx",
               "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\ProcesoMatricula.aspx",
@@ -71,7 +71,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "SoftPixelPenguins.Master",
               "DocumentMoniker": "C:\\Users\\papar\\PixelPenguin\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\SoftPixelPenguins.Master",
               "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\SoftPixelPenguins.Master",
@@ -83,7 +83,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "MatriculaAlumno-1.aspx",
               "DocumentMoniker": "C:\\Users\\papar\\PixelPenguin\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\MatriculaAlumno-1.aspx",
               "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\MatriculaAlumno-1.aspx",
@@ -95,7 +95,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "MatriculaAlumno-0.aspx",
               "DocumentMoniker": "C:\\Users\\papar\\PixelPenguin\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\MatriculaAlumno-0.aspx",
               "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\MatriculaAlumno-0.aspx",
@@ -107,7 +107,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "IndexAlumno.aspx",
               "DocumentMoniker": "C:\\Users\\papar\\PixelPenguin\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\IndexAlumno.aspx",
               "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\IndexAlumno.aspx",
@@ -132,15 +132,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "Login.aspx.cs",
               "DocumentMoniker": "C:\\Users\\papar\\PixelPenguin\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\Login.aspx.cs",
               "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\Login.aspx.cs",
               "ToolTip": "C:\\Users\\papar\\PixelPenguin\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\Login.aspx.cs",
               "RelativeToolTip": "SoftPixelPenguinsWA\\Login.aspx.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAwwC0AAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAwBkAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T05:41:27.013Z"
+              "WhenOpened": "2024-10-30T05:41:27.013Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

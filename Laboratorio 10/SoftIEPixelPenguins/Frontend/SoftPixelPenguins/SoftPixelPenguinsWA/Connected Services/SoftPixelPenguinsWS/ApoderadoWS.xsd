@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.pixelpenguins.pucp.edu.pe" targetNamespace="http://services.pixelpenguins.pucp.edu.pe" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarApoderado" type="tns:eliminarApoderado" />
+  <xs:element name="eliminarApoderadoResponse" type="tns:eliminarApoderadoResponse" />
+  <xs:element name="insertarApoderado" type="tns:insertarApoderado" />
+  <xs:element name="insertarApoderadoResponse" type="tns:insertarApoderadoResponse" />
+  <xs:element name="listarTodosApoderados" type="tns:listarTodosApoderados" />
+  <xs:element name="listarTodosApoderadosResponse" type="tns:listarTodosApoderadosResponse" />
+  <xs:element name="modificarApoderado" type="tns:modificarApoderado" />
+  <xs:element name="modificarApoderadoResponse" type="tns:modificarApoderadoResponse" />
+  <xs:element name="obtenerApoderadoPorId" type="tns:obtenerApoderadoPorId" />
+  <xs:element name="obtenerApoderadoPorIdResponse" type="tns:obtenerApoderadoPorIdResponse" />
+  <xs:complexType name="eliminarApoderado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apoderado" type="tns:apoderado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="apoderado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dni" type="xs:string" />
+      <xs:element name="idApoderado" type="xs:int" />
+      <xs:element minOccurs="0" name="nombreCompleto" type="xs:string" />
+      <xs:element minOccurs="0" name="relacion" type="xs:string" />
+      <xs:element minOccurs="0" name="telefono" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarApoderadoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarApoderado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apoderado" type="tns:apoderado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarApoderadoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarApoderado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="apoderado" type="tns:apoderado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarApoderadoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodosApoderados">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosApoderadosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:apoderado" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerApoderadoPorId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idApoderado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerApoderadoPorIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:apoderado" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

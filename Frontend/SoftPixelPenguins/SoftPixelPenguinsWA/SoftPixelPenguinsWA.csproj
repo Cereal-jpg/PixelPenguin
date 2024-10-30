@@ -670,6 +670,7 @@
     </Compile>
     <Compile Include="MatriculaGenerica-1.aspx.cs">
       <DependentUpon>MatriculaGenerica-1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="MatriculaGenerica-1.aspx.designer.cs">
       <DependentUpon>MatriculaGenerica-1.aspx</DependentUpon>

@@ -11,18 +11,6 @@
   <message name="listarTodosNotasResponse">
     <part name="parameters" element="tns:listarTodosNotasResponse" />
   </message>
-  <message name="insertarNota">
-    <part name="parameters" element="tns:insertarNota" />
-  </message>
-  <message name="insertarNotaResponse">
-    <part name="parameters" element="tns:insertarNotaResponse" />
-  </message>
-  <message name="modificarNota">
-    <part name="parameters" element="tns:modificarNota" />
-  </message>
-  <message name="modificarNotaResponse">
-    <part name="parameters" element="tns:modificarNotaResponse" />
-  </message>
   <message name="obtenerNotaPorId">
     <part name="parameters" element="tns:obtenerNotaPorId" />
   </message>
@@ -35,18 +23,22 @@
   <message name="eliminarNotaResponse">
     <part name="parameters" element="tns:eliminarNotaResponse" />
   </message>
+  <message name="insertarNota">
+    <part name="parameters" element="tns:insertarNota" />
+  </message>
+  <message name="insertarNotaResponse">
+    <part name="parameters" element="tns:insertarNotaResponse" />
+  </message>
+  <message name="modificarNota">
+    <part name="parameters" element="tns:modificarNota" />
+  </message>
+  <message name="modificarNotaResponse">
+    <part name="parameters" element="tns:modificarNotaResponse" />
+  </message>
   <portType name="NotaWS">
     <operation name="listarTodosNotas">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/listarTodosNotasRequest" message="tns:listarTodosNotas" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/listarTodosNotasResponse" message="tns:listarTodosNotasResponse" />
-    </operation>
-    <operation name="insertarNota">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/insertarNotaRequest" message="tns:insertarNota" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/insertarNotaResponse" message="tns:insertarNotaResponse" />
-    </operation>
-    <operation name="modificarNota">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/modificarNotaRequest" message="tns:modificarNota" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/modificarNotaResponse" message="tns:modificarNotaResponse" />
     </operation>
     <operation name="obtenerNotaPorId">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/obtenerNotaPorIdRequest" message="tns:obtenerNotaPorId" />
@@ -55,6 +47,14 @@
     <operation name="eliminarNota">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/eliminarNotaRequest" message="tns:eliminarNota" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/eliminarNotaResponse" message="tns:eliminarNotaResponse" />
+    </operation>
+    <operation name="insertarNota">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/insertarNotaRequest" message="tns:insertarNota" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/insertarNotaResponse" message="tns:insertarNotaResponse" />
+    </operation>
+    <operation name="modificarNota">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/modificarNotaRequest" message="tns:modificarNota" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/modificarNotaResponse" message="tns:modificarNotaResponse" />
     </operation>
   </portType>
   <binding name="NotaWSPortBinding" type="tns:NotaWS">
@@ -68,24 +68,6 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarNota">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="modificarNota">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="obtenerNotaPorId">
       <soap:operation soapAction="" />
       <input>
@@ -96,6 +78,24 @@
       </output>
     </operation>
     <operation name="eliminarNota">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarNota">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarNota">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

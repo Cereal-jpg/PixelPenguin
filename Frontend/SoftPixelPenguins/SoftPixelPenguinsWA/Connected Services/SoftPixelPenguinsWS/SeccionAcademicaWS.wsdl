@@ -23,17 +23,17 @@
   <message name="insertarSeccionAcademicaResponse">
     <part name="parameters" element="tns:insertarSeccionAcademicaResponse" />
   </message>
-  <message name="modificarSeccionAcademica">
-    <part name="parameters" element="tns:modificarSeccionAcademica" />
-  </message>
-  <message name="modificarSeccionAcademicaResponse">
-    <part name="parameters" element="tns:modificarSeccionAcademicaResponse" />
-  </message>
   <message name="eliminarSeccionAcademica">
     <part name="parameters" element="tns:eliminarSeccionAcademica" />
   </message>
   <message name="eliminarSeccionAcademicaResponse">
     <part name="parameters" element="tns:eliminarSeccionAcademicaResponse" />
+  </message>
+  <message name="modificarSeccionAcademica">
+    <part name="parameters" element="tns:modificarSeccionAcademica" />
+  </message>
+  <message name="modificarSeccionAcademicaResponse">
+    <part name="parameters" element="tns:modificarSeccionAcademicaResponse" />
   </message>
   <portType name="SeccionAcademicaWS">
     <operation name="obtenerSeccionAcademicaPorId">
@@ -48,13 +48,13 @@
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/insertarSeccionAcademicaRequest" message="tns:insertarSeccionAcademica" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/insertarSeccionAcademicaResponse" message="tns:insertarSeccionAcademicaResponse" />
     </operation>
-    <operation name="modificarSeccionAcademica">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/modificarSeccionAcademicaRequest" message="tns:modificarSeccionAcademica" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/modificarSeccionAcademicaResponse" message="tns:modificarSeccionAcademicaResponse" />
-    </operation>
     <operation name="eliminarSeccionAcademica">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/eliminarSeccionAcademicaRequest" message="tns:eliminarSeccionAcademica" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/eliminarSeccionAcademicaResponse" message="tns:eliminarSeccionAcademicaResponse" />
+    </operation>
+    <operation name="modificarSeccionAcademica">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/modificarSeccionAcademicaRequest" message="tns:modificarSeccionAcademica" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/modificarSeccionAcademicaResponse" message="tns:modificarSeccionAcademicaResponse" />
     </operation>
   </portType>
   <binding name="SeccionAcademicaWSPortBinding" type="tns:SeccionAcademicaWS">
@@ -86,7 +86,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarSeccionAcademica">
+    <operation name="eliminarSeccionAcademica">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -95,7 +95,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarSeccionAcademica">
+    <operation name="modificarSeccionAcademica">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

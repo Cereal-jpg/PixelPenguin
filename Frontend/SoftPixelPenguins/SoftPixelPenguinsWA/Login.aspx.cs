@@ -13,7 +13,7 @@ namespace SoftPixelPenguinsWA
         private UsuarioWSClient usuarioWSClient = new UsuarioWSClient();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected bool validarCredenciales(string Email, string Password)
@@ -45,10 +45,16 @@ namespace SoftPixelPenguinsWA
                         break;
                 }
             }
+            else
+            {
+                errorMessage.Text = "<span class='error-icon'>⚠️</span><span class='error-text'>Ocurrió un error al procesar su solicitud. Por favor, inténtelo de nuevo más tarde.</span>";
+                errorMessage.Visible = true;
 
-            
+            }
 
 
+
+            /*
             // Ejemplo simple de validación.
             if (validarCredenciales(Email,Password))
             {
@@ -60,6 +66,7 @@ namespace SoftPixelPenguinsWA
                 errorMessage.Text = "Correo electrónico o contraseña incorrectos.";
                 errorMessage.Visible = true;
             }
+            */
         }
 
         protected void forgotPasswordButton_Click(object sender, EventArgs e)

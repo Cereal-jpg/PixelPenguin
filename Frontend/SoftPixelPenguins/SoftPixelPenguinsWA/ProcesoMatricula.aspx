@@ -101,7 +101,7 @@
                     <h3 class="form-title">¿Desea iniciar con su proceso de matrícula?</h3>
                     <br>
                     <div class="button-container">
-                        <asp:Button ID="IniciarMatricula" runat="server" Text="Iniciar Proceso de matrícula" CssClass="button-container" />
+                        <asp:Button ID="IniciarMatricula" runat="server" Text="Iniciar Proceso de matrícula" CssClass="button-container" OnClick="IniciarMatricula_Click"/>
                     </div>
                 </div>
             </div>

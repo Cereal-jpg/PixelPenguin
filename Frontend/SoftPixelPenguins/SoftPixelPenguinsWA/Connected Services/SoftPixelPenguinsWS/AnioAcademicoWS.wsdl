@@ -11,12 +11,6 @@
   <message name="insertarAnioAcademicoResponse">
     <part name="parameters" element="tns:insertarAnioAcademicoResponse" />
   </message>
-  <message name="eliminarAnioAcademico">
-    <part name="parameters" element="tns:eliminarAnioAcademico" />
-  </message>
-  <message name="eliminarAnioAcademicoResponse">
-    <part name="parameters" element="tns:eliminarAnioAcademicoResponse" />
-  </message>
   <message name="modificarAnioAcademico">
     <part name="parameters" element="tns:modificarAnioAcademico" />
   </message>
@@ -29,6 +23,12 @@
   <message name="listarTodosAniosAcademicosResponse">
     <part name="parameters" element="tns:listarTodosAniosAcademicosResponse" />
   </message>
+  <message name="eliminarAnioAcademico">
+    <part name="parameters" element="tns:eliminarAnioAcademico" />
+  </message>
+  <message name="eliminarAnioAcademicoResponse">
+    <part name="parameters" element="tns:eliminarAnioAcademicoResponse" />
+  </message>
   <message name="obtenerAnioAcademicoPorId">
     <part name="parameters" element="tns:obtenerAnioAcademicoPorId" />
   </message>
@@ -40,10 +40,6 @@
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/insertarAnioAcademicoRequest" message="tns:insertarAnioAcademico" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/insertarAnioAcademicoResponse" message="tns:insertarAnioAcademicoResponse" />
     </operation>
-    <operation name="eliminarAnioAcademico">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/eliminarAnioAcademicoRequest" message="tns:eliminarAnioAcademico" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/eliminarAnioAcademicoResponse" message="tns:eliminarAnioAcademicoResponse" />
-    </operation>
     <operation name="modificarAnioAcademico">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/modificarAnioAcademicoRequest" message="tns:modificarAnioAcademico" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/modificarAnioAcademicoResponse" message="tns:modificarAnioAcademicoResponse" />
@@ -51,6 +47,10 @@
     <operation name="listarTodosAniosAcademicos">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/listarTodosAniosAcademicosRequest" message="tns:listarTodosAniosAcademicos" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/listarTodosAniosAcademicosResponse" message="tns:listarTodosAniosAcademicosResponse" />
+    </operation>
+    <operation name="eliminarAnioAcademico">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/eliminarAnioAcademicoRequest" message="tns:eliminarAnioAcademico" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/eliminarAnioAcademicoResponse" message="tns:eliminarAnioAcademicoResponse" />
     </operation>
     <operation name="obtenerAnioAcademicoPorId">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/obtenerAnioAcademicoPorIdRequest" message="tns:obtenerAnioAcademicoPorId" />
@@ -68,15 +68,6 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarAnioAcademico">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="modificarAnioAcademico">
       <soap:operation soapAction="" />
       <input>
@@ -87,6 +78,15 @@
       </output>
     </operation>
     <operation name="listarTodosAniosAcademicos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarAnioAcademico">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

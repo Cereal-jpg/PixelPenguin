@@ -13,11 +13,12 @@ public class Alumno extends Usuario {
     // solo tiene este dato en la BD, se hereda del idUsuario
     // private int idAlumno; 
     private int codigoAlumno;
-    private boolean conCertificadoDeEstudios;
-    private boolean conCertificadoDeSalud;
+    private byte[] certificadoDeEstudios;
+    private byte[] certificadoDeSalud;
     private boolean conDeuda;
     private Apoderado apoderado; //necesita un FK fid_apoderado
     private GradoAcademico gradoAcademico; // fid_gradoAcademico
+    private EstadoAlumno estado;
     // array de matriculas para almacenar un registro por años
     private ArrayList<Matricula> matriculas; 
     private ArrayList<Curso> cursosMatriculado;
@@ -26,14 +27,14 @@ public class Alumno extends Usuario {
         //super();
     }
 
-    public Alumno(int codigoAlumno, boolean conCertificadoDeEstudios, boolean conCertificadoDeSalud,
+    public Alumno(int codigoAlumno, byte[] certificadoDeEstudios, byte[] certificadoDeSalud,
             boolean conDeuda, Apoderado apoderado,GradoAcademico gradoAcademico,
             String dni, String nombre, Date fechaNacimiento, String direccion,
             String email, String sexo, String username, String passsword, Rol rol) {
         super(dni, nombre, fechaNacimiento, direccion, email, sexo, username, passsword, rol);
         this.codigoAlumno = codigoAlumno;
-        this.conCertificadoDeEstudios = conCertificadoDeEstudios;
-        this.conCertificadoDeSalud = conCertificadoDeSalud;
+        this.certificadoDeEstudios = certificadoDeEstudios;
+        this.certificadoDeSalud = certificadoDeSalud;
         this.conDeuda = conDeuda;
         this.apoderado = apoderado;
         this.gradoAcademico = gradoAcademico;
@@ -41,11 +42,11 @@ public class Alumno extends Usuario {
         this.cursosMatriculado=new ArrayList<Curso>();
     }
 
-    public Alumno(int codigoAlumno, boolean conCertificadoDeEstudios, boolean conCertificadoDeSalud, boolean conDeuda, Apoderado apoderado, GradoAcademico gradoAcademico, int idUsuario, String dni, String nombreCompleto, Date fechaNacimiento, String direccion, String email, String sexo, String username, String passsword, Rol rol) {
+    public Alumno(int codigoAlumno, byte[] certificadoDeEstudios, byte[] certificadoDeSalud, boolean conDeuda, Apoderado apoderado, GradoAcademico gradoAcademico, int idUsuario, String dni, String nombreCompleto, Date fechaNacimiento, String direccion, String email, String sexo, String username, String passsword, Rol rol) {
         super(idUsuario, dni, nombreCompleto, fechaNacimiento, direccion, email, sexo, username, passsword, rol);
         this.codigoAlumno = codigoAlumno;
-        this.conCertificadoDeEstudios = conCertificadoDeEstudios;
-        this.conCertificadoDeSalud = conCertificadoDeSalud;
+        this.certificadoDeEstudios = certificadoDeEstudios;
+        this.certificadoDeSalud = certificadoDeSalud;
         this.conDeuda = conDeuda;
         this.apoderado = apoderado;
         this.gradoAcademico = gradoAcademico;
@@ -61,20 +62,20 @@ public class Alumno extends Usuario {
         this.codigoAlumno = codigoAlumno;
     }
 
-    public boolean isConCertificadoDeEstudios() {
-        return conCertificadoDeEstudios;
+    public byte[] getCertificadoDeEstudios() {
+        return certificadoDeEstudios;
     }
 
-    public void setConCertificadoDeEstudios(boolean conCertificadoDeEstudios) {
-        this.conCertificadoDeEstudios = conCertificadoDeEstudios;
+    public void setCertificadoDeEstudios(byte[] certificadoDeEstudios) {
+        this.certificadoDeEstudios = certificadoDeEstudios;
     }
 
-    public boolean isConCertificadoDeSalud() {
-        return conCertificadoDeSalud;
+    public byte[] getCertificadoDeSalud() {
+        return certificadoDeSalud;
     }
 
-    public void setConCertificadoDeSalud(boolean conCertificadoDeSalud) {
-        this.conCertificadoDeSalud = conCertificadoDeSalud;
+    public void setCertificadoDeSalud(byte[] certificadoDeSalud) {
+        this.certificadoDeSalud = certificadoDeSalud;
     }
 
     public boolean isConDeuda() {
@@ -99,6 +100,14 @@ public class Alumno extends Usuario {
 
     public void setGradoAcademico(GradoAcademico gradoAcademico) {
         this.gradoAcademico = gradoAcademico;
+    }
+    
+    public EstadoAlumno getEstado() {
+        return estado;
+    }
+
+    public void setEstado(EstadoAlumno estado) {
+        this.estado = estado;
     }
 
     public int matricularse(){

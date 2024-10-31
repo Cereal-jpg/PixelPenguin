@@ -6,6 +6,7 @@ import jakarta.jws.WebParam;
 import java.util.ArrayList;
 import pe.edu.pucp.pixelpenguins.usuario.bo.AlumnoBO;
 import pe.edu.pucp.pixelpenguins.usuario.model.Alumno;
+import pe.edu.pucp.pixelpenguins.usuario.model.EstadoAlumno;
 
 @WebService(serviceName = "AlumnoWS", targetNamespace
         = "http://services.pixelpenguins.pucp.edu.pe")
@@ -66,6 +67,17 @@ public class AlumnoWS {
             System.out.println(ex.getMessage());
         }
         return alumno;
+    }
+    
+    @WebMethod(operationName = "listarAlumnosPorEstado")
+    public ArrayList<Alumno> listarAlumnosPorEstado(@WebParam(name = "estado") EstadoAlumno estado) {
+        ArrayList<Alumno> alumnos = null;
+        try {
+            alumnos = alumnoBO.listarAlumnosPorEstado(estado);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return alumnos;
     }
     
     @WebMethod(operationName = "existeAlumno")

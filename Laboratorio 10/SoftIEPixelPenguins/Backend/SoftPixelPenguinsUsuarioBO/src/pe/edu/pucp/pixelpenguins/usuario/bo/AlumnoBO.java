@@ -7,6 +7,7 @@ import pe.edu.pucp.pixelpenguins.usuario.dao.AlumnoDAO;
 import pe.edu.pucp.pixelpenguins.usuario.daoImp.AlumnoDAOImpl;
 import pe.edu.pucp.pixelpenguins.usuario.model.Alumno;
 import pe.edu.pucp.pixelpenguins.usuario.model.Apoderado;
+import pe.edu.pucp.pixelpenguins.usuario.model.EstadoAlumno;
 import pe.edu.pucp.pixelpenguins.usuario.model.Rol;
 
 public class AlumnoBO {
@@ -17,11 +18,11 @@ public class AlumnoBO {
         this.alumnoDAO = new AlumnoDAOImpl();
     }
 
-    public Integer insertar(int codigoAlumno, boolean conCertificadoDeEstudios, boolean conCertificadoDeSalud,
+    public Integer insertar(int codigoAlumno, byte[] certificadoDeEstudios, byte[] certificadoDeSalud,
                             boolean conDeuda, Apoderado apoderado, GradoAcademico gradoAcademico,
                             String dni, String nombreCompleto, Date fechaNacimiento, String direccion,
                             String email, String sexo, String username, String password, Rol rol) {
-        Alumno alumno = new Alumno(codigoAlumno, conCertificadoDeEstudios, conCertificadoDeSalud, 
+        Alumno alumno = new Alumno(codigoAlumno, certificadoDeEstudios, certificadoDeSalud, 
                                     conDeuda, apoderado, gradoAcademico, dni, nombreCompleto, 
                                     fechaNacimiento, direccion, email, sexo, username, password, rol);
         return this.alumnoDAO.insertar(alumno);
@@ -31,12 +32,12 @@ public class AlumnoBO {
         return this.alumnoDAO.insertar(alumno);
     }
 
-    public Integer modificar(int codigoAlumno, boolean conCertificadoDeEstudios, boolean conCertificadoDeSalud,
+    public Integer modificar(int codigoAlumno, byte[] certificadoDeEstudios, byte[] certificadoDeSalud,
                              boolean conDeuda, Apoderado apoderado, GradoAcademico gradoAcademico,
                              Integer idUsuario, String dni, String nombreCompleto, Date fechaNacimiento, 
                              String direccion, String email, String sexo, String username, String password, 
                              Rol rol) {
-        Alumno alumno = new Alumno(codigoAlumno, conCertificadoDeEstudios, conCertificadoDeSalud,
+        Alumno alumno = new Alumno(codigoAlumno, certificadoDeEstudios, certificadoDeSalud,
                                     conDeuda, apoderado, gradoAcademico, idUsuario, dni, 
                                     nombreCompleto, fechaNacimiento, direccion, email, sexo, 
                                     username, password, rol);
@@ -63,6 +64,10 @@ public class AlumnoBO {
 
     public Alumno obtenerPorId(Integer idUsuario) {
         return this.alumnoDAO.obtenerPorId(idUsuario);
+    }
+    
+    public ArrayList<Alumno> listarAlumnosPorEstado(EstadoAlumno estado) {
+        return this.alumnoDAO.listarAlumnosPorEstado(estado);
     }
 
     public Boolean existeAlumno(Integer idUsuario) {

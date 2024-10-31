@@ -10,6 +10,7 @@ import pe.edu.pucp.pixelpenguins.usuario.dao.AlumnoDAO;
 import pe.edu.pucp.pixelpenguins.usuario.dao.UsuarioDAO;
 import pe.edu.pucp.pixelpenguins.usuario.model.Alumno;
 import pe.edu.pucp.pixelpenguins.usuario.model.Apoderado;
+import pe.edu.pucp.pixelpenguins.usuario.model.EstadoAlumno;
 import pe.edu.pucp.pixelpenguins.usuario.model.Rol;
 import pe.edu.pucp.pixelpenguins.usuario.model.Usuario;
 
@@ -26,12 +27,7 @@ public class AlumnoDAOImpl extends DAOImpl implements AlumnoDAO {
     public Integer insertar(Alumno alumno) {
         this.alumno = alumno;
         Integer idUsuario = null;
-        Usuario usuario = new Usuario() {
-            @Override
-            public String consultarInformacion() {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-        };
+        Usuario usuario = new Usuario();
         usuario.setDni(this.alumno.getDni());
         usuario.setNombreCompleto(this.alumno.getNombreCompleto());
         usuario.setFechaNacimiento(this.alumno.getFechaNacimiento());
@@ -81,35 +77,31 @@ public class AlumnoDAOImpl extends DAOImpl implements AlumnoDAO {
 
     @Override
     protected String obtenerListaDeAtributosParaInsercion() {
-        return "idAlumno, codigoAlumno, conCertificadoDeEstudios, conCertificadoDeSalud, conDeuda, fid_Apoderado, fid_GradoAcademico";        
+        return "idAlumno, codigoAlumno, certificadoDeEstudios, certificadoDeSalud, estado, conDeuda, fid_Apoderado, fid_GradoAcademico";        
     }
 
     @Override
     protected String incluirListaDeParametrosParaInsercion() {
-        return "?, ?, ?, ?, ?, ?, ?";
+        return "?, ?, ?, ?, ?, ?, ?, ?";
     }
 
     @Override
     protected void incluirValorDeParametrosParaInsercion() throws SQLException {
         this.incluirParametroInt(1, this.alumno.getIdUsuario());
         this.incluirParametroInt(2, this.alumno.getCodigoAlumno());
-        this.incluirParametroBoolean(3, this.alumno.isConCertificadoDeEstudios());
-        this.incluirParametroBoolean(4, this.alumno.isConCertificadoDeSalud());
-        this.incluirParametroBoolean(5, this.alumno.isConDeuda());
-        this.incluirParametroInt(6, this.alumno.getApoderado().getIdApoderado());
-        this.incluirParametroInt(7, this.alumno.getGradoAcademico().getIdGradoAcademico()); 
+        this.incluirParametroBytes(3, this.alumno.getCertificadoDeEstudios());
+        this.incluirParametroBytes(4, this.alumno.getCertificadoDeSalud());
+        this.incluirParametroString(5, this.alumno.getEstado().toString());
+        this.incluirParametroBoolean(6, this.alumno.isConDeuda());
+        this.incluirParametroInt(7, this.alumno.getApoderado().getIdApoderado());
+        this.incluirParametroInt(8, this.alumno.getGradoAcademico().getIdGradoAcademico()); 
     }
 
     @Override
     public Integer modificar(Alumno alumno) {
         Integer retorno = 0;
         this.alumno = alumno;
-        Usuario usuario = new Usuario() {
-            @Override
-            public String consultarInformacion() {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-        };
+        Usuario usuario = new Usuario();
         usuario.setIdUsuario(this.alumno.getIdUsuario());
         usuario.setDni(this.alumno.getDni());
         usuario.setNombreCompleto(this.alumno.getNombreCompleto());
@@ -149,18 +141,19 @@ public class AlumnoDAOImpl extends DAOImpl implements AlumnoDAO {
 
     @Override
     protected String obtenerListaDeValoresYAtributosParaModificacion() {
-        return "codigoAlumno=?, conCertificadoDeEstudios=?, conCertificadoDeSalud=?, conDeuda=?, fid_Apoderado=?, fid_GradoAcademico=?"; 
+        return "codigoAlumno=?, certificadoDeEstudios=?, certificadoDeSalud=?, estado=?, conDeuda=?, fid_Apoderado=?, fid_GradoAcademico=?"; 
     }
 
     @Override
     protected void incluirValorDeParametrosParaModificacion() throws SQLException {
-        this.incluirParametroInt(7, this.alumno.getIdUsuario());
+        this.incluirParametroInt(8, this.alumno.getIdUsuario());
         this.incluirParametroInt(1, this.alumno.getCodigoAlumno());
-        this.incluirParametroBoolean(2, this.alumno.isConCertificadoDeEstudios());
-        this.incluirParametroBoolean(3, this.alumno.isConCertificadoDeSalud());
-        this.incluirParametroBoolean(4, this.alumno.isConDeuda());
-        this.incluirParametroInt(5, this.alumno.getApoderado().getIdApoderado());
-        this.incluirParametroInt(6, this.alumno.getGradoAcademico().getIdGradoAcademico());
+        this.incluirParametroBytes(2, this.alumno.getCertificadoDeEstudios());
+        this.incluirParametroBytes(3, this.alumno.getCertificadoDeSalud());
+        this.incluirParametroString(4, this.alumno.getEstado().toString());
+        this.incluirParametroBoolean(5, this.alumno.isConDeuda());
+        this.incluirParametroInt(6, this.alumno.getApoderado().getIdApoderado());
+        this.incluirParametroInt(7, this.alumno.getGradoAcademico().getIdGradoAcademico());
     }
 
     @Override
@@ -172,12 +165,7 @@ public class AlumnoDAOImpl extends DAOImpl implements AlumnoDAO {
     public Integer eliminar(Alumno alumno) {
         Integer retorno = 0;
         this.alumno = alumno;
-        Usuario usuario = new Usuario() {
-            @Override
-            public String consultarInformacion() {
-                throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-            }
-        };
+        Usuario usuario = new Usuario();
         usuario.setIdUsuario(this.alumno.getIdUsuario());        
 
         UsuarioDAO usuarioDAO = new UsuarioDAOImpl();
@@ -231,7 +219,7 @@ public class AlumnoDAOImpl extends DAOImpl implements AlumnoDAO {
     protected String obtenerProyeccionParaSelect() {
         String sql = "usr.idUsuario, usr.dni, usr.nombreCompleto, usr.fechaNacimiento, ";
         sql = sql.concat("usr.direccion, usr.email, usr.sexo, usr.username, usr.password, usr.fid_rol, ");
-        sql = sql.concat("alu.codigoAlumno, alu.conCertificadoDeEstudios, alu.conCertificadoDeSalud, alu.conDeuda, ");
+        sql = sql.concat("alu.codigoAlumno, alu.certificadoDeEstudios, alu.certificadoDeSalud, alu.estado, alu.conDeuda, ");
         sql = sql.concat("alu.fid_Apoderado, alu.fid_GradoAcademico");
         return sql;
     }
@@ -256,8 +244,9 @@ public class AlumnoDAOImpl extends DAOImpl implements AlumnoDAO {
         this.alumno.setPassword(resultSet.getString("password"));
         this.alumno.setRol(new Rol(resultSet.getInt("fid_rol")));
         this.alumno.setCodigoAlumno(resultSet.getInt("codigoAlumno"));
-        this.alumno.setConCertificadoDeEstudios(resultSet.getBoolean("conCertificadoDeEstudios"));
-        this.alumno.setConCertificadoDeSalud(resultSet.getBoolean("conCertificadoDeSalud"));
+        this.alumno.setCertificadoDeEstudios(resultSet.getBytes("certificadoDeEstudios"));
+        this.alumno.setCertificadoDeSalud(resultSet.getBytes("certificadoDeSalud"));
+        this.alumno.setEstado(EstadoAlumno.valueOf(resultSet.getString("estado")));
         this.alumno.setConDeuda(resultSet.getBoolean("conDeuda"));
         
         Apoderado apoderado = new Apoderado();
@@ -296,6 +285,26 @@ public class AlumnoDAOImpl extends DAOImpl implements AlumnoDAO {
     @Override
     protected void limpiarObjetoDelResultSet() {
         this.alumno = null;
+    }
+    
+    @Override
+    protected String obtenerPredicadoParaListado() {
+        return " WHERE estado=?";
+    }
+    
+    @Override
+    protected void incluirValorDeParametrosParaListado() throws SQLException {
+        this.incluirParametroString(1, alumno.getEstado().toString());
+    }
+    
+    @Override
+    public ArrayList<Alumno>listarAlumnosPorEstado(EstadoAlumno estado){
+        this.usarPredicadoParaListado = true;
+        this.alumno = new Alumno();
+        this.alumno.setEstado(estado);
+        ArrayList<Alumno>alumnos = (ArrayList<Alumno>)super.listarTodos(null);
+        this.usarPredicadoParaListado = false;
+        return alumnos;
     }
     
     @Override

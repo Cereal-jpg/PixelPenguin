@@ -12,6 +12,7 @@
     <link href="Content/Fonts/css/all.css" rel="stylesheet" />
     <link href="Content/Estilos.css" rel="stylesheet" />
     <link href="Content/Estilos-Alumno.css" rel="stylesheet" />
+    <link href="Content/EstilosMatricula.css" rel="stylesheet" />
     <script src="Scripts/bootstrap.js"></script>
     <script src="Scripts/bootstrap.bundle.js"></script>
     <script src="Scripts/jquery-3.7.1.js"></script>

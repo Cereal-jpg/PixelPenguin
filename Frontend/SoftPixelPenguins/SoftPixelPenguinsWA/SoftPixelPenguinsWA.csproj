@@ -91,6 +91,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Content\EstilosMatricula.css" />
     <Content Include="MatriculaAlumno-0.aspx" />
     <Content Include="MatriculaAlumno-1.aspx" />
     <Content Include="MatriculaGenerica-1.aspx" />

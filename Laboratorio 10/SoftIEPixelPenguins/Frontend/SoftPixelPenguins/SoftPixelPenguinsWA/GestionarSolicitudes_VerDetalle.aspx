@@ -178,6 +178,12 @@
                         Descargar Certificado de Salud
                     </asp:LinkButton>
                 </div>
+                <div id="lbBoucherPago" runat="server" class="form-row" style="display: none;">
+                    <label>Certificado de Salud:</label>
+                    <asp:LinkButton ID="lnkDescargarBoucher" runat="server" CssClass="btn btn-info" OnClick="lnkDescargarBoucher_Click">
+                        Descargar Boucher de Pago
+                    </asp:LinkButton>
+                </div>
             </div>
         </div>
         <div class="button-container">

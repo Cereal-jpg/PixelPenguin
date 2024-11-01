@@ -161,9 +161,18 @@
         transition: background-color 0.3s ease;
     }
 
-    #section-3{
+    #section3, #section5, #section6 {
         text-align: center;
         padding: 20px;
+    }
+
+    .form-info{
+        background-color: midnightblue;
+        border-radius: 10px;
+        text-align: center;
+        width: 35%;
+        margin: auto;
+        padding: 5px;
     }
 
     </style>
@@ -180,21 +189,20 @@
 <form id="form1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <div class="container">
-        <h2>Proceso de matrícula - <span id="section-title">Datos Personales</span></h2><hr>
+        <h2>Proceso de matrícula - <span id="sectionTitle" runat="server"></span></h2><hr>
 
-        <!-- Barra de progreso lateral -->
         <div class="sidebar-progress">
             <div class="progress-bar">
-                <span class="step active"></span>
-                <span class="step"></span>
-                <span class="step"></span>
-                <span class="step"></span>
+                <span id="step1" class="step" runat="server"></span>
+                <span id="step2" class="step" runat="server"></span>
+                <span id="step3" class="step" runat="server"></span>
+                <span id="step4" class="step" runat="server"></span>
+                <span id="step5" class="step" runat="server"></span>
+                <span id="step6" class="step" runat="server"></span>
             </div>
         </div>
 
-        <!-- Contenido Principal -->
         <div class="main-content">
-            <!-- Sección de Datos Personales -->
             <div id="section1" class="section" runat="server" style="display: block;">
                 <div class="form-section">
                     <h3>Datos del alumno</h3><hr>
@@ -264,7 +272,6 @@
                 </div>
             </div>
 
-            <!-- Sección de Adjuntar Certificados -->
             <div id="section2" class="section" runat="server" style="display: none;">
                 <div class="form-section">
                     <h3>Adjuntar Certificados</h3><hr>
@@ -283,11 +290,39 @@
                 </div>
             </div>
 
-            <!-- Sección de Confirmación -->
             <div id="section3" class="section" runat="server" style="display: none;">
                 <p>Sus datos personales y certificados han sido enviados a revisión. En un periodo de 24 horas podrá ver, por este medio, el estado de su proceso de matrícula.</p>
-                <button>Volver al Inicio</button>
-                <asp:Timer ID="Timer1" runat="server" Interval="5000" OnTick="Timer1_Tick"></asp:Timer>
+                <asp:Button ID="btnVolver1" runat="server" Text="Volver al inicio" OnClick="btnVolver_Click" CssClass="button-style" />
+                <asp:Timer ID="Timer1" runat="server" Interval="5000" OnTick="Timer_Tick"></asp:Timer>
+            </div>
+
+            <div id="section4" class="section" runat="server" style="display: none;">
+                <div class="form-section">
+                    <h3>Adjuntar Boucher de Pago</h3><hr>
+                    <p style="text-align:center;">Debe realizar el pago correspondiente de la matrícula para continuar con el proceso de matrícula.</p>
+                    <div class="form-info">
+                        <p style="color: whitesmoke">Cuenta Bancaria a depositar XXXX-XXXX-XXXXXXXXXX</p>
+                    </div>
+                    <div class="form-row" style="margin:20px;">
+                        <label for="fileBoucherPago">Adjuntar Boucher de Pago::</label>
+                        <asp:FileUpload ID="fileBoucherPago" runat="server" CssClass="file-upload" />
+                        <div class="button-group">
+                            <asp:Button ID="btnRegresar3" runat="server" Text="Regresar" OnClick="prevSection" CssClass="button-style" />
+                            <asp:Button ID="btnGuardar2" runat="server" Text="Grabar y Continuar" OnClick="btnGuardarBoucher_Click" CssClass="button-style" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="section5" class="section" runat="server" style="display: none;">
+                <p>Su boucher de pago ha sido enviado a revisión. En un periodo de 24 horas podrá ver, por este medio, el estado de su proceso de matrícula.</p>
+                <asp:Button ID="btnVolver2" runat="server" Text="Volver al inicio" OnClick="btnVolver_Click" CssClass="button-style" />
+                 <asp:Timer ID="Timer2" runat="server" Interval="5000" OnTick="Timer_Tick"></asp:Timer>
+            </div>
+
+            <div id="section6" class="section" runat="server" style="display: none;">
+                <p>Gracias por concluir con los pasos correspondientes para el proceso de matrícula. Usted ha sido matriculado en el periodo 2025 con éxito. En enviará un correo con toda la información de su matrícula.</p>
+                <asp:Button ID="Button1" runat="server" Text="Terminar proceso de matrícula" OnClick="btnVolver_Click" CssClass="button-style" />
             </div>
         </div>
     </div>

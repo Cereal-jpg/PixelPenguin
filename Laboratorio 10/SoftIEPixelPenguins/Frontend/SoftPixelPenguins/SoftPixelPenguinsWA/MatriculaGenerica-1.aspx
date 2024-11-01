@@ -178,6 +178,7 @@
     </div>
 </div>
 <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
     <div class="container">
         <h2>Proceso de matrícula - <span id="section-title">Datos Personales</span></h2><hr>
 
@@ -194,7 +195,7 @@
         <!-- Contenido Principal -->
         <div class="main-content">
             <!-- Sección de Datos Personales -->
-            <div id="section-1" class="section active">
+            <div id="section1" class="section" runat="server" style="display: block;">
                 <div class="form-section">
                     <h3>Datos del alumno</h3><hr>
                     <div class="form-group">
@@ -258,13 +259,13 @@
                     </div>
                 </div>
                 <div class="button-group">
-                    <button onclick="prevSection(event)" CssClass="button-style">Regresar</button>
-                    <button onclick="nextSection(event)">Grabar y Continuar</button>
+                    <asp:Button ID="btnRegresar1" runat="server" Text="Regresar" OnClick="prevSection" CssClass="button-style" />
+                    <asp:Button ID="btnGrabar1" runat="server" Text="Grabar y Continuar" OnClick="nextSection" CssClass="button-style" />
                 </div>
             </div>
 
             <!-- Sección de Adjuntar Certificados -->
-            <div id="section-2" class="section">
+            <div id="section2" class="section" runat="server" style="display: none;">
                 <div class="form-section">
                     <h3>Adjuntar Certificados</h3><hr>
                     <div class="form-row">
@@ -277,59 +278,19 @@
                     </div>
                 </div>
                 <div class="button-group">
-                    <button onclick="prevSection(event)">Regresar</button>
-                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar" OnClick="btnGuardar_Click" CssClass="button-style" />
+                    <asp:Button ID="btnRegresar2" runat="server" Text="Regresar" OnClick="prevSection" CssClass="button-style" />
+                    <asp:Button ID="btnGuardar" runat="server" Text="Grabar y Continuar" OnClick="btnGuardar_Click" CssClass="button-style" />
                 </div>
             </div>
 
             <!-- Sección de Confirmación -->
-            <div id="section-3" class="section">
+            <div id="section3" class="section" runat="server" style="display: none;">
                 <p>Sus datos personales y certificados han sido enviados a revisión. En un periodo de 24 horas podrá ver, por este medio, el estado de su proceso de matrícula.</p>
                 <button>Volver al Inicio</button>
+                <asp:Timer ID="Timer1" runat="server" Interval="5000" OnTick="Timer1_Tick"></asp:Timer>
             </div>
         </div>
     </div>
 </form>
-<script>
-    let currentSection = 1;
-
-    function nextSection(event) {
-        if (event) event.preventDefault();
-        document.getElementById(`section-${currentSection}`).classList.remove('active');
-        document.querySelector(`.progress-bar .step:nth-child(${currentSection})`).classList.remove('active');
-        currentSection += 1;
-        document.getElementById(`section-${currentSection}`).classList.add('active');
-        document.querySelector(`.progress-bar .step:nth-child(${currentSection})`).classList.add('active');
-        updateSectionTitle();
-    }
-
-    function prevSection() {
-        document.getElementById(`section-${currentSection}`).classList.remove('active');
-        document.querySelector(`.progress-bar .step:nth-child(${currentSection})`).classList.remove('active');
-        currentSection -= 1;
-        document.getElementById(`section-${currentSection}`).classList.add('active');
-        document.querySelector(`.progress-bar .step:nth-child(${currentSection})`).classList.add('active');
-        updateSectionTitle();
-    }
-
-    function volverInicio() {
-        currentSection = 1;
-        document.querySelectorAll('.section').forEach(section => section.classList.remove('active'));
-        document.getElementById('section-1').classList.add('active');
-        document.querySelectorAll('.progress-bar .step').forEach(step => step.classList.remove('active'));
-        document.querySelector('.progress-bar .step:nth-child(1)').classList.add('active');
-        updateSectionTitle();
-    }
-
-    function updateSectionTitle() {
-        const titles = {
-            1: "Datos Personales",
-            2: "Certificados",
-            3: "Confirmación"
-        };
-        document.getElementById('section-title').textContent = titles[currentSection];
-    }
-
-</script>
 </body>
 </html>

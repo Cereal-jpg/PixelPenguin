@@ -52,7 +52,12 @@
                     </asp:TemplateField>
                     <asp:TemplateField>
                         <ItemTemplate>
-                            <asp:LinkButton runat="server" Text="<i class='fa-solid fa-eye'></i>" OnClick="lbVisualizar_Click" CommandArgument='<%# Eval("idUsuario") %>' />
+                            <div class="text-center">
+                                <asp:LinkButton runat="server" CssClass="btn btn-sm btn-info me-1" Text="<i class='fa-solid fa-eye'></i> Ver" 
+                                                OnClick="lbVisualizar_Click" CommandArgument='<%# Eval("idUsuario") %>' />
+                                <asp:LinkButton runat="server" CssClass="btn btn-sm btn-danger" Text="<i class='fa-solid fa-trash'></i> Eliminar" 
+                                                OnClick="lbEliminar_Click" CommandArgument='<%# Eval("idUsuario") %>' />
+                            </div>
                         </ItemTemplate>
                     </asp:TemplateField>
                 </columns>

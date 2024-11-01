@@ -54,7 +54,18 @@ namespace SoftPixelPenguinsWA
 
         protected void lbVisualizar_Click(object sender, EventArgs e)
         {
+            LinkButton lnk = (LinkButton)sender;
+            int idUsuario = int.Parse(lnk.CommandArgument);
+            Response.Redirect("GestionarSolicitudes_VerDetalle.aspx?idUsuario=" + idUsuario);
+        }
 
+        protected void lbEliminar_Click(object sender, EventArgs e)
+        {
+            LinkButton lnk = (LinkButton)sender;
+            int idUsuario = int.Parse(lnk.CommandArgument);
+            alumno alumno = new alumno { idUsuario = idUsuario };
+            alumnoBO.eliminarAlumno(alumno);
+            Response.Redirect("GestionarSolicitudes.aspx");
         }
     }
 }

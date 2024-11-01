@@ -91,6 +91,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="GestionarSolicitudes_VerDetalle.aspx" />
     <Content Include="MatriculaAlumno-0.aspx" />
     <Content Include="MatriculaAlumno-1.aspx" />
     <Content Include="MatriculaGenerica-1.aspx" />
@@ -608,6 +609,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="GestionarSolicitudes_VerDetalle.aspx.cs">
+      <DependentUpon>GestionarSolicitudes_VerDetalle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionarSolicitudes_VerDetalle.aspx.designer.cs">
+      <DependentUpon>GestionarSolicitudes_VerDetalle.aspx</DependentUpon>
     </Compile>
     <Compile Include="IndexAdmin.aspx.cs">
       <DependentUpon>IndexAdmin.aspx</DependentUpon>

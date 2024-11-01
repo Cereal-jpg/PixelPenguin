@@ -11,17 +11,17 @@
   <message name="insertarProfesorResponse">
     <part name="parameters" element="tns:insertarProfesorResponse" />
   </message>
-  <message name="modificarProfesor">
-    <part name="parameters" element="tns:modificarProfesor" />
-  </message>
-  <message name="modificarProfesorResponse">
-    <part name="parameters" element="tns:modificarProfesorResponse" />
-  </message>
   <message name="eliminarProfesor">
     <part name="parameters" element="tns:eliminarProfesor" />
   </message>
   <message name="eliminarProfesorResponse">
     <part name="parameters" element="tns:eliminarProfesorResponse" />
+  </message>
+  <message name="modificarProfesor">
+    <part name="parameters" element="tns:modificarProfesor" />
+  </message>
+  <message name="modificarProfesorResponse">
+    <part name="parameters" element="tns:modificarProfesorResponse" />
   </message>
   <message name="existeprofesor">
     <part name="parameters" element="tns:existeprofesor" />
@@ -46,13 +46,13 @@
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/insertarProfesorRequest" message="tns:insertarProfesor" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/insertarProfesorResponse" message="tns:insertarProfesorResponse" />
     </operation>
-    <operation name="modificarProfesor">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/modificarProfesorRequest" message="tns:modificarProfesor" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/modificarProfesorResponse" message="tns:modificarProfesorResponse" />
-    </operation>
     <operation name="eliminarProfesor">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/eliminarProfesorRequest" message="tns:eliminarProfesor" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/eliminarProfesorResponse" message="tns:eliminarProfesorResponse" />
+    </operation>
+    <operation name="modificarProfesor">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/modificarProfesorRequest" message="tns:modificarProfesor" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/modificarProfesorResponse" message="tns:modificarProfesorResponse" />
     </operation>
     <operation name="existeprofesor">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/existeprofesorRequest" message="tns:existeprofesor" />
@@ -78,7 +78,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarProfesor">
+    <operation name="eliminarProfesor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -87,7 +87,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarProfesor">
+    <operation name="modificarProfesor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

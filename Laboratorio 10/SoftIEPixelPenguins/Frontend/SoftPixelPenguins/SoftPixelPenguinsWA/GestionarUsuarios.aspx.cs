@@ -81,8 +81,6 @@ namespace SoftPixelPenguinsWA
                         username = username.Value,
                         password = password.Value,
                         codigoAlumno = int.Parse(codigoAlumno.Text),
-                        conCertificadoDeEstudios = conCertificadoDeEstudios.Checked,
-                        conCertificadoDeSalud = conCertificadoDeSalud.Checked,
                         conDeuda = conDeuda.Checked,
                         apoderado = new apoderado { idApoderado = int.Parse(apoderado.Text) },
                         gradoAcademico = new gradoAcademico { idGradoAcademico = int.Parse(gradoAcademico.Text) },
@@ -181,8 +179,6 @@ namespace SoftPixelPenguinsWA
                     ddlRoles.Enabled = false;
                     alumno alumno = alumnoBO.obtenerAlumnoPorId(idUsuario);
                     codigoAlumno.Text = alumno.codigoAlumno.ToString();
-                    conCertificadoDeEstudios.Checked = alumno.conCertificadoDeEstudios;
-                    conCertificadoDeSalud.Checked = alumno.conCertificadoDeSalud;
                     conDeuda.Checked = alumno.conDeuda;
                     apoderado.Text = alumno.apoderado.idApoderado.ToString();
                     gradoAcademico.Text = alumno.gradoAcademico.idGradoAcademico.ToString();

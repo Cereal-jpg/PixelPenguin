@@ -6,6 +6,8 @@
   <xs:element name="existeAlumnoResponse" type="tns:existeAlumnoResponse" />
   <xs:element name="insertarAlumno" type="tns:insertarAlumno" />
   <xs:element name="insertarAlumnoResponse" type="tns:insertarAlumnoResponse" />
+  <xs:element name="listarAlumnosPorEstado" type="tns:listarAlumnosPorEstado" />
+  <xs:element name="listarAlumnosPorEstadoResponse" type="tns:listarAlumnosPorEstadoResponse" />
   <xs:element name="listarTodosAlumnos" type="tns:listarTodosAlumnos" />
   <xs:element name="listarTodosAlumnosResponse" type="tns:listarTodosAlumnosResponse" />
   <xs:element name="modificarAlumno" type="tns:modificarAlumno" />
@@ -22,10 +24,11 @@
       <xs:extension base="tns:usuario">
         <xs:sequence>
           <xs:element minOccurs="0" name="apoderado" type="tns:apoderado" />
+          <xs:element minOccurs="0" name="certificadoDeEstudios" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="certificadoDeSalud" type="xs:base64Binary" />
           <xs:element name="codigoAlumno" type="xs:int" />
-          <xs:element name="conCertificadoDeEstudios" type="xs:boolean" />
-          <xs:element name="conCertificadoDeSalud" type="xs:boolean" />
           <xs:element name="conDeuda" type="xs:boolean" />
+          <xs:element minOccurs="0" name="estado" type="tns:estadoAlumno" />
           <xs:element minOccurs="0" name="gradoAcademico" type="tns:gradoAcademico" />
         </xs:sequence>
       </xs:extension>
@@ -93,14 +96,14 @@
       <xs:element minOccurs="0" name="return" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarAlumno">
+  <xs:complexType name="listarAlumnosPorEstado">
     <xs:sequence>
-      <xs:element minOccurs="0" name="alumno" type="tns:alumno" />
+      <xs:element minOccurs="0" name="estado" type="tns:estadoAlumno" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarAlumnoResponse">
+  <xs:complexType name="listarAlumnosPorEstadoResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:int" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:alumno" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="obtenerAlumnoPorId">
@@ -113,6 +116,16 @@
       <xs:element minOccurs="0" name="return" type="tns:alumno" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="insertarAlumno">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="alumno" type="tns:alumno" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarAlumnoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="eliminarAlumno">
     <xs:sequence>
       <xs:element minOccurs="0" name="alumno" type="tns:alumno" />
@@ -123,6 +136,13 @@
       <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:simpleType name="estadoAlumno">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Pendiente" />
+      <xs:enumeration value="Por_Pagar" />
+      <xs:enumeration value="Matriculado" />
+    </xs:restriction>
+  </xs:simpleType>
   <xs:simpleType name="nivelEducativo">
     <xs:restriction base="xs:string">
       <xs:enumeration value="PRIMARIO" />

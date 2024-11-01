@@ -586,6 +586,9 @@
     <Content Include="Connected Services\SoftPixelPenguinsWS\SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarDatosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\SoftPixelPenguinsWS\SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarAlumnosPorEstadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\SoftPixelPenguinsWS\UsuarioWS.wsdl" />
     <None Include="Connected Services\SoftPixelPenguinsWS\UsuarioWS.xsd">
       <SubType>Designer</SubType>
@@ -670,6 +673,7 @@
     </Compile>
     <Compile Include="MatriculaGenerica-1.aspx.cs">
       <DependentUpon>MatriculaGenerica-1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="MatriculaGenerica-1.aspx.designer.cs">
       <DependentUpon>MatriculaGenerica-1.aspx</DependentUpon>

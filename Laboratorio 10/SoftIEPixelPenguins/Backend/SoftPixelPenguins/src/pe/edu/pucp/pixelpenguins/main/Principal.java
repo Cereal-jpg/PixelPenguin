@@ -59,8 +59,5 @@ public class Principal {
 //        }
 //        if(usuarioBO.insertar("12346", "Manuel Perez", sdf.parse("10-05-2005"), "Av. prueba", "manuel@pucp.edu.pe", "Masculino", "a12345", "password", roles.get(0))!=0)
 //            System.out.println("El usuario fue insertado correctamente");
-        AlumnoBO alumnoBO=new AlumnoBO();
-        if(alumnoBO.insertar(2023, true, true, true, apoderados.get(0),grados.get(0),"12349","Manuel Prueba 1",sdf.parse("2025-01-04"),"Av. prueba", "manuel@pucp.edu.pe","Masculino","a12345","password", roles.get(0))!=0)
-            System.out.println("El alumno fue insertado correctamente");
     }
 }

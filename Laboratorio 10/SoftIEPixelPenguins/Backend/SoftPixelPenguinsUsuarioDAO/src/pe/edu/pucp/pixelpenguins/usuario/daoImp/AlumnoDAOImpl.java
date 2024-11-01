@@ -209,6 +209,8 @@ public class AlumnoDAOImpl extends DAOImpl implements AlumnoDAO {
         sql = sql.concat(obtenerProyeccionParaSelect());
         sql = sql.concat(" from ").concat(this.nombre_tabla).concat(" alu ");
         sql = sql.concat("join Usuario usr on usr.idUsuario = alu.idAlumno ");
+        if(this.usarPredicadoParaListado)
+            sql = sql.concat(this.obtenerPredicadoParaListado());
         if (limite != null && limite > 0) {
             sql = sql.concat(" limit ").concat(limite.toString());
         }

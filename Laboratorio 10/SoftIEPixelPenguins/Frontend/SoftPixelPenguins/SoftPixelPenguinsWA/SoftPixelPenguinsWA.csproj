@@ -599,6 +599,7 @@
     <Content Include="Scripts\jquery-3.7.1.min.js" />
     <Content Include="Scripts\jquery-3.7.1.slim.js" />
     <Content Include="Scripts\jquery-3.7.1.slim.min.js" />
+    <Content Include="GestionarSolicitudes.aspx" />
     <Content Include="SecundariaIM.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -707,6 +708,13 @@
       <DependentUpon>ProcesoMatricula.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GestionarSolicitudes.aspx.cs">
+      <DependentUpon>GestionarSolicitudes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionarSolicitudes.aspx.designer.cs">
+      <DependentUpon>GestionarSolicitudes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SecundariaIM.aspx.cs">
       <DependentUpon>SecundariaIM.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

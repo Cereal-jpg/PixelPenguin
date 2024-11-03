@@ -14,8 +14,10 @@ public class SeccionAcademicaBO {
         this.seccionAcademicaDAO = new SeccionAcademicaDAOImpl();
     }
 
-    public Integer insertar(Integer idSeccionAcademica, char seccion, String aula, Integer idGradoAcademico) {
-        SeccionAcademica seccionAcademica = this.crearSeccionAcademica(idSeccionAcademica, seccion, aula, idGradoAcademico);
+    public Integer insertar(Integer idSeccionAcademica, char seccion, String aula, Integer idGradoAcademico,
+            int cantidadAlumnos,int vacantes) {
+        SeccionAcademica seccionAcademica = this.crearSeccionAcademica(idSeccionAcademica, seccion, aula, idGradoAcademico,
+                cantidadAlumnos,vacantes);
         return this.seccionAcademicaDAO.insertar(seccionAcademica);
     }
 
@@ -23,8 +25,10 @@ public class SeccionAcademicaBO {
         return this.seccionAcademicaDAO.insertar(seccionAcademica);
     }
     
-    public Integer modificar(Integer idSeccionAcademica, char seccion, String aula, Integer idGradoAcademico) {
-        SeccionAcademica seccionAcademica = this.crearSeccionAcademica(idSeccionAcademica, seccion, aula, idGradoAcademico);
+    public Integer modificar(Integer idSeccionAcademica, char seccion, String aula, Integer idGradoAcademico,
+            int cantidadAlumnos,int vacantes) {
+        SeccionAcademica seccionAcademica = this.crearSeccionAcademica(idSeccionAcademica, seccion, aula, idGradoAcademico,
+                cantidadAlumnos, vacantes);
         return this.seccionAcademicaDAO.modificar(seccionAcademica);
     }
     
@@ -50,15 +54,17 @@ public class SeccionAcademicaBO {
         return this.seccionAcademicaDAO.obtenerPorId(idSeccionAcademica);
     }
 
-    private SeccionAcademica crearSeccionAcademica(Integer idSeccionAcademica, char seccion, String aula, Integer idGradoAcademico) {
+    private SeccionAcademica crearSeccionAcademica(Integer idSeccionAcademica, char seccion, String aula,
+            Integer idGradoAcademico, int cantidadAlumnos, int vacantes) {
         GradoAcademico gradoAcademico = new GradoAcademico();
         gradoAcademico.setIdGradoAcademico(idGradoAcademico);
-
         SeccionAcademica seccionAcademica = new SeccionAcademica();
         seccionAcademica.setIdSeccionAcademica(idSeccionAcademica);
         seccionAcademica.setSeccion(seccion);
         seccionAcademica.setAula(aula);
         seccionAcademica.setGradoAcademico(gradoAcademico);
+        seccionAcademica.setCantidadAlumnos(cantidadAlumnos);
+        seccionAcademica.setVacantes(vacantes);
         return seccionAcademica;
     }
     

@@ -30,19 +30,21 @@ public class SeccionAcademicaDAOImpl extends DAOImpl implements SeccionAcademica
 
     @Override
     protected String obtenerListaDeAtributosParaInsercion() {
-        return "seccion, aula, fid_GradoAcademico";
+        return "seccion, aula, cantidadAlumnos, vacantes, fid_GradoAcademico";
     }
 
     @Override
     protected String incluirListaDeParametrosParaInsercion() {
-        return "?, ?, ?";
+        return "?, ?, ?, ?, ?";
     }
 
     @Override
     protected void incluirValorDeParametrosParaInsercion() throws SQLException {
         this.incluirParametroString(1, String.valueOf(this.seccionAcademica.getSeccion()));
         this.incluirParametroString(2, this.seccionAcademica.getAula());
-        this.incluirParametroInt(3, this.seccionAcademica.getGradoAcademico().getIdGradoAcademico());
+        this.incluirParametroInt(3, this.seccionAcademica.getCantidadAlumnos());
+        this.incluirParametroInt(4, this.seccionAcademica.getVacantes());
+        this.incluirParametroInt(5, this.seccionAcademica.getGradoAcademico().getIdGradoAcademico());
     }
 
     @Override
@@ -53,7 +55,7 @@ public class SeccionAcademicaDAOImpl extends DAOImpl implements SeccionAcademica
 
     @Override
     protected String obtenerListaDeValoresYAtributosParaModificacion() {
-        return "seccion=?, aula=?, fid_GradoAcademico=?";
+        return "seccion=?, aula=?, cantidadAlumnos=?, vacantes=?, fid_GradoAcademico=?";
     }
 
     @Override
@@ -65,8 +67,10 @@ public class SeccionAcademicaDAOImpl extends DAOImpl implements SeccionAcademica
     protected void incluirValorDeParametrosParaModificacion() throws SQLException {
         this.incluirParametroString(1, String.valueOf(this.seccionAcademica.getSeccion()));
         this.incluirParametroString(2, this.seccionAcademica.getAula());
-        this.incluirParametroInt(3, this.seccionAcademica.getGradoAcademico().getIdGradoAcademico());
-        this.incluirParametroInt(4, this.seccionAcademica.getIdSeccionAcademica());
+        this.incluirParametroInt(3, this.seccionAcademica.getCantidadAlumnos());
+        this.incluirParametroInt(4, this.seccionAcademica.getVacantes());
+        this.incluirParametroInt(5, this.seccionAcademica.getGradoAcademico().getIdGradoAcademico());
+        this.incluirParametroInt(6, this.seccionAcademica.getIdSeccionAcademica());
     }
 
     @Override
@@ -87,7 +91,7 @@ public class SeccionAcademicaDAOImpl extends DAOImpl implements SeccionAcademica
     
     @Override
     protected String obtenerProyeccionParaSelect() {
-        return "idSeccionAcademica, seccion, aula, fid_GradoAcademico";
+        return "idSeccionAcademica, seccion, aula, cantidadAlumnos, vacantes, fid_GradoAcademico";
     }
 
     @Override
@@ -102,7 +106,8 @@ public class SeccionAcademicaDAOImpl extends DAOImpl implements SeccionAcademica
         this.seccionAcademica.setIdSeccionAcademica(this.resultSet.getInt("idSeccionAcademica"));
         this.seccionAcademica.setSeccion(this.resultSet.getString("seccion").charAt(0));
         this.seccionAcademica.setAula(this.resultSet.getString("aula"));
-
+        this.seccionAcademica.setCantidadAlumnos(this.resultSet.getInt("cantidadAlumnos"));
+        this.seccionAcademica.setVacantes(this.resultSet.getInt("vacantes"));
         GradoAcademico gradoAcademico = new GradoAcademico();
         gradoAcademico.setIdGradoAcademico(this.resultSet.getInt("fid_GradoAcademico"));
         this.seccionAcademica.setGradoAcademico(gradoAcademico);

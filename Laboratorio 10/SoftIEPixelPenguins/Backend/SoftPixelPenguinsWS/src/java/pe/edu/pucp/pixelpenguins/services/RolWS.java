@@ -71,25 +71,5 @@ public class RolWS {
         }
         return rol;
     }
-
-    // metodos estándar
-    @WebMethod(operationName="rol_listarTodos")
-    public ArrayList<Rol> rol_listarTodos(){
-        return rolBO.listarTodos();
-    }
-    
-    @WebMethod(operationName = "rol_obtenerPorId")
-    public Rol rol_obtenerPorId(@WebParam(name="idRol") Integer idRol){
-        return rolBO.obtenerPorId(idRol);
-    }
-    
-    @WebMethod(operationName = "rol_insertar")
-    public Integer rol_insertar(@WebParam(name="nombre") String nombre){
-        return rolBO.insertar(nombre);
-    }
-    
-    @WebMethod(operationName = "rol_eliminar")
-    public Integer rol_eliminar(@WebParam(name="idRol") Integer idRol){
-        return rolBO.eliminar(idRol);
-    }   
+ 
 }

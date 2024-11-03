@@ -10,28 +10,33 @@ public class Curso implements IConsultable{
     private String nombre;
     private int horasPorSemana;
     private int horasTotales;
+    private GradoAcademico gradoAcademico;
     private ArrayList<Competencia> competencias;
     private ArrayList<Nota> notas;
     private ArrayList<HoraAcademica> horasAcademicas;
     
     public Curso(){}
     
-    public Curso(String codigoCurso, String nombre, int horasPorSemana, int horasTotales) {
+    public Curso(String codigoCurso, String nombre, int horasPorSemana, int horasTotales,
+            GradoAcademico gradoAcademico) {
         this.codigoCurso=codigoCurso;
         this.nombre = nombre;
         this.horasPorSemana = horasPorSemana;
         this.horasTotales = horasTotales;
+        this.gradoAcademico=gradoAcademico;
         competencias = new ArrayList<Competencia>();
         notas = new ArrayList<Nota>();
         horasAcademicas = new ArrayList<HoraAcademica>();
     }
 
-    public Curso(int idCurso, String codigoCurso, String nombre, int horasPorSemana, int horasTotales) {
+    public Curso(int idCurso, String codigoCurso, String nombre, int horasPorSemana, 
+            int horasTotales,GradoAcademico gradoAcademico) {
         this.idCurso = idCurso;
         this.codigoCurso = codigoCurso;
         this.nombre = nombre;
         this.horasPorSemana = horasPorSemana;
         this.horasTotales = horasTotales;
+        this.gradoAcademico=gradoAcademico;
     }
 
     public int getIdCurso() {
@@ -72,6 +77,14 @@ public class Curso implements IConsultable{
 
     public void setHorasTotales(int horasTotales) {
         this.horasTotales = horasTotales;
+    }
+
+    public GradoAcademico getGradoAcademico() {
+        return gradoAcademico;
+    }
+
+    public void setGradoAcademico(GradoAcademico gradoAcademico) {
+        this.gradoAcademico = gradoAcademico;
     }
     
     @Override

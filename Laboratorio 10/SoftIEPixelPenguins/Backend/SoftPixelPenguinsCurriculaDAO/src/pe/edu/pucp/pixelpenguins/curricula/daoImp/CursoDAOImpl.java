@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import pe.edu.pucp.pixelpenguins.curricula.dao.CursoDAO;
 import pe.edu.pucp.pixelpenguins.curricula.model.Curso;
+import pe.edu.pucp.pixelpenguins.curricula.model.GradoAcademico;
 import pe.edu.pucp.pixelpenguins.db.DAOImpl;
 
 public class CursoDAOImpl extends DAOImpl implements CursoDAO{
@@ -28,12 +29,12 @@ public class CursoDAOImpl extends DAOImpl implements CursoDAO{
 
     @Override
     protected String obtenerListaDeAtributosParaInsercion() {
-        return "codigoCurso, nombre, horasPorSemana, horasTotales";
+        return "codigoCurso, nombre, horasPorSemana, horasTotales, fidGradoAcademico";
     }
 
     @Override
     protected String incluirListaDeParametrosParaInsercion() {
-        return "?, ?, ?, ?";
+        return "?, ?, ?, ?, ?";
     }
 
     @Override
@@ -42,6 +43,7 @@ public class CursoDAOImpl extends DAOImpl implements CursoDAO{
         this.incluirParametroString(2, this.curso.getNombre());
         this.incluirParametroInt(3, this.curso.getHorasPorSemana());
         this.incluirParametroInt(4, this.curso.getHorasTotales());
+        this.incluirParametroInt(5, this.curso.getGradoAcademico().getIdGradoAcademico());
     }
 
     @Override
@@ -52,7 +54,8 @@ public class CursoDAOImpl extends DAOImpl implements CursoDAO{
 
     @Override
     protected String obtenerListaDeValoresYAtributosParaModificacion() {
-        return "codigoCurso=?, nombre=?, horasPorSemana=?, horasTotales=?";
+        return "codigoCurso=?, nombre=?, horasPorSemana=?, horasTotales=?,"
+                + " fid_GradoAcademico=?";
     }
 
     @Override
@@ -62,11 +65,12 @@ public class CursoDAOImpl extends DAOImpl implements CursoDAO{
 
     @Override
     protected void incluirValorDeParametrosParaModificacion() throws SQLException {
-        this.incluirParametroInt(5, this.curso.getIdCurso());
+        this.incluirParametroInt(6, this.curso.getIdCurso());
         this.incluirParametroString(1, this.curso.getCodigoCurso());
         this.incluirParametroString(2, this.curso.getNombre());
         this.incluirParametroInt(3, this.curso.getHorasPorSemana());
         this.incluirParametroInt(4, this.curso.getHorasTotales());
+        this.incluirParametroInt(5, this.curso.getGradoAcademico().getIdGradoAcademico());
     }
 
     @Override
@@ -87,7 +91,7 @@ public class CursoDAOImpl extends DAOImpl implements CursoDAO{
 
     @Override
     protected String obtenerProyeccionParaSelect() {
-        return "idCurso, codigoCurso, nombre, horasPorSemana, horasTotales";
+        return "idCurso, codigoCurso, nombre, horasPorSemana, horasTotales, fid_GradoAcademico";
     }
 
     @Override
@@ -104,6 +108,9 @@ public class CursoDAOImpl extends DAOImpl implements CursoDAO{
         curso.setNombre(this.resultSet.getString("nombre"));
         curso.setHorasPorSemana(this.resultSet.getInt("horasPorSemana"));
         curso.setHorasTotales(this.resultSet.getInt("horasTotales"));
+        GradoAcademico gradoAcademico = new GradoAcademico();
+        gradoAcademico.setIdGradoAcademico(this.resultSet.getInt("fid_GradoAcademico"));
+        this.curso.setGradoAcademico(gradoAcademico);
     }
 
     @Override

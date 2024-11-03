@@ -5,7 +5,7 @@
 package pe.edu.pucp.pixelpenguins.usuario.model;
 
 import java.util.Date;
-import pe.edu.pucp.pixelpenguins.añoacademico.model.PlanAcademico;
+import pe.edu.pucp.pixelpenguins.anioacademico.model.PlanAcademico;
 
 /**
  *
@@ -13,11 +13,16 @@ import pe.edu.pucp.pixelpenguins.añoacademico.model.PlanAcademico;
  */
 public class EquipoAdministrativo extends Usuario {
     private int idEquipoAdministrativo;
+    private Integer codigoAdministrador;
 
-    public EquipoAdministrativo(int idEquipoAdministrativo, int dni, String nombre, Date fechaNacimiento, 
-            String direccion, String email, String sexo, String username, String password) {
-        super(dni, nombre, fechaNacimiento, direccion, email, sexo,username,password);
+    public EquipoAdministrativo(int idEquipoAdministrativo,int dni, String nombre,
+            Date fechaNacimiento, String direccion, String email,String sexo, String username, String password) {
+        super(dni, nombre, fechaNacimiento, direccion, email, sexo, username, password);
         this.idEquipoAdministrativo = idEquipoAdministrativo;
+    }
+    
+    public EquipoAdministrativo(){
+        super();
     }
 
     public int getIdEquipoAdministrativo() {
@@ -26,6 +31,14 @@ public class EquipoAdministrativo extends Usuario {
 
     public void setIdEquipoAdministrativo(int idEquipoAdministrativo) {
         this.idEquipoAdministrativo = idEquipoAdministrativo;
+    }
+
+    public Integer getCodigoAdministrador() {
+        return codigoAdministrador;
+    }
+
+    public void setCodigoAdministrador(Integer codigoAdministrador) {
+        this.codigoAdministrador = codigoAdministrador;
     }
     
     public String consultarReporteDeNotasPorAlumno(){

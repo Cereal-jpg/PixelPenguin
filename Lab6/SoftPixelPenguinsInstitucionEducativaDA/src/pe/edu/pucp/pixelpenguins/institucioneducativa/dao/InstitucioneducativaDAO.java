@@ -15,4 +15,6 @@ public interface InstitucioneducativaDAO {
     
     public ArrayList<InstitucionEducativa> listarTodos();
     
+    public InstitucionEducativa obtenerPorId(int id_inst);
+    
 }

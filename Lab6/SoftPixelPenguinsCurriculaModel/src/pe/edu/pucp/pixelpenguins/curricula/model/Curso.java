@@ -1,7 +1,7 @@
 package pe.edu.pucp.pixelpenguins.curricula.model;
 
 import java.util.ArrayList;
-import pe.edu.pucp.pixelpenguins.institucioneducativa.IConsultable;
+import pe.edu.pucp.pixelpenguins.institucioneducativa.model.IConsultable;
 
 public class Curso implements IConsultable{
     private String idCurso;

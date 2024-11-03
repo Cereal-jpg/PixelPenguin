@@ -3,8 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Enzo/Desktop/PUCP/FCI/Ciclo%202024-2/Programación%203/Lab6/SoftPixelPenguinsCurriculaDA/src/pe/edu/pucp/pixelpenguins/curricula/dao/NotaDAO.java</file>
-            <file>file:/C:/Users/Enzo/Desktop/PUCP/FCI/Ciclo%202024-2/Programación%203/Lab6/SoftPixelPenguinsCurriculaDA/src/pe/edu/pucp/pixelpenguins/curricula/daoImpl/NotaDaoImpl.java</file>
+            <file>file:/C:/Users/Enzo/Desktop/PUCP/Github/PixelPenguin/Lab6/SoftPixelPenguinsCurriculaDA/src/pe/edu/pucp/pixelpenguins/curricula/daoImpl/GradoAcademicoDAOImp.java</file>
+            <file>file:/C:/Users/Enzo/Desktop/PUCP/Github/PixelPenguin/Lab6/SoftPixelPenguinsCurriculaDA/src/pe/edu/pucp/pixelpenguins/curricula/daoImpl/CursoDAOImp.java</file>
+            <file>file:/C:/Users/Enzo/Desktop/PUCP/Github/PixelPenguin/Lab6/SoftPixelPenguinsCurriculaDA/src/pe/edu/pucp/pixelpenguins/curricula/daoImpl/JornadaEscolarDAOImpl.java</file>
         </group>
     </open-files>
 </project-private>

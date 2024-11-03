@@ -23,9 +23,11 @@
   <xs:complexType name="seccionAcademica">
     <xs:sequence>
       <xs:element minOccurs="0" name="aula" type="xs:string" />
+      <xs:element name="cantidadAlumnos" type="xs:int" />
       <xs:element minOccurs="0" name="gradoAcademico" type="tns:gradoAcademico" />
       <xs:element name="idSeccionAcademica" type="xs:int" />
       <xs:element name="seccion" type="xs:unsignedShort" />
+      <xs:element name="vacantes" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="gradoAcademico">

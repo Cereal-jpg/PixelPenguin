@@ -29,7 +29,7 @@ public class CursoDAOImpl extends DAOImpl implements CursoDAO{
 
     @Override
     protected String obtenerListaDeAtributosParaInsercion() {
-        return "codigoCurso, nombre, horasPorSemana, horasTotales, fidGradoAcademico";
+        return "codigoCurso, nombre, horasPorSemana, horasTotales, fid_GradoAcademico";
     }
 
     @Override

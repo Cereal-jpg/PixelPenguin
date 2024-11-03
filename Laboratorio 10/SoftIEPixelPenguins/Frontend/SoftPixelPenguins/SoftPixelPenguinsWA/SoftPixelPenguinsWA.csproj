@@ -563,18 +563,6 @@
     <Content Include="Connected Services\SoftPixelPenguinsWS\SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\SoftPixelPenguinsWS\SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_eliminarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\SoftPixelPenguinsWS\SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_insertarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\SoftPixelPenguinsWS\SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_listarTodosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\SoftPixelPenguinsWS\SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_obtenerPorIdResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\SoftPixelPenguinsWS\SoftPixelPenguinsWA.SoftPixelPenguinsWS.seccionAcademica.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>

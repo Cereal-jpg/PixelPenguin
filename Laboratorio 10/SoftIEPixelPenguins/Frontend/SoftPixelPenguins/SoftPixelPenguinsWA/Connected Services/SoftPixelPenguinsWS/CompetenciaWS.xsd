@@ -10,9 +10,14 @@
   <xs:element name="modificarCompetenciaResponse" type="tns:modificarCompetenciaResponse" />
   <xs:element name="obtenerCompetenciaPorId" type="tns:obtenerCompetenciaPorId" />
   <xs:element name="obtenerCompetenciaPorIdResponse" type="tns:obtenerCompetenciaPorIdResponse" />
-  <xs:complexType name="modificarCompetencia">
+  <xs:complexType name="obtenerCompetenciaPorId">
     <xs:sequence>
-      <xs:element minOccurs="0" name="competencia" type="tns:competencia" />
+      <xs:element minOccurs="0" name="idCompetencia" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerCompetenciaPorIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:competencia" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="competencia">
@@ -25,25 +30,31 @@
   <xs:complexType name="curso">
     <xs:sequence>
       <xs:element minOccurs="0" name="codigoCurso" type="xs:string" />
+      <xs:element minOccurs="0" name="gradoAcademico" type="tns:gradoAcademico" />
       <xs:element name="horasPorSemana" type="xs:int" />
       <xs:element name="horasTotales" type="xs:int" />
       <xs:element name="idCurso" type="xs:int" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="gradoAcademico">
+    <xs:sequence>
+      <xs:element name="cantidadAlumnos" type="xs:int" />
+      <xs:element name="fid_AnioAcademico" type="xs:int" />
+      <xs:element name="idGradoAcademico" type="xs:int" />
+      <xs:element minOccurs="0" name="nivel" type="tns:nivelEducativo" />
+      <xs:element name="numeroGrado" type="xs:int" />
+      <xs:element name="vacantes" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarCompetencia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="competencia" type="tns:competencia" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="modificarCompetenciaResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="obtenerCompetenciaPorId">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="idCompetencia" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="obtenerCompetenciaPorIdResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:competencia" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarTodosCompetencias">
@@ -74,4 +85,10 @@
       <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:simpleType name="nivelEducativo">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PRIMARIO" />
+      <xs:enumeration value="SECUNDARIO" />
+    </xs:restriction>
+  </xs:simpleType>
 </xs:schema>

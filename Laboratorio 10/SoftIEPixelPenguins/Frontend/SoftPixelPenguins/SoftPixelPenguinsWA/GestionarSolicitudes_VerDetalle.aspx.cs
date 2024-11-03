@@ -1,6 +1,7 @@
 ﻿using SoftPixelPenguinsWA.SoftPixelPenguinsWS;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -13,7 +14,12 @@ namespace SoftPixelPenguinsWA
     {
 
         AlumnoWSClient alumnoBO = new AlumnoWSClient();
+        GradoAcademicoWSClient gradoAcademicoBO = new GradoAcademicoWSClient();
+        SeccionAcademicaWSClient seccionAcademicaBO = new SeccionAcademicaWSClient();
+        AnioAcademicoWSClient anioAcademicoBO = new AnioAcademicoWSClient();
+        MatriculaWSClient matriculaBO = new MatriculaWSClient();
         alumno alumno = null;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             string idUsuario = Request.QueryString["idUsuario"];
@@ -139,12 +145,51 @@ namespace SoftPixelPenguinsWA
             else if (alumno.estado.Equals(estadoAlumno.Por_Pagar))
             {
                 alumno.estado = estadoAlumno.Matriculado;
-                // Falta lógica para matricular al alumno en todos los cursos de su grado
+                matricularAlumno();
             }
             Session[alumno.nombreCompleto] = alumno;
             alumnoBO.modificarAlumno(alumno);
             Response.Redirect("GestionarSolicitudes.aspx");
         }
 
+        private void matricularAlumno()
+        {
+            // Falta implementar las funciones necesarias para esta lógica en el back 
+            gradoAcademico grado = gradoAcademicoBO.obtenerGradoAcademicoPorId(alumno.gradoAcademico.idGradoAcademico);
+            if (grado.cantidadAlumnos < grado.vacantes)
+            {
+                grado.cantidadAlumnos++;
+                gradoAcademicoBO.modificarGradoAcademico(grado);
+                // para listarSeccionesPorGrado usar predicadoparaselect (ver ejemplo en usuario o alumno)
+                BindingList<seccionAcademica> secciones = seccionAcademicaBO.listarSeccionesPorGrado(gradoAcademico);
+                seccionAcademica seccionMatricula = null;
+                foreach (seccionAcademica seccion in secciones) {
+                    if(seccion.cantidadAlumnos < seccion.vacantes)
+                    {
+                        seccion.cantidadAlumnos++;
+                        seccionAcademicaBO.modificarSeccionAcademica(seccion);
+                        seccionMatricula = seccion;
+                        break;
+                    }
+                }
+
+                if (seccionMatricula != null) {
+                    // Borrar las columnas innecesarias de matricula (y actualizar back)
+                    matricula matricula = new matricula
+                    {
+                        fidAlumno = alumno.idUsuario,
+                        // Suponiendo el anio académico 2025 por ahora
+                        anioAcademico = anioAcademicoBO.obtenerAnioAcademicoPorId(1),
+                        // Implementar que el alumno pueda escoger el grado cuando llena el formulario de la matrícula
+                        gradoAcademico = grado
+                    };
+                    matriculaBO.insertarMatricula(matricula);
+                }
+            }
+            else
+            {
+                throw new Exception();
+            }
+        }
     }
 }

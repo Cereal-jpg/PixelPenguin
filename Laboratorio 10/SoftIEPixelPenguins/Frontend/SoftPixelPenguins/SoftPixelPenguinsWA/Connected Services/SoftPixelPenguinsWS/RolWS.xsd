@@ -10,14 +10,6 @@
   <xs:element name="modificarRolResponse" type="tns:modificarRolResponse" />
   <xs:element name="obtenerRolPorId" type="tns:obtenerRolPorId" />
   <xs:element name="obtenerRolPorIdResponse" type="tns:obtenerRolPorIdResponse" />
-  <xs:element name="rol_eliminar" type="tns:rol_eliminar" />
-  <xs:element name="rol_eliminarResponse" type="tns:rol_eliminarResponse" />
-  <xs:element name="rol_insertar" type="tns:rol_insertar" />
-  <xs:element name="rol_insertarResponse" type="tns:rol_insertarResponse" />
-  <xs:element name="rol_listarTodos" type="tns:rol_listarTodos" />
-  <xs:element name="rol_listarTodosResponse" type="tns:rol_listarTodosResponse" />
-  <xs:element name="rol_obtenerPorId" type="tns:rol_obtenerPorId" />
-  <xs:element name="rol_obtenerPorIdResponse" type="tns:rol_obtenerPorIdResponse" />
   <xs:complexType name="eliminarRol">
     <xs:sequence>
       <xs:element minOccurs="0" name="rol" type="tns:rol" />
@@ -34,42 +26,12 @@
       <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="rol_obtenerPorId">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="idRol" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="rol_obtenerPorIdResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:rol" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="rol_insertar">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="nombre" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="rol_insertarResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="listarTodosRoles">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="listarTodosRolesResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:rol" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="rol_eliminar">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="idRol" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="rol_eliminarResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarRol">
@@ -80,14 +42,6 @@
   <xs:complexType name="insertarRolResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="rol_listarTodos">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="rol_listarTodosResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:rol" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="obtenerRolPorId">

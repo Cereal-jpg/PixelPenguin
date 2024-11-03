@@ -49,7 +49,7 @@ namespace SoftPixelPenguinsWA
 
         protected void lbBuscar_Click(object sender, EventArgs e)
         {
-
+            // Implementar ListarAlumnosPorNombreYEstado, ya no es necesario listar solo por Estado ya que esto también lo hace
         }
 
         protected void lbVisualizar_Click(object sender, EventArgs e)

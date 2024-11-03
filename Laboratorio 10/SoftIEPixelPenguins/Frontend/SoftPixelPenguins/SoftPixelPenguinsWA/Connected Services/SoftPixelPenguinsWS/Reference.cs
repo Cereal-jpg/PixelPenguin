@@ -25,15 +25,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarCursoResponse> insertarCursoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarCursoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/eliminarCursoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/CursoWS/eliminarCursoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarCursoResponse eliminarCurso(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarCursoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/eliminarCursoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/CursoWS/eliminarCursoResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarCursoResponse> eliminarCursoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarCursoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/modificarCursoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/CursoWS/modificarCursoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -43,13 +34,13 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCursoResponse> modificarCursoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCursoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/obtenerCursoPorIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/CursoWS/obtenerCursoPorIdResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/eliminarCursoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/CursoWS/eliminarCursoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerCursoPorIdResponse obtenerCursoPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerCursoPorIdRequest request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarCursoResponse eliminarCurso(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarCursoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/obtenerCursoPorIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/CursoWS/obtenerCursoPorIdResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerCursoPorIdResponse> obtenerCursoPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerCursoPorIdRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/eliminarCursoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/CursoWS/eliminarCursoResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarCursoResponse> eliminarCursoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarCursoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/listarTodosCursosRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/CursoWS/listarTodosCursosResponse")]
@@ -59,6 +50,15 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/listarTodosCursosRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/CursoWS/listarTodosCursosResponse")]
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCursosResponse> listarTodosCursosAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCursosRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/obtenerCursoPorIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/CursoWS/obtenerCursoPorIdResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerCursoPorIdResponse obtenerCursoPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerCursoPorIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/obtenerCursoPorIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/CursoWS/obtenerCursoPorIdResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerCursoPorIdResponse> obtenerCursoPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerCursoPorIdRequest request);
     }
     
     /// <remarks/>
@@ -70,6 +70,8 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     public partial class curso : object, System.ComponentModel.INotifyPropertyChanged {
         
         private string codigoCursoField;
+        
+        private gradoAcademico gradoAcademicoField;
         
         private int horasPorSemanaField;
         
@@ -93,6 +95,18 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public gradoAcademico gradoAcademico {
+            get {
+                return this.gradoAcademicoField;
+            }
+            set {
+                this.gradoAcademicoField = value;
+                this.RaisePropertyChanged("gradoAcademico");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public int horasPorSemana {
             get {
                 return this.horasPorSemanaField;
@@ -104,7 +118,7 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public int horasTotales {
             get {
                 return this.horasTotalesField;
@@ -116,7 +130,7 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public int idCurso {
             get {
                 return this.idCursoField;
@@ -128,7 +142,7 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
         public string nombre {
             get {
                 return this.nombreField;
@@ -147,6 +161,135 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
         }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe")]
+    public partial class gradoAcademico : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int cantidadAlumnosField;
+        
+        private int fid_AnioAcademicoField;
+        
+        private int idGradoAcademicoField;
+        
+        private nivelEducativo nivelField;
+        
+        private bool nivelFieldSpecified;
+        
+        private int numeroGradoField;
+        
+        private int vacantesField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int cantidadAlumnos {
+            get {
+                return this.cantidadAlumnosField;
+            }
+            set {
+                this.cantidadAlumnosField = value;
+                this.RaisePropertyChanged("cantidadAlumnos");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int fid_AnioAcademico {
+            get {
+                return this.fid_AnioAcademicoField;
+            }
+            set {
+                this.fid_AnioAcademicoField = value;
+                this.RaisePropertyChanged("fid_AnioAcademico");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public int idGradoAcademico {
+            get {
+                return this.idGradoAcademicoField;
+            }
+            set {
+                this.idGradoAcademicoField = value;
+                this.RaisePropertyChanged("idGradoAcademico");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public nivelEducativo nivel {
+            get {
+                return this.nivelField;
+            }
+            set {
+                this.nivelField = value;
+                this.RaisePropertyChanged("nivel");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool nivelSpecified {
+            get {
+                return this.nivelFieldSpecified;
+            }
+            set {
+                this.nivelFieldSpecified = value;
+                this.RaisePropertyChanged("nivelSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int numeroGrado {
+            get {
+                return this.numeroGradoField;
+            }
+            set {
+                this.numeroGradoField = value;
+                this.RaisePropertyChanged("numeroGrado");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public int vacantes {
+            get {
+                return this.vacantesField;
+            }
+            set {
+                this.vacantesField = value;
+                this.RaisePropertyChanged("vacantes");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe")]
+    public enum nivelEducativo {
+        
+        /// <remarks/>
+        PRIMARIO,
+        
+        /// <remarks/>
+        SECUNDARIO,
     }
     
     /// <remarks/>
@@ -927,135 +1070,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         
         /// <remarks/>
         Matriculado,
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe")]
-    public partial class gradoAcademico : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int cantidadAlumnosField;
-        
-        private int fid_AnioAcademicoField;
-        
-        private int idGradoAcademicoField;
-        
-        private nivelEducativo nivelField;
-        
-        private bool nivelFieldSpecified;
-        
-        private int numeroGradoField;
-        
-        private int vacantesField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int cantidadAlumnos {
-            get {
-                return this.cantidadAlumnosField;
-            }
-            set {
-                this.cantidadAlumnosField = value;
-                this.RaisePropertyChanged("cantidadAlumnos");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public int fid_AnioAcademico {
-            get {
-                return this.fid_AnioAcademicoField;
-            }
-            set {
-                this.fid_AnioAcademicoField = value;
-                this.RaisePropertyChanged("fid_AnioAcademico");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public int idGradoAcademico {
-            get {
-                return this.idGradoAcademicoField;
-            }
-            set {
-                this.idGradoAcademicoField = value;
-                this.RaisePropertyChanged("idGradoAcademico");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public nivelEducativo nivel {
-            get {
-                return this.nivelField;
-            }
-            set {
-                this.nivelField = value;
-                this.RaisePropertyChanged("nivel");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool nivelSpecified {
-            get {
-                return this.nivelFieldSpecified;
-            }
-            set {
-                this.nivelFieldSpecified = value;
-                this.RaisePropertyChanged("nivelSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int numeroGrado {
-            get {
-                return this.numeroGradoField;
-            }
-            set {
-                this.numeroGradoField = value;
-                this.RaisePropertyChanged("numeroGrado");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public int vacantes {
-            get {
-                return this.vacantesField;
-            }
-            set {
-                this.vacantesField = value;
-                this.RaisePropertyChanged("vacantes");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe")]
-    public enum nivelEducativo {
-        
-        /// <remarks/>
-        PRIMARIO,
-        
-        /// <remarks/>
-        SECUNDARIO,
     }
     
     /// <remarks/>
@@ -1850,11 +1864,15 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         
         private string aulaField;
         
+        private int cantidadAlumnosField;
+        
         private gradoAcademico gradoAcademicoField;
         
         private int idSeccionAcademicaField;
         
         private ushort seccionField;
+        
+        private int vacantesField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -1870,6 +1888,18 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public int cantidadAlumnos {
+            get {
+                return this.cantidadAlumnosField;
+            }
+            set {
+                this.cantidadAlumnosField = value;
+                this.RaisePropertyChanged("cantidadAlumnos");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
         public gradoAcademico gradoAcademico {
             get {
                 return this.gradoAcademicoField;
@@ -1881,7 +1911,7 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
         public int idSeccionAcademica {
             get {
                 return this.idSeccionAcademicaField;
@@ -1893,7 +1923,7 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
         public ushort seccion {
             get {
                 return this.seccionField;
@@ -1901,6 +1931,18 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
             set {
                 this.seccionField = value;
                 this.RaisePropertyChanged("seccion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public int vacantes {
+            get {
+                return this.vacantesField;
+            }
+            set {
+                this.vacantesField = value;
+                this.RaisePropertyChanged("vacantes");
             }
         }
         
@@ -1953,42 +1995,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCurso", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarCursoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.curso curso;
-        
-        public eliminarCursoRequest() {
-        }
-        
-        public eliminarCursoRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.curso curso) {
-            this.curso = curso;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCursoResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarCursoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarCursoResponse() {
-        }
-        
-        public eliminarCursoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCurso", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
     public partial class modificarCursoRequest {
         
@@ -2025,6 +2031,70 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCurso", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarCursoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.curso curso;
+        
+        public eliminarCursoRequest() {
+        }
+        
+        public eliminarCursoRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.curso curso) {
+            this.curso = curso;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCursoResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarCursoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarCursoResponse() {
+        }
+        
+        public eliminarCursoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosCursos", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosCursosRequest {
+        
+        public listarTodosCursosRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosCursosResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosCursosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.curso[] @return;
+        
+        public listarTodosCursosResponse() {
+        }
+        
+        public listarTodosCursosResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.curso[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerCursoPorId", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
     public partial class obtenerCursoPorIdRequest {
         
@@ -2054,34 +2124,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         public obtenerCursoPorIdResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.curso @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosCursos", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosCursosRequest {
-        
-        public listarTodosCursosRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosCursosResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosCursosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.curso[] @return;
-        
-        public listarTodosCursosResponse() {
-        }
-        
-        public listarTodosCursosResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.curso[] @return) {
             this.@return = @return;
         }
     }
@@ -2137,6 +2179,29 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCursoResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.CursoWS.modificarCurso(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCursoRequest request) {
+            return base.Channel.modificarCurso(request);
+        }
+        
+        public int modificarCurso(SoftPixelPenguinsWA.SoftPixelPenguinsWS.curso curso) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCursoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCursoRequest();
+            inValue.curso = curso;
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCursoResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.CursoWS)(this)).modificarCurso(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCursoResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.CursoWS.modificarCursoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCursoRequest request) {
+            return base.Channel.modificarCursoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCursoResponse> modificarCursoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.curso curso) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCursoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCursoRequest();
+            inValue.curso = curso;
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.CursoWS)(this)).modificarCursoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarCursoResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.CursoWS.eliminarCurso(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarCursoRequest request) {
             return base.Channel.eliminarCurso(request);
         }
@@ -2160,26 +2225,24 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCursoResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.CursoWS.modificarCurso(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCursoRequest request) {
-            return base.Channel.modificarCurso(request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCursosResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.CursoWS.listarTodosCursos(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCursosRequest request) {
+            return base.Channel.listarTodosCursos(request);
         }
         
-        public int modificarCurso(SoftPixelPenguinsWA.SoftPixelPenguinsWS.curso curso) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCursoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCursoRequest();
-            inValue.curso = curso;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCursoResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.CursoWS)(this)).modificarCurso(inValue);
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.curso[] listarTodosCursos() {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCursosRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCursosRequest();
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCursosResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.CursoWS)(this)).listarTodosCursos(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCursoResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.CursoWS.modificarCursoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCursoRequest request) {
-            return base.Channel.modificarCursoAsync(request);
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCursosResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.CursoWS.listarTodosCursosAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCursosRequest request) {
+            return base.Channel.listarTodosCursosAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCursoResponse> modificarCursoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.curso curso) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCursoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCursoRequest();
-            inValue.curso = curso;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.CursoWS)(this)).modificarCursoAsync(inValue);
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCursosResponse> listarTodosCursosAsync() {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCursosRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCursosRequest();
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.CursoWS)(this)).listarTodosCursosAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2204,58 +2267,11 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
             inValue.idCurso = idCurso;
             return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.CursoWS)(this)).obtenerCursoPorIdAsync(inValue);
         }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCursosResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.CursoWS.listarTodosCursos(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCursosRequest request) {
-            return base.Channel.listarTodosCursos(request);
-        }
-        
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.curso[] listarTodosCursos() {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCursosRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCursosRequest();
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCursosResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.CursoWS)(this)).listarTodosCursos(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCursosResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.CursoWS.listarTodosCursosAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCursosRequest request) {
-            return base.Channel.listarTodosCursosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCursosResponse> listarTodosCursosAsync() {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCursosRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCursosRequest();
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.CursoWS)(this)).listarTodosCursosAsync(inValue);
-        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", ConfigurationName="SoftPixelPenguinsWS.SeccionAcademicaWS")]
     public interface SeccionAcademicaWS {
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/listarTodosSecciones" +
-            "AcademicasRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/listarTodosSecciones" +
-            "AcademicasResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosSeccionesAcademicasResponse listarTodosSeccionesAcademicas(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosSeccionesAcademicasRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/listarTodosSecciones" +
-            "AcademicasRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/listarTodosSecciones" +
-            "AcademicasResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosSeccionesAcademicasResponse> listarTodosSeccionesAcademicasAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosSeccionesAcademicasRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/obtenerSeccionAcadem" +
-            "icaPorIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/obtenerSeccionAcadem" +
-            "icaPorIdResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerSeccionAcademicaPorIdResponse obtenerSeccionAcademicaPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerSeccionAcademicaPorIdRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/obtenerSeccionAcadem" +
-            "icaPorIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/obtenerSeccionAcadem" +
-            "icaPorIdResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerSeccionAcademicaPorIdResponse> obtenerSeccionAcademicaPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerSeccionAcademicaPorIdRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/eliminarSeccionAcade" +
@@ -2295,70 +2311,32 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
             "emicaRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/modificarSeccionAcad" +
             "emicaResponse")]
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarSeccionAcademicaResponse> modificarSeccionAcademicaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarSeccionAcademicaRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosSeccionesAcademicas", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosSeccionesAcademicasRequest {
         
-        public listarTodosSeccionesAcademicasRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosSeccionesAcademicasResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosSeccionesAcademicasResponse {
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/obtenerSeccionAcadem" +
+            "icaPorIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/obtenerSeccionAcadem" +
+            "icaPorIdResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerSeccionAcademicaPorIdResponse obtenerSeccionAcademicaPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerSeccionAcademicaPorIdRequest request);
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.seccionAcademica[] @return;
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/obtenerSeccionAcadem" +
+            "icaPorIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/obtenerSeccionAcadem" +
+            "icaPorIdResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerSeccionAcademicaPorIdResponse> obtenerSeccionAcademicaPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerSeccionAcademicaPorIdRequest request);
         
-        public listarTodosSeccionesAcademicasResponse() {
-        }
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/listarTodosSecciones" +
+            "AcademicasRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/listarTodosSecciones" +
+            "AcademicasResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosSeccionesAcademicasResponse listarTodosSeccionesAcademicas(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosSeccionesAcademicasRequest request);
         
-        public listarTodosSeccionesAcademicasResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.seccionAcademica[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerSeccionAcademicaPorId", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class obtenerSeccionAcademicaPorIdRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idSeccionAcademica;
-        
-        public obtenerSeccionAcademicaPorIdRequest() {
-        }
-        
-        public obtenerSeccionAcademicaPorIdRequest(int idSeccionAcademica) {
-            this.idSeccionAcademica = idSeccionAcademica;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerSeccionAcademicaPorIdResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class obtenerSeccionAcademicaPorIdResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.seccionAcademica @return;
-        
-        public obtenerSeccionAcademicaPorIdResponse() {
-        }
-        
-        public obtenerSeccionAcademicaPorIdResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.seccionAcademica @return) {
-            this.@return = @return;
-        }
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/listarTodosSecciones" +
+            "AcademicasRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/listarTodosSecciones" +
+            "AcademicasResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosSeccionesAcademicasResponse> listarTodosSeccionesAcademicasAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosSeccionesAcademicasRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2469,6 +2447,70 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerSeccionAcademicaPorId", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class obtenerSeccionAcademicaPorIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idSeccionAcademica;
+        
+        public obtenerSeccionAcademicaPorIdRequest() {
+        }
+        
+        public obtenerSeccionAcademicaPorIdRequest(int idSeccionAcademica) {
+            this.idSeccionAcademica = idSeccionAcademica;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerSeccionAcademicaPorIdResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class obtenerSeccionAcademicaPorIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.seccionAcademica @return;
+        
+        public obtenerSeccionAcademicaPorIdResponse() {
+        }
+        
+        public obtenerSeccionAcademicaPorIdResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.seccionAcademica @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosSeccionesAcademicas", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosSeccionesAcademicasRequest {
+        
+        public listarTodosSeccionesAcademicasRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosSeccionesAcademicasResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosSeccionesAcademicasResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.seccionAcademica[] @return;
+        
+        public listarTodosSeccionesAcademicasResponse() {
+        }
+        
+        public listarTodosSeccionesAcademicasResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.seccionAcademica[] @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface SeccionAcademicaWSChannel : SoftPixelPenguinsWA.SoftPixelPenguinsWS.SeccionAcademicaWS, System.ServiceModel.IClientChannel {
     }
@@ -2494,50 +2536,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         
         public SeccionAcademicaWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosSeccionesAcademicasResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.SeccionAcademicaWS.listarTodosSeccionesAcademicas(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosSeccionesAcademicasRequest request) {
-            return base.Channel.listarTodosSeccionesAcademicas(request);
-        }
-        
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.seccionAcademica[] listarTodosSeccionesAcademicas() {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosSeccionesAcademicasRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosSeccionesAcademicasRequest();
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosSeccionesAcademicasResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.SeccionAcademicaWS)(this)).listarTodosSeccionesAcademicas(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosSeccionesAcademicasResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.SeccionAcademicaWS.listarTodosSeccionesAcademicasAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosSeccionesAcademicasRequest request) {
-            return base.Channel.listarTodosSeccionesAcademicasAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosSeccionesAcademicasResponse> listarTodosSeccionesAcademicasAsync() {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosSeccionesAcademicasRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosSeccionesAcademicasRequest();
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.SeccionAcademicaWS)(this)).listarTodosSeccionesAcademicasAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerSeccionAcademicaPorIdResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.SeccionAcademicaWS.obtenerSeccionAcademicaPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerSeccionAcademicaPorIdRequest request) {
-            return base.Channel.obtenerSeccionAcademicaPorId(request);
-        }
-        
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.seccionAcademica obtenerSeccionAcademicaPorId(int idSeccionAcademica) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerSeccionAcademicaPorIdRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerSeccionAcademicaPorIdRequest();
-            inValue.idSeccionAcademica = idSeccionAcademica;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerSeccionAcademicaPorIdResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.SeccionAcademicaWS)(this)).obtenerSeccionAcademicaPorId(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerSeccionAcademicaPorIdResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.SeccionAcademicaWS.obtenerSeccionAcademicaPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerSeccionAcademicaPorIdRequest request) {
-            return base.Channel.obtenerSeccionAcademicaPorIdAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerSeccionAcademicaPorIdResponse> obtenerSeccionAcademicaPorIdAsync(int idSeccionAcademica) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerSeccionAcademicaPorIdRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerSeccionAcademicaPorIdRequest();
-            inValue.idSeccionAcademica = idSeccionAcademica;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.SeccionAcademicaWS)(this)).obtenerSeccionAcademicaPorIdAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2608,11 +2606,68 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
             inValue.seccionAcademica = seccionAcademica;
             return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.SeccionAcademicaWS)(this)).modificarSeccionAcademicaAsync(inValue);
         }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerSeccionAcademicaPorIdResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.SeccionAcademicaWS.obtenerSeccionAcademicaPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerSeccionAcademicaPorIdRequest request) {
+            return base.Channel.obtenerSeccionAcademicaPorId(request);
+        }
+        
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.seccionAcademica obtenerSeccionAcademicaPorId(int idSeccionAcademica) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerSeccionAcademicaPorIdRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerSeccionAcademicaPorIdRequest();
+            inValue.idSeccionAcademica = idSeccionAcademica;
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerSeccionAcademicaPorIdResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.SeccionAcademicaWS)(this)).obtenerSeccionAcademicaPorId(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerSeccionAcademicaPorIdResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.SeccionAcademicaWS.obtenerSeccionAcademicaPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerSeccionAcademicaPorIdRequest request) {
+            return base.Channel.obtenerSeccionAcademicaPorIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerSeccionAcademicaPorIdResponse> obtenerSeccionAcademicaPorIdAsync(int idSeccionAcademica) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerSeccionAcademicaPorIdRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerSeccionAcademicaPorIdRequest();
+            inValue.idSeccionAcademica = idSeccionAcademica;
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.SeccionAcademicaWS)(this)).obtenerSeccionAcademicaPorIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosSeccionesAcademicasResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.SeccionAcademicaWS.listarTodosSeccionesAcademicas(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosSeccionesAcademicasRequest request) {
+            return base.Channel.listarTodosSeccionesAcademicas(request);
+        }
+        
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.seccionAcademica[] listarTodosSeccionesAcademicas() {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosSeccionesAcademicasRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosSeccionesAcademicasRequest();
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosSeccionesAcademicasResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.SeccionAcademicaWS)(this)).listarTodosSeccionesAcademicas(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosSeccionesAcademicasResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.SeccionAcademicaWS.listarTodosSeccionesAcademicasAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosSeccionesAcademicasRequest request) {
+            return base.Channel.listarTodosSeccionesAcademicasAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosSeccionesAcademicasResponse> listarTodosSeccionesAcademicasAsync() {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosSeccionesAcademicasRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosSeccionesAcademicasRequest();
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.SeccionAcademicaWS)(this)).listarTodosSeccionesAcademicasAsync(inValue);
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", ConfigurationName="SoftPixelPenguinsWS.HoraAcademicaWS")]
     public interface HoraAcademicaWS {
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/eliminarHoraAcademicaRe" +
+            "quest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/eliminarHoraAcademicaRe" +
+            "sponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarHoraAcademicaResponse eliminarHoraAcademica(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarHoraAcademicaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/eliminarHoraAcademicaRe" +
+            "quest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/eliminarHoraAcademicaRe" +
+            "sponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarHoraAcademicaResponse> eliminarHoraAcademicaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarHoraAcademicaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/modificarHoraAcademicaR" +
@@ -2626,19 +2681,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
             "equest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/modificarHoraAcademicaR" +
             "esponse")]
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarHoraAcademicaResponse> modificarHoraAcademicaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarHoraAcademicaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/obtenerHoraAcademicaPor" +
-            "IdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/obtenerHoraAcademicaPor" +
-            "IdResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerHoraAcademicaPorIdResponse obtenerHoraAcademicaPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerHoraAcademicaPorIdRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/obtenerHoraAcademicaPor" +
-            "IdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/obtenerHoraAcademicaPor" +
-            "IdResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerHoraAcademicaPorIdResponse> obtenerHoraAcademicaPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerHoraAcademicaPorIdRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/insertarHoraAcademicaRe" +
@@ -2667,17 +2709,53 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosHorasAcademicasResponse> listarTodosHorasAcademicasAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosHorasAcademicasRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/eliminarHoraAcademicaRe" +
-            "quest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/eliminarHoraAcademicaRe" +
-            "sponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/obtenerHoraAcademicaPor" +
+            "IdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/obtenerHoraAcademicaPor" +
+            "IdResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarHoraAcademicaResponse eliminarHoraAcademica(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarHoraAcademicaRequest request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerHoraAcademicaPorIdResponse obtenerHoraAcademicaPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerHoraAcademicaPorIdRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/eliminarHoraAcademicaRe" +
-            "quest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/eliminarHoraAcademicaRe" +
-            "sponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarHoraAcademicaResponse> eliminarHoraAcademicaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarHoraAcademicaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/obtenerHoraAcademicaPor" +
+            "IdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/obtenerHoraAcademicaPor" +
+            "IdResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerHoraAcademicaPorIdResponse> obtenerHoraAcademicaPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerHoraAcademicaPorIdRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarHoraAcademica", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarHoraAcademicaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.horaAcademica horaAcademica;
+        
+        public eliminarHoraAcademicaRequest() {
+        }
+        
+        public eliminarHoraAcademicaRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.horaAcademica horaAcademica) {
+            this.horaAcademica = horaAcademica;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarHoraAcademicaResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarHoraAcademicaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarHoraAcademicaResponse() {
+        }
+        
+        public eliminarHoraAcademicaResponse(int @return) {
+            this.@return = @return;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2712,42 +2790,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         public modificarHoraAcademicaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerHoraAcademicaPorId", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class obtenerHoraAcademicaPorIdRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idHoraAcademica;
-        
-        public obtenerHoraAcademicaPorIdRequest() {
-        }
-        
-        public obtenerHoraAcademicaPorIdRequest(int idHoraAcademica) {
-            this.idHoraAcademica = idHoraAcademica;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerHoraAcademicaPorIdResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class obtenerHoraAcademicaPorIdResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.horaAcademica @return;
-        
-        public obtenerHoraAcademicaPorIdResponse() {
-        }
-        
-        public obtenerHoraAcademicaPorIdResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.horaAcademica @return) {
             this.@return = @return;
         }
     }
@@ -2819,35 +2861,35 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarHoraAcademica", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarHoraAcademicaRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerHoraAcademicaPorId", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class obtenerHoraAcademicaPorIdRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.horaAcademica horaAcademica;
+        public int idHoraAcademica;
         
-        public eliminarHoraAcademicaRequest() {
+        public obtenerHoraAcademicaPorIdRequest() {
         }
         
-        public eliminarHoraAcademicaRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.horaAcademica horaAcademica) {
-            this.horaAcademica = horaAcademica;
+        public obtenerHoraAcademicaPorIdRequest(int idHoraAcademica) {
+            this.idHoraAcademica = idHoraAcademica;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarHoraAcademicaResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarHoraAcademicaResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerHoraAcademicaPorIdResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class obtenerHoraAcademicaPorIdResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.horaAcademica @return;
         
-        public eliminarHoraAcademicaResponse() {
+        public obtenerHoraAcademicaPorIdResponse() {
         }
         
-        public eliminarHoraAcademicaResponse(int @return) {
+        public obtenerHoraAcademicaPorIdResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.horaAcademica @return) {
             this.@return = @return;
         }
     }
@@ -2880,6 +2922,29 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarHoraAcademicaResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.HoraAcademicaWS.eliminarHoraAcademica(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarHoraAcademicaRequest request) {
+            return base.Channel.eliminarHoraAcademica(request);
+        }
+        
+        public int eliminarHoraAcademica(SoftPixelPenguinsWA.SoftPixelPenguinsWS.horaAcademica horaAcademica) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarHoraAcademicaRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarHoraAcademicaRequest();
+            inValue.horaAcademica = horaAcademica;
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarHoraAcademicaResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.HoraAcademicaWS)(this)).eliminarHoraAcademica(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarHoraAcademicaResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.HoraAcademicaWS.eliminarHoraAcademicaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarHoraAcademicaRequest request) {
+            return base.Channel.eliminarHoraAcademicaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarHoraAcademicaResponse> eliminarHoraAcademicaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.horaAcademica horaAcademica) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarHoraAcademicaRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarHoraAcademicaRequest();
+            inValue.horaAcademica = horaAcademica;
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.HoraAcademicaWS)(this)).eliminarHoraAcademicaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarHoraAcademicaResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.HoraAcademicaWS.modificarHoraAcademica(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarHoraAcademicaRequest request) {
             return base.Channel.modificarHoraAcademica(request);
         }
@@ -2900,29 +2965,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
             SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarHoraAcademicaRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarHoraAcademicaRequest();
             inValue.horaAcademica = horaAcademica;
             return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.HoraAcademicaWS)(this)).modificarHoraAcademicaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerHoraAcademicaPorIdResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.HoraAcademicaWS.obtenerHoraAcademicaPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerHoraAcademicaPorIdRequest request) {
-            return base.Channel.obtenerHoraAcademicaPorId(request);
-        }
-        
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.horaAcademica obtenerHoraAcademicaPorId(int idHoraAcademica) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerHoraAcademicaPorIdRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerHoraAcademicaPorIdRequest();
-            inValue.idHoraAcademica = idHoraAcademica;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerHoraAcademicaPorIdResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.HoraAcademicaWS)(this)).obtenerHoraAcademicaPorId(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerHoraAcademicaPorIdResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.HoraAcademicaWS.obtenerHoraAcademicaPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerHoraAcademicaPorIdRequest request) {
-            return base.Channel.obtenerHoraAcademicaPorIdAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerHoraAcademicaPorIdResponse> obtenerHoraAcademicaPorIdAsync(int idHoraAcademica) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerHoraAcademicaPorIdRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerHoraAcademicaPorIdRequest();
-            inValue.idHoraAcademica = idHoraAcademica;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.HoraAcademicaWS)(this)).obtenerHoraAcademicaPorIdAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2970,32 +3012,41 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarHoraAcademicaResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.HoraAcademicaWS.eliminarHoraAcademica(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarHoraAcademicaRequest request) {
-            return base.Channel.eliminarHoraAcademica(request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerHoraAcademicaPorIdResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.HoraAcademicaWS.obtenerHoraAcademicaPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerHoraAcademicaPorIdRequest request) {
+            return base.Channel.obtenerHoraAcademicaPorId(request);
         }
         
-        public int eliminarHoraAcademica(SoftPixelPenguinsWA.SoftPixelPenguinsWS.horaAcademica horaAcademica) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarHoraAcademicaRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarHoraAcademicaRequest();
-            inValue.horaAcademica = horaAcademica;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarHoraAcademicaResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.HoraAcademicaWS)(this)).eliminarHoraAcademica(inValue);
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.horaAcademica obtenerHoraAcademicaPorId(int idHoraAcademica) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerHoraAcademicaPorIdRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerHoraAcademicaPorIdRequest();
+            inValue.idHoraAcademica = idHoraAcademica;
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerHoraAcademicaPorIdResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.HoraAcademicaWS)(this)).obtenerHoraAcademicaPorId(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarHoraAcademicaResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.HoraAcademicaWS.eliminarHoraAcademicaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarHoraAcademicaRequest request) {
-            return base.Channel.eliminarHoraAcademicaAsync(request);
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerHoraAcademicaPorIdResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.HoraAcademicaWS.obtenerHoraAcademicaPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerHoraAcademicaPorIdRequest request) {
+            return base.Channel.obtenerHoraAcademicaPorIdAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarHoraAcademicaResponse> eliminarHoraAcademicaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.horaAcademica horaAcademica) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarHoraAcademicaRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarHoraAcademicaRequest();
-            inValue.horaAcademica = horaAcademica;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.HoraAcademicaWS)(this)).eliminarHoraAcademicaAsync(inValue);
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerHoraAcademicaPorIdResponse> obtenerHoraAcademicaPorIdAsync(int idHoraAcademica) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerHoraAcademicaPorIdRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerHoraAcademicaPorIdRequest();
+            inValue.idHoraAcademica = idHoraAcademica;
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.HoraAcademicaWS)(this)).obtenerHoraAcademicaPorIdAsync(inValue);
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", ConfigurationName="SoftPixelPenguinsWS.PagoWS")]
     public interface PagoWS {
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/listarTodosPagosRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/PagoWS/listarTodosPagosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPagosResponse listarTodosPagos(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPagosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/listarTodosPagosRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/PagoWS/listarTodosPagosResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPagosResponse> listarTodosPagosAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPagosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/insertarPagoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/PagoWS/insertarPagoResponse")]
@@ -3016,15 +3067,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarPagoResponse> modificarPagoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarPagoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/eliminarPagoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/PagoWS/eliminarPagoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPagoResponse eliminarPago(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPagoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/eliminarPagoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/PagoWS/eliminarPagoResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPagoResponse> eliminarPagoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPagoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/obtenerPagoPorIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/PagoWS/obtenerPagoPorIdResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -3034,13 +3076,41 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerPagoPorIdResponse> obtenerPagoPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerPagoPorIdRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/listarTodosPagosRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/PagoWS/listarTodosPagosResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/eliminarPagoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/PagoWS/eliminarPagoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPagosResponse listarTodosPagos(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPagosRequest request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPagoResponse eliminarPago(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPagoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/listarTodosPagosRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/PagoWS/listarTodosPagosResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPagosResponse> listarTodosPagosAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPagosRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/eliminarPagoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/PagoWS/eliminarPagoResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPagoResponse> eliminarPagoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPagoRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPagos", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosPagosRequest {
+        
+        public listarTodosPagosRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPagosResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosPagosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.pago[] @return;
+        
+        public listarTodosPagosResponse() {
+        }
+        
+        public listarTodosPagosResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.pago[] @return) {
+            this.@return = @return;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3118,42 +3188,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPago", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarPagoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.pago pago;
-        
-        public eliminarPagoRequest() {
-        }
-        
-        public eliminarPagoRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.pago pago) {
-            this.pago = pago;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPagoResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarPagoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarPagoResponse() {
-        }
-        
-        public eliminarPagoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerPagoPorId", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
     public partial class obtenerPagoPorIdRequest {
         
@@ -3190,27 +3224,35 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPagos", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosPagosRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPago", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarPagoRequest {
         
-        public listarTodosPagosRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.pago pago;
+        
+        public eliminarPagoRequest() {
+        }
+        
+        public eliminarPagoRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.pago pago) {
+            this.pago = pago;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPagosResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosPagosResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPagoResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarPagoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.pago[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
         
-        public listarTodosPagosResponse() {
+        public eliminarPagoResponse() {
         }
         
-        public listarTodosPagosResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.pago[] @return) {
+        public eliminarPagoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -3240,6 +3282,27 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         
         public PagoWSClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
                 base(binding, remoteAddress) {
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPagosResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.PagoWS.listarTodosPagos(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPagosRequest request) {
+            return base.Channel.listarTodosPagos(request);
+        }
+        
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.pago[] listarTodosPagos() {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPagosRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPagosRequest();
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPagosResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.PagoWS)(this)).listarTodosPagos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPagosResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.PagoWS.listarTodosPagosAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPagosRequest request) {
+            return base.Channel.listarTodosPagosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPagosResponse> listarTodosPagosAsync() {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPagosRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPagosRequest();
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.PagoWS)(this)).listarTodosPagosAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3289,29 +3352,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPagoResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.PagoWS.eliminarPago(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPagoRequest request) {
-            return base.Channel.eliminarPago(request);
-        }
-        
-        public int eliminarPago(SoftPixelPenguinsWA.SoftPixelPenguinsWS.pago pago) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPagoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPagoRequest();
-            inValue.pago = pago;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPagoResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.PagoWS)(this)).eliminarPago(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPagoResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.PagoWS.eliminarPagoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPagoRequest request) {
-            return base.Channel.eliminarPagoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPagoResponse> eliminarPagoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.pago pago) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPagoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPagoRequest();
-            inValue.pago = pago;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.PagoWS)(this)).eliminarPagoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerPagoPorIdResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.PagoWS.obtenerPagoPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerPagoPorIdRequest request) {
             return base.Channel.obtenerPagoPorId(request);
         }
@@ -3335,56 +3375,32 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPagosResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.PagoWS.listarTodosPagos(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPagosRequest request) {
-            return base.Channel.listarTodosPagos(request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPagoResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.PagoWS.eliminarPago(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPagoRequest request) {
+            return base.Channel.eliminarPago(request);
         }
         
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.pago[] listarTodosPagos() {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPagosRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPagosRequest();
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPagosResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.PagoWS)(this)).listarTodosPagos(inValue);
+        public int eliminarPago(SoftPixelPenguinsWA.SoftPixelPenguinsWS.pago pago) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPagoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPagoRequest();
+            inValue.pago = pago;
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPagoResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.PagoWS)(this)).eliminarPago(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPagosResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.PagoWS.listarTodosPagosAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPagosRequest request) {
-            return base.Channel.listarTodosPagosAsync(request);
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPagoResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.PagoWS.eliminarPagoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPagoRequest request) {
+            return base.Channel.eliminarPagoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPagosResponse> listarTodosPagosAsync() {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPagosRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPagosRequest();
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.PagoWS)(this)).listarTodosPagosAsync(inValue);
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPagoResponse> eliminarPagoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.pago pago) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPagoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPagoRequest();
+            inValue.pago = pago;
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.PagoWS)(this)).eliminarPagoAsync(inValue);
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", ConfigurationName="SoftPixelPenguinsWS.JornadaEscolarWS")]
     public interface JornadaEscolarWS {
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/listarTodosJornadasEsc" +
-            "olaresRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/listarTodosJornadasEsc" +
-            "olaresResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosJornadasEscolaresResponse listarTodosJornadasEscolares(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosJornadasEscolaresRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/listarTodosJornadasEsc" +
-            "olaresRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/listarTodosJornadasEsc" +
-            "olaresResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosJornadasEscolaresResponse> listarTodosJornadasEscolaresAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosJornadasEscolaresRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/eliminarJornadaEscolar" +
-            "Request", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/eliminarJornadaEscolar" +
-            "Response")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarJornadaEscolarResponse eliminarJornadaEscolar(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarJornadaEscolarRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/eliminarJornadaEscolar" +
-            "Request", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/eliminarJornadaEscolar" +
-            "Response")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarJornadaEscolarResponse> eliminarJornadaEscolarAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarJornadaEscolarRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/insertarJornadaEscolar" +
@@ -3400,6 +3416,32 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarJornadaEscolarResponse> insertarJornadaEscolarAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarJornadaEscolarRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/modificarJornadaEscola" +
+            "rRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/modificarJornadaEscola" +
+            "rResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarJornadaEscolarResponse modificarJornadaEscolar(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarJornadaEscolarRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/modificarJornadaEscola" +
+            "rRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/modificarJornadaEscola" +
+            "rResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarJornadaEscolarResponse> modificarJornadaEscolarAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarJornadaEscolarRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/eliminarJornadaEscolar" +
+            "Request", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/eliminarJornadaEscolar" +
+            "Response")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarJornadaEscolarResponse eliminarJornadaEscolar(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarJornadaEscolarRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/eliminarJornadaEscolar" +
+            "Request", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/eliminarJornadaEscolar" +
+            "Response")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarJornadaEscolarResponse> eliminarJornadaEscolarAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarJornadaEscolarRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/obtenerJornadaEscolarP" +
             "orIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/obtenerJornadaEscolarP" +
             "orIdResponse")]
@@ -3413,43 +3455,87 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerJornadaEscolarPorIdResponse> obtenerJornadaEscolarPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerJornadaEscolarPorIdRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/modificarJornadaEscola" +
-            "rRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/modificarJornadaEscola" +
-            "rResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/listarTodosJornadasEsc" +
+            "olaresRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/listarTodosJornadasEsc" +
+            "olaresResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarJornadaEscolarResponse modificarJornadaEscolar(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarJornadaEscolarRequest request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosJornadasEscolaresResponse listarTodosJornadasEscolares(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosJornadasEscolaresRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/modificarJornadaEscola" +
-            "rRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/modificarJornadaEscola" +
-            "rResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarJornadaEscolarResponse> modificarJornadaEscolarAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarJornadaEscolarRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/listarTodosJornadasEsc" +
+            "olaresRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/listarTodosJornadasEsc" +
+            "olaresResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosJornadasEscolaresResponse> listarTodosJornadasEscolaresAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosJornadasEscolaresRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosJornadasEscolares", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosJornadasEscolaresRequest {
-        
-        public listarTodosJornadasEscolaresRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosJornadasEscolaresResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosJornadasEscolaresResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarJornadaEscolar", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class insertarJornadaEscolarRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.jornadaEscolar[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.jornadaEscolar jornadaEscolar;
         
-        public listarTodosJornadasEscolaresResponse() {
+        public insertarJornadaEscolarRequest() {
         }
         
-        public listarTodosJornadasEscolaresResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.jornadaEscolar[] @return) {
+        public insertarJornadaEscolarRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.jornadaEscolar jornadaEscolar) {
+            this.jornadaEscolar = jornadaEscolar;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarJornadaEscolarResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class insertarJornadaEscolarResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarJornadaEscolarResponse() {
+        }
+        
+        public insertarJornadaEscolarResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarJornadaEscolar", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class modificarJornadaEscolarRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.jornadaEscolar jornadaEscolar;
+        
+        public modificarJornadaEscolarRequest() {
+        }
+        
+        public modificarJornadaEscolarRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.jornadaEscolar jornadaEscolar) {
+            this.jornadaEscolar = jornadaEscolar;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarJornadaEscolarResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class modificarJornadaEscolarResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public modificarJornadaEscolarResponse() {
+        }
+        
+        public modificarJornadaEscolarResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -3493,42 +3579,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarJornadaEscolar", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class insertarJornadaEscolarRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.jornadaEscolar jornadaEscolar;
-        
-        public insertarJornadaEscolarRequest() {
-        }
-        
-        public insertarJornadaEscolarRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.jornadaEscolar jornadaEscolar) {
-            this.jornadaEscolar = jornadaEscolar;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarJornadaEscolarResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class insertarJornadaEscolarResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarJornadaEscolarResponse() {
-        }
-        
-        public insertarJornadaEscolarResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerJornadaEscolarPorId", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
     public partial class obtenerJornadaEscolarPorIdRequest {
         
@@ -3565,35 +3615,27 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarJornadaEscolar", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class modificarJornadaEscolarRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosJornadasEscolares", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosJornadasEscolaresRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.jornadaEscolar jornadaEscolar;
-        
-        public modificarJornadaEscolarRequest() {
-        }
-        
-        public modificarJornadaEscolarRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.jornadaEscolar jornadaEscolar) {
-            this.jornadaEscolar = jornadaEscolar;
+        public listarTodosJornadasEscolaresRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarJornadaEscolarResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class modificarJornadaEscolarResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosJornadasEscolaresResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosJornadasEscolaresResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.jornadaEscolar[] @return;
         
-        public modificarJornadaEscolarResponse() {
+        public listarTodosJornadasEscolaresResponse() {
         }
         
-        public modificarJornadaEscolarResponse(int @return) {
+        public listarTodosJornadasEscolaresResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.jornadaEscolar[] @return) {
             this.@return = @return;
         }
     }
@@ -3626,24 +3668,49 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosJornadasEscolaresResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.JornadaEscolarWS.listarTodosJornadasEscolares(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosJornadasEscolaresRequest request) {
-            return base.Channel.listarTodosJornadasEscolares(request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarJornadaEscolarResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.JornadaEscolarWS.insertarJornadaEscolar(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarJornadaEscolarRequest request) {
+            return base.Channel.insertarJornadaEscolar(request);
         }
         
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.jornadaEscolar[] listarTodosJornadasEscolares() {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosJornadasEscolaresRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosJornadasEscolaresRequest();
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosJornadasEscolaresResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.JornadaEscolarWS)(this)).listarTodosJornadasEscolares(inValue);
+        public int insertarJornadaEscolar(SoftPixelPenguinsWA.SoftPixelPenguinsWS.jornadaEscolar jornadaEscolar) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarJornadaEscolarRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarJornadaEscolarRequest();
+            inValue.jornadaEscolar = jornadaEscolar;
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarJornadaEscolarResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.JornadaEscolarWS)(this)).insertarJornadaEscolar(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosJornadasEscolaresResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.JornadaEscolarWS.listarTodosJornadasEscolaresAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosJornadasEscolaresRequest request) {
-            return base.Channel.listarTodosJornadasEscolaresAsync(request);
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarJornadaEscolarResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.JornadaEscolarWS.insertarJornadaEscolarAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarJornadaEscolarRequest request) {
+            return base.Channel.insertarJornadaEscolarAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosJornadasEscolaresResponse> listarTodosJornadasEscolaresAsync() {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosJornadasEscolaresRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosJornadasEscolaresRequest();
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.JornadaEscolarWS)(this)).listarTodosJornadasEscolaresAsync(inValue);
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarJornadaEscolarResponse> insertarJornadaEscolarAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.jornadaEscolar jornadaEscolar) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarJornadaEscolarRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarJornadaEscolarRequest();
+            inValue.jornadaEscolar = jornadaEscolar;
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.JornadaEscolarWS)(this)).insertarJornadaEscolarAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarJornadaEscolarResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.JornadaEscolarWS.modificarJornadaEscolar(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarJornadaEscolarRequest request) {
+            return base.Channel.modificarJornadaEscolar(request);
+        }
+        
+        public int modificarJornadaEscolar(SoftPixelPenguinsWA.SoftPixelPenguinsWS.jornadaEscolar jornadaEscolar) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarJornadaEscolarRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarJornadaEscolarRequest();
+            inValue.jornadaEscolar = jornadaEscolar;
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarJornadaEscolarResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.JornadaEscolarWS)(this)).modificarJornadaEscolar(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarJornadaEscolarResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.JornadaEscolarWS.modificarJornadaEscolarAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarJornadaEscolarRequest request) {
+            return base.Channel.modificarJornadaEscolarAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarJornadaEscolarResponse> modificarJornadaEscolarAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.jornadaEscolar jornadaEscolar) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarJornadaEscolarRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarJornadaEscolarRequest();
+            inValue.jornadaEscolar = jornadaEscolar;
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.JornadaEscolarWS)(this)).modificarJornadaEscolarAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -3670,29 +3737,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarJornadaEscolarResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.JornadaEscolarWS.insertarJornadaEscolar(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarJornadaEscolarRequest request) {
-            return base.Channel.insertarJornadaEscolar(request);
-        }
-        
-        public int insertarJornadaEscolar(SoftPixelPenguinsWA.SoftPixelPenguinsWS.jornadaEscolar jornadaEscolar) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarJornadaEscolarRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarJornadaEscolarRequest();
-            inValue.jornadaEscolar = jornadaEscolar;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarJornadaEscolarResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.JornadaEscolarWS)(this)).insertarJornadaEscolar(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarJornadaEscolarResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.JornadaEscolarWS.insertarJornadaEscolarAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarJornadaEscolarRequest request) {
-            return base.Channel.insertarJornadaEscolarAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarJornadaEscolarResponse> insertarJornadaEscolarAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.jornadaEscolar jornadaEscolar) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarJornadaEscolarRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarJornadaEscolarRequest();
-            inValue.jornadaEscolar = jornadaEscolar;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.JornadaEscolarWS)(this)).insertarJornadaEscolarAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerJornadaEscolarPorIdResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.JornadaEscolarWS.obtenerJornadaEscolarPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerJornadaEscolarPorIdRequest request) {
             return base.Channel.obtenerJornadaEscolarPorId(request);
         }
@@ -3716,41 +3760,30 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarJornadaEscolarResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.JornadaEscolarWS.modificarJornadaEscolar(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarJornadaEscolarRequest request) {
-            return base.Channel.modificarJornadaEscolar(request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosJornadasEscolaresResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.JornadaEscolarWS.listarTodosJornadasEscolares(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosJornadasEscolaresRequest request) {
+            return base.Channel.listarTodosJornadasEscolares(request);
         }
         
-        public int modificarJornadaEscolar(SoftPixelPenguinsWA.SoftPixelPenguinsWS.jornadaEscolar jornadaEscolar) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarJornadaEscolarRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarJornadaEscolarRequest();
-            inValue.jornadaEscolar = jornadaEscolar;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarJornadaEscolarResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.JornadaEscolarWS)(this)).modificarJornadaEscolar(inValue);
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.jornadaEscolar[] listarTodosJornadasEscolares() {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosJornadasEscolaresRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosJornadasEscolaresRequest();
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosJornadasEscolaresResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.JornadaEscolarWS)(this)).listarTodosJornadasEscolares(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarJornadaEscolarResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.JornadaEscolarWS.modificarJornadaEscolarAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarJornadaEscolarRequest request) {
-            return base.Channel.modificarJornadaEscolarAsync(request);
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosJornadasEscolaresResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.JornadaEscolarWS.listarTodosJornadasEscolaresAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosJornadasEscolaresRequest request) {
+            return base.Channel.listarTodosJornadasEscolaresAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarJornadaEscolarResponse> modificarJornadaEscolarAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.jornadaEscolar jornadaEscolar) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarJornadaEscolarRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarJornadaEscolarRequest();
-            inValue.jornadaEscolar = jornadaEscolar;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.JornadaEscolarWS)(this)).modificarJornadaEscolarAsync(inValue);
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosJornadasEscolaresResponse> listarTodosJornadasEscolaresAsync() {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosJornadasEscolaresRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosJornadasEscolaresRequest();
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.JornadaEscolarWS)(this)).listarTodosJornadasEscolaresAsync(inValue);
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", ConfigurationName="SoftPixelPenguinsWS.UsuarioWS")]
     public interface UsuarioWS {
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/listarTodosUsuariosRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/listarTodosUsuariosResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosUsuariosResponse listarTodosUsuarios(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosUsuariosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/listarTodosUsuariosRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/listarTodosUsuariosResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosUsuariosResponse> listarTodosUsuariosAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosUsuariosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/obtenerUsuarioPorIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/obtenerUsuarioPorIdResponse")]
@@ -3760,6 +3793,15 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/obtenerUsuarioPorIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/obtenerUsuarioPorIdResponse")]
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerUsuarioPorIdResponse> obtenerUsuarioPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerUsuarioPorIdRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/listarTodosUsuariosRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/listarTodosUsuariosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosUsuariosResponse listarTodosUsuarios(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosUsuariosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/listarTodosUsuariosRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/listarTodosUsuariosResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosUsuariosResponse> listarTodosUsuariosAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosUsuariosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/listarUsuariosPorNombreReques" +
@@ -3775,13 +3817,13 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarUsuariosPorNombreResponse> listarUsuariosPorNombreAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarUsuariosPorNombreRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/ValidarDatosRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/ValidarDatosResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/existeUsuarioRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/existeUsuarioResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarDatosResponse ValidarDatos(SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarDatosRequest request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeUsuarioResponse existeUsuario(SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeUsuarioRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/ValidarDatosRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/ValidarDatosResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarDatosResponse> ValidarDatosAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarDatosRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/existeUsuarioRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/existeUsuarioResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeUsuarioResponse> existeUsuarioAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeUsuarioRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/insertarUsuarioRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/insertarUsuarioResponse")]
@@ -3791,6 +3833,15 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/insertarUsuarioRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/insertarUsuarioResponse")]
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarUsuarioResponse> insertarUsuarioAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarUsuarioRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/ValidarDatosRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/ValidarDatosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarDatosResponse ValidarDatos(SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarDatosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/ValidarDatosRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/ValidarDatosResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarDatosResponse> ValidarDatosAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarDatosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/modificarUsuarioRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/modificarUsuarioResponse")]
@@ -3809,43 +3860,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/eliminarUsuarioRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/eliminarUsuarioResponse")]
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarUsuarioResponse> eliminarUsuarioAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarUsuarioRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/existeUsuarioRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/existeUsuarioResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeUsuarioResponse existeUsuario(SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeUsuarioRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/existeUsuarioRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/existeUsuarioResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeUsuarioResponse> existeUsuarioAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeUsuarioRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosUsuarios", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosUsuariosRequest {
-        
-        public listarTodosUsuariosRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosUsuariosResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosUsuariosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.usuario[] @return;
-        
-        public listarTodosUsuariosResponse() {
-        }
-        
-        public listarTodosUsuariosResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.usuario[] @return) {
-            this.@return = @return;
-        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3880,6 +3894,34 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         public obtenerUsuarioPorIdResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.usuario @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosUsuarios", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosUsuariosRequest {
+        
+        public listarTodosUsuariosRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosUsuariosResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosUsuariosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.usuario[] @return;
+        
+        public listarTodosUsuariosResponse() {
+        }
+        
+        public listarTodosUsuariosResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.usuario[] @return) {
             this.@return = @return;
         }
     }
@@ -3923,40 +3965,35 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ValidarDatos", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class ValidarDatosRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="existeUsuario", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class existeUsuarioRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string email;
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.usuario usuario;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string password;
-        
-        public ValidarDatosRequest() {
+        public existeUsuarioRequest() {
         }
         
-        public ValidarDatosRequest(string email, string password) {
-            this.email = email;
-            this.password = password;
+        public existeUsuarioRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.usuario usuario) {
+            this.usuario = usuario;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ValidarDatosResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class ValidarDatosResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="existeUsuarioResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class existeUsuarioResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        public bool @return;
         
-        public ValidarDatosResponse() {
+        public existeUsuarioResponse() {
         }
         
-        public ValidarDatosResponse(int @return) {
+        public existeUsuarioResponse(bool @return) {
             this.@return = @return;
         }
     }
@@ -3993,6 +4030,47 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         public insertarUsuarioResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ValidarDatos", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class ValidarDatosRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string email;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string password;
+        
+        public ValidarDatosRequest() {
+        }
+        
+        public ValidarDatosRequest(string email, string password) {
+            this.email = email;
+            this.password = password;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ValidarDatosResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class ValidarDatosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public ValidarDatosResponse() {
+        }
+        
+        public ValidarDatosResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -4069,42 +4147,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="existeUsuario", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class existeUsuarioRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.usuario usuario;
-        
-        public existeUsuarioRequest() {
-        }
-        
-        public existeUsuarioRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.usuario usuario) {
-            this.usuario = usuario;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="existeUsuarioResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class existeUsuarioResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public existeUsuarioResponse() {
-        }
-        
-        public existeUsuarioResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface UsuarioWSChannel : SoftPixelPenguinsWA.SoftPixelPenguinsWS.UsuarioWS, System.ServiceModel.IClientChannel {
     }
@@ -4133,27 +4175,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosUsuariosResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.UsuarioWS.listarTodosUsuarios(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosUsuariosRequest request) {
-            return base.Channel.listarTodosUsuarios(request);
-        }
-        
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.usuario[] listarTodosUsuarios() {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosUsuariosRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosUsuariosRequest();
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosUsuariosResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.UsuarioWS)(this)).listarTodosUsuarios(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosUsuariosResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.UsuarioWS.listarTodosUsuariosAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosUsuariosRequest request) {
-            return base.Channel.listarTodosUsuariosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosUsuariosResponse> listarTodosUsuariosAsync() {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosUsuariosRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosUsuariosRequest();
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.UsuarioWS)(this)).listarTodosUsuariosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerUsuarioPorIdResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.UsuarioWS.obtenerUsuarioPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerUsuarioPorIdRequest request) {
             return base.Channel.obtenerUsuarioPorId(request);
         }
@@ -4174,6 +4195,27 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
             SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerUsuarioPorIdRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerUsuarioPorIdRequest();
             inValue.idUsuario = idUsuario;
             return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.UsuarioWS)(this)).obtenerUsuarioPorIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosUsuariosResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.UsuarioWS.listarTodosUsuarios(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosUsuariosRequest request) {
+            return base.Channel.listarTodosUsuarios(request);
+        }
+        
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.usuario[] listarTodosUsuarios() {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosUsuariosRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosUsuariosRequest();
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosUsuariosResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.UsuarioWS)(this)).listarTodosUsuarios(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosUsuariosResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.UsuarioWS.listarTodosUsuariosAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosUsuariosRequest request) {
+            return base.Channel.listarTodosUsuariosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosUsuariosResponse> listarTodosUsuariosAsync() {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosUsuariosRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosUsuariosRequest();
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.UsuarioWS)(this)).listarTodosUsuariosAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4200,28 +4242,26 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarDatosResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.UsuarioWS.ValidarDatos(SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarDatosRequest request) {
-            return base.Channel.ValidarDatos(request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeUsuarioResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.UsuarioWS.existeUsuario(SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeUsuarioRequest request) {
+            return base.Channel.existeUsuario(request);
         }
         
-        public int ValidarDatos(string email, string password) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarDatosRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarDatosRequest();
-            inValue.email = email;
-            inValue.password = password;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarDatosResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.UsuarioWS)(this)).ValidarDatos(inValue);
+        public bool existeUsuario(SoftPixelPenguinsWA.SoftPixelPenguinsWS.usuario usuario) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeUsuarioRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeUsuarioRequest();
+            inValue.usuario = usuario;
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeUsuarioResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.UsuarioWS)(this)).existeUsuario(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarDatosResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.UsuarioWS.ValidarDatosAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarDatosRequest request) {
-            return base.Channel.ValidarDatosAsync(request);
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeUsuarioResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.UsuarioWS.existeUsuarioAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeUsuarioRequest request) {
+            return base.Channel.existeUsuarioAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarDatosResponse> ValidarDatosAsync(string email, string password) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarDatosRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarDatosRequest();
-            inValue.email = email;
-            inValue.password = password;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.UsuarioWS)(this)).ValidarDatosAsync(inValue);
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeUsuarioResponse> existeUsuarioAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.usuario usuario) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeUsuarioRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeUsuarioRequest();
+            inValue.usuario = usuario;
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.UsuarioWS)(this)).existeUsuarioAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4245,6 +4285,31 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
             SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarUsuarioRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarUsuarioRequest();
             inValue.usuario = usuario;
             return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.UsuarioWS)(this)).insertarUsuarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarDatosResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.UsuarioWS.ValidarDatos(SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarDatosRequest request) {
+            return base.Channel.ValidarDatos(request);
+        }
+        
+        public int ValidarDatos(string email, string password) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarDatosRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarDatosRequest();
+            inValue.email = email;
+            inValue.password = password;
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarDatosResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.UsuarioWS)(this)).ValidarDatos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarDatosResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.UsuarioWS.ValidarDatosAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarDatosRequest request) {
+            return base.Channel.ValidarDatosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarDatosResponse> ValidarDatosAsync(string email, string password) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarDatosRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarDatosRequest();
+            inValue.email = email;
+            inValue.password = password;
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.UsuarioWS)(this)).ValidarDatosAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4292,52 +4357,11 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
             inValue.usuario = usuario;
             return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.UsuarioWS)(this)).eliminarUsuarioAsync(inValue);
         }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeUsuarioResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.UsuarioWS.existeUsuario(SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeUsuarioRequest request) {
-            return base.Channel.existeUsuario(request);
-        }
-        
-        public bool existeUsuario(SoftPixelPenguinsWA.SoftPixelPenguinsWS.usuario usuario) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeUsuarioRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeUsuarioRequest();
-            inValue.usuario = usuario;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeUsuarioResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.UsuarioWS)(this)).existeUsuario(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeUsuarioResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.UsuarioWS.existeUsuarioAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeUsuarioRequest request) {
-            return base.Channel.existeUsuarioAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeUsuarioResponse> existeUsuarioAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.usuario usuario) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeUsuarioRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeUsuarioRequest();
-            inValue.usuario = usuario;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.UsuarioWS)(this)).existeUsuarioAsync(inValue);
-        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", ConfigurationName="SoftPixelPenguinsWS.AlumnoWS")]
     public interface AlumnoWS {
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/existeAlumnoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/existeAlumnoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAlumnoResponse existeAlumno(SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAlumnoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/existeAlumnoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/existeAlumnoResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAlumnoResponse> existeAlumnoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAlumnoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/eliminarAlumnoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/eliminarAlumnoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAlumnoResponse eliminarAlumno(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAlumnoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/eliminarAlumnoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/eliminarAlumnoResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAlumnoResponse> eliminarAlumnoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAlumnoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/listarTodosAlumnosRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/listarTodosAlumnosResponse")]
@@ -4349,13 +4373,22 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAlumnosResponse> listarTodosAlumnosAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAlumnosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/obtenerAlumnoPorIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/obtenerAlumnoPorIdResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/insertarAlumnoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/insertarAlumnoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAlumnoPorIdResponse obtenerAlumnoPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAlumnoPorIdRequest request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAlumnoResponse insertarAlumno(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAlumnoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/obtenerAlumnoPorIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/obtenerAlumnoPorIdResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAlumnoPorIdResponse> obtenerAlumnoPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAlumnoPorIdRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/insertarAlumnoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/insertarAlumnoResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAlumnoResponse> insertarAlumnoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAlumnoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/existeAlumnoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/existeAlumnoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAlumnoResponse existeAlumno(SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAlumnoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/existeAlumnoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/existeAlumnoResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAlumnoResponse> existeAlumnoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAlumnoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/modificarAlumnoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/modificarAlumnoResponse")]
@@ -4367,13 +4400,22 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarAlumnoResponse> modificarAlumnoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarAlumnoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/insertarAlumnoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/insertarAlumnoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/eliminarAlumnoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/eliminarAlumnoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAlumnoResponse insertarAlumno(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAlumnoRequest request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAlumnoResponse eliminarAlumno(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAlumnoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/insertarAlumnoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/insertarAlumnoResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAlumnoResponse> insertarAlumnoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAlumnoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/eliminarAlumnoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/eliminarAlumnoResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAlumnoResponse> eliminarAlumnoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAlumnoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/obtenerAlumnoPorIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/obtenerAlumnoPorIdResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAlumnoPorIdResponse obtenerAlumnoPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAlumnoPorIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/obtenerAlumnoPorIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/obtenerAlumnoPorIdResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAlumnoPorIdResponse> obtenerAlumnoPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAlumnoPorIdRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/listarAlumnosPorEstadoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/listarAlumnosPorEstadoResponse" +
@@ -4385,6 +4427,70 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/listarAlumnosPorEstadoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/listarAlumnosPorEstadoResponse" +
             "")]
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarAlumnosPorEstadoResponse> listarAlumnosPorEstadoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarAlumnosPorEstadoRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosAlumnos", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosAlumnosRequest {
+        
+        public listarTodosAlumnosRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosAlumnosResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosAlumnosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.alumno[] @return;
+        
+        public listarTodosAlumnosResponse() {
+        }
+        
+        public listarTodosAlumnosResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.alumno[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarAlumno", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class insertarAlumnoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.alumno alumno;
+        
+        public insertarAlumnoRequest() {
+        }
+        
+        public insertarAlumnoRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.alumno alumno) {
+            this.alumno = alumno;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarAlumnoResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class insertarAlumnoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarAlumnoResponse() {
+        }
+        
+        public insertarAlumnoResponse(int @return) {
+            this.@return = @return;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -4419,106 +4525,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         public existeAlumnoResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAlumno", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarAlumnoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.alumno alumno;
-        
-        public eliminarAlumnoRequest() {
-        }
-        
-        public eliminarAlumnoRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.alumno alumno) {
-            this.alumno = alumno;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAlumnoResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarAlumnoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarAlumnoResponse() {
-        }
-        
-        public eliminarAlumnoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosAlumnos", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosAlumnosRequest {
-        
-        public listarTodosAlumnosRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosAlumnosResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosAlumnosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.alumno[] @return;
-        
-        public listarTodosAlumnosResponse() {
-        }
-        
-        public listarTodosAlumnosResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.alumno[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerAlumnoPorId", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class obtenerAlumnoPorIdRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idUsuario;
-        
-        public obtenerAlumnoPorIdRequest() {
-        }
-        
-        public obtenerAlumnoPorIdRequest(int idUsuario) {
-            this.idUsuario = idUsuario;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerAlumnoPorIdResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class obtenerAlumnoPorIdResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.alumno @return;
-        
-        public obtenerAlumnoPorIdResponse() {
-        }
-        
-        public obtenerAlumnoPorIdResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.alumno @return) {
             this.@return = @return;
         }
     }
@@ -4562,17 +4568,17 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarAlumno", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class insertarAlumnoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAlumno", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarAlumnoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SoftPixelPenguinsWA.SoftPixelPenguinsWS.alumno alumno;
         
-        public insertarAlumnoRequest() {
+        public eliminarAlumnoRequest() {
         }
         
-        public insertarAlumnoRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.alumno alumno) {
+        public eliminarAlumnoRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.alumno alumno) {
             this.alumno = alumno;
         }
     }
@@ -4580,17 +4586,53 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarAlumnoResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class insertarAlumnoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAlumnoResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarAlumnoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public insertarAlumnoResponse() {
+        public eliminarAlumnoResponse() {
         }
         
-        public insertarAlumnoResponse(int @return) {
+        public eliminarAlumnoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerAlumnoPorId", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class obtenerAlumnoPorIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idUsuario;
+        
+        public obtenerAlumnoPorIdRequest() {
+        }
+        
+        public obtenerAlumnoPorIdRequest(int idUsuario) {
+            this.idUsuario = idUsuario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerAlumnoPorIdResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class obtenerAlumnoPorIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.alumno @return;
+        
+        public obtenerAlumnoPorIdResponse() {
+        }
+        
+        public obtenerAlumnoPorIdResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.alumno @return) {
             this.@return = @return;
         }
     }
@@ -4659,52 +4701,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAlumnoResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS.existeAlumno(SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAlumnoRequest request) {
-            return base.Channel.existeAlumno(request);
-        }
-        
-        public bool existeAlumno(int idUsuario) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAlumnoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAlumnoRequest();
-            inValue.idUsuario = idUsuario;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAlumnoResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS)(this)).existeAlumno(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAlumnoResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS.existeAlumnoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAlumnoRequest request) {
-            return base.Channel.existeAlumnoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAlumnoResponse> existeAlumnoAsync(int idUsuario) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAlumnoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAlumnoRequest();
-            inValue.idUsuario = idUsuario;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS)(this)).existeAlumnoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAlumnoResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS.eliminarAlumno(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAlumnoRequest request) {
-            return base.Channel.eliminarAlumno(request);
-        }
-        
-        public int eliminarAlumno(SoftPixelPenguinsWA.SoftPixelPenguinsWS.alumno alumno) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAlumnoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAlumnoRequest();
-            inValue.alumno = alumno;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAlumnoResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS)(this)).eliminarAlumno(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAlumnoResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS.eliminarAlumnoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAlumnoRequest request) {
-            return base.Channel.eliminarAlumnoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAlumnoResponse> eliminarAlumnoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.alumno alumno) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAlumnoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAlumnoRequest();
-            inValue.alumno = alumno;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS)(this)).eliminarAlumnoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAlumnosResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS.listarTodosAlumnos(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAlumnosRequest request) {
             return base.Channel.listarTodosAlumnos(request);
         }
@@ -4726,26 +4722,49 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAlumnoPorIdResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS.obtenerAlumnoPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAlumnoPorIdRequest request) {
-            return base.Channel.obtenerAlumnoPorId(request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAlumnoResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS.insertarAlumno(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAlumnoRequest request) {
+            return base.Channel.insertarAlumno(request);
         }
         
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.alumno obtenerAlumnoPorId(int idUsuario) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAlumnoPorIdRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAlumnoPorIdRequest();
-            inValue.idUsuario = idUsuario;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAlumnoPorIdResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS)(this)).obtenerAlumnoPorId(inValue);
+        public int insertarAlumno(SoftPixelPenguinsWA.SoftPixelPenguinsWS.alumno alumno) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAlumnoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAlumnoRequest();
+            inValue.alumno = alumno;
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAlumnoResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS)(this)).insertarAlumno(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAlumnoPorIdResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS.obtenerAlumnoPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAlumnoPorIdRequest request) {
-            return base.Channel.obtenerAlumnoPorIdAsync(request);
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAlumnoResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS.insertarAlumnoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAlumnoRequest request) {
+            return base.Channel.insertarAlumnoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAlumnoPorIdResponse> obtenerAlumnoPorIdAsync(int idUsuario) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAlumnoPorIdRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAlumnoPorIdRequest();
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAlumnoResponse> insertarAlumnoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.alumno alumno) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAlumnoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAlumnoRequest();
+            inValue.alumno = alumno;
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS)(this)).insertarAlumnoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAlumnoResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS.existeAlumno(SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAlumnoRequest request) {
+            return base.Channel.existeAlumno(request);
+        }
+        
+        public bool existeAlumno(int idUsuario) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAlumnoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAlumnoRequest();
             inValue.idUsuario = idUsuario;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS)(this)).obtenerAlumnoPorIdAsync(inValue);
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAlumnoResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS)(this)).existeAlumno(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAlumnoResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS.existeAlumnoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAlumnoRequest request) {
+            return base.Channel.existeAlumnoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAlumnoResponse> existeAlumnoAsync(int idUsuario) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAlumnoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAlumnoRequest();
+            inValue.idUsuario = idUsuario;
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS)(this)).existeAlumnoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4772,26 +4791,49 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAlumnoResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS.insertarAlumno(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAlumnoRequest request) {
-            return base.Channel.insertarAlumno(request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAlumnoResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS.eliminarAlumno(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAlumnoRequest request) {
+            return base.Channel.eliminarAlumno(request);
         }
         
-        public int insertarAlumno(SoftPixelPenguinsWA.SoftPixelPenguinsWS.alumno alumno) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAlumnoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAlumnoRequest();
+        public int eliminarAlumno(SoftPixelPenguinsWA.SoftPixelPenguinsWS.alumno alumno) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAlumnoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAlumnoRequest();
             inValue.alumno = alumno;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAlumnoResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS)(this)).insertarAlumno(inValue);
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAlumnoResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS)(this)).eliminarAlumno(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAlumnoResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS.insertarAlumnoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAlumnoRequest request) {
-            return base.Channel.insertarAlumnoAsync(request);
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAlumnoResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS.eliminarAlumnoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAlumnoRequest request) {
+            return base.Channel.eliminarAlumnoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAlumnoResponse> insertarAlumnoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.alumno alumno) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAlumnoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAlumnoRequest();
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAlumnoResponse> eliminarAlumnoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.alumno alumno) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAlumnoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAlumnoRequest();
             inValue.alumno = alumno;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS)(this)).insertarAlumnoAsync(inValue);
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS)(this)).eliminarAlumnoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAlumnoPorIdResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS.obtenerAlumnoPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAlumnoPorIdRequest request) {
+            return base.Channel.obtenerAlumnoPorId(request);
+        }
+        
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.alumno obtenerAlumnoPorId(int idUsuario) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAlumnoPorIdRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAlumnoPorIdRequest();
+            inValue.idUsuario = idUsuario;
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAlumnoPorIdResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS)(this)).obtenerAlumnoPorId(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAlumnoPorIdResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS.obtenerAlumnoPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAlumnoPorIdRequest request) {
+            return base.Channel.obtenerAlumnoPorIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAlumnoPorIdResponse> obtenerAlumnoPorIdAsync(int idUsuario) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAlumnoPorIdRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAlumnoPorIdRequest();
+            inValue.idUsuario = idUsuario;
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AlumnoWS)(this)).obtenerAlumnoPorIdAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -4823,17 +4865,17 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     public interface AnioAcademicoWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/insertarAnioAcademicoRe" +
-            "quest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/insertarAnioAcademicoRe" +
-            "sponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/listarTodosAniosAcademi" +
+            "cosRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/listarTodosAniosAcademi" +
+            "cosResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAnioAcademicoResponse insertarAnioAcademico(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAnioAcademicoRequest request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAniosAcademicosResponse listarTodosAniosAcademicos(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAniosAcademicosRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/insertarAnioAcademicoRe" +
-            "quest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/insertarAnioAcademicoRe" +
-            "sponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAnioAcademicoResponse> insertarAnioAcademicoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAnioAcademicoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/listarTodosAniosAcademi" +
+            "cosRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/listarTodosAniosAcademi" +
+            "cosResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAniosAcademicosResponse> listarTodosAniosAcademicosAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAniosAcademicosRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/modificarAnioAcademicoR" +
@@ -4849,17 +4891,30 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarAnioAcademicoResponse> modificarAnioAcademicoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarAnioAcademicoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/listarTodosAniosAcademi" +
-            "cosRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/listarTodosAniosAcademi" +
-            "cosResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/eliminarAnioAcademicoRe" +
+            "quest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/eliminarAnioAcademicoRe" +
+            "sponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAniosAcademicosResponse listarTodosAniosAcademicos(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAniosAcademicosRequest request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAnioAcademicoResponse eliminarAnioAcademico(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAnioAcademicoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/listarTodosAniosAcademi" +
-            "cosRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/listarTodosAniosAcademi" +
-            "cosResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAniosAcademicosResponse> listarTodosAniosAcademicosAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAniosAcademicosRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/eliminarAnioAcademicoRe" +
+            "quest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/eliminarAnioAcademicoRe" +
+            "sponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAnioAcademicoResponse> eliminarAnioAcademicoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAnioAcademicoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/insertarAnioAcademicoRe" +
+            "quest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/insertarAnioAcademicoRe" +
+            "sponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAnioAcademicoResponse insertarAnioAcademico(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAnioAcademicoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/insertarAnioAcademicoRe" +
+            "quest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/insertarAnioAcademicoRe" +
+            "sponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAnioAcademicoResponse> insertarAnioAcademicoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAnioAcademicoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/obtenerAnioAcademicoPor" +
@@ -4873,53 +4928,32 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
             "IdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/obtenerAnioAcademicoPor" +
             "IdResponse")]
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAnioAcademicoPorIdResponse> obtenerAnioAcademicoPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAnioAcademicoPorIdRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/eliminarAnioAcademicoRe" +
-            "quest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/eliminarAnioAcademicoRe" +
-            "sponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAnioAcademicoResponse eliminarAnioAcademico(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAnioAcademicoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/eliminarAnioAcademicoRe" +
-            "quest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/eliminarAnioAcademicoRe" +
-            "sponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAnioAcademicoResponse> eliminarAnioAcademicoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAnioAcademicoRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarAnioAcademico", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class insertarAnioAcademicoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosAniosAcademicos", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosAniosAcademicosRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.anioAcademico anioAcademico;
-        
-        public insertarAnioAcademicoRequest() {
-        }
-        
-        public insertarAnioAcademicoRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.anioAcademico anioAcademico) {
-            this.anioAcademico = anioAcademico;
+        public listarTodosAniosAcademicosRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarAnioAcademicoResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class insertarAnioAcademicoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosAniosAcademicosResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosAniosAcademicosResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.anioAcademico[] @return;
         
-        public insertarAnioAcademicoResponse() {
+        public listarTodosAniosAcademicosResponse() {
         }
         
-        public insertarAnioAcademicoResponse(int @return) {
+        public listarTodosAniosAcademicosResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.anioAcademico[] @return) {
             this.@return = @return;
         }
     }
@@ -4963,27 +4997,71 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosAniosAcademicos", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosAniosAcademicosRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAnioAcademico", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarAnioAcademicoRequest {
         
-        public listarTodosAniosAcademicosRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.anioAcademico anioAcademico;
+        
+        public eliminarAnioAcademicoRequest() {
+        }
+        
+        public eliminarAnioAcademicoRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.anioAcademico anioAcademico) {
+            this.anioAcademico = anioAcademico;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosAniosAcademicosResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosAniosAcademicosResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAnioAcademicoResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarAnioAcademicoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.anioAcademico[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
         
-        public listarTodosAniosAcademicosResponse() {
+        public eliminarAnioAcademicoResponse() {
         }
         
-        public listarTodosAniosAcademicosResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.anioAcademico[] @return) {
+        public eliminarAnioAcademicoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarAnioAcademico", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class insertarAnioAcademicoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.anioAcademico anioAcademico;
+        
+        public insertarAnioAcademicoRequest() {
+        }
+        
+        public insertarAnioAcademicoRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.anioAcademico anioAcademico) {
+            this.anioAcademico = anioAcademico;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarAnioAcademicoResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class insertarAnioAcademicoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public insertarAnioAcademicoResponse() {
+        }
+        
+        public insertarAnioAcademicoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -5024,42 +5102,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAnioAcademico", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarAnioAcademicoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.anioAcademico anioAcademico;
-        
-        public eliminarAnioAcademicoRequest() {
-        }
-        
-        public eliminarAnioAcademicoRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.anioAcademico anioAcademico) {
-            this.anioAcademico = anioAcademico;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAnioAcademicoResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarAnioAcademicoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarAnioAcademicoResponse() {
-        }
-        
-        public eliminarAnioAcademicoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface AnioAcademicoWSChannel : SoftPixelPenguinsWA.SoftPixelPenguinsWS.AnioAcademicoWS, System.ServiceModel.IClientChannel {
     }
@@ -5088,26 +5130,24 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAnioAcademicoResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.AnioAcademicoWS.insertarAnioAcademico(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAnioAcademicoRequest request) {
-            return base.Channel.insertarAnioAcademico(request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAniosAcademicosResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.AnioAcademicoWS.listarTodosAniosAcademicos(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAniosAcademicosRequest request) {
+            return base.Channel.listarTodosAniosAcademicos(request);
         }
         
-        public int insertarAnioAcademico(SoftPixelPenguinsWA.SoftPixelPenguinsWS.anioAcademico anioAcademico) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAnioAcademicoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAnioAcademicoRequest();
-            inValue.anioAcademico = anioAcademico;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAnioAcademicoResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AnioAcademicoWS)(this)).insertarAnioAcademico(inValue);
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.anioAcademico[] listarTodosAniosAcademicos() {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAniosAcademicosRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAniosAcademicosRequest();
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAniosAcademicosResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AnioAcademicoWS)(this)).listarTodosAniosAcademicos(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAnioAcademicoResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.AnioAcademicoWS.insertarAnioAcademicoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAnioAcademicoRequest request) {
-            return base.Channel.insertarAnioAcademicoAsync(request);
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAniosAcademicosResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.AnioAcademicoWS.listarTodosAniosAcademicosAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAniosAcademicosRequest request) {
+            return base.Channel.listarTodosAniosAcademicosAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAnioAcademicoResponse> insertarAnioAcademicoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.anioAcademico anioAcademico) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAnioAcademicoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAnioAcademicoRequest();
-            inValue.anioAcademico = anioAcademico;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AnioAcademicoWS)(this)).insertarAnioAcademicoAsync(inValue);
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAniosAcademicosResponse> listarTodosAniosAcademicosAsync() {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAniosAcademicosRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAniosAcademicosRequest();
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AnioAcademicoWS)(this)).listarTodosAniosAcademicosAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5134,24 +5174,49 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAniosAcademicosResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.AnioAcademicoWS.listarTodosAniosAcademicos(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAniosAcademicosRequest request) {
-            return base.Channel.listarTodosAniosAcademicos(request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAnioAcademicoResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.AnioAcademicoWS.eliminarAnioAcademico(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAnioAcademicoRequest request) {
+            return base.Channel.eliminarAnioAcademico(request);
         }
         
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.anioAcademico[] listarTodosAniosAcademicos() {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAniosAcademicosRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAniosAcademicosRequest();
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAniosAcademicosResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AnioAcademicoWS)(this)).listarTodosAniosAcademicos(inValue);
+        public int eliminarAnioAcademico(SoftPixelPenguinsWA.SoftPixelPenguinsWS.anioAcademico anioAcademico) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAnioAcademicoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAnioAcademicoRequest();
+            inValue.anioAcademico = anioAcademico;
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAnioAcademicoResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AnioAcademicoWS)(this)).eliminarAnioAcademico(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAniosAcademicosResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.AnioAcademicoWS.listarTodosAniosAcademicosAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAniosAcademicosRequest request) {
-            return base.Channel.listarTodosAniosAcademicosAsync(request);
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAnioAcademicoResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.AnioAcademicoWS.eliminarAnioAcademicoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAnioAcademicoRequest request) {
+            return base.Channel.eliminarAnioAcademicoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAniosAcademicosResponse> listarTodosAniosAcademicosAsync() {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAniosAcademicosRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAniosAcademicosRequest();
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AnioAcademicoWS)(this)).listarTodosAniosAcademicosAsync(inValue);
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAnioAcademicoResponse> eliminarAnioAcademicoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.anioAcademico anioAcademico) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAnioAcademicoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAnioAcademicoRequest();
+            inValue.anioAcademico = anioAcademico;
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AnioAcademicoWS)(this)).eliminarAnioAcademicoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAnioAcademicoResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.AnioAcademicoWS.insertarAnioAcademico(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAnioAcademicoRequest request) {
+            return base.Channel.insertarAnioAcademico(request);
+        }
+        
+        public int insertarAnioAcademico(SoftPixelPenguinsWA.SoftPixelPenguinsWS.anioAcademico anioAcademico) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAnioAcademicoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAnioAcademicoRequest();
+            inValue.anioAcademico = anioAcademico;
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAnioAcademicoResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AnioAcademicoWS)(this)).insertarAnioAcademico(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAnioAcademicoResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.AnioAcademicoWS.insertarAnioAcademicoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAnioAcademicoRequest request) {
+            return base.Channel.insertarAnioAcademicoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAnioAcademicoResponse> insertarAnioAcademicoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.anioAcademico anioAcademico) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAnioAcademicoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAnioAcademicoRequest();
+            inValue.anioAcademico = anioAcademico;
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AnioAcademicoWS)(this)).insertarAnioAcademicoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5176,81 +5241,11 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
             inValue.idAnioAcademico = idAnioAcademico;
             return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AnioAcademicoWS)(this)).obtenerAnioAcademicoPorIdAsync(inValue);
         }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAnioAcademicoResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.AnioAcademicoWS.eliminarAnioAcademico(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAnioAcademicoRequest request) {
-            return base.Channel.eliminarAnioAcademico(request);
-        }
-        
-        public int eliminarAnioAcademico(SoftPixelPenguinsWA.SoftPixelPenguinsWS.anioAcademico anioAcademico) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAnioAcademicoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAnioAcademicoRequest();
-            inValue.anioAcademico = anioAcademico;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAnioAcademicoResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AnioAcademicoWS)(this)).eliminarAnioAcademico(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAnioAcademicoResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.AnioAcademicoWS.eliminarAnioAcademicoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAnioAcademicoRequest request) {
-            return base.Channel.eliminarAnioAcademicoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAnioAcademicoResponse> eliminarAnioAcademicoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.anioAcademico anioAcademico) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAnioAcademicoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAnioAcademicoRequest();
-            inValue.anioAcademico = anioAcademico;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AnioAcademicoWS)(this)).eliminarAnioAcademicoAsync(inValue);
-        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", ConfigurationName="SoftPixelPenguinsWS.ProfesorWS")]
     public interface ProfesorWS {
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/insertarProfesorRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/insertarProfesorResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarProfesorResponse insertarProfesor(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarProfesorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/insertarProfesorRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/insertarProfesorResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarProfesorResponse> insertarProfesorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarProfesorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/eliminarProfesorRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/eliminarProfesorResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarProfesorResponse eliminarProfesor(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarProfesorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/eliminarProfesorRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/eliminarProfesorResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarProfesorResponse> eliminarProfesorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarProfesorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/modificarProfesorRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/modificarProfesorResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarProfesorResponse modificarProfesor(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarProfesorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/modificarProfesorRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/modificarProfesorResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarProfesorResponse> modificarProfesorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarProfesorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/existeprofesorRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/existeprofesorResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeprofesorResponse existeprofesor(SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeprofesorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/existeprofesorRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/existeprofesorResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeprofesorResponse> existeprofesorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeprofesorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/obtenerProfesorPorIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/obtenerProfesorPorIdResponse" +
-            "")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerProfesorPorIdResponse obtenerProfesorPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerProfesorPorIdRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/obtenerProfesorPorIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/obtenerProfesorPorIdResponse" +
-            "")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerProfesorPorIdResponse> obtenerProfesorPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerProfesorPorIdRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/listarTodosProfesoresRequest" +
@@ -5264,148 +5259,79 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
             "", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/listarTodosProfesoresRespons" +
             "e")]
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosProfesoresResponse> listarTodosProfesoresAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosProfesoresRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/obtenerProfesorPorIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/obtenerProfesorPorIdResponse" +
+            "")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerProfesorPorIdResponse obtenerProfesorPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerProfesorPorIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/obtenerProfesorPorIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/obtenerProfesorPorIdResponse" +
+            "")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerProfesorPorIdResponse> obtenerProfesorPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerProfesorPorIdRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/insertarProfesorRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/insertarProfesorResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarProfesorResponse insertarProfesor(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarProfesorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/insertarProfesorRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/insertarProfesorResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarProfesorResponse> insertarProfesorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarProfesorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/modificarProfesorRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/modificarProfesorResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarProfesorResponse modificarProfesor(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarProfesorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/modificarProfesorRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/modificarProfesorResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarProfesorResponse> modificarProfesorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarProfesorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/eliminarProfesorRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/eliminarProfesorResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarProfesorResponse eliminarProfesor(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarProfesorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/eliminarProfesorRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/eliminarProfesorResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarProfesorResponse> eliminarProfesorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarProfesorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/existeprofesorRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/existeprofesorResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeprofesorResponse existeprofesor(SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeprofesorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/existeprofesorRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/existeprofesorResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeprofesorResponse> existeprofesorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeprofesorRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProfesor", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class insertarProfesorRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosProfesores", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosProfesoresRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.profesor profesor;
-        
-        public insertarProfesorRequest() {
-        }
-        
-        public insertarProfesorRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.profesor profesor) {
-            this.profesor = profesor;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProfesorResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class insertarProfesorResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarProfesorResponse() {
-        }
-        
-        public insertarProfesorResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarProfesor", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarProfesorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.profesor profesor;
-        
-        public eliminarProfesorRequest() {
-        }
-        
-        public eliminarProfesorRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.profesor profesor) {
-            this.profesor = profesor;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarProfesorResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarProfesorResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarProfesorResponse() {
-        }
-        
-        public eliminarProfesorResponse(int @return) {
-            this.@return = @return;
+        public listarTodosProfesoresRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarProfesor", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class modificarProfesorRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosProfesoresResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosProfesoresResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.profesor profesor;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.profesor[] @return;
         
-        public modificarProfesorRequest() {
+        public listarTodosProfesoresResponse() {
         }
         
-        public modificarProfesorRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.profesor profesor) {
-            this.profesor = profesor;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarProfesorResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class modificarProfesorResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public modificarProfesorResponse() {
-        }
-        
-        public modificarProfesorResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="existeprofesor", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class existeprofesorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idUsuario;
-        
-        public existeprofesorRequest() {
-        }
-        
-        public existeprofesorRequest(int idUsuario) {
-            this.idUsuario = idUsuario;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="existeprofesorResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class existeprofesorResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public existeprofesorResponse() {
-        }
-        
-        public existeprofesorResponse(bool @return) {
+        public listarTodosProfesoresResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.profesor[] @return) {
             this.@return = @return;
         }
     }
@@ -5449,27 +5375,143 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosProfesores", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosProfesoresRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProfesor", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class insertarProfesorRequest {
         
-        public listarTodosProfesoresRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.profesor profesor;
+        
+        public insertarProfesorRequest() {
+        }
+        
+        public insertarProfesorRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.profesor profesor) {
+            this.profesor = profesor;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosProfesoresResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosProfesoresResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarProfesorResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class insertarProfesorResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.profesor[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
         
-        public listarTodosProfesoresResponse() {
+        public insertarProfesorResponse() {
         }
         
-        public listarTodosProfesoresResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.profesor[] @return) {
+        public insertarProfesorResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarProfesor", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class modificarProfesorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.profesor profesor;
+        
+        public modificarProfesorRequest() {
+        }
+        
+        public modificarProfesorRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.profesor profesor) {
+            this.profesor = profesor;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarProfesorResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class modificarProfesorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public modificarProfesorResponse() {
+        }
+        
+        public modificarProfesorResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarProfesor", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarProfesorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.profesor profesor;
+        
+        public eliminarProfesorRequest() {
+        }
+        
+        public eliminarProfesorRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.profesor profesor) {
+            this.profesor = profesor;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarProfesorResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarProfesorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarProfesorResponse() {
+        }
+        
+        public eliminarProfesorResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="existeprofesor", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class existeprofesorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idUsuario;
+        
+        public existeprofesorRequest() {
+        }
+        
+        public existeprofesorRequest(int idUsuario) {
+            this.idUsuario = idUsuario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="existeprofesorResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class existeprofesorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public existeprofesorResponse() {
+        }
+        
+        public existeprofesorResponse(bool @return) {
             this.@return = @return;
         }
     }
@@ -5502,95 +5544,24 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarProfesorResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS.insertarProfesor(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarProfesorRequest request) {
-            return base.Channel.insertarProfesor(request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosProfesoresResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS.listarTodosProfesores(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosProfesoresRequest request) {
+            return base.Channel.listarTodosProfesores(request);
         }
         
-        public int insertarProfesor(SoftPixelPenguinsWA.SoftPixelPenguinsWS.profesor profesor) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarProfesorRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarProfesorRequest();
-            inValue.profesor = profesor;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarProfesorResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS)(this)).insertarProfesor(inValue);
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.profesor[] listarTodosProfesores() {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosProfesoresRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosProfesoresRequest();
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosProfesoresResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS)(this)).listarTodosProfesores(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarProfesorResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS.insertarProfesorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarProfesorRequest request) {
-            return base.Channel.insertarProfesorAsync(request);
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosProfesoresResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS.listarTodosProfesoresAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosProfesoresRequest request) {
+            return base.Channel.listarTodosProfesoresAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarProfesorResponse> insertarProfesorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.profesor profesor) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarProfesorRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarProfesorRequest();
-            inValue.profesor = profesor;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS)(this)).insertarProfesorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarProfesorResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS.eliminarProfesor(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarProfesorRequest request) {
-            return base.Channel.eliminarProfesor(request);
-        }
-        
-        public int eliminarProfesor(SoftPixelPenguinsWA.SoftPixelPenguinsWS.profesor profesor) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarProfesorRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarProfesorRequest();
-            inValue.profesor = profesor;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarProfesorResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS)(this)).eliminarProfesor(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarProfesorResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS.eliminarProfesorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarProfesorRequest request) {
-            return base.Channel.eliminarProfesorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarProfesorResponse> eliminarProfesorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.profesor profesor) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarProfesorRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarProfesorRequest();
-            inValue.profesor = profesor;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS)(this)).eliminarProfesorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarProfesorResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS.modificarProfesor(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarProfesorRequest request) {
-            return base.Channel.modificarProfesor(request);
-        }
-        
-        public int modificarProfesor(SoftPixelPenguinsWA.SoftPixelPenguinsWS.profesor profesor) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarProfesorRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarProfesorRequest();
-            inValue.profesor = profesor;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarProfesorResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS)(this)).modificarProfesor(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarProfesorResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS.modificarProfesorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarProfesorRequest request) {
-            return base.Channel.modificarProfesorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarProfesorResponse> modificarProfesorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.profesor profesor) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarProfesorRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarProfesorRequest();
-            inValue.profesor = profesor;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS)(this)).modificarProfesorAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeprofesorResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS.existeprofesor(SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeprofesorRequest request) {
-            return base.Channel.existeprofesor(request);
-        }
-        
-        public bool existeprofesor(int idUsuario) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeprofesorRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeprofesorRequest();
-            inValue.idUsuario = idUsuario;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeprofesorResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS)(this)).existeprofesor(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeprofesorResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS.existeprofesorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeprofesorRequest request) {
-            return base.Channel.existeprofesorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeprofesorResponse> existeprofesorAsync(int idUsuario) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeprofesorRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeprofesorRequest();
-            inValue.idUsuario = idUsuario;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS)(this)).existeprofesorAsync(inValue);
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosProfesoresResponse> listarTodosProfesoresAsync() {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosProfesoresRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosProfesoresRequest();
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS)(this)).listarTodosProfesoresAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5617,69 +5588,101 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosProfesoresResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS.listarTodosProfesores(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosProfesoresRequest request) {
-            return base.Channel.listarTodosProfesores(request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarProfesorResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS.insertarProfesor(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarProfesorRequest request) {
+            return base.Channel.insertarProfesor(request);
         }
         
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.profesor[] listarTodosProfesores() {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosProfesoresRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosProfesoresRequest();
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosProfesoresResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS)(this)).listarTodosProfesores(inValue);
+        public int insertarProfesor(SoftPixelPenguinsWA.SoftPixelPenguinsWS.profesor profesor) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarProfesorRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarProfesorRequest();
+            inValue.profesor = profesor;
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarProfesorResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS)(this)).insertarProfesor(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosProfesoresResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS.listarTodosProfesoresAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosProfesoresRequest request) {
-            return base.Channel.listarTodosProfesoresAsync(request);
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarProfesorResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS.insertarProfesorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarProfesorRequest request) {
+            return base.Channel.insertarProfesorAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosProfesoresResponse> listarTodosProfesoresAsync() {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosProfesoresRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosProfesoresRequest();
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS)(this)).listarTodosProfesoresAsync(inValue);
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarProfesorResponse> insertarProfesorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.profesor profesor) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarProfesorRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarProfesorRequest();
+            inValue.profesor = profesor;
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS)(this)).insertarProfesorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarProfesorResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS.modificarProfesor(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarProfesorRequest request) {
+            return base.Channel.modificarProfesor(request);
+        }
+        
+        public int modificarProfesor(SoftPixelPenguinsWA.SoftPixelPenguinsWS.profesor profesor) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarProfesorRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarProfesorRequest();
+            inValue.profesor = profesor;
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarProfesorResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS)(this)).modificarProfesor(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarProfesorResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS.modificarProfesorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarProfesorRequest request) {
+            return base.Channel.modificarProfesorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarProfesorResponse> modificarProfesorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.profesor profesor) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarProfesorRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarProfesorRequest();
+            inValue.profesor = profesor;
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS)(this)).modificarProfesorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarProfesorResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS.eliminarProfesor(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarProfesorRequest request) {
+            return base.Channel.eliminarProfesor(request);
+        }
+        
+        public int eliminarProfesor(SoftPixelPenguinsWA.SoftPixelPenguinsWS.profesor profesor) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarProfesorRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarProfesorRequest();
+            inValue.profesor = profesor;
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarProfesorResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS)(this)).eliminarProfesor(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarProfesorResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS.eliminarProfesorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarProfesorRequest request) {
+            return base.Channel.eliminarProfesorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarProfesorResponse> eliminarProfesorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.profesor profesor) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarProfesorRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarProfesorRequest();
+            inValue.profesor = profesor;
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS)(this)).eliminarProfesorAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeprofesorResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS.existeprofesor(SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeprofesorRequest request) {
+            return base.Channel.existeprofesor(request);
+        }
+        
+        public bool existeprofesor(int idUsuario) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeprofesorRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeprofesorRequest();
+            inValue.idUsuario = idUsuario;
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeprofesorResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS)(this)).existeprofesor(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeprofesorResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS.existeprofesorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeprofesorRequest request) {
+            return base.Channel.existeprofesorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeprofesorResponse> existeprofesorAsync(int idUsuario) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeprofesorRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeprofesorRequest();
+            inValue.idUsuario = idUsuario;
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.ProfesorWS)(this)).existeprofesorAsync(inValue);
         }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", ConfigurationName="SoftPixelPenguinsWS.CompetenciaWS")]
     public interface CompetenciaWS {
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/listarTodosCompetenciasRe" +
-            "quest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/listarTodosCompetenciasRe" +
-            "sponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCompetenciasResponse listarTodosCompetencias(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCompetenciasRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/listarTodosCompetenciasRe" +
-            "quest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/listarTodosCompetenciasRe" +
-            "sponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCompetenciasResponse> listarTodosCompetenciasAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCompetenciasRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/modificarCompetenciaReque" +
-            "st", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/modificarCompetenciaRespo" +
-            "nse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCompetenciaResponse modificarCompetencia(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCompetenciaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/modificarCompetenciaReque" +
-            "st", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/modificarCompetenciaRespo" +
-            "nse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCompetenciaResponse> modificarCompetenciaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCompetenciaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/eliminarCompetenciaReques" +
-            "t", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/eliminarCompetenciaRespon" +
-            "se")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarCompetenciaResponse eliminarCompetencia(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarCompetenciaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/eliminarCompetenciaReques" +
-            "t", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/eliminarCompetenciaRespon" +
-            "se")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarCompetenciaResponse> eliminarCompetenciaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarCompetenciaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/insertarCompetenciaReques" +
@@ -5695,6 +5698,32 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarCompetenciaResponse> insertarCompetenciaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarCompetenciaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/eliminarCompetenciaReques" +
+            "t", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/eliminarCompetenciaRespon" +
+            "se")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarCompetenciaResponse eliminarCompetencia(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarCompetenciaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/eliminarCompetenciaReques" +
+            "t", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/eliminarCompetenciaRespon" +
+            "se")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarCompetenciaResponse> eliminarCompetenciaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarCompetenciaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/listarTodosCompetenciasRe" +
+            "quest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/listarTodosCompetenciasRe" +
+            "sponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCompetenciasResponse listarTodosCompetencias(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCompetenciasRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/listarTodosCompetenciasRe" +
+            "quest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/listarTodosCompetenciasRe" +
+            "sponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCompetenciasResponse> listarTodosCompetenciasAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCompetenciasRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/obtenerCompetenciaPorIdRe" +
             "quest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/obtenerCompetenciaPorIdRe" +
             "sponse")]
@@ -5706,50 +5735,35 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
             "quest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/obtenerCompetenciaPorIdRe" +
             "sponse")]
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerCompetenciaPorIdResponse> obtenerCompetenciaPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerCompetenciaPorIdRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/modificarCompetenciaReque" +
+            "st", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/modificarCompetenciaRespo" +
+            "nse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCompetenciaResponse modificarCompetencia(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCompetenciaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/modificarCompetenciaReque" +
+            "st", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/CompetenciaWS/modificarCompetenciaRespo" +
+            "nse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCompetenciaResponse> modificarCompetenciaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCompetenciaRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosCompetencias", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosCompetenciasRequest {
-        
-        public listarTodosCompetenciasRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosCompetenciasResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosCompetenciasResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.competencia[] @return;
-        
-        public listarTodosCompetenciasResponse() {
-        }
-        
-        public listarTodosCompetenciasResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.competencia[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCompetencia", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class modificarCompetenciaRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCompetencia", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class insertarCompetenciaRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SoftPixelPenguinsWA.SoftPixelPenguinsWS.competencia competencia;
         
-        public modificarCompetenciaRequest() {
+        public insertarCompetenciaRequest() {
         }
         
-        public modificarCompetenciaRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.competencia competencia) {
+        public insertarCompetenciaRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.competencia competencia) {
             this.competencia = competencia;
         }
     }
@@ -5757,17 +5771,17 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCompetenciaResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class modificarCompetenciaResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCompetenciaResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class insertarCompetenciaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public modificarCompetenciaResponse() {
+        public insertarCompetenciaResponse() {
         }
         
-        public modificarCompetenciaResponse(int @return) {
+        public insertarCompetenciaResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -5811,35 +5825,27 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCompetencia", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class insertarCompetenciaRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosCompetencias", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosCompetenciasRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.competencia competencia;
-        
-        public insertarCompetenciaRequest() {
-        }
-        
-        public insertarCompetenciaRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.competencia competencia) {
-            this.competencia = competencia;
+        public listarTodosCompetenciasRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCompetenciaResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class insertarCompetenciaResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosCompetenciasResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosCompetenciasResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.competencia[] @return;
         
-        public insertarCompetenciaResponse() {
+        public listarTodosCompetenciasResponse() {
         }
         
-        public insertarCompetenciaResponse(int @return) {
+        public listarTodosCompetenciasResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.competencia[] @return) {
             this.@return = @return;
         }
     }
@@ -5880,6 +5886,42 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCompetencia", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class modificarCompetenciaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.competencia competencia;
+        
+        public modificarCompetenciaRequest() {
+        }
+        
+        public modificarCompetenciaRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.competencia competencia) {
+            this.competencia = competencia;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarCompetenciaResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class modificarCompetenciaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public modificarCompetenciaResponse() {
+        }
+        
+        public modificarCompetenciaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface CompetenciaWSChannel : SoftPixelPenguinsWA.SoftPixelPenguinsWS.CompetenciaWS, System.ServiceModel.IClientChannel {
     }
@@ -5908,47 +5950,26 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCompetenciasResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.CompetenciaWS.listarTodosCompetencias(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCompetenciasRequest request) {
-            return base.Channel.listarTodosCompetencias(request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarCompetenciaResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.CompetenciaWS.insertarCompetencia(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarCompetenciaRequest request) {
+            return base.Channel.insertarCompetencia(request);
         }
         
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.competencia[] listarTodosCompetencias() {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCompetenciasRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCompetenciasRequest();
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCompetenciasResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.CompetenciaWS)(this)).listarTodosCompetencias(inValue);
+        public int insertarCompetencia(SoftPixelPenguinsWA.SoftPixelPenguinsWS.competencia competencia) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarCompetenciaRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarCompetenciaRequest();
+            inValue.competencia = competencia;
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarCompetenciaResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.CompetenciaWS)(this)).insertarCompetencia(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCompetenciasResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.CompetenciaWS.listarTodosCompetenciasAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCompetenciasRequest request) {
-            return base.Channel.listarTodosCompetenciasAsync(request);
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarCompetenciaResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.CompetenciaWS.insertarCompetenciaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarCompetenciaRequest request) {
+            return base.Channel.insertarCompetenciaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCompetenciasResponse> listarTodosCompetenciasAsync() {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCompetenciasRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCompetenciasRequest();
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.CompetenciaWS)(this)).listarTodosCompetenciasAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCompetenciaResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.CompetenciaWS.modificarCompetencia(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCompetenciaRequest request) {
-            return base.Channel.modificarCompetencia(request);
-        }
-        
-        public int modificarCompetencia(SoftPixelPenguinsWA.SoftPixelPenguinsWS.competencia competencia) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCompetenciaRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCompetenciaRequest();
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarCompetenciaResponse> insertarCompetenciaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.competencia competencia) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarCompetenciaRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarCompetenciaRequest();
             inValue.competencia = competencia;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCompetenciaResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.CompetenciaWS)(this)).modificarCompetencia(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCompetenciaResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.CompetenciaWS.modificarCompetenciaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCompetenciaRequest request) {
-            return base.Channel.modificarCompetenciaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCompetenciaResponse> modificarCompetenciaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.competencia competencia) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCompetenciaRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCompetenciaRequest();
-            inValue.competencia = competencia;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.CompetenciaWS)(this)).modificarCompetenciaAsync(inValue);
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.CompetenciaWS)(this)).insertarCompetenciaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -5975,26 +5996,24 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarCompetenciaResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.CompetenciaWS.insertarCompetencia(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarCompetenciaRequest request) {
-            return base.Channel.insertarCompetencia(request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCompetenciasResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.CompetenciaWS.listarTodosCompetencias(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCompetenciasRequest request) {
+            return base.Channel.listarTodosCompetencias(request);
         }
         
-        public int insertarCompetencia(SoftPixelPenguinsWA.SoftPixelPenguinsWS.competencia competencia) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarCompetenciaRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarCompetenciaRequest();
-            inValue.competencia = competencia;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarCompetenciaResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.CompetenciaWS)(this)).insertarCompetencia(inValue);
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.competencia[] listarTodosCompetencias() {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCompetenciasRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCompetenciasRequest();
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCompetenciasResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.CompetenciaWS)(this)).listarTodosCompetencias(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarCompetenciaResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.CompetenciaWS.insertarCompetenciaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarCompetenciaRequest request) {
-            return base.Channel.insertarCompetenciaAsync(request);
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCompetenciasResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.CompetenciaWS.listarTodosCompetenciasAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCompetenciasRequest request) {
+            return base.Channel.listarTodosCompetenciasAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarCompetenciaResponse> insertarCompetenciaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.competencia competencia) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarCompetenciaRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarCompetenciaRequest();
-            inValue.competencia = competencia;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.CompetenciaWS)(this)).insertarCompetenciaAsync(inValue);
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCompetenciasResponse> listarTodosCompetenciasAsync() {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCompetenciasRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosCompetenciasRequest();
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.CompetenciaWS)(this)).listarTodosCompetenciasAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6019,6 +6038,29 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
             inValue.idCompetencia = idCompetencia;
             return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.CompetenciaWS)(this)).obtenerCompetenciaPorIdAsync(inValue);
         }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCompetenciaResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.CompetenciaWS.modificarCompetencia(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCompetenciaRequest request) {
+            return base.Channel.modificarCompetencia(request);
+        }
+        
+        public int modificarCompetencia(SoftPixelPenguinsWA.SoftPixelPenguinsWS.competencia competencia) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCompetenciaRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCompetenciaRequest();
+            inValue.competencia = competencia;
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCompetenciaResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.CompetenciaWS)(this)).modificarCompetencia(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCompetenciaResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.CompetenciaWS.modificarCompetenciaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCompetenciaRequest request) {
+            return base.Channel.modificarCompetenciaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCompetenciaResponse> modificarCompetenciaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.competencia competencia) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCompetenciaRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarCompetenciaRequest();
+            inValue.competencia = competencia;
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.CompetenciaWS)(this)).modificarCompetenciaAsync(inValue);
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -6026,17 +6068,17 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     public interface InstitucionEducativaWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/listarTodosInsti" +
-            "tucionesEducativasRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/listarTodosInsti" +
-            "tucionesEducativasResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/eliminarInstituc" +
+            "ionEducativaRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/eliminarInstituc" +
+            "ionEducativaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosInstitucionesEducativasResponse listarTodosInstitucionesEducativas(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosInstitucionesEducativasRequest request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarInstitucionEducativaResponse eliminarInstitucionEducativa(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarInstitucionEducativaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/listarTodosInsti" +
-            "tucionesEducativasRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/listarTodosInsti" +
-            "tucionesEducativasResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosInstitucionesEducativasResponse> listarTodosInstitucionesEducativasAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosInstitucionesEducativasRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/eliminarInstituc" +
+            "ionEducativaRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/eliminarInstituc" +
+            "ionEducativaResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarInstitucionEducativaResponse> eliminarInstitucionEducativaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarInstitucionEducativaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/insertarInstituc" +
@@ -6065,17 +6107,17 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarInstitucionEducativaResponse> modificarInstitucionEducativaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarInstitucionEducativaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/eliminarInstituc" +
-            "ionEducativaRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/eliminarInstituc" +
-            "ionEducativaResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/listarTodosInsti" +
+            "tucionesEducativasRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/listarTodosInsti" +
+            "tucionesEducativasResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarInstitucionEducativaResponse eliminarInstitucionEducativa(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarInstitucionEducativaRequest request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosInstitucionesEducativasResponse listarTodosInstitucionesEducativas(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosInstitucionesEducativasRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/eliminarInstituc" +
-            "ionEducativaRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/eliminarInstituc" +
-            "ionEducativaResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarInstitucionEducativaResponse> eliminarInstitucionEducativaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarInstitucionEducativaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/listarTodosInsti" +
+            "tucionesEducativasRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/listarTodosInsti" +
+            "tucionesEducativasResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosInstitucionesEducativasResponse> listarTodosInstitucionesEducativasAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosInstitucionesEducativasRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/obtenerInstituci" +
@@ -6094,27 +6136,35 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosInstitucionesEducativas", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosInstitucionesEducativasRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarInstitucionEducativa", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarInstitucionEducativaRequest {
         
-        public listarTodosInstitucionesEducativasRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.institucionEducativa institucionEducativa;
+        
+        public eliminarInstitucionEducativaRequest() {
+        }
+        
+        public eliminarInstitucionEducativaRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.institucionEducativa institucionEducativa) {
+            this.institucionEducativa = institucionEducativa;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosInstitucionesEducativasResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosInstitucionesEducativasResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarInstitucionEducativaResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarInstitucionEducativaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.institucionEducativa[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
         
-        public listarTodosInstitucionesEducativasResponse() {
+        public eliminarInstitucionEducativaResponse() {
         }
         
-        public listarTodosInstitucionesEducativasResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.institucionEducativa[] @return) {
+        public eliminarInstitucionEducativaResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -6194,35 +6244,27 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarInstitucionEducativa", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarInstitucionEducativaRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosInstitucionesEducativas", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosInstitucionesEducativasRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.institucionEducativa institucionEducativa;
-        
-        public eliminarInstitucionEducativaRequest() {
-        }
-        
-        public eliminarInstitucionEducativaRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.institucionEducativa institucionEducativa) {
-            this.institucionEducativa = institucionEducativa;
+        public listarTodosInstitucionesEducativasRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarInstitucionEducativaResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarInstitucionEducativaResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosInstitucionesEducativasResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosInstitucionesEducativasResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.institucionEducativa[] @return;
         
-        public eliminarInstitucionEducativaResponse() {
+        public listarTodosInstitucionesEducativasResponse() {
         }
         
-        public eliminarInstitucionEducativaResponse(int @return) {
+        public listarTodosInstitucionesEducativasResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.institucionEducativa[] @return) {
             this.@return = @return;
         }
     }
@@ -6291,24 +6333,26 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosInstitucionesEducativasResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.InstitucionEducativaWS.listarTodosInstitucionesEducativas(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosInstitucionesEducativasRequest request) {
-            return base.Channel.listarTodosInstitucionesEducativas(request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarInstitucionEducativaResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.InstitucionEducativaWS.eliminarInstitucionEducativa(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarInstitucionEducativaRequest request) {
+            return base.Channel.eliminarInstitucionEducativa(request);
         }
         
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.institucionEducativa[] listarTodosInstitucionesEducativas() {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosInstitucionesEducativasRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosInstitucionesEducativasRequest();
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosInstitucionesEducativasResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.InstitucionEducativaWS)(this)).listarTodosInstitucionesEducativas(inValue);
+        public int eliminarInstitucionEducativa(SoftPixelPenguinsWA.SoftPixelPenguinsWS.institucionEducativa institucionEducativa) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarInstitucionEducativaRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarInstitucionEducativaRequest();
+            inValue.institucionEducativa = institucionEducativa;
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarInstitucionEducativaResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.InstitucionEducativaWS)(this)).eliminarInstitucionEducativa(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosInstitucionesEducativasResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.InstitucionEducativaWS.listarTodosInstitucionesEducativasAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosInstitucionesEducativasRequest request) {
-            return base.Channel.listarTodosInstitucionesEducativasAsync(request);
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarInstitucionEducativaResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.InstitucionEducativaWS.eliminarInstitucionEducativaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarInstitucionEducativaRequest request) {
+            return base.Channel.eliminarInstitucionEducativaAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosInstitucionesEducativasResponse> listarTodosInstitucionesEducativasAsync() {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosInstitucionesEducativasRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosInstitucionesEducativasRequest();
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.InstitucionEducativaWS)(this)).listarTodosInstitucionesEducativasAsync(inValue);
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarInstitucionEducativaResponse> eliminarInstitucionEducativaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.institucionEducativa institucionEducativa) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarInstitucionEducativaRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarInstitucionEducativaRequest();
+            inValue.institucionEducativa = institucionEducativa;
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.InstitucionEducativaWS)(this)).eliminarInstitucionEducativaAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6358,26 +6402,24 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarInstitucionEducativaResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.InstitucionEducativaWS.eliminarInstitucionEducativa(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarInstitucionEducativaRequest request) {
-            return base.Channel.eliminarInstitucionEducativa(request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosInstitucionesEducativasResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.InstitucionEducativaWS.listarTodosInstitucionesEducativas(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosInstitucionesEducativasRequest request) {
+            return base.Channel.listarTodosInstitucionesEducativas(request);
         }
         
-        public int eliminarInstitucionEducativa(SoftPixelPenguinsWA.SoftPixelPenguinsWS.institucionEducativa institucionEducativa) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarInstitucionEducativaRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarInstitucionEducativaRequest();
-            inValue.institucionEducativa = institucionEducativa;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarInstitucionEducativaResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.InstitucionEducativaWS)(this)).eliminarInstitucionEducativa(inValue);
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.institucionEducativa[] listarTodosInstitucionesEducativas() {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosInstitucionesEducativasRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosInstitucionesEducativasRequest();
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosInstitucionesEducativasResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.InstitucionEducativaWS)(this)).listarTodosInstitucionesEducativas(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarInstitucionEducativaResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.InstitucionEducativaWS.eliminarInstitucionEducativaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarInstitucionEducativaRequest request) {
-            return base.Channel.eliminarInstitucionEducativaAsync(request);
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosInstitucionesEducativasResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.InstitucionEducativaWS.listarTodosInstitucionesEducativasAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosInstitucionesEducativasRequest request) {
+            return base.Channel.listarTodosInstitucionesEducativasAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarInstitucionEducativaResponse> eliminarInstitucionEducativaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.institucionEducativa institucionEducativa) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarInstitucionEducativaRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarInstitucionEducativaRequest();
-            inValue.institucionEducativa = institucionEducativa;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.InstitucionEducativaWS)(this)).eliminarInstitucionEducativaAsync(inValue);
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosInstitucionesEducativasResponse> listarTodosInstitucionesEducativasAsync() {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosInstitucionesEducativasRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosInstitucionesEducativasRequest();
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.InstitucionEducativaWS)(this)).listarTodosInstitucionesEducativasAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6418,13 +6460,13 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarNotaResponse> insertarNotaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarNotaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/modificarNotaRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/NotaWS/modificarNotaResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/obtenerNotaPorIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/NotaWS/obtenerNotaPorIdResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarNotaResponse modificarNota(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarNotaRequest request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerNotaPorIdResponse obtenerNotaPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerNotaPorIdRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/modificarNotaRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/NotaWS/modificarNotaResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarNotaResponse> modificarNotaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarNotaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/obtenerNotaPorIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/NotaWS/obtenerNotaPorIdResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerNotaPorIdResponse> obtenerNotaPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerNotaPorIdRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/eliminarNotaRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/NotaWS/eliminarNotaResponse")]
@@ -6436,15 +6478,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarNotaResponse> eliminarNotaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarNotaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/obtenerNotaPorIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/NotaWS/obtenerNotaPorIdResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerNotaPorIdResponse obtenerNotaPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerNotaPorIdRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/obtenerNotaPorIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/NotaWS/obtenerNotaPorIdResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerNotaPorIdResponse> obtenerNotaPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerNotaPorIdRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/listarTodosNotasRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/NotaWS/listarTodosNotasResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -6452,6 +6485,15 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/listarTodosNotasRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/NotaWS/listarTodosNotasResponse")]
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosNotasResponse> listarTodosNotasAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosNotasRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/modificarNotaRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/NotaWS/modificarNotaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarNotaResponse modificarNota(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarNotaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/modificarNotaRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/NotaWS/modificarNotaResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarNotaResponse> modificarNotaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarNotaRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -6486,78 +6528,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         public insertarNotaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarNota", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class modificarNotaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.nota nota;
-        
-        public modificarNotaRequest() {
-        }
-        
-        public modificarNotaRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.nota nota) {
-            this.nota = nota;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarNotaResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class modificarNotaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public modificarNotaResponse() {
-        }
-        
-        public modificarNotaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarNota", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarNotaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.nota nota;
-        
-        public eliminarNotaRequest() {
-        }
-        
-        public eliminarNotaRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.nota nota) {
-            this.nota = nota;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarNotaResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarNotaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarNotaResponse() {
-        }
-        
-        public eliminarNotaResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -6601,6 +6571,42 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarNota", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarNotaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.nota nota;
+        
+        public eliminarNotaRequest() {
+        }
+        
+        public eliminarNotaRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.nota nota) {
+            this.nota = nota;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarNotaResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarNotaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarNotaResponse() {
+        }
+        
+        public eliminarNotaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosNotas", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
     public partial class listarTodosNotasRequest {
         
@@ -6622,6 +6628,42 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         public listarTodosNotasResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.nota[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarNota", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class modificarNotaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.nota nota;
+        
+        public modificarNotaRequest() {
+        }
+        
+        public modificarNotaRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.nota nota) {
+            this.nota = nota;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarNotaResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class modificarNotaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public modificarNotaResponse() {
+        }
+        
+        public modificarNotaResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -6677,26 +6719,26 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarNotaResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.NotaWS.modificarNota(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarNotaRequest request) {
-            return base.Channel.modificarNota(request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerNotaPorIdResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.NotaWS.obtenerNotaPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerNotaPorIdRequest request) {
+            return base.Channel.obtenerNotaPorId(request);
         }
         
-        public int modificarNota(SoftPixelPenguinsWA.SoftPixelPenguinsWS.nota nota) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarNotaRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarNotaRequest();
-            inValue.nota = nota;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarNotaResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.NotaWS)(this)).modificarNota(inValue);
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.nota obtenerNotaPorId(int idNota) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerNotaPorIdRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerNotaPorIdRequest();
+            inValue.idNota = idNota;
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerNotaPorIdResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.NotaWS)(this)).obtenerNotaPorId(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarNotaResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.NotaWS.modificarNotaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarNotaRequest request) {
-            return base.Channel.modificarNotaAsync(request);
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerNotaPorIdResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.NotaWS.obtenerNotaPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerNotaPorIdRequest request) {
+            return base.Channel.obtenerNotaPorIdAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarNotaResponse> modificarNotaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.nota nota) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarNotaRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarNotaRequest();
-            inValue.nota = nota;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.NotaWS)(this)).modificarNotaAsync(inValue);
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerNotaPorIdResponse> obtenerNotaPorIdAsync(int idNota) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerNotaPorIdRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerNotaPorIdRequest();
+            inValue.idNota = idNota;
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.NotaWS)(this)).obtenerNotaPorIdAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -6723,29 +6765,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerNotaPorIdResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.NotaWS.obtenerNotaPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerNotaPorIdRequest request) {
-            return base.Channel.obtenerNotaPorId(request);
-        }
-        
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.nota obtenerNotaPorId(int idNota) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerNotaPorIdRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerNotaPorIdRequest();
-            inValue.idNota = idNota;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerNotaPorIdResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.NotaWS)(this)).obtenerNotaPorId(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerNotaPorIdResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.NotaWS.obtenerNotaPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerNotaPorIdRequest request) {
-            return base.Channel.obtenerNotaPorIdAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerNotaPorIdResponse> obtenerNotaPorIdAsync(int idNota) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerNotaPorIdRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerNotaPorIdRequest();
-            inValue.idNota = idNota;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.NotaWS)(this)).obtenerNotaPorIdAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosNotasResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.NotaWS.listarTodosNotas(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosNotasRequest request) {
             return base.Channel.listarTodosNotas(request);
         }
@@ -6765,6 +6784,29 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
             SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosNotasRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosNotasRequest();
             return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.NotaWS)(this)).listarTodosNotasAsync(inValue);
         }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarNotaResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.NotaWS.modificarNota(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarNotaRequest request) {
+            return base.Channel.modificarNota(request);
+        }
+        
+        public int modificarNota(SoftPixelPenguinsWA.SoftPixelPenguinsWS.nota nota) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarNotaRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarNotaRequest();
+            inValue.nota = nota;
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarNotaResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.NotaWS)(this)).modificarNota(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarNotaResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.NotaWS.modificarNotaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarNotaRequest request) {
+            return base.Channel.modificarNotaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarNotaResponse> modificarNotaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.nota nota) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarNotaRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarNotaRequest();
+            inValue.nota = nota;
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.NotaWS)(this)).modificarNotaAsync(inValue);
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -6783,32 +6825,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
             "micosRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/listarTodosGradosAcade" +
             "micosResponse")]
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosGradosAcademicosResponse> listarTodosGradosAcademicosAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosGradosAcademicosRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/eliminarGradoAcademico" +
-            "Request", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/eliminarGradoAcademico" +
-            "Response")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarGradoAcademicoResponse eliminarGradoAcademico(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarGradoAcademicoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/eliminarGradoAcademico" +
-            "Request", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/eliminarGradoAcademico" +
-            "Response")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarGradoAcademicoResponse> eliminarGradoAcademicoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarGradoAcademicoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/obtenerGradoAcademicoP" +
-            "orIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/obtenerGradoAcademicoP" +
-            "orIdResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerGradoAcademicoPorIdResponse obtenerGradoAcademicoPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerGradoAcademicoPorIdRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/obtenerGradoAcademicoP" +
-            "orIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/obtenerGradoAcademicoP" +
-            "orIdResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerGradoAcademicoPorIdResponse> obtenerGradoAcademicoPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerGradoAcademicoPorIdRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/insertarGradoAcademico" +
@@ -6835,6 +6851,32 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
             "oRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/modificarGradoAcademic" +
             "oResponse")]
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarGradoAcademicoResponse> modificarGradoAcademicoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarGradoAcademicoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/obtenerGradoAcademicoP" +
+            "orIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/obtenerGradoAcademicoP" +
+            "orIdResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerGradoAcademicoPorIdResponse obtenerGradoAcademicoPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerGradoAcademicoPorIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/obtenerGradoAcademicoP" +
+            "orIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/obtenerGradoAcademicoP" +
+            "orIdResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerGradoAcademicoPorIdResponse> obtenerGradoAcademicoPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerGradoAcademicoPorIdRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/eliminarGradoAcademico" +
+            "Request", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/eliminarGradoAcademico" +
+            "Response")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarGradoAcademicoResponse eliminarGradoAcademico(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarGradoAcademicoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/eliminarGradoAcademico" +
+            "Request", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/eliminarGradoAcademico" +
+            "Response")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarGradoAcademicoResponse> eliminarGradoAcademicoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarGradoAcademicoRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -6861,78 +6903,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         public listarTodosGradosAcademicosResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.gradoAcademico[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarGradoAcademico", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarGradoAcademicoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.gradoAcademico gradoAcademico;
-        
-        public eliminarGradoAcademicoRequest() {
-        }
-        
-        public eliminarGradoAcademicoRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.gradoAcademico gradoAcademico) {
-            this.gradoAcademico = gradoAcademico;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarGradoAcademicoResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarGradoAcademicoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarGradoAcademicoResponse() {
-        }
-        
-        public eliminarGradoAcademicoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerGradoAcademicoPorId", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class obtenerGradoAcademicoPorIdRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idGradoAcademico;
-        
-        public obtenerGradoAcademicoPorIdRequest() {
-        }
-        
-        public obtenerGradoAcademicoPorIdRequest(int idGradoAcademico) {
-            this.idGradoAcademico = idGradoAcademico;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerGradoAcademicoPorIdResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class obtenerGradoAcademicoPorIdResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.gradoAcademico @return;
-        
-        public obtenerGradoAcademicoPorIdResponse() {
-        }
-        
-        public obtenerGradoAcademicoPorIdResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.gradoAcademico @return) {
             this.@return = @return;
         }
     }
@@ -7009,6 +6979,78 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerGradoAcademicoPorId", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class obtenerGradoAcademicoPorIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idGradoAcademico;
+        
+        public obtenerGradoAcademicoPorIdRequest() {
+        }
+        
+        public obtenerGradoAcademicoPorIdRequest(int idGradoAcademico) {
+            this.idGradoAcademico = idGradoAcademico;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerGradoAcademicoPorIdResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class obtenerGradoAcademicoPorIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.gradoAcademico @return;
+        
+        public obtenerGradoAcademicoPorIdResponse() {
+        }
+        
+        public obtenerGradoAcademicoPorIdResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.gradoAcademico @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarGradoAcademico", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarGradoAcademicoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.gradoAcademico gradoAcademico;
+        
+        public eliminarGradoAcademicoRequest() {
+        }
+        
+        public eliminarGradoAcademicoRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.gradoAcademico gradoAcademico) {
+            this.gradoAcademico = gradoAcademico;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarGradoAcademicoResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarGradoAcademicoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarGradoAcademicoResponse() {
+        }
+        
+        public eliminarGradoAcademicoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface GradoAcademicoWSChannel : SoftPixelPenguinsWA.SoftPixelPenguinsWS.GradoAcademicoWS, System.ServiceModel.IClientChannel {
     }
@@ -7058,52 +7100,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarGradoAcademicoResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.GradoAcademicoWS.eliminarGradoAcademico(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarGradoAcademicoRequest request) {
-            return base.Channel.eliminarGradoAcademico(request);
-        }
-        
-        public int eliminarGradoAcademico(SoftPixelPenguinsWA.SoftPixelPenguinsWS.gradoAcademico gradoAcademico) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarGradoAcademicoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarGradoAcademicoRequest();
-            inValue.gradoAcademico = gradoAcademico;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarGradoAcademicoResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.GradoAcademicoWS)(this)).eliminarGradoAcademico(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarGradoAcademicoResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.GradoAcademicoWS.eliminarGradoAcademicoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarGradoAcademicoRequest request) {
-            return base.Channel.eliminarGradoAcademicoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarGradoAcademicoResponse> eliminarGradoAcademicoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.gradoAcademico gradoAcademico) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarGradoAcademicoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarGradoAcademicoRequest();
-            inValue.gradoAcademico = gradoAcademico;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.GradoAcademicoWS)(this)).eliminarGradoAcademicoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerGradoAcademicoPorIdResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.GradoAcademicoWS.obtenerGradoAcademicoPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerGradoAcademicoPorIdRequest request) {
-            return base.Channel.obtenerGradoAcademicoPorId(request);
-        }
-        
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.gradoAcademico obtenerGradoAcademicoPorId(int idGradoAcademico) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerGradoAcademicoPorIdRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerGradoAcademicoPorIdRequest();
-            inValue.idGradoAcademico = idGradoAcademico;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerGradoAcademicoPorIdResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.GradoAcademicoWS)(this)).obtenerGradoAcademicoPorId(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerGradoAcademicoPorIdResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.GradoAcademicoWS.obtenerGradoAcademicoPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerGradoAcademicoPorIdRequest request) {
-            return base.Channel.obtenerGradoAcademicoPorIdAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerGradoAcademicoPorIdResponse> obtenerGradoAcademicoPorIdAsync(int idGradoAcademico) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerGradoAcademicoPorIdRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerGradoAcademicoPorIdRequest();
-            inValue.idGradoAcademico = idGradoAcademico;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.GradoAcademicoWS)(this)).obtenerGradoAcademicoPorIdAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarGradoAcademicoResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.GradoAcademicoWS.insertarGradoAcademico(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarGradoAcademicoRequest request) {
             return base.Channel.insertarGradoAcademico(request);
         }
@@ -7148,11 +7144,70 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
             inValue.gradoAcademico = gradoAcademico;
             return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.GradoAcademicoWS)(this)).modificarGradoAcademicoAsync(inValue);
         }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerGradoAcademicoPorIdResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.GradoAcademicoWS.obtenerGradoAcademicoPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerGradoAcademicoPorIdRequest request) {
+            return base.Channel.obtenerGradoAcademicoPorId(request);
+        }
+        
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.gradoAcademico obtenerGradoAcademicoPorId(int idGradoAcademico) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerGradoAcademicoPorIdRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerGradoAcademicoPorIdRequest();
+            inValue.idGradoAcademico = idGradoAcademico;
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerGradoAcademicoPorIdResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.GradoAcademicoWS)(this)).obtenerGradoAcademicoPorId(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerGradoAcademicoPorIdResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.GradoAcademicoWS.obtenerGradoAcademicoPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerGradoAcademicoPorIdRequest request) {
+            return base.Channel.obtenerGradoAcademicoPorIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerGradoAcademicoPorIdResponse> obtenerGradoAcademicoPorIdAsync(int idGradoAcademico) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerGradoAcademicoPorIdRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerGradoAcademicoPorIdRequest();
+            inValue.idGradoAcademico = idGradoAcademico;
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.GradoAcademicoWS)(this)).obtenerGradoAcademicoPorIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarGradoAcademicoResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.GradoAcademicoWS.eliminarGradoAcademico(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarGradoAcademicoRequest request) {
+            return base.Channel.eliminarGradoAcademico(request);
+        }
+        
+        public int eliminarGradoAcademico(SoftPixelPenguinsWA.SoftPixelPenguinsWS.gradoAcademico gradoAcademico) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarGradoAcademicoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarGradoAcademicoRequest();
+            inValue.gradoAcademico = gradoAcademico;
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarGradoAcademicoResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.GradoAcademicoWS)(this)).eliminarGradoAcademico(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarGradoAcademicoResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.GradoAcademicoWS.eliminarGradoAcademicoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarGradoAcademicoRequest request) {
+            return base.Channel.eliminarGradoAcademicoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarGradoAcademicoResponse> eliminarGradoAcademicoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.gradoAcademico gradoAcademico) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarGradoAcademicoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarGradoAcademicoRequest();
+            inValue.gradoAcademico = gradoAcademico;
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.GradoAcademicoWS)(this)).eliminarGradoAcademicoAsync(inValue);
+        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", ConfigurationName="SoftPixelPenguinsWS.PersonalAdministrativoWS")]
     public interface PersonalAdministrativoWS {
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/eliminarPerson" +
+            "alAdministrativoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/eliminarPerson" +
+            "alAdministrativoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPersonalAdministrativoResponse eliminarPersonalAdministrativo(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPersonalAdministrativoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/eliminarPerson" +
+            "alAdministrativoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/eliminarPerson" +
+            "alAdministrativoResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPersonalAdministrativoResponse> eliminarPersonalAdministrativoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPersonalAdministrativoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/existePersonal" +
@@ -7168,17 +7223,17 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.existePersonalAdministrativoResponse> existePersonalAdministrativoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.existePersonalAdministrativoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/modificarPerso" +
-            "nalAdministrativoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/modificarPerso" +
-            "nalAdministrativoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/listarTodosPer" +
+            "sonalAdministrativoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/listarTodosPer" +
+            "sonalAdministrativoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarPersonalAdministrativoResponse modificarPersonalAdministrativo(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarPersonalAdministrativoRequest request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPersonalAdministrativoResponse listarTodosPersonalAdministrativo(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPersonalAdministrativoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/modificarPerso" +
-            "nalAdministrativoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/modificarPerso" +
-            "nalAdministrativoResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarPersonalAdministrativoResponse> modificarPersonalAdministrativoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarPersonalAdministrativoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/listarTodosPer" +
+            "sonalAdministrativoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/listarTodosPer" +
+            "sonalAdministrativoResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPersonalAdministrativoResponse> listarTodosPersonalAdministrativoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPersonalAdministrativoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/insertarPerson" +
@@ -7194,17 +7249,17 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarPersonalAdministrativoResponse> insertarPersonalAdministrativoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarPersonalAdministrativoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/listarTodosPer" +
-            "sonalAdministrativoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/listarTodosPer" +
-            "sonalAdministrativoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/modificarPerso" +
+            "nalAdministrativoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/modificarPerso" +
+            "nalAdministrativoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPersonalAdministrativoResponse listarTodosPersonalAdministrativo(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPersonalAdministrativoRequest request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarPersonalAdministrativoResponse modificarPersonalAdministrativo(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarPersonalAdministrativoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/listarTodosPer" +
-            "sonalAdministrativoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/listarTodosPer" +
-            "sonalAdministrativoResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPersonalAdministrativoResponse> listarTodosPersonalAdministrativoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPersonalAdministrativoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/modificarPerso" +
+            "nalAdministrativoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/modificarPerso" +
+            "nalAdministrativoResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarPersonalAdministrativoResponse> modificarPersonalAdministrativoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarPersonalAdministrativoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/obtenerPersona" +
@@ -7218,19 +7273,42 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
             "lAdministrativoPorIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/obtenerPersona" +
             "lAdministrativoPorIdResponse")]
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerPersonalAdministrativoPorIdResponse> obtenerPersonalAdministrativoPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerPersonalAdministrativoPorIdRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPersonalAdministrativo", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarPersonalAdministrativoRequest {
         
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/eliminarPerson" +
-            "alAdministrativoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/eliminarPerson" +
-            "alAdministrativoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPersonalAdministrativoResponse eliminarPersonalAdministrativo(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPersonalAdministrativoRequest request);
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.personalAdministrativo personalAdministrativo;
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/eliminarPerson" +
-            "alAdministrativoRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/eliminarPerson" +
-            "alAdministrativoResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPersonalAdministrativoResponse> eliminarPersonalAdministrativoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPersonalAdministrativoRequest request);
+        public eliminarPersonalAdministrativoRequest() {
+        }
+        
+        public eliminarPersonalAdministrativoRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.personalAdministrativo personalAdministrativo) {
+            this.personalAdministrativo = personalAdministrativo;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPersonalAdministrativoResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarPersonalAdministrativoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarPersonalAdministrativoResponse() {
+        }
+        
+        public eliminarPersonalAdministrativoResponse(int @return) {
+            this.@return = @return;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -7272,35 +7350,27 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarPersonalAdministrativo", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class modificarPersonalAdministrativoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPersonalAdministrativo", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosPersonalAdministrativoRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.personalAdministrativo personalAdministrativo;
-        
-        public modificarPersonalAdministrativoRequest() {
-        }
-        
-        public modificarPersonalAdministrativoRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.personalAdministrativo personalAdministrativo) {
-            this.personalAdministrativo = personalAdministrativo;
+        public listarTodosPersonalAdministrativoRequest() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarPersonalAdministrativoResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class modificarPersonalAdministrativoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPersonalAdministrativoResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosPersonalAdministrativoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.personalAdministrativo[] @return;
         
-        public modificarPersonalAdministrativoResponse() {
+        public listarTodosPersonalAdministrativoResponse() {
         }
         
-        public modificarPersonalAdministrativoResponse(int @return) {
+        public listarTodosPersonalAdministrativoResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.personalAdministrativo[] @return) {
             this.@return = @return;
         }
     }
@@ -7344,27 +7414,35 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPersonalAdministrativo", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosPersonalAdministrativoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarPersonalAdministrativo", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class modificarPersonalAdministrativoRequest {
         
-        public listarTodosPersonalAdministrativoRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.personalAdministrativo personalAdministrativo;
+        
+        public modificarPersonalAdministrativoRequest() {
+        }
+        
+        public modificarPersonalAdministrativoRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.personalAdministrativo personalAdministrativo) {
+            this.personalAdministrativo = personalAdministrativo;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosPersonalAdministrativoResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosPersonalAdministrativoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarPersonalAdministrativoResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class modificarPersonalAdministrativoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.personalAdministrativo[] @return;
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
         
-        public listarTodosPersonalAdministrativoResponse() {
+        public modificarPersonalAdministrativoResponse() {
         }
         
-        public listarTodosPersonalAdministrativoResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.personalAdministrativo[] @return) {
+        public modificarPersonalAdministrativoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -7405,42 +7483,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPersonalAdministrativo", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarPersonalAdministrativoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.personalAdministrativo personalAdministrativo;
-        
-        public eliminarPersonalAdministrativoRequest() {
-        }
-        
-        public eliminarPersonalAdministrativoRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.personalAdministrativo personalAdministrativo) {
-            this.personalAdministrativo = personalAdministrativo;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarPersonalAdministrativoResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarPersonalAdministrativoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarPersonalAdministrativoResponse() {
-        }
-        
-        public eliminarPersonalAdministrativoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface PersonalAdministrativoWSChannel : SoftPixelPenguinsWA.SoftPixelPenguinsWS.PersonalAdministrativoWS, System.ServiceModel.IClientChannel {
     }
@@ -7469,6 +7511,29 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPersonalAdministrativoResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.PersonalAdministrativoWS.eliminarPersonalAdministrativo(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPersonalAdministrativoRequest request) {
+            return base.Channel.eliminarPersonalAdministrativo(request);
+        }
+        
+        public int eliminarPersonalAdministrativo(SoftPixelPenguinsWA.SoftPixelPenguinsWS.personalAdministrativo personalAdministrativo) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPersonalAdministrativoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPersonalAdministrativoRequest();
+            inValue.personalAdministrativo = personalAdministrativo;
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPersonalAdministrativoResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.PersonalAdministrativoWS)(this)).eliminarPersonalAdministrativo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPersonalAdministrativoResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.PersonalAdministrativoWS.eliminarPersonalAdministrativoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPersonalAdministrativoRequest request) {
+            return base.Channel.eliminarPersonalAdministrativoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPersonalAdministrativoResponse> eliminarPersonalAdministrativoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.personalAdministrativo personalAdministrativo) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPersonalAdministrativoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPersonalAdministrativoRequest();
+            inValue.personalAdministrativo = personalAdministrativo;
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.PersonalAdministrativoWS)(this)).eliminarPersonalAdministrativoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SoftPixelPenguinsWA.SoftPixelPenguinsWS.existePersonalAdministrativoResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.PersonalAdministrativoWS.existePersonalAdministrativo(SoftPixelPenguinsWA.SoftPixelPenguinsWS.existePersonalAdministrativoRequest request) {
             return base.Channel.existePersonalAdministrativo(request);
         }
@@ -7492,26 +7557,24 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarPersonalAdministrativoResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.PersonalAdministrativoWS.modificarPersonalAdministrativo(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarPersonalAdministrativoRequest request) {
-            return base.Channel.modificarPersonalAdministrativo(request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPersonalAdministrativoResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.PersonalAdministrativoWS.listarTodosPersonalAdministrativo(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPersonalAdministrativoRequest request) {
+            return base.Channel.listarTodosPersonalAdministrativo(request);
         }
         
-        public int modificarPersonalAdministrativo(SoftPixelPenguinsWA.SoftPixelPenguinsWS.personalAdministrativo personalAdministrativo) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarPersonalAdministrativoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarPersonalAdministrativoRequest();
-            inValue.personalAdministrativo = personalAdministrativo;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarPersonalAdministrativoResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.PersonalAdministrativoWS)(this)).modificarPersonalAdministrativo(inValue);
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.personalAdministrativo[] listarTodosPersonalAdministrativo() {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPersonalAdministrativoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPersonalAdministrativoRequest();
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPersonalAdministrativoResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.PersonalAdministrativoWS)(this)).listarTodosPersonalAdministrativo(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarPersonalAdministrativoResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.PersonalAdministrativoWS.modificarPersonalAdministrativoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarPersonalAdministrativoRequest request) {
-            return base.Channel.modificarPersonalAdministrativoAsync(request);
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPersonalAdministrativoResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.PersonalAdministrativoWS.listarTodosPersonalAdministrativoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPersonalAdministrativoRequest request) {
+            return base.Channel.listarTodosPersonalAdministrativoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarPersonalAdministrativoResponse> modificarPersonalAdministrativoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.personalAdministrativo personalAdministrativo) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarPersonalAdministrativoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarPersonalAdministrativoRequest();
-            inValue.personalAdministrativo = personalAdministrativo;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.PersonalAdministrativoWS)(this)).modificarPersonalAdministrativoAsync(inValue);
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPersonalAdministrativoResponse> listarTodosPersonalAdministrativoAsync() {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPersonalAdministrativoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPersonalAdministrativoRequest();
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.PersonalAdministrativoWS)(this)).listarTodosPersonalAdministrativoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7538,24 +7601,26 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPersonalAdministrativoResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.PersonalAdministrativoWS.listarTodosPersonalAdministrativo(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPersonalAdministrativoRequest request) {
-            return base.Channel.listarTodosPersonalAdministrativo(request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarPersonalAdministrativoResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.PersonalAdministrativoWS.modificarPersonalAdministrativo(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarPersonalAdministrativoRequest request) {
+            return base.Channel.modificarPersonalAdministrativo(request);
         }
         
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.personalAdministrativo[] listarTodosPersonalAdministrativo() {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPersonalAdministrativoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPersonalAdministrativoRequest();
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPersonalAdministrativoResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.PersonalAdministrativoWS)(this)).listarTodosPersonalAdministrativo(inValue);
+        public int modificarPersonalAdministrativo(SoftPixelPenguinsWA.SoftPixelPenguinsWS.personalAdministrativo personalAdministrativo) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarPersonalAdministrativoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarPersonalAdministrativoRequest();
+            inValue.personalAdministrativo = personalAdministrativo;
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarPersonalAdministrativoResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.PersonalAdministrativoWS)(this)).modificarPersonalAdministrativo(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPersonalAdministrativoResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.PersonalAdministrativoWS.listarTodosPersonalAdministrativoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPersonalAdministrativoRequest request) {
-            return base.Channel.listarTodosPersonalAdministrativoAsync(request);
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarPersonalAdministrativoResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.PersonalAdministrativoWS.modificarPersonalAdministrativoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarPersonalAdministrativoRequest request) {
+            return base.Channel.modificarPersonalAdministrativoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPersonalAdministrativoResponse> listarTodosPersonalAdministrativoAsync() {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPersonalAdministrativoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosPersonalAdministrativoRequest();
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.PersonalAdministrativoWS)(this)).listarTodosPersonalAdministrativoAsync(inValue);
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarPersonalAdministrativoResponse> modificarPersonalAdministrativoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.personalAdministrativo personalAdministrativo) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarPersonalAdministrativoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarPersonalAdministrativoRequest();
+            inValue.personalAdministrativo = personalAdministrativo;
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.PersonalAdministrativoWS)(this)).modificarPersonalAdministrativoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -7580,29 +7645,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
             inValue.idUsuario = idUsuario;
             return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.PersonalAdministrativoWS)(this)).obtenerPersonalAdministrativoPorIdAsync(inValue);
         }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPersonalAdministrativoResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.PersonalAdministrativoWS.eliminarPersonalAdministrativo(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPersonalAdministrativoRequest request) {
-            return base.Channel.eliminarPersonalAdministrativo(request);
-        }
-        
-        public int eliminarPersonalAdministrativo(SoftPixelPenguinsWA.SoftPixelPenguinsWS.personalAdministrativo personalAdministrativo) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPersonalAdministrativoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPersonalAdministrativoRequest();
-            inValue.personalAdministrativo = personalAdministrativo;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPersonalAdministrativoResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.PersonalAdministrativoWS)(this)).eliminarPersonalAdministrativo(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPersonalAdministrativoResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.PersonalAdministrativoWS.eliminarPersonalAdministrativoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPersonalAdministrativoRequest request) {
-            return base.Channel.eliminarPersonalAdministrativoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPersonalAdministrativoResponse> eliminarPersonalAdministrativoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.personalAdministrativo personalAdministrativo) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPersonalAdministrativoRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarPersonalAdministrativoRequest();
-            inValue.personalAdministrativo = personalAdministrativo;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.PersonalAdministrativoWS)(this)).eliminarPersonalAdministrativoAsync(inValue);
-        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -7610,58 +7652,13 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     public interface RolWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/rol_eliminarRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/RolWS/rol_eliminarResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/obtenerRolPorIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/RolWS/obtenerRolPorIdResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_eliminarResponse rol_eliminar(SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_eliminarRequest request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerRolPorIdResponse obtenerRolPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerRolPorIdRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/rol_eliminarRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/RolWS/rol_eliminarResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_eliminarResponse> rol_eliminarAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_eliminarRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/insertarRolRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/RolWS/insertarRolResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarRolResponse insertarRol(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarRolRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/insertarRolRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/RolWS/insertarRolResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarRolResponse> insertarRolAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarRolRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/rol_obtenerPorIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/RolWS/rol_obtenerPorIdResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_obtenerPorIdResponse rol_obtenerPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_obtenerPorIdRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/rol_obtenerPorIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/RolWS/rol_obtenerPorIdResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_obtenerPorIdResponse> rol_obtenerPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_obtenerPorIdRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/eliminarRolRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/RolWS/eliminarRolResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarRolResponse eliminarRol(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarRolRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/eliminarRolRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/RolWS/eliminarRolResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarRolResponse> eliminarRolAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarRolRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/rol_listarTodosRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/RolWS/rol_listarTodosResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_listarTodosResponse rol_listarTodos(SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_listarTodosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/rol_listarTodosRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/RolWS/rol_listarTodosResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_listarTodosResponse> rol_listarTodosAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_listarTodosRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/rol_insertarRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/RolWS/rol_insertarResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_insertarResponse rol_insertar(SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_insertarRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/rol_insertarRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/RolWS/rol_insertarResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_insertarResponse> rol_insertarAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_insertarRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/obtenerRolPorIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/RolWS/obtenerRolPorIdResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerRolPorIdResponse> obtenerRolPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerRolPorIdRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/listarTodosRolesRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/RolWS/listarTodosRolesResponse")]
@@ -7673,6 +7670,24 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosRolesResponse> listarTodosRolesAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosRolesRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/eliminarRolRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/RolWS/eliminarRolResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarRolResponse eliminarRol(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarRolRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/eliminarRolRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/RolWS/eliminarRolResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarRolResponse> eliminarRolAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarRolRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/insertarRolRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/RolWS/insertarRolResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarRolResponse insertarRol(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarRolRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/insertarRolRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/RolWS/insertarRolResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarRolResponse> insertarRolAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarRolRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/modificarRolRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/RolWS/modificarRolResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -7680,31 +7695,22 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/modificarRolRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/RolWS/modificarRolResponse")]
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarRolResponse> modificarRolAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarRolRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/obtenerRolPorIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/RolWS/obtenerRolPorIdResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerRolPorIdResponse obtenerRolPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerRolPorIdRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/obtenerRolPorIdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/RolWS/obtenerRolPorIdResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerRolPorIdResponse> obtenerRolPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerRolPorIdRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="rol_eliminar", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class rol_eliminarRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerRolPorId", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class obtenerRolPorIdRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int idRol;
         
-        public rol_eliminarRequest() {
+        public obtenerRolPorIdRequest() {
         }
         
-        public rol_eliminarRequest(int idRol) {
+        public obtenerRolPorIdRequest(int idRol) {
             this.idRol = idRol;
         }
     }
@@ -7712,89 +7718,45 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="rol_eliminarResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class rol_eliminarResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public rol_eliminarResponse() {
-        }
-        
-        public rol_eliminarResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarRol", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class insertarRolRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol rol;
-        
-        public insertarRolRequest() {
-        }
-        
-        public insertarRolRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol rol) {
-            this.rol = rol;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarRolResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class insertarRolResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public insertarRolResponse() {
-        }
-        
-        public insertarRolResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="rol_obtenerPorId", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class rol_obtenerPorIdRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idRol;
-        
-        public rol_obtenerPorIdRequest() {
-        }
-        
-        public rol_obtenerPorIdRequest(int idRol) {
-            this.idRol = idRol;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="rol_obtenerPorIdResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class rol_obtenerPorIdResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerRolPorIdResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class obtenerRolPorIdResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol @return;
         
-        public rol_obtenerPorIdResponse() {
+        public obtenerRolPorIdResponse() {
         }
         
-        public rol_obtenerPorIdResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol @return) {
+        public obtenerRolPorIdResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosRoles", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosRolesRequest {
+        
+        public listarTodosRolesRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosRolesResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosRolesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol[] @return;
+        
+        public listarTodosRolesResponse() {
+        }
+        
+        public listarTodosRolesResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol[] @return) {
             this.@return = @return;
         }
     }
@@ -7838,91 +7800,35 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="rol_listarTodos", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class rol_listarTodosRequest {
-        
-        public rol_listarTodosRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="rol_listarTodosResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class rol_listarTodosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol[] @return;
-        
-        public rol_listarTodosResponse() {
-        }
-        
-        public rol_listarTodosResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="rol_insertar", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class rol_insertarRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarRol", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class insertarRolRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nombre;
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol rol;
         
-        public rol_insertarRequest() {
+        public insertarRolRequest() {
         }
         
-        public rol_insertarRequest(string nombre) {
-            this.nombre = nombre;
+        public insertarRolRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol rol) {
+            this.rol = rol;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="rol_insertarResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class rol_insertarResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarRolResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class insertarRolResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public rol_insertarResponse() {
+        public insertarRolResponse() {
         }
         
-        public rol_insertarResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosRoles", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosRolesRequest {
-        
-        public listarTodosRolesRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosRolesResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosRolesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol[] @return;
-        
-        public listarTodosRolesResponse() {
-        }
-        
-        public listarTodosRolesResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol[] @return) {
+        public insertarRolResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -7963,42 +7869,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerRolPorId", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class obtenerRolPorIdRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idRol;
-        
-        public obtenerRolPorIdRequest() {
-        }
-        
-        public obtenerRolPorIdRequest(int idRol) {
-            this.idRol = idRol;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerRolPorIdResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class obtenerRolPorIdResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol @return;
-        
-        public obtenerRolPorIdResponse() {
-        }
-        
-        public obtenerRolPorIdResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol @return) {
-            this.@return = @return;
-        }
-    }
-    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface RolWSChannel : SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS, System.ServiceModel.IClientChannel {
     }
@@ -8027,72 +7897,47 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_eliminarResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS.rol_eliminar(SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_eliminarRequest request) {
-            return base.Channel.rol_eliminar(request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerRolPorIdResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS.obtenerRolPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerRolPorIdRequest request) {
+            return base.Channel.obtenerRolPorId(request);
         }
         
-        public int rol_eliminar(int idRol) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_eliminarRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_eliminarRequest();
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol obtenerRolPorId(int idRol) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerRolPorIdRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerRolPorIdRequest();
             inValue.idRol = idRol;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_eliminarResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS)(this)).rol_eliminar(inValue);
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerRolPorIdResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS)(this)).obtenerRolPorId(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_eliminarResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS.rol_eliminarAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_eliminarRequest request) {
-            return base.Channel.rol_eliminarAsync(request);
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerRolPorIdResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS.obtenerRolPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerRolPorIdRequest request) {
+            return base.Channel.obtenerRolPorIdAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_eliminarResponse> rol_eliminarAsync(int idRol) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_eliminarRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_eliminarRequest();
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerRolPorIdResponse> obtenerRolPorIdAsync(int idRol) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerRolPorIdRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerRolPorIdRequest();
             inValue.idRol = idRol;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS)(this)).rol_eliminarAsync(inValue);
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS)(this)).obtenerRolPorIdAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarRolResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS.insertarRol(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarRolRequest request) {
-            return base.Channel.insertarRol(request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosRolesResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS.listarTodosRoles(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosRolesRequest request) {
+            return base.Channel.listarTodosRoles(request);
         }
         
-        public int insertarRol(SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol rol) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarRolRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarRolRequest();
-            inValue.rol = rol;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarRolResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS)(this)).insertarRol(inValue);
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol[] listarTodosRoles() {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosRolesRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosRolesRequest();
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosRolesResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS)(this)).listarTodosRoles(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarRolResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS.insertarRolAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarRolRequest request) {
-            return base.Channel.insertarRolAsync(request);
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosRolesResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS.listarTodosRolesAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosRolesRequest request) {
+            return base.Channel.listarTodosRolesAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarRolResponse> insertarRolAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol rol) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarRolRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarRolRequest();
-            inValue.rol = rol;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS)(this)).insertarRolAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_obtenerPorIdResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS.rol_obtenerPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_obtenerPorIdRequest request) {
-            return base.Channel.rol_obtenerPorId(request);
-        }
-        
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol rol_obtenerPorId(int idRol) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_obtenerPorIdRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_obtenerPorIdRequest();
-            inValue.idRol = idRol;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_obtenerPorIdResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS)(this)).rol_obtenerPorId(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_obtenerPorIdResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS.rol_obtenerPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_obtenerPorIdRequest request) {
-            return base.Channel.rol_obtenerPorIdAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_obtenerPorIdResponse> rol_obtenerPorIdAsync(int idRol) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_obtenerPorIdRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_obtenerPorIdRequest();
-            inValue.idRol = idRol;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS)(this)).rol_obtenerPorIdAsync(inValue);
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosRolesResponse> listarTodosRolesAsync() {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosRolesRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosRolesRequest();
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS)(this)).listarTodosRolesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8119,68 +7964,26 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_listarTodosResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS.rol_listarTodos(SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_listarTodosRequest request) {
-            return base.Channel.rol_listarTodos(request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarRolResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS.insertarRol(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarRolRequest request) {
+            return base.Channel.insertarRol(request);
         }
         
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol[] rol_listarTodos() {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_listarTodosRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_listarTodosRequest();
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_listarTodosResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS)(this)).rol_listarTodos(inValue);
+        public int insertarRol(SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol rol) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarRolRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarRolRequest();
+            inValue.rol = rol;
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarRolResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS)(this)).insertarRol(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_listarTodosResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS.rol_listarTodosAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_listarTodosRequest request) {
-            return base.Channel.rol_listarTodosAsync(request);
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarRolResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS.insertarRolAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarRolRequest request) {
+            return base.Channel.insertarRolAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_listarTodosResponse> rol_listarTodosAsync() {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_listarTodosRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_listarTodosRequest();
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS)(this)).rol_listarTodosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_insertarResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS.rol_insertar(SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_insertarRequest request) {
-            return base.Channel.rol_insertar(request);
-        }
-        
-        public int rol_insertar(string nombre) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_insertarRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_insertarRequest();
-            inValue.nombre = nombre;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_insertarResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS)(this)).rol_insertar(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_insertarResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS.rol_insertarAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_insertarRequest request) {
-            return base.Channel.rol_insertarAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_insertarResponse> rol_insertarAsync(string nombre) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_insertarRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol_insertarRequest();
-            inValue.nombre = nombre;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS)(this)).rol_insertarAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosRolesResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS.listarTodosRoles(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosRolesRequest request) {
-            return base.Channel.listarTodosRoles(request);
-        }
-        
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol[] listarTodosRoles() {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosRolesRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosRolesRequest();
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosRolesResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS)(this)).listarTodosRoles(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosRolesResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS.listarTodosRolesAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosRolesRequest request) {
-            return base.Channel.listarTodosRolesAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosRolesResponse> listarTodosRolesAsync() {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosRolesRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosRolesRequest();
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS)(this)).listarTodosRolesAsync(inValue);
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarRolResponse> insertarRolAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol rol) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarRolRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarRolRequest();
+            inValue.rol = rol;
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS)(this)).insertarRolAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -8204,29 +8007,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
             SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarRolRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarRolRequest();
             inValue.rol = rol;
             return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS)(this)).modificarRolAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerRolPorIdResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS.obtenerRolPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerRolPorIdRequest request) {
-            return base.Channel.obtenerRolPorId(request);
-        }
-        
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.rol obtenerRolPorId(int idRol) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerRolPorIdRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerRolPorIdRequest();
-            inValue.idRol = idRol;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerRolPorIdResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS)(this)).obtenerRolPorId(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerRolPorIdResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS.obtenerRolPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerRolPorIdRequest request) {
-            return base.Channel.obtenerRolPorIdAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerRolPorIdResponse> obtenerRolPorIdAsync(int idRol) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerRolPorIdRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerRolPorIdRequest();
-            inValue.idRol = idRol;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.RolWS)(this)).obtenerRolPorIdAsync(inValue);
         }
     }
     
@@ -8262,19 +8042,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarApoderadoResponse> insertarApoderadoAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarApoderadoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/ApoderadoWS/obtenerApoderadoPorIdReques" +
-            "t", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/ApoderadoWS/obtenerApoderadoPorIdRespon" +
-            "se")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerApoderadoPorIdResponse obtenerApoderadoPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerApoderadoPorIdRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/ApoderadoWS/obtenerApoderadoPorIdReques" +
-            "t", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/ApoderadoWS/obtenerApoderadoPorIdRespon" +
-            "se")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerApoderadoPorIdResponse> obtenerApoderadoPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerApoderadoPorIdRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/ApoderadoWS/listarTodosApoderadosReques" +
             "t", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/ApoderadoWS/listarTodosApoderadosRespon" +
             "se")]
@@ -8286,6 +8053,19 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
             "t", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/ApoderadoWS/listarTodosApoderadosRespon" +
             "se")]
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosApoderadosResponse> listarTodosApoderadosAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosApoderadosRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/ApoderadoWS/obtenerApoderadoPorIdReques" +
+            "t", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/ApoderadoWS/obtenerApoderadoPorIdRespon" +
+            "se")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerApoderadoPorIdResponse obtenerApoderadoPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerApoderadoPorIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/ApoderadoWS/obtenerApoderadoPorIdReques" +
+            "t", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/ApoderadoWS/obtenerApoderadoPorIdRespon" +
+            "se")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerApoderadoPorIdResponse> obtenerApoderadoPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerApoderadoPorIdRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -8399,6 +8179,34 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosApoderados", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosApoderadosRequest {
+        
+        public listarTodosApoderadosRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosApoderadosResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosApoderadosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.apoderado[] @return;
+        
+        public listarTodosApoderadosResponse() {
+        }
+        
+        public listarTodosApoderadosResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.apoderado[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerApoderadoPorId", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
     public partial class obtenerApoderadoPorIdRequest {
         
@@ -8428,34 +8236,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         public obtenerApoderadoPorIdResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.apoderado @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosApoderados", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosApoderadosRequest {
-        
-        public listarTodosApoderadosRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosApoderadosResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosApoderadosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.apoderado[] @return;
-        
-        public listarTodosApoderadosResponse() {
-        }
-        
-        public listarTodosApoderadosResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.apoderado[] @return) {
             this.@return = @return;
         }
     }
@@ -8557,6 +8337,27 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosApoderadosResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.ApoderadoWS.listarTodosApoderados(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosApoderadosRequest request) {
+            return base.Channel.listarTodosApoderados(request);
+        }
+        
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.apoderado[] listarTodosApoderados() {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosApoderadosRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosApoderadosRequest();
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosApoderadosResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.ApoderadoWS)(this)).listarTodosApoderados(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosApoderadosResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.ApoderadoWS.listarTodosApoderadosAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosApoderadosRequest request) {
+            return base.Channel.listarTodosApoderadosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosApoderadosResponse> listarTodosApoderadosAsync() {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosApoderadosRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosApoderadosRequest();
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.ApoderadoWS)(this)).listarTodosApoderadosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerApoderadoPorIdResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.ApoderadoWS.obtenerApoderadoPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerApoderadoPorIdRequest request) {
             return base.Channel.obtenerApoderadoPorId(request);
         }
@@ -8578,45 +8379,11 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
             inValue.idApoderado = idApoderado;
             return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.ApoderadoWS)(this)).obtenerApoderadoPorIdAsync(inValue);
         }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosApoderadosResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.ApoderadoWS.listarTodosApoderados(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosApoderadosRequest request) {
-            return base.Channel.listarTodosApoderados(request);
-        }
-        
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.apoderado[] listarTodosApoderados() {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosApoderadosRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosApoderadosRequest();
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosApoderadosResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.ApoderadoWS)(this)).listarTodosApoderados(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosApoderadosResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.ApoderadoWS.listarTodosApoderadosAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosApoderadosRequest request) {
-            return base.Channel.listarTodosApoderadosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosApoderadosResponse> listarTodosApoderadosAsync() {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosApoderadosRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosApoderadosRequest();
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.ApoderadoWS)(this)).listarTodosApoderadosAsync(inValue);
-        }
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", ConfigurationName="SoftPixelPenguinsWS.AdministradorWS")]
     public interface AdministradorWS {
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/listarTodosAdministrado" +
-            "resRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/listarTodosAdministrado" +
-            "resResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAdministradoresResponse listarTodosAdministradores(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAdministradoresRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/listarTodosAdministrado" +
-            "resRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/listarTodosAdministrado" +
-            "resResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAdministradoresResponse> listarTodosAdministradoresAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAdministradoresRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/existeAdministradorRequ" +
@@ -8632,30 +8399,17 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAdministradorResponse> existeAdministradorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAdministradorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/eliminarAdministradorRe" +
-            "quest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/eliminarAdministradorRe" +
-            "sponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/listarTodosAdministrado" +
+            "resRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/listarTodosAdministrado" +
+            "resResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAdministradorResponse eliminarAdministrador(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAdministradorRequest request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAdministradoresResponse listarTodosAdministradores(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAdministradoresRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/eliminarAdministradorRe" +
-            "quest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/eliminarAdministradorRe" +
-            "sponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAdministradorResponse> eliminarAdministradorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAdministradorRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/insertarAdministradorRe" +
-            "quest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/insertarAdministradorRe" +
-            "sponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAdministradorResponse insertarAdministrador(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAdministradorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/insertarAdministradorRe" +
-            "quest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/insertarAdministradorRe" +
-            "sponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAdministradorResponse> insertarAdministradorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAdministradorRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/listarTodosAdministrado" +
+            "resRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/listarTodosAdministrado" +
+            "resResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAdministradoresResponse> listarTodosAdministradoresAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAdministradoresRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/modificarAdministradorR" +
@@ -8671,6 +8425,32 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarAdministradorResponse> modificarAdministradorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarAdministradorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/insertarAdministradorRe" +
+            "quest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/insertarAdministradorRe" +
+            "sponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAdministradorResponse insertarAdministrador(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAdministradorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/insertarAdministradorRe" +
+            "quest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/insertarAdministradorRe" +
+            "sponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAdministradorResponse> insertarAdministradorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarAdministradorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/eliminarAdministradorRe" +
+            "quest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/eliminarAdministradorRe" +
+            "sponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAdministradorResponse eliminarAdministrador(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAdministradorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/eliminarAdministradorRe" +
+            "quest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/eliminarAdministradorRe" +
+            "sponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAdministradorResponse> eliminarAdministradorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAdministradorRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/obtenerAdministradorPor" +
             "IdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/obtenerAdministradorPor" +
             "IdResponse")]
@@ -8682,34 +8462,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
             "IdRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/obtenerAdministradorPor" +
             "IdResponse")]
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAdministradorPorIdResponse> obtenerAdministradorPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerAdministradorPorIdRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosAdministradores", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosAdministradoresRequest {
-        
-        public listarTodosAdministradoresRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosAdministradoresResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosAdministradoresResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.administrador[] @return;
-        
-        public listarTodosAdministradoresResponse() {
-        }
-        
-        public listarTodosAdministradoresResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.administrador[] @return) {
-            this.@return = @return;
-        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -8751,17 +8503,45 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAdministrador", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarAdministradorRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosAdministradores", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosAdministradoresRequest {
+        
+        public listarTodosAdministradoresRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosAdministradoresResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosAdministradoresResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.administrador[] @return;
+        
+        public listarTodosAdministradoresResponse() {
+        }
+        
+        public listarTodosAdministradoresResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.administrador[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarAdministrador", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class modificarAdministradorRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SoftPixelPenguinsWA.SoftPixelPenguinsWS.administrador administrador;
         
-        public eliminarAdministradorRequest() {
+        public modificarAdministradorRequest() {
         }
         
-        public eliminarAdministradorRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.administrador administrador) {
+        public modificarAdministradorRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.administrador administrador) {
             this.administrador = administrador;
         }
     }
@@ -8769,17 +8549,17 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAdministradorResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarAdministradorResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarAdministradorResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class modificarAdministradorResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public eliminarAdministradorResponse() {
+        public modificarAdministradorResponse() {
         }
         
-        public eliminarAdministradorResponse(int @return) {
+        public modificarAdministradorResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -8823,17 +8603,17 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarAdministrador", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class modificarAdministradorRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAdministrador", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarAdministradorRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public SoftPixelPenguinsWA.SoftPixelPenguinsWS.administrador administrador;
         
-        public modificarAdministradorRequest() {
+        public eliminarAdministradorRequest() {
         }
         
-        public modificarAdministradorRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.administrador administrador) {
+        public eliminarAdministradorRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.administrador administrador) {
             this.administrador = administrador;
         }
     }
@@ -8841,17 +8621,17 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarAdministradorResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class modificarAdministradorResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAdministradorResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarAdministradorResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public modificarAdministradorResponse() {
+        public eliminarAdministradorResponse() {
         }
         
-        public modificarAdministradorResponse(int @return) {
+        public eliminarAdministradorResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -8920,27 +8700,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAdministradoresResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.AdministradorWS.listarTodosAdministradores(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAdministradoresRequest request) {
-            return base.Channel.listarTodosAdministradores(request);
-        }
-        
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.administrador[] listarTodosAdministradores() {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAdministradoresRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAdministradoresRequest();
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAdministradoresResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AdministradorWS)(this)).listarTodosAdministradores(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAdministradoresResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.AdministradorWS.listarTodosAdministradoresAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAdministradoresRequest request) {
-            return base.Channel.listarTodosAdministradoresAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAdministradoresResponse> listarTodosAdministradoresAsync() {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAdministradoresRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAdministradoresRequest();
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AdministradorWS)(this)).listarTodosAdministradoresAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAdministradorResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.AdministradorWS.existeAdministrador(SoftPixelPenguinsWA.SoftPixelPenguinsWS.existeAdministradorRequest request) {
             return base.Channel.existeAdministrador(request);
         }
@@ -8964,26 +8723,47 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAdministradorResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.AdministradorWS.eliminarAdministrador(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAdministradorRequest request) {
-            return base.Channel.eliminarAdministrador(request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAdministradoresResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.AdministradorWS.listarTodosAdministradores(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAdministradoresRequest request) {
+            return base.Channel.listarTodosAdministradores(request);
         }
         
-        public int eliminarAdministrador(SoftPixelPenguinsWA.SoftPixelPenguinsWS.administrador administrador) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAdministradorRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAdministradorRequest();
-            inValue.administrador = administrador;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAdministradorResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AdministradorWS)(this)).eliminarAdministrador(inValue);
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.administrador[] listarTodosAdministradores() {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAdministradoresRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAdministradoresRequest();
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAdministradoresResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AdministradorWS)(this)).listarTodosAdministradores(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAdministradorResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.AdministradorWS.eliminarAdministradorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAdministradorRequest request) {
-            return base.Channel.eliminarAdministradorAsync(request);
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAdministradoresResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.AdministradorWS.listarTodosAdministradoresAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAdministradoresRequest request) {
+            return base.Channel.listarTodosAdministradoresAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAdministradorResponse> eliminarAdministradorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.administrador administrador) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAdministradorRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAdministradorRequest();
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAdministradoresResponse> listarTodosAdministradoresAsync() {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAdministradoresRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosAdministradoresRequest();
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AdministradorWS)(this)).listarTodosAdministradoresAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarAdministradorResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.AdministradorWS.modificarAdministrador(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarAdministradorRequest request) {
+            return base.Channel.modificarAdministrador(request);
+        }
+        
+        public int modificarAdministrador(SoftPixelPenguinsWA.SoftPixelPenguinsWS.administrador administrador) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarAdministradorRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarAdministradorRequest();
             inValue.administrador = administrador;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AdministradorWS)(this)).eliminarAdministradorAsync(inValue);
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarAdministradorResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AdministradorWS)(this)).modificarAdministrador(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarAdministradorResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.AdministradorWS.modificarAdministradorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarAdministradorRequest request) {
+            return base.Channel.modificarAdministradorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarAdministradorResponse> modificarAdministradorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.administrador administrador) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarAdministradorRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarAdministradorRequest();
+            inValue.administrador = administrador;
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AdministradorWS)(this)).modificarAdministradorAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -9010,26 +8790,26 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarAdministradorResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.AdministradorWS.modificarAdministrador(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarAdministradorRequest request) {
-            return base.Channel.modificarAdministrador(request);
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAdministradorResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.AdministradorWS.eliminarAdministrador(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAdministradorRequest request) {
+            return base.Channel.eliminarAdministrador(request);
         }
         
-        public int modificarAdministrador(SoftPixelPenguinsWA.SoftPixelPenguinsWS.administrador administrador) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarAdministradorRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarAdministradorRequest();
+        public int eliminarAdministrador(SoftPixelPenguinsWA.SoftPixelPenguinsWS.administrador administrador) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAdministradorRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAdministradorRequest();
             inValue.administrador = administrador;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarAdministradorResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AdministradorWS)(this)).modificarAdministrador(inValue);
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAdministradorResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AdministradorWS)(this)).eliminarAdministrador(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarAdministradorResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.AdministradorWS.modificarAdministradorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarAdministradorRequest request) {
-            return base.Channel.modificarAdministradorAsync(request);
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAdministradorResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.AdministradorWS.eliminarAdministradorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAdministradorRequest request) {
+            return base.Channel.eliminarAdministradorAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarAdministradorResponse> modificarAdministradorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.administrador administrador) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarAdministradorRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarAdministradorRequest();
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAdministradorResponse> eliminarAdministradorAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.administrador administrador) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAdministradorRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarAdministradorRequest();
             inValue.administrador = administrador;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AdministradorWS)(this)).modificarAdministradorAsync(inValue);
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.AdministradorWS)(this)).eliminarAdministradorAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -9061,19 +8841,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     public interface MatriculaWS {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/obtenerMatriculaPorIdReques" +
-            "t", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/obtenerMatriculaPorIdRespon" +
-            "se")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerMatriculaPorIdResponse obtenerMatriculaPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerMatriculaPorIdRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/obtenerMatriculaPorIdReques" +
-            "t", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/obtenerMatriculaPorIdRespon" +
-            "se")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerMatriculaPorIdResponse> obtenerMatriculaPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerMatriculaPorIdRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/listarTodosMatriculasReques" +
             "t", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/listarTodosMatriculasRespon" +
             "se")]
@@ -9087,6 +8854,19 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosMatriculasResponse> listarTodosMatriculasAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosMatriculasRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/obtenerMatriculaPorIdReques" +
+            "t", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/obtenerMatriculaPorIdRespon" +
+            "se")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerMatriculaPorIdResponse obtenerMatriculaPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerMatriculaPorIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/obtenerMatriculaPorIdReques" +
+            "t", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/obtenerMatriculaPorIdRespon" +
+            "se")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerMatriculaPorIdResponse> obtenerMatriculaPorIdAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerMatriculaPorIdRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/modificarMatriculaRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/modificarMatriculaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -9096,15 +8876,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarMatriculaResponse> modificarMatriculaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.modificarMatriculaRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/eliminarMatriculaRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/eliminarMatriculaResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarMatriculaResponse eliminarMatricula(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarMatriculaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/eliminarMatriculaRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/eliminarMatriculaResponse")]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarMatriculaResponse> eliminarMatriculaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarMatriculaRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/insertarMatriculaRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/insertarMatriculaResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -9112,6 +8883,43 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/insertarMatriculaRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/insertarMatriculaResponse")]
         System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarMatriculaResponse> insertarMatriculaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarMatriculaRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/eliminarMatriculaRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/eliminarMatriculaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarMatriculaResponse eliminarMatricula(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarMatriculaRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/eliminarMatriculaRequest", ReplyAction="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/eliminarMatriculaResponse")]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarMatriculaResponse> eliminarMatriculaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarMatriculaRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosMatriculas", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosMatriculasRequest {
+        
+        public listarTodosMatriculasRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosMatriculasResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class listarTodosMatriculasResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.matricula[] @return;
+        
+        public listarTodosMatriculasResponse() {
+        }
+        
+        public listarTodosMatriculasResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.matricula[] @return) {
+            this.@return = @return;
+        }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -9146,34 +8954,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         public obtenerMatriculaPorIdResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.matricula @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosMatriculas", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosMatriculasRequest {
-        
-        public listarTodosMatriculasRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosMatriculasResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class listarTodosMatriculasResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.matricula[] @return;
-        
-        public listarTodosMatriculasResponse() {
-        }
-        
-        public listarTodosMatriculasResponse(SoftPixelPenguinsWA.SoftPixelPenguinsWS.matricula[] @return) {
             this.@return = @return;
         }
     }
@@ -9217,42 +8997,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarMatricula", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarMatriculaRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.matricula matricula;
-        
-        public eliminarMatriculaRequest() {
-        }
-        
-        public eliminarMatriculaRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.matricula matricula) {
-            this.matricula = matricula;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarMatriculaResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
-    public partial class eliminarMatriculaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarMatriculaResponse() {
-        }
-        
-        public eliminarMatriculaResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="insertarMatricula", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
     public partial class insertarMatriculaRequest {
         
@@ -9286,6 +9030,42 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarMatricula", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarMatriculaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.matricula matricula;
+        
+        public eliminarMatriculaRequest() {
+        }
+        
+        public eliminarMatriculaRequest(SoftPixelPenguinsWA.SoftPixelPenguinsWS.matricula matricula) {
+            this.matricula = matricula;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarMatriculaResponse", WrapperNamespace="http://services.pixelpenguins.pucp.edu.pe", IsWrapped=true)]
+    public partial class eliminarMatriculaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.pixelpenguins.pucp.edu.pe", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarMatriculaResponse() {
+        }
+        
+        public eliminarMatriculaResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface MatriculaWSChannel : SoftPixelPenguinsWA.SoftPixelPenguinsWS.MatriculaWS, System.ServiceModel.IClientChannel {
     }
@@ -9314,6 +9094,27 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosMatriculasResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.MatriculaWS.listarTodosMatriculas(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosMatriculasRequest request) {
+            return base.Channel.listarTodosMatriculas(request);
+        }
+        
+        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.matricula[] listarTodosMatriculas() {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosMatriculasRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosMatriculasRequest();
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosMatriculasResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.MatriculaWS)(this)).listarTodosMatriculas(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosMatriculasResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.MatriculaWS.listarTodosMatriculasAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosMatriculasRequest request) {
+            return base.Channel.listarTodosMatriculasAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosMatriculasResponse> listarTodosMatriculasAsync() {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosMatriculasRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosMatriculasRequest();
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.MatriculaWS)(this)).listarTodosMatriculasAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerMatriculaPorIdResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.MatriculaWS.obtenerMatriculaPorId(SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerMatriculaPorIdRequest request) {
             return base.Channel.obtenerMatriculaPorId(request);
         }
@@ -9334,27 +9135,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
             SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerMatriculaPorIdRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.obtenerMatriculaPorIdRequest();
             inValue.idMatricula = idMatricula;
             return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.MatriculaWS)(this)).obtenerMatriculaPorIdAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosMatriculasResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.MatriculaWS.listarTodosMatriculas(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosMatriculasRequest request) {
-            return base.Channel.listarTodosMatriculas(request);
-        }
-        
-        public SoftPixelPenguinsWA.SoftPixelPenguinsWS.matricula[] listarTodosMatriculas() {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosMatriculasRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosMatriculasRequest();
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosMatriculasResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.MatriculaWS)(this)).listarTodosMatriculas(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosMatriculasResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.MatriculaWS.listarTodosMatriculasAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosMatriculasRequest request) {
-            return base.Channel.listarTodosMatriculasAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosMatriculasResponse> listarTodosMatriculasAsync() {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosMatriculasRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarTodosMatriculasRequest();
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.MatriculaWS)(this)).listarTodosMatriculasAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -9381,29 +9161,6 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarMatriculaResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.MatriculaWS.eliminarMatricula(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarMatriculaRequest request) {
-            return base.Channel.eliminarMatricula(request);
-        }
-        
-        public int eliminarMatricula(SoftPixelPenguinsWA.SoftPixelPenguinsWS.matricula matricula) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarMatriculaRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarMatriculaRequest();
-            inValue.matricula = matricula;
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarMatriculaResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.MatriculaWS)(this)).eliminarMatricula(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarMatriculaResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.MatriculaWS.eliminarMatriculaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarMatriculaRequest request) {
-            return base.Channel.eliminarMatriculaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarMatriculaResponse> eliminarMatriculaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.matricula matricula) {
-            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarMatriculaRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarMatriculaRequest();
-            inValue.matricula = matricula;
-            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.MatriculaWS)(this)).eliminarMatriculaAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarMatriculaResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.MatriculaWS.insertarMatricula(SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarMatriculaRequest request) {
             return base.Channel.insertarMatricula(request);
         }
@@ -9424,6 +9181,29 @@ namespace SoftPixelPenguinsWA.SoftPixelPenguinsWS {
             SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarMatriculaRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.insertarMatriculaRequest();
             inValue.matricula = matricula;
             return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.MatriculaWS)(this)).insertarMatriculaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarMatriculaResponse SoftPixelPenguinsWA.SoftPixelPenguinsWS.MatriculaWS.eliminarMatricula(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarMatriculaRequest request) {
+            return base.Channel.eliminarMatricula(request);
+        }
+        
+        public int eliminarMatricula(SoftPixelPenguinsWA.SoftPixelPenguinsWS.matricula matricula) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarMatriculaRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarMatriculaRequest();
+            inValue.matricula = matricula;
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarMatriculaResponse retVal = ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.MatriculaWS)(this)).eliminarMatricula(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarMatriculaResponse> SoftPixelPenguinsWA.SoftPixelPenguinsWS.MatriculaWS.eliminarMatriculaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarMatriculaRequest request) {
+            return base.Channel.eliminarMatriculaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarMatriculaResponse> eliminarMatriculaAsync(SoftPixelPenguinsWA.SoftPixelPenguinsWS.matricula matricula) {
+            SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarMatriculaRequest inValue = new SoftPixelPenguinsWA.SoftPixelPenguinsWS.eliminarMatriculaRequest();
+            inValue.matricula = matricula;
+            return ((SoftPixelPenguinsWA.SoftPixelPenguinsWS.MatriculaWS)(this)).eliminarMatriculaAsync(inValue);
         }
     }
 }

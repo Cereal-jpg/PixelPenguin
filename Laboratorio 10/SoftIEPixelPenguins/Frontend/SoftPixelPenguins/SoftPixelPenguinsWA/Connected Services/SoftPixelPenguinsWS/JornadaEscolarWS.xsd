@@ -51,16 +51,6 @@
       <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="obtenerJornadaEscolarPorId">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="idJornadaEscolar" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="obtenerJornadaEscolarPorIdResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:jornadaEscolar" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="modificarJornadaEscolar">
     <xs:sequence>
       <xs:element minOccurs="0" name="jornadaEscolar" type="tns:jornadaEscolar" />
@@ -69,6 +59,16 @@
   <xs:complexType name="modificarJornadaEscolarResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerJornadaEscolarPorId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idJornadaEscolar" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerJornadaEscolarPorIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:jornadaEscolar" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarJornadaEscolar">

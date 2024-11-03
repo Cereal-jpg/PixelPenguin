@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftPixelPenguinsWS/AnioAcademicoWS?xsd=1" namespace="http://services.pixelpenguins.pucp.edu.pe" />
     </xsd:schema>
   </types>
-  <message name="insertarAnioAcademico">
-    <part name="parameters" element="tns:insertarAnioAcademico" />
+  <message name="listarTodosAniosAcademicos">
+    <part name="parameters" element="tns:listarTodosAniosAcademicos" />
   </message>
-  <message name="insertarAnioAcademicoResponse">
-    <part name="parameters" element="tns:insertarAnioAcademicoResponse" />
+  <message name="listarTodosAniosAcademicosResponse">
+    <part name="parameters" element="tns:listarTodosAniosAcademicosResponse" />
   </message>
   <message name="modificarAnioAcademico">
     <part name="parameters" element="tns:modificarAnioAcademico" />
@@ -17,11 +17,17 @@
   <message name="modificarAnioAcademicoResponse">
     <part name="parameters" element="tns:modificarAnioAcademicoResponse" />
   </message>
-  <message name="listarTodosAniosAcademicos">
-    <part name="parameters" element="tns:listarTodosAniosAcademicos" />
+  <message name="eliminarAnioAcademico">
+    <part name="parameters" element="tns:eliminarAnioAcademico" />
   </message>
-  <message name="listarTodosAniosAcademicosResponse">
-    <part name="parameters" element="tns:listarTodosAniosAcademicosResponse" />
+  <message name="eliminarAnioAcademicoResponse">
+    <part name="parameters" element="tns:eliminarAnioAcademicoResponse" />
+  </message>
+  <message name="insertarAnioAcademico">
+    <part name="parameters" element="tns:insertarAnioAcademico" />
+  </message>
+  <message name="insertarAnioAcademicoResponse">
+    <part name="parameters" element="tns:insertarAnioAcademicoResponse" />
   </message>
   <message name="obtenerAnioAcademicoPorId">
     <part name="parameters" element="tns:obtenerAnioAcademicoPorId" />
@@ -29,37 +35,31 @@
   <message name="obtenerAnioAcademicoPorIdResponse">
     <part name="parameters" element="tns:obtenerAnioAcademicoPorIdResponse" />
   </message>
-  <message name="eliminarAnioAcademico">
-    <part name="parameters" element="tns:eliminarAnioAcademico" />
-  </message>
-  <message name="eliminarAnioAcademicoResponse">
-    <part name="parameters" element="tns:eliminarAnioAcademicoResponse" />
-  </message>
   <portType name="AnioAcademicoWS">
-    <operation name="insertarAnioAcademico">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/insertarAnioAcademicoRequest" message="tns:insertarAnioAcademico" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/insertarAnioAcademicoResponse" message="tns:insertarAnioAcademicoResponse" />
+    <operation name="listarTodosAniosAcademicos">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/listarTodosAniosAcademicosRequest" message="tns:listarTodosAniosAcademicos" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/listarTodosAniosAcademicosResponse" message="tns:listarTodosAniosAcademicosResponse" />
     </operation>
     <operation name="modificarAnioAcademico">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/modificarAnioAcademicoRequest" message="tns:modificarAnioAcademico" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/modificarAnioAcademicoResponse" message="tns:modificarAnioAcademicoResponse" />
     </operation>
-    <operation name="listarTodosAniosAcademicos">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/listarTodosAniosAcademicosRequest" message="tns:listarTodosAniosAcademicos" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/listarTodosAniosAcademicosResponse" message="tns:listarTodosAniosAcademicosResponse" />
+    <operation name="eliminarAnioAcademico">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/eliminarAnioAcademicoRequest" message="tns:eliminarAnioAcademico" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/eliminarAnioAcademicoResponse" message="tns:eliminarAnioAcademicoResponse" />
+    </operation>
+    <operation name="insertarAnioAcademico">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/insertarAnioAcademicoRequest" message="tns:insertarAnioAcademico" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/insertarAnioAcademicoResponse" message="tns:insertarAnioAcademicoResponse" />
     </operation>
     <operation name="obtenerAnioAcademicoPorId">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/obtenerAnioAcademicoPorIdRequest" message="tns:obtenerAnioAcademicoPorId" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/obtenerAnioAcademicoPorIdResponse" message="tns:obtenerAnioAcademicoPorIdResponse" />
     </operation>
-    <operation name="eliminarAnioAcademico">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/eliminarAnioAcademicoRequest" message="tns:eliminarAnioAcademico" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AnioAcademicoWS/eliminarAnioAcademicoResponse" message="tns:eliminarAnioAcademicoResponse" />
-    </operation>
   </portType>
   <binding name="AnioAcademicoWSPortBinding" type="tns:AnioAcademicoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="insertarAnioAcademico">
+    <operation name="listarTodosAniosAcademicos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -77,7 +77,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarTodosAniosAcademicos">
+    <operation name="eliminarAnioAcademico">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarAnioAcademico">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -87,15 +96,6 @@
       </output>
     </operation>
     <operation name="obtenerAnioAcademicoPorId">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarAnioAcademico">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

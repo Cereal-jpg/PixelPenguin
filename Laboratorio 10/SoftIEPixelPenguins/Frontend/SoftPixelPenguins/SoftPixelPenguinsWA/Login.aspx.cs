@@ -18,7 +18,6 @@ namespace SoftPixelPenguinsWA
 
         protected void loginButton_Click(object sender, EventArgs e)
         {
-            // Obtener los valores ingresados en los TextBox.
             string Email = email.Text.Trim();
             string Password = password.Text.Trim();
 
@@ -30,6 +29,7 @@ namespace SoftPixelPenguinsWA
                 switch (tipo)
                 {
                     case 'a':
+                        Session["idAlumnoLogueado"] = id;
                         Response.Redirect("IndexAlumno.aspx");
                         break;
                     case 'm':

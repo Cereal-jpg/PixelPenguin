@@ -25,7 +25,7 @@
             <p>Bienvenido a la Matrícula online</p>
             <p>En este espacio podrás iniciar o consultar el estado de matrícula para el siguiente año</p>
             <p>¿Quieres iniciar con tu proceso? El proceso consta de 3 pasos</p>
-            <div class="button-container"> <!-- Contenedor adicional para centrar el botón -->
+            <div class="button-container">
                 <asp:Button ID="btnIniciarMatricula" runat="server" Text="Iniciar Proceso" CssClass="btn-matricula" OnClick="btnIniciarMatricula_Click" />
             </div>
         </div>

@@ -16,7 +16,7 @@ namespace SoftPixelPenguinsWA
 
         protected void btnIniciarMatricula_Click(object sender, EventArgs e)
         {
-            Response.Redirect("MatriculaAlumno-1.aspx");
+            Response.Redirect("MatriculaGenerica-1.aspx");
         }
     }
 }

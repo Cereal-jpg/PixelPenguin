@@ -16,4 +16,6 @@ public interface UsuarioDAO {
     public Boolean existeUsuario(Usuario usuario);
     public ArrayList<Usuario>listarUsuariosPorNombre(String nombre); 
     public Integer ValidarDatos(String correo,String contra);
+    public Integer ValidarCorreoElectronico(String correo);
+    public Integer ActualizarContrasena(String email,String newPassword);
 }

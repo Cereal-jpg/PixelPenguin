@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services.pixelpenguins.pucp.edu.pe" targetNamespace="http://services.pixelpenguins.pucp.edu.pe" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ActualizarContrasena" type="tns:ActualizarContrasena" />
+  <xs:element name="ActualizarContrasenaResponse" type="tns:ActualizarContrasenaResponse" />
+  <xs:element name="ValidarCorreoElectronico" type="tns:ValidarCorreoElectronico" />
+  <xs:element name="ValidarCorreoElectronicoResponse" type="tns:ValidarCorreoElectronicoResponse" />
   <xs:element name="ValidarDatos" type="tns:ValidarDatos" />
   <xs:element name="ValidarDatosResponse" type="tns:ValidarDatosResponse" />
   <xs:element name="eliminarUsuario" type="tns:eliminarUsuario" />
@@ -16,6 +20,27 @@
   <xs:element name="modificarUsuarioResponse" type="tns:modificarUsuarioResponse" />
   <xs:element name="obtenerUsuarioPorId" type="tns:obtenerUsuarioPorId" />
   <xs:element name="obtenerUsuarioPorIdResponse" type="tns:obtenerUsuarioPorIdResponse" />
+  <xs:complexType name="ActualizarContrasena">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ActualizarContrasenaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ValidarCorreoElectronico">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ValidarCorreoElectronicoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="listarTodosUsuarios">
     <xs:sequence />
   </xs:complexType>

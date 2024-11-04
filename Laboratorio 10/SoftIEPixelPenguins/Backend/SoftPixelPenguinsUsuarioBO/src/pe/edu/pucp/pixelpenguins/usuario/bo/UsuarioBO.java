@@ -63,4 +63,12 @@ public class UsuarioBO {
         return this.usuarioDAO.ValidarDatos(email, password);
     }
     
+    public Integer ValidarCorreoElectronico(String email){
+        return this.usuarioDAO.ValidarCorreoElectronico(email);
+    }
+    
+    public Integer ActualizarContrasena(String email,String newPassword){
+        return this.usuarioDAO.ActualizarContrasena(email,newPassword);
+    }
+    
 }

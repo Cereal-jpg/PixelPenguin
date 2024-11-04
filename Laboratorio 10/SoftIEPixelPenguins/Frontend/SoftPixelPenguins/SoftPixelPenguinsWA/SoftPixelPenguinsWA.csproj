@@ -95,7 +95,6 @@
     <Content Include="MatriculaAlumno-0.aspx" />
     <Content Include="MatriculaAlumno-1.aspx" />
     <Content Include="MatriculaGenerica-1.aspx" />
-    <Content Include="RecuperarContraseña.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -151,6 +150,7 @@
     <Content Include="PlanEstudio.aspx" />
     <Content Include="GestionarUsuarios.aspx" />
     <Content Include="ProcesoMatricula.aspx" />
+    <Content Include="RecuperarContrasena.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -581,6 +581,12 @@
     <Content Include="Connected Services\SoftPixelPenguinsWS\SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarSeccionesPorGradoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\SoftPixelPenguinsWS\SoftPixelPenguinsWA.SoftPixelPenguinsWS.ValidarCorreoElectronicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\SoftPixelPenguinsWS\SoftPixelPenguinsWA.SoftPixelPenguinsWS.ActualizarContrasenaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\SoftPixelPenguinsWS\UsuarioWS.wsdl" />
     <None Include="Connected Services\SoftPixelPenguinsWS\UsuarioWS.xsd">
       <SubType>Designer</SubType>
@@ -714,6 +720,13 @@
     <Compile Include="GestionarSolicitudes.aspx.designer.cs">
       <DependentUpon>GestionarSolicitudes.aspx</DependentUpon>
     </Compile>
+    <Compile Include="RecuperarContrasena.aspx.cs">
+      <DependentUpon>RecuperarContrasena.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecuperarContrasena.aspx.designer.cs">
+      <DependentUpon>RecuperarContrasena.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SecundariaIM.aspx.cs">
       <DependentUpon>SecundariaIM.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -727,13 +740,6 @@
     </Compile>
     <Compile Include="SoftPixelPenguins.Master.designer.cs">
       <DependentUpon>SoftPixelPenguins.Master</DependentUpon>
-    </Compile>
-    <Compile Include="RecuperarContraseña.aspx.cs">
-      <DependentUpon>RecuperarContraseña.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="RecuperarContraseña.aspx.designer.cs">
-      <DependentUpon>RecuperarContraseña.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

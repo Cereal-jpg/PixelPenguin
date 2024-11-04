@@ -49,7 +49,7 @@ namespace SoftPixelPenguinsWA
 
         protected void forgotPasswordButton_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("RecuperarContrasena.aspx");
         }
     }
 }

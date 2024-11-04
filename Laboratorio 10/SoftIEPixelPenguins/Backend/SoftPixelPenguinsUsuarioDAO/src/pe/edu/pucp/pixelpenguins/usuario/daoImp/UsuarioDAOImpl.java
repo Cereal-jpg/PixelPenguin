@@ -245,4 +245,51 @@ public class UsuarioDAOImpl extends DAOImpl implements UsuarioDAO {
         return userId;
     }
     
+    @Override 
+    public Integer ValidarCorreoElectronico(String email) {
+        Integer userId = null;
+        try {
+            this.abrirConexion();
+            String sql = "SELECT idUsuario FROM Usuario WHERE email = ?";
+            this.colocarSQLenStatement(sql);
+            this.incluirParametroString(1, email);
+            this.ejecutarConsultaEnBD(sql);
+            if (this.resultSet.next()) {
+                userId = this.resultSet.getInt("idUsuario");
+            }
+        } catch (SQLException ex) {
+            System.err.println("Error al consultar si existe usuario - " + ex);
+        } finally {
+            try {
+                this.cerrarConexion();
+            } catch (SQLException ex) {
+                System.err.println("Error al cerrar la conexión - " + ex);
+            }
+        }
+        return userId;
+    }
+    
+    @Override 
+    public Integer ActualizarContrasena(String email,String newPassword){
+        Integer id = null;
+        try {
+            this.abrirConexion();
+            String sql = "update Usuario set password = ? where email = ?";
+            this.colocarSQLenStatement(sql);
+            this.incluirParametroString(1, newPassword);
+            this.incluirParametroString(2, email);
+            this.ejecutarModificacionEnBD(sql);
+            id = 1;
+        } catch (SQLException ex) {
+            System.err.println("Error al consultar si existe usuario - " + ex);
+        } finally {
+            try {
+                this.cerrarConexion();
+            } catch (SQLException ex) {
+                System.err.println("Error al cerrar la conexión - " + ex);
+            }
+        }
+        if(id == null) return 0;
+        return id;
+    }
 }

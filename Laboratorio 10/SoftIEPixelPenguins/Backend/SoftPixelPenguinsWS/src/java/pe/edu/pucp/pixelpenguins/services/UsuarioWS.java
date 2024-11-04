@@ -104,4 +104,32 @@ public class UsuarioWS {
         return id;
     }
     
+    @WebMethod(operationName = "ValidarCorreoElectronico")
+    public Integer ValidarCorreoElectronico(@WebParam(name = "email")String email) {
+        Integer id=null;
+        
+        try {
+            id = usuarioBO.ValidarCorreoElectronico(email);
+        }
+        catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        if(id==null) return 0;
+        return id;
+    }
+    
+    @WebMethod(operationName = "ActualizarContrasena")
+    public Integer ActualizarContrasena(@WebParam(name = "email")String email,@WebParam(name = "password")String newPassword) {
+        Integer id=null;
+        
+        try {
+            id = usuarioBO.ActualizarContrasena(email,newPassword);
+        }
+        catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        if(id == null) return 0;
+        return id;
+    }
+    
 }

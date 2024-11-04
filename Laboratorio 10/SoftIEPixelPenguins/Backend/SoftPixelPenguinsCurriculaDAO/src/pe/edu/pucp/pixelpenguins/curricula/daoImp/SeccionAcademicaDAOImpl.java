@@ -131,4 +131,24 @@ public class SeccionAcademicaDAOImpl extends DAOImpl implements SeccionAcademica
         this.seccionAcademica = null;
     }
     
+    @Override
+    protected String obtenerPredicadoParaListado() {
+        return " WHERE fid_GradoAcademico=?";
+    }
+            
+    @Override
+    protected void incluirValorDeParametrosParaListado() throws SQLException {
+        this.incluirParametroInt(1, this.seccionAcademica.getGradoAcademico().getIdGradoAcademico());
+    }
+    
+    @Override
+    public ArrayList<SeccionAcademica> listarSeccionesPorGrado(GradoAcademico gradoAcademico){
+        this.usarPredicadoParaListado = true;
+            this.seccionAcademica = new SeccionAcademica();
+        this.seccionAcademica.setGradoAcademico(gradoAcademico);
+        ArrayList<SeccionAcademica> secciones = (ArrayList<SeccionAcademica>) super.listarTodos(null);
+        this.usarPredicadoParaListado = false;
+        return secciones;
+    }
+    
 }

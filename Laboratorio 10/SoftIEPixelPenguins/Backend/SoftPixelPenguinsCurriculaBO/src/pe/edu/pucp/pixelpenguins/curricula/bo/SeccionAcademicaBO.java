@@ -53,6 +53,10 @@ public class SeccionAcademicaBO {
     public SeccionAcademica obtenerPorId(Integer idSeccionAcademica) {
         return this.seccionAcademicaDAO.obtenerPorId(idSeccionAcademica);
     }
+    
+    public ArrayList<SeccionAcademica> listarSeccionesPorGrado(GradoAcademico gradoAcademico){
+        return seccionAcademicaDAO.listarSeccionesPorGrado(gradoAcademico);
+    } 
 
     private SeccionAcademica crearSeccionAcademica(Integer idSeccionAcademica, char seccion, String aula,
             Integer idGradoAcademico, int cantidadAlumnos, int vacantes) {

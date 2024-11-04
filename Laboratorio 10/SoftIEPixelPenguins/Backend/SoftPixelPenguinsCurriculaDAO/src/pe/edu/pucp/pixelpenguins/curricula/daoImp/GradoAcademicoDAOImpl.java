@@ -64,7 +64,7 @@ public class GradoAcademicoDAOImpl extends DAOImpl implements GradoAcademicoDAO{
     protected void incluirValorDeParametrosParaModificacion() throws SQLException {
         this.incluirParametroInt(6, this.gradoAcademico.getIdGradoAcademico());
         this.incluirParametroInt(1, this.gradoAcademico.getNumeroGrado());
-        this.incluirParametroInt(2, this.gradoAcademico.getNivel().ordinal());
+        this.incluirParametroString(2, this.gradoAcademico.getNivel().toString());
         this.incluirParametroInt(3, this.gradoAcademico.getCantidadAlumnos());
         this.incluirParametroInt(4, this.gradoAcademico.getVacantes());
         this.incluirParametroInt(5, this.gradoAcademico.getFid_AnioAcademico());

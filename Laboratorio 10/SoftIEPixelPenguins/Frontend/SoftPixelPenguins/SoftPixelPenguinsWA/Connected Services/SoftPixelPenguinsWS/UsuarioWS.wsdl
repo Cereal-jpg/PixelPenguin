@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftPixelPenguinsWS/UsuarioWS?xsd=1" namespace="http://services.pixelpenguins.pucp.edu.pe" />
     </xsd:schema>
   </types>
-  <message name="obtenerUsuarioPorId">
-    <part name="parameters" element="tns:obtenerUsuarioPorId" />
+  <message name="listarUsuariosPorNombre">
+    <part name="parameters" element="tns:listarUsuariosPorNombre" />
   </message>
-  <message name="obtenerUsuarioPorIdResponse">
-    <part name="parameters" element="tns:obtenerUsuarioPorIdResponse" />
+  <message name="listarUsuariosPorNombreResponse">
+    <part name="parameters" element="tns:listarUsuariosPorNombreResponse" />
   </message>
   <message name="listarTodosUsuarios">
     <part name="parameters" element="tns:listarTodosUsuarios" />
@@ -17,11 +17,11 @@
   <message name="listarTodosUsuariosResponse">
     <part name="parameters" element="tns:listarTodosUsuariosResponse" />
   </message>
-  <message name="listarUsuariosPorNombre">
-    <part name="parameters" element="tns:listarUsuariosPorNombre" />
+  <message name="obtenerUsuarioPorId">
+    <part name="parameters" element="tns:obtenerUsuarioPorId" />
   </message>
-  <message name="listarUsuariosPorNombreResponse">
-    <part name="parameters" element="tns:listarUsuariosPorNombreResponse" />
+  <message name="obtenerUsuarioPorIdResponse">
+    <part name="parameters" element="tns:obtenerUsuarioPorIdResponse" />
   </message>
   <message name="existeUsuario">
     <part name="parameters" element="tns:existeUsuario" />
@@ -35,17 +35,17 @@
   <message name="insertarUsuarioResponse">
     <part name="parameters" element="tns:insertarUsuarioResponse" />
   </message>
-  <message name="ValidarDatos">
-    <part name="parameters" element="tns:ValidarDatos" />
-  </message>
-  <message name="ValidarDatosResponse">
-    <part name="parameters" element="tns:ValidarDatosResponse" />
-  </message>
   <message name="modificarUsuario">
     <part name="parameters" element="tns:modificarUsuario" />
   </message>
   <message name="modificarUsuarioResponse">
     <part name="parameters" element="tns:modificarUsuarioResponse" />
+  </message>
+  <message name="ValidarDatos">
+    <part name="parameters" element="tns:ValidarDatos" />
+  </message>
+  <message name="ValidarDatosResponse">
+    <part name="parameters" element="tns:ValidarDatosResponse" />
   </message>
   <message name="eliminarUsuario">
     <part name="parameters" element="tns:eliminarUsuario" />
@@ -54,17 +54,17 @@
     <part name="parameters" element="tns:eliminarUsuarioResponse" />
   </message>
   <portType name="UsuarioWS">
-    <operation name="obtenerUsuarioPorId">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/obtenerUsuarioPorIdRequest" message="tns:obtenerUsuarioPorId" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/obtenerUsuarioPorIdResponse" message="tns:obtenerUsuarioPorIdResponse" />
+    <operation name="listarUsuariosPorNombre">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/listarUsuariosPorNombreRequest" message="tns:listarUsuariosPorNombre" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/listarUsuariosPorNombreResponse" message="tns:listarUsuariosPorNombreResponse" />
     </operation>
     <operation name="listarTodosUsuarios">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/listarTodosUsuariosRequest" message="tns:listarTodosUsuarios" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/listarTodosUsuariosResponse" message="tns:listarTodosUsuariosResponse" />
     </operation>
-    <operation name="listarUsuariosPorNombre">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/listarUsuariosPorNombreRequest" message="tns:listarUsuariosPorNombre" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/listarUsuariosPorNombreResponse" message="tns:listarUsuariosPorNombreResponse" />
+    <operation name="obtenerUsuarioPorId">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/obtenerUsuarioPorIdRequest" message="tns:obtenerUsuarioPorId" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/obtenerUsuarioPorIdResponse" message="tns:obtenerUsuarioPorIdResponse" />
     </operation>
     <operation name="existeUsuario">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/existeUsuarioRequest" message="tns:existeUsuario" />
@@ -74,13 +74,13 @@
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/insertarUsuarioRequest" message="tns:insertarUsuario" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/insertarUsuarioResponse" message="tns:insertarUsuarioResponse" />
     </operation>
-    <operation name="ValidarDatos">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/ValidarDatosRequest" message="tns:ValidarDatos" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/ValidarDatosResponse" message="tns:ValidarDatosResponse" />
-    </operation>
     <operation name="modificarUsuario">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/modificarUsuarioRequest" message="tns:modificarUsuario" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/modificarUsuarioResponse" message="tns:modificarUsuarioResponse" />
+    </operation>
+    <operation name="ValidarDatos">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/ValidarDatosRequest" message="tns:ValidarDatos" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/ValidarDatosResponse" message="tns:ValidarDatosResponse" />
     </operation>
     <operation name="eliminarUsuario">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/eliminarUsuarioRequest" message="tns:eliminarUsuario" />
@@ -89,7 +89,7 @@
   </portType>
   <binding name="UsuarioWSPortBinding" type="tns:UsuarioWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="obtenerUsuarioPorId">
+    <operation name="listarUsuariosPorNombre">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -107,7 +107,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarUsuariosPorNombre">
+    <operation name="obtenerUsuarioPorId">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -134,7 +134,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="ValidarDatos">
+    <operation name="modificarUsuario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -143,7 +143,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarUsuario">
+    <operation name="ValidarDatos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

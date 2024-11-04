@@ -4,6 +4,8 @@
   <xs:element name="eliminarSeccionAcademicaResponse" type="tns:eliminarSeccionAcademicaResponse" />
   <xs:element name="insertarSeccionAcademica" type="tns:insertarSeccionAcademica" />
   <xs:element name="insertarSeccionAcademicaResponse" type="tns:insertarSeccionAcademicaResponse" />
+  <xs:element name="listarSeccionesPorGrado" type="tns:listarSeccionesPorGrado" />
+  <xs:element name="listarSeccionesPorGradoResponse" type="tns:listarSeccionesPorGradoResponse" />
   <xs:element name="listarTodosSeccionesAcademicas" type="tns:listarTodosSeccionesAcademicas" />
   <xs:element name="listarTodosSeccionesAcademicasResponse" type="tns:listarTodosSeccionesAcademicasResponse" />
   <xs:element name="modificarSeccionAcademica" type="tns:modificarSeccionAcademica" />
@@ -76,6 +78,16 @@
   <xs:complexType name="modificarSeccionAcademicaResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarSeccionesPorGrado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="gradoAcademico" type="tns:gradoAcademico" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarSeccionesPorGradoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:seccionAcademica" />
     </xs:sequence>
   </xs:complexType>
   <xs:simpleType name="nivelEducativo">

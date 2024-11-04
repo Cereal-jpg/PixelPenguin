@@ -175,6 +175,13 @@
         padding: 5px;
     }
 
+    .dll{
+        border-radius: 5px;
+        margin: auto;
+        padding: 5px;
+        width: 50%;
+    }
+
     </style>
 </head>
 <body>
@@ -273,6 +280,14 @@
             </div>
 
             <div id="section2" class="section" runat="server" style="display: none;">
+                <div class="form-section">
+                    <h3>Seleccionar Grado Académico</h3><hr>
+                    <div class="form-row">
+                        <label for="ddlGrados">Por favor seleccione el grado en el que desea matricularse:</label>
+                        <asp:DropDownList ID="ddlGrados" runat="server" CssClass="dll">
+                        </asp:DropDownList>
+                    </div>
+                </div>
                 <div class="form-section">
                     <h3>Adjuntar Certificados</h3><hr>
                     <div class="form-row">

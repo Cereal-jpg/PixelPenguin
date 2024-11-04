@@ -30,13 +30,10 @@
   <xs:complexType name="matricula">
     <xs:sequence>
       <xs:element minOccurs="0" name="anioAcademico" type="tns:anioAcademico" />
-      <xs:element name="cumpleRequisitos" type="xs:boolean" />
-      <xs:element minOccurs="0" name="estado" type="tns:estadoDeMatricula" />
-      <xs:element minOccurs="0" name="fechaFin" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="fechaInicio" type="xs:dateTime" />
       <xs:element name="fidAlumno" type="xs:int" />
       <xs:element minOccurs="0" name="gradoAcademico" type="tns:gradoAcademico" />
       <xs:element name="idMatricula" type="xs:int" />
+      <xs:element minOccurs="0" name="seccionAcademica" type="tns:seccionAcademica" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="anioAcademico">
@@ -54,6 +51,16 @@
       <xs:element name="idGradoAcademico" type="xs:int" />
       <xs:element minOccurs="0" name="nivel" type="tns:nivelEducativo" />
       <xs:element name="numeroGrado" type="xs:int" />
+      <xs:element name="vacantes" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="seccionAcademica">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="aula" type="xs:string" />
+      <xs:element name="cantidadAlumnos" type="xs:int" />
+      <xs:element minOccurs="0" name="gradoAcademico" type="tns:gradoAcademico" />
+      <xs:element name="idSeccionAcademica" type="xs:int" />
+      <xs:element name="seccion" type="xs:unsignedShort" />
       <xs:element name="vacantes" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
@@ -107,13 +114,6 @@
       <xs:enumeration value="ATRASADO" />
       <xs:enumeration value="PAGO_PARCIAL" />
       <xs:enumeration value="RECHAZADO" />
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:simpleType name="estadoDeMatricula">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="PENDIENTE" />
-      <xs:enumeration value="CANCELADA" />
-      <xs:enumeration value="RECHAZADA" />
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="nivelEducativo">

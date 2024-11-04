@@ -18,6 +18,7 @@ namespace SoftPixelPenguinsWA
         SeccionAcademicaWSClient seccionAcademicaBO = new SeccionAcademicaWSClient();
         AnioAcademicoWSClient anioAcademicoBO = new AnioAcademicoWSClient();
         MatriculaWSClient matriculaBO = new MatriculaWSClient();
+        ApoderadoWSClient apoderadoBO = new ApoderadoWSClient();
         alumno alumno = null;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -44,7 +45,8 @@ namespace SoftPixelPenguinsWA
                 txtSexo.Text = alumno.sexo;
                 txtEmail.Text = alumno.email;
                 txtDireccion.Text = alumno.direccion;
-                if (alumno.estado.Equals(estadoAlumno.Por_Pagar))
+                txtGradoAcademico.Text = alumno.gradoAcademico.nivel.ToString() + " " + alumno.gradoAcademico.numeroGrado.ToString();
+                if (alumno.estado.Equals(estadoAlumno.Por_Pagar) || alumno.estado.Equals(estadoAlumno.Matriculado))
                 {
                     btnConfirmarSolicitud.Text = "Matricular Usuario";
                     lbBoucherPago.Style["display"] = "block";
@@ -66,6 +68,7 @@ namespace SoftPixelPenguinsWA
             txtSexo.Enabled = false;
             txtEmail.Enabled = false;
             txtDireccion.Enabled = false;
+            txtGradoAcademico.Enabled = false;
             if (alumno.estado.Equals(estadoAlumno.Por_Pagar))
             {
                 txtUsuario.Enabled = false;
@@ -129,6 +132,7 @@ namespace SoftPixelPenguinsWA
 
         protected void btnRechazar_Click(object sender, EventArgs e)
         {
+            apoderadoBO.eliminarApoderado(alumno.apoderado);
             alumnoBO.eliminarAlumno(alumno);
             Response.Redirect("GestionarSolicitudes.aspx");
         }
@@ -154,37 +158,36 @@ namespace SoftPixelPenguinsWA
 
         private void matricularAlumno()
         {
-            // Falta implementar las funciones necesarias para esta lógica en el back 
             gradoAcademico grado = gradoAcademicoBO.obtenerGradoAcademicoPorId(alumno.gradoAcademico.idGradoAcademico);
-            if (grado.cantidadAlumnos < grado.vacantes)
+            if (grado !=null && grado.cantidadAlumnos < grado.vacantes)
             {
+                BindingList<seccionAcademica> secciones = new BindingList<seccionAcademica>(seccionAcademicaBO.listarSeccionesPorGrado(grado));
                 grado.cantidadAlumnos++;
                 gradoAcademicoBO.modificarGradoAcademico(grado);
-                // para listarSeccionesPorGrado usar predicadoparaselect (ver ejemplo en usuario o alumno)
-                BindingList<seccionAcademica> secciones = seccionAcademicaBO.listarSeccionesPorGrado(gradoAcademico);
                 seccionAcademica seccionMatricula = null;
                 foreach (seccionAcademica seccion in secciones) {
                     if(seccion.cantidadAlumnos < seccion.vacantes)
                     {
+                        seccionMatricula = seccion;
                         seccion.cantidadAlumnos++;
                         seccionAcademicaBO.modificarSeccionAcademica(seccion);
-                        seccionMatricula = seccion;
                         break;
                     }
                 }
 
                 if (seccionMatricula != null) {
-                    // Borrar las columnas innecesarias de matricula (y actualizar back)
                     matricula matricula = new matricula
                     {
                         fidAlumno = alumno.idUsuario,
                         // Suponiendo el anio académico 2025 por ahora
                         anioAcademico = anioAcademicoBO.obtenerAnioAcademicoPorId(1),
-                        // Implementar que el alumno pueda escoger el grado cuando llena el formulario de la matrícula
-                        gradoAcademico = grado
+                        gradoAcademico = grado,
+                        seccionAcademica = seccionMatricula
+
                     };
                     matriculaBO.insertarMatricula(matricula);
                 }
+                Session["gradoSeleccionado"] = null;
             }
             else
             {

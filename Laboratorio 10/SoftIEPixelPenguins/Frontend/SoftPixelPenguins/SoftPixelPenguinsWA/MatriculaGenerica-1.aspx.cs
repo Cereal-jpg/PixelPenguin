@@ -1,6 +1,10 @@
 ﻿using SoftPixelPenguinsWA.SoftPixelPenguinsWS;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Web.Security;
 using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
 
 namespace SoftPixelPenguinsWA
 {
@@ -9,6 +13,7 @@ namespace SoftPixelPenguinsWA
         AlumnoWSClient alumnoBO = new AlumnoWSClient();
         RolWSClient rolBo = new RolWSClient();
         ApoderadoWSClient apoderadoBO =  new ApoderadoWSClient();
+        GradoAcademicoWSClient gradoBO = new GradoAcademicoWSClient();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (section3.Style["display"] != "block") Timer1.Enabled = false;
@@ -17,6 +22,14 @@ namespace SoftPixelPenguinsWA
             {
                 SetActiveStep(0);
                 UpdateSectionTitle(0);
+                BindingList<gradoAcademico> grados = new BindingList<gradoAcademico>(gradoBO.listarTodosGradosAcademicos());
+                foreach (gradoAcademico grado in grados)
+                {
+                    string textoItem = $"{grado.nivel}  {grado.numeroGrado} ({grado.vacantes} vacantes restantes)";
+                    string valorItem = grado.idGradoAcademico.ToString();
+                    ddlGrados.Items.Add(new ListItem(textoItem, valorItem));
+                }
+                ddlGrados.Items.Insert(0, new ListItem("Seleccione un Grado Academico", ""));
             }
         }
 
@@ -43,7 +56,7 @@ namespace SoftPixelPenguinsWA
                 username = null,
                 password = null,
                 apoderado = apoderado,
-                gradoAcademico = new gradoAcademico {idGradoAcademico=1 },
+                gradoAcademico = gradoBO.obtenerGradoAcademicoPorId(int.Parse(ddlGrados.SelectedValue)),
                 codigoAlumno = 0,
                 certificadoDeEstudios = fileCertificadoEstudios.FileBytes,
                 certificadoDeSalud = fileCertificadoSalud.FileBytes,
@@ -104,11 +117,13 @@ namespace SoftPixelPenguinsWA
             {
                 section3.Style["display"] = "none";
                 section2.Style["display"] = "block";
+                SetActiveStep(1);
             }
             else if (section2.Style["display"] == "block")
             {
                 section2.Style["display"] = "none";
                 section1.Style["display"] = "block";
+                SetActiveStep(0);
             } 
             else if (section1.Style["display"] == "block")
             {
@@ -135,7 +150,7 @@ namespace SoftPixelPenguinsWA
 
         private void UpdateSectionTitle(int sectionIndex)
         {
-            string[] sectionTitles = { "Datos Personales", "Cetificados", "Boucher de Pago", "Terminar Proceso" };
+            string[] sectionTitles = { "Datos Personales", "Grado y Cetificados", "Boucher de Pago", "Terminar Proceso" };
 
             if (sectionIndex >= 0 && sectionIndex < sectionTitles.Length)
             {

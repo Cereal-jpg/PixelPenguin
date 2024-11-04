@@ -5,6 +5,7 @@ import jakarta.jws.WebMethod;
 import jakarta.jws.WebParam;
 import java.util.ArrayList;
 import pe.edu.pucp.pixelpenguins.curricula.bo.SeccionAcademicaBO;
+import pe.edu.pucp.pixelpenguins.curricula.model.GradoAcademico;
 import pe.edu.pucp.pixelpenguins.curricula.model.SeccionAcademica;
 
 @WebService(serviceName = "SeccionAcademicaWS", targetNamespace
@@ -66,6 +67,17 @@ public class SeccionAcademicaWS {
             System.out.println(ex.getMessage());
         }
         return seccionAcademica;
+    }
+    
+    @WebMethod(operationName = "listarSeccionesPorGrado")
+    public ArrayList<SeccionAcademica> listarSeccionesPorGrado(@WebParam(name = "gradoAcademico") GradoAcademico gradoAcademico) {
+        ArrayList<SeccionAcademica> seccionesAcademicas = null;
+        try {
+            seccionesAcademicas = seccionAcademicaBO.listarSeccionesPorGrado(gradoAcademico);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return seccionesAcademicas;
     }
     
 }

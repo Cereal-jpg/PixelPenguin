@@ -149,6 +149,10 @@
                     <label>Direccion:</label>
                     <asp:TextBox ID="txtDireccion" runat="server" placeholder="Direccion"></asp:TextBox>
                 </div>
+                <div class="form-row">
+                    <label>GradoAcademico:</label>
+                    <asp:TextBox ID="txtGradoAcademico" runat="server" placeholder="Grado Academico"></asp:TextBox>
+                </div>
             </div>
             <div class="form-group">
                 <div class="form-row">

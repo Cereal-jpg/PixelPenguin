@@ -8,16 +8,16 @@
     <a href="IndexProfesor.aspx"><i class="fa-solid fa-home"></i>Inicio</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem2" runat="server">
-    <a href="ListarCursosProfesor.aspx"><i class="fa-solid fa-book"></i>Cursos</a>
+    <a href="ListarCursosProfesor.aspx"><i class="fa-solid fa-book"></i>Cursos Dictados</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem3" runat="server">
-    <a href="ListarCursosAlumno.aspx"><i class="fa-solid fa-bar-chart"></i>Registros</a>
+    <a href="ListarCursosAlumno.aspx"><i class="fa-solid fa-bar-chart"></i>Registro de notas</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem4" runat="server">
-    <a href="ListarCursosAlumno.aspx"><i class="fa-solid fa-archive"></i>Personal</a>
+    <a href="ListarCursosAlumno.aspx"><i class="fa-solid fa-user"></i>Mi perfil</a>
     </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
-    <h2 style="text-align: left; color: #000f;">Página principal profesor</h2>
+    <h2 style="text-align: left; color: #000f;">Profesor - Inicio Profesor</h2>
     <link rel="stylesheet" href="Content/Estilos-Alumno.css" />
     <div class="container-al">
         <div class="schedule">
@@ -27,10 +27,8 @@
         <div class="notifications">
             <h3>Notificaciones</h3>
             <ul class="notification-list">
-                <li>Próxima fecha de pago: </li>
-                <li>Estado de pagos: </li>
-                <li>Entrega de trabajos hasta el jueves.</li>
-                <li>Examen de matemáticas programado para el lunes.</li>
+                <li>Próximo curso a dictar: </li>
+                <li>Práctica de matemáticas para el 20/08/2024</li>
             </ul>
         </div>
     </div>

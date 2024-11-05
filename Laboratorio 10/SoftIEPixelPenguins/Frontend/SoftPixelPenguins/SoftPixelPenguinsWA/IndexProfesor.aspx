@@ -5,10 +5,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cphScripts" runat="server">
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem1" runat="server">
-    <a href="Index.aspx"><i class="fa-solid fa-home"></i>Inicio</a>
+    <a href="IndexProfesor.aspx"><i class="fa-solid fa-home"></i>Inicio</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem2" runat="server">
-    <a href="ListarCursosAlumno.aspx"><i class="fa-solid fa-book"></i>Cursos</a>
+    <a href="ListarCursosProfesor.aspx"><i class="fa-solid fa-book"></i>Cursos</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem3" runat="server">
     <a href="ListarCursosAlumno.aspx"><i class="fa-solid fa-bar-chart"></i>Registros</a>

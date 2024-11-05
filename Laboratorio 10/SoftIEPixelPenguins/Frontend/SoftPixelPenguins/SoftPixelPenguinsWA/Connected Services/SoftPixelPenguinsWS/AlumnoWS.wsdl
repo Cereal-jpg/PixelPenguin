@@ -5,11 +5,17 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftPixelPenguinsWS/AlumnoWS?xsd=1" namespace="http://services.pixelpenguins.pucp.edu.pe" />
     </xsd:schema>
   </types>
-  <message name="listarAlumnosPorEstado">
-    <part name="parameters" element="tns:listarAlumnosPorEstado" />
+  <message name="modificarAlumno">
+    <part name="parameters" element="tns:modificarAlumno" />
   </message>
-  <message name="listarAlumnosPorEstadoResponse">
-    <part name="parameters" element="tns:listarAlumnosPorEstadoResponse" />
+  <message name="modificarAlumnoResponse">
+    <part name="parameters" element="tns:modificarAlumnoResponse" />
+  </message>
+  <message name="eliminarAlumno">
+    <part name="parameters" element="tns:eliminarAlumno" />
+  </message>
+  <message name="eliminarAlumnoResponse">
+    <part name="parameters" element="tns:eliminarAlumnoResponse" />
   </message>
   <message name="listarTodosAlumnos">
     <part name="parameters" element="tns:listarTodosAlumnos" />
@@ -17,23 +23,11 @@
   <message name="listarTodosAlumnosResponse">
     <part name="parameters" element="tns:listarTodosAlumnosResponse" />
   </message>
-  <message name="modificarAlumno">
-    <part name="parameters" element="tns:modificarAlumno" />
-  </message>
-  <message name="modificarAlumnoResponse">
-    <part name="parameters" element="tns:modificarAlumnoResponse" />
-  </message>
   <message name="obtenerAlumnoPorId">
     <part name="parameters" element="tns:obtenerAlumnoPorId" />
   </message>
   <message name="obtenerAlumnoPorIdResponse">
     <part name="parameters" element="tns:obtenerAlumnoPorIdResponse" />
-  </message>
-  <message name="eliminarAlumno">
-    <part name="parameters" element="tns:eliminarAlumno" />
-  </message>
-  <message name="eliminarAlumnoResponse">
-    <part name="parameters" element="tns:eliminarAlumnoResponse" />
   </message>
   <message name="insertarAlumno">
     <part name="parameters" element="tns:insertarAlumno" />
@@ -47,26 +41,28 @@
   <message name="existeAlumnoResponse">
     <part name="parameters" element="tns:existeAlumnoResponse" />
   </message>
+  <message name="listarAlumnosPorEstado">
+    <part name="parameters" element="tns:listarAlumnosPorEstado" />
+  </message>
+  <message name="listarAlumnosPorEstadoResponse">
+    <part name="parameters" element="tns:listarAlumnosPorEstadoResponse" />
+  </message>
   <portType name="AlumnoWS">
-    <operation name="listarAlumnosPorEstado">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/listarAlumnosPorEstadoRequest" message="tns:listarAlumnosPorEstado" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/listarAlumnosPorEstadoResponse" message="tns:listarAlumnosPorEstadoResponse" />
+    <operation name="modificarAlumno">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/modificarAlumnoRequest" message="tns:modificarAlumno" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/modificarAlumnoResponse" message="tns:modificarAlumnoResponse" />
+    </operation>
+    <operation name="eliminarAlumno">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/eliminarAlumnoRequest" message="tns:eliminarAlumno" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/eliminarAlumnoResponse" message="tns:eliminarAlumnoResponse" />
     </operation>
     <operation name="listarTodosAlumnos">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/listarTodosAlumnosRequest" message="tns:listarTodosAlumnos" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/listarTodosAlumnosResponse" message="tns:listarTodosAlumnosResponse" />
     </operation>
-    <operation name="modificarAlumno">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/modificarAlumnoRequest" message="tns:modificarAlumno" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/modificarAlumnoResponse" message="tns:modificarAlumnoResponse" />
-    </operation>
     <operation name="obtenerAlumnoPorId">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/obtenerAlumnoPorIdRequest" message="tns:obtenerAlumnoPorId" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/obtenerAlumnoPorIdResponse" message="tns:obtenerAlumnoPorIdResponse" />
-    </operation>
-    <operation name="eliminarAlumno">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/eliminarAlumnoRequest" message="tns:eliminarAlumno" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/eliminarAlumnoResponse" message="tns:eliminarAlumnoResponse" />
     </operation>
     <operation name="insertarAlumno">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/insertarAlumnoRequest" message="tns:insertarAlumno" />
@@ -76,10 +72,23 @@
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/existeAlumnoRequest" message="tns:existeAlumno" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/existeAlumnoResponse" message="tns:existeAlumnoResponse" />
     </operation>
+    <operation name="listarAlumnosPorEstado">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/listarAlumnosPorEstadoRequest" message="tns:listarAlumnosPorEstado" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AlumnoWS/listarAlumnosPorEstadoResponse" message="tns:listarAlumnosPorEstadoResponse" />
+    </operation>
   </portType>
   <binding name="AlumnoWSPortBinding" type="tns:AlumnoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarAlumnosPorEstado">
+    <operation name="modificarAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarAlumno">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -97,25 +106,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarAlumno">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="obtenerAlumnoPorId">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarAlumno">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -134,6 +125,15 @@
       </output>
     </operation>
     <operation name="existeAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarAlumnosPorEstado">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

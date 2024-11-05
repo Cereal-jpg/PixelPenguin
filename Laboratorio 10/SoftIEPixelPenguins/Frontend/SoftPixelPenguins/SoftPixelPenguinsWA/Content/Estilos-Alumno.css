@@ -26,6 +26,14 @@
     padding: 20px;
 }
 
+.container-reporte {
+    display: flex; /* Usar flexbox para organizar el layout */
+    width: 100%; /* Ancho completo */
+    margin-top: 20px; /* Espacio arriba */
+    background-color: aliceblue;
+    padding: 20px;
+}
+
 .matricula-section {
     flex: 1;
     margin-right: 5px;

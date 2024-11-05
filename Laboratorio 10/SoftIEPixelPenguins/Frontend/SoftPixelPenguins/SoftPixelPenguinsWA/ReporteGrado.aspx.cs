@@ -66,7 +66,7 @@ namespace SoftPixelPenguinsWA
             PdfPTable headerTable = new PdfPTable(2);
             headerTable.WidthPercentage = 100;
 
-            string logoPath = Server.MapPath("~/Images/LogoB&W.jpg"); 
+            string logoPath = Server.MapPath("~/Images/PIXEL.png"); 
             iTextSharp.text.Image logo = iTextSharp.text.Image.GetInstance(logoPath);
             logo.ScaleToFit(80f, 80f); 
             logo.Alignment = Element.ALIGN_LEFT; 

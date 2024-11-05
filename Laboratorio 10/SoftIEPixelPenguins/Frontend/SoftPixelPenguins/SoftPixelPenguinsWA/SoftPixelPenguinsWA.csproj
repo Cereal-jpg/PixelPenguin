@@ -44,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="itextsharp, Version=5.5.13.4, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Runtime.Serialization" />
@@ -151,6 +154,8 @@
     <Content Include="GestionarUsuarios.aspx" />
     <Content Include="ProcesoMatricula.aspx" />
     <Content Include="RecuperarContrasena.aspx" />
+    <Content Include="Reportes.aspx" />
+    <Content Include="ReporteGrado.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -726,6 +731,20 @@
     </Compile>
     <Compile Include="RecuperarContrasena.aspx.designer.cs">
       <DependentUpon>RecuperarContrasena.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes.aspx.cs">
+      <DependentUpon>Reportes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reportes.aspx.designer.cs">
+      <DependentUpon>Reportes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteGrado.aspx.cs">
+      <DependentUpon>ReporteGrado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReporteGrado.aspx.designer.cs">
+      <DependentUpon>ReporteGrado.aspx</DependentUpon>
     </Compile>
     <Compile Include="SecundariaIM.aspx.cs">
       <DependentUpon>SecundariaIM.aspx</DependentUpon>

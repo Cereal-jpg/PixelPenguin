@@ -72,4 +72,7 @@ public class MatriculaBO {
         return matricula;
     }
     
+     public Integer obtenerPorIdAlumno(Integer idAlumno){
+        return this.matriculaDAO.obtenerPorIdAlumno(idAlumno);
+     }
 }

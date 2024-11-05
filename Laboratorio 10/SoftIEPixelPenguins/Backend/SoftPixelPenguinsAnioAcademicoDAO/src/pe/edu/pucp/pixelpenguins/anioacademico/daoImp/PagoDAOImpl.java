@@ -3,6 +3,7 @@ package pe.edu.pucp.pixelpenguins.anioacademico.daoImp;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import pe.edu.pucp.pixelpenguins.anioacademico.dao.PagoDAO;
 import pe.edu.pucp.pixelpenguins.anioacademico.model.EstadoDePago;
@@ -133,5 +134,40 @@ public class PagoDAOImpl extends DAOImpl implements PagoDAO {
     protected void limpiarObjetoDelResultSet() {
         this.pago = null;
     }
-    
+
+    @Override
+    public Pago PagoXAlumnos(int idMatricula) {
+        Pago pago = null;
+        try {
+            this.abrirConexion();
+            String sql = "SELECT  fechaPago, estado FROM Pago WHERE fid_Matricula = ? AND estado='PENDIENTE' OR estado='ATRASADO'";
+            this.colocarSQLenStatement(sql);
+            this.incluirParametroInt(1, idMatricula);
+            this.ejecutarConsultaEnBD(sql);
+            if (this.resultSet.next()) {
+                
+                pago = new Pago();
+                 Date fechaPago = this.resultSet.getDate("fechaPago"); 
+                 String estado = this.resultSet.getString("estado");
+                 
+                  pago.setFechaPago(fechaPago); 
+                  if("PENDIENTE".equals(estado)){
+                      pago.setEstado(EstadoDePago.PENDIENTE);
+                  }
+                  else if("ATRASADO".equals(estado)){
+                      pago.setEstado(EstadoDePago.ATRASADO);
+                  }
+            }
+        } catch (SQLException ex) {
+            System.err.println("Error");
+        } finally {
+            try {
+                this.cerrarConexion();
+            } catch (SQLException ex) {
+                System.err.println("Error al cerrar la conexión - " + ex);
+            }
+        }
+        return pago;
+    }
+
 }

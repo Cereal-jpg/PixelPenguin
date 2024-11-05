@@ -131,6 +131,30 @@ public class MatriculaDAOImpl extends DAOImpl implements MatriculaDAO {
     protected void limpiarObjetoDelResultSet() {
         this.matricula = null;
     }
+
+    @Override
+    public Integer obtenerPorIdAlumno(Integer idAlumno) {
+       int idMatricula = 0;
+       try{
+           this.abrirConexion();
+           String sql = "SELECT idMatricula FROM Matricula WHERE fid_Alumno = ?";
+           this.colocarSQLenStatement(sql);
+           this.incluirParametroInt(1, idAlumno);
+           this.ejecutarConsultaEnBD(sql);
+           if(this.resultSet.next()) {
+               idMatricula = this.resultSet.getInt("idMatricula");
+           }
+       } catch (SQLException ex) {
+           System.err.println("Error");
+       } finally {
+            try {
+                this.cerrarConexion();
+            } catch (SQLException ex) {
+                System.err.println("Error al cerrar la conexión - " + ex);
+            }
+       }
+       return idMatricula;
+    }
     
     
 }

@@ -74,4 +74,7 @@ public class PagoBO {
         return pago;
     } 
     
+    public Pago  PagoXAlumnos(int idMatricula){
+        return this.pagoDAO.PagoXAlumnos(idMatricula);
+    }
 }

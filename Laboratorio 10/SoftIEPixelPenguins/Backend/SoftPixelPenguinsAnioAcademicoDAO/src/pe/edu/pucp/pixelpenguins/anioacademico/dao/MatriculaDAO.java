@@ -9,4 +9,5 @@ public interface MatriculaDAO {
     public Integer eliminar(Matricula matricula);
     public ArrayList<Matricula> listarTodos();
     public Matricula obtenerPorId(Integer idMatricula);
+    public Integer obtenerPorIdAlumno(Integer idAlumno);
 }

@@ -1,7 +1,6 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/SoftPixelPenguins.Master" AutoEventWireup="true" CodeBehind="ReporteGrado.aspx.cs" Inherits="SoftPixelPenguinsWA.ReporteGrado" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphScripts" runat="server">
-    <link rel="stylesheet" href="Content/customStyles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
     </style>
@@ -10,13 +9,13 @@
     <a href="IndexAdmin.aspx"><i class="fa-solid fa-home"></i>Pagina principal</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem2" runat="server">
-    <a href="ReporteGrado.aspx"><i class="fa-solid fa-book"></i>Reportes</a>
+    <a href="Reportes.aspx"><i class="fa-solid fa-book"></i>Reportes</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem3" runat="server">
     <a href="ListarCursosAlumno.aspx"><i class="fa-solid fa-search"></i>Busquedas</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem4" runat="server">
-    <a href="GestionarUsuarios.aspx"><i class="fa-solid fa-plus-circle"></i>Gestionar Usuario</a>
+    <a href="GestionarSolicitudes.aspx"><i class="fa-solid fa-plus-circle"></i>Gestionar Solicitudes</a>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="cphContenido" runat="server">
@@ -33,26 +32,35 @@
     <script>
         function createChart() {
             const labels = JSON.parse(document.getElementById('<%= hdnLabels.ClientID %>').value || '[]');
-            const data = JSON.parse(document.getElementById('<%= hdnData.ClientID %>').value || '[]');
+            const data = JSON.parse(document.getElementById('<%= hdnData.ClientID %>').value || '{}');
 
             const barCtx = document.getElementById('barChart').getContext('2d');
             new Chart(barCtx, {
                 type: 'bar',
                 data: {
                     labels: labels,
-                    datasets: [{
-                        label: '% Matriculados',
-                        data: data,
-                        backgroundColor: 'rgba(54, 162, 235, 0.6)',
-                        borderColor: 'rgba(54, 162, 235, 1)',
-                        borderWidth: 1
-                    }]
+                    datasets: [
+                        {
+                            label: 'Cantidad de Alumnos',
+                            data: data.alumnos,
+                            backgroundColor: 'rgba(54, 162, 235, 0.6)',
+                            borderColor: 'rgba(54, 162, 235, 1)',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'Vacantes',
+                            data: data.vacantes,
+                            backgroundColor: 'rgba(255, 99, 132, 0.6)',
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            borderWidth: 1
+                        }
+                    ]
                 },
                 options: {
                     scales: {
                         y: {
                             beginAtZero: true,
-                            max: 140
+                            max: Math.max(...data.alumnos, ...data.vacantes) * 1.2 
                         }
                     }
                 }

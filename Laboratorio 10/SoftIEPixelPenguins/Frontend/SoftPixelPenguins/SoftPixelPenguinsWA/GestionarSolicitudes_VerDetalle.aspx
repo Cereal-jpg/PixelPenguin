@@ -95,13 +95,13 @@
     <a href="Index.aspx"><i class="fa-solid fa-home"></i>Pagina principal</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem2" runat="server">
-    <a href="ListarCursosAlumno.aspx"><i class="fa-solid fa-database"></i>Consultas</a>
+    <a href="Reportes.aspx"><i class="fa-solid fa-book"></i>Reportes</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem3" runat="server">
     <a href="ListarCursosAlumno.aspx"><i class="fa-solid fa-search"></i>Busquedas</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem4" runat="server">
-    <a href="GestionarUsuarios.aspx"><i class="fa-solid fa-plus-circle"></i>Gestionar Usuario</a>
+    <a href="GestionarSolicitudes.aspx"><i class="fa-solid fa-plus-circle"></i>Gestionar Solicitudes</a>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="cphContenido" runat="server">

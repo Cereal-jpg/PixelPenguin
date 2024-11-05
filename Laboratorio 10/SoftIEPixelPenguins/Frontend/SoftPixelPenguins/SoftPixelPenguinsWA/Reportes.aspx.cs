@@ -19,7 +19,7 @@ namespace SoftPixelPenguinsWA
 
         protected void btnEmitirReporte_Click(object sender, EventArgs e)
         {
-            if (cblReportes.SelectedValue.Equals("Grado"))
+            if (rbMatriculas.Checked)
             {
                 Response.Redirect("ReporteGrado.aspx");
             }

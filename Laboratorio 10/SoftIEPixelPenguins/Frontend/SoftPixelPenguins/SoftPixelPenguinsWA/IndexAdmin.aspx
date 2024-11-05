@@ -8,7 +8,7 @@
     <a href="IndexAdmin.aspx"><i class="fa-solid fa-home"></i>Pagina principal</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem2" runat="server">
-    <a href="ReporteGrado.aspx"><i class="fa-solid fa-book"></i>Reportes</a>
+    <a href="Reportes.aspx"><i class="fa-solid fa-book"></i>Reportes</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem3" runat="server">
     <a href="#"><i class="fa-solid fa-search"></i>Busquedas</a>

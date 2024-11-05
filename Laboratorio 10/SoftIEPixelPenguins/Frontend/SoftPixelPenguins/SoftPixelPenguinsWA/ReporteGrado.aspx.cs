@@ -25,32 +25,35 @@ namespace SoftPixelPenguinsWA
 
                 JavaScriptSerializer serializer = new JavaScriptSerializer();
                 List<string> labels = new List<string>();
-                List<double> data = new List<double>();
+                List<int> cantidadAlumnosData = new List<int>();
+                List<int> vacantesData = new List<int>();
 
                 foreach (DataRow row in dt.Rows)
                 {
-                    labels.Add($"{row["nivel"]} {row["numeroGrado"]}");
-                    data.Add(Convert.ToDouble(row["porcentajeMatriculados"]));
+                    labels.Add($"{row["Nivel"]} {row["Grado"]}");
+                    cantidadAlumnosData.Add(Convert.ToInt32(row["Cantidad de Alumnos"]));
+                    vacantesData.Add(Convert.ToInt32(row["Vacantes"]));
                 }
 
                 hdnLabels.Value = serializer.Serialize(labels);
-                hdnData.Value = serializer.Serialize(data);
+                hdnData.Value = serializer.Serialize(new { alumnos = cantidadAlumnosData, vacantes = vacantesData });
             }
         }
 
         private DataTable GenerarDataTableConPorcentajes(List<gradoAcademico> grados)
         {
             DataTable dt = new DataTable();
-            dt.Columns.Add("numeroGrado", typeof(int));
-            dt.Columns.Add("nivel", typeof(string));
-            dt.Columns.Add("cantidadAlumnos", typeof(int));
-            dt.Columns.Add("vacantes", typeof(int));
-            dt.Columns.Add("porcentajeMatriculados", typeof(double));
+            dt.Columns.Add("Nivel", typeof(string));
+            dt.Columns.Add("Grado", typeof(int));
+            dt.Columns.Add("Cantidad de Alumnos", typeof(int));
+            dt.Columns.Add("Vacantes", typeof(int));
+            dt.Columns.Add("Porc. de Matriculados", typeof(string));
 
             foreach (var grado in grados)
             {
                 double porcentajeMatriculados = grado.vacantes > 0 ? (grado.cantidadAlumnos * 100.0 / grado.vacantes) : 0;
-                dt.Rows.Add(grado.numeroGrado, grado.nivel, grado.cantidadAlumnos, grado.vacantes, porcentajeMatriculados);
+                string porcentajeFormateado = Math.Round(porcentajeMatriculados, 2).ToString("F2") + "%";
+                dt.Rows.Add(grado.nivel, grado.numeroGrado, grado.cantidadAlumnos, grado.vacantes, porcentajeFormateado);
             }
 
             return dt;

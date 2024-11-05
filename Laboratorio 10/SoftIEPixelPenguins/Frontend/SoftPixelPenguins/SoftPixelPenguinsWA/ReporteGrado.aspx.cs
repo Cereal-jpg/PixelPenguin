@@ -110,6 +110,8 @@ namespace SoftPixelPenguinsWA
             pdfDoc.Add(subtitle);
             pdfDoc.Add(new Paragraph(" "));
 
+
+            // Primera Tabla de Porcentaje de Matriculados por Grado
             PdfPTable pdfTable = new PdfPTable(gridReporte.HeaderRow.Cells.Count);
             foreach (TableCell headerCell in gridReporte.HeaderRow.Cells)
             {
@@ -128,7 +130,6 @@ namespace SoftPixelPenguinsWA
             pdfTable.LockedWidth = true;
             pdfDoc.Add(pdfTable);
 
-
             Paragraph subtitle2 = new Paragraph("Grafico de Barras", institutionFont)
             {
                 Alignment = Element.ALIGN_LEFT
@@ -136,6 +137,8 @@ namespace SoftPixelPenguinsWA
             subtitle2.SpacingBefore = 10f;
             pdfDoc.Add(subtitle2);
 
+
+            // Primera Tabla de Porcentaje de Matriculados por Grado
             string base64Image = hdnChartImage.Value;
             if (!string.IsNullOrEmpty(base64Image))
             {

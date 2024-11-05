@@ -4,6 +4,8 @@
   <xs:element name="eliminarCursoResponse" type="tns:eliminarCursoResponse" />
   <xs:element name="insertarCurso" type="tns:insertarCurso" />
   <xs:element name="insertarCursoResponse" type="tns:insertarCursoResponse" />
+  <xs:element name="listarCursosPorGrado" type="tns:listarCursosPorGrado" />
+  <xs:element name="listarCursosPorGradoResponse" type="tns:listarCursosPorGradoResponse" />
   <xs:element name="listarTodosCursos" type="tns:listarTodosCursos" />
   <xs:element name="listarTodosCursosResponse" type="tns:listarTodosCursosResponse" />
   <xs:element name="modificarCurso" type="tns:modificarCurso" />
@@ -36,6 +38,16 @@
       <xs:element minOccurs="0" name="nivel" type="tns:nivelEducativo" />
       <xs:element name="numeroGrado" type="xs:int" />
       <xs:element name="vacantes" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCursosPorGrado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idGrado" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarCursosPorGradoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="modificarCurso">

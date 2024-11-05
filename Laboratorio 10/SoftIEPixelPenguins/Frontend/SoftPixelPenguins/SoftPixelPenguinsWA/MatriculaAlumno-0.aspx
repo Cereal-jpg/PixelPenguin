@@ -8,13 +8,13 @@
     <a href="IndexAlumno.aspx"><i class="fa-solid fa-home"></i>Inicio</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem2" runat="server">
-    <a href="ListarCursosAlumno.aspx"><i class="fa-solid fa-book"></i>Mis cursos</a>
+    <a href="ListarCursos.aspx"><i class="fa-solid fa-book"></i>Mis cursos</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem3" runat="server">
-    <a href="ListarCursosAlumno.aspx"><i class="fa-solid fa-bar-chart"></i>Reporte de Notas</a>
+    <a href="ReporteAlumno.aspx"><i class="fa-solid fa-bar-chart"></i>Reporte de Notas</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem4" runat="server">
-    <a href="ListarCursosAlumno.aspx"><i class="fa-solid fa-archive"></i>Matrícula Online</a>
+    <a href="MatriculaAlumno-0.aspx"><i class="fa-solid fa-archive"></i>Matrícula Online</a>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <h2 style="text-align: left; color: #000f;">Matrícula Online</h2>

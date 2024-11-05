@@ -8,7 +8,7 @@
     <a href="IndexAlumno.aspx"><i class="fa-solid fa-home"></i>Inicio</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem2" runat="server">
-    <a href="IndexAlumno.aspx"><i class="fa-solid fa-book"></i>Mis cursos</a>
+    <a href="ListarCursos.aspx"><i class="fa-solid fa-book"></i>Mis cursos</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem3" runat="server">
     <a href="IndexAlumno.aspx"><i class="fa-solid fa-bar-chart"></i>Reporte de Notas</a>
@@ -26,8 +26,8 @@
         </div>
         <div class="notifications">
             <h3>Notificaciones</h3>
-            <ul class="notification-list">
-                <li>Próxima fecha de pago: </li>
+            <ul id="notificationList" class="notification-list" runat="server">
+                <li>Próxima fecha de pago: <asp:Literal ID="fechaPagoLiteral" runat="server"></asp:Literal></li>
                 <li>Estado de pagos: </li>
                 <li>Entrega de trabajos hasta el jueves.</li>
                 <li>Examen de matemáticas programado para el lunes.</li>

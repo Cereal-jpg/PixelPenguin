@@ -154,6 +154,7 @@
     <Content Include="GestionarUsuarios.aspx" />
     <Content Include="ProcesoMatricula.aspx" />
     <Content Include="RecuperarContrasena.aspx" />
+    <Content Include="ReporteNotasAlumno.aspx" />
     <Content Include="Reportes.aspx" />
     <Content Include="ReporteGrado.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -731,6 +732,13 @@
     </Compile>
     <Compile Include="RecuperarContrasena.aspx.designer.cs">
       <DependentUpon>RecuperarContrasena.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReporteNotasAlumno.aspx.cs">
+      <DependentUpon>ReporteNotasAlumno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReporteNotasAlumno.aspx.designer.cs">
+      <DependentUpon>ReporteNotasAlumno.aspx</DependentUpon>
     </Compile>
     <Compile Include="Reportes.aspx.cs">
       <DependentUpon>Reportes.aspx</DependentUpon>

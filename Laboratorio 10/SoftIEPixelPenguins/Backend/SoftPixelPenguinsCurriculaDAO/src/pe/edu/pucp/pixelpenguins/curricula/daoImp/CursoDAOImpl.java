@@ -131,4 +131,39 @@ public class CursoDAOImpl extends DAOImpl implements CursoDAO{
         this.curso = null;
     }
     
+    @Override
+    protected String obtenerPredicadoParaListado() {
+        return " where fid_GradoAcademico = ?";
+    }
+    
+    
+    @Override
+    public ArrayList<Curso> listarCursosPorGrado(Integer idGradoAcademico){
+        
+        ArrayList<Curso> cursos = new ArrayList<Curso>();
+        this.usarPredicadoParaListado = true;
+        
+        try {
+            this.abrirConexion();
+            String sql = this.generarSQLParaListarTodos(null);
+            this.colocarSQLenStatement(sql);
+            if(this.usarPredicadoParaListado)
+                this.incluirParametroInt(1, idGradoAcademico);
+            this.ejecutarConsultaEnBD(sql);
+            while (this.resultSet.next()) {
+                agregarObjetoALaLista(cursos, this.resultSet);
+            }
+        } catch (SQLException ex) {
+            System.err.println("Error al intentar listarTodos - " + ex);
+        } finally {
+            try {
+                this.cerrarConexion();
+            } catch (SQLException ex) {
+                System.err.println("Error al cerrar la conexión - " + ex);
+            }
+        }
+        this.usarPredicadoParaListado = false;
+        
+        return cursos;
+    }
 }

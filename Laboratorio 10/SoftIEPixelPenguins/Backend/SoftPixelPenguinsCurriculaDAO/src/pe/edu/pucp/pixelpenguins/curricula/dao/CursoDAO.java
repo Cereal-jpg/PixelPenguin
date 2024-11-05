@@ -9,4 +9,5 @@ public interface CursoDAO {
     public Integer eliminar(Curso curso);
     public ArrayList<Curso> listarTodos();
     public Curso obtenerPorId(Integer idCurso);
+    public ArrayList<Curso> listarCursosPorGrado(Integer idGradoAcademico);
 }

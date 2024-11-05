@@ -94,6 +94,8 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="CompetenciasCursos.aspx" />
+    <Content Include="Content\Fonts\EstiloCurso.css" />
     <Content Include="GestionarSolicitudes_VerDetalle.aspx" />
     <Content Include="MatriculaAlumno-0.aspx" />
     <Content Include="MatriculaAlumno-1.aspx" />
@@ -592,6 +594,9 @@
     <Content Include="Connected Services\SoftPixelPenguinsWS\SoftPixelPenguinsWA.SoftPixelPenguinsWS.ActualizarContrasenaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\SoftPixelPenguinsWS\SoftPixelPenguinsWA.SoftPixelPenguinsWS.listarCursosPorGradoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\SoftPixelPenguinsWS\UsuarioWS.wsdl" />
     <None Include="Connected Services\SoftPixelPenguinsWS\UsuarioWS.xsd">
       <SubType>Designer</SubType>
@@ -607,6 +612,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompetenciasCursos.aspx.cs">
+      <DependentUpon>CompetenciasCursos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CompetenciasCursos.aspx.designer.cs">
+      <DependentUpon>CompetenciasCursos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\SoftPixelPenguinsWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -8,7 +8,7 @@
     <a href="IndexAlumno.aspx"><i class="fa-solid fa-home"></i>Inicio</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem2" runat="server">
-    <a href="IndexAlumno.aspx"><i class="fa-solid fa-book"></i>Mis cursos</a>
+    <a href="ListarCursos.aspx"><i class="fa-solid fa-book"></i>Mis cursos</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem3" runat="server">
     <a href="IndexAlumno.aspx"><i class="fa-solid fa-bar-chart"></i>Reporte de Notas</a>

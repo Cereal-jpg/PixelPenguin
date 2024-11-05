@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SoftPixelPenguinsWA.SoftPixelPenguinsWS;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,9 @@ namespace SoftPixelPenguinsWA
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //int idUsuario;
+            //idUsuario = (int)Session["idAlumnoLogueado"];
+            //Session["idAlumnoLogueado"] = idUsuario;
         }
     }
 }

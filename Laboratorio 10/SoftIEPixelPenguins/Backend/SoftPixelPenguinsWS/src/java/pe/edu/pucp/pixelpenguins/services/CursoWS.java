@@ -68,4 +68,16 @@ public class CursoWS {
         return curso;
     }
     
+    @WebMethod(operationName = "listarCursosPorGrado")
+    public ArrayList<Curso> listarCursosPorGrado(@WebParam(name = "idGrado") Integer idGrado) {
+        ArrayList<Curso> cursos = null;
+        try {
+            cursos = cursoBO.listarCursosPorGrado(idGrado);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return cursos;
+    }
+    
+    
 }

@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftPixelPenguinsWS/PagoWS?xsd=1" namespace="http://services.pixelpenguins.pucp.edu.pe" />
     </xsd:schema>
   </types>
-  <message name="insertarPago">
-    <part name="parameters" element="tns:insertarPago" />
+  <message name="eliminarPago">
+    <part name="parameters" element="tns:eliminarPago" />
   </message>
-  <message name="insertarPagoResponse">
-    <part name="parameters" element="tns:insertarPagoResponse" />
+  <message name="eliminarPagoResponse">
+    <part name="parameters" element="tns:eliminarPagoResponse" />
   </message>
   <message name="modificarPago">
     <part name="parameters" element="tns:modificarPago" />
@@ -17,17 +17,17 @@
   <message name="modificarPagoResponse">
     <part name="parameters" element="tns:modificarPagoResponse" />
   </message>
+  <message name="insertarPago">
+    <part name="parameters" element="tns:insertarPago" />
+  </message>
+  <message name="insertarPagoResponse">
+    <part name="parameters" element="tns:insertarPagoResponse" />
+  </message>
   <message name="listarTodosPagos">
     <part name="parameters" element="tns:listarTodosPagos" />
   </message>
   <message name="listarTodosPagosResponse">
     <part name="parameters" element="tns:listarTodosPagosResponse" />
-  </message>
-  <message name="eliminarPago">
-    <part name="parameters" element="tns:eliminarPago" />
-  </message>
-  <message name="eliminarPagoResponse">
-    <part name="parameters" element="tns:eliminarPagoResponse" />
   </message>
   <message name="obtenerPagoPorId">
     <part name="parameters" element="tns:obtenerPagoPorId" />
@@ -36,21 +36,21 @@
     <part name="parameters" element="tns:obtenerPagoPorIdResponse" />
   </message>
   <portType name="PagoWS">
-    <operation name="insertarPago">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/insertarPagoRequest" message="tns:insertarPago" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/insertarPagoResponse" message="tns:insertarPagoResponse" />
+    <operation name="eliminarPago">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/eliminarPagoRequest" message="tns:eliminarPago" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/eliminarPagoResponse" message="tns:eliminarPagoResponse" />
     </operation>
     <operation name="modificarPago">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/modificarPagoRequest" message="tns:modificarPago" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/modificarPagoResponse" message="tns:modificarPagoResponse" />
     </operation>
+    <operation name="insertarPago">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/insertarPagoRequest" message="tns:insertarPago" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/insertarPagoResponse" message="tns:insertarPagoResponse" />
+    </operation>
     <operation name="listarTodosPagos">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/listarTodosPagosRequest" message="tns:listarTodosPagos" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/listarTodosPagosResponse" message="tns:listarTodosPagosResponse" />
-    </operation>
-    <operation name="eliminarPago">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/eliminarPagoRequest" message="tns:eliminarPago" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/eliminarPagoResponse" message="tns:eliminarPagoResponse" />
     </operation>
     <operation name="obtenerPagoPorId">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/obtenerPagoPorIdRequest" message="tns:obtenerPagoPorId" />
@@ -59,7 +59,7 @@
   </portType>
   <binding name="PagoWSPortBinding" type="tns:PagoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="insertarPago">
+    <operation name="eliminarPago">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -77,7 +77,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarTodosPagos">
+    <operation name="insertarPago">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -86,7 +86,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarPago">
+    <operation name="listarTodosPagos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -50,4 +50,8 @@ public class CursoBO {
     public Curso obtenerPorId(Integer idCurso){
         return cursoDAO.obtenerPorId(idCurso);
     }
+    
+   public ArrayList<Curso> listarCursosPorGrado(Integer idGradoAcademico){
+       return cursoDAO.listarCursosPorGrado(idGradoAcademico);
+   }
 }

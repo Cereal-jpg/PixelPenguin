@@ -7,7 +7,9 @@ import java.util.ArrayList;
 import pe.edu.pucp.pixelpenguins.anioacademico.bo.AnioAcademicoBO;
 import pe.edu.pucp.pixelpenguins.anioacademico.model.AnioAcademico;
 import pe.edu.pucp.pixelpenguins.config.DBManager;
+import pe.edu.pucp.pixelpenguins.curricula.bo.CursoBO;
 import pe.edu.pucp.pixelpenguins.curricula.bo.GradoAcademicoBO;
+import pe.edu.pucp.pixelpenguins.curricula.model.Curso;
 import pe.edu.pucp.pixelpenguins.curricula.model.GradoAcademico;
 import pe.edu.pucp.pixelpenguins.curricula.model.NivelEducativo;
 import pe.edu.pucp.pixelpenguins.usuario.bo.AlumnoBO;
@@ -53,12 +55,25 @@ public class Principal {
 //        ArrayList<Rol> roles=rolBO.listarTodos();
 //        for(Rol aux:roles)
 //            System.out.println(aux.getNombre());
-        //UsuarioBO usuarioBO=new UsuarioBO();
+//        UsuarioBO usuarioBO=new UsuarioBO();
 //        for(Usuario u : usuarioBO.listarTodos()){
 //            System.out.println(u.getNombreCompleto());
 //        }
 //        if(usuarioBO.insertar("12346", "Manuel Perez", sdf.parse("10-05-2005"), "Av. prueba", "manuel@pucp.edu.pe", "Masculino", "a12345", "password", roles.get(0))!=0)
 //            System.out.println("El usuario fue insertado correctamente");
-        //int id = usuarioBO.ActualizarContrasena("manuel@pucp.edu.pe", "ola123");
+//        int id = usuarioBO.ActualizarContrasena("manuel@pucp.edu.pe", "ola123");
+
+        int idUsuario = 30;
+        AlumnoBO alumnoBO=new AlumnoBO();
+        Alumno alumno = alumnoBO.obtenerPorId(idUsuario);
+        GradoAcademicoBO gradoBO = new GradoAcademicoBO();
+        GradoAcademico grado = alumno.getGradoAcademico();
+        int idGrado = grado.getIdGradoAcademico();
+        CursoBO cursoBO = new CursoBO();
+        
+        for(Curso c : cursoBO.listarCursosPorGrado(idGrado)){
+            System.out.println(c.getNombre());
+        }
+        
     }
 }

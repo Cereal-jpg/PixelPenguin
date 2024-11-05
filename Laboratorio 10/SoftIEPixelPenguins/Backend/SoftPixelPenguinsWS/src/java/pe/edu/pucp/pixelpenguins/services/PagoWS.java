@@ -67,5 +67,16 @@ public class PagoWS {
         }
         return pago;
     }
+    @WebMethod(operationName = "PagoXIdMatricula")
+    public Pago  PagoXAlumnos(@WebParam(name = "fid_Matricula") int idMatricula){
+        Pago pago = null;
+        try{
+            pago = pagoBO.PagoXAlumnos(idMatricula);
+        }
+        catch (Exception ex){
+            System.err.println(ex.getMessage());
+        }
+        return pago;
+    }
     
 }

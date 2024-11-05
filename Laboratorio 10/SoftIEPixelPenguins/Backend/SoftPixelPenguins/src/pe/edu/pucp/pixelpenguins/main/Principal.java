@@ -63,15 +63,15 @@ public class Principal {
 //        if(usuarioBO.insertar("12346", "Manuel Perez", sdf.parse("10-05-2005"), "Av. prueba", "manuel@pucp.edu.pe", "Masculino", "a12345", "password", roles.get(0))!=0)
 //            System.out.println("El usuario fue insertado correctamente");
         //int id = usuarioBO.ActualizarContrasena("manuel@pucp.edu.pe", "ola123");
-//        PagoBO pagoBO = new PagoBO();
-//        
-//        Pago prueba;
-//        prueba = pagoBO.PagoXAlumnos(6);
-//        
-//        
-//        System.out.println(prueba.getFechaPago());
-            MatriculaBO matri = new MatriculaBO();
-            int id = matri.obtenerPorIdAlumno(20);
-            System.out.println(id);
+        PagoBO pagoBO = new PagoBO();
+        
+        Pago prueba;
+        prueba = pagoBO.PagoXAlumnos(6);
+        
+        
+        System.out.println(prueba.getEstado());
+//            MatriculaBO matri = new MatriculaBO();
+//            int id = matri.obtenerPorIdAlumno(20);
+//            System.out.println(id);
     }
 }

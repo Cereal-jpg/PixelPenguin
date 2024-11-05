@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftPixelPenguinsWS/MatriculaWS?xsd=1" namespace="http://services.pixelpenguins.pucp.edu.pe" />
     </xsd:schema>
   </types>
-  <message name="insertarMatricula">
-    <part name="parameters" element="tns:insertarMatricula" />
+  <message name="obtenerMatriculaPorIdAlumno">
+    <part name="parameters" element="tns:obtenerMatriculaPorIdAlumno" />
   </message>
-  <message name="insertarMatriculaResponse">
-    <part name="parameters" element="tns:insertarMatriculaResponse" />
+  <message name="obtenerMatriculaPorIdAlumnoResponse">
+    <part name="parameters" element="tns:obtenerMatriculaPorIdAlumnoResponse" />
   </message>
   <message name="modificarMatricula">
     <part name="parameters" element="tns:modificarMatricula" />
@@ -22,6 +22,12 @@
   </message>
   <message name="eliminarMatriculaResponse">
     <part name="parameters" element="tns:eliminarMatriculaResponse" />
+  </message>
+  <message name="insertarMatricula">
+    <part name="parameters" element="tns:insertarMatricula" />
+  </message>
+  <message name="insertarMatriculaResponse">
+    <part name="parameters" element="tns:insertarMatriculaResponse" />
   </message>
   <message name="listarTodosMatriculas">
     <part name="parameters" element="tns:listarTodosMatriculas" />
@@ -36,9 +42,9 @@
     <part name="parameters" element="tns:obtenerMatriculaPorIdResponse" />
   </message>
   <portType name="MatriculaWS">
-    <operation name="insertarMatricula">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/insertarMatriculaRequest" message="tns:insertarMatricula" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/insertarMatriculaResponse" message="tns:insertarMatriculaResponse" />
+    <operation name="obtenerMatriculaPorIdAlumno">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/obtenerMatriculaPorIdAlumnoRequest" message="tns:obtenerMatriculaPorIdAlumno" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/obtenerMatriculaPorIdAlumnoResponse" message="tns:obtenerMatriculaPorIdAlumnoResponse" />
     </operation>
     <operation name="modificarMatricula">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/modificarMatriculaRequest" message="tns:modificarMatricula" />
@@ -47,6 +53,10 @@
     <operation name="eliminarMatricula">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/eliminarMatriculaRequest" message="tns:eliminarMatricula" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/eliminarMatriculaResponse" message="tns:eliminarMatriculaResponse" />
+    </operation>
+    <operation name="insertarMatricula">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/insertarMatriculaRequest" message="tns:insertarMatricula" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/insertarMatriculaResponse" message="tns:insertarMatriculaResponse" />
     </operation>
     <operation name="listarTodosMatriculas">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/listarTodosMatriculasRequest" message="tns:listarTodosMatriculas" />
@@ -59,7 +69,7 @@
   </portType>
   <binding name="MatriculaWSPortBinding" type="tns:MatriculaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="insertarMatricula">
+    <operation name="obtenerMatriculaPorIdAlumno">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -78,6 +88,15 @@
       </output>
     </operation>
     <operation name="eliminarMatricula">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarMatricula">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

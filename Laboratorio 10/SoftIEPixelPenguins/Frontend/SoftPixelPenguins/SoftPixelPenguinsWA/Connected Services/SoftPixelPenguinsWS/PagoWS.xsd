@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services.pixelpenguins.pucp.edu.pe" targetNamespace="http://services.pixelpenguins.pucp.edu.pe" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="PagoXIdMatricula" type="tns:PagoXIdMatricula" />
+  <xs:element name="PagoXIdMatriculaResponse" type="tns:PagoXIdMatriculaResponse" />
   <xs:element name="eliminarPago" type="tns:eliminarPago" />
   <xs:element name="eliminarPagoResponse" type="tns:eliminarPagoResponse" />
   <xs:element name="insertarPago" type="tns:insertarPago" />
@@ -85,6 +87,16 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="obtenerPagoPorIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:pago" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PagoXIdMatricula">
+    <xs:sequence>
+      <xs:element name="fid_Matricula" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PagoXIdMatriculaResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:pago" />
     </xs:sequence>

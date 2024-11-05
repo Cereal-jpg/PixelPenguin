@@ -67,5 +67,15 @@ public class MatriculaWS {
         }
         return matricula;
     }
-    
+    @WebMethod(operationName = "obtenerMatriculaPorIdAlumno")
+    public Integer obtenerMatriculaPorIdAlumno(@WebParam(name = "idAlumno") Integer idALumno){
+        int id = 0;
+        try {
+            id = matriculaBO.obtenerPorIdAlumno(idALumno);
+        }
+        catch (Exception ex){
+            System.out.println(ex.getMessage());
+        }
+        return id;
+    }
 }

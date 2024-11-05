@@ -301,3 +301,7 @@ C:\Users\User\Documents\GitHub\PixelPenguin\Laboratorio 10\SoftIEPixelPenguins\F
 C:\Users\User\Documents\GitHub\PixelPenguin\Laboratorio 10\SoftIEPixelPenguins\Frontend\SoftPixelPenguins\SoftPixelPenguinsWA\obj\Debug\SoftPixe.9F367AAF.Up2Date
 C:\Users\User\Documents\GitHub\PixelPenguin\Laboratorio 10\SoftIEPixelPenguins\Frontend\SoftPixelPenguins\SoftPixelPenguinsWA\obj\Debug\SoftPixelPenguinsWA.dll
 C:\Users\User\Documents\GitHub\PixelPenguin\Laboratorio 10\SoftIEPixelPenguins\Frontend\SoftPixelPenguins\SoftPixelPenguinsWA\obj\Debug\SoftPixelPenguinsWA.pdb
+C:\git\Laboratorio 10\SoftIEPixelPenguins\Frontend\SoftPixelPenguins\SoftPixelPenguinsWA\obj\Debug\SoftPixelPenguinsWA.csproj.AssemblyReference.cache
+C:\git\Laboratorio 10\SoftIEPixelPenguins\Frontend\SoftPixelPenguins\SoftPixelPenguinsWA\obj\Debug\SoftPixelPenguinsWA.csproj.CoreCompileInputs.cache
+C:\git\Laboratorio 10\SoftIEPixelPenguins\Frontend\SoftPixelPenguins\SoftPixelPenguinsWA\obj\Debug\SoftPixelPenguinsWA.dll
+C:\git\Laboratorio 10\SoftIEPixelPenguins\Frontend\SoftPixelPenguins\SoftPixelPenguinsWA\obj\Debug\SoftPixelPenguinsWA.pdb

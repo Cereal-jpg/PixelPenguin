@@ -10,9 +10,14 @@
   <xs:element name="modificarCompetenciaResponse" type="tns:modificarCompetenciaResponse" />
   <xs:element name="obtenerCompetenciaPorId" type="tns:obtenerCompetenciaPorId" />
   <xs:element name="obtenerCompetenciaPorIdResponse" type="tns:obtenerCompetenciaPorIdResponse" />
-  <xs:complexType name="modificarCompetencia">
+  <xs:complexType name="obtenerCompetenciaPorId">
     <xs:sequence>
-      <xs:element minOccurs="0" name="competencia" type="tns:competencia" />
+      <xs:element minOccurs="0" name="idCompetencia" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerCompetenciaPorIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:competencia" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="competencia">
@@ -42,19 +47,14 @@
       <xs:element name="vacantes" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="modificarCompetencia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="competencia" type="tns:competencia" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="modificarCompetenciaResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="obtenerCompetenciaPorId">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="idCompetencia" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="obtenerCompetenciaPorIdResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:competencia" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarTodosCompetencias">

@@ -15,10 +15,23 @@
 <asp:Content ContentPlaceHolderID="menuItem4" runat="server">
     <a href="MatriculaAlumno-0.aspx"><i class="fa-solid fa-archive"></i>Matrícula Online</a>
 </asp:Content>
-
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <h2 style="text-align: left; color: #000f;">Alumno - Mis Cursos</h2>
-    <div class="container">
-        <p>Listar Cursos</p>
+    <link rel="stylesheet" href="Content/Fonts/EstiloCurso.css" />
+
+    <div class="container-al">
+        <div class="schedule">
+
+            <asp:Label ID="myLabel" runat="server" Text=""></asp:Label>
+
+            <asp:GridView ID="gvMisCursos" runat="server" AllowPaging="true" PageSize="10" AutoGenerateColumns="false" CssClass="table table-hover table-responsive table-striped" ShowHeaderWhenEmpty="true">
+                <Columns>
+                    <asp:BoundField HeaderText="Codigo" DataField="codigoCurso"/>
+                    <asp:BoundField HeaderText="Nombre" DataField="nombre"/>
+                    <asp:BoundField HeaderText="HorasPorSemana" DataField="horasPorSemana"/>
+                </columns>
+            </asp:GridView>
+
+        </div>
     </div>
 </asp:Content>

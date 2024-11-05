@@ -15,12 +15,21 @@ namespace SoftPixelPenguinsWA
     {
 
         /// <summary>
-        /// Control gvNotas.
+        /// Control myLabel.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvNotas;
+        protected global::System.Web.UI.WebControls.Label myLabel;
+
+        /// <summary>
+        /// Control gvMisCursos.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gvMisCursos;
     }
 }

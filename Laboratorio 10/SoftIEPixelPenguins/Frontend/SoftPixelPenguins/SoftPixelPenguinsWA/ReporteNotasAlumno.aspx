@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftPixelPenguins.Master" AutoEventWireup="true" CodeBehind="ListarCursos.aspx.cs" Inherits="SoftPixelPenguinsWA.ListarCursos" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftPixelPenguins.Master" AutoEventWireup="true" CodeBehind="ReporteNotasAlumno.aspx.cs" Inherits="SoftPixelPenguinsWA.ReporteNotasAlumno" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphScripts" runat="server">
@@ -17,8 +17,21 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
-    <h2 style="text-align: left; color: #000f;">Alumno - Mis Notas</h2>
-    <div class="container">
-        <p>Listar Notas</p>
+    <h2 style="text-align: left; color: #000f;">Alumno - Registro de Notas - </h2>
+    <hr class="mx-3" />
+    <div class="container mt-5">
+
+        <div class="row">
+            <div class="col-12">
+                <asp:GridView ID="gvNotas" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-bordered" Style="background-color: transparent;">
+                    <Columns>
+                        <asp:BoundField HeaderText="Código" DataField="curso" />
+                        <asp:BoundField HeaderText="Curso" DataField="nota" />
+                        <asp:BoundField HeaderText="Nota" DataField="estado" />
+                    </Columns>
+                </asp:GridView>
+
+            </div>
+        </div>
     </div>
 </asp:Content>

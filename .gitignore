@@ -19,7 +19,6 @@ nbbuild/
 dist/
 nbdist/
 *.war
-nbproject/
 nbbuild/
 *.nb-gradle/
 *.nb-javac/

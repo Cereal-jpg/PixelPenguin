@@ -28,20 +28,28 @@ namespace SoftPixelPenguinsWA
                 int idMatricula = matriculaBO.obtenerMatriculaPorIdAlumno(idUsuario);
                 pago pago = pagoBO.PagoXIdMatricula(idMatricula);
 
-               
+
 
                 // Calcula la cantidad de días restantes para el pago
-                int diasRestantes = (pago.fechaPago - DateTime.Now).Days;
+                if (pago != null)
+                {
+                    int diasRestantes = (pago.fechaPago - DateTime.Now).Days;
 
-                // Construye el texto para mostrar la fecha y los días restantes
-                string textoFechaPago = pago.fechaPago.ToString("dd/MM/yyyy");
-                string textoDiasRestantes = diasRestantes > 0
-                    ? $" (faltan {diasRestantes} días)"
-                    : " (El pago es hoy o ha pasado)";
+                    // Construye el texto para mostrar la fecha y los días restantes
+                    string textoFechaPago = pago.fechaPago.ToString("dd/MM/yyyy");
+                    string textoDiasRestantes = diasRestantes > 0
+                        ? $" (faltan {diasRestantes} días)"
+                        : " (El pago es hoy o ha pasado)";
 
-                // Asigna el texto al Literal
-                fechaPagoLiteral.Text = $"{textoFechaPago}{textoDiasRestantes}";
-                Estado.Text = pago.estado.ToString();
+                    // Asigna el texto al Literal
+                    fechaPagoLiteral.Text = $"{textoFechaPago}{textoDiasRestantes}";
+                    Estado.Text = pago.estado.ToString();
+                }
+                else
+                {
+                    Estado.Text = "No tiene pagos pendientes";
+                    fechaPagoLiteral.Text = "--/--/--";
+                }
             }
         }
     }

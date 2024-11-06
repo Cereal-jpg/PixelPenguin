@@ -1,38 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\git\\PixelPenguin\\Laboratorio 10\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguins\\",
+  "WorkspaceRootPath": "D:\\TAProgra\\Laboratorio 10\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguins\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|c:\\git\\pixelpenguin\\laboratorio 10\\softiepixelpenguins\\frontend\\softpixelpenguins\\softpixelpenguinswa\\reportenotasalumno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\reportenotasalumno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|c:\\git\\pixelpenguin\\laboratorio 10\\softiepixelpenguins\\frontend\\softpixelpenguins\\softpixelpenguinswa\\matriculaalumno-0.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\matriculaalumno-0.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|c:\\git\\pixelpenguin\\laboratorio 10\\softiepixelpenguins\\frontend\\softpixelpenguins\\softpixelpenguinswa\\listarcursos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\listarcursos.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|c:\\git\\pixelpenguin\\laboratorio 10\\softiepixelpenguins\\frontend\\softpixelpenguins\\softpixelpenguinswa\\indexalumno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\indexalumno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|c:\\git\\pixelpenguin\\laboratorio 10\\softiepixelpenguins\\frontend\\softpixelpenguins\\softpixelpenguinswa\\perfilalumno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\perfilalumno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|c:\\git\\pixelpenguin\\laboratorio 10\\softiepixelpenguins\\frontend\\softpixelpenguins\\softpixelpenguinswa\\softpixelpenguins.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
-      "RelativeMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\softpixelpenguins.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|c:\\git\\pixelpenguin\\laboratorio 10\\softiepixelpenguins\\frontend\\softpixelpenguins\\softpixelpenguinswa\\content\\estilos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\content\\estilos.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|c:\\git\\pixelpenguin\\laboratorio 10\\softiepixelpenguins\\frontend\\softpixelpenguins\\softpixelpenguinswa\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|d:\\taprogra\\laboratorio 10\\softiepixelpenguins\\frontend\\softpixelpenguins\\softpixelpenguinswa\\indexalumno.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C2C3D91-0577-4DF1-8B42-72FA6ABE5B8E}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\indexalumno.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -47,105 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ReporteNotasAlumno.aspx",
-              "DocumentMoniker": "C:\\git\\PixelPenguin\\Laboratorio 10\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\ReporteNotasAlumno.aspx",
-              "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\ReporteNotasAlumno.aspx",
-              "ToolTip": "C:\\git\\PixelPenguin\\Laboratorio 10\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\ReporteNotasAlumno.aspx",
-              "RelativeToolTip": "SoftPixelPenguinsWA\\ReporteNotasAlumno.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-11-06T05:08:02.421Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ListarCursos.aspx",
-              "DocumentMoniker": "C:\\git\\PixelPenguin\\Laboratorio 10\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\ListarCursos.aspx",
-              "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\ListarCursos.aspx",
-              "ToolTip": "C:\\git\\PixelPenguin\\Laboratorio 10\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\ListarCursos.aspx",
-              "RelativeToolTip": "SoftPixelPenguinsWA\\ListarCursos.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-11-06T05:06:34.946Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SoftPixelPenguins.Master",
-              "DocumentMoniker": "C:\\git\\PixelPenguin\\Laboratorio 10\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\SoftPixelPenguins.Master",
-              "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\SoftPixelPenguins.Master",
-              "ToolTip": "C:\\git\\PixelPenguin\\Laboratorio 10\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\SoftPixelPenguins.Master",
-              "RelativeToolTip": "SoftPixelPenguinsWA\\SoftPixelPenguins.Master",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-11-06T05:01:38.695Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IndexAlumno.aspx",
-              "DocumentMoniker": "C:\\git\\PixelPenguin\\Laboratorio 10\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\IndexAlumno.aspx",
-              "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\IndexAlumno.aspx",
-              "ToolTip": "C:\\git\\PixelPenguin\\Laboratorio 10\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\IndexAlumno.aspx",
-              "RelativeToolTip": "SoftPixelPenguinsWA\\IndexAlumno.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-11-06T04:49:35.806Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MatriculaAlumno-0.aspx",
-              "DocumentMoniker": "C:\\git\\PixelPenguin\\Laboratorio 10\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\MatriculaAlumno-0.aspx",
-              "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\MatriculaAlumno-0.aspx",
-              "ToolTip": "C:\\git\\PixelPenguin\\Laboratorio 10\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\MatriculaAlumno-0.aspx",
-              "RelativeToolTip": "SoftPixelPenguinsWA\\MatriculaAlumno-0.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-11-06T04:40:37.635Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Estilos.css",
-              "DocumentMoniker": "C:\\git\\PixelPenguin\\Laboratorio 10\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\Content\\Estilos.css",
-              "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\Content\\Estilos.css",
-              "ToolTip": "C:\\git\\PixelPenguin\\Laboratorio 10\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\Content\\Estilos.css",
-              "RelativeToolTip": "SoftPixelPenguinsWA\\Content\\Estilos.css",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAAAHUAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-11-06T04:19:04.915Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PerfilAlumno.aspx",
-              "DocumentMoniker": "C:\\git\\PixelPenguin\\Laboratorio 10\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\PerfilAlumno.aspx",
-              "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\PerfilAlumno.aspx",
-              "ToolTip": "C:\\git\\PixelPenguin\\Laboratorio 10\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\PerfilAlumno.aspx",
-              "RelativeToolTip": "SoftPixelPenguinsWA\\PerfilAlumno.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-11-06T03:53:55.288Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Login.aspx",
-              "DocumentMoniker": "C:\\git\\PixelPenguin\\Laboratorio 10\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\Login.aspx",
-              "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\Login.aspx",
-              "ToolTip": "C:\\git\\PixelPenguin\\Laboratorio 10\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\Login.aspx",
-              "RelativeToolTip": "SoftPixelPenguinsWA\\Login.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-11-06T01:35:17.438Z",
+              "Title": "IndexAlumno.aspx.cs",
+              "DocumentMoniker": "D:\\TAProgra\\Laboratorio 10\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\IndexAlumno.aspx.cs",
+              "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\IndexAlumno.aspx.cs",
+              "ToolTip": "D:\\TAProgra\\Laboratorio 10\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguins\\SoftPixelPenguinsWA\\IndexAlumno.aspx.cs",
+              "RelativeToolTip": "SoftPixelPenguinsWA\\IndexAlumno.aspx.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwC8AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T15:30:16.804Z",
               "EditorCaption": ""
             }
           ]

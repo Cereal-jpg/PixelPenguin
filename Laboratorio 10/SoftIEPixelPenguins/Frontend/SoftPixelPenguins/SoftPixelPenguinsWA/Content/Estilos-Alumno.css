@@ -18,6 +18,24 @@
     border-radius: 8px; /* Bordes redondeados */
 }
 
+.centered-image {
+    display: block;
+    margin: 0 auto; /* Centra la imagen */
+}
+
+    .schedule .overlay-text {
+        position: absolute;
+        top: 10px; /* Ajusta este valor para la posición vertical */
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+        padding: 5px 10px;
+        font-size: 18px; /* Tamaño del texto */
+        font-weight: bold;
+        border-radius: 5px;
+    }
+
 .container-matricula {
     display: flex; /* Usar flexbox para organizar el layout */
     width: 100%; /* Ancho completo */
@@ -168,4 +186,9 @@ h3 {
     display: flex;
     justify-content: space-between;
     width: 100%;
+}
+
+.responsive-image {
+    width: 50%; /* Ajusta este valor según el tamaño deseado */
+    height: auto;
 }

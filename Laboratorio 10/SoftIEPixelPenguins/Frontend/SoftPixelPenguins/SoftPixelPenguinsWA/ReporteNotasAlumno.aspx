@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftPixelPenguins.Master" AutoEventWireup="true" CodeBehind="ReporteNotasAlumno.aspx.cs" Inherits="SoftPixelPenguinsWA.ReporteNotasAlumno" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
+    Alumno - Notas
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphScripts" runat="server">
 </asp:Content>
@@ -15,23 +16,29 @@
 <asp:Content ContentPlaceHolderID="menuItem4" runat="server">
     <a href="MatriculaAlumno-0.aspx"><i class="fa-solid fa-archive"></i>Matrícula Online</a>
 </asp:Content>
+<asp:Content ContentPlaceHolderID="menuItem5" runat="server">
+    <a href="PerfilAlumno.aspx"><i class="fa-solid fa-user"></i>Mi Perfil</a>
+</asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
-    <h2 style="text-align: left; color: #000f;">Alumno - Registro de Notas - </h2>
-    <hr class="mx-3" />
-    <div class="container mt-5">
+    <h2 style="text-align: left; color: #000f;">Alumno - Reporte de Notas</h2>
+    <link rel="stylesheet" href="Content/Fonts/EstiloCurso.css" />
 
-        <div class="row">
-            <div class="col-12">
-                <asp:GridView ID="gvNotas" runat="server" AutoGenerateColumns="False" CssClass="table table-striped table-bordered" Style="background-color: transparent;">
-                    <Columns>
-                        <asp:BoundField HeaderText="Código" DataField="curso" />
-                        <asp:BoundField HeaderText="Curso" DataField="nota" />
-                        <asp:BoundField HeaderText="Nota" DataField="estado" />
-                    </Columns>
-                </asp:GridView>
-
+    <div class="container-al">
+        <div class="schedule">
+            <asp:Label ID="myLabel" runat="server" Text="" Font-Size="Large" Font-Bold="True" CssClass="my-label"></asp:Label>
+            <br><br>
+            <asp:GridView ID="gvNotas" runat="server" AllowPaging="true" PageSize="12" AutoGenerateColumns="false" CssClass="table table-hover table-responsive table-striped" ShowHeaderWhenEmpty="true">
+                <Columns>
+                    <asp:BoundField HeaderText="Codigo" DataField="codigoCurso"/>
+                    <asp:BoundField HeaderText="Curso" DataField="nombre"/>
+                    <asp:BoundField HeaderText="Horas Semanales" DataField="horasPorSemana"/>
+                </columns>
+            </asp:GridView>
+            <div style="display: flex; justify-content: flex-end;">
+                <asp:Button ID="Competencias" runat="server" Text="Ver Competencias" CssClass="login-button" OnClick="Competencias_Click"/>
             </div>
         </div>
     </div>
+
 </asp:Content>

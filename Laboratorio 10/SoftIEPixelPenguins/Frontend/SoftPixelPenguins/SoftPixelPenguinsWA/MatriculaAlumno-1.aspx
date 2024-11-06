@@ -16,6 +16,9 @@
 <asp:Content ContentPlaceHolderID="menuItem4" runat="server">
     <a href="MatriculaALumno-0.aspx"><i class="fa-solid fa-archive"></i>Matrícula Online</a>
 </asp:Content>
+<asp:Content ContentPlaceHolderID="menuItem5" runat="server">
+    <a href="PerfilAlumno.aspx"><i class="fa-solid fa-archive"></i>Mi Perfil</a>
+</asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <style>

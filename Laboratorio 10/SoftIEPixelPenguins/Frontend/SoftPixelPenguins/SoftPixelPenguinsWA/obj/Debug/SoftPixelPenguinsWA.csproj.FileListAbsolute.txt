@@ -427,3 +427,7 @@ C:\Users\Angel\Documents\GitHub\PixelPenguin\Laboratorio 10\SoftIEPixelPenguins\
 C:\Users\Angel\Documents\GitHub\PixelPenguin\Laboratorio 10\SoftIEPixelPenguins\Frontend\SoftPixelPenguins\SoftPixelPenguinsWA\obj\Debug\SoftPixe.9F367AAF.Up2Date
 C:\Users\Angel\Documents\GitHub\PixelPenguin\Laboratorio 10\SoftIEPixelPenguins\Frontend\SoftPixelPenguins\SoftPixelPenguinsWA\obj\Debug\SoftPixelPenguinsWA.dll
 C:\Users\Angel\Documents\GitHub\PixelPenguin\Laboratorio 10\SoftIEPixelPenguins\Frontend\SoftPixelPenguins\SoftPixelPenguinsWA\obj\Debug\SoftPixelPenguinsWA.pdb
+C:\git\PixelPenguin\Laboratorio 10\SoftIEPixelPenguins\Frontend\SoftPixelPenguins\SoftPixelPenguinsWA\bin\itextsharp.dll
+C:\git\PixelPenguin\Laboratorio 10\SoftIEPixelPenguins\Frontend\SoftPixelPenguins\SoftPixelPenguinsWA\bin\BouncyCastle.Cryptography.dll
+C:\git\PixelPenguin\Laboratorio 10\SoftIEPixelPenguins\Frontend\SoftPixelPenguins\SoftPixelPenguinsWA\bin\itextsharp.xml
+C:\git\PixelPenguin\Laboratorio 10\SoftIEPixelPenguins\Frontend\SoftPixelPenguins\SoftPixelPenguinsWA\bin\BouncyCastle.Cryptography.xml

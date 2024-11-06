@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     
+    <link rel="icon" type="image/png" href="Images/PIXEL2.png" />
     <link href="Content/bootstrap.css" rel="stylesheet" />
     <link href="Content/site.css" rel="stylesheet" />
     <link href="Content/Fonts/css/all.css" rel="stylesheet" />
@@ -52,6 +53,11 @@
                 <li class="nav-item mb-1">
                     <asp:ContentPlaceHolder ID="menuItem4" runat="server">
                         <a href="#"><i class="fa-solid fa-book"></i>Mis Tramites</a>
+                    </asp:ContentPlaceHolder>
+                </li>
+                <li class="nav-item mb-1">
+                    <asp:ContentPlaceHolder ID="menuItem5" runat="server">
+                        <a href="#"><i class="fa-solid fa-user"></i>Mi Perfil</a>
                     </asp:ContentPlaceHolder>
                 </li>
                 <!-- Agrega más elementos según sea necesario -->

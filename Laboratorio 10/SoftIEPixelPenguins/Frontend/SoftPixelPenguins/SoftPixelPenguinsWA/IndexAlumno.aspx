@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftPixelPenguins.Master" AutoEventWireup="true" CodeBehind="IndexAlumno.aspx.cs" Inherits="SoftPixelPenguinsWA.IndexAlumno" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
-    Home - Estudiante
+    Home - Alumno
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphScripts" runat="server">
 </asp:Content>
@@ -16,13 +16,16 @@
 <asp:Content ContentPlaceHolderID="menuItem4" runat="server">
     <a href="MatriculaAlumno-0.aspx"><i class="fa-solid fa-archive"></i>Matrícula Online</a>
 </asp:Content>
+<asp:Content ContentPlaceHolderID="menuItem5" runat="server">
+    <a href="PerfilAlumno.aspx"><i class="fa-solid fa-user"></i>Mi Perfil</a>
+</asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
-    <h2 style="text-align: left; color: #000f;">Inicio Alumno</h2>
+    <h2 style="text-align: left; color: #000f;">Alumno - Inicio</h2>
     <link rel="stylesheet" href="Content/Estilos-Alumno.css" />
     <div class="container-al">
         <div class="schedule">
             <h3>Horario Académico</h3>
-            <img src="Images/Horario.jpg" alt="Horario Académico" />
+            <img src="Images/HORARIO1.png" alt="Horario Académico" class="centered-image"/>
         </div>
         <div class="notifications">
             <h3>Notificaciones</h3>

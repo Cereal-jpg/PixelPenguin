@@ -5,7 +5,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de Sesión - Pixel Penguins</title>
+    <title>Pixel Penguins - Intranet</title>
+
+    <link rel="icon" type="image/png" href="Images/PIXEL2.png" />
+
     <link rel="stylesheet" href="Content/Estilos.css" />
     <style>
         body {
@@ -19,7 +22,7 @@
     <form id="form1" runat="server">
         <div class="container">
             <div class="header" >
-                <img src="Images/PIXEL.png" alt="Logo" />
+                <img src="Images/PIXEL2.png" alt="Logo" />
                 <h1>Pixel Penguins</h1>
                 <div class="nav">
                     <a href="Login.aspx">Intranet</a>

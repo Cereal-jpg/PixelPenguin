@@ -44,7 +44,7 @@ namespace SoftPixelPenguinsWA
                         String numero = gradoAcademico.numeroGrado.ToString();
                         String anio = gradoAcademico.nivel.ToString();
 
-                        String result = numero + " - " + anio;
+                        String result = anio + " - " + numero;
                         myLabel.Text = result;
 
 
@@ -74,9 +74,6 @@ namespace SoftPixelPenguinsWA
             }
         }
 
-        protected void Competencias_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("CompetenciasCursos.aspx");
-        }
+        
     }
 }

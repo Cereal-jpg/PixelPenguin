@@ -152,6 +152,7 @@
     <Content Include="ListarNotas.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Matricularce.aspx" />
+    <Content Include="PerfilAlumno.aspx" />
     <Content Include="PlanEstudio.aspx" />
     <Content Include="GestionarUsuarios.aspx" />
     <Content Include="ProcesoMatricula.aspx" />
@@ -714,6 +715,13 @@
     </Compile>
     <Compile Include="Matricularce.aspx.designer.cs">
       <DependentUpon>Matricularce.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PerfilAlumno.aspx.cs">
+      <DependentUpon>PerfilAlumno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PerfilAlumno.aspx.designer.cs">
+      <DependentUpon>PerfilAlumno.aspx</DependentUpon>
     </Compile>
     <Compile Include="PlanEstudio.aspx.cs">
       <DependentUpon>PlanEstudio.aspx</DependentUpon>

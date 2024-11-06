@@ -1,6 +1,7 @@
 ﻿<%@ Page Language="C#" MasterPageFile="~/SoftPixelPenguins.Master" AutoEventWireup="true" CodeBehind="ReporteGrado.aspx.cs" Inherits="SoftPixelPenguinsWA.ReporteGrado" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphScripts" runat="server">
+    Reporte
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
     </style>

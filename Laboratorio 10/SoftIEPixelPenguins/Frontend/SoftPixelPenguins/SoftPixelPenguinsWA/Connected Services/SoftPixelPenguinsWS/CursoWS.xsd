@@ -12,10 +12,12 @@
   <xs:element name="modificarCursoResponse" type="tns:modificarCursoResponse" />
   <xs:element name="obtenerCursoPorId" type="tns:obtenerCursoPorId" />
   <xs:element name="obtenerCursoPorIdResponse" type="tns:obtenerCursoPorIdResponse" />
-  <xs:complexType name="listarTodosCursos">
-    <xs:sequence />
+  <xs:complexType name="listarCursosPorGrado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idGrado" type="xs:int" />
+    </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarTodosCursosResponse">
+  <xs:complexType name="listarCursosPorGradoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
     </xs:sequence>
@@ -40,12 +42,10 @@
       <xs:element name="vacantes" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarCursosPorGrado">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="idGrado" type="xs:int" />
-    </xs:sequence>
+  <xs:complexType name="listarTodosCursos">
+    <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="listarCursosPorGradoResponse">
+  <xs:complexType name="listarTodosCursosResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:curso" />
     </xs:sequence>

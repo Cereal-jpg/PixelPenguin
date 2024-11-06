@@ -5,7 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de Sesión - Pixel Penguins</title>
+    <title>Pixel Penguins - Plan</title>
+    <link rel="icon" type="image/png" href="Images/PIXEL2.png" />
     <link rel="stylesheet" href="Content/Estilos.css" />
     <style>
         .container-Matricula {

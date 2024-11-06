@@ -16,6 +16,9 @@
 <asp:Content ContentPlaceHolderID="menuItem4" runat="server">
     <a href="MatriculaAlumno-0.aspx"><i class="fa-solid fa-archive"></i>Matrícula Online</a>
 </asp:Content>
+<asp:Content ContentPlaceHolderID="menuItem5" runat="server">
+    <a href="PerfilAlumno.aspx"><i class="fa-solid fa-user"></i>Mi Perfil</a>
+</asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <h2 style="text-align: left; color: #000f;">Matrícula Online</h2>
     <link rel="stylesheet" href="Content/Estilos-Alumno.css" />
@@ -30,7 +33,7 @@
             </div>
         </div>
         <div class="image-section">
-            <img src="Images/Horario.jpg" alt="Horario Académico" />
+            <img src="Images/CHICOMAT.png" alt="Horario Académico" class="responsive-image"/>
         </div>
     </div>
 </asp:Content>

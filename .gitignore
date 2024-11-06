@@ -1,164 +1,21 @@
-/Proyecto/LibreriaPrincipal/nbproject/private/
-/Proyecto/LibreriaAAcademico/LibreriaAAcademico/build/
-/Proyecto/LibreriaAAcademico/LibreriaAAcademico/dist/
-/Proyecto/LibreriaAAcademico/LibreriaAAcademico/nbproject/private/
-/Proyecto/ola/ola/nbproject/private/
-/Proyecto/SoftPixelPenguinsIE/nbproject/private/
-/Proyecto/SoftPixelPenguinsIE/src/LibreriaAAcademico/LibreriaAAcademico/build/
-/Proyecto/SoftPixelPenguinsIE/src/LibreriaAAcademico/LibreriaAAcademico/dist/
-/Proyecto/SoftPixelPenguinsIE/src/LibreriaAAcademico/LibreriaAAcademico/nbproject/private/
-/Proyecto/SoftPixelPenguinsIE/src/ola/ola/nbproject/private/
-/Proyecto/SoftPixelPenguinsIE/nbproject/LibreriaAAcademico/LibreriaAAcademico/build/
-/Proyecto/SoftPixelPenguinsIE/nbproject/LibreriaAAcademico/LibreriaAAcademico/dist/
-/Proyecto/SoftPixelPenguinsIE/nbproject/LibreriaAAcademico/LibreriaAAcademico/nbproject/private/
-/Proyecto/SoftPixelPenguinsIE/nbproject/ola/ola/nbproject/private/
-/Proyecto/SoftPixelPenguinsIE/src/LibreriaAAcademico/dist/
-/Proyecto/SoftPixelPenguinsIE/src/LibreriaAAcademico/build/
-/Proyecto/SoftPixelPenguinsIE/src/LibreriaAAcademico/nbproject/private/
-/Proyecto/SoftPixelPenguinsIE/src/ola/nbproject/private/
-/Proyecto/SoftPixelPenguinsIE/build/
-/Proyecto/SoftPixelPenguinsIE/dist/
-/Proyecto/SoftPixelPenguinsDBManager/SoftPixelPenguinsDBManager/build/
-/Proyecto/SoftPixelPenguinsDBManager/SoftPixelPenguinsDBManager/dist/
-/Proyecto/SoftPixelPenguinsDBManager/SoftPixelPenguinsDBManager/nbproject/private/
-/Proyecto/SoftPixelPenguinsCurriculaBO/nbproject/private/
-/Proyecto/SoftPixelPenguinsCurriculaDA/nbproject/private/
-/Proyecto/ProyectoSoftPixelPenguins/SoftPixelPenguinsCurriculaBO/nbproject/private/
-/Proyecto/ProyectoSoftPixelPenguins/SoftPixelPenguinsCurriculaDA/nbproject/private/
-/Proyecto/ProyectoSoftPixelPenguins/SoftPixelPenguinsDBManager/nbproject/private/
-/Proyecto/ProyectoSoftPixelPenguins/SoftPixelPenguinsInstitucioneducativaBO/nbproject/private/
-/Proyecto/ProyectoSoftPixelPenguins/SoftPixelPenguinsInstitucioneducativaDA/build/
-/Proyecto/ProyectoSoftPixelPenguins/SoftPixelPenguinsInstitucioneducativaDA/nbproject/private/
-/Proyecto/ProyectoSoftPixelPenguins/SoftPixelPenguinsInstitucioneducativaModel/nbproject/private/
-/Lab6/SoftPixelPenguinsCurriculaModel/build/
-/Lab6/SoftPixelPenguinsCurriculaDA/build/
-/Lab6/SoftPixelPenguinsAñoAcademicoModel/build/
-/Lab6/SoftPixelPenguinsAñoAcademicoModel/dist/
-/Lab6/SoftPixelPenguinsCurriculaModel/dist/
-/Lab6/SoftPixelPenguinsUsuarioModel/dist/
-/Lab6/SoftPixelPenguinsInstitucionEducativaModel/dist/
-/Lab6/SoftPixelPenguinsInstitucionEducativaDA/dist/
-/Pruebas/SoftIEPixelPenguinsTest/build/
-/Lab6/SoftPixelPenguinsInstitucionEducativaBO/build/
-/Lab6/SoftPixelPenguinsInstitucionEducativaBO/dist/
-/Pruebas/SoftIEPixelPenguinsTest/dist/
-/Lab6/SoftPixelPenguinsAñoAcademicoBO/build/
-/Lab6/SoftPixelPenguinsAñoAcademicoDA/build/
-/Lab6/SoftPixelPenguinsAñoAcademicoDA/dist/
-/Lab6/SoftPixelPenguinsAñoAcademicoBO/dist/
-/Lab6/SoftPixelPenguinsCurriculaDA/dist/
-/Lab6/SoftPixelPenguinsCurriculaBO/build/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsInstitucionEducativaModel/nbproject/private/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsUsuarioModel/nbproject/private/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsCurriculaModel/nbproject/private/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsAnioAcademicoModel/nbproject/private/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsDBManager/nbproject/private/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsDBManagerTest/nbproject/private/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsDBManagerTest/build/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsDBManagerTest/dist/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsDBManager/build/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsDBManager/dist/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsContratoModel/nbproject/private/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsCurriculaModel/build/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsContratoModel/build/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsContratoModel/dist/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsCurriculaModel/dist/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsAnioAcademicoModel/build/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsInstitucionEducativaModel/build/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsAnioAcademicoModel/dist/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsUsuarioModel/build/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsUsuarioModel/dist/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsInstitucionEducativaModel/dist/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsAnioAcademicoDAO/nbproject/private/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsUsuarioDAO/nbproject/private/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguins/nbproject/private/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsUsuarioBO/nbproject/private/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsUsuarioDAO/build/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsUsuarioBO/build/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsUsuarioBO/dist/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsUsuarioDAO/dist/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguins/build/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguins/dist/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsAnioAcademicoBO/nbproject/private/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsContratoBO/nbproject/private/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsContratoDAO/nbproject/private/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsCurriculaBO/nbproject/private/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsCurriculaDAO/nbproject/private/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsInstitucionEducativaBO/nbproject/private/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsInstitucionEducativaDAO/nbproject/private/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsContratoDAO_1/nbproject/private/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsInstitucionEducativaBO/build/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsInstitucionEducativaDAO/build/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsInstitucionEducativaDAO/dist/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsInstitucionEducativaBO/dist/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsAnioAcademicoBO/build/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsAnioAcademicoDAO/build/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsAnioAcademicoDAO/dist/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsAnioAcademicoBO/dist/
-/Refactorizado/SoftPixelPenguinsAnioAcademicoDAO/build/
-/Refactorizado/SoftPixelPenguinsAnioAcademicoBO/build/
-/Refactorizado/SoftPixelPenguinsAnioAcademicoDAO/dist/
-/Refactorizado/SoftPixelPenguinsInstitucionEducativaDAO/build/
-/Refactorizado/SoftPixelPenguinsInstitucionEducativaBO/build/
-/Refactorizado/SoftPixelPenguinsAnioAcademicoBO/dist/
-/Refactorizado/SoftPixelPenguinsInstitucionEducativaModel/build/
-/Refactorizado/SoftPixelPenguinsInstitucionEducativaModel/dist/
-/Refactorizado/SoftPixelPenguinsInstitucionEducativaDAO/dist/
-/Refactorizado/SoftPixelPenguinsInstitucionEducativaBO/dist/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsCurriculaDAO/build/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsCurriculaDAO/dist/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsCurriculaBO/build/
-/Laboratorio 7 - PixelPenguins/Programacion JAVA/SoftPixelPenguinsCurriculaBO/dist/
-/Refactorizado/SoftPixelPenguinsAnioAcademicoBO/nbproject/private/
-/Refactorizado/SoftPixelPenguinsAnioAcademicoDAO/nbproject/private/
-/Refactorizado/SoftPixelPenguinsAnioAcademicoModel/nbproject/private/
-/Refactorizado/SoftPixelPenguinsCurriculaBO/nbproject/private/
-/Refactorizado/SoftPixelPenguinsCurriculaDAO/nbproject/private/
-/Refactorizado/SoftPixelPenguinsCurriculaModel/nbproject/private/
-/Refactorizado/SoftPixelPenguinsInstitucionEducativaBO/nbproject/private/
-/Refactorizado/SoftPixelPenguinsInstitucionEducativaDAO/nbproject/private/
-/Refactorizado/SoftPixelPenguinsInstitucionEducativaModel/nbproject/private/
-/Refactorizado/SoftPixelPenguinsContratoModel/nbproject/private/
-/Refactorizado/SoftPixelPenguinsInstitucionEducativaDAO/build
-/Laboratorio 10 - PixelPenguins/Programacion JAVA/SoftPixelPenguins/dist/
-/Refactorizado/SoftPixelPenguins/dist/
-/Refactorizado/SoftPixelPenguinsCurriculaBO/build/
-/Refactorizado/SoftPixelPenguinsCurriculaDAO/build/
-/Refactorizado/SoftPixelPenguinsCurriculaDAO/dist/
-/Refactorizado/SoftPixelPenguinsCurriculaBO/dist/
-/Refactorizado/SoftPixelPenguinsUsuarioWSBL/nbproject/private/
-/Refactorizado/SoftPixelPenguinsUsuarioWSBL/build/
-/Refactorizado/SoftPixelPenguinsInstitucionEducativaWSBL/nbproject/private/
-/Refactorizado/SoftPixelPenguinsInstitucionEducativaWSBL/build/
-/Refactorizado/SoftPixelPenguinsCurriculaWSBL/nbproject/private/
-/Refactorizado/SoftPixelPenguinsCurriculaWSBL/build/
-/Refactorizado/SoftPixelPenguinsCurriculaWSBL/dist/
-/Refactorizado/SoftPixelPenguinsAnioAcademicoWSBL/nbproject/private/
-/Refactorizado/SoftPixelPenguinsAnioAcademicoWSBL/build/
-/Lab6/SoftPixelPenguinsDBManager/dist/
-/Refactorizado/SoftPixelPenguinsWSBL/nbproject/private/
-/Refactorizado/SoftPixelPenguinsWSBL/build/
-/Refactorizado/SoftPixelPenguinsWSBL/dist/
-/Refactorizado/SoftPixelPenguinsInstitucionEducativaModel/build
-/Refactorizado/SoftPixelPenguinsContratoModel/build/
-/Refactorizado/SoftPixelPenguinsCurriculaModel/build
-/Refactorizado/SoftPixelPenguinsUsuarioBO/build/
-/Refactorizado/SoftPixelPenguinsUsuarioDAO/build/
-/Refactorizado/SoftPixelPenguinsContratoModel/dist/
-/Refactorizado/SoftPixelPenguinsCurriculaModel/dist/
-/Refactorizado/SoftPixelPenguinsAnioAcademicoModel/dist/
-/Refactorizado/SoftPixelPenguinsDBManager/build/
-/Refactorizado/SoftPixelPenguinsDBManager/dist/
-/Refactorizado/SoftPixelPenguinsUsuarioModel/dist/
-/Lab6/SoftPixelPenguinsDBManager/build/
-/Refactorizado/SoftPixelPenguinsUsuarioBO/dist/
-/Refactorizado/SoftPixelPenguinsUsuarioDAO/dist/
-/Refactorizado/SoftPixelPenguinsWS/dist/
-/Laboratorio 10/SoftIEPixelPenguins/Backend/SoftPixelPenguinsContratoModel/dist/
-Laboratorio 10/SoftIEPixelPenguins/Frontend/SoftPixelPenguins/.vs/SoftPixelPenguins/FileContentIndex/70488c13-4cab-4559-b681-f6dfe4430cce.vsidx
-Laboratorio 10/SoftIEPixelPenguins/Frontend/SoftPixelPenguins/.vs/SoftPixelPenguins/FileContentIndex/76391a97-9936-438d-907a-39d3062fc471.vsidx
-Laboratorio 10/SoftIEPixelPenguins/Frontend/SoftPixelPenguins/.vs/SoftPixelPenguins/FileContentIndex/a59648b3-ceea-471b-b606-e3e352444180.vsidx
-Laboratorio 10/SoftIEPixelPenguins/Frontend/SoftPixelPenguins/.vs/SoftPixelPenguins/FileContentIndex/f132c895-6fd9-4a37-a986-8c313b9bd405.vsidx
-Laboratorio 10/SoftIEPixelPenguins/Frontend/SoftPixelPenguins/.vs/SoftPixelPenguins/FileContentIndex/f8875e07-cd1e-4735-9efd-2c25333a1488.vsidx
-/Laboratorio 10/SoftIEPixelPenguins/Backend/SoftPixelPenguins/dist/
-/Laboratorio 10/SoftIEPixelPenguins/Backend/SoftPixelPenguinsWS/dist/
+# Java
+*.class
+/build/
+out/
+# C#
+bin/
+obj/
+*.exe
+*.dll
+# Visual Studio
+.vscode/
+*.suo
+*.user
+ConnectedServices/
+# NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+*.war

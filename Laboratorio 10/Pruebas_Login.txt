@@ -10,3 +10,9 @@ Contraseña: password12
 
 Correo Equipo Administrativo: m20220111@example.com
 Contraseña: password12
+
+Correo2: afernanda@gmail.com
+Contraseña: pp002
+
+Correo3: manuel@pucp.edu.pe
+Contraseña: a12345

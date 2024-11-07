@@ -3,10 +3,16 @@
 ----------------------------------------------------------------
 
 Correo Alumno: a20220111@example.com
-Contraseña: password123
+Contraseña: password12
 
 Correo Profesor: p20220111@example.com
-Contraseña: password123
+Contraseña: password12
 
 Correo Equipo Administrativo: m20220111@example.com
-Contraseña: password123
+Contraseña: password12
+
+Correo2: afernanda@gmail.com
+Contraseña: pp002
+
+Correo3: manuel@pucp.edu.pe
+Contraseña: a12345

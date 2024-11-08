@@ -55,10 +55,10 @@ public class Principal {
 //        for(GradoAcademico aux:grados)
 //            System.out.println(aux.getNumeroGrado());
         
-        NotaBO notaBO=new NotaBO();
-        ArrayList<Nota> notas=notaBO.listarPorAlumnoYCurso(31, 1);
-        for(Nota aux: notas)
-            System.out.println(aux.getNota());
+//        NotaBO notaBO=new NotaBO();
+//        ArrayList<Nota> notas=notaBO.listarPorAlumnoYCurso(31, 1);
+//        for(Nota aux: notas)
+//            System.out.println(aux.getNota());
         
         PagoBO pagoBO=new PagoBO();
         Pago auxPago=pagoBO.PagoXAlumnos(1);

@@ -145,7 +145,6 @@ public class PagoDAOImpl extends DAOImpl implements PagoDAO {
     
     @Override
     public Pago PagoXAlumnos(int idMatricula) {
-        Pago pago = null;
         try {
             this.abrirConexion();
             String sql="SELECT "+this.obtenerProyeccionParaSelect()+" FROM "+this.nombre_tabla;
@@ -154,18 +153,10 @@ public class PagoDAOImpl extends DAOImpl implements PagoDAO {
             this.incluirParametroInt(1, idMatricula);
             this.ejecutarConsultaEnBD(sql);
             if (this.resultSet.next()) {
-                pago = new Pago();
-                Date fechaPago = this.resultSet.getDate("fechaPago"); 
-                String estado = this.resultSet.getString("estado");
-                byte[] comprobanteDePago = this.resultSet.getBytes("comprobanteDePago");
-                pago.setFechaPago(fechaPago); 
-                if("PENDIENTE".equals(estado)){
-                    pago.setEstado(EstadoDePago.PENDIENTE);
-                }
-                else if("ATRASADO".equals(estado)){
-                    pago.setEstado(EstadoDePago.ATRASADO);
-                }
-                pago.setComprobanteDePago(comprobanteDePago);
+                this.instanciarObjetoDelResultSet();
+            }
+            else{
+                this.limpiarObjetoDelResultSet();
             }
         } catch (SQLException ex) {
             System.err.println("Error");
@@ -176,6 +167,6 @@ public class PagoDAOImpl extends DAOImpl implements PagoDAO {
                 System.err.println("Error al cerrar la conexión - " + ex);
             }
         }
-        return pago;
+        return this.pago;
     }
 }

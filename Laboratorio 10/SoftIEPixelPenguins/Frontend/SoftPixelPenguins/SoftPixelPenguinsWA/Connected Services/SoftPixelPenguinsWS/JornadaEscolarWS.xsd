@@ -92,8 +92,8 @@
   </xs:simpleType>
   <xs:simpleType name="nivelEducativo">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="PRIMARIO" />
-      <xs:enumeration value="SECUNDARIO" />
+      <xs:enumeration value="PRIMARIA" />
+      <xs:enumeration value="SECUNDARIA" />
     </xs:restriction>
   </xs:simpleType>
 </xs:schema>

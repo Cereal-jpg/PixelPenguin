@@ -27,7 +27,7 @@ namespace SoftPixelPenguinsWA
                 BindingList<gradoAcademico> grados = new BindingList<gradoAcademico>(gradoBO.listarTodosGradosAcademicos());
                 foreach (gradoAcademico grado in grados)
                 {
-                    string textoItem = $"{grado.nivel}  {grado.numeroGrado} ({grado.vacantes - grado.cantidadAlumnos} vacantes restantes)";
+                    string textoItem = $"{grado.numeroGrado}° {grado.nivel} ({grado.vacantes - grado.cantidadAlumnos} vacantes restantes)";
                     string valorItem = grado.idGradoAcademico.ToString();
                     ddlGrados.Items.Add(new ListItem(textoItem, valorItem));
                 }

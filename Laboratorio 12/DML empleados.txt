@@ -1,0 +1,234 @@
+DML usados
+----------
+
+INSERT INTO Usuario 
+(fid_rol,dni,nombreCompleto,fechaNacimiento,direccion,email,sexo,username,password) 
+VALUES (2,'71234671','Alejandro Ramirez','1976-12-26','Av. Abancay',
+'p20001200@pucp.edu.pe','Masculino','AlejandroR','password12');
+INSERT INTO Usuario 
+(fid_rol,dni,nombreCompleto,fechaNacimiento,direccion,email,sexo,username,password) 
+VALUES (2,'10281155','Fernando Gómez','1978-03-22','Av. Brasil',
+'p20001202@pucp.edu.pe','Masculino','FernandoG','password12');
+INSERT INTO Usuario 
+(fid_rol,dni,nombreCompleto,fechaNacimiento,direccion,email,sexo,username,password) 
+VALUES (2,'23399956','Javier López','1976-12-26','Av. Abancay',
+'p20001204@pucp.edu.pe','Masculino','JavierL','password12');
+INSERT INTO Usuario 
+(fid_rol,dni,nombreCompleto,fechaNacimiento,direccion,email,sexo,username,password) 
+VALUES (2,'31961203','Carlos Ortiz','1982-09-12','Av. Los Próceres',
+'p20001206@pucp.edu.pe','Masculino','CarlosO','password12');
+INSERT INTO Usuario 
+(fid_rol,dni,nombreCompleto,fechaNacimiento,direccion,email,sexo,username,password) 
+VALUES (2,'93830311','Juan Pérez','1990-02-09','Av. Naranjal',
+'p20001208@pucp.edu.pe','Masculino','JuanP','password12');
+INSERT INTO Usuario 
+(fid_rol,dni,nombreCompleto,fechaNacimiento,direccion,email,sexo,username,password) 
+VALUES (2,'78003569','José Méndez','1988-05-16','Av. Javier Prado',
+'p20001210@pucp.edu.pe','Masculino','AlejandroR','password12');
+INSERT INTO Usuario 
+(fid_rol,dni,nombreCompleto,fechaNacimiento,direccion,email,sexo,username,password) 
+VALUES (2,'48743698','Isabel Martínez','1987-02-26','Av. Bolivia',
+'p20001201@pucp.edu.pe','Femenino','IsabelM','password12');
+INSERT INTO Usuario 
+(fid_rol,dni,nombreCompleto,fechaNacimiento,direccion,email,sexo,username,password) 
+VALUES (2,'45216873','Laura Sánchez','1976-12-26','Av. Caquetá',
+'p20001203@pucp.edu.pe','Femenino','LauraS','password12');
+INSERT INTO Usuario 
+(fid_rol,dni,nombreCompleto,fechaNacimiento,direccion,email,sexo,username,password) 
+VALUES (2,'93328469','Mariana Torres','1986-10-15','Av. Emancipación',
+'p20001205@pucp.edu.pe','Femenino','MarianaT','password12');
+INSERT INTO Usuario 
+(fid_rol,dni,nombreCompleto,fechaNacimiento,direccion,email,sexo,username,password) 
+VALUES (2,'67776279','Andrea Fernández','1976-12-26','Av. Universitaria',
+'p20001207@pucp.edu.pe','Femenino','AndreaF','password12');
+INSERT INTO Usuario 
+(fid_rol,dni,nombreCompleto,fechaNacimiento,direccion,email,sexo,username,password) 
+VALUES (2,'21633748','Patricia Vega','1991-12-14','Av. Miguel Grau',
+'p20001209@pucp.edu.pe','Femenino','PatriciaP','password12');
+INSERT INTO Usuario 
+(fid_rol,dni,nombreCompleto,fechaNacimiento,direccion,email,sexo,username,password) 
+VALUES (2,'43621584','Lucía Hernández','1990-04-18','Av. Universitaria',
+'p20001211@pucp.edu.pe','Femenino','LuciaH','password12');
+
+...
+INSERT INTO Usuario 
+(fid_rol,dni,nombreCompleto,fechaNacimiento,direccion,email,sexo,username,password) 
+VALUES (2,'48743698','Isabel Martínez 2','1987-02-26','Av. Bolivia',
+'p20001223@pucp.edu.pe','Otro','IsabelM','password12');
+INSERT INTO Profesor (idProfesor,codigoProfesor,especialidad)
+VALUES (28,20001223,'Arte y Diseño');
+INSERT INTO Usuario 
+(fid_rol,dni,nombreCompleto,fechaNacimiento,direccion,email,sexo,username,password) 
+VALUES (2,'43621584','Lucía Hernández 2','1990-04-18','Av. Universitaria',
+'p20001224@pucp.edu.pe','Femenino','LuciaH','password12');
+INSERT INTO Profesor (idProfesor,codigoProfesor,especialidad)
+VALUES (29,20001224,'Educación Primaria');
+INSERT INTO Usuario 
+(fid_rol,dni,nombreCompleto,fechaNacimiento,direccion,email,sexo,username,password) 
+VALUES (2,'43621584','Lucía Hernández 3','1990-04-18','Av. Universitaria',
+'p20001225@pucp.edu.pe','Femenino','LuciaH','password12');
+INSERT INTO Profesor (idProfesor,codigoProfesor,especialidad)
+VALUES (30,20001225,'Educación Secundaria');
+
+INSERT INTO Usuario 
+(fid_rol,dni,nombreCompleto,fechaNacimiento,direccion,email,sexo,username,password) 
+VALUES (3,'93123469','Mario Gutierrez','1990-10-05','Av. Abancay',
+'m20000111@pucp.edu.pe','Masculino','MarioG','password12');
+INSERT INTO Usuario 
+(fid_rol,dni,nombreCompleto,fechaNacimiento,direccion,email,sexo,username,password) 
+VALUES (3,'67456279','Laura Rivera','1986-12-16','Av. Universitaria',
+'m20000112@pucp.edu.pe','Femenino','LauraR','password12');
+INSERT INTO Usuario 
+(fid_rol,dni,nombreCompleto,fechaNacimiento,direccion,email,sexo,username,password) 
+VALUES (3,'21789748','Juan Ortega','1982-12-04','Av. Brasil',
+'m20000113@pucp.edu.pe','Masculino','JuanO','password12');
+
+
+INSERT INTO Profesor (idProfesor,codigoProfesor,especialidad)
+VALUES (2,20001200,'Matemáticas');
+INSERT INTO Profesor (idProfesor,codigoProfesor,especialidad)
+VALUES (3,20001202,'Linguística');
+INSERT INTO Profesor (idProfesor,codigoProfesor,especialidad)
+VALUES (4,20001204,'Química');
+INSERT INTO Profesor (idProfesor,codigoProfesor,especialidad)
+VALUES (5,20001206,'Idiomas');
+INSERT INTO Profesor (idProfesor,codigoProfesor,especialidad)
+VALUES (6,20001208,'Educación Física');
+INSERT INTO Profesor (idProfesor,codigoProfesor,especialidad)
+VALUES (7,20001210,'Informática');
+INSERT INTO Profesor (idProfesor,codigoProfesor,especialidad)
+VALUES (8,20001201,'Arte y Diseño');
+INSERT INTO Profesor (idProfesor,codigoProfesor,especialidad)
+VALUES (9,20001203,'Psicología');
+INSERT INTO Profesor (idProfesor,codigoProfesor,especialidad)
+VALUES (10,20001205,'Psicología');
+INSERT INTO Profesor (idProfesor,codigoProfesor,especialidad)
+VALUES (11,20001207,'Psicología');
+INSERT INTO Profesor (idProfesor,codigoProfesor,especialidad)
+VALUES (12,20001209,'Literatura');
+INSERT INTO Profesor (idProfesor,codigoProfesor,especialidad)
+VALUES (13,20001211,'Literatura');
+
+
+INSERT INTO GradoAcademico (fid_AnioAcademico,numeroGrado,nivel,cantidadAlumnos,vacantes)
+VALUES (1,1,'PRIMARIA',0,120);
+INSERT INTO GradoAcademico (fid_AnioAcademico,numeroGrado,nivel,cantidadAlumnos,vacantes)
+VALUES (1,2,'PRIMARIA',0,120);
+INSERT INTO GradoAcademico (fid_AnioAcademico,numeroGrado,nivel,cantidadAlumnos,vacantes)
+VALUES (1,3,'PRIMARIA',0,120);
+INSERT INTO GradoAcademico (fid_AnioAcademico,numeroGrado,nivel,cantidadAlumnos,vacantes)
+VALUES (1,4,'PRIMARIA',0,120);
+INSERT INTO GradoAcademico (fid_AnioAcademico,numeroGrado,nivel,cantidadAlumnos,vacantes)
+VALUES (1,5,'PRIMARIA',0,120);
+INSERT INTO GradoAcademico (fid_AnioAcademico,numeroGrado,nivel,cantidadAlumnos,vacantes)
+VALUES (1,6,'PRIMARIA',0,120);
+INSERT INTO GradoAcademico (fid_AnioAcademico,numeroGrado,nivel,cantidadAlumnos,vacantes)
+VALUES (1,1,'SECUNDARIA',0,120);
+INSERT INTO GradoAcademico (fid_AnioAcademico,numeroGrado,nivel,cantidadAlumnos,vacantes)
+VALUES (1,2,'SECUNDARIA',0,120);
+INSERT INTO GradoAcademico (fid_AnioAcademico,numeroGrado,nivel,cantidadAlumnos,vacantes)
+VALUES (1,3,'SECUNDARIA',0,120);
+INSERT INTO GradoAcademico (fid_AnioAcademico,numeroGrado,nivel,cantidadAlumnos,vacantes)
+VALUES (1,4,'SECUNDARIA',0,120);
+INSERT INTO GradoAcademico (fid_AnioAcademico,numeroGrado,nivel,cantidadAlumnos,vacantes)
+VALUES (1,5,'SECUNDARIA',0,120);
+
+
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (1,'A','A101',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (1,'B','A102',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (1,'C','A103',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (1,'D','A104',0,30);
+
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (2,'A','A105',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (2,'B','A106',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (2,'C','A107',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (2,'D','A108',0,30);
+
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (3,'A','A109',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (3,'B','A110',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (3,'C','A111',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (3,'D','A112',0,30);
+
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (4,'A','A201',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (4,'B','A202',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (4,'C','A203',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (4,'D','A204',0,30);
+
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (5,'A','A205',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (5,'B','A206',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (5,'C','A207',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (5,'D','A208',0,30);
+
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (6,'A','A209',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (6,'B','A210',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (6,'C','A211',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (6,'D','A212',0,30);
+
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (7,'A','A301',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (7,'B','A302',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (7,'C','A303',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (7,'D','A304',0,30);
+
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (8,'A','A305',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (8,'B','A306',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (8,'C','A307',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (8,'D','A308',0,30);
+
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (9,'A','A309',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (9,'B','A310',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (9,'C','A311',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (9,'D','A312',0,30);
+
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (10,'A','A401',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (10,'B','A402',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (10,'C','A403',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (10,'D','A404',0,30);
+
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (11,'A','A405',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (11,'B','A406',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (11,'C','A407',0,30);
+INSERT INTO SeccionAcademica (fid_GradoAcademico,seccion,aula,cantidadAlumnos,vacantes)
+VALUES (11,'D','A408',0,30);

@@ -147,7 +147,8 @@ public class NotaDAOImpl extends DAOImpl implements NotaDAO {
         this.usarPredicadoParaListado = true;
         try {
             this.abrirConexion();
-            String sql = this.generarSQLParaListarTodos(null);
+            String sql = "SELECT "+this.obtenerProyeccionParaSelect()+" FROM "+this.nombre_tabla;
+            sql=sql.concat(this.obtenerPredicadoParaListado());
             this.colocarSQLenStatement(sql);
             if(this.usarPredicadoParaListado){
                 this.incluirParametroInt(1, idAlumno);

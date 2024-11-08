@@ -139,11 +139,17 @@ public class PagoDAOImpl extends DAOImpl implements PagoDAO {
     }
 
     @Override
+    protected String obtenerPredicadoParaListado() {
+        return " WHERE fid_Matricula=? AND estado='PENDIENTE' OR estado='ATRASADO'";
+    }
+    
+    @Override
     public Pago PagoXAlumnos(int idMatricula) {
         Pago pago = null;
         try {
             this.abrirConexion();
-            String sql = "SELECT  fechaPago, estado, comprobanteDePago FROM Pago WHERE fid_Matricula = ? AND estado='PENDIENTE' OR estado='ATRASADO'";
+            String sql="SELECT "+this.obtenerProyeccionParaSelect()+" FROM "+this.nombre_tabla;
+            sql=sql.concat(this.obtenerPredicadoParaListado());
             this.colocarSQLenStatement(sql);
             this.incluirParametroInt(1, idMatricula);
             this.ejecutarConsultaEnBD(sql);

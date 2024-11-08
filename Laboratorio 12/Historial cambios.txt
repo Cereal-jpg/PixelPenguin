@@ -1,0 +1,42 @@
+Nuevos cambios en BD
+
+1. DDL actualizado
+2. Enum en GradoAcademico cambiado a PRIMARIA y SECUNDARIA en lugar de en masculino pq no queda
+3. A Curso se le añadió un fid_Profesor, para que en su vista también pueda ver los que tiene y modificar notas
+4. A Nota se le añadió un fid_Alumno y un fid_Matricula, para buscar según una de las matrículas de un alumno y notas únicas para el alumno en sí según sus cursos
+5. A Pagos se le añadió un atributo de comprobanteDePago para acceder a los archivos de las boletas o facturas.
+6. Todo lo demás igual, pero las tablas muchos a muchos aún están por verse
+7. Se rellenaron datos de todas las tablas para mostrar
+8. Se reacomodó todo el Backend, quedó sin interfaz
+9. El frontend aún está donde se quedó en la carpeta del lab anterior, he creado un nuevo proyecto para el back y front (aún falta todo xd).
+
+Revisar Pago x Matrícula y Notas por Alumno y Curso.
+
+
+HORARIO
+
+PRIMARIA				Horas/semana
+
+MATEMATICA					4
+COMUNICACION				4
+PERSONAL SOCIAL				4
+CIENCIA Y TECNOLOGÍA		4
+INGLÉS						4
+EDUCACIÓN FÍSICA			3
+COMPUTACIÓN					3
+ARTE Y CULTURA				2
+LECTURA						1
+TUTORÍA						1
+
+SECUNDARIA 				Horas/semana
+
+MATEMATICA					6   <-
+COMUNICACION				4	
+PERSONAL SOCIAL				4
+CIENCIA Y TECNOLOGÍA		4
+INGLÉS						5	<-
+EDUCACIÓN FÍSICA			3
+COMPUTACIÓN					5	<-
+ARTE Y CULTURA				2
+LECTURA						1
+TUTORÍA						1

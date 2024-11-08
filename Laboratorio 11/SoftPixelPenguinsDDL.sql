@@ -86,7 +86,7 @@ CREATE TABLE GradoAcademico(
 	idGradoAcademico INT AUTO_INCREMENT,
     fid_AnioAcademico INT NOT NULL,
     numeroGrado INT NOT NULL,
-    nivel ENUM ('PRIMARIO','SECUNDARIO') NOT NULL,
+    nivel ENUM ('PRIMARIA','SECUNDARIA') NOT NULL,
     cantidadAlumnos INT NOT NULL,
     vacantes INT NOT NULL,
     PRIMARY KEY (idGradoAcademico),
@@ -133,10 +133,6 @@ CREATE TABLE Matricula(
     fid_Alumno INT NOT NULL,
     fid_AnioAcademico INT NOT NULL,
     fid_GradoAcademico INT NOT NULL,
-    cumpleRequisitos TINYINT NOT NULL,
-    fechaInicio DATE NOT NULL,
-    fechaFin DATE NOT NULL,
-    estado ENUM('PENDIENTE','CANCELADA','RECHAZADA'),
     PRIMARY KEY (idMatricula),
     FOREIGN KEY (fid_Alumno) REFERENCES Alumno(idAlumno),
     FOREIGN KEY (fid_AnioAcademico) REFERENCES AnioAcademico(idAnioAcademico),
@@ -159,11 +155,13 @@ DROP TABLE IF EXISTS Curso;
 CREATE TABLE Curso(
 	idCurso INT AUTO_INCREMENT,
     fid_GradoAcademico INT NOT NULL,
+    fid_Profesor INT NOT NULL,
     codigoCurso VARCHAR(20) NOT NULL,
     nombre VARCHAR(100) NOT NULL,
     horasPorSemana INT NOT NULL,
     horasTotales INT NOT NULL,
     PRIMARY KEY (idCurso),
+    FOREIGN KEY (fid_Profesor) REFERENCES Profesor (idProfesor),
     FOREIGN KEY (fid_GradoAcademico) REFERENCES GradoAcademico (idGradoAcademico)
 );
 
@@ -179,6 +177,8 @@ CREATE TABLE Competencia(
 DROP TABLE IF EXISTS Nota;
 CREATE TABLE Nota(
 	idNota INT AUTO_INCREMENT,
+    fid_Matricula INT NOT NULL,
+    fid_Alumno INT NOT NULL,
     fid_Curso INT NOT NULL,
     fid_Competencia INT NOT NULL,
     nota VARCHAR(10) NOT NULL,

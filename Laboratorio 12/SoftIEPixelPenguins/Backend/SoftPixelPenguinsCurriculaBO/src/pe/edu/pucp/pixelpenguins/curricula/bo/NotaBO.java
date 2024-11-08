@@ -36,7 +36,7 @@ public class NotaBO {
     }
     
     public ArrayList<Nota> listarPorAlumnoYCurso(Integer idAlumno,Integer idCurso){
-        return this.listarPorAlumnoYCurso(idAlumno, idCurso);
+        return this.notaDAO.listarPorAlumnoYCurso(idAlumno, idCurso);
     }
     
 }

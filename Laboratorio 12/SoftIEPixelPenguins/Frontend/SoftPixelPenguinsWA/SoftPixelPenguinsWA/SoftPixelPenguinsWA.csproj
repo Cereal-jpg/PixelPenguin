@@ -139,6 +139,11 @@
     <Content Include="IndexPersonalAdministrativo.aspx" />
     <Content Include="IndexProfesor.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="MatriculaGenerica.aspx" />
+    <Content Include="MatriculaOnlineAlumno.aspx" />
+    <Content Include="Matricularse.aspx" />
+    <Content Include="MisCursosAlumno.aspx" />
+    <Content Include="ReporteNotasAlumno.aspx" />
     <Content Include="Scripts\BarraProgreso.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -642,7 +647,42 @@
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MatriculaGenerica.aspx.cs">
+      <DependentUpon>MatriculaGenerica.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MatriculaGenerica.aspx.designer.cs">
+      <DependentUpon>MatriculaGenerica.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MatriculaOnlineAlumno.aspx.cs">
+      <DependentUpon>MatriculaOnlineAlumno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MatriculaOnlineAlumno.aspx.designer.cs">
+      <DependentUpon>MatriculaOnlineAlumno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Matricularse.aspx.cs">
+      <DependentUpon>Matricularse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Matricularse.aspx.designer.cs">
+      <DependentUpon>Matricularse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MisCursosAlumno.aspx.cs">
+      <DependentUpon>MisCursosAlumno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MisCursosAlumno.aspx.designer.cs">
+      <DependentUpon>MisCursosAlumno.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReporteNotasAlumno.aspx.cs">
+      <DependentUpon>ReporteNotasAlumno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReporteNotasAlumno.aspx.designer.cs">
+      <DependentUpon>ReporteNotasAlumno.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SoftPixelPenguins.Master.cs">
       <DependentUpon>SoftPixelPenguins.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

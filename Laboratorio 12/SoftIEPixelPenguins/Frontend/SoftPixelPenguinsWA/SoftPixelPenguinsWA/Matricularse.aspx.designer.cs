@@ -11,34 +11,34 @@ namespace SoftPixelPenguinsWA
 {
 
 
-    public partial class IndexAlumno
+    public partial class Matricularse
     {
 
         /// <summary>
-        /// Control notificationList.
+        /// Control form1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl notificationList;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control fechaPagoLiteral.
+        /// Control IniciarProceso.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal fechaPagoLiteral;
+        protected global::System.Web.UI.WebControls.Button IniciarProceso;
 
         /// <summary>
-        /// Control Estado.
+        /// Control PlanEstudios.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal Estado;
+        protected global::System.Web.UI.WebControls.Button PlanEstudios;
     }
 }

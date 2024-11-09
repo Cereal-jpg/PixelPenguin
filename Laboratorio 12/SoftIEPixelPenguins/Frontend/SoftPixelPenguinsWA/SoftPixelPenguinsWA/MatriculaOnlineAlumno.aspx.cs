@@ -7,14 +7,14 @@ using System.Web.UI.WebControls;
 
 namespace SoftPixelPenguinsWA
 {
-    public partial class IndexPersonalAdministrativo : System.Web.UI.Page
+    public partial class MatriculaOnlineAlumno : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 // Verifica si la página actual es el index
-                if (Request.Url.AbsolutePath.EndsWith("IndexPersonalAdministrativo.aspx", StringComparison.OrdinalIgnoreCase))
+                if (Request.Url.AbsolutePath.EndsWith("MatriculaOnlineAlumno.aspx", StringComparison.OrdinalIgnoreCase))
                 {
                     // Oculta el menú deseado
                     ContentPlaceHolder menuItem6 = (ContentPlaceHolder)Master.FindControl("menuItem6");
@@ -24,6 +24,10 @@ namespace SoftPixelPenguinsWA
                     }
                 }
             }
+        }
+        protected void btnIniciarMatricula_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("MatriculaGenerica.aspx");
         }
     }
 }

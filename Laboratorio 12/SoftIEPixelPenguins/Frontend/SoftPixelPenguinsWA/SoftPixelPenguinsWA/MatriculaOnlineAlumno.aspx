@@ -1,8 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftPixelPenguins.Master" AutoEventWireup="true" CodeBehind="IndexAlumno.aspx.cs" Inherits="SoftPixelPenguinsWA.IndexAlumno" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftPixelPenguins.Master" AutoEventWireup="true" CodeBehind="MatriculaOnlineAlumno.aspx.cs" Inherits="SoftPixelPenguinsWA.MatriculaOnlineAlumno" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
-    Home - Alumno
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="cphScripts" runat="server">
+    Matrícula - Alumno
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem1" runat="server">
     <a href="IndexAlumno.aspx"><i class="fa-solid fa-home"></i>Inicio</a>
@@ -24,21 +22,20 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
-    <h2 style="text-align: left; color: #000f;">Alumno - Inicio</h2>
+    <h2 style="text-align: left; color: #000f;">Matrícula Online</h2>
     <link rel="stylesheet" href="Content/Estilos-Alumno.css" />
-    <div class="container-al">
-        <div class="schedule">
-            <h3>Horario Académico</h3>
-            <img src="Images/HORARIO1.png" alt="Horario Académico" class="centered-image"/>
+    <div class="container-matricula">
+        <div class="matricula-section">
+            <h3><i class="fas fa-lightbulb icon-color"></i>¡Hola!</h3>    
+            <p>Bienvenido a la Matrícula online</p>
+            <p>En este espacio podrás iniciar o consultar el estado de matrícula para el siguiente año</p>
+            <p>¿Quieres iniciar con tu proceso? El proceso consta de 3 pasos</p>
+            <div class="button-container">
+                <asp:Button ID="btnIniciarMatricula" runat="server" Text="Iniciar Proceso" CssClass="btn-matricula" OnClick="btnIniciarMatricula_Click" />
+            </div>
         </div>
-        <div class="notifications">
-            <h3>Notificaciones</h3>
-            <ul id="notificationList" class="notification-list" runat="server">
-                <li>Próxima fecha de pago: <asp:Literal ID="fechaPagoLiteral" runat="server"></asp:Literal></li>
-                <li>Estado de pagos: <asp:Literal ID="Estado" runat="server"></asp:Literal></li>
-                <li>Entrega de trabajos hasta el jueves.</li>
-                <li>Examen de matemáticas programado para el lunes.</li>
-            </ul>
+        <div class="image-section">
+            <img src="Images/CHICOMAT.png" alt="Horario Académico" class="responsive-image"/>
         </div>
     </div>
 </asp:Content>

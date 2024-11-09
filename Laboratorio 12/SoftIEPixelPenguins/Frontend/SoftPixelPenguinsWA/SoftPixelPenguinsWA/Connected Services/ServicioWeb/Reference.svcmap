@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="cf91c93e-f09b-4f5f-974a-9f4580a9e606" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8080/SoftPixelPenguinsWSBL/archivo.disco" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PagoWS.wsdl" MetadataType="Wsdl" ID="51d9f351-f59a-4327-bd24-e5b35d5e1d1f" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/PagoWS?wsdl" />
+    <MetadataFile FileName="PersonalAdministrativoWS.wsdl" MetadataType="Wsdl" ID="ad3f8918-459d-4be3-a7d9-166069597976" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/PersonalAdministrativoWS?wsdl" />
+    <MetadataFile FileName="JornadaEscolarWS.wsdl" MetadataType="Wsdl" ID="c12a6db6-7ec0-47e5-9140-3ef4a00b0234" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/JornadaEscolarWS?wsdl" />
+    <MetadataFile FileName="CompetenciaWS.wsdl" MetadataType="Wsdl" ID="ad569cc7-cbcf-4c0e-9740-fd60b875f842" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/CompetenciaWS?wsdl" />
+    <MetadataFile FileName="RolWS.wsdl" MetadataType="Wsdl" ID="8b2b232f-52a7-4845-a7bd-4329067067a8" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/RolWS?wsdl" />
+    <MetadataFile FileName="NotaWS.wsdl" MetadataType="Wsdl" ID="14141b9f-6188-4f0c-b8d0-73c2bc8b2424" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/NotaWS?wsdl" />
+    <MetadataFile FileName="ApoderadoWS.xsd" MetadataType="Schema" ID="96d7a035-77a8-4076-bccb-7900844b2d8f" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/ApoderadoWS?xsd=1" />
+    <MetadataFile FileName="JornadaEscolarWS.xsd" MetadataType="Schema" ID="a345fc8f-8852-4fbd-a0d3-e91075434f11" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/JornadaEscolarWS?xsd=1" />
+    <MetadataFile FileName="HoraAcademicaWS.wsdl" MetadataType="Wsdl" ID="55614496-cbf8-4963-874f-43cdf57ea031" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/HoraAcademicaWS?wsdl" />
+    <MetadataFile FileName="InstitucionEducativaWS.wsdl" MetadataType="Wsdl" ID="f4245fd3-fb29-47ef-bb05-8aadf3b22b49" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/InstitucionEducativaWS?wsdl" />
+    <MetadataFile FileName="AlumnoWS.xsd" MetadataType="Schema" ID="fd9aa1fb-e7e8-4b3d-bc67-8b03ce2282af" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/AlumnoWS?xsd=1" />
+    <MetadataFile FileName="CompetenciaWS.xsd" MetadataType="Schema" ID="f46efe6a-965d-4eaa-83ad-f78d0775476a" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/CompetenciaWS?xsd=1" />
+    <MetadataFile FileName="ApoderadoWS.wsdl" MetadataType="Wsdl" ID="8a6bf5c9-1cdd-4a96-8a6d-398cac346163" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/ApoderadoWS?wsdl" />
+    <MetadataFile FileName="CursoWS.wsdl" MetadataType="Wsdl" ID="c9220e17-a80b-45a9-90f5-74f574cb5675" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/CursoWS?wsdl" />
+    <MetadataFile FileName="SeccionAcademicaWS.wsdl" MetadataType="Wsdl" ID="481bce58-d3f4-4d34-96a4-ba74b0e61e34" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/SeccionAcademicaWS?wsdl" />
+    <MetadataFile FileName="AdministradorWS.wsdl" MetadataType="Wsdl" ID="e6936c96-2446-4192-b99d-2d7dc9244ee7" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/AdministradorWS?wsdl" />
+    <MetadataFile FileName="ProfesorWS.xsd" MetadataType="Schema" ID="fe64e1d0-2e50-4372-ac73-0e063aaf5387" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/ProfesorWS?xsd=1" />
+    <MetadataFile FileName="PagoWS.xsd" MetadataType="Schema" ID="b2a8ddfe-fe69-4ff4-823a-aeb054e62d89" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/PagoWS?xsd=1" />
+    <MetadataFile FileName="NotaWS.xsd" MetadataType="Schema" ID="f54afcce-765e-4e74-bed6-cb3023dcaf3d" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/NotaWS?xsd=1" />
+    <MetadataFile FileName="CursoWS.xsd" MetadataType="Schema" ID="d3821c70-184d-4e9b-b752-1099d15192d4" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/CursoWS?xsd=1" />
+    <MetadataFile FileName="RolWS.xsd" MetadataType="Schema" ID="966d350f-f2cd-4606-a362-b08ec84f2416" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/RolWS?xsd=1" />
+    <MetadataFile FileName="GradoAcademicoWS.xsd" MetadataType="Schema" ID="656f85ef-b4c0-4c38-bfdb-9c2a45c419cd" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/GradoAcademicoWS?xsd=1" />
+    <MetadataFile FileName="ProfesorWS.wsdl" MetadataType="Wsdl" ID="e76f5992-f54b-42e2-b3ec-fed098a16fac" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/ProfesorWS?wsdl" />
+    <MetadataFile FileName="AnioAcademicoWS.xsd" MetadataType="Schema" ID="0cd4d2f1-b2e6-4a6b-ab09-d9e37fc2f707" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/AnioAcademicoWS?xsd=1" />
+    <MetadataFile FileName="AdministradorWS.xsd" MetadataType="Schema" ID="2c41829c-d2bb-448e-809e-caa9f2339563" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/AdministradorWS?xsd=1" />
+    <MetadataFile FileName="MatriculaWS.wsdl" MetadataType="Wsdl" ID="51368166-906e-41a2-8859-aa24fb076300" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/MatriculaWS?wsdl" />
+    <MetadataFile FileName="AlumnoWS.wsdl" MetadataType="Wsdl" ID="972f47d7-397d-41f5-be32-775bda6d07b7" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/AlumnoWS?wsdl" />
+    <MetadataFile FileName="UsuarioWS.wsdl" MetadataType="Wsdl" ID="132998a3-0ef0-4a46-bde4-29f4433bdca1" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/UsuarioWS?wsdl" />
+    <MetadataFile FileName="HoraAcademicaWS.xsd" MetadataType="Schema" ID="cfee8078-7624-42e2-97bf-5ee052ff9680" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/HoraAcademicaWS?xsd=1" />
+    <MetadataFile FileName="AnioAcademicoWS.wsdl" MetadataType="Wsdl" ID="758454a5-9806-4bc5-9330-6b8b8e2b7537" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/AnioAcademicoWS?wsdl" />
+    <MetadataFile FileName="UsuarioWS.xsd" MetadataType="Schema" ID="6f22593e-8298-4dfc-a0e0-cf618709e71b" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/UsuarioWS?xsd=1" />
+    <MetadataFile FileName="SeccionAcademicaWS.xsd" MetadataType="Schema" ID="3d83e344-d6fc-4df4-95ec-b2cb6e2595cb" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/SeccionAcademicaWS?xsd=1" />
+    <MetadataFile FileName="InstitucionEducativaWS.xsd" MetadataType="Schema" ID="32cf03a9-650a-4eb0-9d05-fcf35074180f" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/InstitucionEducativaWS?xsd=1" />
+    <MetadataFile FileName="GradoAcademicoWS.wsdl" MetadataType="Wsdl" ID="d44063c5-71f5-4969-9d11-b4b8fa699efa" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/GradoAcademicoWS?wsdl" />
+    <MetadataFile FileName="MatriculaWS.xsd" MetadataType="Schema" ID="4a2d8afb-01c0-4485-986c-7673d09bf215" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/MatriculaWS?xsd=1" />
+    <MetadataFile FileName="archivo.disco" MetadataType="Disco" ID="db321565-3e23-4123-ac4a-be6d42be11b8" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/archivo.disco" />
+    <MetadataFile FileName="PersonalAdministrativoWS.xsd" MetadataType="Schema" ID="2f08fb63-c4ab-4bfd-b4d3-935a30e086fa" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/PersonalAdministrativoWS?xsd=1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

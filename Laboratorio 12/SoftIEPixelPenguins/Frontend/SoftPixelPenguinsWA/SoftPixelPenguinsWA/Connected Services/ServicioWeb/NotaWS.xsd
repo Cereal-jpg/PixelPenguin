@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.pixelpenguins.pucp.edu.pe" targetNamespace="http://services.pixelpenguins.pucp.edu.pe" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarNota" type="tns:eliminarNota" />
+  <xs:element name="eliminarNotaResponse" type="tns:eliminarNotaResponse" />
+  <xs:element name="insertarNota" type="tns:insertarNota" />
+  <xs:element name="insertarNotaResponse" type="tns:insertarNotaResponse" />
+  <xs:element name="listarPorAlumnoYCurso" type="tns:listarPorAlumnoYCurso" />
+  <xs:element name="listarPorAlumnoYCursoResponse" type="tns:listarPorAlumnoYCursoResponse" />
+  <xs:element name="listarTodosNotas" type="tns:listarTodosNotas" />
+  <xs:element name="listarTodosNotasResponse" type="tns:listarTodosNotasResponse" />
+  <xs:element name="modificarNota" type="tns:modificarNota" />
+  <xs:element name="modificarNotaResponse" type="tns:modificarNotaResponse" />
+  <xs:element name="obtenerNotaPorId" type="tns:obtenerNotaPorId" />
+  <xs:element name="obtenerNotaPorIdResponse" type="tns:obtenerNotaPorIdResponse" />
+  <xs:complexType name="listarTodosNotas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosNotasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:nota" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="nota">
+    <xs:sequence>
+      <xs:element name="bimestre" type="xs:int" />
+      <xs:element minOccurs="0" name="competencia" type="tns:competencia" />
+      <xs:element minOccurs="0" name="curso" type="tns:curso" />
+      <xs:element name="fid_Alumno" type="xs:int" />
+      <xs:element name="fid_Matricula" type="xs:int" />
+      <xs:element minOccurs="0" name="idNota" type="xs:int" />
+      <xs:element minOccurs="0" name="nota" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="competencia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="curso" type="tns:curso" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idCompetencia" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="curso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="codigoCurso" type="xs:string" />
+      <xs:element name="fid_Profesor" type="xs:int" />
+      <xs:element minOccurs="0" name="gradoAcademico" type="tns:gradoAcademico" />
+      <xs:element name="horasPorSemana" type="xs:int" />
+      <xs:element name="horasTotales" type="xs:int" />
+      <xs:element minOccurs="0" name="idCurso" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="gradoAcademico">
+    <xs:sequence>
+      <xs:element name="cantidadAlumnos" type="xs:int" />
+      <xs:element name="fid_AnioAcademico" type="xs:int" />
+      <xs:element minOccurs="0" name="idGradoAcademico" type="xs:int" />
+      <xs:element minOccurs="0" name="nivel" type="tns:nivelEducativo" />
+      <xs:element name="numeroGrado" type="xs:int" />
+      <xs:element name="vacantes" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerNotaPorId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idNota" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerNotaPorIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:nota" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarNota">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nota" type="tns:nota" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarNotaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPorAlumnoYCurso">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idAlumno" type="xs:int" />
+      <xs:element minOccurs="0" name="idCurso" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPorAlumnoYCursoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:nota" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarNota">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nota" type="tns:nota" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarNotaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarNota">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nota" type="tns:nota" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarNotaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="nivelEducativo">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PRIMARIA" />
+      <xs:enumeration value="SECUNDARIA" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.pixelpenguins.pucp.edu.pe" targetNamespace="http://services.pixelpenguins.pucp.edu.pe" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarSeccionAcademica" type="tns:eliminarSeccionAcademica" />
+  <xs:element name="eliminarSeccionAcademicaResponse" type="tns:eliminarSeccionAcademicaResponse" />
+  <xs:element name="insertarSeccionAcademica" type="tns:insertarSeccionAcademica" />
+  <xs:element name="insertarSeccionAcademicaResponse" type="tns:insertarSeccionAcademicaResponse" />
+  <xs:element name="listarSeccionesPorGrado" type="tns:listarSeccionesPorGrado" />
+  <xs:element name="listarSeccionesPorGradoResponse" type="tns:listarSeccionesPorGradoResponse" />
+  <xs:element name="listarTodosSeccionesAcademicas" type="tns:listarTodosSeccionesAcademicas" />
+  <xs:element name="listarTodosSeccionesAcademicasResponse" type="tns:listarTodosSeccionesAcademicasResponse" />
+  <xs:element name="modificarSeccionAcademica" type="tns:modificarSeccionAcademica" />
+  <xs:element name="modificarSeccionAcademicaResponse" type="tns:modificarSeccionAcademicaResponse" />
+  <xs:element name="obtenerSeccionAcademicaPorId" type="tns:obtenerSeccionAcademicaPorId" />
+  <xs:element name="obtenerSeccionAcademicaPorIdResponse" type="tns:obtenerSeccionAcademicaPorIdResponse" />
+  <xs:complexType name="obtenerSeccionAcademicaPorId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idSeccionAcademica" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerSeccionAcademicaPorIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:seccionAcademica" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="seccionAcademica">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="aula" type="xs:string" />
+      <xs:element name="cantidadAlumnos" type="xs:int" />
+      <xs:element minOccurs="0" name="gradoAcademico" type="tns:gradoAcademico" />
+      <xs:element minOccurs="0" name="idSeccionAcademica" type="xs:int" />
+      <xs:element name="seccion" type="xs:unsignedShort" />
+      <xs:element name="vacantes" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="gradoAcademico">
+    <xs:sequence>
+      <xs:element name="cantidadAlumnos" type="xs:int" />
+      <xs:element name="fid_AnioAcademico" type="xs:int" />
+      <xs:element minOccurs="0" name="idGradoAcademico" type="xs:int" />
+      <xs:element minOccurs="0" name="nivel" type="tns:nivelEducativo" />
+      <xs:element name="numeroGrado" type="xs:int" />
+      <xs:element name="vacantes" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarSeccionAcademica">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="seccionAcademica" type="tns:seccionAcademica" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarSeccionAcademicaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodosSeccionesAcademicas">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosSeccionesAcademicasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:seccionAcademica" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarSeccionAcademica">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="seccionAcademica" type="tns:seccionAcademica" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarSeccionAcademicaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarSeccionAcademica">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="seccionAcademica" type="tns:seccionAcademica" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarSeccionAcademicaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarSeccionesPorGrado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="gradoAcademico" type="tns:gradoAcademico" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarSeccionesPorGradoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:seccionAcademica" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="nivelEducativo">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PRIMARIA" />
+      <xs:enumeration value="SECUNDARIA" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

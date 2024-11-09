@@ -52,12 +52,12 @@
                 </li>
                 <li class="nav-item mb-1">
                     <asp:ContentPlaceHolder ID="menuItem4" runat="server">
-                        <a href="#"><i class="fa-solid fa-book"></i>Item 4</a>
+                        <a href="#"><i class="fa-solid fa-minus"></i>Item 4</a>
                     </asp:ContentPlaceHolder>
                 </li>
                 <li class="nav-item mb-1">
                     <asp:ContentPlaceHolder ID="menuItem5" runat="server">
-                        <a href="#"><i class="fa-solid fa-user"></i>Item 5</a>
+                        <a href="#"><i class="fa-solid fa-users"></i>Item 5</a>
                     </asp:ContentPlaceHolder>
                 </li>
                 <li class="nav-item mb-1">

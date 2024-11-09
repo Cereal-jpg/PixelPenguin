@@ -5,17 +5,17 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftPixelPenguinsWSBL/ProfesorWS?xsd=1" namespace="http://services.pixelpenguins.pucp.edu.pe" />
     </xsd:schema>
   </types>
-  <message name="insertarProfesor">
-    <part name="parameters" element="tns:insertarProfesor" />
-  </message>
-  <message name="insertarProfesorResponse">
-    <part name="parameters" element="tns:insertarProfesorResponse" />
-  </message>
   <message name="eliminarProfesor">
     <part name="parameters" element="tns:eliminarProfesor" />
   </message>
   <message name="eliminarProfesorResponse">
     <part name="parameters" element="tns:eliminarProfesorResponse" />
+  </message>
+  <message name="insertarProfesor">
+    <part name="parameters" element="tns:insertarProfesor" />
+  </message>
+  <message name="insertarProfesorResponse">
+    <part name="parameters" element="tns:insertarProfesorResponse" />
   </message>
   <message name="modificarProfesor">
     <part name="parameters" element="tns:modificarProfesor" />
@@ -42,13 +42,13 @@
     <part name="parameters" element="tns:obtenerProfesorPorIdResponse" />
   </message>
   <portType name="ProfesorWS">
-    <operation name="insertarProfesor">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/insertarProfesorRequest" message="tns:insertarProfesor" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/insertarProfesorResponse" message="tns:insertarProfesorResponse" />
-    </operation>
     <operation name="eliminarProfesor">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/eliminarProfesorRequest" message="tns:eliminarProfesor" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/eliminarProfesorResponse" message="tns:eliminarProfesorResponse" />
+    </operation>
+    <operation name="insertarProfesor">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/insertarProfesorRequest" message="tns:insertarProfesor" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/insertarProfesorResponse" message="tns:insertarProfesorResponse" />
     </operation>
     <operation name="modificarProfesor">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/modificarProfesorRequest" message="tns:modificarProfesor" />
@@ -69,7 +69,7 @@
   </portType>
   <binding name="ProfesorWSPortBinding" type="tns:ProfesorWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="insertarProfesor">
+    <operation name="eliminarProfesor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -78,7 +78,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarProfesor">
+    <operation name="insertarProfesor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

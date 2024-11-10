@@ -1,22 +1,26 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftPixelPenguins.Master" AutoEventWireup="true" CodeBehind="IndexPersonalAdministrativo.aspx.cs" Inherits="SoftPixelPenguinsWA.IndexPersonalAdministrativo" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
-    Home - Personal Admin
+    Home - Personal Administrador
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphScripts" runat="server">
 </asp:Content>
+
 <asp:Content ContentPlaceHolderID="menuItem1" runat="server">
-    <a href="IndexPA.aspx"><i class="fa-solid fa-home"></i>Pagina principal</a>
+    <a href="IndexPersonalAdministrativo.aspx"><i class="fa-solid fa-home"></i>Inicio</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem2" runat="server">
     <a href="ReportesPA.aspx"><i class="fa-solid fa-book"></i>Reportes</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem3" runat="server">
-    <a href="BuscarUsuariosPA"><i class="fa-solid fa-search"></i>Buscar Usuarios</a>
+    <a href="BusquedaPA.aspx"><i class="fa-solid fa-search"></i>Busqueda</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem4" runat="server">
-    <a href="AgregarPlanAdmin.aspx"><i class="fa-solid fa-users"></i>Agregar Plan</a>
+    <a href="AgregarPlanPA.aspx"><i class="fa-solid fa-plus-circle"></i>Agregar Plan</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem5" runat="server">
+    <a href="GestionarSolicitudesPA.aspx"><i class="fa-solid fa-user-plus"></i>Gestionar Solicitudes</a>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="menuItem6" runat="server">
     <a href="MiPerfilPA.aspx"><i class="fa-solid fa-user"></i>Mi Perfil</a>
 </asp:Content>
 

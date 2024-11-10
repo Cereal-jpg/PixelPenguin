@@ -86,7 +86,7 @@
             <h1>Pixel Penguins</h1>
             <div class="nav">
                 <a href="Login.aspx">Intranet</a>
-                <a href="Matricularce.aspx">Matrícula</a>
+                <a href="Matricularse.aspx">Matrícula</a>
             </div>
         </div>
 

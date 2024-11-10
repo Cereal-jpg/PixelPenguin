@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SoftPixelPenguinsWA.ServicioWeb;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,19 +16,24 @@ namespace SoftPixelPenguinsWA
         gradoAcademico gradoAcademico = null;
         private CursoWSClient cursoBO = new CursoWSClient();
 
-        //int idUsuario = 30;
         int idGradoAcademico;
-
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Cargar los datos en el init
             if (!IsPostBack)
             {
-                //cargarMisCursos();
+                // Verifica si la página actual es el index
+                if (Request.Url.AbsolutePath.EndsWith("MisCursosAlumno.aspx", StringComparison.OrdinalIgnoreCase))
+                {
+                    // Oculta el menú deseado
+                    ContentPlaceHolder menuItem6 = (ContentPlaceHolder)Master.FindControl("menuItem6");
+                    if (menuItem6 != null)
+                    {
+                        menuItem6.Visible = false;
+                    }
+                }
             }
-
-            // Cargar el encabezado del grado académico
-            if (Session["idAlumnoLogueado"] != null)
+                // Cargar el encabezado del grado académico
+                if (Session["idAlumnoLogueado"] != null)
             {
                 int idUsuario = (int)Session["idAlumnoLogueado"];
                 alumno = alumnoBO.obtenerAlumnoPorId(idUsuario);
@@ -58,9 +64,7 @@ namespace SoftPixelPenguinsWA
             {
                 myLabel.Text = "Sesión de usuario no iniciada.";
             }
-
         }
-
         private void cargarMisCursos()
         {
             if (Session["idGradoAcademico"] != null)

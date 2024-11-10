@@ -16,16 +16,19 @@ namespace SoftPixelPenguinsWA
                 // Verifica si la página actual es el index
                 if (Request.Url.AbsolutePath.EndsWith("IndexProfesor.aspx", StringComparison.OrdinalIgnoreCase))
                 {
-                    // Ocultar el menú que no corresponde al usuario
-                    ContentPlaceHolder menuItem5 = (ContentPlaceHolder)Master.FindControl("menuItem5");
+                    // Oculta el menú deseado
                     ContentPlaceHolder menuItem6 = (ContentPlaceHolder)Master.FindControl("menuItem6");
+                    ContentPlaceHolder menuItem5 = (ContentPlaceHolder)Master.FindControl("menuItem5");
+                    ContentPlaceHolder menuItem7 = (ContentPlaceHolder)Master.FindControl("menuItem7");
                     if (menuItem6 != null && menuItem5 != null)
                     {
-                        menuItem5.Visible = false;
                         menuItem6.Visible = false;
+                        menuItem5.Visible = false;
+                        menuItem7.Visible = false;
                     }
                 }
             }
         }
+
     }
 }

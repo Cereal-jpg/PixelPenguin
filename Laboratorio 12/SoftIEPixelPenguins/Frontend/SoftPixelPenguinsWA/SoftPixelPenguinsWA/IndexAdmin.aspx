@@ -5,21 +5,24 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cphScripts" runat="server">
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem1" runat="server">
-    <a href="IndexAdmin.aspx"><i class="fa-solid fa-home"></i>Pagina principal</a>
+    <a href="IndexAdmin.aspx"><i class="fa-solid fa-home"></i>Inicio</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem2" runat="server">
     <a href="ReportesAdmin.aspx"><i class="fa-solid fa-book"></i>Reportes</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem3" runat="server">
-    <a href="BuscarUsuariosAdmin"><i class="fa-solid fa-search"></i>Buscar Usuarios</a>
+    <a href="BusquedaAdmin.aspx"><i class="fa-solid fa-search"></i>Busqueda</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem4" runat="server">
-    <a href="AgregarPlanAdmin.aspx"><i class="fa-solid fa-folder-minus"></i>Agregar Plan</a>
+    <a href="AgregarPlanAdmin.aspx"><i class="fa-solid fa-folder-plus"></i>Agregar Plan</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem5" runat="server">
-    <a href="GestionarUsuariosAdmin.aspx"><i class="fa-solid fa-users"></i>Gestionar Usuario</a>
+    <a href="GestionarUsuariosAdmin.aspx"><i class="fa-solid fa-users"></i>Gestionar Usuarios</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem6" runat="server">
+    <a href="GestionarSolicitudesAdmin.aspx"><i class="fa-solid fa-user-plus"></i>Gestionar Solicitudes</a>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="menuItem7" runat="server">
     <a href="MiPerfilAdmin.aspx"><i class="fa-solid fa-user"></i>Mi Perfil</a>
 </asp:Content>
 

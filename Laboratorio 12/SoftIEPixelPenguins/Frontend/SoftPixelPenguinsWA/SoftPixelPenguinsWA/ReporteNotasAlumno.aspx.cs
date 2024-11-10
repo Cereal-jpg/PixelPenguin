@@ -1,5 +1,4 @@
-﻿using SoftPixelPenguinsWA.ServicioWeb;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,11 +9,6 @@ namespace SoftPixelPenguinsWA
 {
     public partial class ReporteNotasAlumno : System.Web.UI.Page
     {
-        private AlumnoWSClient alumnoBO = new AlumnoWSClient();
-        private GradoAcademicoWSClient gradoBO = new GradoAcademicoWSClient();
-        alumno alumno = null;
-        gradoAcademico gradoAcademico = null;
-        private CursoWSClient cursoBO = new CursoWSClient();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -24,64 +18,17 @@ namespace SoftPixelPenguinsWA
                 {
                     // Oculta el menú deseado
                     ContentPlaceHolder menuItem6 = (ContentPlaceHolder)Master.FindControl("menuItem6");
-                    ContentPlaceHolder menuItem7 = (ContentPlaceHolder)Master.FindControl("menuItem7");
-                    if (menuItem6 != null && menuItem7 != null)
+                    if (menuItem6 != null)
                     {
                         menuItem6.Visible = false;
-                        menuItem7.Visible = false;
                     }
                 }
             }
-
-            // Cargar el encabezado del grado académico
-            if (Session["idAlumnoLogueado"] != null)
-            {
-                int idUsuario = (int)Session["idAlumnoLogueado"];
-                alumno = alumnoBO.obtenerAlumnoPorId(idUsuario);
-                if (alumno != null && alumno.gradoAcademico != null)
-                {
-                    gradoAcademico = gradoBO.obtenerGradoAcademicoPorId(alumno.gradoAcademico.idGradoAcademico);
-                    int idGrado = gradoAcademico.idGradoAcademico;
-                    Session["idGradoAcademico"] = idGrado;
-                    if (gradoAcademico != null)
-                    {
-                        String numero = gradoAcademico.numeroGrado.ToString();
-                        String anio = gradoAcademico.nivel.ToString();
-
-                        String result = anio + " - " + numero;
-                        myLabel.Text = result;
-
-
-                        CargarNotas();
-
-                    }
-                    else
-                    {
-                        myLabel.Text = "Información de grado no disponible.";
-                    }
-                }
-            }
-            else
-            {
-                myLabel.Text = "Sesión de usuario no iniciada.";
-            }
-
         }
 
-        private void CargarNotas()
+        protected void btnVerNotas_Click(object sender, EventArgs e)
         {
-            if (Session["idGradoAcademico"] != null)
-            {
-                int idGrado = (int)Session["idGradoAcademico"];
-                gvNotas.DataSource = cursoBO.listarCursosPorGrado(idGrado);
-                gvNotas.DataBind();
-            }
-        }
 
-        protected void Competencias_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("VerCompetenciasAlumno.aspx");
         }
-
     }
 }

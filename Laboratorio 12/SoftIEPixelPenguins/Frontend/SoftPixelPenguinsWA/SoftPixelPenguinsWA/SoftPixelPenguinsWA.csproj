@@ -629,6 +629,7 @@
     <Content Include="Scripts\jquery-3.7.1.slim.min.js" />
     <Content Include="VerCompetenciasAlumno.aspx" />
     <Content Include="VerCompetenciasGenerica.aspx" />
+    <Content Include="VerInfoProfesor.aspx" />
     <Content Include="Web.config" />
     <Content Include="SoftPixelPenguins.Master" />
   </ItemGroup>
@@ -855,6 +856,13 @@
     </Compile>
     <Compile Include="VerCompetenciasGenerica.aspx.designer.cs">
       <DependentUpon>VerCompetenciasGenerica.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VerInfoProfesor.aspx.cs">
+      <DependentUpon>VerInfoProfesor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VerInfoProfesor.aspx.designer.cs">
+      <DependentUpon>VerInfoProfesor.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

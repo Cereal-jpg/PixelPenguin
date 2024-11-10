@@ -16,7 +16,7 @@ namespace SoftPixelPenguinsWA
         gradoAcademico gradoAcademico = null;
         private CursoWSClient cursoBO = new CursoWSClient();
 
-        int idGradoAcademico;
+        //int idGradoAcademico;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -47,7 +47,7 @@ namespace SoftPixelPenguinsWA
                         String numero = gradoAcademico.numeroGrado.ToString();
                         String anio = gradoAcademico.nivel.ToString();
 
-                        String result = anio + " - " + numero;
+                        String result = numero + "° " + anio;
                         myLabel.Text = result;
 
 
@@ -65,7 +65,7 @@ namespace SoftPixelPenguinsWA
                 myLabel.Text = "Sesión de usuario no iniciada.";
             }
         }
-        private void cargarMisCursos()
+        protected void cargarMisCursos()
         {
             if (Session["idGradoAcademico"] != null)
             {
@@ -73,6 +73,13 @@ namespace SoftPixelPenguinsWA
                 gvMisCursos.DataSource = cursoBO.listarCursosPorGrado(idGrado);
                 gvMisCursos.DataBind();
             }
+        }
+
+        protected void btnVerInfoProfesor_Click(object sender, EventArgs e)
+        {
+            LinkButton btn = (LinkButton)sender;
+            int idProfesor = int.Parse(btn.CommandArgument);
+            Response.Redirect("VerInfoProfesor.aspx?idProfesor="+idProfesor);
         }
     }
 }

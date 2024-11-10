@@ -11,11 +11,11 @@
   <message name="existeAdministradorResponse">
     <part name="parameters" element="tns:existeAdministradorResponse" />
   </message>
-  <message name="eliminarAdministrador">
-    <part name="parameters" element="tns:eliminarAdministrador" />
+  <message name="insertarAdministrador">
+    <part name="parameters" element="tns:insertarAdministrador" />
   </message>
-  <message name="eliminarAdministradorResponse">
-    <part name="parameters" element="tns:eliminarAdministradorResponse" />
+  <message name="insertarAdministradorResponse">
+    <part name="parameters" element="tns:insertarAdministradorResponse" />
   </message>
   <message name="modificarAdministrador">
     <part name="parameters" element="tns:modificarAdministrador" />
@@ -23,17 +23,11 @@
   <message name="modificarAdministradorResponse">
     <part name="parameters" element="tns:modificarAdministradorResponse" />
   </message>
-  <message name="insertarAdministrador">
-    <part name="parameters" element="tns:insertarAdministrador" />
+  <message name="eliminarAdministrador">
+    <part name="parameters" element="tns:eliminarAdministrador" />
   </message>
-  <message name="insertarAdministradorResponse">
-    <part name="parameters" element="tns:insertarAdministradorResponse" />
-  </message>
-  <message name="obtenerAdministradorPorId">
-    <part name="parameters" element="tns:obtenerAdministradorPorId" />
-  </message>
-  <message name="obtenerAdministradorPorIdResponse">
-    <part name="parameters" element="tns:obtenerAdministradorPorIdResponse" />
+  <message name="eliminarAdministradorResponse">
+    <part name="parameters" element="tns:eliminarAdministradorResponse" />
   </message>
   <message name="listarTodosAdministradores">
     <part name="parameters" element="tns:listarTodosAdministradores" />
@@ -41,30 +35,36 @@
   <message name="listarTodosAdministradoresResponse">
     <part name="parameters" element="tns:listarTodosAdministradoresResponse" />
   </message>
+  <message name="obtenerAdministradorPorId">
+    <part name="parameters" element="tns:obtenerAdministradorPorId" />
+  </message>
+  <message name="obtenerAdministradorPorIdResponse">
+    <part name="parameters" element="tns:obtenerAdministradorPorIdResponse" />
+  </message>
   <portType name="AdministradorWS">
     <operation name="existeAdministrador">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/existeAdministradorRequest" message="tns:existeAdministrador" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/existeAdministradorResponse" message="tns:existeAdministradorResponse" />
     </operation>
-    <operation name="eliminarAdministrador">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/eliminarAdministradorRequest" message="tns:eliminarAdministrador" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/eliminarAdministradorResponse" message="tns:eliminarAdministradorResponse" />
+    <operation name="insertarAdministrador">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/insertarAdministradorRequest" message="tns:insertarAdministrador" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/insertarAdministradorResponse" message="tns:insertarAdministradorResponse" />
     </operation>
     <operation name="modificarAdministrador">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/modificarAdministradorRequest" message="tns:modificarAdministrador" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/modificarAdministradorResponse" message="tns:modificarAdministradorResponse" />
     </operation>
-    <operation name="insertarAdministrador">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/insertarAdministradorRequest" message="tns:insertarAdministrador" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/insertarAdministradorResponse" message="tns:insertarAdministradorResponse" />
-    </operation>
-    <operation name="obtenerAdministradorPorId">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/obtenerAdministradorPorIdRequest" message="tns:obtenerAdministradorPorId" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/obtenerAdministradorPorIdResponse" message="tns:obtenerAdministradorPorIdResponse" />
+    <operation name="eliminarAdministrador">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/eliminarAdministradorRequest" message="tns:eliminarAdministrador" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/eliminarAdministradorResponse" message="tns:eliminarAdministradorResponse" />
     </operation>
     <operation name="listarTodosAdministradores">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/listarTodosAdministradoresRequest" message="tns:listarTodosAdministradores" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/listarTodosAdministradoresResponse" message="tns:listarTodosAdministradoresResponse" />
+    </operation>
+    <operation name="obtenerAdministradorPorId">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/obtenerAdministradorPorIdRequest" message="tns:obtenerAdministradorPorId" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/AdministradorWS/obtenerAdministradorPorIdResponse" message="tns:obtenerAdministradorPorIdResponse" />
     </operation>
   </portType>
   <binding name="AdministradorWSPortBinding" type="tns:AdministradorWS">
@@ -78,7 +78,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarAdministrador">
+    <operation name="insertarAdministrador">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -96,16 +96,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarAdministrador">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="obtenerAdministradorPorId">
+    <operation name="eliminarAdministrador">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -115,6 +106,15 @@
       </output>
     </operation>
     <operation name="listarTodosAdministradores">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerAdministradorPorId">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

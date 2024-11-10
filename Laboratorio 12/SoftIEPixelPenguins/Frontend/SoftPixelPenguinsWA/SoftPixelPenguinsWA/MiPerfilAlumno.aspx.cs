@@ -36,7 +36,7 @@ namespace SoftPixelPenguinsWA
                         ContentPlaceHolder menuItem7 = (ContentPlaceHolder)Master.FindControl("menuItem7");
                         if (menuItem6 != null && menuItem7 != null)
                         {
-                            menuItem6.Visible = false;
+                           
                             menuItem7.Visible = false;
                         }
                     }

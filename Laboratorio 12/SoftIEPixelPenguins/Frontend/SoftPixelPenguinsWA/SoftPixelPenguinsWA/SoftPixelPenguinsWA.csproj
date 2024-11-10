@@ -154,6 +154,7 @@
     <Content Include="MiPerfilAlumno.aspx" />
     <Content Include="MiPerfilProfesor.aspx" />
     <Content Include="MisCursosAlumno.aspx" />
+    <Content Include="MisPagos.aspx" />
     <Content Include="PlanEstudioGenerico.aspx" />
     <Content Include="ProcesoMatriculaGenerica.aspx" />
     <Content Include="RecuperarContrasena.aspx" />
@@ -618,6 +619,9 @@
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarMatriculasPorGradoAcademicoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarPagosXIdMatriculaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\ServicioWeb\UsuarioWS.wsdl" />
     <None Include="Connected Services\ServicioWeb\UsuarioWS.xsd">
       <SubType>Designer</SubType>
@@ -630,6 +634,7 @@
     <Content Include="VerCompetenciasAlumno.aspx" />
     <Content Include="VerCompetenciasGenerica.aspx" />
     <Content Include="VerInfoProfesor.aspx" />
+    <Content Include="VisualizarPago.aspx" />
     <Content Include="Web.config" />
     <Content Include="SoftPixelPenguins.Master" />
   </ItemGroup>
@@ -758,6 +763,13 @@
     <Compile Include="MisCursosAlumno.aspx.designer.cs">
       <DependentUpon>MisCursosAlumno.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MisPagos.aspx.cs">
+      <DependentUpon>MisPagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MisPagos.aspx.designer.cs">
+      <DependentUpon>MisPagos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PlanEstudioGenerico.aspx.cs">
       <DependentUpon>PlanEstudioGenerico.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -863,6 +875,13 @@
     </Compile>
     <Compile Include="VerInfoProfesor.aspx.designer.cs">
       <DependentUpon>VerInfoProfesor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarPago.aspx.cs">
+      <DependentUpon>VisualizarPago.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VisualizarPago.aspx.designer.cs">
+      <DependentUpon>VisualizarPago.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

@@ -3,12 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
-using System.Net.Mail;
-using System.Net;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Configuration;
 
 namespace SoftPixelPenguinsWA
 {
@@ -154,44 +151,21 @@ namespace SoftPixelPenguinsWA
 
         protected void btnConfirmar_Click(object sender, EventArgs e)
         {
-            try
+            if (alumno.estado.Equals(estadoAlumno.Pendiente))
             {
-                if (alumno.estado.Equals(estadoAlumno.Pendiente))
-                {
-                    alumno.username = txtUsuario.Text;
-                    alumno.password = txtContraseña.Text;
-                    alumno.codigoAlumno = Int32.Parse(txtCodigo.Text);
-                    alumno.estado = estadoAlumno.Por_Pagar;
-                }
-                else if (alumno.estado.Equals(estadoAlumno.Por_Pagar))
-                {
-                    alumno.estado = estadoAlumno.Matriculado;
-                    
-                    string cuerpo = $"Hola {alumno.nombreCompleto},\n\nFelicidades, has sido matriculado en nuestra institución.\n" +
-                            $"Tu nuevo usuario es: {alumno.username}\n" +
-                            $"Tu nueva contraseña es: {alumno.password}\n" +
-                            $"Tu nuevo codigo es: {alumno.codigoAlumno}\n" +
-                            "Gracias por elegir nuestra institución\n" +
-                            "Atentamente, \nEquipoAdministrativo PixelPenguins";
-                    enviarCorreo(/*"a20220749@pucp.edu.pe"*/alumno.email.ToString(),"Confirmación de Matrícula",cuerpo);
-
-                    matricularAlumno();
-                }
-
-                // Guardar cambios en la sesión y la base de datos
-                Session[alumno.nombreCompleto] = alumno;
-                alumnoBO.modificarAlumno(alumno);
-
-                
-
-                // Redirigir después de completar el proceso
-                Response.Redirect("GestionarSolicitudesPA.aspx");
+                alumno.username = txtUsuario.Text;
+                alumno.password = txtContraseña.Text;
+                alumno.codigoAlumno = Int32.Parse(txtCodigo.Text);
+                alumno.estado = estadoAlumno.Por_Pagar;
             }
-            catch (Exception ex)
+            else if (alumno.estado.Equals(estadoAlumno.Por_Pagar))
             {
-                // Manejar errores
-                Console.WriteLine("Ocurrió un error: " + ex.Message);
+                alumno.estado = estadoAlumno.Matriculado;
+                matricularAlumno();
             }
+            Session[alumno.nombreCompleto] = alumno;
+            alumnoBO.modificarAlumno(alumno);
+            Response.Redirect("GestionarSolicitudesPA.aspx");
         }
 
         private void matricularAlumno()
@@ -234,34 +208,54 @@ namespace SoftPixelPenguinsWA
                 throw new Exception();
             }
         }
-
-        private void enviarCorreo(string destinatario, string asunto, string cuerpo)
-        {
-            try
-            {
-                string gmailUser = ConfigurationManager.AppSettings["Email"];
-                string gmailPassword = ConfigurationManager.AppSettings["EmailPassword"];
-
-                MailMessage mail = new MailMessage();
-                mail.From = new MailAddress(gmailUser);
-                mail.To.Add(destinatario);
-                mail.Subject = asunto;
-                mail.Body = cuerpo;
-                mail.IsBodyHtml = false;
-
-                SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
-                smtp.Credentials = new NetworkCredential(gmailUser, gmailPassword);
-                smtp.EnableSsl = true;
-
-                smtp.Send(mail);
-                Response.Write("Correo enviado exitosamente.");
-            }
-            catch (Exception ex)
-            {
-                // Mostrar el error completo para depuración
-                Response.Write("Error al enviar el correo: " + ex.ToString());
-            }
-        }
-
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -11,4 +11,5 @@ public interface PagoDAO {
     public ArrayList<Pago> listarTodos();
     public Pago obtenerPorId(Integer idPago);
     public Pago PagoXAlumnos(int idMatricula);
+    public ArrayList<Pago> listarTodosXIdMatricula(int idMatricula);
 }

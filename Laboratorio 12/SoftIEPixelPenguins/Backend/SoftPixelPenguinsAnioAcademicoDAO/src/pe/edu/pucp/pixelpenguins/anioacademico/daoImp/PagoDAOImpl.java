@@ -142,7 +142,10 @@ public class PagoDAOImpl extends DAOImpl implements PagoDAO {
     protected String obtenerPredicadoParaListado() {
         return " WHERE fid_Matricula=? AND estado='PENDIENTE' OR estado='ATRASADO'";
     }
-    
+    protected  String obtenerPredicadoParaListadoPoridMatricula(){
+        return " WHERE fid_Matricula=?";
+    }  
+        
     @Override
     public Pago PagoXAlumnos(int idMatricula) {
         try {
@@ -169,4 +172,30 @@ public class PagoDAOImpl extends DAOImpl implements PagoDAO {
         }
         return this.pago;
     }
+    @Override
+    public ArrayList<Pago> listarTodosXIdMatricula(int idMatricula) {
+        ArrayList<Pago> pagos = new ArrayList<Pago>();
+
+        try {
+            this.abrirConexion();
+            String sql = "SELECT " + this.obtenerProyeccionParaSelect() + " FROM " + this.nombre_tabla;
+            sql += this.obtenerPredicadoParaListadoPoridMatricula();
+            this.colocarSQLenStatement(sql);
+            this.incluirParametroInt(1, idMatricula);
+            this.ejecutarConsultaEnBD(sql);
+            while (this.resultSet.next()) {
+                agregarObjetoALaLista(pagos, this.resultSet);
+            }
+        } catch (SQLException ex) {
+            System.err.println("Error al intentar listarTodos - " + ex);
+        } finally {
+            try {
+                this.cerrarConexion();
+            } catch (SQLException ex) {
+                System.err.println("Error al cerrar la conexión - " + ex);
+            }
+        }
+        return pagos;
+    }
 }
+

@@ -36,4 +36,7 @@ public class PagoBO {
     public Pago  PagoXAlumnos(int idMatricula){
         return this.pagoDAO.PagoXAlumnos(idMatricula);
     }
+    public ArrayList<Pago> listarTodosPorIdMatricula(int idMatricula){
+        return this.pagoDAO.listarTodosXIdMatricula(idMatricula);
+    }
 }

@@ -80,4 +80,16 @@ public class PagoWS {
         return pago;
     }
     
+    @WebMethod(operationName = "listarPagosXIdMatricula")
+    public ArrayList<Pago>  listarTodosPorIdMatricula(int idMatricula){
+        ArrayList<Pago> pagos = null;
+        try{
+            pagos = pagoBO.listarTodosPorIdMatricula(idMatricula);
+        }
+        catch (Exception ex){
+            System.err.println(ex.getMessage());
+        }
+        return pagos;
+    }
+    
 }

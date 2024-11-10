@@ -1,0 +1,77 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftPixelPenguins.Master" AutoEventWireup="true" CodeBehind="GestionarSolicitudesPA.aspx.cs" Inherits="SoftPixelPenguinsWA.GestionarSolicitudesPA" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="cphScripts" runat="server">
+</asp:Content>
+
+<asp:Content ContentPlaceHolderID="menuItem1" runat="server">
+    <a href="IndexPersonalAdministrativo.aspx"><i class="fa-solid fa-home"></i>Inicio</a>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="menuItem2" runat="server">
+    <a href="ReportesPA.aspx"><i class="fa-solid fa-book"></i>Reportes</a>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="menuItem3" runat="server">
+    <a href="BusquedaPA.aspx"><i class="fa-solid fa-search"></i>Busqueda</a>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="menuItem4" runat="server">
+    <a href="AgregarPlanPA.aspx"><i class="fa-solid fa-plus-circle"></i>Agregar Plan</a>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="menuItem5" runat="server">
+    <a href="GestionarSolicitudesPA.aspx"><i class="fa-solid fa-user-plus"></i>Gestionar Solicitudes</a>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="menuItem6" runat="server">
+    <a href="MiPerfilPA.aspx"><i class="fa-solid fa-user"></i>Mi Perfil</a>
+</asp:Content>
+
+
+<asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
+    <div class="d-flex justify-content-between align-items-center mt-3 mx-3">
+        <h1>Gestionar Solicitudes</h1>
+    </div>
+    <hr class="mx-3" />
+    <div class="container mt-5">
+        <h2 style="color: black; padding-top:10px;">Listado de Alumnos</h2>
+        <div class="row">
+            <div class="col-12 d-flex justify-content-between align-items-center mb-4 pt-3">
+                <div class="input-group w-50">
+                    <asp:TextBox ID="txtBuscarUsuario" runat="server" CssClass="form-control" placeholder="Buscar alumno..." aria-label="Buscar Alumno"></asp:TextBox>
+                    <asp:LinkButton ID="lbBuscar" runat="server" CssClass="btn btn-outline-primary" OnClick="lbBuscar_Click">
+                    <i class="fa-solid fa-search"></i> Buscar
+                    </asp:LinkButton>
+                </div>
+                <div class="input-group w-25 ms-3">
+                    <asp:DropDownList ID="ddlEstado" runat="server" CssClass="form-select" AutoPostBack="true" OnSelectedIndexChanged="ddlEstado_SelectedIndexChanged">
+                    </asp:DropDownList>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <asp:GridView ID="gvAlumnos" runat="server" AllowPaging="true" PageSize="10" AutoGenerateColumns="false" CssClass="table table-hover table-responsive table-striped" ShowHeaderWhenEmpty="true">
+                <Columns>
+                    <asp:BoundField HeaderText="DNI" DataField="dni" />
+                    <asp:BoundField HeaderText="Nombre" DataField="nombreCompleto" />
+                    <asp:BoundField HeaderText="Email" DataField="email" />
+                    <asp:TemplateField HeaderText="Estado">
+                        <ItemTemplate>
+                            <%# Eval("estado").ToString() %>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField>
+                        <ItemTemplate>
+                            <div class="text-center">
+                                <asp:LinkButton runat="server" CssClass="btn btn-sm btn-info me-1" Text="<i class='fa-solid fa-eye'></i> Ver" 
+                                                OnClick="lbVisualizar_Click" CommandArgument='<%# Eval("idUsuario") %>' />
+                                <asp:LinkButton runat="server" CssClass="btn btn-sm btn-danger" Text="<i class='fa-solid fa-trash'></i> Eliminar" 
+                                                OnClick="lbEliminar_Click" CommandArgument='<%# Eval("idUsuario") %>' />
+                            </div>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </columns>
+            </asp:GridView>
+        </div>
+    </div>
+ </asp:Content>
+
+
+
+

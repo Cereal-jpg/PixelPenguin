@@ -20,6 +20,9 @@
     <a href="GestionarUsuariosAdmin.aspx"><i class="fa-solid fa-users"></i>Gestionar Usuarios</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem6" runat="server">
+    <a href="GestionarSolicitudesAdmin.aspx"><i class="fa-solid fa-user-plus"></i>Gestionar Solicitudes</a>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="menuItem7" runat="server">
     <a href="MiPerfilAdmin.aspx"><i class="fa-solid fa-user"></i>Mi Perfil</a>
 </asp:Content>
 

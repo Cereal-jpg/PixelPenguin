@@ -175,3 +175,5 @@ D:\git\PixelPenguin\Laboratorio 12\SoftIEPixelPenguins\Frontend\SoftPixelPenguin
 D:\git\PixelPenguin\Laboratorio 12\SoftIEPixelPenguins\Frontend\SoftPixelPenguinsWA\SoftPixelPenguinsWA\obj\Debug\SoftPixe.9F367AAF.Up2Date
 D:\git\PixelPenguin\Laboratorio 12\SoftIEPixelPenguins\Frontend\SoftPixelPenguinsWA\SoftPixelPenguinsWA\obj\Debug\SoftPixelPenguinsWA.dll
 D:\git\PixelPenguin\Laboratorio 12\SoftIEPixelPenguins\Frontend\SoftPixelPenguinsWA\SoftPixelPenguinsWA\obj\Debug\SoftPixelPenguinsWA.pdb
+D:\git\PixelPenguin\Laboratorio 12\SoftIEPixelPenguins\Frontend\SoftPixelPenguinsWA\SoftPixelPenguinsWA\bin\itextsharp.dll
+D:\git\PixelPenguin\Laboratorio 12\SoftIEPixelPenguins\Frontend\SoftPixelPenguinsWA\SoftPixelPenguinsWA\bin\itextsharp.xml

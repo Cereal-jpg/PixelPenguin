@@ -26,9 +26,11 @@ namespace SoftPixelPenguinsWA
                 {
                     // Oculta el menú deseado
                     ContentPlaceHolder menuItem6 = (ContentPlaceHolder)Master.FindControl("menuItem6");
-                    if (menuItem6 != null)
+                    ContentPlaceHolder menuItem7 = (ContentPlaceHolder)Master.FindControl("menuItem7");
+                    if (menuItem6 != null && menuItem7 != null)
                     {
                         menuItem6.Visible = false;
+                        menuItem7.Visible = false;
                     }
                 }
 

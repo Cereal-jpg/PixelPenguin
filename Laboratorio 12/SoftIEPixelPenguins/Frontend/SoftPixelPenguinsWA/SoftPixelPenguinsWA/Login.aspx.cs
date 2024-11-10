@@ -32,11 +32,14 @@ namespace SoftPixelPenguinsWA
                         Session["idAlumnoLogueado"] = id;
                         Response.Redirect("IndexAlumno.aspx");
                         break;
-                    case 'm':
-                        Response.Redirect("IndexAdmin.aspx");
-                        break;
                     case 'p':
                         Response.Redirect("IndexProfesor.aspx");
+                        break;
+                    case 'm':
+                        Response.Redirect("IndexPersonalAdministrativo.aspx");
+                        break;
+                    case 's':
+                        Response.Redirect("IndexAdmin.aspx");
                         break;
                 }
             }

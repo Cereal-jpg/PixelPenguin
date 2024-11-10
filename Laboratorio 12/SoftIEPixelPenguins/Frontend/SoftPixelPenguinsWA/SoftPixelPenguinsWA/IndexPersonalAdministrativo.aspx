@@ -6,7 +6,7 @@
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="menuItem1" runat="server">
-    <a href="IndexPA.aspx"><i class="fa-solid fa-home"></i>Inicio</a>
+    <a href="IndexPersonalAdministrativo.aspx"><i class="fa-solid fa-home"></i>Inicio</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem2" runat="server">
     <a href="ReportesPA.aspx"><i class="fa-solid fa-book"></i>Reportes</a>
@@ -18,6 +18,9 @@
     <a href="AgregarPlanPA.aspx"><i class="fa-solid fa-plus-circle"></i>Agregar Plan</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem5" runat="server">
+    <a href="GestionarSolicitudesPA.aspx"><i class="fa-solid fa-user-plus"></i>Gestionar Solicitudes</a>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="menuItem6" runat="server">
     <a href="MiPerfilPA.aspx"><i class="fa-solid fa-user"></i>Mi Perfil</a>
 </asp:Content>
 

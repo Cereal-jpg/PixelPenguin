@@ -154,6 +154,8 @@
     <Content Include="PlanEstudioGenerico.aspx" />
     <Content Include="ProcesoMatriculaGenerica.aspx" />
     <Content Include="RecuperarContrasena.aspx" />
+    <Content Include="RegistroNotasProfesor_Alumnos.aspx" />
+    <Content Include="RegistroNotasProfesor_Competencias.aspx" />
     <Content Include="RegistroNotasProfesor.aspx" />
     <Content Include="ReporteGrado.aspx" />
     <Content Include="ReporteGradoPA.aspx" />
@@ -610,6 +612,9 @@
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.ValidarDatosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarMatriculasPorGradoAcademicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\ServicioWeb\UsuarioWS.wsdl" />
     <None Include="Connected Services\ServicioWeb\UsuarioWS.xsd">
       <SubType>Designer</SubType>
@@ -748,6 +753,20 @@
     </Compile>
     <Compile Include="RecuperarContrasena.aspx.designer.cs">
       <DependentUpon>RecuperarContrasena.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroNotasProfesor_Alumnos.aspx.cs">
+      <DependentUpon>RegistroNotasProfesor_Alumnos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistroNotasProfesor_Alumnos.aspx.designer.cs">
+      <DependentUpon>RegistroNotasProfesor_Alumnos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RegistroNotasProfesor_Competencias.aspx.cs">
+      <DependentUpon>RegistroNotasProfesor_Competencias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RegistroNotasProfesor_Competencias.aspx.designer.cs">
+      <DependentUpon>RegistroNotasProfesor_Competencias.aspx</DependentUpon>
     </Compile>
     <Compile Include="RegistroNotasProfesor.aspx.cs">
       <DependentUpon>RegistroNotasProfesor.aspx</DependentUpon>

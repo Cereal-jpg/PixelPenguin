@@ -6,6 +6,7 @@ import jakarta.jws.WebParam;
 import java.util.ArrayList;
 import pe.edu.pucp.pixelpenguins.anioacademico.bo.MatriculaBO;
 import pe.edu.pucp.pixelpenguins.anioacademico.model.Matricula;
+import pe.edu.pucp.pixelpenguins.curricula.model.GradoAcademico;
 
 @WebService(serviceName = "MatriculaWS", targetNamespace
         = "http://services.pixelpenguins.pucp.edu.pe")
@@ -67,6 +68,7 @@ public class MatriculaWS {
         }
         return matricula;
     }
+    
     @WebMethod(operationName = "obtenerMatriculaPorIdAlumno")
     public Integer obtenerMatriculaPorIdAlumno(@WebParam(name = "idAlumno") Integer idALumno){
         int id = 0;
@@ -77,5 +79,16 @@ public class MatriculaWS {
             System.out.println(ex.getMessage());
         }
         return id;
+    }
+    
+    @WebMethod(operationName = "listarMatriculasPorGradoAcademico")
+    public ArrayList<Matricula>listarMatriculasPorGradoAcademico(GradoAcademico gradoAcademico){
+        ArrayList<Matricula> matriculas = null;
+        try {
+            matriculas = matriculaBO.listarTodos();
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return matriculas;
     }
 }

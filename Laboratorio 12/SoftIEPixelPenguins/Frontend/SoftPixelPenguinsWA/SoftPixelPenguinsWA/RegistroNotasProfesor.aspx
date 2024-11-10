@@ -15,23 +15,29 @@
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem4" runat="server">
     <a href="MiPerfilProfesor.aspx"><i class="fa-solid fa-user"></i>Mi perfil</a>
-    </asp:Content>
-<asp:Content ContentPlaceHolderID="menuItem5" runat="server">
-    <a href="ListarCursosAlumno.aspx"><i class="fa-solid fa-users"></i>Mi perfil</a>
-    </asp:Content>
-<asp:Content ContentPlaceHolderID="menuItem6" runat="server">
-    <a href="MiPerfilProfesor.aspx"><i class="fa-solid fa-user"></i>Mi perfil</a>
-    </asp:Content>
+</asp:Content>
 
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
-    <h2 style="text-align: left; color: #000f;">Profesor - Inicio Profesor</h2>
-    <link rel="stylesheet" href="Content/Estilos-Alumno.css" />
-    <div class="container-al">
-        <div class="schedule">
-            <h3>Horario del Profesor</h3>
-            <img src="Images/Horario.jpg" alt="Horario Académico" />
-        </div>
+    <h2 style="color: black;">Registro de Notas</h2>
+    <div class="container-matricula" style="display:block;">
+            <h2 style="color: black;">Listado de Cursos</h2>
+            <asp:GridView ID="gvCursos" runat="server" AutoGenerateColumns="False" CssClass="table table-hover table-responsive table-striped table-bordered" >
+                <Columns>
+                    <asp:BoundField DataField="codigoCurso" HeaderText="Código" />
+                    <asp:BoundField DataField="nombre" HeaderText="Nombre" />
+                    <asp:TemplateField HeaderText="Grado">
+                        <ItemTemplate>
+                            <%# Eval("gradoAcademico.nivel") + " " + Eval("gradoAcademico.numeroGrado") %>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField>
+                        <ItemTemplate>
+                            <asp:LinkButton ID="btnVerDetalle" runat="server" Text="Ver Detalle" class="btn btn-primary" OnClick="btnVerDetalle_Click" CommandArgument='<%# Eval("idCurso") %>' />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+            </asp:GridView>
     </div>
 </asp:Content>
 

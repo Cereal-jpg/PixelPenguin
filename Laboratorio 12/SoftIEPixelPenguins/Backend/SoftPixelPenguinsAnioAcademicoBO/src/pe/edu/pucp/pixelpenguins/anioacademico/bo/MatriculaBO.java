@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import pe.edu.pucp.pixelpenguins.anioacademico.dao.MatriculaDAO;
 import pe.edu.pucp.pixelpenguins.anioacademico.daoImp.MatriculaDAOImpl;
 import pe.edu.pucp.pixelpenguins.anioacademico.model.Matricula;
+import pe.edu.pucp.pixelpenguins.curricula.model.GradoAcademico;
 
 public class MatriculaBO {
     
@@ -36,4 +37,8 @@ public class MatriculaBO {
      public Integer obtenerPorIdAlumno(Integer idAlumno){
         return this.matriculaDAO.obtenerPorIdAlumno(idAlumno);
      }
+     
+    public ArrayList<Matricula>listarMatriculasPorGradoAcademico(GradoAcademico gradoAcademico){
+        return this.matriculaDAO.listarMatriculasPorGradoAcademico(gradoAcademico);
+    }
 }

@@ -2,6 +2,7 @@ package pe.edu.pucp.pixelpenguins.anioacademico.dao;
 
 import java.util.ArrayList;
 import pe.edu.pucp.pixelpenguins.anioacademico.model.Matricula;
+import pe.edu.pucp.pixelpenguins.curricula.model.GradoAcademico;
 
 public interface MatriculaDAO {
     public Integer insertar(Matricula matricula);
@@ -10,4 +11,5 @@ public interface MatriculaDAO {
     public ArrayList<Matricula> listarTodos();
     public Matricula obtenerPorId(Integer idMatricula);
     public Integer obtenerPorIdAlumno(Integer idAlumno);
+    public ArrayList<Matricula>listarMatriculasPorGradoAcademico(GradoAcademico gradoAcademico);
 }

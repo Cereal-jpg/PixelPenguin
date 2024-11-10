@@ -131,6 +131,26 @@ public class MatriculaDAOImpl extends DAOImpl implements MatriculaDAO {
     protected void limpiarObjetoDelResultSet() {
         this.matricula = null;
     }
+    
+    @Override
+    protected String obtenerPredicadoParaListado() {
+        return " WHERE fid_GradoAcademico=?";
+    }
+    
+    @Override
+    protected void incluirValorDeParametrosParaListado() throws SQLException {
+        this.incluirParametroInt(1, this.matricula.getGradoAcademico().getIdGradoAcademico());
+    }
+    
+    @Override
+    public ArrayList<Matricula>listarMatriculasPorGradoAcademico(GradoAcademico gradoAcademico){
+        this.usarPredicadoParaListado = true;
+        this.matricula = new Matricula();
+        this.matricula.setGradoAcademico(gradoAcademico);
+        ArrayList<Matricula>usuarios = (ArrayList<Matricula>)super.listarTodos(null);
+        this.usarPredicadoParaListado = false;
+        return usuarios;
+    }
 
     @Override
     public Integer obtenerPorIdAlumno(Integer idAlumno) {

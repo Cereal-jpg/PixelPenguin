@@ -4,6 +4,8 @@
   <xs:element name="eliminarMatriculaResponse" type="tns:eliminarMatriculaResponse" />
   <xs:element name="insertarMatricula" type="tns:insertarMatricula" />
   <xs:element name="insertarMatriculaResponse" type="tns:insertarMatriculaResponse" />
+  <xs:element name="listarMatriculasPorGradoAcademico" type="tns:listarMatriculasPorGradoAcademico" />
+  <xs:element name="listarMatriculasPorGradoAcademicoResponse" type="tns:listarMatriculasPorGradoAcademicoResponse" />
   <xs:element name="listarTodosMatriculas" type="tns:listarTodosMatriculas" />
   <xs:element name="listarTodosMatriculasResponse" type="tns:listarTodosMatriculasResponse" />
   <xs:element name="modificarMatricula" type="tns:modificarMatricula" />
@@ -12,9 +14,24 @@
   <xs:element name="obtenerMatriculaPorIdAlumno" type="tns:obtenerMatriculaPorIdAlumno" />
   <xs:element name="obtenerMatriculaPorIdAlumnoResponse" type="tns:obtenerMatriculaPorIdAlumnoResponse" />
   <xs:element name="obtenerMatriculaPorIdResponse" type="tns:obtenerMatriculaPorIdResponse" />
-  <xs:complexType name="insertarMatricula">
+  <xs:complexType name="listarMatriculasPorGradoAcademico">
     <xs:sequence>
-      <xs:element minOccurs="0" name="matricula" type="tns:matricula" />
+      <xs:element minOccurs="0" name="arg0" type="tns:gradoAcademico" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="gradoAcademico">
+    <xs:sequence>
+      <xs:element name="cantidadAlumnos" type="xs:int" />
+      <xs:element name="fid_AnioAcademico" type="xs:int" />
+      <xs:element minOccurs="0" name="idGradoAcademico" type="xs:int" />
+      <xs:element minOccurs="0" name="nivel" type="tns:nivelEducativo" />
+      <xs:element name="numeroGrado" type="xs:int" />
+      <xs:element name="vacantes" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarMatriculasPorGradoAcademicoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:matricula" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="matricula">
@@ -34,16 +51,6 @@
       <xs:element minOccurs="0" name="idAnioAcademico" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="gradoAcademico">
-    <xs:sequence>
-      <xs:element name="cantidadAlumnos" type="xs:int" />
-      <xs:element name="fid_AnioAcademico" type="xs:int" />
-      <xs:element minOccurs="0" name="idGradoAcademico" type="xs:int" />
-      <xs:element minOccurs="0" name="nivel" type="tns:nivelEducativo" />
-      <xs:element name="numeroGrado" type="xs:int" />
-      <xs:element name="vacantes" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="seccionAcademica">
     <xs:sequence>
       <xs:element minOccurs="0" name="aula" type="xs:string" />
@@ -52,6 +59,11 @@
       <xs:element minOccurs="0" name="idSeccionAcademica" type="xs:int" />
       <xs:element name="seccion" type="xs:unsignedShort" />
       <xs:element name="vacantes" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarMatricula">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="matricula" type="tns:matricula" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="insertarMatriculaResponse">

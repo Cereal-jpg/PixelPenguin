@@ -5,12 +5,6 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftPixelPenguinsWSBL/NotaWS?xsd=1" namespace="http://services.pixelpenguins.pucp.edu.pe" />
     </xsd:schema>
   </types>
-  <message name="listarTodosNotas">
-    <part name="parameters" element="tns:listarTodosNotas" />
-  </message>
-  <message name="listarTodosNotasResponse">
-    <part name="parameters" element="tns:listarTodosNotasResponse" />
-  </message>
   <message name="insertarNota">
     <part name="parameters" element="tns:insertarNota" />
   </message>
@@ -22,6 +16,12 @@
   </message>
   <message name="modificarNotaResponse">
     <part name="parameters" element="tns:modificarNotaResponse" />
+  </message>
+  <message name="listarTodosNotas">
+    <part name="parameters" element="tns:listarTodosNotas" />
+  </message>
+  <message name="listarTodosNotasResponse">
+    <part name="parameters" element="tns:listarTodosNotasResponse" />
   </message>
   <message name="obtenerNotaPorId">
     <part name="parameters" element="tns:obtenerNotaPorId" />
@@ -42,10 +42,6 @@
     <part name="parameters" element="tns:listarPorAlumnoYCursoResponse" />
   </message>
   <portType name="NotaWS">
-    <operation name="listarTodosNotas">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/listarTodosNotasRequest" message="tns:listarTodosNotas" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/listarTodosNotasResponse" message="tns:listarTodosNotasResponse" />
-    </operation>
     <operation name="insertarNota">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/insertarNotaRequest" message="tns:insertarNota" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/insertarNotaResponse" message="tns:insertarNotaResponse" />
@@ -53,6 +49,10 @@
     <operation name="modificarNota">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/modificarNotaRequest" message="tns:modificarNota" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/modificarNotaResponse" message="tns:modificarNotaResponse" />
+    </operation>
+    <operation name="listarTodosNotas">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/listarTodosNotasRequest" message="tns:listarTodosNotas" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/listarTodosNotasResponse" message="tns:listarTodosNotasResponse" />
     </operation>
     <operation name="obtenerNotaPorId">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/NotaWS/obtenerNotaPorIdRequest" message="tns:obtenerNotaPorId" />
@@ -69,15 +69,6 @@
   </portType>
   <binding name="NotaWSPortBinding" type="tns:NotaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarTodosNotas">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="insertarNota">
       <soap:operation soapAction="" />
       <input>
@@ -88,6 +79,15 @@
       </output>
     </operation>
     <operation name="modificarNota">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosNotas">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

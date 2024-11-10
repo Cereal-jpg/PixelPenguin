@@ -182,7 +182,53 @@
         width: 50%;
     }
 
+    .custom-dropdown {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+        }
+
+            .custom-dropdown:focus {
+                outline: none; /* Quita el borde azul brillante al enfocar */
+                border-color: #007bff; /* Cambia el color del borde al enfocar */
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Añade un efecto de sombra */
+            }
+
+    .is-invalid {
+        border: 1px solid red;
+    }
+
     </style>
+
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Escucha el evento submit del formulario
+            $("form").on("submit", function (e) {
+                let isValid = true;
+
+                // Valida que los campos de texto no estén vacíos
+                $(".form-section input[type='text'], .form-section input[type='date'], .form-section select").each(function () {
+                    if ($(this).val().trim() === "") {
+                        isValid = false;
+                        $(this).addClass("is-invalid"); // Añade una clase para resaltar el error
+                    } else {
+                        $(this).removeClass("is-invalid"); // Remueve la clase si es válido
+                    }
+                });
+
+                // Si no es válido, previene el envío del formulario
+                if (!isValid) {
+                    e.preventDefault();
+                    alert("Por favor, completa todos los campos obligatorios.");
+                }
+            });
+        });
+    </script>
+
+
 </head>
 <body>
 <div class="header">
@@ -190,7 +236,7 @@
     <h1>Pixel Penguins</h1>
     <div class="nav">
         <a href="Login.aspx">Intranet</a>
-        <a href="Matricularce.aspx">Matrícula</a>
+        <a href="Matricularse.aspx">Matrícula</a>
     </div>
 </div>
 <form id="form1" runat="server">
@@ -212,64 +258,69 @@
         <div class="main-content">
             <div id="section1" class="section" runat="server" style="display: block;">
                 <div class="form-section">
-                    <h3>Datos del alumno</h3><hr>
+                    <h3>Datos del alumno</h3>
+                    <hr>
                     <div class="form-group">
                         <div class="form-row">
                             <label>Nombres:</label>
-                            <asp:TextBox ID="txtNombreAlumno" runat="server" placeholder="Nombres"></asp:TextBox>
+                            <asp:TextBox ID="txtNombreAlumno" runat="server" placeholder="Nombres" required="required" CssClass="form-control"></asp:TextBox>
                         </div>
                         <div class="form-row">
                             <label>Apellido Paterno:</label>
-                            <asp:TextBox ID="txtApellidoPaterno" runat="server" placeholder="Apellido Paterno"></asp:TextBox>
+                            <asp:TextBox ID="txtApellidoPaterno" runat="server" placeholder="Apellido Paterno" required="required" CssClass="form-control"></asp:TextBox>
                         </div>
                         <div class="form-row">
                             <label>Apellido Materno:</label>
-                            <asp:TextBox ID="txtApellidoMaterno" runat="server" placeholder="Apellido Materno"></asp:TextBox>
+                            <asp:TextBox ID="txtApellidoMaterno" runat="server" placeholder="Apellido Materno" required="required" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="form-row">
                             <label>DNI:</label>
-                            <asp:TextBox ID="txtDNIAlumno" runat="server" placeholder="DNI"></asp:TextBox>
+                            <asp:TextBox ID="txtDNIAlumno" runat="server" placeholder="DNI" required="required" CssClass="form-control"></asp:TextBox>
                         </div>
                         <div class="form-row">
                             <label>Fecha de Nacimiento:</label>
-                            <asp:TextBox ID="dtpFechaNacimiento" runat="server" placeholder="Fecha de Nacimiento" CssClass="date-picker" TextMode="Date"></asp:TextBox>
+                            <asp:TextBox ID="dtpFechaNacimiento" runat="server" placeholder="Fecha de Nacimiento" CssClass="date-picker form-control" TextMode="Date" required="required"></asp:TextBox>
                         </div>
                         <div class="form-row">
-                            <label>Sexo:</label>
-                            <asp:TextBox ID="txtSexo" runat="server" placeholder="Sexo"></asp:TextBox>
+                            <label for="ddlSexo">Sexo:</label>
+                            <asp:DropDownList ID="ddlSexo" runat="server" CssClass="form-control custom-dropdown" required="required">
+                                <asp:ListItem Text="Seleccionar" Value="" />
+                                <asp:ListItem Text="Masculino" Value="Masculino" />
+                                <asp:ListItem Text="Femenino" Value="Femenino" />
+                            </asp:DropDownList>
                         </div>
                         <div class="form-row">
                             <label>Email:</label>
-                            <asp:TextBox ID="txtEmail" runat="server" placeholder="Email"></asp:TextBox>
+                            <asp:TextBox ID="txtEmail" runat="server" placeholder="Email" required="required" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="form-row">
                             <label>Direccion:</label>
-                            <asp:TextBox ID="txtDireccion" runat="server" placeholder="Direccion"></asp:TextBox>
+                            <asp:TextBox ID="txtDireccion" runat="server" placeholder="Direccion" required="required" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
-                </div>
                 <div class="form-section">
-                    <h3>Datos del Apoderado</h3><hr>
+                    <h3>Datos del Apoderado</h3>
+                    <hr>
                     <div class="form-group">
                         <div class="form-row">
                             <label>DNI:</label>
-                            <asp:TextBox ID="txtDNIApoderado" runat="server" placeholder="DNI"></asp:TextBox>
+                            <asp:TextBox ID="txtDNIApoderado" runat="server" placeholder="DNI" required="required" CssClass="form-control"></asp:TextBox>
                         </div>
                         <div class="form-row">
                             <label>Nombre Completo:</label>
-                            <asp:TextBox ID="txtNombreApoderado" runat="server" placeholder="Nombre completo"></asp:TextBox>
+                            <asp:TextBox ID="txtNombreApoderado" runat="server" placeholder="Nombre completo" required="required" CssClass="form-control"></asp:TextBox>
                         </div>
                         <div class="form-row">
                             <label>Teléfono:</label>
-                            <asp:TextBox ID="txtTelefonoApoderado" runat="server" placeholder="Teléfono"></asp:TextBox>
+                            <asp:TextBox ID="txtTelefonoApoderado" runat="server" placeholder="Teléfono" required="required" CssClass="form-control"></asp:TextBox>
                         </div>
                         <div class="form-row">
-                            <label>Relacion:</label>
-                            <asp:TextBox ID="txtRelacionApoderado" runat="server" placeholder="Relacion"></asp:TextBox>
+                            <label>Relación:</label>
+                            <asp:TextBox ID="txtRelacionApoderado" runat="server" placeholder="Relación" required="required" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
                 </div>
@@ -277,6 +328,7 @@
                     <asp:Button ID="btnRegresar1" runat="server" Text="Regresar" OnClick="prevSection" CssClass="button-style" />
                     <asp:Button ID="btnGrabar1" runat="server" Text="Grabar y Continuar" OnClick="nextSection" CssClass="button-style" />
                 </div>
+
             </div>
 
             <div id="section2" class="section" runat="server" style="display: none;">

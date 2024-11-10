@@ -19,9 +19,6 @@
 <asp:Content ContentPlaceHolderID="menuItem5" runat="server">
     <a href="MiPerfilAlumno.aspx"><i class="fa-solid fa-user"></i> Mi Perfil</a>
 </asp:Content>
-<asp:Content ContentPlaceHolderID="menuItem6" runat="server">
-    <a href="MiPerfilAlumno.aspx"><i class="fa-solid fa-user"></i>Mi Perfil</a>
-</asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <h2 style="text-align: left; color: #000f;">Alumno - Inicio</h2>

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -17,7 +18,6 @@ namespace SoftPixelPenguinsWA
         ApoderadoWSClient apoderadoBO = new ApoderadoWSClient();
         GradoAcademicoWSClient gradoBO = new GradoAcademicoWSClient();
         alumno alumnoLogueado = null;
-
         protected void Page_Load(object sender, EventArgs e)
         {
             if (section3.Style["display"] != "block") Timer1.Enabled = false;
@@ -42,6 +42,7 @@ namespace SoftPixelPenguinsWA
                 }
             }
         }
+
         private void cargarValores()
         {
             alumnoLogueado = alumnoBO.obtenerAlumnoPorId((int)Session["idAlumnoLogueado"]);
@@ -60,7 +61,7 @@ namespace SoftPixelPenguinsWA
                 txtApellidoMaterno.Text = palabras[palabras.Length - 1];
             }
             dtpFechaNacimiento.Text = alumnoLogueado.fechaNacimiento.ToString("yyyy-MM-dd");
-            txtSexo.Text = alumnoLogueado.sexo;
+            ddlSexo.SelectedValue = alumnoLogueado.sexo;
             txtEmail.Text = alumnoLogueado.email;
             txtDireccion.Text = alumnoLogueado.direccion;
             alumnoLogueado.apoderado = apoderadoBO.obtenerApoderadoPorId(alumnoLogueado.apoderado.idApoderado);
@@ -72,6 +73,7 @@ namespace SoftPixelPenguinsWA
             lnkDescargarEstudios.Visible = true;
             lnkDescargarSalud.Visible = true;
         }
+
         protected void lnkDescargarEstudios_Click(object sender, EventArgs e)
         {
             alumnoLogueado = alumnoBO.obtenerAlumnoPorId((int)Session["idAlumnoLogueado"]);
@@ -124,6 +126,21 @@ namespace SoftPixelPenguinsWA
             {
                 apoderado.idApoderado = apoderadoBO.insertarApoderado(apoderado);
             }
+
+
+            // Validar que todos los campos obligatorios están llenos
+            if (string.IsNullOrEmpty(txtNombreAlumno.Text) ||
+                string.IsNullOrEmpty(txtApellidoPaterno.Text) ||
+                string.IsNullOrEmpty(txtApellidoMaterno.Text) ||
+                string.IsNullOrEmpty(txtDNIAlumno.Text) ||
+                string.IsNullOrEmpty(dtpFechaNacimiento.Text) ||
+                string.IsNullOrEmpty(ddlSexo.SelectedValue) ||
+                string.IsNullOrEmpty(txtEmail.Text) ||
+                string.IsNullOrEmpty(txtDireccion.Text))
+            {
+                return;
+            }
+
             alumno alumno = new alumno
             {
                 rol = rolBo.obtenerRolPorId(1),
@@ -133,7 +150,7 @@ namespace SoftPixelPenguinsWA
                 fechaNacimientoSpecified = true,
                 direccion = txtDireccion.Text,
                 email = txtEmail.Text,
-                sexo = txtSexo.Text,
+                sexo = ddlSexo.SelectedValue,
                 username = null,
                 password = null,
                 apoderado = apoderado,
@@ -145,6 +162,7 @@ namespace SoftPixelPenguinsWA
                 estado = estadoAlumno.Pendiente,
                 estadoSpecified = true
             };
+
             Session["nombreSesion"] = alumno.nombreCompleto;
             if (Session["idAlumnoLogueado"] != null)
             {
@@ -158,9 +176,10 @@ namespace SoftPixelPenguinsWA
             }
             else
             {
-                alumnoBO.insertarAlumno(alumno);
+                int idAlumno = alumnoBO.insertarAlumno(alumno);
             }
             nextSection(sender, e);
+
         }
 
         protected void nextSection(object sender, EventArgs e)
@@ -226,7 +245,7 @@ namespace SoftPixelPenguinsWA
                 }
                 else
                 {
-                    Response.Redirect("Matricularce.aspx");
+                    Response.Redirect("Matricularse.aspx");
                 }
             }
         }
@@ -283,7 +302,7 @@ namespace SoftPixelPenguinsWA
 
         protected void btnVolver_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Matricularce.aspx");
+            Response.Redirect("Matricularse.aspx");
         }
 
         protected void btnGuardarBoucher_Click(object sender, EventArgs e)

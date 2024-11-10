@@ -25,27 +25,25 @@ namespace SoftPixelPenguinsWA
                 if (Request.Url.AbsolutePath.EndsWith("IndexAlumno.aspx", StringComparison.OrdinalIgnoreCase))
                 {
                     // Oculta el menú deseado
-                    //ContentPlaceHolder menuItem6 = (ContentPlaceHolder)Master.FindControl("menuItem6");
-                    //ContentPlaceHolder menuItem7 = (ContentPlaceHolder)Master.FindControl("menuItem7");
-                    //if (menuItem6 != null && menuItem7 != null)
-                    //{
-                      //  menuItem6.Visible = false;
-                        //menuItem7.Visible = false;
-                    //}
+                    ContentPlaceHolder menuItem6 = (ContentPlaceHolder)Master.FindControl("menuItem6");
+                    ContentPlaceHolder menuItem7 = (ContentPlaceHolder)Master.FindControl("menuItem7");
+                    if (menuItem6 != null && menuItem7 != null)
+                    {
+                        menuItem6.Visible = false;
+                        menuItem7.Visible = false;
+                    }
                 }
 
                 // Define la fecha de pago
                 int idMatricula = matriculaBO.obtenerMatriculaPorIdAlumno(idUsuario);
                 pago pago = pagoBO.PagoXIdMatricula(idMatricula);
 
-                Session["idMatriculaAlumnoLogueado"]= idMatricula;
 
 
-                // Calcula la cantidad de días restantes para el pago
+                // Valida si cuenta con pagos 
                 if (pago != null)
                 {
                     int diasRestantes = (pago.fechaPago - DateTime.Now).Days;
-
 
                     // Construye el texto para mostrar la fecha y los días restantes
                     string textoFechaPago = pago.fechaPago.ToString("dd/MM/yyyy");
@@ -59,9 +57,13 @@ namespace SoftPixelPenguinsWA
                 }
                 else
                 {
-                    fechaPagoLiteral.Text = "--/--/--";
-                    Estado.Text = "No hay pagos por pagar";
+                    string textoFechaPago = "Usted no tiene pagos cercanos.";
+                    // Asigna el texto al Literal
+                    fechaPagoLiteral.Text = $"{textoFechaPago}";
+                    Estado.Text = "";
                 }
+
+                
             }
         }
     }

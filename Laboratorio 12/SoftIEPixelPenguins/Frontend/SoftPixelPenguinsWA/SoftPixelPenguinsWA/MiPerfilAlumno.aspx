@@ -27,6 +27,7 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <head> 
+
         <style>
 
             * {
@@ -92,6 +93,7 @@
             }
 
             h3 {
+                margin-top: 10px;
                 text-align: left;
                 color: #333;
             }
@@ -209,16 +211,59 @@
                 width: 50%;
             }
 
+            .input-group {
+                position: relative;
+                display: flex;
+                align-items: center;
+                height: 40px; /* Ajusta según sea necesario */
+            }
+
+            .password-field {
+                width: 100%; /* Ajusta según el diseño deseado */
+                padding-right: 2.5rem; /* Espacio para el ícono */
+                box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+                height: 100%; /* Hace que el TextBox tenga el mismo alto que el contenedor */
+                font-size: 16px; /* Asegura que el tamaño de la fuente sea consistente */
+            }
+
+            .input-icon {
+                position: absolute;
+                right: 10px; /* Ajusta según sea necesario */
+                cursor: pointer;
+                height: 100%; /* Hace que el ícono tenga el mismo alto que el TextBox */
+                display: flex;
+                align-items: center;
+            }
+
+
+
         </style>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const togglePassword = document.querySelector('#togglePassword');
+                const passwordField = document.querySelector('#<%= txtContrasena.ClientID %>');
+
+                togglePassword.addEventListener('click', function (e) {
+                    // Cambia el atributo type
+                    const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+                    passwordField.setAttribute('type', type);
+                    // Cambia el ícono
+                    this.classList.toggle('fa-eye-slash');
+                });
+            });
+        </script>
+
 
     </head>
     
 
-    <div class="container">
-        <h2>Alumno - Mi Perfil <span id="sectionTitle" runat="server"></span></h2>
+    <h2 style="text-align: left; color: #000f;">Alumno - Mi Perfil</h2>
+        <link rel="stylesheet" href="Content/Estilos-Alumno.css" />
 
-        <div class="main-content">
+        <div class="schedule">
             <div id="section1" class="section" runat="server" style="display: block;">
+
                 <div class="form-section">
                     <h3>Datos del alumno</h3>
                     <div class="form-group">
@@ -258,8 +303,22 @@
                             <label>Direccion:</label>
                             <asp:TextBox ID="txtDireccion" runat="server" placeholder="Direccion"></asp:TextBox>
                         </div>
+                        <div class="form-row">
+                            <label>Usuario:</label>
+                            <asp:TextBox ID="txtUsuario" runat="server" placeholder="Usuario"></asp:TextBox>
+                        </div>
+                        <div class="form-row">
+                            <label>Contraseña:</label>
+                            <div class="input-group">
+                                <asp:TextBox ID="txtContrasena" runat="server" placeholder="Contraseña" TextMode="Password" CssClass="form-control password-field"></asp:TextBox>
+                                <span class="input-icon">
+                                    <i class="fa fa-eye" id="togglePassword" style="cursor: pointer;"></i>
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
                 <div class="form-section">
                     <h3>Datos del Apoderado</h3>
                     <div class="form-group">
@@ -281,8 +340,31 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="form-section">
+                    <h3>Certificados</h3>
+                    <div class="form-group">
+                        <div class="form-row">
+                            <label>Certificado de Estudios:</label>
+                            <asp:LinkButton ID="linkDescargarEstudios" runat="server" CssClass="btn btn-info me-2" OnClick="linkDescargarEstudios_Click">
+                                Descargar Certificado de Estudios
+                            </asp:LinkButton>
+                        </div>
+                        <div class="form-row">
+                            <label>Certificado de Salud:</label>
+                            <asp:LinkButton ID="linkDescargarSalud" runat="server" CssClass="btn btn-info" OnClick="linkDescargarSalud_Click">
+                                Descargar Certificado de Salud
+                            </asp:LinkButton>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <asp:Button ID="btnGuardar" runat="server" Text="Guardar Cambios" OnClick="btnGuardar_Click1" CssClass="button-style" />
+                </div>
+
             </div>
-            
+    
         </div>
-    </div>
+
 </asp:Content>

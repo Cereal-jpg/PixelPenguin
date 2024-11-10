@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.ServiceModel.Channels;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
@@ -19,6 +20,8 @@ namespace SoftPixelPenguinsWA
         MatriculaWSClient matriculaBO = new MatriculaWSClient();
         ApoderadoWSClient apoderadoBO = new ApoderadoWSClient();
         alumno alumno = null;
+        RolWSClient rolBO = new RolWSClient();
+        GradoAcademicoWSClient gradoBO = new GradoAcademicoWSClient();
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -42,13 +45,15 @@ namespace SoftPixelPenguinsWA
                     }
 
                     cargarValores();
+
                 }
             }
             
-            string idUsuario = Request.QueryString["idUsuario"];
-            if (idUsuario != null)
+            if (Session["idAlumnoLogueado"] != null)
             {
-                alumno = alumnoBO.obtenerAlumnoPorId(Int32.Parse(idUsuario));
+                int idAlumno = (int)Session["idAlumnoLogueado"];
+
+                alumno = alumnoBO.obtenerAlumnoPorId(idAlumno);
                 txtDNIAlumno.Text = alumno.dni;
                 string[] palabras = alumno.nombreCompleto.Trim().Split(' ');
                 if (palabras.Length == 3)
@@ -96,22 +101,27 @@ namespace SoftPixelPenguinsWA
                 else
                 {
                     txtApellidoPaterno.Text = palabras[palabras.Length - 1];
-                    txtApellidoMaterno.Text = ""; // Si no hay apellido paterno, dejar en blanco
+                    txtApellidoMaterno.Text = ""; // Si no hay apellido materno, dejar en blanco
                 }
             }
+
+            // Datos personales del alumno
 
             dtpFechaNacimiento.Text = alumno.fechaNacimiento.ToString("yyyy-MM-dd");
             txtSexo.Text = alumno.sexo;
             txtEmail.Text = alumno.email;
             txtDireccion.Text = alumno.direccion;
+            txtUsuario.Text = alumno.username;
+            txtContrasena.Attributes["value"] = alumno.password;
+
+            // Datos del apoderado
             alumno.apoderado = apoderadoBO.obtenerApoderadoPorId(alumno.apoderado.idApoderado);
             txtDNIApoderado.Text = alumno.apoderado.dni.ToString();
             txtNombreApoderado.Text = alumno.apoderado.nombreCompleto;
             txtTelefonoApoderado.Text = alumno.apoderado.telefono.ToString();
             txtRelacionApoderado.Text = alumno.apoderado.relacion;
-            //ddlGrados.SelectedValue = alumno.gradoAcademico.idGradoAcademico.ToString();
-            //lnkDescargarEstudios.Visible = true;
-            //lnkDescargarSalud.Visible = true;
+            linkDescargarEstudios.Visible = true;
+            linkDescargarSalud.Visible = true;
             deshabilitarComponentes();
         }
 
@@ -121,100 +131,60 @@ namespace SoftPixelPenguinsWA
             txtNombreAlumno.Enabled = false;
             txtApellidoPaterno.Enabled = false;
             txtApellidoMaterno.Enabled = false;
+            txtDireccion.Enabled = false;
+            txtUsuario.Enabled = false;
+            txtContrasena.Enabled = false;
             dtpFechaNacimiento.Enabled = false;
             txtSexo.Enabled = false;
             txtEmail.Enabled = false;
         }
-        protected void lnkDescargarEstudios_Click(object sender, EventArgs e)
+        protected void linkDescargarEstudios_Click(object sender, EventArgs e)
         {
-            //alumnoLogueado = alumnoBO.obtenerAlumnoPorId((int)Session["idAlumnoLogueado"]);
-            //if (alumnoLogueado != null)
-            //{
-            //    byte[] archivoBytes = alumnoLogueado.certificadoDeEstudios;
-            //    if (archivoBytes != null && archivoBytes.Length > 0)
-            //    {
-            //        Response.Clear();
-            //        Response.ContentType = "application/pdf";
-             //       Response.AddHeader("Content-Disposition", "attachment; filename=certificadoDeEstudios.pdf");
-            //        Response.BinaryWrite(archivoBytes);
-            //        Response.End();
-            //    }
-            //}
-        }
-
-        protected void lnkDescargarSalud_Click(object sender, EventArgs e)
-        {
-            //alumnoLogueado = alumnoBO.obtenerAlumnoPorId((int)Session["idAlumnoLogueado"]);
-            //if (alumnoLogueado != null)
-            //{
-            //    byte[] archivoBytes = alumnoLogueado.certificadoDeSalud;
-            //    if (archivoBytes != null && archivoBytes.Length > 0)
-            //    {
-            //        Response.Clear();
-            //        Response.ContentType = "application/pdf";
-            //        Response.AddHeader("Content-Disposition", "attachment; filename=certificadoDeSalud.pdf");
-             //       Response.BinaryWrite(archivoBytes);
-             //       Response.End();
-             //   }
-            //}
-        }
-
-        protected void btnGuardar_Click(object sender, EventArgs e)
-        {
-            apoderado apoderado = new apoderado
+            if (alumno != null)
             {
-               dni = txtDNIApoderado.Text,
+                byte[] archivoBytes = alumno.certificadoDeEstudios;
+                if (archivoBytes != null && archivoBytes.Length > 0)
+                {
+                    Response.Clear();
+                    Response.ContentType = "application/pdf";
+                    Response.AddHeader("Content-Disposition", "attachment; filename=certificadoDeEstudios.pdf");
+                    Response.BinaryWrite(archivoBytes);
+                    Response.End();
+                }
+            }
+        }
+
+        protected void linkDescargarSalud_Click(object sender, EventArgs e)
+        {
+            if (alumno != null)
+            {
+                byte[] archivoBytes = alumno.certificadoDeSalud;
+                if (archivoBytes != null && archivoBytes.Length > 0)
+                {
+                    Response.Clear();
+                    Response.ContentType = "application/pdf";
+                    Response.AddHeader("Content-Disposition", "attachment; filename=certificadoDeSalud.pdf");
+                    Response.BinaryWrite(archivoBytes);
+                    Response.End();
+                }
+            }
+        }
+
+        protected void btnGuardar_Click1(object sender, EventArgs e)
+        {
+            apoderado nuevoApoderado = new apoderado
+            {
+                idApoderado = alumno.apoderado.idApoderado,
+                dni = txtDNIApoderado.Text,
                 nombreCompleto = txtNombreApoderado.Text,
                 telefono = txtTelefonoApoderado.Text,
                 relacion = txtRelacionApoderado.Text,
             };
-            if (Session["idAlumnoLogueado"] != null)
+            if (Session["idAlumnoLogueado"] != null && nuevoApoderado != null)
             {
-                //alumnoLogueado = alumnoBO.obtenerAlumnoPorId((int)Session["idAlumnoLogueado"]);
-                //apoderado.idApoderado = alumnoLogueado.apoderado.idApoderado;
+                apoderadoBO.modificarApoderado(nuevoApoderado);
+                
             }
-            else
-            {
-                apoderado.idApoderado = apoderadoBO.insertarApoderado(apoderado);
-            }
-            alumno alumno = new alumno
-            {
-                //rol = rolBo.obtenerRolPorId(1),
-                dni = txtDNIAlumno.Text,
-                nombreCompleto = String.Concat(txtNombreAlumno.Text, " ", txtApellidoPaterno.Text, " ", txtApellidoMaterno.Text),
-                fechaNacimiento = DateTime.Parse(dtpFechaNacimiento.Text),
-                fechaNacimientoSpecified = true,
-                direccion = txtDireccion.Text,
-                email = txtEmail.Text,
-                sexo = txtSexo.Text,
-                username = null,
-                password = null,
-                apoderado = apoderado,
-                //gradoAcademico = gradoBO.obtenerGradoAcademicoPorId(int.Parse(ddlGrados.SelectedValue)),
-                codigoAlumno = 0,
-                //certificadoDeEstudios = fileCertificadoEstudios.FileBytes,
-                //certificadoDeSalud = fileCertificadoSalud.FileBytes,
-                conDeuda = false,
-                estado = estadoAlumno.Pendiente,
-                estadoSpecified = true
-            };
-            Session["nombreSesion"] = alumno.nombreCompleto;
-            if (Session["idAlumnoLogueado"] != null)
-            {
-                //alumno.idUsuario = alumnoLogueado.idUsuario;
-                //alumno.username = alumnoLogueado.username;
-                //alumno.password = alumnoLogueado.password;
-                //alumno.codigoAlumno = alumnoLogueado.codigoAlumno;
-                //if (!fileCertificadoEstudios.HasFile) alumno.certificadoDeEstudios = alumnoLogueado.certificadoDeEstudios;
-                //if (!fileCertificadoSalud.HasFile) alumno.certificadoDeSalud = alumnoLogueado.certificadoDeSalud;
-                alumnoBO.modificarAlumno(alumno);
-            }
-            else
-            {
-                alumnoBO.insertarAlumno(alumno);
-            }
-            //nextSection(sender, e);
         }
-
     }
 }

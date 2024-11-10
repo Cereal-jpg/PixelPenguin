@@ -89,6 +89,10 @@
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
+
+        .h3 {
+            margin-top: 10px;
+        }
     </style>
 </asp:Content>
 
@@ -194,7 +198,7 @@
                     </asp:LinkButton>
                 </div>
                 <div id="lbBoucherPago" runat="server" class="form-row" style="display: none;">
-                    <label>Certificado de Salud:</label>
+                    <label>Boucher de Pago:</label>
                     <asp:LinkButton ID="lnkDescargarBoucher" runat="server" CssClass="btn btn-info" OnClick="lnkDescargarBoucher_Click">
                         Descargar Boucher de Pago
                     </asp:LinkButton>
@@ -210,4 +214,12 @@
        </div>
     </div>
  </asp:Content>
+
+
+
+
+
+
+
+
 

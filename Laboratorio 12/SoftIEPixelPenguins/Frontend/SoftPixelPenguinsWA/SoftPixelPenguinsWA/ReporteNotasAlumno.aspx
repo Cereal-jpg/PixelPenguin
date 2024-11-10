@@ -2,6 +2,8 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
     Alumno - Notas
+    </asp:Content>
+
 <asp:Content ContentPlaceHolderID="menuItem1" runat="server">
     <a href="IndexAlumno.aspx"><i class="fa-solid fa-home"></i>Inicio</a>
 </asp:Content>
@@ -21,7 +23,7 @@
     <a href="MiPerfilAlumno.aspx"><i class="fa-solid fa-user"></i>Mi Perfil</a>
 </asp:Content>
 
-<asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="cphContenido" runat="server">
     <h2 style="text-align: left; color: #000f;">Alumno - Reporte de Notas</h2>
     <link rel="stylesheet" href="Content/Fonts/EstiloCurso.css" />
 

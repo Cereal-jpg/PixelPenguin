@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace SoftPixelPenguinsWA
 {
-    public partial class GestionarSolicitudesPA : System.Web.UI.Page
+    public partial class GestionarSolicitudesAdmin : System.Web.UI.Page
     {
         AlumnoWSClient alumnoBO = new AlumnoWSClient();
 
@@ -16,17 +16,6 @@ namespace SoftPixelPenguinsWA
         {
             if (!IsPostBack)
             {
-                // Verifica si la página actual es el index
-                if (Request.Url.AbsolutePath.EndsWith("GestionarSolicitudesPA.aspx", StringComparison.OrdinalIgnoreCase))
-                {
-                    // Oculta el menú deseado
-                    ContentPlaceHolder menuItem7 = (ContentPlaceHolder)Master.FindControl("menuItem7");
-                    if (menuItem7 != null)
-                    {
-                        menuItem7.Visible = false;
-                    }
-                }
-
                 cargarEstados();
                 cargarAlumnos();
             }
@@ -67,7 +56,7 @@ namespace SoftPixelPenguinsWA
         {
             LinkButton lnk = (LinkButton)sender;
             int idUsuario = int.Parse(lnk.CommandArgument);
-            Response.Redirect("GestionarSolicitudesDetallePA.aspx?idUsuario=" + idUsuario);
+            Response.Redirect("GestionarSolicitudesDetalleAdmin.aspx?idUsuario=" + idUsuario);
         }
 
         protected void lbEliminar_Click(object sender, EventArgs e)
@@ -80,22 +69,3 @@ namespace SoftPixelPenguinsWA
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

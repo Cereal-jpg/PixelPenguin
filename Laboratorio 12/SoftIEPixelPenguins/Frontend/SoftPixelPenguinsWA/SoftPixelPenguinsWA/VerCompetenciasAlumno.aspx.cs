@@ -7,30 +7,24 @@ using System.Web.UI.WebControls;
 
 namespace SoftPixelPenguinsWA
 {
-    public partial class ReportesPA : System.Web.UI.Page
+    public partial class VerCompetenciasAlumno : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 // Verifica si la página actual es el index
-                if (Request.Url.AbsolutePath.EndsWith("ReportesPA.aspx", StringComparison.OrdinalIgnoreCase))
+                if (Request.Url.AbsolutePath.EndsWith("VerCompetenciasAlumno.aspx", StringComparison.OrdinalIgnoreCase))
                 {
                     // Oculta el menú deseado
+                    ContentPlaceHolder menuItem6 = (ContentPlaceHolder)Master.FindControl("menuItem6");
                     ContentPlaceHolder menuItem7 = (ContentPlaceHolder)Master.FindControl("menuItem7");
-                    if (menuItem7 != null)
+                    if (menuItem6 != null && menuItem7 != null)
                     {
+                        menuItem6.Visible = false;
                         menuItem7.Visible = false;
                     }
                 }
-            }
-        }
-
-        protected void btnEmitirReporte_Click(object sender, EventArgs e)
-        {
-            if (rbMatriculas.Checked)
-            {
-                Response.Redirect("ReporteGradoPA.aspx");
             }
         }
     }

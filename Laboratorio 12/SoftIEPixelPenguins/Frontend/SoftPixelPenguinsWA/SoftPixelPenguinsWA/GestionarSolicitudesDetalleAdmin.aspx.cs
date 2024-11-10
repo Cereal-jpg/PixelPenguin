@@ -3,13 +3,15 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Net.Mail;
+using System.Net;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace SoftPixelPenguinsWA
 {
-    public partial class GestionarSolicitudesDetallePA : System.Web.UI.Page
+    public partial class GestionarSolicitudesDetalleAdmin : System.Web.UI.Page
     {
         AlumnoWSClient alumnoBO = new AlumnoWSClient();
         GradoAcademicoWSClient gradoAcademicoBO = new GradoAcademicoWSClient();
@@ -21,20 +23,6 @@ namespace SoftPixelPenguinsWA
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                // Verifica si la página actual es el index
-                if (Request.Url.AbsolutePath.EndsWith("GestionarSolicitudesDetallePA.aspx", StringComparison.OrdinalIgnoreCase))
-                {
-                    // Oculta el menú deseado
-                    ContentPlaceHolder menuItem7 = (ContentPlaceHolder)Master.FindControl("menuItem7");
-                    if (menuItem7 != null)
-                    {
-                        menuItem7.Visible = false;
-                    }
-                }
-            }
-
             string idUsuario = Request.QueryString["idUsuario"];
             if (idUsuario != null)
             {
@@ -151,21 +139,57 @@ namespace SoftPixelPenguinsWA
 
         protected void btnConfirmar_Click(object sender, EventArgs e)
         {
-            if (alumno.estado.Equals(estadoAlumno.Pendiente))
+            try
             {
-                alumno.username = txtUsuario.Text;
-                alumno.password = txtContraseña.Text;
-                alumno.codigoAlumno = Int32.Parse(txtCodigo.Text);
-                alumno.estado = estadoAlumno.Por_Pagar;
+                if (alumno.estado.Equals(estadoAlumno.Pendiente))
+                {
+                    alumno.username = txtUsuario.Text;
+                    alumno.password = txtContraseña.Text;
+                    alumno.codigoAlumno = Int32.Parse(txtCodigo.Text);
+                    alumno.estado = estadoAlumno.Por_Pagar;
+                }
+                else if (alumno.estado.Equals(estadoAlumno.Por_Pagar))
+                {
+                    alumno.estado = estadoAlumno.Matriculado;
+                    matricularAlumno();
+                }
+                Session[alumno.nombreCompleto] = alumno;
+                alumnoBO.modificarAlumno(alumno);
+
+                // Configuración del correo
+                MailAddress addressFrom = new MailAddress("pixelpenguins13@gmail.com", "PixelPenguins");
+                MailAddress addressTo = new MailAddress("a20220825@pucp.edu.pe", alumno.nombreCompleto.ToString()); // Cambiar por el destinatario real
+
+                using (MailMessage mail = new MailMessage())
+                {
+                    mail.From = addressFrom;
+                    mail.To.Add(addressTo);
+                    mail.Subject = "Estado de Matrícula Actualizado";
+                    mail.Body = $"Hola {alumno.nombreCompleto},\n\nTu estado de matrícula ha sido actualizado.\n" +
+                            $"Tu nuevo usuario es: {alumno.username}\n" +
+                            $"Tu nueva contraseña es: {alumno.password}\n" +
+                            $"Tu nuevo codigo es: {alumno.codigoAlumno}\n" +
+                            "Gracias por elegir nuestra institución\n" +
+                            "Atentamente, \nEquipoAdministrativo PixelPenguins";
+
+                    mail.IsBodyHtml = false; // Cambiar a true si deseas enviar HTML
+
+                    using (SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587))
+                    {
+                        smtpClient.Credentials = new NetworkCredential("pixelpenguins13@gmail.com", "pixelP@1"); // Cambiar por tus credenciales
+                        smtpClient.EnableSsl = true; // Habilitar SSL
+                        smtpClient.Send(mail);
+                    }
+                }
+
+                // Redirigir después de enviar el correo
+                Response.Redirect("GestionarSolicitudesAdmin.aspx");
             }
-            else if (alumno.estado.Equals(estadoAlumno.Por_Pagar))
+            catch (Exception ex)
             {
-                alumno.estado = estadoAlumno.Matriculado;
-                matricularAlumno();
+                // Manejar errores
+                Console.WriteLine("Ocurrió un error: " + ex.Message);
             }
-            Session[alumno.nombreCompleto] = alumno;
-            alumnoBO.modificarAlumno(alumno);
-            Response.Redirect("GestionarSolicitudesPA.aspx");
         }
 
         private void matricularAlumno()
@@ -210,52 +234,3 @@ namespace SoftPixelPenguinsWA
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

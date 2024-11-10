@@ -124,6 +124,8 @@
     <Content Include="Content\Fonts\EstiloCurso.css" />
     <Content Include="Content\site.css" />
     <Content Include="CursosDictadosProfesor.aspx" />
+    <Content Include="GestionarSolicitudesAdmin.aspx" />
+    <Content Include="GestionarSolicitudesDetalleAdmin.aspx" />
     <Content Include="GestionarSolicitudesDetallePA.aspx" />
     <Content Include="GestionarSolicitudesPA.aspx" />
     <Content Include="GestionarUsuariosAdmin.aspx" />
@@ -149,6 +151,7 @@
     <Content Include="MatriculaGenerica.aspx" />
     <Content Include="MatriculaOnlineAlumno.aspx" />
     <Content Include="Matricularse.aspx" />
+    <Content Include="MiPerfilAlumno.aspx" />
     <Content Include="MiPerfilProfesor.aspx" />
     <Content Include="MisCursosAlumno.aspx" />
     <Content Include="PlanEstudioGenerico.aspx" />
@@ -624,6 +627,7 @@
     <Content Include="Scripts\jquery-3.7.1.min.js" />
     <Content Include="Scripts\jquery-3.7.1.slim.js" />
     <Content Include="Scripts\jquery-3.7.1.slim.min.js" />
+    <Content Include="VerCompetenciasAlumno.aspx" />
     <Content Include="VerCompetenciasGenerica.aspx" />
     <Content Include="Web.config" />
     <Content Include="SoftPixelPenguins.Master" />
@@ -640,6 +644,20 @@
     </Compile>
     <Compile Include="CursosDictadosProfesor.aspx.designer.cs">
       <DependentUpon>CursosDictadosProfesor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionarSolicitudesAdmin.aspx.cs">
+      <DependentUpon>GestionarSolicitudesAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionarSolicitudesAdmin.aspx.designer.cs">
+      <DependentUpon>GestionarSolicitudesAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionarSolicitudesDetalleAdmin.aspx.cs">
+      <DependentUpon>GestionarSolicitudesDetalleAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionarSolicitudesDetalleAdmin.aspx.designer.cs">
+      <DependentUpon>GestionarSolicitudesDetalleAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="GestionarSolicitudesDetallePA.aspx.cs">
       <DependentUpon>GestionarSolicitudesDetallePA.aspx</DependentUpon>
@@ -717,6 +735,13 @@
     </Compile>
     <Compile Include="Matricularse.aspx.designer.cs">
       <DependentUpon>Matricularse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiPerfilAlumno.aspx.cs">
+      <DependentUpon>MiPerfilAlumno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiPerfilAlumno.aspx.designer.cs">
+      <DependentUpon>MiPerfilAlumno.aspx</DependentUpon>
     </Compile>
     <Compile Include="MiPerfilProfesor.aspx.cs">
       <DependentUpon>MiPerfilProfesor.aspx</DependentUpon>
@@ -816,6 +841,13 @@
     </Compile>
     <Compile Include="SoftPixelPenguins.Master.designer.cs">
       <DependentUpon>SoftPixelPenguins.Master</DependentUpon>
+    </Compile>
+    <Compile Include="VerCompetenciasAlumno.aspx.cs">
+      <DependentUpon>VerCompetenciasAlumno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VerCompetenciasAlumno.aspx.designer.cs">
+      <DependentUpon>VerCompetenciasAlumno.aspx</DependentUpon>
     </Compile>
     <Compile Include="VerCompetenciasGenerica.aspx.cs">
       <DependentUpon>VerCompetenciasGenerica.aspx</DependentUpon>

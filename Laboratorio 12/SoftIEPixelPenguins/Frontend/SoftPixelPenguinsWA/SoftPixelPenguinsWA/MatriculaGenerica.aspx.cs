@@ -68,7 +68,7 @@ namespace SoftPixelPenguinsWA
             txtDNIApoderado.Text = alumnoLogueado.apoderado.dni.ToString();
             txtNombreApoderado.Text = alumnoLogueado.apoderado.nombreCompleto;
             txtTelefonoApoderado.Text = alumnoLogueado.apoderado.telefono.ToString();
-            txtRelacionApoderado.Text = alumnoLogueado.apoderado.relacion;
+            ddlRelacionApoderado.SelectedValue = alumnoLogueado.apoderado.relacion;
             ddlGrados.SelectedValue = alumnoLogueado.gradoAcademico.idGradoAcademico.ToString();
             lnkDescargarEstudios.Visible = true;
             lnkDescargarSalud.Visible = true;
@@ -115,7 +115,7 @@ namespace SoftPixelPenguinsWA
                 dni = txtDNIApoderado.Text,
                 nombreCompleto = txtNombreApoderado.Text,
                 telefono = txtTelefonoApoderado.Text,
-                relacion = txtRelacionApoderado.Text,
+                relacion = ddlRelacionApoderado.SelectedValue,
             };
             if (Session["idAlumnoLogueado"] != null)
             {

@@ -23,12 +23,16 @@ namespace SoftPixelPenguinsWA
 
         private void cargarCursos()
         {
-            List<curso> cursos = (cursoBO.listarCursosPorProfesor(8) ?? Array.Empty<curso>()).ToList();
-            if (cursos.Count > 0)
+            if(Session["idProfesorLogueado"] != null)
             {
-                foreach (curso curso in cursos) curso.gradoAcademico = gradoBO.obtenerGradoAcademicoPorId(curso.gradoAcademico.idGradoAcademico);
-                gvCursos.DataSource = cursos;
-                gvCursos.DataBind();
+                int idProfesor = (int)Session["idProfesorLogueado"];
+                List<curso> cursos = (cursoBO.listarCursosPorProfesor(idProfesor) ?? Array.Empty<curso>()).ToList();
+                if (cursos.Count > 0)
+                {
+                    foreach (curso curso in cursos) curso.gradoAcademico = gradoBO.obtenerGradoAcademicoPorId(curso.gradoAcademico.idGradoAcademico);
+                    gvCursos.DataSource = cursos;
+                    gvCursos.DataBind();
+                }
             }
         }
 

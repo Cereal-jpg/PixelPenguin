@@ -302,6 +302,7 @@
                             <asp:TextBox ID="txtDireccion" runat="server" placeholder="Direccion" required="required" CssClass="form-control"></asp:TextBox>
                         </div>
                     </div>
+                </div>
                 <div class="form-section">
                     <h3>Datos del Apoderado</h3>
                     <hr>
@@ -320,7 +321,11 @@
                         </div>
                         <div class="form-row">
                             <label>Relación:</label>
-                            <asp:TextBox ID="txtRelacionApoderado" runat="server" placeholder="Relación" required="required" CssClass="form-control"></asp:TextBox>
+                            <asp:DropDownList ID="ddlRelacionApoderado" runat="server" CssClass="form-control custom-dropdown" required="required">
+                            <asp:ListItem Text="Seleccionar" Value="" />
+                            <asp:ListItem Text="Padre" Value="Padre" />
+                            <asp:ListItem Text="Madre" Value="Madre" />
+                        </asp:DropDownList>
                         </div>
                     </div>
                 </div>
@@ -328,9 +333,7 @@
                     <asp:Button ID="btnRegresar1" runat="server" Text="Regresar" OnClick="prevSection" CssClass="button-style" />
                     <asp:Button ID="btnGrabar1" runat="server" Text="Grabar y Continuar" OnClick="nextSection" CssClass="button-style" />
                 </div>
-
             </div>
-
             <div id="section2" class="section" runat="server" style="display: none;">
                 <div class="form-section">
                     <h3>Seleccionar Grado Académico</h3><hr>

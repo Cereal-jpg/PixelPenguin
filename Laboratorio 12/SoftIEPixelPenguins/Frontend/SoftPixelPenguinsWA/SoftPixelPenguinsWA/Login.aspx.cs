@@ -33,6 +33,7 @@ namespace SoftPixelPenguinsWA
                         Response.Redirect("IndexAlumno.aspx");
                         break;
                     case 'p':
+                        Session["idProfesorLogueado"] = id;
                         Response.Redirect("IndexProfesor.aspx");
                         break;
                     case 'm':

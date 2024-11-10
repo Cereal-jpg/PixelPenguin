@@ -622,9 +622,6 @@
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarPagosXIdMatriculaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.ValidarUsuarioLoginResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <None Include="Connected Services\ServicioWeb\UsuarioWS.wsdl" />
     <None Include="Connected Services\ServicioWeb\UsuarioWS.xsd">
       <SubType>Designer</SubType>

@@ -282,29 +282,4 @@ public class UsuarioDAOImpl extends DAOImpl implements UsuarioDAO {
         if(id == null) return 0;
         return id;
     }
-
-    @Override
-    public Integer ValidarUsuarioLogin(String username, String contra) {
-        Integer userId = null;
-        try {
-            this.abrirConexion();
-            String sql = "SELECT idUsuario FROM Usuario WHERE username = ? AND password = ?";
-            this.colocarSQLenStatement(sql);
-            this.incluirParametroString(1, username);
-            this.incluirParametroString(2, contra);
-            this.ejecutarConsultaEnBD(sql);
-            if (this.resultSet.next()) {
-                userId = this.resultSet.getInt("idUsuario");
-            }
-        } catch (SQLException ex) {
-            System.err.println("Error al consultar si existe usuario - " + ex);
-        } finally {
-            try {
-                this.cerrarConexion();
-            } catch (SQLException ex) {
-                System.err.println("Error al cerrar la conexión - " + ex);
-            }
-        }
-        return userId;
-    }
 }

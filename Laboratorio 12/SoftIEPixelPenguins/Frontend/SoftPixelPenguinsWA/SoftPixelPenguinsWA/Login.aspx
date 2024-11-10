@@ -34,8 +34,8 @@
                     <h2>Inicio de Sesión</h2>
                     <asp:Label ID="errorMessage" runat="server" CssClass="error-message" Visible="false"></asp:Label>
                     <div class="form-group">
-                        <label for="email">Usuario</label>
-                        <asp:TextBox ID="user" runat="server" placeholder="Ingrese su usuario" CssClass="input" TextMode="Email"></asp:TextBox>
+                        <label for="email">Correo Electrónico</label>
+                        <asp:TextBox ID="email" runat="server" placeholder="Ingrese su correo electrónico" CssClass="input" TextMode="Email"></asp:TextBox>
                     </div>
                     <div class="form-group">
                         <label for="password">Contraseña</label>

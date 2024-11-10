@@ -22,23 +22,13 @@ namespace SoftPixelPenguinsWA
             if (!IsPostBack)
             {
                 // Verifica si la página actual es el index
-                if (Request.Url.AbsolutePath.EndsWith("IndexAlumno.aspx", StringComparison.OrdinalIgnoreCase))
-                {
-                    // Oculta el menú deseado
-                    ContentPlaceHolder menuItem6 = (ContentPlaceHolder)Master.FindControl("menuItem6");
-                    ContentPlaceHolder menuItem7 = (ContentPlaceHolder)Master.FindControl("menuItem7");
-                    if (menuItem6 != null && menuItem7 != null)
-                    {
-                        menuItem6.Visible = false;
-                        menuItem7.Visible = false;
-                    }
-                }
+      
 
                 // Define la fecha de pago
                 int idMatricula = matriculaBO.obtenerMatriculaPorIdAlumno(idUsuario);
                 pago pago = pagoBO.PagoXIdMatricula(idMatricula);
 
-
+                Session["idMatriculaAlumnoLogueado"] = idMatricula;
 
                 // Valida si cuenta con pagos 
                 if (pago != null)

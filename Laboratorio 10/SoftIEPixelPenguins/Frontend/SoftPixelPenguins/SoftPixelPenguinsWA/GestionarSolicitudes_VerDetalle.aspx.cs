@@ -2,7 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.SqlClient;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -137,7 +140,10 @@ namespace SoftPixelPenguinsWA
             Response.Redirect("GestionarSolicitudes.aspx");
         }
 
-        protected void btnConfirmar_Click(object sender, EventArgs e)
+
+protected void btnConfirmar_Click(object sender, EventArgs e)
+    {
+        try
         {
             if (alumno.estado.Equals(estadoAlumno.Pendiente))
             {
@@ -153,10 +159,45 @@ namespace SoftPixelPenguinsWA
             }
             Session[alumno.nombreCompleto] = alumno;
             alumnoBO.modificarAlumno(alumno);
+
+            // Configuración del correo
+            MailAddress addressFrom = new MailAddress("pixelpenguins13@gmail.com", "PixelPenguins");
+            MailAddress addressTo = new MailAddress("a20220825@pucp.edu.pe", alumno.nombreCompleto.ToString()); // Cambiar por el destinatario real
+
+            using (MailMessage mail = new MailMessage())
+            {
+                mail.From = addressFrom;
+                mail.To.Add(addressTo);
+                mail.Subject = "Estado de Matrícula Actualizado";
+                mail.Body = $"Hola {alumno.nombreCompleto},\n\nTu estado de matrícula ha sido actualizado.\n" + 
+                        $"Tu nuevo usuario es: {alumno.username}\n" +
+                        $"Tu nueva contraseña es: {alumno.password}\n"+
+                        $"Tu nuevo codigo es: {alumno.codigoAlumno}\n" +
+                        "Gracias por elegir nuestra institución\n" +
+                        "Atentamente, \nEquipoAdministrativo PixelPenguins";
+
+                mail.IsBodyHtml = false; // Cambiar a true si deseas enviar HTML
+
+                using (SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587))
+                {
+                    smtpClient.Credentials = new NetworkCredential("pixelpenguins13@gmail.com", "tu_contraseña"); // Cambiar por tus credenciales
+                    smtpClient.EnableSsl = true; // Habilitar SSL
+                    smtpClient.Send(mail);
+                }
+            }
+
+            // Redirigir después de enviar el correo
             Response.Redirect("GestionarSolicitudes.aspx");
         }
+        catch (Exception ex)
+        {
+                // Manejar errores
+                Console.WriteLine("Ocurrió un error: " + ex.Message);
+            }
+    }
 
-        private void matricularAlumno()
+
+    private void matricularAlumno()
         {
             gradoAcademico grado = gradoAcademicoBO.obtenerGradoAcademicoPorId(alumno.gradoAcademico.idGradoAcademico);
             if (grado !=null && grado.cantidadAlumnos < grado.vacantes)

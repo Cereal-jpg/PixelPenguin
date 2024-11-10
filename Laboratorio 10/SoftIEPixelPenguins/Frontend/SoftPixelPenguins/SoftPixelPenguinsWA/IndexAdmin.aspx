@@ -16,6 +16,9 @@
 <asp:Content ContentPlaceHolderID="menuItem4" runat="server">
     <a href="GestionarUsuarios.aspx"><i class="fa-solid fa-plus-circle"></i>Gestionar Usuario</a>
 </asp:Content>
+<asp:Content ContentPlaceHolderID="menuItem5" runat="server">
+    <a href="GestionarSolicitudes.aspx"><i class="fa-solid fa-plus-circle"></i>Gestionar Solicitudes</a>
+</asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <h2 style="text-align: left; color: #000f;">Página principal Equipo Administrativo</h2>

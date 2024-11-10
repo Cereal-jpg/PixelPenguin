@@ -59,7 +59,7 @@ namespace SoftPixelPenguinsWA
                 txtApellidoMaterno.Text = palabras[palabras.Length - 1];
             }
             dtpFechaNacimiento.Text = alumnoLogueado.fechaNacimiento.ToString("yyyy-MM-dd");
-            txtSexo.Text = alumnoLogueado.sexo;
+            ddlSexo.SelectedValue = alumnoLogueado.sexo;
             txtEmail.Text = alumnoLogueado.email;
             txtDireccion.Text = alumnoLogueado.direccion;
             alumnoLogueado.apoderado = apoderadoBO.obtenerApoderadoPorId(alumnoLogueado.apoderado.idApoderado);
@@ -133,7 +133,7 @@ namespace SoftPixelPenguinsWA
                 fechaNacimientoSpecified = true,
                 direccion = txtDireccion.Text,
                 email = txtEmail.Text,
-                sexo = txtSexo.Text,
+                sexo = ddlSexo.SelectedValue,
                 username = null,
                 password = null,
                 apoderado = apoderado,

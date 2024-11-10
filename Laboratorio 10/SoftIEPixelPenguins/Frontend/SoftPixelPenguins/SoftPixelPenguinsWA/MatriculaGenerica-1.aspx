@@ -166,26 +166,38 @@
         padding: 20px;
     }
 
-    .form-info{
-        background-color: midnightblue;
-        border-radius: 10px;
-        text-align: center;
-        width: 35%;
-        margin: auto;
-        padding: 5px;
-    }
+        .form-info {
+            background-color: midnightblue;
+            border-radius: 10px;
+            text-align: center;
+            width: 35%;
+            margin: auto;
+            padding: 5px;
+        }
 
-    .dll{
-        border-radius: 5px;
-        margin: auto;
-        padding: 5px;
-        width: 50%;
-    }
+        .dll {
+            border-radius: 5px;
+            margin: auto;
+            padding: 5px;
+            width: 50%;
+        }
 
+        .custom-dropdown {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+        }
+
+            .custom-dropdown:focus {
+                outline: none; /* Quita el borde azul brillante al enfocar */
+                border-color: #007bff; /* Cambia el color del borde al enfocar */
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Añade un efecto de sombra */
+            }
     </style>
 </head>
 <body>
-<div class="header">
+    <div class="header">
     <img src="Images/PIXEL.png" alt="Logo" />
     <h1>Pixel Penguins</h1>
     <div class="nav">
@@ -237,9 +249,14 @@
                             <asp:TextBox ID="dtpFechaNacimiento" runat="server" placeholder="Fecha de Nacimiento" CssClass="date-picker" TextMode="Date"></asp:TextBox>
                         </div>
                         <div class="form-row">
-                            <label>Sexo:</label>
-                            <asp:TextBox ID="txtSexo" runat="server" placeholder="Sexo"></asp:TextBox>
+                            <label for="ddlSexo">Sexo:</label>
+                            <asp:DropDownList ID="ddlSexo" runat="server" CssClass="form-control custom-dropdown">
+                                <asp:ListItem Text="Seleccionar" Value="" />
+                                <asp:ListItem Text="Masculino" Value="Masculino" />
+                                <asp:ListItem Text="Femenino" Value="Femenino" />
+                            </asp:DropDownList>
                         </div>
+
                         <div class="form-row">
                             <label>Email:</label>
                             <asp:TextBox ID="txtEmail" runat="server" placeholder="Email"></asp:TextBox>

@@ -60,12 +60,12 @@ public class Principal {
 //        for(Nota aux: notas)
 //            System.out.println(aux.getNota());
         
-        PagoBO pagoBO=new PagoBO();
-        Pago auxPago=pagoBO.PagoXAlumnos(1);
-        System.out.println(auxPago.getEstado());
-        
-        ArrayList<Pago> pagos = pagoBO.listarTodosPorIdMatricula(1);
-        System.out.println(pagos.get(0).getFechaPago());
+//        PagoBO pagoBO=new PagoBO();
+//        Pago auxPago=pagoBO.PagoXAlumnos(1);
+//        System.out.println(auxPago.getEstado());
+//        
+//        ArrayList<Pago> pagos = pagoBO.listarTodosPorIdMatricula(1);
+//        System.out.println(pagos.get(0).getFechaPago());
 //        CursoBO cursoBO=new CursoBO();
 //        ArrayList<Curso> cursos=cursoBO.listarCursosPorProfesor(8);
 //        for(Curso aux:cursos)
@@ -96,5 +96,10 @@ public class Principal {
 //            MatriculaBO matri = new MatriculaBO();
 //            int id = matri.obtenerPorIdAlumno(20);
 //            System.out.println(id);
+
+        UsuarioBO usuarioBO=new UsuarioBO();
+        int idUser = usuarioBO.ValidarUsuarioLogin("David", "password12");
+        System.out.println(idUser);
+        
     }
 }

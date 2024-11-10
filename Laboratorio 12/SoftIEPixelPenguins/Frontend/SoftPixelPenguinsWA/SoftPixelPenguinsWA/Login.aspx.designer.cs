@@ -33,13 +33,13 @@ namespace SoftPixelPenguinsWA
         protected global::System.Web.UI.WebControls.Label errorMessage;
 
         /// <summary>
-        /// Control email.
+        /// Control user.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox email;
+        protected global::System.Web.UI.WebControls.TextBox user;
 
         /// <summary>
         /// Control password.

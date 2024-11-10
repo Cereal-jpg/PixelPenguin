@@ -18,14 +18,16 @@ namespace SoftPixelPenguinsWA
 
         protected void loginButton_Click(object sender, EventArgs e)
         {
-            string Email = email.Text.Trim();
+            string User = user.Text.Trim();
             string Password = password.Text.Trim();
 
             int id;
-            id = usuarioWSClient.ValidarDatos(Email, Password);
+            // El inicio del usuario debe tener una letra según su rol
+
+            id = usuarioWSClient.ValidarUsuarioLogin(User, Password);
             if (id != 0)
             {
-                char tipo = Email[0];
+                char tipo = User[0];
                 switch (tipo)
                 {
                     case 'a':
@@ -37,9 +39,11 @@ namespace SoftPixelPenguinsWA
                         Response.Redirect("IndexProfesor.aspx");
                         break;
                     case 'm':
+                        Session["idPALogueado"] = id;
                         Response.Redirect("IndexPersonalAdministrativo.aspx");
                         break;
                     case 's':
+                        Session["idAdminLogueado"] = id;
                         Response.Redirect("IndexAdmin.aspx");
                         break;
                 }

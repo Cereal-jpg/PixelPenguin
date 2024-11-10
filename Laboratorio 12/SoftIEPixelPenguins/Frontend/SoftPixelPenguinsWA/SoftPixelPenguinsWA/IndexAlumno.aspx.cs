@@ -38,7 +38,7 @@ namespace SoftPixelPenguinsWA
                 int idMatricula = matriculaBO.obtenerMatriculaPorIdAlumno(idUsuario);
                 pago pago = pagoBO.PagoXIdMatricula(idMatricula);
 
-
+                Session["idMatriculaAlumnoLogueado"] = idMatricula;
 
                 // Valida si cuenta con pagos 
                 if (pago != null)
@@ -57,10 +57,9 @@ namespace SoftPixelPenguinsWA
                 }
                 else
                 {
-                    string textoFechaPago = "Usted no tiene pagos cercanos.";
                     // Asigna el texto al Literal
-                    fechaPagoLiteral.Text = $"{textoFechaPago}";
-                    Estado.Text = "";
+                    fechaPagoLiteral.Text = "--/--/--";
+                    Estado.Text = "No hay pagos por pagar";
                 }
 
                 

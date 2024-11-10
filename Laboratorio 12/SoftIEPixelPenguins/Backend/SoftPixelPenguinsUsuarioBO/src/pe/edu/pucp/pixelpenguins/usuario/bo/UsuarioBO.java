@@ -55,4 +55,7 @@ public class UsuarioBO {
         return this.usuarioDAO.ActualizarContrasena(email,newPassword);
     }
     
+    public Integer ValidarUsuarioLogin(String username,String password){
+        return this.usuarioDAO.ValidarUsuarioLogin(username, password);
+    }
 }

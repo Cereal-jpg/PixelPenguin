@@ -132,4 +132,18 @@ public class UsuarioWS {
         return id;
     }
     
+    @WebMethod(operationName = "ValidarUsuarioLogin")
+    public Integer ValidarUsuarioLogin(@WebParam(name = "username")String username,@WebParam(name = "password")String password) {
+        Integer id=null;
+        
+        try {
+            id = usuarioBO.ValidarDatos(username, password);
+        }
+        catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        if(id==null) return 0;
+        return id;
+    }
+    
 }

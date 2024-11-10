@@ -16,8 +16,12 @@ namespace SoftPixelPenguinsWA
             int idMatricula = (int)Session["idMatriculaAlumnoLogueado"];
             if (!IsPostBack)
             {
-                gvPagos.DataSource = pagoBO.listarPagosXIdMatricula(idMatricula);
-                gvPagos.DataBind();
+                // Validación para el idMatricula del alumno logueado
+                if (Session["idMatriculaAlumnoLogueado"] != null)
+                {
+                    gvPagos.DataSource = pagoBO.listarPagosXIdMatricula(idMatricula);
+                    gvPagos.DataBind();
+                }
             }
         }
 

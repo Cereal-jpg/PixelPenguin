@@ -18,4 +18,5 @@ public interface UsuarioDAO {
     public Integer ValidarDatos(String correo,String contra);
     public Integer ValidarCorreoElectronico(String correo);
     public Integer ActualizarContrasena(String email,String newPassword);
+    public Integer ValidarUsuarioLogin(String username,String contra);
 }

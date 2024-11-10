@@ -22,15 +22,7 @@ namespace SoftPixelPenguinsWA
             if (!IsPostBack)
             {
                 // Verifica si la página actual es el index
-                if (Request.Url.AbsolutePath.EndsWith("MisCursosAlumno.aspx", StringComparison.OrdinalIgnoreCase))
-                {
-                    // Oculta el menú deseado
-                    ContentPlaceHolder menuItem6 = (ContentPlaceHolder)Master.FindControl("menuItem6");
-                    if (menuItem6 != null)
-                    {
-                        menuItem6.Visible = false;
-                    }
-                }
+
             }
                 // Cargar el encabezado del grado académico
                 if (Session["idAlumnoLogueado"] != null)

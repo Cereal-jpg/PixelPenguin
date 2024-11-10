@@ -41,6 +41,10 @@ namespace SoftPixelPenguinsWA
                 }
             }
         }
+        protected void btnRegresar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("MisPagos.aspx");
+        }
 
     }
 }

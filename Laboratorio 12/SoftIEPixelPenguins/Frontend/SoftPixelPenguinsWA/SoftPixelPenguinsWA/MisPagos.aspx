@@ -21,8 +21,9 @@
     <a href="MiPerfilAlumno.aspx"><i class="fa-solid fa-user"></i>Mi Perfil</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem6" runat="server">
-    <a href="MiPerfilAlumno.aspx"><i class="fa-solid fa-book"></i>Mis Pagos</a>
+    <a href="MisPagos.aspx"><i class="fa-solid fa-book"></i>Mis Pagos</a>
 </asp:Content>
+
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <div class="d-flex justify-content-between align-items-center mt-3 mx-3">

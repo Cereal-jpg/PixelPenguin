@@ -16,7 +16,7 @@ namespace SoftPixelPenguinsWA
         gradoAcademico gradoAcademico = null;
         private CursoWSClient cursoBO = new CursoWSClient();
 
-        int idGradoAcademico;
+        //int idGradoAcademico;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)

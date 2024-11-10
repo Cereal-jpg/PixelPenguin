@@ -70,10 +70,6 @@
                 <!-- Agrega más elementos según sea necesario -->
             </ul>
             <hr>
-            <div class="d-flex">
-                <i class="fa-solid fa-book me-3"></i>
-                <h6 class="mt-1 mb-0">Pixel-Penguins</h6>
-            </div>
         </div>
         <!-- Contenido Derecha -->
         <div class="bg-light flex-fill overflow-auto">

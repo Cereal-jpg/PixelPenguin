@@ -107,6 +107,9 @@ namespace SoftPixelPenguinsWA
         {
             foreach (nota nota in notas)
             {
+                // más que insertar, debería ser un modificar la nota creo
+                // al matricularse el alumno se insertan todas sus notas correspondientes a '-'
+                // y el profesor puede ir actualizando conforme va avanzando el curso
                 notaBO.insertarNota(nota);
             }
         }

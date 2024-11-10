@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftPixelPenguins.Master" AutoEventWireup="true" CodeBehind="ReporteNotasAlumno.aspx.cs" Inherits="SoftPixelPenguinsWA.ReporteNotasAlumno" %>
-
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
     Alumno - Notas
+</asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem1" runat="server">
     <a href="IndexAlumno.aspx"><i class="fa-solid fa-home"></i>Inicio</a>
 </asp:Content>
@@ -37,7 +37,7 @@
                 </columns>
             </asp:GridView>
             <div style="display: flex; justify-content: flex-end;">
-                <asp:Button ID="Competencias" runat="server" Text="Ver Competencias" CssClass="login-button" OnClick="Competencias_Click"/>
+                <asp:Button ID="Notas" runat="server" Text="Ver Notas Parciales" CssClass="login-button" OnClick="btnVerNotas_Click"/>
             </div>
         </div>
     </div>

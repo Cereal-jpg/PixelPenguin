@@ -5,26 +5,23 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cphScripts" runat="server">
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem1" runat="server">
-    <a href="IndexAlumno.aspx"><i class="fa-solid fa-home"></i>Inicio</a>
+    <a href="IndexAlumno.aspx"><i class="fa-solid fa-home"></i> Inicio</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem2" runat="server">
-    <a href="MisCursosAlumno.aspx"><i class="fa-solid fa-book"></i>Mis cursos</a>
+    <a href="MisCursosAlumno.aspx"><i class="fa-solid fa-book"></i> Mis cursos</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem3" runat="server">
-    <a href="ReporteNotasAlumno.aspx"><i class="fa-solid fa-bar-chart"></i>Reporte de Notas</a>
+    <a href="ReporteNotasAlumno.aspx"><i class="fa-solid fa-bar-chart"></i> Reporte de Notas</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem4" runat="server">
-    <a href="MatriculaOnlineAlumno.aspx"><i class="fa-solid fa-archive"></i>Matrícula Online</a>
+    <a href="MatriculaOnlineAlumno.aspx"><i class="fa-solid fa-archive"></i> Matrícula Online</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem5" runat="server">
-    <a href="MiPerfilAlumno.aspx"><i class="fa-solid fa-user"></i>Mi Perfil</a>
-</asp:Content>
-<asp:Content ContentPlaceHolderID="menuItem6" runat="server">
-    <a href="MiPerfilAlumno.aspx"><i class="fa-solid fa-user"></i>Mi Perfil</a>
+    <a href="MiPerfilAlumno.aspx"><i class="fa-solid fa-user"></i> Mi Perfil</a>
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
-    <h2 style="text-align: left; color: #000f;">Alumno - Mis Cursos</h2>
+    <h2 style="text-align: left; color: #000f;">Detalle de cursos actuales</h2>
     <link rel="stylesheet" href="Content/Fonts/EstiloCurso.css" />
 
     <style>
@@ -43,6 +40,11 @@
                     <asp:BoundField HeaderText="Codigo" DataField="codigoCurso"/>
                     <asp:BoundField HeaderText="Nombre" DataField="nombre"/>
                     <asp:BoundField HeaderText="Horas Semanales" DataField="horasPorSemana"/>
+                    <asp:TemplateField>
+                        <ItemTemplate>
+                            <asp:LinkButton ID="btnVerInfoProfesor" runat="server" Text="Profesor asignado" class="btn btn-primary" OnClick="btnVerInfoProfesor_Click" CommandArgument='<%# Eval("fid_Profesor") %>' />
+                        </ItemTemplate>
+                    </asp:TemplateField>
                 </columns>
             </asp:GridView>
 

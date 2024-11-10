@@ -25,5 +25,10 @@ namespace SoftPixelPenguinsWA
                 }
             }
         }
+
+        protected void btnVerNotas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

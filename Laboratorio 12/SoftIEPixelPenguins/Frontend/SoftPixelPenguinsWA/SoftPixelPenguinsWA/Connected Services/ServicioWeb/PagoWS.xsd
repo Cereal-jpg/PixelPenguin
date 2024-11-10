@@ -6,15 +6,22 @@
   <xs:element name="eliminarPagoResponse" type="tns:eliminarPagoResponse" />
   <xs:element name="insertarPago" type="tns:insertarPago" />
   <xs:element name="insertarPagoResponse" type="tns:insertarPagoResponse" />
+  <xs:element name="listarPagosXIdMatricula" type="tns:listarPagosXIdMatricula" />
+  <xs:element name="listarPagosXIdMatriculaResponse" type="tns:listarPagosXIdMatriculaResponse" />
   <xs:element name="listarTodosPagos" type="tns:listarTodosPagos" />
   <xs:element name="listarTodosPagosResponse" type="tns:listarTodosPagosResponse" />
   <xs:element name="modificarPago" type="tns:modificarPago" />
   <xs:element name="modificarPagoResponse" type="tns:modificarPagoResponse" />
   <xs:element name="obtenerPagoPorId" type="tns:obtenerPagoPorId" />
   <xs:element name="obtenerPagoPorIdResponse" type="tns:obtenerPagoPorIdResponse" />
-  <xs:complexType name="eliminarPago">
+  <xs:complexType name="listarPagosXIdMatricula">
     <xs:sequence>
-      <xs:element minOccurs="0" name="pago" type="tns:pago" />
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPagosXIdMatriculaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:pago" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="pago">
@@ -65,6 +72,11 @@
       <xs:element minOccurs="0" name="idSeccionAcademica" type="xs:int" />
       <xs:element name="seccion" type="xs:unsignedShort" />
       <xs:element name="vacantes" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarPago">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="pago" type="tns:pago" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarPagoResponse">

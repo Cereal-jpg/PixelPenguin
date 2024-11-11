@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Curso {
     private Integer idCurso;
-    private Integer fid_Profesor = null;
+    private int fid_Profesor;
     private String codigoCurso;
     private String nombre;
     private int horasPorSemana;
@@ -17,7 +17,7 @@ public class Curso {
     
     public Curso(){}
     
-    public Curso(Integer idCurso,Integer fid_Profesor,String codigoCurso, String nombre,
+    public Curso(Integer idCurso,int fid_Profesor,String codigoCurso, String nombre,
             int horasPorSemana, int horasTotales,GradoAcademico gradoAcademico) {
         this.idCurso=idCurso;
         this.fid_Profesor=fid_Profesor;
@@ -39,11 +39,11 @@ public class Curso {
         this.idCurso = idCurso;
     }
 
-    public Integer getFid_Profesor() {
+    public int getFid_Profesor() {
         return fid_Profesor;
     }
 
-    public void setFid_Profesor(Integer fid_Profesor) {
+    public void setFid_Profesor(int fid_Profesor) {
         this.fid_Profesor = fid_Profesor;
     }
 

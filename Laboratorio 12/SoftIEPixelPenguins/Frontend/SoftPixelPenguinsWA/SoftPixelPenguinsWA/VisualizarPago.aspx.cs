@@ -15,8 +15,27 @@ namespace SoftPixelPenguinsWA
         pago pago = null;
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            if (!IsPostBack)
+            {
+                // Verifica si la página actual es el index
+                if (Session["idAlumnoLogueado"] != null)
+                {
+                    // Verifica si la página actual es el index
+                    if (Request.Url.AbsolutePath.EndsWith("MiPerfilAlumno.aspx", StringComparison.OrdinalIgnoreCase))
+                    {
+                        // Oculta el menú deseado
+                        ContentPlaceHolder menuItem7 = (ContentPlaceHolder)Master.FindControl("menuItem7");
+                        if (menuItem7 != null)
+                        {
+                            menuItem7.Visible = false;
+                        }
+                    }
+                }
+            }
+
             string idPago = Request.QueryString["idPago"];
-            if (idPago != null)
+            if(idPago != null)
             {
                 pago = pagoBO.obtenerPagoPorId(Int32.Parse(idPago));
                 txtFechaCreacion.Text = pago.fechaCreacion.ToString();
@@ -28,7 +47,7 @@ namespace SoftPixelPenguinsWA
         }
         protected void lnkDescargarComprobante_Click(object sender, EventArgs e)
         {
-            if (pago != null)
+            if(pago != null)
             {
                 byte[] archivoBytes = pago.comprobanteDePago;
                 if (archivoBytes != null && archivoBytes.Length > 0)
@@ -40,7 +59,7 @@ namespace SoftPixelPenguinsWA
                     Response.End();
                 }
             }
-
+            
         }
         protected void btnRegresar_Click(object sender, EventArgs e)
         {

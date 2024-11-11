@@ -797,8 +797,6 @@ namespace SoftPixelPenguinsWA.ServicioWeb {
         
         private int fid_ProfesorField;
         
-        private bool fid_ProfesorFieldSpecified;
-        
         private gradoAcademico gradoAcademicoField;
         
         private int horasPorSemanaField;
@@ -832,18 +830,6 @@ namespace SoftPixelPenguinsWA.ServicioWeb {
             set {
                 this.fid_ProfesorField = value;
                 this.RaisePropertyChanged("fid_Profesor");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool fid_ProfesorSpecified {
-            get {
-                return this.fid_ProfesorFieldSpecified;
-            }
-            set {
-                this.fid_ProfesorFieldSpecified = value;
-                this.RaisePropertyChanged("fid_ProfesorSpecified");
             }
         }
         

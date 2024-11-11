@@ -91,5 +91,15 @@ public class PagoWS {
         }
         return pagos;
     }
-    
+    @WebMethod(operationName = "listarPagosPoridGrado")
+     public ArrayList<Pago> listarTodosPorGrado(int idGrado){
+         ArrayList<Pago> pagos = null;
+         try{
+             pagos = pagoBO.listarTodosPorGrado(idGrado);
+         }
+         catch (Exception ex){
+             System.out.println(ex.getMessage());
+         }
+         return pagos;
+     }
 }

@@ -66,6 +66,10 @@ public class Principal {
         
         ArrayList<Pago> pagos = pagoBO.listarTodosPorIdMatricula(1);
         System.out.println(pagos.get(0).getFechaPago());
+        
+        ArrayList<Pago>datos =pagoBO.listarTodosPorGrado(1);
+        
+        System.out.println(datos.get(0).getEstado());
 //        CursoBO cursoBO=new CursoBO();
 //        ArrayList<Curso> cursos=cursoBO.listarCursosPorProfesor(8);
 //        for(Curso aux:cursos)

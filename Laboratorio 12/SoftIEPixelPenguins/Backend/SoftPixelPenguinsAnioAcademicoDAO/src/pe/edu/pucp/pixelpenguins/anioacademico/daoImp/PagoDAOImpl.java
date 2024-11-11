@@ -197,5 +197,44 @@ public class PagoDAOImpl extends DAOImpl implements PagoDAO {
         }
         return pagos;
     }
+
+    @Override
+    public ArrayList<Pago> listarTodosPorGrado(int idGrado) {
+        ArrayList<Pago> pagos = new ArrayList<Pago>();
+
+        try {
+            this.abrirConexion();
+            String sql = "SELECT a.idPago,a.estado, a.fid_Matricula,a.fechaCreacion,a.fechaPago "
+                    + "FROM Pago a, Matricula b WHERE b.idMatricula = a.fid_Matricula "
+                    + "AND b.fid_GradoAcademico = ?";
+            this.colocarSQLenStatement(sql);
+            this.incluirParametroInt(1, idGrado);
+            this.ejecutarConsultaEnBD(sql);
+            while (this.resultSet.next()) {
+                Pago pago = new Pago();
+                pago.setIdPago(this.resultSet.getInt("idPago"));
+                pago.setEstado(EstadoDePago.valueOf(this.resultSet.getString("estado")));
+                pago.setFechaCreacion(this.resultSet.getDate("fechaCreacion"));
+                pago.setFechaPago(this.resultSet.getDate("fechaPago"));
+
+                Matricula matricula = new Matricula();
+                matricula.setIdMatricula(this.resultSet.getInt("fid_Matricula"));
+                pago.setMatricula(matricula);
+
+                pagos.add(pago);
+            }
+        } catch (SQLException ex) {
+            System.err.println("Error al intentar listarTodos - " + ex);
+        } 
+        finally {
+            try {
+                this.cerrarConexion();
+            } catch (SQLException ex) {
+                System.err.println("Error al cerrar la conexión - " + ex);
+            }
+        }
+
+        return pagos;
+    }
 }
 

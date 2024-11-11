@@ -172,4 +172,39 @@ public class NotaDAOImpl extends DAOImpl implements NotaDAO {
         return notas;
     }
     
+    @Override
+    public ArrayList<Nota> listarPorAlumnoCursoYBimestre(Integer idAlumno, Integer idCurso, Integer bimestre) {
+        ArrayList<Nota> notas = new ArrayList<Nota>();
+        this.usarPredicadoParaListado = true;
+        try {
+            this.abrirConexion();
+            String sql = "SELECT n.idNota, n.fid_Matricula, n.fid_Alumno, n.fid_Curso,"
+                    + " n.fid_Competencia, n.nota, n.bimestre, comp.descripcion AS desc_Competencia FROM "+
+                    this.nombre_tabla+" n JOIN Competencia comp ON n.fid_Competencia=comp.idCompetencia "
+                    + "WHERE n.fid_Alumno=? AND n.fid_Curso=? AND n.bimestre=?";
+            this.colocarSQLenStatement(sql);
+            if(this.usarPredicadoParaListado){
+                this.incluirParametroInt(1, idAlumno);
+                this.incluirParametroInt(2, idCurso);
+                this.incluirParametroInt(3, bimestre);
+            }
+            this.ejecutarConsultaEnBD(sql);
+            while (this.resultSet.next()) {
+                instanciarObjetoDelResultSet();
+                this.nota.getCompetencia().setDescripcion(this.resultSet.getString("desc_Competencia"));
+                notas.add(this.nota);
+            }
+        } catch (SQLException ex) {
+            System.err.println("Error al intentar listarTodos - " + ex);
+        } finally {
+            try {
+                this.cerrarConexion();
+            } catch (SQLException ex) {
+                System.err.println("Error al cerrar la conexión - " + ex);
+            }
+        }
+        this.usarPredicadoParaListado = false;
+        
+        return notas;
+    }
 }

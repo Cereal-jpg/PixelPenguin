@@ -27,9 +27,9 @@ namespace SoftPixelPenguinsWA
             }
         }
 
-        protected void btnVerNotas_Click(object sender, EventArgs e)
+        protected void btnVerNotasParciales_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("NotasParcialesAlumno.aspx");
         }
     }
 }

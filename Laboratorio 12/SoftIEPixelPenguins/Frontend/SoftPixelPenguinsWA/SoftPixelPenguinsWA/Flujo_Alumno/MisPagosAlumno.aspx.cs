@@ -40,11 +40,11 @@ namespace SoftPixelPenguinsWA
         {
             LinkButton btn = (LinkButton)sender;
             int idPago = int.Parse(btn.CommandArgument);
-            Response.Redirect("VisualizarPago.aspx?idPago=" + idPago);
+            Response.Redirect("VisualizarPagoAlumno.aspx?idPago=" + idPago);
         }
 
-        
+
     }
-    
-    
+
+
 }

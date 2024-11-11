@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace SoftPixelPenguinsWA
 {
-    public partial class VisualizarPago : System.Web.UI.Page
+    public partial class VisualizarPagoAlumno : System.Web.UI.Page
     {
         PagoWSClient pagoBO = new PagoWSClient();
         pago pago = null;
@@ -35,7 +35,7 @@ namespace SoftPixelPenguinsWA
             }
 
             string idPago = Request.QueryString["idPago"];
-            if(idPago != null)
+            if (idPago != null)
             {
                 pago = pagoBO.obtenerPagoPorId(Int32.Parse(idPago));
                 txtFechaCreacion.Text = pago.fechaCreacion.ToString();
@@ -47,7 +47,7 @@ namespace SoftPixelPenguinsWA
         }
         protected void lnkDescargarComprobante_Click(object sender, EventArgs e)
         {
-            if(pago != null)
+            if (pago != null)
             {
                 byte[] archivoBytes = pago.comprobanteDePago;
                 if (archivoBytes != null && archivoBytes.Length > 0)
@@ -59,7 +59,7 @@ namespace SoftPixelPenguinsWA
                     Response.End();
                 }
             }
-            
+
         }
         protected void btnRegresar_Click(object sender, EventArgs e)
         {

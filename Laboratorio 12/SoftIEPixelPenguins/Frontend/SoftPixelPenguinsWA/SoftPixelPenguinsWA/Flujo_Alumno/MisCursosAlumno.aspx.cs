@@ -84,7 +84,7 @@ namespace SoftPixelPenguinsWA
         {
             LinkButton btn = (LinkButton)sender;
             int idProfesor = int.Parse(btn.CommandArgument);
-            Response.Redirect("VerInfoProfesor.aspx?idProfesor="+idProfesor);
+            Response.Redirect("VerInfoProfesorAlumno.aspx?idProfesor="+idProfesor);
         }
     }
 }

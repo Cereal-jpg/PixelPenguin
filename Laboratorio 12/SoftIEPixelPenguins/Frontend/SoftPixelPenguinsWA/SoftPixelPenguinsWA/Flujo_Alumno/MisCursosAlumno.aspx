@@ -18,7 +18,7 @@
     <a href="MatriculaOnlineAlumno.aspx"><i class="fa-solid fa-archive"></i> Matrícula Online</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem5" runat="server">
-    <a href="MisPagos.aspx"><i class="fa-solid fa-book"></i>Mis Pagos</a>
+    <a href="MisPagosAlumno.aspx"><i class="fa-solid fa-book"></i> Mis Pagos</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem6" runat="server">
     <a href="MiPerfilAlumno.aspx"><i class="fa-solid fa-user"></i> Mi Perfil</a>

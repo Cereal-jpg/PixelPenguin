@@ -11,7 +11,7 @@ namespace SoftPixelPenguinsWA
 {
 
 
-    public partial class VisualizarPago
+    public partial class VisualizarPagoAlumno
     {
 
         /// <summary>

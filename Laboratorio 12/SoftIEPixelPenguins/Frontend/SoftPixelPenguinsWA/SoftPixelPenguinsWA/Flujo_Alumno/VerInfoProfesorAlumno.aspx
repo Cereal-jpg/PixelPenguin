@@ -1,6 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftPixelPenguins.Master" AutoEventWireup="true" CodeBehind="IndexAlumno.aspx.cs" Inherits="SoftPixelPenguinsWA.IndexAlumno" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftPixelPenguins.Master" AutoEventWireup="true" CodeBehind="VerInfoProfesorAlumno.aspx.cs" Inherits="SoftPixelPenguinsWA.VerInfoProfesorAlumno" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
-    Inicio - Alumno
+    Detalle del profesor asignado
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphScripts" runat="server">
 </asp:Content>
@@ -25,21 +25,8 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
-    <h2 style="text-align: left; color: #000f;">Alumno - Inicio</h2>
-    <link rel="stylesheet" href="../Content/Estilos-Alumno.css" />
-    <div class="container-al">
-        <div class="schedule">
-            <h3>Horario Académico</h3>
-            <img src="../Images/HORARIO1.png" alt="Horario Académico" class="centered-image"/>
-        </div>
-        <div class="notifications">
-            <h3>Notificaciones</h3>
-            <ul id="notificationList" class="notification-list" runat="server">
-                <li>Próxima fecha de pago: <asp:Literal ID="fechaPagoLiteral" runat="server"></asp:Literal></li>
-                <li>Estado de pagos: <asp:Literal ID="Estado" runat="server"></asp:Literal></li>
-                <li>Entrega de trabajos hasta el jueves.</li>
-                <li>Examen de matemáticas programado para el lunes.</li>
-            </ul>
-        </div>
+    <h2 id="hTitulo" style="color: black;" runat="server"></h2>
+    <div>
+        <asp:Button ID="btnRegresar" runat="server" Text="Regresar" OnClick="btnRegresar_Click" CssClass="btn btn-primary" />
     </div>
 </asp:Content>

@@ -192,12 +192,13 @@ DROP TABLE IF EXISTS HoraAcademica;
 CREATE TABLE HoraAcademica(
 	idHoraAcademica INT AUTO_INCREMENT,
     fid_Curso INT NOT NULL,
-    idProfesorRelacionado INT NOT NULL,
+    fid_seccionAcademica INT NOT NULL,
     horaInicio TIME NOT NULL,
     horaFin TIME NOT NULL,
+    dia ENUM ('LUNES','MARTES','MIERCOLES','JUEVES','VIERNES') NOT NULL,
     PRIMARY KEY (idHoraAcademica),
     FOREIGN KEY (fid_Curso) REFERENCES Curso (idCurso) ON DELETE CASCADE,
-    FOREIGN KEY (idProfesorRelacionado) REFERENCES Profesor (idProfesor) ON DELETE CASCADE
+    FOREIGN KEY (fid_seccionAcademica) REFERENCES SeccionAcademica (idSeccionAcademica) ON DELETE CASCADE
 );
 
 DROP TABLE IF EXISTS Pago;

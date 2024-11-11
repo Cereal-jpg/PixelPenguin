@@ -124,6 +124,8 @@
     <Content Include="Content\Fonts\EstiloCurso.css" />
     <Content Include="Content\site.css" />
     <Content Include="CursosDictadosProfesor.aspx" />
+    <Content Include="GestionarHorariosPA.aspx" />
+    <Content Include="CursosPorProfesorPA.aspx" />
     <Content Include="GestionarSolicitudesAdmin.aspx" />
     <Content Include="GestionarSolicitudesDetalleAdmin.aspx" />
     <Content Include="GestionarSolicitudesDetallePA.aspx" />
@@ -157,6 +159,7 @@
     <Content Include="PlanEstudioGenerico.aspx" />
     <Content Include="ProcesoMatriculaGenerica.aspx" />
     <Content Include="RecuperarContrasena.aspx" />
+    <Content Include="CursosYHorariosPA.aspx" />
     <Content Include="RegistroNotasProfesor_Alumnos.aspx" />
     <Content Include="RegistroNotasProfesor_Competencias.aspx" />
     <Content Include="RegistroNotasProfesor.aspx" />
@@ -618,6 +621,12 @@
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarMatriculasPorGradoAcademicoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarPagosXIdMatriculaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarHorasAcademicasPorCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\ServicioWeb\UsuarioWS.wsdl" />
     <None Include="Connected Services\ServicioWeb\UsuarioWS.xsd">
       <SubType>Designer</SubType>
@@ -645,6 +654,20 @@
     </Compile>
     <Compile Include="CursosDictadosProfesor.aspx.designer.cs">
       <DependentUpon>CursosDictadosProfesor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionarHorariosPA.aspx.cs">
+      <DependentUpon>GestionarHorariosPA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionarHorariosPA.aspx.designer.cs">
+      <DependentUpon>GestionarHorariosPA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CursosPorProfesorPA.aspx.cs">
+      <DependentUpon>CursosPorProfesorPA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CursosPorProfesorPA.aspx.designer.cs">
+      <DependentUpon>CursosPorProfesorPA.aspx</DependentUpon>
     </Compile>
     <Compile Include="GestionarSolicitudesAdmin.aspx.cs">
       <DependentUpon>GestionarSolicitudesAdmin.aspx</DependentUpon>
@@ -779,6 +802,13 @@
     </Compile>
     <Compile Include="RecuperarContrasena.aspx.designer.cs">
       <DependentUpon>RecuperarContrasena.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CursosYHorariosPA.aspx.cs">
+      <DependentUpon>CursosYHorariosPA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CursosYHorariosPA.aspx.designer.cs">
+      <DependentUpon>CursosYHorariosPA.aspx</DependentUpon>
     </Compile>
     <Compile Include="RegistroNotasProfesor_Alumnos.aspx.cs">
       <DependentUpon>RegistroNotasProfesor_Alumnos.aspx</DependentUpon>

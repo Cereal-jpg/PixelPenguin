@@ -1,23 +1,22 @@
 
 package pe.edu.pucp.pixelpenguins.curricula.model;
 
-import java.time.LocalTime;
-
 public class HoraAcademica {
     private Integer idHoraAcademica;
-    private int idProfesorRelacionado;
-    private LocalTime horaInicio;
-    private LocalTime horaFin;
-    private Curso curso; //tendrá asignada una FK fid_curso en la BD
+    private String horaInicio;
+    private String horaFin;
+    private Curso curso;
+    private DiaSemana dia;
+    private SeccionAcademica seccionAcademica;
     
     public HoraAcademica(){}
-    
-    public HoraAcademica(Integer idProfesorRelacionado, LocalTime horaInicio, 
-            LocalTime horaFin, Curso curso) {
-        this.idProfesorRelacionado = idProfesorRelacionado;
+
+    public HoraAcademica(String horaInicio, String horaFin, Curso curso, DiaSemana dia, SeccionAcademica seccionAcademica) {
         this.horaInicio = horaInicio;
         this.horaFin = horaFin;
         this.curso = curso;
+        this.dia = dia;
+        this.seccionAcademica = seccionAcademica;
     }
 
     public Integer getIdHoraAcademica() {
@@ -28,36 +27,43 @@ public class HoraAcademica {
         this.idHoraAcademica = idHoraAcademica;
     }
 
-    public int getIdProfesorRelacionado() {
-        return idProfesorRelacionado;
-    }
-
-    public void setIdProfesorRelacionado(int idProfesorRelacionado) {
-        this.idProfesorRelacionado = idProfesorRelacionado;
-    }
-    
-    public LocalTime getHoraInicio() {
-        return horaInicio;
-    }
-
-    public void setHoraInicio(LocalTime horaInicio) {
+    public void setHoraInicio(String horaInicio) {
         this.horaInicio = horaInicio;
     }
 
-    public LocalTime getHoraFin() {
-        return horaFin;
-    }
-
-    public void setHoraFin(LocalTime horaFin) {
+    public void setHoraFin(String horaFin) {
         this.horaFin = horaFin;
     }
+    
+    public String getHoraInicio() {
+        return horaInicio;
+    }
 
+    public String getHoraFin() {
+        return horaFin;
+    }
     public Curso getCurso() {
         return curso;
     }
 
     public void setCurso(Curso curso) {
         this.curso = curso;
+    }
+
+    public DiaSemana getDia() {
+        return dia;
+    }
+
+    public void setDia(DiaSemana dia) {
+        this.dia = dia;
+    }
+
+    public SeccionAcademica getSeccionAcademica() {
+        return seccionAcademica;
+    }
+
+    public void setSeccionAcademica(SeccionAcademica seccionAcademica) {
+        this.seccionAcademica = seccionAcademica;
     }
 
 }

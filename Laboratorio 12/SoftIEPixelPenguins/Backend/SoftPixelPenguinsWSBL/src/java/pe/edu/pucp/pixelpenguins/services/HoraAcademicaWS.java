@@ -5,6 +5,7 @@ import jakarta.jws.WebMethod;
 import jakarta.jws.WebParam;
 import java.util.ArrayList;
 import pe.edu.pucp.pixelpenguins.curricula.bo.HoraAcademicaBO;
+import pe.edu.pucp.pixelpenguins.curricula.model.Curso;
 import pe.edu.pucp.pixelpenguins.curricula.model.HoraAcademica;
 
 @WebService(serviceName = "HoraAcademicaWS", targetNamespace
@@ -66,6 +67,17 @@ public class HoraAcademicaWS {
             System.out.println(ex.getMessage());
         }
         return horaAcademica;
+    }
+    
+    @WebMethod(operationName = "listarHorasAcademicasPorCurso")
+    public ArrayList<HoraAcademica> listarHorasAcademicasPorCurso(@WebParam(name = "curso") Curso curso) {
+        ArrayList<HoraAcademica> horasAcademicas = null;
+        try {
+            horasAcademicas = horaAcademicaBO.listarHorasAcademicasPorCurso(curso);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return horasAcademicas;
     }
     
 }

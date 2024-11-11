@@ -1,6 +1,7 @@
 package pe.edu.pucp.pixelpenguins.curricula.dao;
 
 import java.util.ArrayList;
+import pe.edu.pucp.pixelpenguins.curricula.model.Curso;
 import pe.edu.pucp.pixelpenguins.curricula.model.HoraAcademica;
 
 public interface HoraAcademicaDAO {
@@ -9,4 +10,5 @@ public interface HoraAcademicaDAO {
     public Integer eliminar(HoraAcademica horaAcademica);
     public ArrayList<HoraAcademica> listarTodos();
     public HoraAcademica obtenerPorId(Integer idHoraAcademica);
+    public ArrayList<HoraAcademica>listarHorasAcademicasPorCurso(Curso curso);
 }

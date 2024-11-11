@@ -312,12 +312,12 @@ public abstract class DAOImpl {
     }
     
     protected void incluirParametroTime(Integer numeroParametro, LocalTime valor) throws SQLException {
-    if (valor == null) {
-        this.statement.setNull(numeroParametro, Types.TIME);
-    } else {
-        this.statement.setTime(numeroParametro, Time.valueOf(valor));
+        if (valor == null) {
+            this.statement.setNull(numeroParametro, Types.TIME);
+        } else {
+            this.statement.setTime(numeroParametro, Time.valueOf(valor));
+        }
     }
-}
 
     protected void incluirParametroDate(Integer numeroParametro, Date valor) throws SQLException {
         if (valor == null) {

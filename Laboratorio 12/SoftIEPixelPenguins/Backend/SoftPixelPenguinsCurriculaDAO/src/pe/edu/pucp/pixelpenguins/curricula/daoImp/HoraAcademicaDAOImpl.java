@@ -2,11 +2,14 @@ package pe.edu.pucp.pixelpenguins.curricula.daoImp;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 import pe.edu.pucp.pixelpenguins.curricula.dao.HoraAcademicaDAO;
 import pe.edu.pucp.pixelpenguins.curricula.model.Curso;
+import pe.edu.pucp.pixelpenguins.curricula.model.DiaSemana;
 import pe.edu.pucp.pixelpenguins.curricula.model.HoraAcademica;
+import pe.edu.pucp.pixelpenguins.curricula.model.SeccionAcademica;
 import pe.edu.pucp.pixelpenguins.db.DAOImpl;
 
 
@@ -30,20 +33,21 @@ public class HoraAcademicaDAOImpl extends DAOImpl implements HoraAcademicaDAO {
 
     @Override
     protected String obtenerListaDeAtributosParaInsercion() {
-        return "idProfesorRelacionado, horaInicio, horaFin, fid_Curso"; 
+        return "fid_Curso, horaInicio, horaFin, dia, fid_seccionAcademica"; 
     }
 
     @Override
     protected String incluirListaDeParametrosParaInsercion() {
-        return "?, ?, ?, ?";
+        return "?, ?, ?, ?, ?";
     }
 
     @Override
     protected void incluirValorDeParametrosParaInsercion() throws SQLException {
-        this.incluirParametroInt(1, this.horaAcademica.getIdProfesorRelacionado());
-        this.incluirParametroTime(2, this.horaAcademica.getHoraInicio());
-        this.incluirParametroTime(3, this.horaAcademica.getHoraFin());
-        this.incluirParametroInt(4, this.horaAcademica.getCurso().getIdCurso());
+        this.incluirParametroInt(1, this.horaAcademica.getCurso().getIdCurso());
+        this.incluirParametroTime(2, LocalTime.parse(this.horaAcademica.getHoraInicio()));
+        this.incluirParametroTime(3, LocalTime.parse(this.horaAcademica.getHoraFin()));
+        this.incluirParametroString(4, this.horaAcademica.getDia().toString());
+        this.incluirParametroInt(5, this.horaAcademica.getSeccionAcademica().getIdSeccionAcademica());
     }
 
     @Override
@@ -54,7 +58,7 @@ public class HoraAcademicaDAOImpl extends DAOImpl implements HoraAcademicaDAO {
 
     @Override
     protected String obtenerListaDeValoresYAtributosParaModificacion() {
-        return "horaInicio=?, horaFin=?, idProfesorRelacionado=?, fid_Curso=?"; 
+        return "fid_Curso=?, horaInicio=?, horaFin=?, dia=?, fid_seccionAcademica=?"; 
     }
 
     @Override
@@ -64,11 +68,12 @@ public class HoraAcademicaDAOImpl extends DAOImpl implements HoraAcademicaDAO {
 
     @Override
     protected void incluirValorDeParametrosParaModificacion() throws SQLException {
-        this.incluirParametroInt(4, this.horaAcademica.getCurso().getIdCurso());
-        this.incluirParametroInt(3, this.horaAcademica.getIdProfesorRelacionado());
-        this.incluirParametroTime(1, this.horaAcademica.getHoraInicio());
-        this.incluirParametroTime(2, this.horaAcademica.getHoraFin());
-        this.incluirParametroInt(5, this.horaAcademica.getIdHoraAcademica());
+        this.incluirParametroInt(1, this.horaAcademica.getCurso().getIdCurso());
+        this.incluirParametroTime(2, LocalTime.parse(this.horaAcademica.getHoraInicio()));
+        this.incluirParametroTime(3, LocalTime.parse(this.horaAcademica.getHoraFin()));
+        this.incluirParametroString(4, this.horaAcademica.getDia().toString());
+        this.incluirParametroInt(5, this.horaAcademica.getSeccionAcademica().getIdSeccionAcademica());
+        this.incluirParametroInt(6, this.horaAcademica.getIdHoraAcademica());
     }
 
     @Override
@@ -89,7 +94,7 @@ public class HoraAcademicaDAOImpl extends DAOImpl implements HoraAcademicaDAO {
 
     @Override
     protected String obtenerProyeccionParaSelect() {
-        return "idHoraAcademica, idProfesorRelacionado, horaInicio, horaFin, fid_Curso"; 
+        return "idHoraAcademica, fid_Curso, horaInicio, horaFin, dia, fid_seccionAcademica"; 
     }
 
     @Override
@@ -102,9 +107,13 @@ public class HoraAcademicaDAOImpl extends DAOImpl implements HoraAcademicaDAO {
     protected void instanciarObjetoDelResultSet() throws SQLException {
         this.horaAcademica = new HoraAcademica();
         this.horaAcademica.setIdHoraAcademica(this.resultSet.getInt("idHoraAcademica"));
-        this.horaAcademica.setIdProfesorRelacionado(this.resultSet.getInt("idProfesorRelacionado"));
-        this.horaAcademica.setHoraInicio(this.resultSet.getTime("horaInicio").toLocalTime());
-        this.horaAcademica.setHoraFin(this.resultSet.getTime("horaFin").toLocalTime());
+        this.horaAcademica.setHoraInicio(this.resultSet.getTime("horaInicio").toString());
+        this.horaAcademica.setHoraFin(this.resultSet.getTime("horaFin").toString());
+        this.horaAcademica.setDia(DiaSemana.valueOf(resultSet.getString("dia")));
+        
+        SeccionAcademica seccion = new SeccionAcademica();
+        seccion.setIdSeccionAcademica(this.resultSet.getInt("fid_seccionAcademica"));
+        this.horaAcademica.setSeccionAcademica(seccion);
         
         Curso curso = new Curso();
         curso.setIdCurso(this.resultSet.getInt("fid_Curso"));
@@ -127,6 +136,26 @@ public class HoraAcademicaDAOImpl extends DAOImpl implements HoraAcademicaDAO {
     @Override
     protected void limpiarObjetoDelResultSet() {
         this.horaAcademica = null;
+    }
+    
+    @Override
+    protected String obtenerPredicadoParaListado() {
+        return " WHERE fid_Curso=?";
+    }
+    
+    @Override
+    protected void incluirValorDeParametrosParaListado() throws SQLException {
+        this.incluirParametroInt(1, horaAcademica.getCurso().getIdCurso());
+    }
+    
+    @Override
+    public ArrayList<HoraAcademica>listarHorasAcademicasPorCurso(Curso curso){
+        this.usarPredicadoParaListado = true;
+        this.horaAcademica = new HoraAcademica();
+        horaAcademica.setCurso(curso);
+        ArrayList<HoraAcademica>usuarios = (ArrayList<HoraAcademica>)super.listarTodos(null);
+        this.usarPredicadoParaListado = false;
+        return usuarios;
     }
     
 }

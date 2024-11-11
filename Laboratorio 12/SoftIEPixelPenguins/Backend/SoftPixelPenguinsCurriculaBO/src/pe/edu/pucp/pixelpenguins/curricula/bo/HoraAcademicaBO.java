@@ -1,6 +1,5 @@
 package pe.edu.pucp.pixelpenguins.curricula.bo;
 
-import java.time.LocalTime;
 import java.util.ArrayList;
 import pe.edu.pucp.pixelpenguins.curricula.dao.HoraAcademicaDAO;
 import pe.edu.pucp.pixelpenguins.curricula.daoImp.HoraAcademicaDAOImpl;
@@ -33,6 +32,10 @@ public class HoraAcademicaBO {
 
     public HoraAcademica obtenerPorId(Integer idHoraAcademica) {
         return this.horaAcademicaDAO.obtenerPorId(idHoraAcademica);
+    }
+    
+    public ArrayList<HoraAcademica>listarHorasAcademicasPorCurso(Curso curso){
+        return this.horaAcademicaDAO.listarHorasAcademicasPorCurso(curso);
     }
     
 }

@@ -33,7 +33,7 @@
     <div class="container-al">
         <div class="schedule">
             <h3>Horario de Reuniones</h3>
-            <img src="Images/HORARIO2.PNG" alt="Horario de Reuniones"/>
+            <img src="../Images/HORARIO2.PNG" alt="Horario de Reuniones"/>
         </div>
     </div>
 </asp:Content>

@@ -22,15 +22,17 @@ namespace SoftPixelPenguinsWA
             if (!IsPostBack)
             {
                 // Verifica si la página actual es el index
-                if (Request.Url.AbsolutePath.EndsWith("IndexAlumno.aspx", StringComparison.OrdinalIgnoreCase))
+                if (Session["idAlumnoLogueado"] != null)
                 {
-                    // Oculta el menú deseado
-                    ContentPlaceHolder menuItem6 = (ContentPlaceHolder)Master.FindControl("menuItem6");
-                    ContentPlaceHolder menuItem7 = (ContentPlaceHolder)Master.FindControl("menuItem7");
-                    if (menuItem6 != null && menuItem7 != null)
+                    // Verifica si la página actual es el index
+                    if (Request.Url.AbsolutePath.EndsWith("MiPerfilAlumno.aspx", StringComparison.OrdinalIgnoreCase))
                     {
-                        menuItem6.Visible = false;
-                        menuItem7.Visible = false;
+                        // Oculta el menú deseado
+                        ContentPlaceHolder menuItem7 = (ContentPlaceHolder)Master.FindControl("menuItem7");
+                        if (menuItem7 != null)
+                        {
+                            menuItem7.Visible = false;
+                        }
                     }
                 }
 
@@ -38,20 +40,32 @@ namespace SoftPixelPenguinsWA
                 int idMatricula = matriculaBO.obtenerMatriculaPorIdAlumno(idUsuario);
                 pago pago = pagoBO.PagoXIdMatricula(idMatricula);
 
+                Session["idMatriculaAlumnoLogueado"] = idMatricula;
 
+                // Valida si cuenta con pagos 
+                if (pago != null)
+                {
+                    int diasRestantes = (pago.fechaPago - DateTime.Now).Days;
 
-                // Calcula la cantidad de días restantes para el pago
-                int diasRestantes = (pago.fechaPago - DateTime.Now).Days;
+                    // Construye el texto para mostrar la fecha y los días restantes
+                    string textoFechaPago = pago.fechaPago.ToString("dd/MM/yyyy");
+                    string textoDiasRestantes = diasRestantes > 0
+                        ? $" (faltan {diasRestantes} días)"
+                        : " (El pago es hoy o ha pasado)";
 
-                // Construye el texto para mostrar la fecha y los días restantes
-                string textoFechaPago = pago.fechaPago.ToString("dd/MM/yyyy");
-                string textoDiasRestantes = diasRestantes > 0
-                    ? $" (faltan {diasRestantes} días)"
-                    : " (El pago es hoy o ha pasado)";
+                    // Asigna el texto al Literal
+                    fechaPagoLiteral.Text = $"{textoFechaPago}{textoDiasRestantes}";
+                    Estado.Text = pago.estado.ToString();
+                }
+                else
+                {
+                    string textoFechaPago = "Usted no tiene pagos cercanos.";
+                    // Asigna el texto al Literal
+                    fechaPagoLiteral.Text = $"{textoFechaPago}";
+                    Estado.Text = "";
+                }
 
-                // Asigna el texto al Literal
-                fechaPagoLiteral.Text = $"{textoFechaPago}{textoDiasRestantes}";
-                Estado.Text = pago.estado.ToString();
+                
             }
         }
     }

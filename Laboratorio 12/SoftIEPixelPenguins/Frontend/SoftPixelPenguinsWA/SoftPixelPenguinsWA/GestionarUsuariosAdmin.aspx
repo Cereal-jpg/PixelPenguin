@@ -25,6 +25,29 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="cphContenido" runat="server">
+
+    <style>
+
+        .form-row{
+            flex: 1;
+            min-width: 160px;
+        }
+
+        .file-upload {
+            display: inline-block;
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            color: #555;
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+    </style>
+
     <div class="d-flex justify-content-between align-items-center mt-3 mx-3">
         <h1>Gestionar Usuarios</h1>
     </div>
@@ -172,9 +195,9 @@
                                 <label for="codigoProfesor" class="form-label">Código Profesor</label>
                                 <asp:TextBox ID="codigoProfesor" runat="server" CssClass="form-control" placeholder="Ingrese el código del profesor"></asp:TextBox>
                             </div>
-                            <div class="form-check mb-3">
-                                <asp:CheckBox ID="certificadoHistorialEducativo" runat="server" CssClass="form-check-input" />
-                                <label class="form-check-label" for="certificadoHistorialEducativo">Con Certificado de Historial Educativo</label>
+                            <div class="form-row">
+                                <label for="fileCertificadoEducativo">Certificado de Estudios:</label>
+                                <asp:FileUpload ID="fileCertificadoEducativo" runat="server" CssClass="file-upload" />
                             </div>
                             <div class="mb-3">
                                 <label for="especialidad" class="form-label">Especialidad</label>
@@ -257,7 +280,7 @@
             document.getElementById('<%= gradoAcademico.ClientID %>').value = '';
     
             document.getElementById('<%= codigoProfesor.ClientID %>').value = ''; 
-            document.getElementById('<%= certificadoHistorialEducativo.ClientID %>').checked = false;
+            document.getElementById('<%= fileCertificadoEducativo.ClientID %>').checked = false;
             document.getElementById('<%= especialidad.ClientID %>').value = '';
 
             document.getElementById('<%= codigoPersonalAdministrativo.ClientID %>').value = '';

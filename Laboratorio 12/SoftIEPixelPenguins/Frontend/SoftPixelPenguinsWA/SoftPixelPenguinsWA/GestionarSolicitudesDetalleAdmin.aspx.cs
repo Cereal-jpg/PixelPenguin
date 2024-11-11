@@ -8,6 +8,7 @@ using System.Net;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Configuration;
 
 namespace SoftPixelPenguinsWA
 {
@@ -155,32 +156,13 @@ namespace SoftPixelPenguinsWA
                 }
                 Session[alumno.nombreCompleto] = alumno;
                 alumnoBO.modificarAlumno(alumno);
-
-                // Configuración del correo
-                MailAddress addressFrom = new MailAddress("pixelpenguins13@gmail.com", "PixelPenguins");
-                MailAddress addressTo = new MailAddress("a20220825@pucp.edu.pe", alumno.nombreCompleto.ToString()); // Cambiar por el destinatario real
-
-                using (MailMessage mail = new MailMessage())
-                {
-                    mail.From = addressFrom;
-                    mail.To.Add(addressTo);
-                    mail.Subject = "Estado de Matrícula Actualizado";
-                    mail.Body = $"Hola {alumno.nombreCompleto},\n\nTu estado de matrícula ha sido actualizado.\n" +
+                string cuerpo = $"Hola {alumno.nombreCompleto},\n\nFelicidades, has sido matriculado en nuestra institución.\n" +
                             $"Tu nuevo usuario es: {alumno.username}\n" +
                             $"Tu nueva contraseña es: {alumno.password}\n" +
                             $"Tu nuevo codigo es: {alumno.codigoAlumno}\n" +
                             "Gracias por elegir nuestra institución\n" +
                             "Atentamente, \nEquipoAdministrativo PixelPenguins";
-
-                    mail.IsBodyHtml = false; // Cambiar a true si deseas enviar HTML
-
-                    using (SmtpClient smtpClient = new SmtpClient("smtp.gmail.com", 587))
-                    {
-                        smtpClient.Credentials = new NetworkCredential("pixelpenguins13@gmail.com", "pixelP@1"); // Cambiar por tus credenciales
-                        smtpClient.EnableSsl = true; // Habilitar SSL
-                        smtpClient.Send(mail);
-                    }
-                }
+                enviarCorreo(/*"a20220749@pucp.edu.pe"*/alumno.email.ToString(), "Confirmación de Matrícula", cuerpo);
 
                 // Redirigir después de enviar el correo
                 Response.Redirect("GestionarSolicitudesAdmin.aspx");
@@ -230,6 +212,33 @@ namespace SoftPixelPenguinsWA
             else
             {
                 throw new Exception();
+            }
+        }
+        private void enviarCorreo(string destinatario, string asunto, string cuerpo)
+        {
+            try
+            {
+                string gmailUser = ConfigurationManager.AppSettings["Email"];
+                string gmailPassword = ConfigurationManager.AppSettings["EmailPassword"];
+
+                MailMessage mail = new MailMessage();
+                mail.From = new MailAddress(gmailUser);
+                mail.To.Add(destinatario);
+                mail.Subject = asunto;
+                mail.Body = cuerpo;
+                mail.IsBodyHtml = false;
+
+                SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+                smtp.Credentials = new NetworkCredential(gmailUser, gmailPassword);
+                smtp.EnableSsl = true;
+
+                smtp.Send(mail);
+                Response.Write("Correo enviado exitosamente.");
+            }
+            catch (Exception ex)
+            {
+                // Mostrar el error completo para depuración
+                Response.Write("Error al enviar el correo: " + ex.ToString());
             }
         }
     }

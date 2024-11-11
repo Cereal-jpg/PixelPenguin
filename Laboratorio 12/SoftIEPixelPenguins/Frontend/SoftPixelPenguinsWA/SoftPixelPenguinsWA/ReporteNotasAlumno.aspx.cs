@@ -11,16 +11,17 @@ namespace SoftPixelPenguinsWA
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            // Verifica si la página actual es el index
+            if (Session["idAlumnoLogueado"] != null)
             {
                 // Verifica si la página actual es el index
-                if (Request.Url.AbsolutePath.EndsWith("ReporteNotasAlumno.aspx", StringComparison.OrdinalIgnoreCase))
+                if (Request.Url.AbsolutePath.EndsWith("MiPerfilAlumno.aspx", StringComparison.OrdinalIgnoreCase))
                 {
                     // Oculta el menú deseado
-                    ContentPlaceHolder menuItem6 = (ContentPlaceHolder)Master.FindControl("menuItem6");
-                    if (menuItem6 != null)
+                    ContentPlaceHolder menuItem7 = (ContentPlaceHolder)Master.FindControl("menuItem7");
+                    if (menuItem7 != null)
                     {
-                        menuItem6.Visible = false;
+                        menuItem7.Visible = false;
                     }
                 }
             }

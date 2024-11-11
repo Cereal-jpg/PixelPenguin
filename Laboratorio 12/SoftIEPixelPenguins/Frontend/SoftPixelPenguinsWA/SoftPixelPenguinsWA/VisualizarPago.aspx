@@ -156,9 +156,5 @@
                 <asp:Button ID="btnRegresar" runat="server" Text="Regresar" OnClick="btnRegresar_Click" CssClass="button-style" />
             </div>
         </div>
+    </div>
 </asp:Content>
-
-
-
-
-

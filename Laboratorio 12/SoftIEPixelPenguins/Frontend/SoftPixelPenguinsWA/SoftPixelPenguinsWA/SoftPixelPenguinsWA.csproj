@@ -131,6 +131,7 @@
     <Content Include="GestionarHorariosPA - Copia.aspx" />
     <Content Include="GestionarCursosPlanPA.aspx" />
     <Content Include="MiPerfilPA.aspx" />
+    <Content Include="MisPagos.aspx" />
     <Content Include="NotasParcialesAlumno.aspx" />
     <Content Include="CursosDictadosProfesor.aspx" />
     <Content Include="GestionarPlanesPA.aspx" />
@@ -658,6 +659,7 @@
     <Content Include="VerCompetenciasAlumno.aspx" />
     <Content Include="VerCompetenciasGenerica.aspx" />
     <Content Include="VerInfoProfesor.aspx" />
+    <Content Include="VisualizarPago.aspx" />
     <Content Include="Web.config" />
     <Content Include="SoftPixelPenguins.Master" />
   </ItemGroup>
@@ -687,6 +689,13 @@
     </Compile>
     <Compile Include="MiPerfilPA.aspx.designer.cs">
       <DependentUpon>MiPerfilPA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MisPagos.aspx.cs">
+      <DependentUpon>MisPagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MisPagos.aspx.designer.cs">
+      <DependentUpon>MisPagos.aspx</DependentUpon>
     </Compile>
     <Compile Include="NotasParcialesAlumno.aspx.cs">
       <DependentUpon>NotasParcialesAlumno.aspx</DependentUpon>
@@ -954,6 +963,13 @@
     </Compile>
     <Compile Include="VerInfoProfesor.aspx.designer.cs">
       <DependentUpon>VerInfoProfesor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarPago.aspx.cs">
+      <DependentUpon>VisualizarPago.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VisualizarPago.aspx.designer.cs">
+      <DependentUpon>VisualizarPago.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

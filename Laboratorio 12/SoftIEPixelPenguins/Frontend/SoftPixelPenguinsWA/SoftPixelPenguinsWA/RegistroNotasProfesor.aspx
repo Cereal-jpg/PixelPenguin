@@ -21,23 +21,23 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <h2 style="color: black;">Profesor - Registro de Notas</h2>
     <div class="container-matricula" style="display:block;">
-            <h2 style="color: black;">Listado de Cursos</h2>
-            <asp:GridView ID="gvCursos" runat="server" AutoGenerateColumns="False" CssClass="table table-hover table-responsive table-striped table-bordered" >
-                <Columns>
-                    <asp:BoundField DataField="codigoCurso" HeaderText="Código" />
-                    <asp:BoundField DataField="nombre" HeaderText="Nombre" />
-                    <asp:TemplateField HeaderText="Grado">
-                        <ItemTemplate>
-                            <%# Eval("gradoAcademico.numeroGrado") + "° " + Eval("gradoAcademico.nivel") %>
-                        </ItemTemplate>
-                    </asp:TemplateField>
-                    <asp:TemplateField>
-                        <ItemTemplate>
-                            <asp:LinkButton ID="btnVerDetalle" runat="server" Text="Ver Detalle" class="btn btn-primary" OnClick="btnVerDetalle_Click" CommandArgument='<%# Eval("idCurso") %>' />
-                        </ItemTemplate>
-                    </asp:TemplateField>
-                </Columns>
-            </asp:GridView>
+        <h2 style="color: black;">Listado de Cursos</h2>
+        <asp:GridView ID="gvCursos" runat="server" AutoGenerateColumns="False" CssClass="table table-hover table-responsive table-striped table-bordered" >
+            <Columns>
+                <asp:BoundField DataField="codigoCurso" HeaderText="Código" />
+                <asp:BoundField DataField="nombre" HeaderText="Nombre" />
+                <asp:TemplateField HeaderText="Grado">
+                    <ItemTemplate>
+                        <%# Eval("gradoAcademico.numeroGrado") + "° " + Eval("gradoAcademico.nivel") %>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField>
+                    <ItemTemplate>
+                        <asp:LinkButton ID="btnVerDetalle" runat="server" Text="Ver Detalle" class="btn btn-primary" OnClick="btnVerDetalle_Click" CommandArgument='<%# Eval("idCurso") %>' />
+                    </ItemTemplate>
+                </asp:TemplateField>
+            </Columns>
+        </asp:GridView>
     </div>
 </asp:Content>
 

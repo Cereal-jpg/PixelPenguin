@@ -6,29 +6,24 @@
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="menuItem1" runat="server">
-    <a href="IndexProfesor.aspx"><i class="fa-solid fa-home"></i> Inicio</a>
+    <a href="IndexAlumno.aspx"><i class="fa-solid fa-home"></i> Inicio</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem2" runat="server">
-    <a href="CursosDictadosProfesor.aspx"><i class="fa-solid fa-book"></i> Cursos Dictados</a>
+    <a href="MisCursosAlumno.aspx"><i class="fa-solid fa-book"></i> Mis cursos</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem3" runat="server">
-    <a href="RegistroNotasProfesor.aspx"><i class="fa-solid fa-bar-chart"></i> Registro de notas</a>
+    <a href="ReporteNotasAlumno.aspx"><i class="fa-solid fa-bar-chart"></i> Reporte de Notas</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem4" runat="server">
-<<<<<<< Updated upstream
-    <a href="MiPerfilProfesor.aspx"><i class="fa-solid fa-user"></i> Mi perfil</a>
-    </asp:Content>
-
-=======
     <a href="MatriculaOnlineAlumno.aspx"><i class="fa-solid fa-archive"></i> Matrícula Online</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem5" runat="server">
-    <a href="MiPerfilAlumno.aspx"><i class="fa-solid fa-user"></i> Mi Perfil</a>
+    <a href="MisPagos.aspx"><i class="fa-solid fa-book"></i>Mis Pagos</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem6" runat="server">
-    <a href="MisPagos.aspx"><i class="fa-solid fa-book"></i> Mis Pagos</a>
+    <a href="MiPerfilAlumno.aspx"><i class="fa-solid fa-user"></i> Mi Perfil</a>
 </asp:Content>
->>>>>>> Stashed changes
+
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <h2 id="hTitulo" style="color: black;" runat="server"></h2>
     <div>

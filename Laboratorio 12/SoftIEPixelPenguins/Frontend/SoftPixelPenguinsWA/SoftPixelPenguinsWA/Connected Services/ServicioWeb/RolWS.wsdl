@@ -5,12 +5,6 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftPixelPenguinsWSBL/RolWS?xsd=1" namespace="http://services.pixelpenguins.pucp.edu.pe" />
     </xsd:schema>
   </types>
-  <message name="insertarRol">
-    <part name="parameters" element="tns:insertarRol" />
-  </message>
-  <message name="insertarRolResponse">
-    <part name="parameters" element="tns:insertarRolResponse" />
-  </message>
   <message name="eliminarRol">
     <part name="parameters" element="tns:eliminarRol" />
   </message>
@@ -23,23 +17,25 @@
   <message name="listarTodosRolesResponse">
     <part name="parameters" element="tns:listarTodosRolesResponse" />
   </message>
-  <message name="modificarRol">
-    <part name="parameters" element="tns:modificarRol" />
-  </message>
-  <message name="modificarRolResponse">
-    <part name="parameters" element="tns:modificarRolResponse" />
-  </message>
   <message name="obtenerRolPorId">
     <part name="parameters" element="tns:obtenerRolPorId" />
   </message>
   <message name="obtenerRolPorIdResponse">
     <part name="parameters" element="tns:obtenerRolPorIdResponse" />
   </message>
+  <message name="insertarRol">
+    <part name="parameters" element="tns:insertarRol" />
+  </message>
+  <message name="insertarRolResponse">
+    <part name="parameters" element="tns:insertarRolResponse" />
+  </message>
+  <message name="modificarRol">
+    <part name="parameters" element="tns:modificarRol" />
+  </message>
+  <message name="modificarRolResponse">
+    <part name="parameters" element="tns:modificarRolResponse" />
+  </message>
   <portType name="RolWS">
-    <operation name="insertarRol">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/insertarRolRequest" message="tns:insertarRol" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/insertarRolResponse" message="tns:insertarRolResponse" />
-    </operation>
     <operation name="eliminarRol">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/eliminarRolRequest" message="tns:eliminarRol" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/eliminarRolResponse" message="tns:eliminarRolResponse" />
@@ -48,26 +44,21 @@
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/listarTodosRolesRequest" message="tns:listarTodosRoles" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/listarTodosRolesResponse" message="tns:listarTodosRolesResponse" />
     </operation>
-    <operation name="modificarRol">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/modificarRolRequest" message="tns:modificarRol" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/modificarRolResponse" message="tns:modificarRolResponse" />
-    </operation>
     <operation name="obtenerRolPorId">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/obtenerRolPorIdRequest" message="tns:obtenerRolPorId" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/obtenerRolPorIdResponse" message="tns:obtenerRolPorIdResponse" />
     </operation>
+    <operation name="insertarRol">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/insertarRolRequest" message="tns:insertarRol" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/insertarRolResponse" message="tns:insertarRolResponse" />
+    </operation>
+    <operation name="modificarRol">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/modificarRolRequest" message="tns:modificarRol" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/RolWS/modificarRolResponse" message="tns:modificarRolResponse" />
+    </operation>
   </portType>
   <binding name="RolWSPortBinding" type="tns:RolWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="insertarRol">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="eliminarRol">
       <soap:operation soapAction="" />
       <input>
@@ -86,7 +77,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarRol">
+    <operation name="obtenerRolPorId">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -95,7 +86,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="obtenerRolPorId">
+    <operation name="insertarRol">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarRol">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

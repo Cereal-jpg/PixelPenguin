@@ -4,6 +4,8 @@
   <xs:element name="eliminarNotaResponse" type="tns:eliminarNotaResponse" />
   <xs:element name="insertarNota" type="tns:insertarNota" />
   <xs:element name="insertarNotaResponse" type="tns:insertarNotaResponse" />
+  <xs:element name="listarPorAlumnoCursoYBimestre" type="tns:listarPorAlumnoCursoYBimestre" />
+  <xs:element name="listarPorAlumnoCursoYBimestreResponse" type="tns:listarPorAlumnoCursoYBimestreResponse" />
   <xs:element name="listarPorAlumnoYCurso" type="tns:listarPorAlumnoYCurso" />
   <xs:element name="listarPorAlumnoYCursoResponse" type="tns:listarPorAlumnoYCursoResponse" />
   <xs:element name="listarTodosNotas" type="tns:listarTodosNotas" />
@@ -77,6 +79,18 @@
   <xs:complexType name="modificarNotaResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPorAlumnoCursoYBimestre">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idAlumno" type="xs:int" />
+      <xs:element minOccurs="0" name="idCurso" type="xs:int" />
+      <xs:element minOccurs="0" name="bimestre" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPorAlumnoCursoYBimestreResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:nota" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarPorAlumnoYCurso">

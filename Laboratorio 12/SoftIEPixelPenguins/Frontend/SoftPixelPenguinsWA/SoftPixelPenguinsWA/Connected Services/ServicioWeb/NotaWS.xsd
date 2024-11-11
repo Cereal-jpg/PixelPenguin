@@ -43,7 +43,7 @@
   <xs:complexType name="curso">
     <xs:sequence>
       <xs:element minOccurs="0" name="codigoCurso" type="xs:string" />
-      <xs:element name="fid_Profesor" type="xs:int" />
+      <xs:element minOccurs="0" name="fid_Profesor" type="xs:int" />
       <xs:element minOccurs="0" name="gradoAcademico" type="tns:gradoAcademico" />
       <xs:element name="horasPorSemana" type="xs:int" />
       <xs:element name="horasTotales" type="xs:int" />

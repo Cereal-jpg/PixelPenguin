@@ -128,10 +128,12 @@
     <Content Include="Content\Fonts\StyleSheet1.css" />
     <Content Include="Content\grafico_style.css" />
     <Content Include="Content\site.css" />
+    <Content Include="GestionarHorariosPA - Copia.aspx" />
+    <Content Include="GestionarCursosPlanPA.aspx" />
     <Content Include="MiPerfilPA.aspx" />
     <Content Include="NotasParcialesAlumno.aspx" />
     <Content Include="CursosDictadosProfesor.aspx" />
-    <Content Include="GestionarHorariosPA.aspx" />
+    <Content Include="GestionarPlanesPA.aspx" />
     <Content Include="CursosPorProfesorPA.aspx" />
     <Content Include="GestionarSolicitudesAdmin.aspx" />
     <Content Include="GestionarSolicitudesDetalleAdmin.aspx" />
@@ -665,6 +667,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="GestionarHorariosPA - Copia.aspx.cs">
+      <DependentUpon>GestionarHorariosPA - Copia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionarHorariosPA - Copia.aspx.designer.cs">
+      <DependentUpon>GestionarHorariosPA - Copia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionarCursosPlanPA.aspx.cs">
+      <DependentUpon>GestionarCursosPlanPA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionarCursosPlanPA.aspx.designer.cs">
+      <DependentUpon>GestionarCursosPlanPA.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MiPerfilPA.aspx.cs">
       <DependentUpon>MiPerfilPA.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -686,12 +702,12 @@
     <Compile Include="CursosDictadosProfesor.aspx.designer.cs">
       <DependentUpon>CursosDictadosProfesor.aspx</DependentUpon>
     </Compile>
-    <Compile Include="GestionarHorariosPA.aspx.cs">
-      <DependentUpon>GestionarHorariosPA.aspx</DependentUpon>
+    <Compile Include="GestionarPlanesPA.aspx.cs">
+      <DependentUpon>GestionarPlanesPA.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GestionarHorariosPA.aspx.designer.cs">
-      <DependentUpon>GestionarHorariosPA.aspx</DependentUpon>
+    <Compile Include="GestionarPlanesPA.aspx.designer.cs">
+      <DependentUpon>GestionarPlanesPA.aspx</DependentUpon>
     </Compile>
     <Compile Include="CursosPorProfesorPA.aspx.cs">
       <DependentUpon>CursosPorProfesorPA.aspx</DependentUpon>

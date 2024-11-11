@@ -72,15 +72,15 @@ VALUES (11,27,'CMP11','COMPUTACION',5,45);
 INSERT INTO Curso (fid_GradoAcademico,fid_Profesor,codigoCurso,nombre,horasPorSemana,horasTotales) 
 VALUES (1,3,'COM01','COMUNICACION',4,36);
 INSERT INTO Curso (fid_GradoAcademico,fid_Profesor,codigoCurso,nombre,horasPorSemana,horasTotales) 
-VALUES (1,3,'COM02','COMUNICACION',4,36);
+VALUES (2,3,'COM02','COMUNICACION',4,36);
 INSERT INTO Curso (fid_GradoAcademico,fid_Profesor,codigoCurso,nombre,horasPorSemana,horasTotales) 
-VALUES (1,3,'COM03','COMUNICACION',4,36);
+VALUES (3,3,'COM03','COMUNICACION',4,36);
 INSERT INTO Curso (fid_GradoAcademico,fid_Profesor,codigoCurso,nombre,horasPorSemana,horasTotales) 
-VALUES (1,3,'COM04','COMUNICACION',4,36);
+VALUES (4,3,'COM04','COMUNICACION',4,36);
 INSERT INTO Curso (fid_GradoAcademico,fid_Profesor,codigoCurso,nombre,horasPorSemana,horasTotales) 
-VALUES (1,3,'COM05','COMUNICACION',4,36);
+VALUES (5,3,'COM05','COMUNICACION',4,36);
 INSERT INTO Curso (fid_GradoAcademico,fid_Profesor,codigoCurso,nombre,horasPorSemana,horasTotales) 
-VALUES (1,3,'COM06','COMUNICACION',4,36);
+VALUES (6,3,'COM06','COMUNICACION',4,36);
 INSERT INTO Curso (fid_GradoAcademico,fid_Profesor,codigoCurso,nombre,horasPorSemana,horasTotales) 
 VALUES (7,19,'COM07','COMUNICACION',4,36);
 INSERT INTO Curso (fid_GradoAcademico,fid_Profesor,codigoCurso,nombre,horasPorSemana,horasTotales) 

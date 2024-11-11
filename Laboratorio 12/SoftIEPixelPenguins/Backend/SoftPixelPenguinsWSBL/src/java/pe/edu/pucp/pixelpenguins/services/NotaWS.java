@@ -80,4 +80,16 @@ public class NotaWS {
         return notas;
     }
     
+    @WebMethod(operationName = "listarPorAlumnoCursoYBimestre")
+    public ArrayList<Nota> listarPorAlumnoCursoYBimestre(@WebParam(name = "idAlumno") Integer idAlumno,
+            @WebParam(name = "idCurso") Integer idCurso, @WebParam(name = "bimestre") Integer bimestre) {
+        ArrayList<Nota> notas = null;
+        try {
+            notas = notaBO.listarPorAlumnoCursoYBimestre(idAlumno, idCurso, bimestre);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return notas;
+    }
+    
 }

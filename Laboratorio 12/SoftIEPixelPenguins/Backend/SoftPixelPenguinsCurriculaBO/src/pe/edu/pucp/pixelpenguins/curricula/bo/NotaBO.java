@@ -39,4 +39,8 @@ public class NotaBO {
         return this.notaDAO.listarPorAlumnoYCurso(idAlumno, idCurso);
     }
     
+    public ArrayList<Nota> listarPorAlumnoCursoYBimestre(Integer idAlumno,
+            Integer idCurso, Integer bimestre){
+        return this.notaDAO.listarPorAlumnoCursoYBimestre(idAlumno, idCurso, bimestre);
+    }
 }

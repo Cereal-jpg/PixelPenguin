@@ -26,7 +26,7 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
-    <link href="Content/Estilos-Perfil.css" rel="stylesheet" />
+    <link href="../Content/Estilos-Perfil.css" rel="stylesheet" />
     <script src="/Scripts/MostrarContraseña.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {

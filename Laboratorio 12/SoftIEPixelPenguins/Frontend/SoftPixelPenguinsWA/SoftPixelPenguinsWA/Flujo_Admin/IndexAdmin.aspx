@@ -28,7 +28,7 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <h2 style="text-align: left; color: #000f;">Administrador - Inicio</h2>
-    <link rel="stylesheet" href="Content/Estilos-Alumno.css" />
+    <link rel="stylesheet" href="../Content/Estilos-Alumno.css" />
     <div class="container-al">
         <div class="schedule">
             <h3>Horario de Reuniones</h3>

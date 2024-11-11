@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphScripts" runat="server">
-    <link rel="stylesheet" href="Content/grafico_style.css" />
+    <link rel="stylesheet" href="../Content/grafico_style.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.8.0/dist/chart.min.js"></script>
     <script src="Scripts/chart2.js"></script>
     <script src="Scripts/chart1.js"></script>

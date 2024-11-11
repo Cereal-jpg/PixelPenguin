@@ -99,11 +99,13 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Estilos-Alumno.css" />
+    <Content Include="Content\Estilos-GestionarSolDetalleAdmin.css" />
     <Content Include="Content\Estilos-Matricularse.css" />
     <Content Include="Content\Estilos-Plan.css" />
     <Content Include="Content\Estilos-ProcesoMatriculaG.css" />
     <Content Include="Content\Estilos-RecuperarContraseña.css" />
     <Content Include="Content\Estilos-VerCompetenciasG.css" />
+    <Content Include="Content\Estilos-VisualizarPagoAlumno.css" />
     <Content Include="Content\Estilos.css" />
     <Content Include="Content\EstilosMatriculaG.css" />
     <Content Include="Content\Fonts\css\all.css" />

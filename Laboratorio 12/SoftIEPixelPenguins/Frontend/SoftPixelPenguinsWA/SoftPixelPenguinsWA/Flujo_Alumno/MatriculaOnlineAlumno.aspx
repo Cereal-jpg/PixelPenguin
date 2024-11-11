@@ -24,7 +24,7 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <h2 style="text-align: left; color: #000f;">Matrícula Online</h2>
-    <link rel="stylesheet" href="Content/Estilos-Alumno.css" />
+    <link rel="stylesheet" href="../Content/Estilos-Alumno.css" />
     <div class="container-matricula">
         <div class="matricula-section">
             <h3><i class="fas fa-lightbulb icon-color"></i>¡Hola!</h3>    

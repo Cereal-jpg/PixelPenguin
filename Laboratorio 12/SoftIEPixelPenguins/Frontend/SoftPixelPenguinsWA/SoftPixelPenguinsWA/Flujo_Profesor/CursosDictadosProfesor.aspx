@@ -19,7 +19,7 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <h2 style="text-align: left; color: #000f;">Profesor - Inicio Profesor</h2>
-    <link rel="stylesheet" href="Content/Estilos-Alumno.css" />
+    <link rel="stylesheet" href="../Content/Estilos-Alumno.css" />
     <div class="container-al">
         <div class="schedule">
             <h3>Horario del Profesor</h3>

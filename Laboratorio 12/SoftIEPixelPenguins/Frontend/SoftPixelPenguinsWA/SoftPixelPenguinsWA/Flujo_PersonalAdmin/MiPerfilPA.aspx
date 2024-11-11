@@ -28,7 +28,7 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
-    <link href="Content/Estilos-Perfil.css" rel="stylesheet" />
+    <link href="../Content/Estilos-Perfil.css" rel="stylesheet" />
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const togglePassword = document.querySelector('#togglePassword');

@@ -28,7 +28,7 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <h2 style="text-align: left; color: #000f;">Alumno - Reporte de Notas</h2>
-    <link rel="stylesheet" href="Content/Fonts/EstiloCurso.css" />
+    <link rel="stylesheet" href="../Content/EstiloCurso.css" />
 
     <div class="container-al">
         <div class="schedule">

@@ -26,7 +26,7 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <h2 style="text-align: left; color: #000f;">Detalle de cursos actuales</h2>
-    <link rel="stylesheet" href="Content/Fonts/EstiloCurso.css" />
+    <link rel="stylesheet" href="../Content/EstiloCurso.css" />
 
     <style>
         .my-label {

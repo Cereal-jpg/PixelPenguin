@@ -222,7 +222,7 @@ namespace SoftPixelPenguinsWA
         {
             LinkButton lnk = (LinkButton)sender;
             int idUsuario = int.Parse(lnk.CommandArgument);
-            usuario usuario = new usuario { idUsuario = idUsuario };
+            usuario usuario = new usuario { idUsuario = idUsuario, idUsuarioSpecified = true };
             usuarioBO.eliminarUsuario(usuario);
             Response.Redirect("GestionarUsuariosAdmin.aspx");
         }

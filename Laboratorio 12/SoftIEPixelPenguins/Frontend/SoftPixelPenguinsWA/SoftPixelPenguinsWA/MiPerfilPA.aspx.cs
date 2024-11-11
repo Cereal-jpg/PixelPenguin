@@ -21,17 +21,6 @@ namespace SoftPixelPenguinsWA
                 if (Session["idPersonalAdmin"] != null)
                 {
                     idPA = (int)Session["idPersonalAdmin"];
-                    // Verifica si la página actual es el index
-                    if (Request.Url.AbsolutePath.EndsWith("MiPerfilPA.aspx", StringComparison.OrdinalIgnoreCase))
-                    {
-                        // Oculta el menú deseado
-                        ContentPlaceHolder menuItem7 = (ContentPlaceHolder)Master.FindControl("menuItem7");
-                        if (menuItem7 != null)
-                        {
-                            menuItem7.Visible = false;
-                        }
-                    }
-
                     cargarValores();
 
                 }

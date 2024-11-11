@@ -21,17 +21,6 @@ namespace SoftPixelPenguinsWA
 
             if (!IsPostBack)
             {
-                // Verifica si la página actual es el index
-                if (Request.Url.AbsolutePath.EndsWith("ReporteGradoPA.aspx", StringComparison.OrdinalIgnoreCase))
-                {
-                    // Oculta el menú deseado
-                    ContentPlaceHolder menuItem7 = (ContentPlaceHolder)Master.FindControl("menuItem7");
-                    if (menuItem7 != null)
-                    {
-                        menuItem7.Visible = false;
-                    }
-                }
-
                 List<gradoAcademico> grados = new List<gradoAcademico>(gradoAcademicoBO.listarTodosGradosAcademicos());
 
                 DataTable dt = GenerarDataTableConPorcentajes(grados);

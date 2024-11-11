@@ -128,6 +128,7 @@
     <Content Include="Content\Fonts\StyleSheet1.css" />
     <Content Include="Content\grafico_style.css" />
     <Content Include="Content\site.css" />
+    <Content Include="MiPerfilPA.aspx" />
     <Content Include="NotasParcialesAlumno.aspx" />
     <Content Include="CursosDictadosProfesor.aspx" />
     <Content Include="GestionarHorariosPA.aspx" />
@@ -663,6 +664,13 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="MiPerfilPA.aspx.cs">
+      <DependentUpon>MiPerfilPA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiPerfilPA.aspx.designer.cs">
+      <DependentUpon>MiPerfilPA.aspx</DependentUpon>
     </Compile>
     <Compile Include="NotasParcialesAlumno.aspx.cs">
       <DependentUpon>NotasParcialesAlumno.aspx</DependentUpon>

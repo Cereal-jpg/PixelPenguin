@@ -20,9 +20,11 @@
     <a href="GestionarSolicitudesPA.aspx"><i class="fa-solid fa-user-plus"></i>Gestionar Solicitudes</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem6" runat="server">
+    <a href="GestionarPlanesPA.aspx"><i class="fa-solid fa-list-check"></i>Gestionar Planes</a>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="menuItem7" runat="server">
     <a href="MiPerfilPA.aspx"><i class="fa-solid fa-user"></i>Mi Perfil</a>
 </asp:Content>
-
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <h2 style="color: black;">Cursos y Horarios</h2>

@@ -15,12 +15,15 @@
     <a href="BusquedaPA.aspx"><i class="fa-solid fa-search"></i>Busqueda</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem4" runat="server">
-    <a href="AgregarPlanPA.aspx"><i class="fa-solid fa-plus-circle"></i>Agregar Plan</a>
+    <a href="CursosYHorariosPA.aspx"><i class="fa-solid fa-calendar-days"></i>Cursos y Horarios</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem5" runat="server">
     <a href="GestionarSolicitudesPA.aspx"><i class="fa-solid fa-user-plus"></i>Gestionar Solicitudes</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem6" runat="server">
+    <a href="GestionarPlanesPA.aspx"><i class="fa-solid fa-list-check"></i>Gestionar Planes</a>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="menuItem7" runat="server">
     <a href="MiPerfilPA.aspx"><i class="fa-solid fa-user"></i>Mi Perfil</a>
 </asp:Content>
 
@@ -257,7 +260,7 @@
     </head>
     
 
-    <h2 style="text-align: left; color: #000f;">Profesor - Mi Perfil</h2>
+    <h2 style="text-align: left; color: #000f;">Personal Administrativo - Mi Perfil</h2>
         <link rel="stylesheet" href="Content/Estilos-Alumno.css" />
 
         <div class="schedule">

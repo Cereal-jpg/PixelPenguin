@@ -11,19 +11,7 @@ namespace SoftPixelPenguinsWA
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                // Verifica si la página actual es el index
-                if (Request.Url.AbsolutePath.EndsWith("ReportesPA.aspx", StringComparison.OrdinalIgnoreCase))
-                {
-                    // Oculta el menú deseado
-                    ContentPlaceHolder menuItem7 = (ContentPlaceHolder)Master.FindControl("menuItem7");
-                    if (menuItem7 != null)
-                    {
-                        menuItem7.Visible = false;
-                    }
-                }
-            }
+            
         }
 
         protected void btnEmitirReporte_Click(object sender, EventArgs e)

@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftPixelPenguins.Master" AutoEventWireup="true" CodeBehind="IndexProfesor.aspx.cs" Inherits="SoftPixelPenguinsWA.IndexProfesor" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
-    Home - Profesor
+    Inicio - Profesor
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphScripts" runat="server">
 </asp:Content>
@@ -18,19 +18,12 @@
     </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
-    <h2 style="text-align: left; color: #000f;">Profesor - Inicio Profesor</h2>
+    <h2 style="text-align: left; color: #000f;">Profesor - Inicio</h2>
     <link rel="stylesheet" href="Content/Estilos-Alumno.css" />
     <div class="container-al">
         <div class="schedule">
             <h3>Horario del Profesor</h3>
-            <img src="Images/Horario.jpg" alt="Horario Académico" />
-        </div>
-        <div class="notifications">
-            <h3>Notificaciones</h3>
-            <ul class="notification-list">
-                <li>Próximo curso a dictar: </li>
-                <li>Práctica de matemáticas para el 20/08/2024</li>
-            </ul>
+            <img src="Images/HORARIO1.PNG" alt="Horario Académico" />
         </div>
     </div>
 </asp:Content>

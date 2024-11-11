@@ -151,7 +151,9 @@
     <Content Include="MatriculaGenerica.aspx" />
     <Content Include="MatriculaOnlineAlumno.aspx" />
     <Content Include="Matricularse.aspx" />
+    <Content Include="MiPerfilAdmin.aspx" />
     <Content Include="MiPerfilAlumno.aspx" />
+    <Content Include="MiPerfilPA.aspx" />
     <Content Include="MiPerfilProfesor.aspx" />
     <Content Include="MisCursosAlumno.aspx" />
     <Content Include="MisPagos.aspx" />
@@ -742,12 +744,26 @@
     <Compile Include="Matricularse.aspx.designer.cs">
       <DependentUpon>Matricularse.aspx</DependentUpon>
     </Compile>
+    <Compile Include="MiPerfilAdmin.aspx.cs">
+      <DependentUpon>MiPerfilAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiPerfilAdmin.aspx.designer.cs">
+      <DependentUpon>MiPerfilAdmin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MiPerfilAlumno.aspx.cs">
       <DependentUpon>MiPerfilAlumno.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="MiPerfilAlumno.aspx.designer.cs">
       <DependentUpon>MiPerfilAlumno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiPerfilPA.aspx.cs">
+      <DependentUpon>MiPerfilPA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiPerfilPA.aspx.designer.cs">
+      <DependentUpon>MiPerfilPA.aspx</DependentUpon>
     </Compile>
     <Compile Include="MiPerfilProfesor.aspx.cs">
       <DependentUpon>MiPerfilProfesor.aspx</DependentUpon>

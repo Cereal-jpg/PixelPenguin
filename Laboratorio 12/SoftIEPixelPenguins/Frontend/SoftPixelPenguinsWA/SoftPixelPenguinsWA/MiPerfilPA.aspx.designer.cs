@@ -11,7 +11,7 @@ namespace SoftPixelPenguinsWA
 {
 
 
-    public partial class MiPerfilProfesor
+    public partial class MiPerfilPA
     {
 
         /// <summary>
@@ -112,14 +112,5 @@ namespace SoftPixelPenguinsWA
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtContrasena;
-
-        /// <summary>
-        /// Control lnkCertificadoEducativo.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkCertificadoEducativo;
     }
 }

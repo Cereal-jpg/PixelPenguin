@@ -5,52 +5,45 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.ComponentModel;
-using System.ServiceModel.Channels;
-using System.Web.UI.HtmlControls;
 
 namespace SoftPixelPenguinsWA
 {
-    public partial class MiPerfilProfesor : System.Web.UI.Page
+    public partial class MiPerfilPA : System.Web.UI.Page
     {
-        ProfesorWSClient profesorBO = new ProfesorWSClient();
-        profesor profesor = null;
-        int idProfesor = 0;
+        PersonalAdministrativoWSClient personalAdminBO = new PersonalAdministrativoWSClient();
+        personalAdministrativo personalAdmin = null;
+        int idPA = 0;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                if (Session["idProfesorLogueado"] != null)
+                if (Session["idPersonalAdmin"] != null)
                 {
-                    idProfesor = (int)Session["idProfesorLogueado"];
+                    idPA = (int)Session["idPersonalAdmin"];
                     // Verifica si la página actual es el index
-                    if (Request.Url.AbsolutePath.EndsWith("MiPerfilProfesor.aspx", StringComparison.OrdinalIgnoreCase))
+                    if (Request.Url.AbsolutePath.EndsWith("MiPerfilPA.aspx", StringComparison.OrdinalIgnoreCase))
                     {
                         // Oculta el menú deseado
-                        ContentPlaceHolder menuItem6 = (ContentPlaceHolder)Master.FindControl("menuItem6");
-                        ContentPlaceHolder menuItem5 = (ContentPlaceHolder)Master.FindControl("menuItem5");
                         ContentPlaceHolder menuItem7 = (ContentPlaceHolder)Master.FindControl("menuItem7");
-                        if (menuItem6 != null && menuItem5 != null)
+                        if (menuItem7 != null)
                         {
-                            menuItem6.Visible = false;
-                            menuItem5.Visible = false;
                             menuItem7.Visible = false;
                         }
                     }
 
                     cargarValores();
 
-                } 
+                }
             }
 
         }
 
         private void cargarValores()
         {
-            profesor = profesorBO.obtenerProfesorPorId(idProfesor);
-            txtDNIAlumno.Text = profesor.dni;
-            string[] palabras = profesor.nombreCompleto.Trim().Split(' ');
+            personalAdmin = personalAdminBO.obtenerPersonalAdministrativoPorId(idPA);
+            txtDNIAlumno.Text = personalAdmin.dni;
+            string[] palabras = personalAdmin.nombreCompleto.Trim().Split(' ');
 
             if (palabras.Length == 3)
             {
@@ -77,12 +70,12 @@ namespace SoftPixelPenguinsWA
 
             // Datos personales del alumno
 
-            dtpFechaNacimiento.Text = profesor.fechaNacimiento.ToString("yyyy-MM-dd");
-            txtSexo.Text = profesor.sexo;
-            txtEmail.Text = profesor.email;
-            txtDireccion.Text = profesor.direccion;
-            txtUsuario.Text = profesor.username;
-            txtContrasena.Attributes["value"] = profesor.password;
+            dtpFechaNacimiento.Text = personalAdmin.fechaNacimiento.ToString("yyyy-MM-dd");
+            txtSexo.Text = personalAdmin.sexo;
+            txtEmail.Text = personalAdmin.email;
+            txtDireccion.Text = personalAdmin.direccion;
+            txtUsuario.Text = personalAdmin.username;
+            txtContrasena.Attributes["value"] = personalAdmin.password;
 
             deshabilitarComponentes();
         }
@@ -101,20 +94,5 @@ namespace SoftPixelPenguinsWA
             txtEmail.Enabled = false;
         }
 
-        protected void lnkCertificadoEducativo_Click(object sender, EventArgs e)
-        {
-            if (profesor != null)
-            {
-                byte[] archivoBytes = profesor.certificadoHistorialEducativo;
-                if (archivoBytes != null && archivoBytes.Length > 0)
-                {
-                    Response.Clear();
-                    Response.ContentType = "application/pdf";
-                    Response.AddHeader("Content-Disposition", "attachment; filename=certificadoHistorialEducativo.pdf");
-                    Response.BinaryWrite(archivoBytes);
-                    Response.End();
-                }
-            }
-        }
     }
 }

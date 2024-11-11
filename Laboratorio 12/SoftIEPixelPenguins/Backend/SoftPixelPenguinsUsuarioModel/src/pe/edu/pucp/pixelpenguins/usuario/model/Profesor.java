@@ -11,7 +11,7 @@ public class Profesor extends Usuario {
     // solo en la BD
     // private int idProfesor;
     private int codigoProfesor;
-    private boolean certificadoHistorialEducativo;
+    private byte[] certificadoHistorialEducativo;
     private String especialidad;
     // profesor tiene un listado de horasAcademicas en gradosAcademicos distintos
     private ArrayList<HoraAcademica> horasAcademicas;
@@ -23,7 +23,7 @@ public class Profesor extends Usuario {
 
     public Profesor(Integer idUsuario, String dni, String nombreCompleto, Date fechaNacimiento,
             String direccion, String email, String sexo, String username, String passsword, Rol rol,
-            int codigoProfesor, boolean certificadoHistorialEducativo, String especialidad ) {
+            int codigoProfesor, byte[] certificadoHistorialEducativo, String especialidad ) {
         super(idUsuario, dni, nombreCompleto, fechaNacimiento, direccion, email, sexo, username, passsword, rol);
         this.codigoProfesor = codigoProfesor;
         this.certificadoHistorialEducativo = certificadoHistorialEducativo;
@@ -40,11 +40,11 @@ public class Profesor extends Usuario {
         this.codigoProfesor = codigoProfesor;
     }
 
-    public boolean isCertificadoHistorialEducativo() {
+    public byte[] isCertificadoHistorialEducativo() {
         return certificadoHistorialEducativo;
     }
 
-    public void setCertificadoHistorialEducativo(boolean certificadoHistorialEducativo) {
+    public void setCertificadoHistorialEducativo(byte[] certificadoHistorialEducativo) {
         this.certificadoHistorialEducativo = certificadoHistorialEducativo;
     }
 

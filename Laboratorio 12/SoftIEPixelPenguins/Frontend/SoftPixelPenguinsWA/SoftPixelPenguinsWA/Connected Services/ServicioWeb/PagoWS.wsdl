@@ -5,18 +5,6 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftPixelPenguinsWSBL/PagoWS?xsd=1" namespace="http://services.pixelpenguins.pucp.edu.pe" />
     </xsd:schema>
   </types>
-  <message name="listarPagosXIdMatricula">
-    <part name="parameters" element="tns:listarPagosXIdMatricula" />
-  </message>
-  <message name="listarPagosXIdMatriculaResponse">
-    <part name="parameters" element="tns:listarPagosXIdMatriculaResponse" />
-  </message>
-  <message name="insertarPago">
-    <part name="parameters" element="tns:insertarPago" />
-  </message>
-  <message name="insertarPagoResponse">
-    <part name="parameters" element="tns:insertarPagoResponse" />
-  </message>
   <message name="eliminarPago">
     <part name="parameters" element="tns:eliminarPago" />
   </message>
@@ -35,27 +23,31 @@
   <message name="obtenerPagoPorIdResponse">
     <part name="parameters" element="tns:obtenerPagoPorIdResponse" />
   </message>
-  <message name="modificarPago">
-    <part name="parameters" element="tns:modificarPago" />
-  </message>
-  <message name="modificarPagoResponse">
-    <part name="parameters" element="tns:modificarPagoResponse" />
-  </message>
   <message name="PagoXIdMatricula">
     <part name="parameters" element="tns:PagoXIdMatricula" />
   </message>
   <message name="PagoXIdMatriculaResponse">
     <part name="parameters" element="tns:PagoXIdMatriculaResponse" />
   </message>
+  <message name="insertarPago">
+    <part name="parameters" element="tns:insertarPago" />
+  </message>
+  <message name="insertarPagoResponse">
+    <part name="parameters" element="tns:insertarPagoResponse" />
+  </message>
+  <message name="modificarPago">
+    <part name="parameters" element="tns:modificarPago" />
+  </message>
+  <message name="modificarPagoResponse">
+    <part name="parameters" element="tns:modificarPagoResponse" />
+  </message>
+  <message name="listarPagosXIdMatricula">
+    <part name="parameters" element="tns:listarPagosXIdMatricula" />
+  </message>
+  <message name="listarPagosXIdMatriculaResponse">
+    <part name="parameters" element="tns:listarPagosXIdMatriculaResponse" />
+  </message>
   <portType name="PagoWS">
-    <operation name="listarPagosXIdMatricula">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/listarPagosXIdMatriculaRequest" message="tns:listarPagosXIdMatricula" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/listarPagosXIdMatriculaResponse" message="tns:listarPagosXIdMatriculaResponse" />
-    </operation>
-    <operation name="insertarPago">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/insertarPagoRequest" message="tns:insertarPago" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/insertarPagoResponse" message="tns:insertarPagoResponse" />
-    </operation>
     <operation name="eliminarPago">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/eliminarPagoRequest" message="tns:eliminarPago" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/eliminarPagoResponse" message="tns:eliminarPagoResponse" />
@@ -68,35 +60,25 @@
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/obtenerPagoPorIdRequest" message="tns:obtenerPagoPorId" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/obtenerPagoPorIdResponse" message="tns:obtenerPagoPorIdResponse" />
     </operation>
-    <operation name="modificarPago">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/modificarPagoRequest" message="tns:modificarPago" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/modificarPagoResponse" message="tns:modificarPagoResponse" />
-    </operation>
     <operation name="PagoXIdMatricula">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/PagoXIdMatriculaRequest" message="tns:PagoXIdMatricula" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/PagoXIdMatriculaResponse" message="tns:PagoXIdMatriculaResponse" />
     </operation>
+    <operation name="insertarPago">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/insertarPagoRequest" message="tns:insertarPago" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/insertarPagoResponse" message="tns:insertarPagoResponse" />
+    </operation>
+    <operation name="modificarPago">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/modificarPagoRequest" message="tns:modificarPago" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/modificarPagoResponse" message="tns:modificarPagoResponse" />
+    </operation>
+    <operation name="listarPagosXIdMatricula">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/listarPagosXIdMatriculaRequest" message="tns:listarPagosXIdMatricula" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/listarPagosXIdMatriculaResponse" message="tns:listarPagosXIdMatriculaResponse" />
+    </operation>
   </portType>
   <binding name="PagoWSPortBinding" type="tns:PagoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarPagosXIdMatricula">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarPago">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="eliminarPago">
       <soap:operation soapAction="" />
       <input>
@@ -124,6 +106,24 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="PagoXIdMatricula">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarPago">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="modificarPago">
       <soap:operation soapAction="" />
       <input>
@@ -133,7 +133,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="PagoXIdMatricula">
+    <operation name="listarPagosXIdMatricula">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

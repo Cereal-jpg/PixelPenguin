@@ -19,7 +19,7 @@
 
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
-    <h2 style="color: black;">Registro de Notas</h2>
+    <h2 style="color: black;">Profesor - Registro de Notas</h2>
     <div class="container-matricula" style="display:block;">
             <h2 style="color: black;">Listado de Cursos</h2>
             <asp:GridView ID="gvCursos" runat="server" AutoGenerateColumns="False" CssClass="table table-hover table-responsive table-striped table-bordered" >

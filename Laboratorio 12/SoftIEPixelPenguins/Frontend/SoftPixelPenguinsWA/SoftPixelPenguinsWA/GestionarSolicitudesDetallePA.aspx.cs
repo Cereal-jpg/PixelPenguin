@@ -27,7 +27,7 @@ namespace SoftPixelPenguinsWA
             if (!IsPostBack)
             {
                 // Verifica si la página actual es el index
-                if (Request.Url.AbsolutePath.EndsWith("GestionarSolicitudesDetallePA.aspx", StringComparison.OrdinalIgnoreCase))
+                if (Request.Url.AbsolutePath.EndsWith("IndexPersonalAdministrativo.aspx", StringComparison.OrdinalIgnoreCase))
                 {
                     // Oculta el menú deseado
                     ContentPlaceHolder menuItem7 = (ContentPlaceHolder)Master.FindControl("menuItem7");

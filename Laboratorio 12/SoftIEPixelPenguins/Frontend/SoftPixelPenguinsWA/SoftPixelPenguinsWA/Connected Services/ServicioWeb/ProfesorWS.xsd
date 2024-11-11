@@ -21,7 +21,7 @@
     <xs:complexContent mixed="false">
       <xs:extension base="tns:usuario">
         <xs:sequence>
-          <xs:element name="certificadoHistorialEducativo" type="xs:boolean" />
+          <xs:element minOccurs="0" name="certificadoHistorialEducativo" type="xs:base64Binary" />
           <xs:element name="codigoProfesor" type="xs:int" />
           <xs:element minOccurs="0" name="especialidad" type="xs:string" />
         </xs:sequence>

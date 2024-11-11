@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -106,7 +107,7 @@ namespace SoftPixelPenguinsWA
                         username = username.Value,
                         password = password.Value,
                         codigoProfesor = int.Parse(codigoProfesor.Text),
-                        certificadoHistorialEducativo = certificadoHistorialEducativo.Checked,
+                        certificadoHistorialEducativo = fileCertificadoEducativo.FileBytes,
                         especialidad = especialidad.Text,
                         rol = rolBO.obtenerRolPorId(2)
                     };
@@ -148,7 +149,7 @@ namespace SoftPixelPenguinsWA
                     break;
             }
             Session["idUsuarioSeleccionado"] = null;
-            Response.Redirect("GestionarUsuarios.aspx");
+            Response.Redirect("GestionarUsuariosAdmin.aspx");
         }
 
         protected void lbEditar_Click(object sender, EventArgs e)
@@ -186,7 +187,23 @@ namespace SoftPixelPenguinsWA
                     ddlRoles.Enabled = false;
                     profesor profesor = profesorBO.obtenerProfesorPorId(idUsuario);
                     codigoProfesor.Text = profesor.codigoProfesor.ToString();
-                    certificadoHistorialEducativo.Checked = profesor.certificadoHistorialEducativo;
+                    // Asumiendo que 'profesor' es el objeto que contiene el certificado actual
+                    if (fileCertificadoEducativo.HasFile) // Si el usuario subió un nuevo archivo
+                    {
+                        // Leer el nuevo archivo como byte[]
+                        using (BinaryReader reader = new BinaryReader(fileCertificadoEducativo.PostedFile.InputStream))
+                        {
+                            profesor.certificadoHistorialEducativo = reader.ReadBytes(fileCertificadoEducativo.PostedFile.ContentLength);
+                        }
+                    }
+                    else
+                    {
+                        // Mantener el certificado actual si no se sube uno nuevo
+                        profesor.certificadoHistorialEducativo = profesor.certificadoHistorialEducativo;
+                    }
+
+                    // Continuar con el proceso de edición o actualización del objeto `profesor`
+
                     especialidad.Text = profesor.especialidad.ToString();
                 }
                 else
@@ -207,7 +224,7 @@ namespace SoftPixelPenguinsWA
             int idUsuario = int.Parse(lnk.CommandArgument);
             usuario usuario = new usuario { idUsuario = idUsuario };
             usuarioBO.eliminarUsuario(usuario);
-            Response.Redirect("GestionarUsuarios.aspx");
+            Response.Redirect("GestionarUsuariosAdmin.aspx");
         }
 
         protected void lbBuscar_Click(object sender, EventArgs e)

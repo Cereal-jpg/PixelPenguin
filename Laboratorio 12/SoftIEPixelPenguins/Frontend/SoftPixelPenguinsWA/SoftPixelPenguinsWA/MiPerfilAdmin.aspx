@@ -1,28 +1,31 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftPixelPenguins.Master" AutoEventWireup="true" CodeBehind="MiPerfilProfesor.aspx.cs" Inherits="SoftPixelPenguinsWA.MiPerfilProfesor" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftPixelPenguins.Master" AutoEventWireup="true" CodeBehind="MiPerfilAdmin.aspx.cs" Inherits="SoftPixelPenguinsWA.MiPerfilAdmin" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
-    Mi Perfil - Profesor
+    Mi Perfil - Administrador
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphScripts" runat="server">
 </asp:Content>
-
 <asp:Content ContentPlaceHolderID="menuItem1" runat="server">
-    <a href="IndexProfesor.aspx"><i class="fa-solid fa-home"></i>Inicio</a>
+    <a href="IndexAdmin.aspx"><i class="fa-solid fa-home"></i>Inicio</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem2" runat="server">
-    <a href="CursosDictadosProfesor.aspx"><i class="fa-solid fa-book"></i>Cursos Dictados</a>
+    <a href="ReportesAdmin.aspx"><i class="fa-solid fa-book"></i>Reportes</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem3" runat="server">
-    <a href="RegistroNotasProfesor.aspx"><i class="fa-solid fa-bar-chart"></i>Registro de notas</a>
+    <a href="BusquedaAdmin.aspx"><i class="fa-solid fa-search"></i>Busqueda</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem4" runat="server">
-    <a href="MiPerfilProfesor.aspx"><i class="fa-solid fa-user"></i>Mi perfil</a>
-    </asp:Content>
+    <a href="AgregarPlanAdmin.aspx"><i class="fa-solid fa-folder-plus"></i>Agregar Plan</a>
+</asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem5" runat="server">
-    <a href="ListarCursosAlumno.aspx"><i class="fa-solid fa-users"></i>Mi perfil</a>
-    </asp:Content>
+    <a href="GestionarUsuariosAdmin.aspx"><i class="fa-solid fa-users"></i>Gestionar Usuarios</a>
+</asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem6" runat="server">
-    <a href="MiPerfilProfesor.aspx"><i class="fa-solid fa-user"></i>Mi perfil</a>
-    </asp:Content>
+    <a href="GestionarSolicitudesAdmin.aspx"><i class="fa-solid fa-user-plus"></i>Gestionar Solicitudes</a>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="menuItem7" runat="server">
+    <a href="MiPerfilAdmin.aspx"><i class="fa-solid fa-user"></i>Mi Perfil</a>
+</asp:Content>
 
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
@@ -319,25 +322,8 @@
                     </div>
                 </div>
 
-                <div class="form-section">
-                    <h3>Certificados</h3>
-                    <div class="form-group">
-                        <div class="form-row">
-                            <label>Certificado de Historial Educativo:</label>
-                            <asp:LinkButton ID="lnkCertificadoEducativo" runat="server" CssClass="btn btn-info me-2" OnClick="lnkCertificadoEducativo_Click">
-                                Descargar Certificado de Estudios
-                            </asp:LinkButton>
-                        </div>
-                    </div>
-                </div>
-
             </div>
     
         </div>
 
 </asp:Content>
-
-
-
-
-

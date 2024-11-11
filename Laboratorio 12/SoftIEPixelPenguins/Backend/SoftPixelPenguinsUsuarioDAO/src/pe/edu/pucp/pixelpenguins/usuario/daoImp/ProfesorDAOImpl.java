@@ -88,7 +88,7 @@ public class ProfesorDAOImpl extends DAOImpl implements ProfesorDAO {
     protected void incluirValorDeParametrosParaInsercion() throws SQLException {
         this.incluirParametroInt(1, profesor.getIdUsuario());
         this.incluirParametroInt(2, profesor.getCodigoProfesor());
-        this.incluirParametroBoolean(3, profesor.isCertificadoHistorialEducativo());
+        this.incluirParametroBytes(3, profesor.isCertificadoHistorialEducativo());
         this.incluirParametroString(4, profesor.getEspecialidad());
     }
 
@@ -143,7 +143,7 @@ public class ProfesorDAOImpl extends DAOImpl implements ProfesorDAO {
     @Override
     protected void incluirValorDeParametrosParaModificacion() throws SQLException {
         this.incluirParametroInt(1, profesor.getCodigoProfesor());
-        this.incluirParametroBoolean(2, profesor.isCertificadoHistorialEducativo());
+        this.incluirParametroBytes(2, profesor.isCertificadoHistorialEducativo());
         this.incluirParametroString(3, profesor.getEspecialidad());
         this.incluirParametroInt(4, profesor.getIdUsuario());
     }
@@ -235,7 +235,7 @@ public class ProfesorDAOImpl extends DAOImpl implements ProfesorDAO {
         this.profesor.setPassword(resultSet.getString("password"));
         this.profesor.setRol(new Rol(resultSet.getInt("fid_rol")));
         this.profesor.setCodigoProfesor(this.resultSet.getInt("codigoProfesor"));
-        this.profesor.setCertificadoHistorialEducativo(this.resultSet.getBoolean("certificadoHistorialEducativo"));
+        this.profesor.setCertificadoHistorialEducativo(this.resultSet.getBytes("certificadoHistorialEducativo"));
         this.profesor.setEspecialidad(this.resultSet.getString("especialidad"));
     }
 

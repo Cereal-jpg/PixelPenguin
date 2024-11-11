@@ -43,8 +43,8 @@ namespace SoftPixelPenguinsWA
             Response.Redirect("VisualizarPago.aspx?idPago=" + idPago);
         }
 
-        
+
     }
-    
-    
+
+
 }

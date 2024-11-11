@@ -1,9 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftPixelPenguins.Master" AutoEventWireup="true" CodeBehind="ReporteGradoPA.aspx.cs" Inherits="SoftPixelPenguinsWA.ReporteGradoPA" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="cphScripts" runat="server">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+    </style>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="cphScripts" runat="server">
-</asp:Content>
-
 <asp:Content ContentPlaceHolderID="menuItem1" runat="server">
     <a href="IndexPersonalAdministrativo.aspx"><i class="fa-solid fa-home"></i>Inicio</a>
 </asp:Content>
@@ -26,7 +26,7 @@
     <a href="MiPerfilPA.aspx"><i class="fa-solid fa-user"></i>Mi Perfil</a>
 </asp:Content>
 
-<asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="cphContenido" runat="server">
     <h2 style="color: black;">Reporte de Matriculados por Grado</h2>
     <asp:GridView ID="gridReporte" runat="server" AutoGenerateColumns="true" CssClass="table table-bordered border-black" HeaderStyle-CssClass="table-secondary text-center border-black"  ></asp:GridView>
     <div class="d-flex align-items-center justify-content-between" style="padding: 5px; border-bottom: 2px solid #000;">

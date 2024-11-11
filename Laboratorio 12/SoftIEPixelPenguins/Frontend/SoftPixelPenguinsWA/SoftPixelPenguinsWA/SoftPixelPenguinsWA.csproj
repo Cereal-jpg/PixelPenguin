@@ -134,16 +134,21 @@
     <Content Include="Content\Estilos-Perfil.css" />
     <Content Include="Content\grafico_style.css" />
     <Content Include="Content\site.css" />
-    <Content Include="PersonalAdmin\MiPerfilPA.aspx" />
-    <Content Include="Alumno\NotasParcialesAlumno.aspx" />
-    <Content Include="Profesor\CursosDictadosProfesor.aspx" />
-    <Content Include="PersonalAdmin\GestionarHorariosPA.aspx" />
-    <Content Include="PersonalAdmin\CursosPorProfesorPA.aspx" />
-    <Content Include="Admin\GestionarSolicitudesAdmin.aspx" />
-    <Content Include="Admin\GestionarSolicitudesDetalleAdmin.aspx" />
-    <Content Include="PersonalAdmin\GestionarSolicitudesDetallePA.aspx" />
-    <Content Include="PersonalAdmin\GestionarSolicitudesPA.aspx" />
-    <Content Include="Admin\GestionarUsuariosAdmin.aspx" />
+    <Content Include="Flujo_Admin\MiPerfilAdmin.aspx" />
+    <Content Include="Flujo_Alumno\MisPagosAlumno.aspx" />
+    <Content Include="Flujo_Alumno\VisualizarPagoAlumno.aspx" />
+    <Content Include="Flujo_PersonalAdmin\GestionarCursosPlanPA.aspx" />
+    <Content Include="Flujo_PersonalAdmin\GestionarPlanesPA.aspx" />
+    <Content Include="Flujo_PersonalAdmin\MiPerfilPA.aspx" />
+    <Content Include="Flujo_Alumno\NotasParcialesAlumno.aspx" />
+    <Content Include="Flujo_Profesor\CursosDictadosProfesor.aspx" />
+    <Content Include="Flujo_PersonalAdmin\GestionarHorariosPA.aspx" />
+    <Content Include="Flujo_PersonalAdmin\CursosPorProfesorPA.aspx" />
+    <Content Include="Flujo_Admin\GestionarSolicitudesAdmin.aspx" />
+    <Content Include="Flujo_Admin\GestionarSolicitudesDetalleAdmin.aspx" />
+    <Content Include="Flujo_PersonalAdmin\GestionarSolicitudesDetallePA.aspx" />
+    <Content Include="Flujo_PersonalAdmin\GestionarSolicitudesPA.aspx" />
+    <Content Include="Flujo_Admin\GestionarUsuariosAdmin.aspx" />
     <Content Include="Images\CHICAMAT.jpg" />
     <Content Include="Images\CHICOMAT.png" />
     <Content Include="Images\Colegio.png" />
@@ -151,6 +156,7 @@
     <Content Include="Images\Escuela.png" />
     <Content Include="Images\Horario.jpg" />
     <Content Include="Images\HORARIO1.png" />
+    <Content Include="Images\HORARIO2.png" />
     <Content Include="Images\Logo.jpg" />
     <Content Include="Images\Matricula.jpg" />
     <Content Include="Images\PIXEL.png" />
@@ -158,31 +164,31 @@
     <Content Include="Images\Primaria.png" />
     <Content Include="Images\Secundaria.png" />
     <Content Include="Images\SINFOTO.png" />
-    <Content Include="Admin\IndexAdmin.aspx" />
-    <Content Include="Alumno\IndexAlumno.aspx" />
-    <Content Include="PersonalAdmin\IndexPersonalAdministrativo.aspx" />
-    <Content Include="Profesor\IndexProfesor.aspx" />
+    <Content Include="Flujo_Admin\IndexAdmin.aspx" />
+    <Content Include="Flujo_Alumno\IndexAlumno.aspx" />
+    <Content Include="Flujo_PersonalAdmin\IndexPersonalAdministrativo.aspx" />
+    <Content Include="Flujo_Profesor\IndexProfesor.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="MatriculaGenerica.aspx" />
-    <Content Include="Alumno\MatriculaOnlineAlumno.aspx" />
+    <Content Include="Flujo_Alumno\MatriculaOnlineAlumno.aspx" />
     <Content Include="Matricularse.aspx" />
-    <Content Include="Alumno\MiPerfilAlumno.aspx" />
-    <Content Include="Profesor\MiPerfilProfesor.aspx" />
-    <Content Include="Alumno\MisCursosAlumno.aspx" />
+    <Content Include="Flujo_Alumno\MiPerfilAlumno.aspx" />
+    <Content Include="Flujo_Profesor\MiPerfilProfesor.aspx" />
+    <Content Include="Flujo_Alumno\MisCursosAlumno.aspx" />
     <Content Include="PlanEstudioGenerico.aspx" />
     <Content Include="ProcesoMatriculaGenerica.aspx" />
     <Content Include="RecuperarContrasena.aspx" />
-    <Content Include="PersonalAdmin\CursosYHorariosPA.aspx" />
-    <Content Include="Profesor\RegistroNotasProfesor_Alumnos.aspx" />
-    <Content Include="Profesor\RegistroNotasProfesor_Competencias.aspx" />
-    <Content Include="Profesor\RegistroNotasProfesor.aspx" />
+    <Content Include="Flujo_PersonalAdmin\CursosYHorariosPA.aspx" />
+    <Content Include="Flujo_Profesor\RegistroNotasProfesor_Alumnos.aspx" />
+    <Content Include="Flujo_Profesor\RegistroNotasProfesor_Competencias.aspx" />
+    <Content Include="Flujo_Profesor\RegistroNotasProfesor.aspx" />
     <Content Include="ReporteGrado.aspx" />
-    <Content Include="PersonalAdmin\ReporteGradoPA.aspx" />
-    <Content Include="Alumno\ReporteNotasAlumno.aspx" />
-    <Content Include="ReportePagosRA.aspx" />
-    <Content Include="ReportePagosXGrado.aspx" />
-    <Content Include="Admin\ReportesAdmin.aspx" />
-    <Content Include="PersonalAdmin\ReportesPA.aspx" />
+    <Content Include="Flujo_PersonalAdmin\ReporteGradoPA.aspx" />
+    <Content Include="Flujo_Alumno\ReporteNotasAlumno.aspx" />
+    <Content Include="Flujo_Admin\ReportePagosRA.aspx" />
+    <Content Include="Flujo_Admin\ReportePagosXGrado.aspx" />
+    <Content Include="Flujo_Admin\ReportesAdmin.aspx" />
+    <Content Include="Flujo_PersonalAdmin\ReportesPA.aspx" />
     <Content Include="Scripts\BarraProgreso.js" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -660,9 +666,9 @@
     <Content Include="Scripts\jquery-3.7.1.slim.js" />
     <Content Include="Scripts\jquery-3.7.1.slim.min.js" />
     <Content Include="Scripts\MostrarContraseña.js" />
-    <Content Include="Alumno\VerCompetenciasAlumno.aspx" />
+    <Content Include="Flujo_Alumno\VerCompetenciasAlumno.aspx" />
     <Content Include="VerCompetenciasGenerica.aspx" />
-    <Content Include="Alumno\VerInfoProfesor.aspx" />
+    <Content Include="Flujo_Alumno\VerInfoProfesorAlumno.aspx" />
     <Content Include="Web.config" />
     <Content Include="SoftPixelPenguins.Master" />
   </ItemGroup>
@@ -672,102 +678,137 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="PersonalAdmin\MiPerfilPA.aspx.cs">
+    <Compile Include="Flujo_Admin\MiPerfilAdmin.aspx.cs">
+      <DependentUpon>MiPerfilAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Flujo_Admin\MiPerfilAdmin.aspx.designer.cs">
+      <DependentUpon>MiPerfilAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Flujo_Alumno\MisPagosAlumno.aspx.cs">
+      <DependentUpon>MisPagosAlumno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Flujo_Alumno\MisPagosAlumno.aspx.designer.cs">
+      <DependentUpon>MisPagosAlumno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Flujo_Alumno\VisualizarPagoAlumno.aspx.cs">
+      <DependentUpon>VisualizarPagoAlumno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Flujo_Alumno\VisualizarPagoAlumno.aspx.designer.cs">
+      <DependentUpon>VisualizarPagoAlumno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Flujo_PersonalAdmin\GestionarCursosPlanPA.aspx.cs">
+      <DependentUpon>GestionarCursosPlanPA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Flujo_PersonalAdmin\GestionarCursosPlanPA.aspx.designer.cs">
+      <DependentUpon>GestionarCursosPlanPA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Flujo_PersonalAdmin\GestionarPlanesPA.aspx.cs">
+      <DependentUpon>GestionarPlanesPA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Flujo_PersonalAdmin\GestionarPlanesPA.aspx.designer.cs">
+      <DependentUpon>GestionarPlanesPA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Flujo_PersonalAdmin\MiPerfilPA.aspx.cs">
       <DependentUpon>MiPerfilPA.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PersonalAdmin\MiPerfilPA.aspx.designer.cs">
+    <Compile Include="Flujo_PersonalAdmin\MiPerfilPA.aspx.designer.cs">
       <DependentUpon>MiPerfilPA.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Alumno\NotasParcialesAlumno.aspx.cs">
+    <Compile Include="Flujo_Alumno\NotasParcialesAlumno.aspx.cs">
       <DependentUpon>NotasParcialesAlumno.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Alumno\NotasParcialesAlumno.aspx.designer.cs">
+    <Compile Include="Flujo_Alumno\NotasParcialesAlumno.aspx.designer.cs">
       <DependentUpon>NotasParcialesAlumno.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Profesor\CursosDictadosProfesor.aspx.cs">
+    <Compile Include="Flujo_Profesor\CursosDictadosProfesor.aspx.cs">
       <DependentUpon>CursosDictadosProfesor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Profesor\CursosDictadosProfesor.aspx.designer.cs">
+    <Compile Include="Flujo_Profesor\CursosDictadosProfesor.aspx.designer.cs">
       <DependentUpon>CursosDictadosProfesor.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PersonalAdmin\GestionarHorariosPA.aspx.cs">
+    <Compile Include="Flujo_PersonalAdmin\GestionarHorariosPA.aspx.cs">
       <DependentUpon>GestionarHorariosPA.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PersonalAdmin\GestionarHorariosPA.aspx.designer.cs">
+    <Compile Include="Flujo_PersonalAdmin\GestionarHorariosPA.aspx.designer.cs">
       <DependentUpon>GestionarHorariosPA.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PersonalAdmin\CursosPorProfesorPA.aspx.cs">
+    <Compile Include="Flujo_PersonalAdmin\CursosPorProfesorPA.aspx.cs">
       <DependentUpon>CursosPorProfesorPA.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PersonalAdmin\CursosPorProfesorPA.aspx.designer.cs">
+    <Compile Include="Flujo_PersonalAdmin\CursosPorProfesorPA.aspx.designer.cs">
       <DependentUpon>CursosPorProfesorPA.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\GestionarSolicitudesAdmin.aspx.cs">
+    <Compile Include="Flujo_Admin\GestionarSolicitudesAdmin.aspx.cs">
       <DependentUpon>GestionarSolicitudesAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\GestionarSolicitudesAdmin.aspx.designer.cs">
+    <Compile Include="Flujo_Admin\GestionarSolicitudesAdmin.aspx.designer.cs">
       <DependentUpon>GestionarSolicitudesAdmin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\GestionarSolicitudesDetalleAdmin.aspx.cs">
+    <Compile Include="Flujo_Admin\GestionarSolicitudesDetalleAdmin.aspx.cs">
       <DependentUpon>GestionarSolicitudesDetalleAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\GestionarSolicitudesDetalleAdmin.aspx.designer.cs">
+    <Compile Include="Flujo_Admin\GestionarSolicitudesDetalleAdmin.aspx.designer.cs">
       <DependentUpon>GestionarSolicitudesDetalleAdmin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PersonalAdmin\GestionarSolicitudesDetallePA.aspx.cs">
+    <Compile Include="Flujo_PersonalAdmin\GestionarSolicitudesDetallePA.aspx.cs">
       <DependentUpon>GestionarSolicitudesDetallePA.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PersonalAdmin\GestionarSolicitudesDetallePA.aspx.designer.cs">
+    <Compile Include="Flujo_PersonalAdmin\GestionarSolicitudesDetallePA.aspx.designer.cs">
       <DependentUpon>GestionarSolicitudesDetallePA.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PersonalAdmin\GestionarSolicitudesPA.aspx.cs">
+    <Compile Include="Flujo_PersonalAdmin\GestionarSolicitudesPA.aspx.cs">
       <DependentUpon>GestionarSolicitudesPA.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PersonalAdmin\GestionarSolicitudesPA.aspx.designer.cs">
+    <Compile Include="Flujo_PersonalAdmin\GestionarSolicitudesPA.aspx.designer.cs">
       <DependentUpon>GestionarSolicitudesPA.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\GestionarUsuariosAdmin.aspx.cs">
+    <Compile Include="Flujo_Admin\GestionarUsuariosAdmin.aspx.cs">
       <DependentUpon>GestionarUsuariosAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\GestionarUsuariosAdmin.aspx.designer.cs">
+    <Compile Include="Flujo_Admin\GestionarUsuariosAdmin.aspx.designer.cs">
       <DependentUpon>GestionarUsuariosAdmin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\IndexAdmin.aspx.cs">
+    <Compile Include="Flujo_Admin\IndexAdmin.aspx.cs">
       <DependentUpon>IndexAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\IndexAdmin.aspx.designer.cs">
+    <Compile Include="Flujo_Admin\IndexAdmin.aspx.designer.cs">
       <DependentUpon>IndexAdmin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Alumno\IndexAlumno.aspx.cs">
+    <Compile Include="Flujo_Alumno\IndexAlumno.aspx.cs">
       <DependentUpon>IndexAlumno.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Alumno\IndexAlumno.aspx.designer.cs">
+    <Compile Include="Flujo_Alumno\IndexAlumno.aspx.designer.cs">
       <DependentUpon>IndexAlumno.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PersonalAdmin\IndexPersonalAdministrativo.aspx.cs">
+    <Compile Include="Flujo_PersonalAdmin\IndexPersonalAdministrativo.aspx.cs">
       <DependentUpon>IndexPersonalAdministrativo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PersonalAdmin\IndexPersonalAdministrativo.aspx.designer.cs">
+    <Compile Include="Flujo_PersonalAdmin\IndexPersonalAdministrativo.aspx.designer.cs">
       <DependentUpon>IndexPersonalAdministrativo.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Profesor\IndexProfesor.aspx.cs">
+    <Compile Include="Flujo_Profesor\IndexProfesor.aspx.cs">
       <DependentUpon>IndexProfesor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Profesor\IndexProfesor.aspx.designer.cs">
+    <Compile Include="Flujo_Profesor\IndexProfesor.aspx.designer.cs">
       <DependentUpon>IndexProfesor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
@@ -784,11 +825,11 @@
     <Compile Include="MatriculaGenerica.aspx.designer.cs">
       <DependentUpon>MatriculaGenerica.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Alumno\MatriculaOnlineAlumno.aspx.cs">
+    <Compile Include="Flujo_Alumno\MatriculaOnlineAlumno.aspx.cs">
       <DependentUpon>MatriculaOnlineAlumno.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Alumno\MatriculaOnlineAlumno.aspx.designer.cs">
+    <Compile Include="Flujo_Alumno\MatriculaOnlineAlumno.aspx.designer.cs">
       <DependentUpon>MatriculaOnlineAlumno.aspx</DependentUpon>
     </Compile>
     <Compile Include="Matricularse.aspx.cs">
@@ -798,25 +839,25 @@
     <Compile Include="Matricularse.aspx.designer.cs">
       <DependentUpon>Matricularse.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Alumno\MiPerfilAlumno.aspx.cs">
+    <Compile Include="Flujo_Alumno\MiPerfilAlumno.aspx.cs">
       <DependentUpon>MiPerfilAlumno.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Alumno\MiPerfilAlumno.aspx.designer.cs">
+    <Compile Include="Flujo_Alumno\MiPerfilAlumno.aspx.designer.cs">
       <DependentUpon>MiPerfilAlumno.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Profesor\MiPerfilProfesor.aspx.cs">
+    <Compile Include="Flujo_Profesor\MiPerfilProfesor.aspx.cs">
       <DependentUpon>MiPerfilProfesor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Profesor\MiPerfilProfesor.aspx.designer.cs">
+    <Compile Include="Flujo_Profesor\MiPerfilProfesor.aspx.designer.cs">
       <DependentUpon>MiPerfilProfesor.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Alumno\MisCursosAlumno.aspx.cs">
+    <Compile Include="Flujo_Alumno\MisCursosAlumno.aspx.cs">
       <DependentUpon>MisCursosAlumno.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Alumno\MisCursosAlumno.aspx.designer.cs">
+    <Compile Include="Flujo_Alumno\MisCursosAlumno.aspx.designer.cs">
       <DependentUpon>MisCursosAlumno.aspx</DependentUpon>
     </Compile>
     <Compile Include="PlanEstudioGenerico.aspx.cs">
@@ -841,32 +882,32 @@
     <Compile Include="RecuperarContrasena.aspx.designer.cs">
       <DependentUpon>RecuperarContrasena.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PersonalAdmin\CursosYHorariosPA.aspx.cs">
+    <Compile Include="Flujo_PersonalAdmin\CursosYHorariosPA.aspx.cs">
       <DependentUpon>CursosYHorariosPA.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PersonalAdmin\CursosYHorariosPA.aspx.designer.cs">
+    <Compile Include="Flujo_PersonalAdmin\CursosYHorariosPA.aspx.designer.cs">
       <DependentUpon>CursosYHorariosPA.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Profesor\RegistroNotasProfesor_Alumnos.aspx.cs">
+    <Compile Include="Flujo_Profesor\RegistroNotasProfesor_Alumnos.aspx.cs">
       <DependentUpon>RegistroNotasProfesor_Alumnos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Profesor\RegistroNotasProfesor_Alumnos.aspx.designer.cs">
+    <Compile Include="Flujo_Profesor\RegistroNotasProfesor_Alumnos.aspx.designer.cs">
       <DependentUpon>RegistroNotasProfesor_Alumnos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Profesor\RegistroNotasProfesor_Competencias.aspx.cs">
+    <Compile Include="Flujo_Profesor\RegistroNotasProfesor_Competencias.aspx.cs">
       <DependentUpon>RegistroNotasProfesor_Competencias.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Profesor\RegistroNotasProfesor_Competencias.aspx.designer.cs">
+    <Compile Include="Flujo_Profesor\RegistroNotasProfesor_Competencias.aspx.designer.cs">
       <DependentUpon>RegistroNotasProfesor_Competencias.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Profesor\RegistroNotasProfesor.aspx.cs">
+    <Compile Include="Flujo_Profesor\RegistroNotasProfesor.aspx.cs">
       <DependentUpon>RegistroNotasProfesor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Profesor\RegistroNotasProfesor.aspx.designer.cs">
+    <Compile Include="Flujo_Profesor\RegistroNotasProfesor.aspx.designer.cs">
       <DependentUpon>RegistroNotasProfesor.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReporteGrado.aspx.cs">
@@ -876,46 +917,46 @@
     <Compile Include="ReporteGrado.aspx.designer.cs">
       <DependentUpon>ReporteGrado.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PersonalAdmin\ReporteGradoPA.aspx.cs">
+    <Compile Include="Flujo_PersonalAdmin\ReporteGradoPA.aspx.cs">
       <DependentUpon>ReporteGradoPA.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PersonalAdmin\ReporteGradoPA.aspx.designer.cs">
+    <Compile Include="Flujo_PersonalAdmin\ReporteGradoPA.aspx.designer.cs">
       <DependentUpon>ReporteGradoPA.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Alumno\ReporteNotasAlumno.aspx.cs">
+    <Compile Include="Flujo_Alumno\ReporteNotasAlumno.aspx.cs">
       <DependentUpon>ReporteNotasAlumno.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Alumno\ReporteNotasAlumno.aspx.designer.cs">
+    <Compile Include="Flujo_Alumno\ReporteNotasAlumno.aspx.designer.cs">
       <DependentUpon>ReporteNotasAlumno.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ReportePagosRA.aspx.cs">
+    <Compile Include="Flujo_Admin\ReportePagosRA.aspx.cs">
       <DependentUpon>ReportePagosRA.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ReportePagosRA.aspx.designer.cs">
+    <Compile Include="Flujo_Admin\ReportePagosRA.aspx.designer.cs">
       <DependentUpon>ReportePagosRA.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ReportePagosXGrado.aspx.cs">
+    <Compile Include="Flujo_Admin\ReportePagosXGrado.aspx.cs">
       <DependentUpon>ReportePagosXGrado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ReportePagosXGrado.aspx.designer.cs">
+    <Compile Include="Flujo_Admin\ReportePagosXGrado.aspx.designer.cs">
       <DependentUpon>ReportePagosXGrado.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\ReportesAdmin.aspx.cs">
+    <Compile Include="Flujo_Admin\ReportesAdmin.aspx.cs">
       <DependentUpon>ReportesAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\ReportesAdmin.aspx.designer.cs">
+    <Compile Include="Flujo_Admin\ReportesAdmin.aspx.designer.cs">
       <DependentUpon>ReportesAdmin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="PersonalAdmin\ReportesPA.aspx.cs">
+    <Compile Include="Flujo_PersonalAdmin\ReportesPA.aspx.cs">
       <DependentUpon>ReportesPA.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="PersonalAdmin\ReportesPA.aspx.designer.cs">
+    <Compile Include="Flujo_PersonalAdmin\ReportesPA.aspx.designer.cs">
       <DependentUpon>ReportesPA.aspx</DependentUpon>
     </Compile>
     <Compile Include="SoftPixelPenguins.Master.cs">
@@ -925,11 +966,11 @@
     <Compile Include="SoftPixelPenguins.Master.designer.cs">
       <DependentUpon>SoftPixelPenguins.Master</DependentUpon>
     </Compile>
-    <Compile Include="Alumno\VerCompetenciasAlumno.aspx.cs">
+    <Compile Include="Flujo_Alumno\VerCompetenciasAlumno.aspx.cs">
       <DependentUpon>VerCompetenciasAlumno.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Alumno\VerCompetenciasAlumno.aspx.designer.cs">
+    <Compile Include="Flujo_Alumno\VerCompetenciasAlumno.aspx.designer.cs">
       <DependentUpon>VerCompetenciasAlumno.aspx</DependentUpon>
     </Compile>
     <Compile Include="VerCompetenciasGenerica.aspx.cs">
@@ -939,12 +980,12 @@
     <Compile Include="VerCompetenciasGenerica.aspx.designer.cs">
       <DependentUpon>VerCompetenciasGenerica.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Alumno\VerInfoProfesor.aspx.cs">
-      <DependentUpon>VerInfoProfesor.aspx</DependentUpon>
+    <Compile Include="Flujo_Alumno\VerInfoProfesorAlumno.aspx.cs">
+      <DependentUpon>VerInfoProfesorAlumno.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Alumno\VerInfoProfesor.aspx.designer.cs">
-      <DependentUpon>VerInfoProfesor.aspx</DependentUpon>
+    <Compile Include="Flujo_Alumno\VerInfoProfesorAlumno.aspx.designer.cs">
+      <DependentUpon>VerInfoProfesorAlumno.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

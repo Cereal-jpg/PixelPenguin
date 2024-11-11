@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftPixelPenguins.Master" AutoEventWireup="true" CodeBehind="VisualizarPago.aspx.cs" Inherits="SoftPixelPenguinsWA.VisualizarPago" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftPixelPenguins.Master" AutoEventWireup="true" CodeBehind="VisualizarPagoAlumno.aspx.cs" Inherits="SoftPixelPenguinsWA.VisualizarPagoAlumno" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
     Visualizar - Pago
@@ -156,6 +156,7 @@
                 <asp:Button ID="btnRegresar" runat="server" Text="Regresar" OnClick="btnRegresar_Click" CssClass="button-style" />
             </div>
         </div>
+    </div>
 </asp:Content>
 
 

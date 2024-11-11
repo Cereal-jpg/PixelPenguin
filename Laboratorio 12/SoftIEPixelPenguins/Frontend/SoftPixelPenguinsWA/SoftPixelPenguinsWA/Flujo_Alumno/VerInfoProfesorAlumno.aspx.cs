@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace SoftPixelPenguinsWA
 {
-    public partial class VerInfoProfesor : System.Web.UI.Page
+    public partial class VerInfoProfesorAlumno : System.Web.UI.Page
     {
         private ProfesorWSClient profesorBO=new ProfesorWSClient();
         profesor profesor = null;

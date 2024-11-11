@@ -10,7 +10,9 @@ namespace SoftPixelPenguinsWA
 {
     public partial class Login : System.Web.UI.Page
     {
-        private UsuarioWSClient usuarioWSClient = new UsuarioWSClient();
+        private UsuarioWSClient usuarioBO = new UsuarioWSClient();
+
+        private usuario usuario = null;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -22,27 +24,28 @@ namespace SoftPixelPenguinsWA
             string Password = password.Text.Trim();
 
             int id;
-            id = usuarioWSClient.ValidarDatos(Email, Password);
+            id = usuarioBO.ValidarDatos(Email, Password);
             if (id != 0)
             {
+                usuario=usuarioBO.obtenerUsuarioPorId(id);
                 char tipo = Email[0];
-                switch (tipo)
+                switch (usuario.rol.idRol)
                 {
-                    case 'a':
+                    case 1:
                         Session["idAlumnoLogueado"] = id;
-                        Response.Redirect("Alumno/IndexAlumno.aspx");
+                        Response.Redirect("Flujo_Alumno/IndexAlumno.aspx");
                         break;
-                    case 'p':
+                    case 2:
                         Session["idProfesorLogueado"] = id;
-                        Response.Redirect("Profesor/IndexProfesor.aspx");
+                        Response.Redirect("Flujo_Profesor/IndexProfesor.aspx");
                         break;
-                    case 'm':
+                    case 3:
                         Session["idPersonalAdmin"] = id;
-                        Response.Redirect("PersonalAdmin/IndexPersonalAdministrativo.aspx");
+                        Response.Redirect("Flujo_PersonalAdmin/IndexPersonalAdministrativo.aspx");
                         break;
-                    case 's':
+                    case 4:
                         Session["idAdmin"] = id;
-                        Response.Redirect("Admin/IndexAdmin.aspx");
+                        Response.Redirect("Flujo_Admin/IndexAdmin.aspx");
                         break;
                 }
             }

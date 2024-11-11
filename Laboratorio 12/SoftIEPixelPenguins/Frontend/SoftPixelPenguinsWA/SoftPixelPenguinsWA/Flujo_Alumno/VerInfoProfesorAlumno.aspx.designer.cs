@@ -11,7 +11,7 @@ namespace SoftPixelPenguinsWA
 {
 
 
-    public partial class VerInfoProfesor
+    public partial class VerInfoProfesorAlumno
     {
 
         /// <summary>

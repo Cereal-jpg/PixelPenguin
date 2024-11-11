@@ -134,6 +134,7 @@
     <Content Include="Content\Estilos-Perfil.css" />
     <Content Include="Content\grafico_style.css" />
     <Content Include="Content\site.css" />
+<<<<<<< HEAD
     <Content Include="PersonalAdmin\MiPerfilPA.aspx" />
     <Content Include="Alumno\NotasParcialesAlumno.aspx" />
     <Content Include="Profesor\CursosDictadosProfesor.aspx" />
@@ -144,6 +145,21 @@
     <Content Include="PersonalAdmin\GestionarSolicitudesDetallePA.aspx" />
     <Content Include="PersonalAdmin\GestionarSolicitudesPA.aspx" />
     <Content Include="Admin\GestionarUsuariosAdmin.aspx" />
+=======
+    <Content Include="GestionarHorariosPA - Copia.aspx" />
+    <Content Include="GestionarCursosPlanPA.aspx" />
+    <Content Include="MiPerfilPA.aspx" />
+    <Content Include="MisPagos.aspx" />
+    <Content Include="NotasParcialesAlumno.aspx" />
+    <Content Include="CursosDictadosProfesor.aspx" />
+    <Content Include="GestionarPlanesPA.aspx" />
+    <Content Include="CursosPorProfesorPA.aspx" />
+    <Content Include="GestionarSolicitudesAdmin.aspx" />
+    <Content Include="GestionarSolicitudesDetalleAdmin.aspx" />
+    <Content Include="GestionarSolicitudesDetallePA.aspx" />
+    <Content Include="GestionarSolicitudesPA.aspx" />
+    <Content Include="GestionarUsuariosAdmin.aspx" />
+>>>>>>> main
     <Content Include="Images\CHICAMAT.jpg" />
     <Content Include="Images\CHICOMAT.png" />
     <Content Include="Images\Colegio.png" />
@@ -662,7 +678,12 @@
     <Content Include="Scripts\MostrarContraseña.js" />
     <Content Include="Alumno\VerCompetenciasAlumno.aspx" />
     <Content Include="VerCompetenciasGenerica.aspx" />
+<<<<<<< HEAD
     <Content Include="Alumno\VerInfoProfesor.aspx" />
+=======
+    <Content Include="VerInfoProfesor.aspx" />
+    <Content Include="VisualizarPago.aspx" />
+>>>>>>> main
     <Content Include="Web.config" />
     <Content Include="SoftPixelPenguins.Master" />
   </ItemGroup>
@@ -672,14 +693,43 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="PersonalAdmin\MiPerfilPA.aspx.cs">
+=======
+    <Compile Include="GestionarHorariosPA - Copia.aspx.cs">
+      <DependentUpon>GestionarHorariosPA - Copia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionarHorariosPA - Copia.aspx.designer.cs">
+      <DependentUpon>GestionarHorariosPA - Copia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GestionarCursosPlanPA.aspx.cs">
+      <DependentUpon>GestionarCursosPlanPA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionarCursosPlanPA.aspx.designer.cs">
+      <DependentUpon>GestionarCursosPlanPA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MiPerfilPA.aspx.cs">
+>>>>>>> main
       <DependentUpon>MiPerfilPA.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="PersonalAdmin\MiPerfilPA.aspx.designer.cs">
       <DependentUpon>MiPerfilPA.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Alumno\NotasParcialesAlumno.aspx.cs">
+=======
+    <Compile Include="MisPagos.aspx.cs">
+      <DependentUpon>MisPagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MisPagos.aspx.designer.cs">
+      <DependentUpon>MisPagos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NotasParcialesAlumno.aspx.cs">
+>>>>>>> main
       <DependentUpon>NotasParcialesAlumno.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -693,12 +743,21 @@
     <Compile Include="Profesor\CursosDictadosProfesor.aspx.designer.cs">
       <DependentUpon>CursosDictadosProfesor.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="PersonalAdmin\GestionarHorariosPA.aspx.cs">
       <DependentUpon>GestionarHorariosPA.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="PersonalAdmin\GestionarHorariosPA.aspx.designer.cs">
       <DependentUpon>GestionarHorariosPA.aspx</DependentUpon>
+=======
+    <Compile Include="GestionarPlanesPA.aspx.cs">
+      <DependentUpon>GestionarPlanesPA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GestionarPlanesPA.aspx.designer.cs">
+      <DependentUpon>GestionarPlanesPA.aspx</DependentUpon>
+>>>>>>> main
     </Compile>
     <Compile Include="PersonalAdmin\CursosPorProfesorPA.aspx.cs">
       <DependentUpon>CursosPorProfesorPA.aspx</DependentUpon>
@@ -945,6 +1004,13 @@
     </Compile>
     <Compile Include="Alumno\VerInfoProfesor.aspx.designer.cs">
       <DependentUpon>VerInfoProfesor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VisualizarPago.aspx.cs">
+      <DependentUpon>VisualizarPago.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VisualizarPago.aspx.designer.cs">
+      <DependentUpon>VisualizarPago.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

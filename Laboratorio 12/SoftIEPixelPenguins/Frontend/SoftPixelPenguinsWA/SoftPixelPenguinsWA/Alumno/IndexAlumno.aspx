@@ -26,11 +26,11 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <h2 style="text-align: left; color: #000f;">Alumno - Inicio</h2>
-    <link rel="stylesheet" href="Content/Estilos-Alumno.css" />
+    <link rel="stylesheet" href="../Content/Estilos-Alumno.css" />
     <div class="container-al">
         <div class="schedule">
             <h3>Horario Académico</h3>
-            <img src="Images/HORARIO1.png" alt="Horario Académico" class="centered-image"/>
+            <img src="../Images/HORARIO1.png" alt="Horario Académico" class="centered-image"/>
         </div>
         <div class="notifications">
             <h3>Notificaciones</h3>

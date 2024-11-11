@@ -5,18 +5,24 @@
 <html lang="es">
 <head runat="server">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    
-    <link rel="icon" type="image/png" href="Images/PIXEL2.png" />
-    <link href="Content/bootstrap.css" rel="stylesheet" />
-    <link href="Content/site.css" rel="stylesheet" />
-    <link href="Content/Fonts/css/all.css" rel="stylesheet" />
-    <link href="Content/Estilos.css" rel="stylesheet" />
-    <link href="Content/Estilos-Alumno.css" rel="stylesheet" />
-    <script src="Scripts/bootstrap.js"></script>
-    <script src="Scripts/bootstrap.bundle.js"></script>
-    <script src="Scripts/jquery-3.7.1.js"></script>
-    <script src="Scripts/BarraProgreso.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link rel="icon" type="image/png" href="<%= ResolveUrl("~/Images/PIXEL2.png") %>" />
+
+    <!-- Hojas de estilo -->
+    <link href="<%= ResolveUrl("~/Content/bootstrap.css") %>" rel="stylesheet" />
+    <link href="<%= ResolveUrl("~/Content/site.css") %>" rel="stylesheet" />
+    <link href="<%= ResolveUrl("~/Content/Fonts/css/all.css") %>" rel="stylesheet" />
+    <link href="<%= ResolveUrl("~/Content/Estilos.css") %>" rel="stylesheet" />
+    <link href="<%= ResolveUrl("~/Content/Estilos-Alumno.css") %>" rel="stylesheet" />
+
+    <!-- Scripts -->
+    <script src="<%= ResolveUrl("~/Scripts/bootstrap.js") %>"></script>
+    <script src="<%= ResolveUrl("~/Scripts/bootstrap.bundle.js") %>"></script>
+    <script src="<%= ResolveUrl("~/Scripts/jquery-3.7.1.js") %>"></script>
+    <script src="<%= ResolveUrl("~/Scripts/BarraProgreso.js") %>"></script>
+
+
 
     <title>
         <asp:ContentPlaceHolder ID="cphTitulo" runat="server">
@@ -28,13 +34,14 @@
     </asp:ContentPlaceHolder>
     <div class="container-fluid d-flex p-0 h-100">
         <!--Menu Lateral-->
-        <div id="bdSidebar" class="d-flex flex-column flex-shrink-0 p-3 bg-primary text-white offcanvas-md offcanvas-start" >
-            <a href="#" class="logo">
-                <img src="Images/PIXEL.png" class: "logo"/>
+        <div id="bdSidebar" class="d-flex flex-column flex-shrink-0 p-3 bg-primary text-white offcanvas-md offcanvas-start">
+            <a href="#" class="logoM">
+                <img src="<%= ResolveUrl("~/Images/PIXEL.png") %>" class="logo" />
             </a>
+
             <hr>
-            
-            <ul class="mynav nav nav-pills flex-column mb-auto" >
+
+            <ul class="mynav nav nav-pills flex-column mb-auto">
                 <li class="nav-item mb-1">
                     <asp:ContentPlaceHolder ID="menuItem1" runat="server">
                         <a href="#"><i class="fa-solid fa-home"></i>Item 1</a>
@@ -93,7 +100,7 @@
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="btnUsuario">
                                 <!-- Solo cierre de sesión -->
-                                <li><a class="dropdown-item" href="Login.aspx">Cerrar Sesión</a></li>
+                                <li><a class="dropdown-item" href="../Login.aspx">Cerrar Sesión</a></li>
                             </ul>
                         </div>
                     </form>
@@ -108,8 +115,6 @@
             </div>
         </div>
     </div>
-
-
 
 </body>
 </html>

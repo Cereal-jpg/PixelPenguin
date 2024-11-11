@@ -6,6 +6,8 @@
   <xs:element name="eliminarPagoResponse" type="tns:eliminarPagoResponse" />
   <xs:element name="insertarPago" type="tns:insertarPago" />
   <xs:element name="insertarPagoResponse" type="tns:insertarPagoResponse" />
+  <xs:element name="listarPagosPoridGrado" type="tns:listarPagosPoridGrado" />
+  <xs:element name="listarPagosPoridGradoResponse" type="tns:listarPagosPoridGradoResponse" />
   <xs:element name="listarPagosXIdMatricula" type="tns:listarPagosXIdMatricula" />
   <xs:element name="listarPagosXIdMatriculaResponse" type="tns:listarPagosXIdMatriculaResponse" />
   <xs:element name="listarTodosPagos" type="tns:listarTodosPagos" />
@@ -104,6 +106,16 @@
       <xs:element minOccurs="0" name="return" type="tns:pago" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="listarPagosPoridGrado">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPagosPoridGradoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:pago" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="PagoXIdMatricula">
     <xs:sequence>
       <xs:element name="fid_Matricula" type="xs:int" />
@@ -137,7 +149,6 @@
       <xs:enumeration value="PENDIENTE" />
       <xs:enumeration value="CANCELADO" />
       <xs:enumeration value="ATRASADO" />
-      <xs:enumeration value="PAGO_PARCIAL" />
       <xs:enumeration value="RECHAZADO" />
     </xs:restriction>
   </xs:simpleType>

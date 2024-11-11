@@ -30,7 +30,7 @@ namespace SoftPixelPenguinsWA
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbNotas;
+        protected global::System.Web.UI.WebControls.RadioButton rbNotas;
 
         /// <summary>
         /// Control rbMatriculas.
@@ -39,7 +39,7 @@ namespace SoftPixelPenguinsWA
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbMatriculas;
+        protected global::System.Web.UI.WebControls.RadioButton rbMatriculas;
 
         /// <summary>
         /// Control rbPensiones.
@@ -48,7 +48,7 @@ namespace SoftPixelPenguinsWA
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbPensiones;
+        protected global::System.Web.UI.WebControls.RadioButton rbPensiones;
 
         /// <summary>
         /// Control btnEmitirReporte.

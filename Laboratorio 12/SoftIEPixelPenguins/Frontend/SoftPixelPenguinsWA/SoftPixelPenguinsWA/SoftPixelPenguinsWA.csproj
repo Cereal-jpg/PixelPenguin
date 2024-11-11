@@ -48,6 +48,9 @@
       <HintPath>..\packages\iTextSharp.5.5.13.4\lib\net461\itextsharp.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
@@ -122,6 +125,8 @@
     <Content Include="Content\Fonts\css\v5-font-face.css" />
     <Content Include="Content\Fonts\css\v5-font-face.min.css" />
     <Content Include="Content\Fonts\EstiloCurso.css" />
+    <Content Include="Content\Fonts\StyleSheet1.css" />
+    <Content Include="Content\grafico_style.css" />
     <Content Include="Content\site.css" />
     <Content Include="CursosDictadosProfesor.aspx" />
     <Content Include="GestionarSolicitudesAdmin.aspx" />
@@ -164,6 +169,8 @@
     <Content Include="ReporteGrado.aspx" />
     <Content Include="ReporteGradoPA.aspx" />
     <Content Include="ReporteNotasAlumno.aspx" />
+    <Content Include="ReportePagosRA.aspx" />
+    <Content Include="ReportePagosXGrado.aspx" />
     <Content Include="ReportesAdmin.aspx" />
     <Content Include="ReportesPA.aspx" />
     <Content Include="Scripts\BarraProgreso.js" />
@@ -622,11 +629,16 @@
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarPagosXIdMatriculaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarPagosPoridGradoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\ServicioWeb\UsuarioWS.wsdl" />
     <None Include="Connected Services\ServicioWeb\UsuarioWS.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
+    <Content Include="Scripts\chart1.js" />
+    <Content Include="Scripts\chart2.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
     <Content Include="Scripts\jquery-3.7.1.min.js" />
     <Content Include="Scripts\jquery-3.7.1.slim.js" />
@@ -833,6 +845,20 @@
     </Compile>
     <Compile Include="ReporteNotasAlumno.aspx.designer.cs">
       <DependentUpon>ReporteNotasAlumno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportePagosRA.aspx.cs">
+      <DependentUpon>ReportePagosRA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportePagosRA.aspx.designer.cs">
+      <DependentUpon>ReportePagosRA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportePagosXGrado.aspx.cs">
+      <DependentUpon>ReportePagosXGrado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportePagosXGrado.aspx.designer.cs">
+      <DependentUpon>ReportePagosXGrado.aspx</DependentUpon>
     </Compile>
     <Compile Include="ReportesAdmin.aspx.cs">
       <DependentUpon>ReportesAdmin.aspx</DependentUpon>

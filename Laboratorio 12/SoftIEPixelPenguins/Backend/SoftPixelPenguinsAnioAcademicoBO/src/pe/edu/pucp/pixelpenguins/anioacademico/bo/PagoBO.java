@@ -39,4 +39,7 @@ public class PagoBO {
     public ArrayList<Pago> listarTodosPorIdMatricula(int idMatricula){
         return this.pagoDAO.listarTodosXIdMatricula(idMatricula);
     }
+    public ArrayList<Pago> listarTodosPorGrado(int idGrado){
+        return this.pagoDAO.listarTodosPorGrado(idGrado);
+    }
 }

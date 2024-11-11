@@ -362,3 +362,5 @@ C:\Users\User\Documents\GitHub\PixelPenguin\Laboratorio 12\SoftIEPixelPenguins\F
 C:\Users\User\Documents\GitHub\PixelPenguin\Laboratorio 12\SoftIEPixelPenguins\Frontend\SoftPixelPenguinsWA\SoftPixelPenguinsWA\bin\itextsharp.xml
 C:\Users\User\Documents\GitHub\PixelPenguin\Laboratorio 12\SoftIEPixelPenguins\Frontend\SoftPixelPenguinsWA\SoftPixelPenguinsWA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\User\Documents\GitHub\PixelPenguin\Laboratorio 12\SoftIEPixelPenguins\Frontend\SoftPixelPenguinsWA\SoftPixelPenguinsWA\obj\Debug\SoftPixe.9F367AAF.Up2Date
+D:\TAProgra\Laboratorio 12\SoftIEPixelPenguins\Frontend\SoftPixelPenguinsWA\SoftPixelPenguinsWA\bin\Newtonsoft.Json.dll
+D:\TAProgra\Laboratorio 12\SoftIEPixelPenguins\Frontend\SoftPixelPenguinsWA\SoftPixelPenguinsWA\bin\Newtonsoft.Json.xml

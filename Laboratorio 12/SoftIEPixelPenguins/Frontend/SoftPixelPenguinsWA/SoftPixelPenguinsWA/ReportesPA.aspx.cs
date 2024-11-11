@@ -32,6 +32,10 @@ namespace SoftPixelPenguinsWA
             {
                 Response.Redirect("ReporteGradoPA.aspx");
             }
+            else if (rbPensiones.Checked)
+            {
+                Response.Redirect("ReportePagosXGrado.aspx");
+            }
         }
     }
 }

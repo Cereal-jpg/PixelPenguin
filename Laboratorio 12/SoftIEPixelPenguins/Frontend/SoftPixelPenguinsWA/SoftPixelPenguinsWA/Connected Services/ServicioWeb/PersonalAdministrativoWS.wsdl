@@ -17,12 +17,6 @@
   <message name="insertarPersonalAdministrativoResponse">
     <part name="parameters" element="tns:insertarPersonalAdministrativoResponse" />
   </message>
-  <message name="modificarPersonalAdministrativo">
-    <part name="parameters" element="tns:modificarPersonalAdministrativo" />
-  </message>
-  <message name="modificarPersonalAdministrativoResponse">
-    <part name="parameters" element="tns:modificarPersonalAdministrativoResponse" />
-  </message>
   <message name="eliminarPersonalAdministrativo">
     <part name="parameters" element="tns:eliminarPersonalAdministrativo" />
   </message>
@@ -41,6 +35,12 @@
   <message name="obtenerPersonalAdministrativoPorIdResponse">
     <part name="parameters" element="tns:obtenerPersonalAdministrativoPorIdResponse" />
   </message>
+  <message name="modificarPersonalAdministrativo">
+    <part name="parameters" element="tns:modificarPersonalAdministrativo" />
+  </message>
+  <message name="modificarPersonalAdministrativoResponse">
+    <part name="parameters" element="tns:modificarPersonalAdministrativoResponse" />
+  </message>
   <portType name="PersonalAdministrativoWS">
     <operation name="existePersonalAdministrativo">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/existePersonalAdministrativoRequest" message="tns:existePersonalAdministrativo" />
@@ -49,10 +49,6 @@
     <operation name="insertarPersonalAdministrativo">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/insertarPersonalAdministrativoRequest" message="tns:insertarPersonalAdministrativo" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/insertarPersonalAdministrativoResponse" message="tns:insertarPersonalAdministrativoResponse" />
-    </operation>
-    <operation name="modificarPersonalAdministrativo">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/modificarPersonalAdministrativoRequest" message="tns:modificarPersonalAdministrativo" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/modificarPersonalAdministrativoResponse" message="tns:modificarPersonalAdministrativoResponse" />
     </operation>
     <operation name="eliminarPersonalAdministrativo">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/eliminarPersonalAdministrativoRequest" message="tns:eliminarPersonalAdministrativo" />
@@ -65,6 +61,10 @@
     <operation name="obtenerPersonalAdministrativoPorId">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/obtenerPersonalAdministrativoPorIdRequest" message="tns:obtenerPersonalAdministrativoPorId" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/obtenerPersonalAdministrativoPorIdResponse" message="tns:obtenerPersonalAdministrativoPorIdResponse" />
+    </operation>
+    <operation name="modificarPersonalAdministrativo">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/modificarPersonalAdministrativoRequest" message="tns:modificarPersonalAdministrativo" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PersonalAdministrativoWS/modificarPersonalAdministrativoResponse" message="tns:modificarPersonalAdministrativoResponse" />
     </operation>
   </portType>
   <binding name="PersonalAdministrativoWSPortBinding" type="tns:PersonalAdministrativoWS">
@@ -87,15 +87,6 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarPersonalAdministrativo">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="eliminarPersonalAdministrativo">
       <soap:operation soapAction="" />
       <input>
@@ -115,6 +106,15 @@
       </output>
     </operation>
     <operation name="obtenerPersonalAdministrativoPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarPersonalAdministrativo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

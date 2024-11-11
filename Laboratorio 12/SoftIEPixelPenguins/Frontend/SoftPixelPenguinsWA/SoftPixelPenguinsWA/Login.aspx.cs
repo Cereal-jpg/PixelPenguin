@@ -28,7 +28,7 @@ namespace SoftPixelPenguinsWA
             if (id != 0)
             {
                 usuario=usuarioBO.obtenerUsuarioPorId(id);
-                char tipo = Email[0];
+
                 switch (usuario.rol.idRol)
                 {
                     case 1:

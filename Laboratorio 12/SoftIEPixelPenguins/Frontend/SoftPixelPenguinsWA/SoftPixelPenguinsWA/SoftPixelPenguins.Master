@@ -100,8 +100,18 @@
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="btnUsuario">
                                 <!-- Solo cierre de sesión -->
-                                <li><a class="dropdown-item" href="../Login.aspx">Cerrar Sesión</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="confirmLogout()">Cerrar Sesión</a></li>
                             </ul>
+
+                            <script>
+                                function confirmLogout() {
+                                    if (confirm('¿Estás seguro de que deseas cerrar sesión?')) {
+                                        window.location.href = '../Logout.aspx';
+                                    }
+                                }
+                            </script>
+
+
                         </div>
                     </form>
                 </div>

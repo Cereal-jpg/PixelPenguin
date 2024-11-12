@@ -18,12 +18,30 @@
     </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
-    <h2 style="text-align: left; color: #000f;">Profesor - Inicio Profesor</h2>
+
+    <style>
+    .my-label {
+        margin-bottom: 20px; /* Ajusta este valor para el espacio que necesites */
+    }
+</style>
+
+    <h2 style="text-align: left; color: #000f;">Profesor - Cursos Dictados</h2>
     <link rel="stylesheet" href="../Content/Estilos-Alumno.css" />
     <div class="container-al">
         <div class="schedule">
-            <h3>Horario del Profesor</h3>
-            <img src="../Images/Horario.jpg" alt="Horario Académico" />
+
+            <asp:Label ID="myLabel" runat="server" Text="" Font-Size="Large" Font-Bold="True" CssClass="my-label"></asp:Label>
+            <br><br>
+            <asp:GridView ID="gvCursosDictados" runat="server" AllowPaging="true" PageSize="12" AutoGenerateColumns="false" CssClass="table table-hover table-responsive table-striped" ShowHeaderWhenEmpty="true">
+                <Columns>
+                    <asp:BoundField HeaderText="Codigo" DataField="codigoCurso"/>
+                    <asp:BoundField HeaderText="Nombre" DataField="nombre"/>
+                    <asp:BoundField HeaderText="Horas Semanales" DataField="horasPorSemana"/>
+                    <asp:BoundField HeaderText="Grado Académico" DataField="grado"/>
+                </columns>
+            </asp:GridView>
+
+
         </div>
     </div>
 </asp:Content>

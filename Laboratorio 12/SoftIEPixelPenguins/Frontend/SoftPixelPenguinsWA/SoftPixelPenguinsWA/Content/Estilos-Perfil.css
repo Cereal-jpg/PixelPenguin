@@ -50,11 +50,6 @@
     border-radius: 8px;
 }
 
-h2, h3 {
-    text-align: left;
-    color: #333;
-    margin-top: 10px;
-}
 
 /* Progress Bar */
 .progress-bar {

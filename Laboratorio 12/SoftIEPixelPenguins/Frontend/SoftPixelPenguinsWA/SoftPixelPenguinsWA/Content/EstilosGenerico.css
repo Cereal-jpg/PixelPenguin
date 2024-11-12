@@ -1,0 +1,76 @@
+﻿
+/* Estilo para los encabezados */
+h3 {
+    margin-bottom: 15px; /* Espacio entre el encabezado y los elementos debajo */
+    font-size: 18px; /* Tamaño de fuente ajustado */
+    color: #333;
+}
+
+/* Sección del formulario */
+.form-section {
+    background-color: #cfe2f3;
+    padding: 20px; /* Espacio interno uniforme */
+    border-radius: 8px; /* Bordes redondeados */
+    margin-bottom: 20px; /* Separación entre contenedores */
+}
+
+/* Agrupación de filas dentro del formulario */
+.form-group {
+    display: flex;
+    width: 100%;
+    gap: 15px; /* Más espacio entre las filas */
+    margin-bottom: 20px; /* Espaciado adicional entre grupos */
+}
+
+/* Filas individuales */
+.form-row {
+    margin-top: 10px;
+    flex: 1; /* Se expanden proporcionalmente */
+    min-width: 160px; /* Tamaño mínimo para una buena distribución */
+}
+
+/* Contenedor general */
+.container-al {
+    display: flex;
+    flex-direction: column; /* Estructura vertical */
+    gap: 20px; /* Separación entre elementos */
+    width: 100%; /* Ancho completo */
+    margin-top: 30px; /* Espacio superior */
+    background-color: transparent;
+}
+
+/* Botón personalizado */
+.button-container {
+    text-align: center; /* Centra el botón */
+    margin-top: 20px; /* Espacio superior */
+}
+
+.button-style {
+    background-color: #007bff; /* Color de fondo */
+    color: white; /* Color de texto */
+    border: none;
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Manito al pasar */
+}
+
+    .button-style:hover {
+        background-color: #0056b3; /* Color más oscuro al pasar el mouse */
+    }
+
+
+.input-icon {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 40px;
+}

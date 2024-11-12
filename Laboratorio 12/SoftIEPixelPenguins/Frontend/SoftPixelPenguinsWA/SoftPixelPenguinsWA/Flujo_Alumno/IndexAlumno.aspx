@@ -25,7 +25,7 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
-    <h2 style="text-align: left; color: #000f;">Alumno - Inicio</h2>
+    <h2 style="text-align: left; color: #000f;">Inicio</h2>
     <link rel="stylesheet" href="../Content/Estilos-Alumno.css" />
     <div class="container-al">
         <div class="schedule">

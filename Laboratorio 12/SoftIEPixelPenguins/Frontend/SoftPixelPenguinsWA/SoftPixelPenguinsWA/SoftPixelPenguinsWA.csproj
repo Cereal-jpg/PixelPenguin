@@ -107,6 +107,7 @@
     <Content Include="Content\Estilos-VerCompetenciasG.css" />
     <Content Include="Content\Estilos-VisualizarPagoAlumno.css" />
     <Content Include="Content\Estilos.css" />
+    <Content Include="Content\EstilosGenerico.css" />
     <Content Include="Content\EstilosMatriculaG.css" />
     <Content Include="Content\Fonts\css\all.css" />
     <Content Include="Content\Fonts\css\all.min.css" />
@@ -171,6 +172,7 @@
     <Content Include="Flujo_PersonalAdmin\IndexPersonalAdministrativo.aspx" />
     <Content Include="Flujo_Profesor\IndexProfesor.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="Logout.aspx" />
     <Content Include="MatriculaGenerica.aspx" />
     <Content Include="Flujo_Alumno\MatriculaOnlineAlumno.aspx" />
     <Content Include="Matricularse.aspx" />
@@ -819,6 +821,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="MatriculaGenerica.aspx.cs">
       <DependentUpon>MatriculaGenerica.aspx</DependentUpon>

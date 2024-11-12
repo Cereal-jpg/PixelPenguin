@@ -11,6 +11,7 @@
 }
 
 .schedule {
+    gap: 10px;
     flex: 3; /* Ocupa 3 partes del contenedor */
     padding: 20px; /* Espacio interno */
     background-color: #fff; /* Color de fondo */
@@ -191,4 +192,24 @@ h3 {
 .responsive-image {
     width: 50%; /* Ajusta este valor según el tamaño deseado */
     height: auto;
+}
+
+.form-section {
+    background-color: #cfe2f3;
+    padding: 15px;
+    padding-top: 5px;
+    border-radius: 8px;
+}
+
+.form-group {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.form-row {
+    margin-top: 5px;
+    flex: 1;
+    min-width: 160px;
 }

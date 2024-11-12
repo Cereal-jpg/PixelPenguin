@@ -38,7 +38,7 @@
         </script>
 
     <h2 style="text-align: left; color: #000f;">Profesor - Mi Perfil</h2>
-        <link rel="stylesheet" href="Content/Estilos-Alumno.css" />
+    <link rel="stylesheet" href="Content/Estilos-Perfil.css" />
 
         <div class="schedule">
             <div id="section1" class="section" runat="server" style="display: block;">

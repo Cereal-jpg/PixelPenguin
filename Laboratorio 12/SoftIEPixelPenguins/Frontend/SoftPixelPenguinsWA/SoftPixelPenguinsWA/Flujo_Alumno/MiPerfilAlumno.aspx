@@ -26,6 +26,7 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
+
     <link href="../Content/Estilos-Perfil.css" rel="stylesheet" />
     <script src="/Scripts/MostrarContraseña.js"></script>
     <script>
@@ -44,8 +45,7 @@
     </script>
 
 
-    <h2 style="text-align: left; color: #000f;">Alumno - Mi Perfil</h2>
-    <link rel="stylesheet" href="Content/Estilos-Alumno.css" />
+    <h2 style="text-align: left; color: #000f;">Mi Perfil</h2>
 
     <div class="schedule">
         <div id="section1" class="section" runat="server" style="display: block;">

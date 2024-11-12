@@ -22,7 +22,7 @@ namespace SoftPixelPenguinsWA
                 if (Session["idAlumnoLogueado"] != null)
                 {
                     // Verifica si la página actual es el index
-                    if (Request.Url.AbsolutePath.EndsWith("MiPerfilAlumno.aspx", StringComparison.OrdinalIgnoreCase))
+                    if (Request.Url.AbsolutePath.EndsWith("VisualizarPagosAlumno.aspx", StringComparison.OrdinalIgnoreCase))
                     {
                         // Oculta el menú deseado
                         ContentPlaceHolder menuItem7 = (ContentPlaceHolder)Master.FindControl("menuItem7");
@@ -43,8 +43,19 @@ namespace SoftPixelPenguinsWA
                 txtTipoComprobante.Text = pago.tipoDeComprobante.ToString();
                 txtEstadoPago.Text = pago.estado.ToString();
                 txtTipodePago.Text = pago.tipoPago.ToString();
+                deshabilitarComponentes();
             }
         }
+
+        private void deshabilitarComponentes()
+        {
+            txtEstadoPago.Enabled = false;
+            txtFechaCreacion.Enabled = false;
+            txtFechaPago.Enabled = false;
+            txtTipoComprobante.Enabled = false;
+            txtTipodePago.Enabled = false;
+        }
+
         protected void lnkDescargarComprobante_Click(object sender, EventArgs e)
         {
             if (pago != null)
@@ -63,7 +74,7 @@ namespace SoftPixelPenguinsWA
         }
         protected void btnRegresar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("MisPagos.aspx");
+            Response.Redirect("MisPagosAlumno.aspx");
         }
 
     }

@@ -1,6 +1,9 @@
-﻿using System;
+﻿using SoftPixelPenguinsWA.ServicioWeb;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.ServiceModel.Channels;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -9,6 +12,14 @@ namespace SoftPixelPenguinsWA
 {
     public partial class CursosDictadosProfesor : System.Web.UI.Page
     {
+        private ProfesorWSClient profesorBO = new ProfesorWSClient();
+        profesor profesor = null;
+        List<curso> cursos = null;
+        curso curso = null;
+        CursoWSClient cursoBO = new CursoWSClient();
+        GradoAcademicoWSClient gradoBO = new GradoAcademicoWSClient();
+        anioAcademico anio = null;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -28,6 +39,34 @@ namespace SoftPixelPenguinsWA
                     }
                 }
             }
+            // Cargar el encabezado del grado académico
+            if (Session["idProfesorLogueado"] != null)
+            {
+
+                String txt = "Año Académico ";
+
+                String result = txt + DateTime.Now.Year.ToString(); 
+                myLabel.Text = result;
+
+                int idUsuario = (int)Session["idProfesorLogueado"];
+                profesor = profesorBO.obtenerProfesorPorId(idUsuario);
+
+                if (profesor != null)
+                {
+                    cursos = (cursoBO.listarCursosPorProfesor(idUsuario) ?? Array.Empty<curso>()).ToList();
+                    if (cursos.Count > 0)
+                    {
+                        //foreach (curso curso in cursos) curso.gradoAcademico = gradoBO.obtenerGradoAcademicoPorId(curso.gradoAcademico.idGradoAcademico);
+                        gvCursosDictados.DataSource = cursos;
+                        gvCursosDictados.DataBind();
+                    }
+                }
+            }
+            else
+            {
+                myLabel.Text = "Sesión de usuario no iniciada.";
+            }
         }
+
     }
 }

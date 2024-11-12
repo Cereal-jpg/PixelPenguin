@@ -8,11 +8,14 @@ import pe.edu.pucp.pixelpenguins.anioacademico.bo.AnioAcademicoBO;
 import pe.edu.pucp.pixelpenguins.anioacademico.bo.MatriculaBO;
 import pe.edu.pucp.pixelpenguins.anioacademico.bo.PagoBO;
 import pe.edu.pucp.pixelpenguins.anioacademico.model.AnioAcademico;
+import pe.edu.pucp.pixelpenguins.anioacademico.model.Matricula;
 import pe.edu.pucp.pixelpenguins.anioacademico.model.Pago;
 import pe.edu.pucp.pixelpenguins.config.DBManager;
+import pe.edu.pucp.pixelpenguins.curricula.bo.CompetenciaBO;
 import pe.edu.pucp.pixelpenguins.curricula.bo.CursoBO;
 import pe.edu.pucp.pixelpenguins.curricula.bo.GradoAcademicoBO;
 import pe.edu.pucp.pixelpenguins.curricula.bo.NotaBO;
+import pe.edu.pucp.pixelpenguins.curricula.model.Competencia;
 import pe.edu.pucp.pixelpenguins.curricula.model.Curso;
 import pe.edu.pucp.pixelpenguins.curricula.model.GradoAcademico;
 import pe.edu.pucp.pixelpenguins.curricula.model.NivelEducativo;
@@ -55,21 +58,43 @@ public class Principal {
 //        for(GradoAcademico aux:grados)
 //            System.out.println(aux.getNumeroGrado());
         
-//        NotaBO notaBO=new NotaBO();
+
 //        ArrayList<Nota> notas=notaBO.listarPorAlumnoYCurso(31, 1);
 //        for(Nota aux: notas)
 //            System.out.println(aux.getNota());
-        
-        PagoBO pagoBO=new PagoBO();
-        Pago auxPago=pagoBO.PagoXAlumnos(1);
-        System.out.println(auxPago.getEstado());
-        
-        ArrayList<Pago> pagos = pagoBO.listarTodosPorIdMatricula(1);
-        System.out.println(pagos.get(0).getFechaPago());
-        
-        ArrayList<Pago>datos =pagoBO.listarTodosPorGrado(1);
-        
-        System.out.println(datos.get(0).getEstado());
+        CursoBO cursoBO=new CursoBO();
+        CompetenciaBO competenciaBO=new CompetenciaBO();
+        NotaBO notaBO=new NotaBO();
+        ArrayList<Curso> cursos=cursoBO.listarCursosPorGrado(3);
+        for(Curso aux:cursos){
+            ArrayList<Competencia> competencias=competenciaBO.listarCompetenciasPorCurso(aux.getIdCurso());
+            for(Competencia aux2:competencias){
+                for(int i=1;i<=4;i++){
+                    Nota nota =new Nota();
+                    nota.setFid_Matricula(12);
+                    nota.setFid_Alumno(51);
+                    nota.setNota("-");
+                    nota.setBimestre(i);
+                    nota.setCurso(aux);
+                    nota.setCompetencia(aux2);
+                    if(notaBO.insertar(nota)!=0)
+                        System.out.println("Nota insertada");
+                }
+            }
+        }
+//        MatriculaBO matriculaBO=new MatriculaBO();
+//        Matricula matricula=matriculaBO.obtenerPorId(12);
+
+//        PagoBO pagoBO=new PagoBO();
+//        Pago auxPago=pagoBO.PagoXAlumnos(1);
+//        System.out.println(auxPago.getEstado());
+//        
+//        ArrayList<Pago> pagos = pagoBO.listarTodosPorIdMatricula(1);
+//        System.out.println(pagos.get(0).getFechaPago());
+//        
+//        ArrayList<Pago>datos =pagoBO.listarTodosPorGrado(1);
+//        
+//        System.out.println(datos.get(0).getEstado());
 //        CursoBO cursoBO=new CursoBO();
 //        ArrayList<Curso> cursos=cursoBO.listarCursosPorProfesor(8);
 //        for(Curso aux:cursos)

@@ -37,9 +37,24 @@ namespace SoftPixelPenguinsWA
                 {
                     int idProfesor= Int32.Parse(id);
                     profesor = profesorBO.obtenerProfesorPorId(idProfesor);
-                    hTitulo.InnerHtml = profesor.nombreCompleto;   
+                    hTitulo.InnerHtml = profesor.nombreCompleto;
+                    txtCodigoProfesor.Text = profesor.codigoProfesor.ToString();
+                    txtEspecialidad.Text = profesor.especialidad.ToString();
+                    txtFecha.Text=profesor.fechaNacimiento.ToString("dd/MM/yyyy"); ;
+                    txtEmail.Text = profesor.email;
+                    txtSexo.Text = profesor.sexo.ToString();
+                    deshabilitarComponentes();
                 }
             }
+        }
+
+        private void deshabilitarComponentes()
+        {
+            txtCodigoProfesor.Enabled = false;
+            txtEspecialidad.Enabled = false;
+            txtFecha.Enabled = false;
+            txtEmail.Enabled = false;
+            txtSexo.Enabled = false;
         }
 
         protected void btnRegresar_Click(object sender, EventArgs e)

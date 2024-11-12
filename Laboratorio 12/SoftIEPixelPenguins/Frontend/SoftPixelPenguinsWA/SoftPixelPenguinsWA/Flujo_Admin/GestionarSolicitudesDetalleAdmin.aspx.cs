@@ -9,6 +9,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Configuration;
+using System.Collections;
 
 namespace SoftPixelPenguinsWA
 {
@@ -20,6 +21,9 @@ namespace SoftPixelPenguinsWA
         AnioAcademicoWSClient anioAcademicoBO = new AnioAcademicoWSClient();
         MatriculaWSClient matriculaBO = new MatriculaWSClient();
         ApoderadoWSClient apoderadoBO = new ApoderadoWSClient();
+        NotaWSClient notaBO = new NotaWSClient();
+        CursoWSClient cursoBO = new CursoWSClient();
+        CompetenciaWSClient competenciaBO = new CompetenciaWSClient();
         alumno alumno = null;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -215,12 +219,39 @@ namespace SoftPixelPenguinsWA
 
                     };
                     matriculaBO.insertarMatricula(matricula);
+                    insercionNotasNuevoAlumno(matricula);
                 }
                 Session["gradoSeleccionado"] = null;
             }
             else
             {
                 throw new Exception();
+            }
+        }
+        private void insercionNotasNuevoAlumno(matricula matricula)
+        {
+            BindingList<curso> cursos = new BindingList<curso>(cursoBO.listarCursosPorGrado(matricula.gradoAcademico.idGradoAcademico));
+            foreach (curso aux in cursos)
+            {
+                BindingList<competencia> competencias = new BindingList<competencia>(competenciaBO.listarCompetenciasPorCurso(aux.idCurso));
+                foreach (competencia auxComp in competencias)
+                {
+                    for (int i = 1; i <= 4; i++)
+                    {
+                        nota nota = new nota()
+                        {
+                            fid_Matricula = matricula.idMatricula,
+                            fid_Alumno = alumno.idUsuario,
+                            // los alumnos comienzan con nota default 
+                            nota1 = "-",
+                            bimestre = i,
+                            curso = aux,
+                            competencia = auxComp,
+                        };
+                        notaBO.insertarNota(nota);
+                    }
+                }
+
             }
         }
         private void enviarCorreo(string destinatario, string asunto, string cuerpo)

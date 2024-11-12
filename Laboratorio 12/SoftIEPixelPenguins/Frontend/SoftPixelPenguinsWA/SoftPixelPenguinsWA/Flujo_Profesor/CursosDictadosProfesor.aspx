@@ -37,7 +37,6 @@
                     <asp:BoundField HeaderText="Codigo" DataField="codigoCurso"/>
                     <asp:BoundField HeaderText="Nombre" DataField="nombre"/>
                     <asp:BoundField HeaderText="Horas Semanales" DataField="horasPorSemana"/>
-                    <asp:BoundField HeaderText="Grado Académico" DataField="grado"/>
                 </columns>
             </asp:GridView>
 

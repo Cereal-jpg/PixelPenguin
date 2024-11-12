@@ -54,7 +54,7 @@ namespace SoftPixelPenguinsWA
                 if (profesor != null)
                 {
                     cursos = (cursoBO.listarCursosPorProfesor(idUsuario) ?? Array.Empty<curso>()).ToList();
-                    if (cursos.Count > 0)
+                    if (cursos.Count > 0 && cursos != null)
                     {
                         //foreach (curso curso in cursos) curso.gradoAcademico = gradoBO.obtenerGradoAcademicoPorId(curso.gradoAcademico.idGradoAcademico);
                         gvCursosDictados.DataSource = cursos;

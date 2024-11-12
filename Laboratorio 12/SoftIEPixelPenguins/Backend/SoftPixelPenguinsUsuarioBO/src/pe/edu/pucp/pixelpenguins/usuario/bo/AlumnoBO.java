@@ -34,8 +34,12 @@ public class AlumnoBO {
         return this.alumnoDAO.obtenerPorId(idUsuario);
     }
     
-    public ArrayList<Alumno> listarAlumnosPorEstado(EstadoAlumno estado) {
-        return this.alumnoDAO.listarAlumnosPorEstado(estado);
+    public ArrayList<Alumno>listarAlumnosPorNombreYEstado(String nombre, EstadoAlumno estado) {
+        return this.alumnoDAO.listarAlumnosPorNombreYEstado(nombre,estado);
+    }
+    
+    public ArrayList<Alumno>listarAlumnosPorNombre(String nombre) {
+        return this.alumnoDAO.listarAlumnosPorNombre(nombre);
     }
 
     public Boolean existeAlumno(Integer idUsuario) {

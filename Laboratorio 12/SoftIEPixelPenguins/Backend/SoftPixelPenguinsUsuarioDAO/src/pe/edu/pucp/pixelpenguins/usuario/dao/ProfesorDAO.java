@@ -9,6 +9,7 @@ public interface ProfesorDAO {
     public Integer eliminar(Profesor profesor);
     public ArrayList<Profesor> listarTodos();
     public Profesor obtenerPorId (Integer idProfesor);
+    public ArrayList<Profesor>listarProfesoresPorNombre(String nombre);
     public Boolean existeProfesor(Profesor profesor);
     public Boolean existeProfesor(Profesor profesor, Boolean abreConexion);
 }

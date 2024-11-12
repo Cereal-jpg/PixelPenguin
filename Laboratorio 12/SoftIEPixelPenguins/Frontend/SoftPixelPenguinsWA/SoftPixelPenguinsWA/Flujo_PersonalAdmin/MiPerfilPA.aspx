@@ -52,7 +52,7 @@
             <div id="section1" class="section" runat="server" style="display: block;">
 
                 <div class="form-section">
-                    <h3>Datos del Profesor</h3>
+                    <h3>Datos del Personal Administrativo</h3>
                     <div class="form-group">
                         <div class="form-row">
                             <label>Nombres:</label>

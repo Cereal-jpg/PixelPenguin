@@ -55,7 +55,6 @@
         <div class="container mt-5">
             <div class="row">
                 <div class="col-12 d-flex justify-content-between align-items-center mb-4 pt-3">
-                    <!-- Barra de búsqueda con botón -->
                     <div class="input-group w-50">
                         <asp:TextBox ID="txtBuscarUsuario" runat="server" CssClass="form-control" placeholder="Buscar usuario..." aria-label="Buscar usuario"></asp:TextBox>
                         <asp:LinkButton ID="lbBuscar" runat="server" CssClass="btn btn-outline-primary" OnClick="lbBuscar_Click">
@@ -63,7 +62,6 @@
                      </asp:LinkButton>
                     </div>
 
-                    <!-- Botón para agregar un nuevo usuario -->
                     <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addUserModal">
                         <i class="fa-solid fa-user-plus"></i> Agregar Nuevo Usuario
                     </button>

@@ -10,7 +10,8 @@ public interface AlumnoDAO {
     public Integer eliminar(Alumno alumno);
     public ArrayList<Alumno> listarTodos();
     public Alumno obtenerPorId (Integer idAlumno);
-    public ArrayList<Alumno>listarAlumnosPorEstado(EstadoAlumno estado);
+    public ArrayList<Alumno>listarAlumnosPorNombreYEstado(String nombre, EstadoAlumno estado);
+    public ArrayList<Alumno> listarAlumnosPorNombre(String nombre);
     public Boolean existeAlumno(Alumno alumno);
     public Boolean existeAlumno(Alumno alumno, Boolean abreConexion);
 }

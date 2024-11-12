@@ -79,4 +79,15 @@ public class ProfesorWS {
         return resultado;
     }
     
+    @WebMethod(operationName = "listarProfesoresPorNombre")
+    public ArrayList<Profesor>listarProfesoresPorNombre(@WebParam(name = "nombre") String nombre) {
+        ArrayList<Profesor> profesores = null;
+        try {
+            profesores = profesorBO.listarProfesoresPorNombre(nombre);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return profesores;
+    }
+    
 }

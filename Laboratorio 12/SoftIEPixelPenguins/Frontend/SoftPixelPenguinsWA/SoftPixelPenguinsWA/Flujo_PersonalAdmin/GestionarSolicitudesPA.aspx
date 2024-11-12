@@ -27,16 +27,13 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
-    <div class="d-flex justify-content-between align-items-center mt-3 mx-3">
-        <h1>Gestionar Solicitudes</h1>
-    </div>
-    <hr class="mx-3" />
-    <div class="container mt-5">
+    <h2 style="color: black;">Gestionar Solicitudes</h2>
+    <div class="container-matricula" style="display: block;">
         <h2 style="color: black; padding-top:10px;">Listado de Alumnos</h2>
         <div class="row">
-            <div class="col-12 d-flex justify-content-between align-items-center mb-4 pt-3">
+            <div class="col-12 d-flex justify-content-between align-items-center mb-4">
                 <div class="input-group w-50">
-                    <asp:TextBox ID="txtBuscarUsuario" runat="server" CssClass="form-control" placeholder="Buscar alumno..." aria-label="Buscar Alumno"></asp:TextBox>
+                    <asp:TextBox ID="txtBuscarAlumno" runat="server" CssClass="form-control" placeholder="Buscar alumno..." aria-label="Buscar Alumno"></asp:TextBox>
                     <asp:LinkButton ID="lbBuscar" runat="server" CssClass="btn btn-outline-primary" OnClick="lbBuscar_Click">
                     <i class="fa-solid fa-search"></i> Buscar
                     </asp:LinkButton>
@@ -48,7 +45,7 @@
             </div>
         </div>
         <div class="row">
-            <asp:GridView ID="gvAlumnos" runat="server" AllowPaging="true" PageSize="10" AutoGenerateColumns="false" CssClass="table table-hover table-responsive table-striped" ShowHeaderWhenEmpty="true">
+            <asp:GridView ID="gvAlumnos" runat="server" AllowPaging="true" PageSize="10" AutoGenerateColumns="false" CssClass="table table-hover table-responsive table-striped" ShowHeaderWhenEmpty="true" OnPageIndexChanging="gvAlumnos_PageIndexChanging">
                 <Columns>
                     <asp:BoundField HeaderText="DNI" DataField="dni" />
                     <asp:BoundField HeaderText="Nombre" DataField="nombreCompleto" />

@@ -46,7 +46,8 @@ namespace SoftPixelPenguinsWA
                 txtSexo.Text = alumno.sexo;
                 txtEmail.Text = alumno.email;
                 txtDireccion.Text = alumno.direccion;
-                txtGradoAcademico.Text = alumno.gradoAcademico.nivel.ToString() + " " + alumno.gradoAcademico.numeroGrado.ToString();
+                alumno.gradoAcademico = gradoAcademicoBO.obtenerGradoAcademicoPorId(alumno.gradoAcademico.idGradoAcademico);
+                txtGradoAcademico.Text = alumno.gradoAcademico.numeroGrado.ToString() + "° " + alumno.gradoAcademico.nivel.ToString();
                 if (alumno.estado.Equals(estadoAlumno.Por_Pagar) || alumno.estado.Equals(estadoAlumno.Matriculado))
                 {
                     btnConfirmarSolicitud.Text = "Matricular Usuario";
@@ -70,11 +71,19 @@ namespace SoftPixelPenguinsWA
             txtEmail.Enabled = false;
             txtDireccion.Enabled = false;
             txtGradoAcademico.Enabled = false;
-            if (alumno.estado.Equals(estadoAlumno.Por_Pagar))
+            if (alumno.estado.Equals(estadoAlumno.Por_Pagar) || alumno.estado.Equals(estadoAlumno.Matriculado))
             {
                 txtUsuario.Enabled = false;
                 txtContraseña.Enabled = false;
                 txtCodigo.Enabled = false;
+                if (alumno.estado.Equals(estadoAlumno.Matriculado))
+                {
+                    txtCodigo.Enabled = false;
+                    txtUsuario.Enabled = false;
+                    txtContraseña.Enabled = false;
+                    btnConfirmarSolicitud.Visible = false;
+                    btnRechazarSolicitud.Visible = false;
+                }
             }
         }
 

@@ -69,11 +69,22 @@ public class AlumnoWS {
         return alumno;
     }
     
-    @WebMethod(operationName = "listarAlumnosPorEstado")
-    public ArrayList<Alumno> listarAlumnosPorEstado(@WebParam(name = "estado") EstadoAlumno estado) {
+    @WebMethod(operationName = "listarAlumnosPorNombreYEstado")
+    public ArrayList<Alumno> listarAlumnosPorNombreYEstado(@WebParam(name = "nombre") String nombre,@WebParam(name = "estado") EstadoAlumno estado) {
         ArrayList<Alumno> alumnos = null;
         try {
-            alumnos = alumnoBO.listarAlumnosPorEstado(estado);
+            alumnos = alumnoBO.listarAlumnosPorNombreYEstado(nombre,estado);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return alumnos;
+    }
+    
+    @WebMethod(operationName = "listarAlumnosPorNombre")
+    public ArrayList<Alumno> listarAlumnosPorNombre(@WebParam(name = "nombre") String nombre) {
+        ArrayList<Alumno> alumnos = null;
+        try {
+            alumnos = alumnoBO.listarAlumnosPorNombre(nombre);
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }

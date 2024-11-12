@@ -291,20 +291,35 @@ public class AlumnoDAOImpl extends DAOImpl implements AlumnoDAO {
     
     @Override
     protected String obtenerPredicadoParaListado() {
-        return " WHERE estado=?";
+        String sql = " WHERE nombreCompleto LIKE CONCAT('%',?,'%')";
+        if(alumno.getEstado()!=null) sql+= " AND estado=?";
+        return sql;
     }
     
     @Override
     protected void incluirValorDeParametrosParaListado() throws SQLException {
-        this.incluirParametroString(1, alumno.getEstado().toString());
+        this.incluirParametroString(1, alumno.getNombreCompleto());
+        if(alumno.getEstado()!=null)this.incluirParametroString(2, alumno.getEstado().toString());
     }
     
     @Override
-    public ArrayList<Alumno>listarAlumnosPorEstado(EstadoAlumno estado){
+    public ArrayList<Alumno>listarAlumnosPorNombreYEstado(String nombre, EstadoAlumno estado){
         this.usarPredicadoParaListado = true;
         this.alumno = new Alumno();
         this.alumno.setEstado(estado);
+        this.alumno.setNombreCompleto(nombre);
         ArrayList<Alumno>alumnos = (ArrayList<Alumno>)super.listarTodos(null);
+        this.usarPredicadoParaListado = false;
+        return alumnos;
+    }
+    
+    @Override
+    public ArrayList<Alumno> listarAlumnosPorNombre(String nombre) {
+        this.usarPredicadoParaListado = true;
+        this.alumno = new Alumno();
+        this.alumno.setNombreCompleto(nombre);
+        this.alumno.setEstado(null); // No se aplica filtro de estado
+        ArrayList<Alumno> alumnos = (ArrayList<Alumno>) super.listarTodos(null);
         this.usarPredicadoParaListado = false;
         return alumnos;
     }

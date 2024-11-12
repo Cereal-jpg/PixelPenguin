@@ -25,12 +25,12 @@ namespace SoftPixelPenguinsWA
         {
             if (Enum.TryParse<estadoAlumno>(ddlEstado.SelectedValue, out estadoAlumno estadoSeleccionado))
             {
-                gvAlumnos.DataSource = alumnoBO.listarAlumnosPorEstado(estadoSeleccionado);
+                gvAlumnos.DataSource = alumnoBO.listarAlumnosPorNombreYEstado(txtBuscarAlumno.Text, estadoSeleccionado);
                 gvAlumnos.DataBind();
             }
             else
-            {
-                gvAlumnos.DataSource = alumnoBO.listarTodosAlumnos();
+            { 
+                gvAlumnos.DataSource = alumnoBO.listarAlumnosPorNombre(txtBuscarAlumno.Text);
                 gvAlumnos.DataBind();
             }
         }
@@ -49,7 +49,7 @@ namespace SoftPixelPenguinsWA
 
         protected void lbBuscar_Click(object sender, EventArgs e)
         {
-            // Implementar ListarAlumnosPorNombreYEstado, ya no es necesario listar solo por Estado ya que esto también lo hace
+            cargarAlumnos();
         }
 
         protected void lbVisualizar_Click(object sender, EventArgs e)
@@ -63,10 +63,17 @@ namespace SoftPixelPenguinsWA
         {
             LinkButton lnk = (LinkButton)sender;
             int idUsuario = int.Parse(lnk.CommandArgument);
-            alumno alumno = new alumno { idUsuario = idUsuario };
+            alumno alumno = new alumno { idUsuario = idUsuario, idUsuarioSpecified = true };
             alumnoBO.eliminarAlumno(alumno);
             Response.Redirect("GestionarSolicitudesPA.aspx");
         }
+
+        protected void gvAlumnos_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gvAlumnos.PageIndex = e.NewPageIndex;
+            cargarAlumnos();
+        }
+
     }
 }
 

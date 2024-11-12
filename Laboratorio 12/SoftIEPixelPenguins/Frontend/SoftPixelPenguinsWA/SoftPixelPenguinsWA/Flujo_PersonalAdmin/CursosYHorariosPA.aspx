@@ -30,18 +30,30 @@
     <h2 style="color: black;">Cursos y Horarios</h2>
     <div class="container-matricula" style="display:block;">
         <h2 style="color: black;">Listado de Profesores</h2>
-        <asp:GridView ID="gvProfesores" runat="server" AllowPaging="true" PageSize="10" OnPageIndexChanging="gvProfesores_PageIndexChanging" AutoGenerateColumns="False" CssClass="table table-hover table-responsive table-striped table-bordered" >
-            <Columns>
-                <asp:BoundField DataField="codigoProfesor" HeaderText="Código" />
-                <asp:BoundField DataField="nombreCompleto" HeaderText="Nombre" />
-                <asp:BoundField DataField="especialidad" HeaderText="Especialidad" />
-                <asp:TemplateField>
-                    <ItemTemplate>
-                        <asp:LinkButton ID="btnAgregarCursos" runat="server" Text="Agregar Cursos" class="btn btn-primary" OnClick="btnAgregarCursos_Click" CommandArgument='<%# Eval("idUsuario") %>' />
-                    </ItemTemplate>
-                </asp:TemplateField>
-            </Columns>
-        </asp:GridView>
+        <div class="row">
+            <div class="col-12 d-flex justify-content-between align-items-center mb-4">
+                <div class="input-group w-50">
+                    <asp:TextBox ID="txtBuscarProfesor" runat="server" CssClass="form-control" placeholder="Buscar profesor..." aria-label="Buscar Profesor"></asp:TextBox>
+                    <asp:LinkButton ID="lbBuscar" runat="server" CssClass="btn btn-outline-primary" OnClick="lbBuscar_Click">
+                    <i class="fa-solid fa-search"></i> Buscar
+                    </asp:LinkButton>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <asp:GridView ID="gvProfesores" runat="server" AllowPaging="true" PageSize="10" OnPageIndexChanging="gvProfesores_PageIndexChanging" AutoGenerateColumns="False" CssClass="table table-hover table-responsive table-striped table-bordered" >
+                <Columns>
+                    <asp:BoundField DataField="codigoProfesor" HeaderText="Código" />
+                    <asp:BoundField DataField="nombreCompleto" HeaderText="Nombre" />
+                    <asp:BoundField DataField="especialidad" HeaderText="Especialidad" />
+                    <asp:TemplateField>
+                        <ItemTemplate>
+                            <asp:LinkButton ID="btnAgregarCursos" runat="server" Text="Agregar Cursos" class="btn btn-primary" OnClick="btnAgregarCursos_Click" CommandArgument='<%# Eval("idUsuario") %>' />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+            </asp:GridView>
+        </div>
     </div>
 </asp:Content>
 

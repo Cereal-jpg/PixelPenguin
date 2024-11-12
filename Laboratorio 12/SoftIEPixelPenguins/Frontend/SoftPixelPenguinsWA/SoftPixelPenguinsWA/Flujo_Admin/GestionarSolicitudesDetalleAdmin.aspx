@@ -31,10 +31,7 @@
 
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
-    <div class="d-flex justify-content-between align-items-center mt-3 mx-3">
-        <h1>Gestionar Solicitud</h1>
-    </div>
-    <hr class="mx-3" />
+    <h2 style="color: black;">Gestionar Solicitud</h2>
     <div class="container">
         <div class="main-content">
             <h3>Datos del alumno</h3>

@@ -6,8 +6,10 @@
   <xs:element name="existeAlumnoResponse" type="tns:existeAlumnoResponse" />
   <xs:element name="insertarAlumno" type="tns:insertarAlumno" />
   <xs:element name="insertarAlumnoResponse" type="tns:insertarAlumnoResponse" />
-  <xs:element name="listarAlumnosPorEstado" type="tns:listarAlumnosPorEstado" />
-  <xs:element name="listarAlumnosPorEstadoResponse" type="tns:listarAlumnosPorEstadoResponse" />
+  <xs:element name="listarAlumnosPorNombre" type="tns:listarAlumnosPorNombre" />
+  <xs:element name="listarAlumnosPorNombreResponse" type="tns:listarAlumnosPorNombreResponse" />
+  <xs:element name="listarAlumnosPorNombreYEstado" type="tns:listarAlumnosPorNombreYEstado" />
+  <xs:element name="listarAlumnosPorNombreYEstadoResponse" type="tns:listarAlumnosPorNombreYEstadoResponse" />
   <xs:element name="listarTodosAlumnos" type="tns:listarTodosAlumnos" />
   <xs:element name="listarTodosAlumnosResponse" type="tns:listarTodosAlumnosResponse" />
   <xs:element name="modificarAlumno" type="tns:modificarAlumno" />
@@ -78,6 +80,17 @@
       <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="listarAlumnosPorNombreYEstado">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="estado" type="tns:estadoAlumno" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarAlumnosPorNombreYEstadoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:alumno" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="listarTodosAlumnos">
     <xs:sequence />
   </xs:complexType>
@@ -96,12 +109,12 @@
       <xs:element minOccurs="0" name="return" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarAlumnosPorEstado">
+  <xs:complexType name="listarAlumnosPorNombre">
     <xs:sequence>
-      <xs:element minOccurs="0" name="estado" type="tns:estadoAlumno" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarAlumnosPorEstadoResponse">
+  <xs:complexType name="listarAlumnosPorNombreResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:alumno" />
     </xs:sequence>

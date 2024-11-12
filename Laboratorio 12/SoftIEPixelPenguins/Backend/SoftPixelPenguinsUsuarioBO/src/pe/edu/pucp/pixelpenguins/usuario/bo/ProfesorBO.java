@@ -39,4 +39,8 @@ public class ProfesorBO {
         return this.profesorDAO.existeProfesor(profesor);
     }
     
+    public ArrayList<Profesor>listarProfesoresPorNombre(String nombre){
+        return this.profesorDAO.listarProfesoresPorNombre(nombre);
+    }
+    
 }

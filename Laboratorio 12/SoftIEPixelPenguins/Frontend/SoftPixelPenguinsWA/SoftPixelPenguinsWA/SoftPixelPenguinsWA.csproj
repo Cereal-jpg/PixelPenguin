@@ -424,9 +424,6 @@
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.jornadaEscolar.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarAlumnosPorEstadoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarCompetenciasPorCursoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -656,6 +653,15 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarPorAlumnoCursoYBimestreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarProfesoresPorNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarAlumnosPorNombreYEstadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarAlumnosPorNombreResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\ServicioWeb\UsuarioWS.wsdl" />

@@ -20,9 +20,13 @@ namespace SoftPixelPenguinsWA
 
         private void cargarProfesores()
         {
-            profesores = (profesorBO.listarTodosProfesores() ?? Array.Empty<profesor>()).ToList();
+            profesores = (profesorBO.listarProfesoresPorNombre(txtBuscarProfesor.Text) ?? Array.Empty<profesor>()).ToList();
             gvProfesores.DataSource = profesores;
             gvProfesores.DataBind();
+        }
+        protected void lbBuscar_Click(object sender, EventArgs e)
+        {
+            cargarProfesores();
         }
 
         protected void btnAgregarCursos_Click(object sender, EventArgs e)

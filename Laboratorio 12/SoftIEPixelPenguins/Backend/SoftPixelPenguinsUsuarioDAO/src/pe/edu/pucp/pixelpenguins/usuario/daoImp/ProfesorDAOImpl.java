@@ -201,6 +201,8 @@ public class ProfesorDAOImpl extends DAOImpl implements ProfesorDAO {
         sql = sql.concat(obtenerProyeccionParaSelect());
         sql = sql.concat(" from ").concat(this.nombre_tabla).concat(" pro ");
         sql = sql.concat("join Usuario usu on usu.idUsuario = pro.idProfesor ");
+        if(this.usarPredicadoParaListado)
+            sql = sql.concat(this.obtenerPredicadoParaListado());
         if (limite != null && limite > 0) {
             sql = sql.concat(" limit ").concat(limite.toString());
         }
@@ -266,6 +268,26 @@ public class ProfesorDAOImpl extends DAOImpl implements ProfesorDAO {
     @Override
     protected void limpiarObjetoDelResultSet() {
         this.profesor = null;
+    }
+    
+    @Override
+    protected String obtenerPredicadoParaListado() {
+        return " WHERE nombreCompleto LIKE CONCAT('%',?,'%')";
+    }
+    
+    @Override
+    protected void incluirValorDeParametrosParaListado() throws SQLException {
+        this.incluirParametroString(1, profesor.getNombreCompleto());
+    }
+    
+    @Override
+    public ArrayList<Profesor>listarProfesoresPorNombre(String nombre){
+        this.usarPredicadoParaListado = true;
+        this.profesor = new Profesor();
+        profesor.setNombreCompleto(nombre);
+        ArrayList<Profesor>profesores = (ArrayList<Profesor>)super.listarTodos(null);
+        this.usarPredicadoParaListado = false;
+        return profesores;
     }
     
     @Override

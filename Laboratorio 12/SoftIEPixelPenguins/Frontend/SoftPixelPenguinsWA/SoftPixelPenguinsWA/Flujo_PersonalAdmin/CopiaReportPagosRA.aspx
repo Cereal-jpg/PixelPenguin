@@ -1,5 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftPixelPenguins.Master" AutoEventWireup="true" CodeBehind="ReportePagosRA.aspx.cs" Inherits="SoftPixelPenguinsWA.ReportePagosRA" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftPixelPenguins.Master" AutoEventWireup="true" CodeBehind="CopiaReportPagosRA.aspx.cs" Inherits="SoftPixelPenguinsWA.Flujo_PersonalAdmin.CopiaReportPagosRA" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphScripts" runat="server">
@@ -11,25 +10,25 @@
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="menuItem1" runat="server">
-    <a href="IndexAdmin.aspx"><i class="fa-solid fa-home"></i>Inicio</a>
+    <a href="IndexPersonalAdministrativo.aspx"><i class="fa-solid fa-home"></i>Inicio</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem2" runat="server">
-    <a href="ReportesAdmin.aspx"><i class="fa-solid fa-book"></i>Reportes</a>
+    <a href="ReportesPA.aspx"><i class="fa-solid fa-book"></i>Reportes</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem3" runat="server">
-    <a href="BusquedaAdmin.aspx"><i class="fa-solid fa-search"></i>Busqueda</a>
+    <a href="BusquedaPA.aspx"><i class="fa-solid fa-search"></i>Busqueda</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem4" runat="server">
-    <a href="AgregarPlanAdmin.aspx"><i class="fa-solid fa-folder-plus"></i>Agregar Plan</a>
+    <a href="CursosYHorariosPA.aspx"><i class="fa-solid fa-calendar-days"></i>Cursos y Horarios</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem5" runat="server">
-    <a href="GestionarUsuariosAdmin.aspx"><i class="fa-solid fa-users"></i>Gestionar Usuarios</a>
+    <a href="GestionarSolicitudesPA.aspx"><i class="fa-solid fa-user-plus"></i>Gestionar Solicitudes</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem6" runat="server">
-    <a href="GestionarSolicitudesAdmin.aspx"><i class="fa-solid fa-user-plus"></i>Gestionar Solicitudes</a>
+    <a href="GestionarPlanesPA.aspx"><i class="fa-solid fa-list-check"></i>Gestionar Planes</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem7" runat="server">
-    <a href="MiPerfilAdmin.aspx"><i class="fa-solid fa-user"></i>Mi Perfil</a>
+    <a href="MiPerfilPA.aspx"><i class="fa-solid fa-user"></i>Mi Perfil</a>
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">

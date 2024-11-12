@@ -140,10 +140,12 @@
     <Content Include="Flujo_Admin\MiPerfilAdmin.aspx" />
     <Content Include="Flujo_Alumno\MisPagosAlumno.aspx" />
     <Content Include="Flujo_Alumno\VisualizarPagoAlumno.aspx" />
+    <Content Include="Flujo_PersonalAdmin\CopiaReportPagosRA.aspx" />
     <Content Include="Flujo_PersonalAdmin\GestionarCursosPlanPA.aspx" />
     <Content Include="Flujo_PersonalAdmin\GestionarPlanesPA.aspx" />
     <Content Include="Flujo_PersonalAdmin\MiPerfilPA.aspx" />
     <Content Include="Flujo_Alumno\NotasParcialesAlumno.aspx" />
+    <Content Include="Flujo_PersonalAdmin\CopiaReporteXPagos.aspx" />
     <Content Include="Flujo_Profesor\CursosDictadosProfesor.aspx" />
     <Content Include="Flujo_PersonalAdmin\GestionarHorariosPA.aspx" />
     <Content Include="Flujo_PersonalAdmin\CursosPorProfesorPA.aspx" />
@@ -709,6 +711,13 @@
     <Compile Include="Flujo_Alumno\VisualizarPagoAlumno.aspx.designer.cs">
       <DependentUpon>VisualizarPagoAlumno.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Flujo_PersonalAdmin\CopiaReportPagosRA.aspx.cs">
+      <DependentUpon>CopiaReportPagosRA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Flujo_PersonalAdmin\CopiaReportPagosRA.aspx.designer.cs">
+      <DependentUpon>CopiaReportPagosRA.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Flujo_PersonalAdmin\GestionarCursosPlanPA.aspx.cs">
       <DependentUpon>GestionarCursosPlanPA.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -736,6 +745,13 @@
     </Compile>
     <Compile Include="Flujo_Alumno\NotasParcialesAlumno.aspx.designer.cs">
       <DependentUpon>NotasParcialesAlumno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Flujo_PersonalAdmin\CopiaReporteXPagos.aspx.cs">
+      <DependentUpon>CopiaReporteXPagos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Flujo_PersonalAdmin\CopiaReporteXPagos.aspx.designer.cs">
+      <DependentUpon>CopiaReporteXPagos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Flujo_Profesor\CursosDictadosProfesor.aspx.cs">
       <DependentUpon>CursosDictadosProfesor.aspx</DependentUpon>

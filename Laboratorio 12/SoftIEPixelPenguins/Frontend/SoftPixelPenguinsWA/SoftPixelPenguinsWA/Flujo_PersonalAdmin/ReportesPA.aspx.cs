@@ -22,7 +22,7 @@ namespace SoftPixelPenguinsWA
             }
             else if (rbPensiones.Checked)
             {
-                Response.Redirect("ReportePagosXGrado.aspx");
+                Response.Redirect("~/Flujo_Admin/ReportePagosXGrado.aspx");
             }
         }
     }

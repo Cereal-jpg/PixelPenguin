@@ -36,7 +36,7 @@
             </div>
         </div>
         <div class="image-section">
-            <img src="Images/CHICOMAT.png" alt="Horario Académico" class="responsive-image"/>
+            <img src="../Images/CHICOMAT.png" alt="Horario Académico" class="responsive-image"/>
         </div>
     </div>
 </asp:Content>

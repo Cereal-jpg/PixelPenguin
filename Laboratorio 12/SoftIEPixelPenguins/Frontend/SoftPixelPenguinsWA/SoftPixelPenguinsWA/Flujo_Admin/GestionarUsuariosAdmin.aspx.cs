@@ -107,10 +107,19 @@ namespace SoftPixelPenguinsWA
                         username = username.Value,
                         password = password.Value,
                         codigoProfesor = int.Parse(codigoProfesor.Text),
-                        certificadoHistorialEducativo = fileCertificadoEducativo.FileBytes,
                         especialidad = especialidad.Text,
                         rol = rolBO.obtenerRolPorId(2)
                     };
+
+                    if (fileCertificadoEducativo.HasFile)
+                    {
+                        profesor.certificadoHistorialEducativo = fileCertificadoEducativo.FileBytes;
+                    }
+                    else
+                    {
+                        throw new Exception("Debe seleccionar un archivo para el certificado educativo.");
+                    }
+
                     if (!idUsuarioSeleccionado.HasValue)
                     {
                         profesorBO.insertarProfesor(profesor);
@@ -231,5 +240,7 @@ namespace SoftPixelPenguinsWA
         {
             CargarUsuarios();
         }
+
+
     }
 }

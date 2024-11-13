@@ -219,7 +219,8 @@ namespace SoftPixelPenguinsWA
 
                     };
                     matriculaBO.insertarMatricula(matricula);
-                    insercionNotasNuevoAlumno(matricula);
+                    // ya no se va a usar acá
+                    // insercionNotasNuevoAlumno(matricula);
                 }
                 Session["gradoSeleccionado"] = null;
             }
@@ -228,32 +229,33 @@ namespace SoftPixelPenguinsWA
                 throw new Exception();
             }
         }
-        private void insercionNotasNuevoAlumno(matricula matricula)
-        {
-            BindingList<curso> cursos = new BindingList<curso>(cursoBO.listarCursosPorGrado(matricula.gradoAcademico.idGradoAcademico));
-            foreach (curso aux in cursos)
-            {
-                BindingList<competencia> competencias = new BindingList<competencia>(competenciaBO.listarCompetenciasPorCurso(aux.idCurso));
-                foreach (competencia auxComp in competencias)
-                {
-                    for (int i = 1; i <= 4; i++)
-                    {
-                        nota nota = new nota
-                        {
-                            fid_Matricula = matricula.idMatricula,
-                            fid_Alumno = alumno.idUsuario,
-                            // los alumnos comienzan con nota default 
-                            nota1 = "-",
-                            bimestre = i,
-                            curso = aux,
-                            competencia = auxComp,
-                        };
-                        notaBO.insertarNota(nota);
-                    }
-                }
 
-            }
-        }
+        //private void insercionNotasNuevoAlumno(matricula matricula)
+        //{
+        //    BindingList<curso> cursos = new BindingList<curso>(cursoBO.listarCursosPorGrado(matricula.gradoAcademico.idGradoAcademico));
+        //    foreach (curso aux in cursos)
+        //    {
+        //        BindingList<competencia> competencias = new BindingList<competencia>(competenciaBO.listarCompetenciasPorCurso(aux.idCurso));
+        //        foreach (competencia auxComp in competencias)
+        //        {
+        //            for (int i = 1; i <= 4; i++)
+        //            {
+        //                nota nota = new nota
+        //                {
+        //                    fid_Matricula = matricula.idMatricula,
+        //                    fid_Alumno = alumno.idUsuario,
+        //                    // los alumnos comienzan con nota default 
+        //                    nota1 = "-",
+        //                    bimestre = i,
+        //                    curso = aux,
+        //                    competencia = auxComp,
+        //                };
+        //                notaBO.insertarNota(nota);
+        //            }
+        //        }
+        //    }
+        //}
+
         private void enviarCorreo(string destinatario, string asunto, string cuerpo)
         {
             try

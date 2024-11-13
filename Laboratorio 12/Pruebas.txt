@@ -1,0 +1,20 @@
+ALUMNO
+Ver variación notas
+email:		a20220111@example.com
+password:	pass12
+
+Certificado y correo funcional
+email:		a20220954@pucp.edu.pe
+password:	password12
+
+PROFESOR
+email:		p20001200@pucp.edu.pe
+password:	password12
+
+PERSONAL ADMINISTRATIVO
+email:		m20000111@pucp.edu.pe
+password:	password12
+
+ADMINISTRADOR
+email:		secret_email@pucp.edu.pe
+password:	qwerty123

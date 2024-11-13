@@ -250,6 +250,7 @@ D:\TAProgra\Laboratorio 12\SoftIEPixelPenguins\Frontend\SoftPixelPenguinsWA\Soft
 D:\TAProgra\Laboratorio 12\SoftIEPixelPenguins\Frontend\SoftPixelPenguinsWA\SoftPixelPenguinsWA\obj\Debug\SoftPixe.9F367AAF.Up2Date
 D:\TAProgra\Laboratorio 12\SoftIEPixelPenguins\Frontend\SoftPixelPenguinsWA\SoftPixelPenguinsWA\obj\Debug\SoftPixelPenguinsWA.dll
 D:\TAProgra\Laboratorio 12\SoftIEPixelPenguins\Frontend\SoftPixelPenguinsWA\SoftPixelPenguinsWA\obj\Debug\SoftPixelPenguinsWA.pdb
+<<<<<<< HEAD
 C:\Users\papar\PixelPenguin\Laboratorio 12\SoftIEPixelPenguins\Frontend\SoftPixelPenguinsWA\SoftPixelPenguinsWA\bin\SoftPixelPenguinsWA.dll.config
 C:\Users\papar\PixelPenguin\Laboratorio 12\SoftIEPixelPenguins\Frontend\SoftPixelPenguinsWA\SoftPixelPenguinsWA\bin\SoftPixelPenguinsWA.dll
 C:\Users\papar\PixelPenguin\Laboratorio 12\SoftIEPixelPenguins\Frontend\SoftPixelPenguinsWA\SoftPixelPenguinsWA\bin\SoftPixelPenguinsWA.pdb
@@ -345,3 +346,7 @@ C:\Users\papar\PixelPenguin\Laboratorio 12\SoftIEPixelPenguins\Frontend\SoftPixe
 C:\Users\papar\PixelPenguin\Laboratorio 12\SoftIEPixelPenguins\Frontend\SoftPixelPenguinsWA\SoftPixelPenguinsWA\obj\Debug\SoftPixe.9F367AAF.Up2Date
 C:\Users\papar\PixelPenguin\Laboratorio 12\SoftIEPixelPenguins\Frontend\SoftPixelPenguinsWA\SoftPixelPenguinsWA\obj\Debug\SoftPixelPenguinsWA.dll
 C:\Users\papar\PixelPenguin\Laboratorio 12\SoftIEPixelPenguins\Frontend\SoftPixelPenguinsWA\SoftPixelPenguinsWA\obj\Debug\SoftPixelPenguinsWA.pdb
+=======
+C:\Users\Enzo\Desktop\PUCP\Github\Laboratorio 12\SoftIEPixelPenguins\Frontend\SoftPixelPenguinsWA\SoftPixelPenguinsWA\bin\BouncyCastle.Cryptography.dll
+C:\Users\Enzo\Desktop\PUCP\Github\Laboratorio 12\SoftIEPixelPenguins\Frontend\SoftPixelPenguinsWA\SoftPixelPenguinsWA\bin\BouncyCastle.Cryptography.xml
+>>>>>>> fe634d3f83b2a982a0ae388594ed789efe48d689

@@ -237,16 +237,20 @@ CREATE TABLE AlumnoXCurso(
 DROP TABLE IF EXISTS CursoXMatricula;
 CREATE TABLE CursoXMatricula(
 	idCurso INT NOT NULL,
-	idMatricula INT NOT NULL,
-	fid_Alumno INT NOT NULL,
-	notaFinal VARCHAR(10) NOT NULL,
+    idMatricula INT NOT NULL,
+    fid_Alumno INT NOT NULL,
+    notaBimestre1 VARCHAR(10) NULL,
+    notaBimestre2 VARCHAR(10) NULL,
+    notaBimestre3 VARCHAR(10) NULL,
+    notaBimestre4 VARCHAR(10) NULL,
+    notaFinal VARCHAR(10) NULL,
 	CONSTRAINT fk_Curso
 		FOREIGN KEY (idCurso) REFERENCES Curso(idCurso)
         ON DELETE CASCADE,
 	CONSTRAINT fk_Matricula
-		FOREIGN KEY (idMatricula) REFERENCES Matricula(idMatricula)
+		FOREIGN KEY (idMatricula) REFERENCES Matricula (idMatricula)
         ON DELETE CASCADE,
-	FOREIGN KEY (fid_Alumno) REFERENCES Alumno (idAlumno) ON DELETE CASCADE
+	FOREIGN KEY (fid_Alumno) REFERENCES Alumno (idAlumno)
 );
 
 -- Por verse si servirán

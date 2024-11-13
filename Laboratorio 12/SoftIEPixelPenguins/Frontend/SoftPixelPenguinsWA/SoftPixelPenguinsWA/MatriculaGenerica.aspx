@@ -152,21 +152,11 @@
                             <label for="fileCertificadoEstudios">Certificado de Estudios:</label>
                             <asp:FileUpload ID="fileCertificadoEstudios" runat="server" CssClass="file-upload" />
                         </div>
-                        <div class="form-row" style="margin-top: 48px;">
-                            <asp:LinkButton ID="lnkDescargarEstudios" runat="server" CssClass="button-style" OnClick="lnkDescargarEstudios_Click">
-                                Descargar Certificado de Estudios
-                            </asp:LinkButton>
-                        </div>
                      </div>
                     <div class="form-group">
                         <div class="form-row">
                             <label for="fileCertificadoSalud">Certificado de Salud:</label>
                             <asp:FileUpload ID="fileCertificadoSalud" runat="server" CssClass="file-upload" />
-                        </div>
-                        <div class="form-row" style="margin-top: 48px;">
-                            <asp:LinkButton ID="lnkDescargarSalud" runat="server" CssClass="button-style" OnClick="lnkDescargarSalud_Click">
-                                Descargar Certificado de Salud
-                            </asp:LinkButton>
                         </div>
                     </div>
                 </div>

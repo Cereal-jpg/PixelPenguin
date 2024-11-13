@@ -30,7 +30,7 @@
             <h3><i class="fas fa-lightbulb icon-color"></i>¡Hola!</h3>    
             <p>Bienvenido a la Matrícula online</p>
             <p>En este espacio podrás iniciar o consultar el estado de matrícula para el siguiente año</p>
-            <p>¿Quieres iniciar con tu proceso? El proceso consta de 3 pasos</p>
+            <p>¿Quieres iniciar con tu proceso?</p>
             <div class="button-container">
                 <asp:Button ID="btnIniciarMatricula" runat="server" Text="Iniciar Proceso" CssClass="btn-matricula" OnClick="btnIniciarMatricula_Click" />
             </div>

@@ -20,10 +20,16 @@ namespace SoftPixelPenguinsWA
         AnioAcademicoWSClient anioAcademicoBO = new AnioAcademicoWSClient();
         MatriculaWSClient matriculaBO = new MatriculaWSClient();
         ApoderadoWSClient apoderadoBO = new ApoderadoWSClient();
+        NotaWSClient notaBO = new NotaWSClient();
+        CursoWSClient cursoBO = new CursoWSClient();
+        CompetenciaWSClient competenciaBO = new CompetenciaWSClient();
         alumno alumno = null;
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(!IsPostBack)
+                if (Session["idAdmin"] != null) panelGestionarUsuarios.Visible = true;
+
             string idUsuario = Request.QueryString["idUsuario"];
             if (idUsuario != null)
             {
@@ -51,7 +57,6 @@ namespace SoftPixelPenguinsWA
                 if (alumno.estado.Equals(estadoAlumno.Por_Pagar) || alumno.estado.Equals(estadoAlumno.Matriculado))
                 {
                     btnConfirmarSolicitud.Text = "Matricular Usuario";
-                    lbBoucherPago.Style["display"] = "block";
                     txtUsuario.Text = alumno.username;
                     txtContraseña.Text = alumno.password;
                     txtCodigo.Text = alumno.codigoAlumno.ToString();
@@ -142,6 +147,14 @@ namespace SoftPixelPenguinsWA
 
         protected void btnRechazar_Click(object sender, EventArgs e)
         {
+            string cuerpo = $"Estimado/a {alumno.nombreCompleto},\n\n" +
+                    "Lamentamos informarte que tu solicitud de matrícula en nuestra institución ha sido rechazada.\n" +
+                    "Esto se debe a que no se completaron todos los requisitos, ya sea por falta de validación de datos o por no realizar el pago dentro del tiempo estipulado.\n\n" +
+                    "Si deseas más información o reconsiderar tu solicitud, no dudes en ponerte en contacto con nosotros.\n\n" +
+                    "Atentamente,\n" +
+                    "Equipo Administrativo PixelPenguins";
+
+            enviarCorreo(alumno.email.ToString(), "Rechazo de Solicitud de Matrícula", cuerpo);
             apoderadoBO.eliminarApoderado(alumno.apoderado);
             alumnoBO.eliminarAlumno(alumno);
             Response.Redirect("GestionarSolicitudesPA.aspx");
@@ -157,6 +170,17 @@ namespace SoftPixelPenguinsWA
                     alumno.password = txtContraseña.Text;
                     alumno.codigoAlumno = Int32.Parse(txtCodigo.Text);
                     alumno.estado = estadoAlumno.Por_Pagar;
+
+                    string cuerpo = $"Hola {alumno.nombreCompleto},\n\n" +
+                    "Nos complace informarte que tus datos y certificados han sido revisados y has sido aceptado en nuestra institución académica.\n" +
+                    "Para completar tu matrícula, por favor abona el pago de S/XXX.00 a la cuenta XXXX-XXXX-XXXX y envía el comprobante de pago a este correo.\n\n" +
+                    "Una vez recibido el comprobante, procederemos a finalizar tu matrícula.\n\n" +
+                    "Gracias por confiar en nosotros.\n\n" +
+                    "Atentamente,\n" +
+                    "Equipo Administrativo PixelPenguins";
+
+                    enviarCorreo(alumno.email.ToString(), "Confirmación de Aceptación", cuerpo);
+
                 }
                 else if (alumno.estado.Equals(estadoAlumno.Por_Pagar))
                 {
@@ -168,23 +192,19 @@ namespace SoftPixelPenguinsWA
                             $"Tu nuevo codigo es: {alumno.codigoAlumno}\n" +
                             "Gracias por elegir nuestra institución\n" +
                             "Atentamente, \nEquipoAdministrativo PixelPenguins";
-                    enviarCorreo(/*"a20220749@pucp.edu.pe"*/alumno.email.ToString(), "Confirmación de Matrícula", cuerpo);
+                    enviarCorreo(alumno.email.ToString(), "Confirmación de Matrícula", cuerpo);
 
                     matricularAlumno();
                 }
 
-                // Guardar cambios en la sesión y la base de datos
-                Session[alumno.nombreCompleto] = alumno;
                 alumnoBO.modificarAlumno(alumno);
 
 
 
-                // Redirigir después de completar el proceso
                 Response.Redirect("GestionarSolicitudesPA.aspx");
             }
             catch (Exception ex)
             {
-                // Manejar errores
                 Console.WriteLine("Ocurrió un error: " + ex.Message);
             }
         }
@@ -220,13 +240,39 @@ namespace SoftPixelPenguinsWA
                         seccionAcademica = seccionMatricula
 
                     };
-                    matriculaBO.insertarMatricula(matricula);
+                    matricula.idMatricula = matriculaBO.insertarMatricula(matricula);
+                    insercionNotasNuevoAlumno(matricula);
                 }
                 Session["gradoSeleccionado"] = null;
             }
             else
             {
                 throw new Exception();
+            }
+        }
+
+        private void insercionNotasNuevoAlumno(matricula matricula)
+        {
+            BindingList<curso> cursos = new BindingList<curso>(cursoBO.listarCursosPorGrado(matricula.gradoAcademico.idGradoAcademico));
+            foreach (curso aux in cursos)
+            {
+                BindingList<competencia> competencias = new BindingList<competencia>(competenciaBO.listarCompetenciasPorCurso(aux.idCurso));
+                foreach (competencia auxComp in competencias)
+                {
+                    for (int i = 1; i <= 4; i++)
+                    {
+                        nota nota = new nota
+                        {
+                            fid_Matricula = matricula.idMatricula,
+                            fid_Alumno = alumno.idUsuario,
+                            nota1 = "-",
+                            bimestre = i,
+                            curso = aux,
+                            competencia = auxComp,
+                        };
+                        notaBO.insertarNota(nota);
+                    }
+                }
             }
         }
 
@@ -253,7 +299,6 @@ namespace SoftPixelPenguinsWA
             }
             catch (Exception ex)
             {
-                // Mostrar el error completo para depuración
                 Response.Write("Error al enviar el correo: " + ex.ToString());
             }
         }

@@ -15,6 +15,7 @@ namespace SoftPixelPenguinsWA.Flujo_PersonalAdmin
         {
             if (!IsPostBack)
             {
+                if (Session["idAdmin"] != null) panelGestionarUsuarios.Visible = true;
                 gvGrados.DataSource = gradoBO.listarTodosGradosAcademicos();
                 gvGrados.DataBind();
             }

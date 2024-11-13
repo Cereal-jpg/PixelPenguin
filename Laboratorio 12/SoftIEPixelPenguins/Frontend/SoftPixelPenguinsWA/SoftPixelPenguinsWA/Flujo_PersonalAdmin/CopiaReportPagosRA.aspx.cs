@@ -14,6 +14,11 @@ namespace SoftPixelPenguinsWA.Flujo_PersonalAdmin
         PagoWSClient pagoBO = new PagoWSClient();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                if (Session["idAdmin"] != null) panelGestionarUsuarios.Visible = true;
+            }
+
             string idGrado = Request.QueryString["idGradoAcademico"];
             if (idGrado != null)
             {

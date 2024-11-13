@@ -21,6 +21,7 @@ namespace SoftPixelPenguinsWA
             idProfesor = int.Parse(id);
             if (!IsPostBack)
             {
+                if (Session["idAdmin"] != null) panelGestionarUsuarios.Visible = true;
                 cargarGrados();
                 cargarCursos();
             }

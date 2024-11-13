@@ -16,6 +16,7 @@ namespace SoftPixelPenguinsWA
         {
             if (!IsPostBack)
             {
+                if (Session["idAdmin"] != null) panelGestionarUsuarios.Visible = true;
                 cargarEstados();
                 cargarAlumnos();
             }

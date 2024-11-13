@@ -17,6 +17,9 @@ namespace SoftPixelPenguinsWA
         int idGradoAcademico;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(!IsPostBack)
+                if (Session["idAdmin"] != null) panelGestionarUsuarios.Visible = true;
+
             string idCursoQuery = Request.QueryString["idCurso"];
             string accionQuery = Request.QueryString["accion"];
             string idGrado = Request.QueryString["idGradoAcademico"];

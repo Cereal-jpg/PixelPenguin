@@ -15,6 +15,8 @@ namespace SoftPixelPenguinsWA
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(!IsPostBack)
+                if (Session["idAdmin"] != null) panelGestionarUsuarios.Visible = true;
             cargarProfesores();
         }
 

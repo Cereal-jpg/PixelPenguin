@@ -3,27 +3,33 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphScripts" runat="server">
 </asp:Content>
+
+
 <asp:Content ContentPlaceHolderID="menuItem1" runat="server">
-    <a href="IndexPersonalAdministrativo.aspx"><i class="fa-solid fa-home"></i> Inicio</a>
+    <a href="IndexPersonalAdministrativo.aspx"><i class="fa-solid fa-home"></i>Inicio</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem2" runat="server">
-    <a href="ReportesPA.aspx"><i class="fa-solid fa-book"></i> Reportes</a>
+    <a href="ReportesPA.aspx"><i class="fa-solid fa-book"></i>Reportes</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem3" runat="server">
-    <a href="BusquedaPA.aspx"><i class="fa-solid fa-search"></i> Busqueda</a>
+    <a href="CursosYHorariosPA.aspx"><i class="fa-solid fa-calendar-days"></i>Cursos y Horarios</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem4" runat="server">
-    <a href="CursosYHorariosPA.aspx"><i class="fa-solid fa-calendar-days"></i> Cursos y Horarios</a>
+    <a href="GestionarSolicitudesPA.aspx"><i class="fa-solid fa-user-plus"></i>Gestionar Solicitudes</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem5" runat="server">
-    <a href="GestionarSolicitudesPA.aspx"><i class="fa-solid fa-user-plus"></i> Gestionar Solicitudes</a>
+    <a href="GestionarPlanesPA.aspx"><i class="fa-solid fa-list-check"></i>Gestionar Planes</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem6" runat="server">
-    <a href="GestionarPlanesPA.aspx"><i class="fa-solid fa-list-check"></i> Gestionar Planes</a>
+    <a href="MiPerfilPA.aspx"><i class="fa-solid fa-user"></i>Mi Perfil</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem7" runat="server">
-    <a href="MiPerfilPA.aspx"><i class="fa-solid fa-user"></i> Mi Perfil</a>
+    <asp:Panel ID="panelGestionarUsuarios" runat="server" Visible="false" CssClass="ocularItem">
+        <a href="GestionarUsuariosAdmin.aspx"><i class="fa-solid fa-plus-circle"></i>Gestionar Usuarios</a>
+    </asp:Panel>
 </asp:Content>
+
+
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <h2 style="color: black;">Gestionar Cursos</h2>
     <div class="container-matricula" style="display:block;">

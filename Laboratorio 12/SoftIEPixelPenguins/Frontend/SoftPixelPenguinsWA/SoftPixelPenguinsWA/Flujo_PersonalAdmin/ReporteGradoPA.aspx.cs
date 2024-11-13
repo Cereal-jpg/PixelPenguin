@@ -21,6 +21,8 @@ namespace SoftPixelPenguinsWA
 
             if (!IsPostBack)
             {
+                if (Session["idAdmin"] != null) panelGestionarUsuarios.Visible = true;
+
                 List<gradoAcademico> grados = new List<gradoAcademico>(gradoAcademicoBO.listarTodosGradosAcademicos());
 
                 DataTable dt = GenerarDataTableConPorcentajes(grados);
@@ -115,7 +117,6 @@ namespace SoftPixelPenguinsWA
             pdfDoc.Add(new Paragraph(" "));
 
 
-            // Primera Tabla de Porcentaje de Matriculados por Grado
             PdfPTable pdfTable = new PdfPTable(gridReporte.HeaderRow.Cells.Count);
             foreach (TableCell headerCell in gridReporte.HeaderRow.Cells)
             {
@@ -142,7 +143,6 @@ namespace SoftPixelPenguinsWA
             pdfDoc.Add(subtitle2);
 
 
-            // Primera Tabla de Porcentaje de Matriculados por Grado
             string base64Image = hdnChartImage.Value;
             if (!string.IsNullOrEmpty(base64Image))
             {

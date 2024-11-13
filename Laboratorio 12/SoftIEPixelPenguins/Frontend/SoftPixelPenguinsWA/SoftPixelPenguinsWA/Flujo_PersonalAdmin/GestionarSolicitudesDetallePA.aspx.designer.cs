@@ -15,6 +15,15 @@ namespace SoftPixelPenguinsWA
     {
 
         /// <summary>
+        /// Control panelGestionarUsuarios.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelGestionarUsuarios;
+
+        /// <summary>
         /// Control txtNombreAlumno.
         /// </summary>
         /// <remarks>
@@ -139,24 +148,6 @@ namespace SoftPixelPenguinsWA
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton lnkDescargarSalud;
-
-        /// <summary>
-        /// Control lbBoucherPago.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lbBoucherPago;
-
-        /// <summary>
-        /// Control lnkDescargarBoucher.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkDescargarBoucher;
 
         /// <summary>
         /// Control btnRegresar.

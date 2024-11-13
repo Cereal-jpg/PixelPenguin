@@ -45,7 +45,7 @@ namespace SoftPixelPenguinsWA
                         break;
                     case 4:
                         Session["idAdmin"] = id;
-                        Response.Redirect("Flujo_Admin/IndexAdmin.aspx");
+                        Response.Redirect("Flujo_PersonalAdmin/IndexPersonalAdministrativo.aspx");
                         break;
                 }
             }

@@ -22,8 +22,6 @@ namespace SoftPixelPenguinsWA
         alumno alumnoLogueado = null;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (section3.Style["display"] != "block") Timer1.Enabled = false;
-            if (section5.Style["display"] != "block") Timer2.Enabled = false;
             if (!IsPostBack)
             {
                 SetActiveStep(0);
@@ -198,31 +196,8 @@ namespace SoftPixelPenguinsWA
             {
                 section2.Style["display"] = "none";
                 section3.Style["display"] = "block";
-                Timer1.Enabled = true;
                 SetActiveStep(2);
             }
-            else if (section3.Style["display"] == "block")
-            {
-                section3.Style["display"] = "none";
-                section4.Style["display"] = "block";
-                SetActiveStep(3);
-                UpdateSectionTitle(2);
-            }
-            else if (section4.Style["display"] == "block")
-            {
-                section4.Style["display"] = "none";
-                section5.Style["display"] = "block";
-                SetActiveStep(4);
-                Timer2.Enabled = true;
-            }
-            else if (section5.Style["display"] == "block")
-            {
-                section5.Style["display"] = "none";
-                section6.Style["display"] = "block";
-                SetActiveStep(5);
-                UpdateSectionTitle(3);
-            }
-
         }
 
         protected void prevSection(object sender, EventArgs e)
@@ -254,7 +229,7 @@ namespace SoftPixelPenguinsWA
 
         private void SetActiveStep(int stepIndex)
         {
-            HtmlGenericControl[] steps = { step1, step2, step3, step4, step5, step6 };
+            HtmlGenericControl[] steps = { step1, step2, step3 };
 
             for (int i = 0; i < steps.Length; i++)
             {
@@ -271,35 +246,11 @@ namespace SoftPixelPenguinsWA
 
         private void UpdateSectionTitle(int sectionIndex)
         {
-            string[] sectionTitles = { "Datos Personales", "Grado y Cetificados", "Boucher de Pago", "Terminar Proceso" };
+            string[] sectionTitles = { "Datos Personales", "Grado y Cetificados" };
 
             if (sectionIndex >= 0 && sectionIndex < sectionTitles.Length)
             {
                 sectionTitle.InnerText = sectionTitles[sectionIndex];
-            }
-        }
-
-        protected void Timer_Tick(object sender, EventArgs e)
-        {
-            alumno alumno = null;
-            string nombre = null;
-            if ((nombre = (string)Session["nombreSesion"]) != null)
-            {
-                alumno = (alumno)Session[nombre];
-                if (alumno != null && alumno.estado.Equals(estadoAlumno.Por_Pagar) && section3.Style["display"] == "block")
-                {
-                    Session[nombre] = null;
-                    Timer1.Enabled = false;
-                    Session["nombreSesion"] = nombre;
-                    nextSection(sender, e);
-                }
-                else if (alumno != null && alumno.estado.Equals(estadoAlumno.Matriculado) && section5.Style["display"] == "block")
-                {
-                    Session[nombre] = null;
-                    Session["nombreSesion"] = null;
-                    Timer2.Enabled = false;
-                    nextSection(sender, e);
-                }
             }
         }
 
@@ -308,10 +259,5 @@ namespace SoftPixelPenguinsWA
             Response.Redirect("Matricularse.aspx");
         }
 
-        protected void btnGuardarBoucher_Click(object sender, EventArgs e)
-        {
-            Session["comprobantePago"] = fileBoucherPago.FileBytes;
-            nextSection(sender, e);
-        }
     }
 }

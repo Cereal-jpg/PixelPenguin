@@ -11,7 +11,9 @@ namespace SoftPixelPenguinsWA
     public partial class MiPerfilPA : System.Web.UI.Page
     {
         PersonalAdministrativoWSClient personalAdminBO = new PersonalAdministrativoWSClient();
+        AdministradorWSClient administradorBO = new AdministradorWSClient();
         personalAdministrativo personalAdmin = null;
+        administrador admin = null;
         int idPA = 0;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -23,6 +25,10 @@ namespace SoftPixelPenguinsWA
                     idPA = (int)Session["idPersonalAdmin"];
                     cargarValores();
 
+                } else if (Session["idAdmin"] != null)
+                {
+                    idPA = (int)Session["idAdmin"];
+                    cargarValoresAdmin();
                 }
             }
 
@@ -65,6 +71,47 @@ namespace SoftPixelPenguinsWA
             txtDireccion.Text = personalAdmin.direccion;
             txtUsuario.Text = personalAdmin.username;
             txtContrasena.Attributes["value"] = personalAdmin.password;
+
+            deshabilitarComponentes();
+        }
+
+        private void cargarValoresAdmin()
+        {
+            admin = administradorBO.obtenerAdministradorPorId(idPA);
+            txtDNIAlumno.Text = admin.dni;
+            string[] palabras = admin.nombreCompleto.Trim().Split(' ');
+
+            if (palabras.Length == 3)
+            {
+                txtNombreAlumno.Text = palabras[0];
+                txtApellidoPaterno.Text = palabras[1];
+                txtApellidoMaterno.Text = palabras[2];
+            }
+            else
+            {
+                txtNombreAlumno.Text = palabras[0];
+                txtApellidoMaterno.Text = palabras[palabras.Length - 1];
+
+                // Unir las palabras intermedias como Apellido Paterno
+                if (palabras.Length > 2)
+                {
+                    txtApellidoPaterno.Text = string.Join(" ", palabras, 1, palabras.Length - 2);
+                }
+                else
+                {
+                    txtApellidoPaterno.Text = palabras[palabras.Length - 1];
+                    txtApellidoMaterno.Text = ""; // Si no hay apellido materno, dejar en blanco
+                }
+            }
+
+            // Datos personales del alumno
+
+            dtpFechaNacimiento.Text = admin.fechaNacimiento.ToString("yyyy-MM-dd");
+            txtSexo.Text = admin.sexo;
+            txtEmail.Text = admin.email;
+            txtDireccion.Text = admin.direccion;
+            txtUsuario.Text = admin.username;
+            txtContrasena.Attributes["value"] = admin.password;
 
             deshabilitarComponentes();
         }

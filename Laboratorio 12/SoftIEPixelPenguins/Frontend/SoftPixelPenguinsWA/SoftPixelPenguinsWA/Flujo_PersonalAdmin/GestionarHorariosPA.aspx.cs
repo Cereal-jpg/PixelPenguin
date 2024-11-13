@@ -27,6 +27,7 @@ namespace SoftPixelPenguinsWA
             curso.gradoAcademico = gradoAcademicoBO.obtenerGradoAcademicoPorId(curso.gradoAcademico.idGradoAcademico);
             if (!IsPostBack)
             {
+                if (Session["idAdmin"] != null) panelGestionarUsuarios.Visible = true;
                 cargarHorarios();
                 cargarSecciones();
                 cargarDias();

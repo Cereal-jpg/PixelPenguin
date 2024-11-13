@@ -44,32 +44,6 @@ namespace SoftPixelPenguinsWA
                 } 
             }
 
-            if (Session["idProfesorLogueado"] != null)
-            {
-                int idProfesor = (int)Session["idProfesorLogueado"];
-
-                profesor = profesorBO.obtenerProfesorPorId(idProfesor);
-                txtDNIAlumno.Text = profesor.dni;
-                string[] palabras = profesor.nombreCompleto.Trim().Split(' ');
-                if (palabras.Length == 3)
-                {
-                    txtNombreAlumno.Text = palabras[0];
-                    txtApellidoPaterno.Text = palabras[1];
-                    txtApellidoMaterno.Text = palabras[2];
-                }
-                else
-                {
-                    txtNombreAlumno.Text = string.Join(" ", palabras.Take(palabras.Length - 2));
-                    txtApellidoPaterno.Text = palabras[palabras.Length - 2];
-                    txtApellidoMaterno.Text = palabras[palabras.Length - 1];
-                }
-                dtpFechaNacimiento.Text = profesor.fechaNacimiento.ToString("yyyy-MM-dd");
-                txtSexo.Text = profesor.sexo;
-                txtEmail.Text = profesor.email;
-                txtDireccion.Text = profesor.direccion;
-                deshabilitarComponentes();
-            }
-
         }
 
         private void cargarValores()

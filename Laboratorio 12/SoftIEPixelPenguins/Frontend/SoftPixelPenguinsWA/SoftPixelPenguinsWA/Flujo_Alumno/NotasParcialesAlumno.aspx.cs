@@ -14,11 +14,14 @@ namespace SoftPixelPenguinsWA
         AlumnoWSClient alumnoBO = new AlumnoWSClient();
         CursoWSClient cursoBO = new CursoWSClient();
         NotaWSClient notaBO = new NotaWSClient();
+        CompetenciaWSClient competenciaBO = new CompetenciaWSClient();
+        MatriculaWSClient matriculaBO = new MatriculaWSClient();
         gradoAcademico grado = null;
         alumno alumno = null;
         curso curso = null;
         int idAlumno;
-        BindingList<nota> notas = null;
+        BindingList<nota> notas = new BindingList<nota>();
+        BindingList<curso> cursos = null;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -31,7 +34,7 @@ namespace SoftPixelPenguinsWA
                     hTitulo.InnerHtml = "Notas parciales";
                     if (alumno != null && grado != null)
                     {
-                        BindingList<curso> cursos = new BindingList<curso>(cursoBO.listarCursosPorGrado(grado.idGradoAcademico));
+                        cursos = new BindingList<curso>(cursoBO.listarCursosPorGrado(grado.idGradoAcademico));
                         foreach (curso curso in cursos)
                         {
                             string textoItem = curso.nombre;
@@ -52,7 +55,24 @@ namespace SoftPixelPenguinsWA
         {
             int idCurso = int.Parse(ddlCursos.SelectedValue);
             int bimestre = int.Parse(ddlBimestre.SelectedValue);
-            gvNotas.DataSource = (notaBO.listarPorAlumnoCursoYBimestre(idAlumno, idCurso, bimestre));
+            if (notaBO.listarPorAlumnoCursoYBimestre(idAlumno, idCurso, bimestre) == null)
+            {
+                BindingList<competencia> competencias = new BindingList<competencia>(competenciaBO.listarCompetenciasPorCurso(idCurso));
+                foreach(competencia aux in competencias)
+                {
+                    nota nota = new nota
+                    {
+                        fid_Matricula = matriculaBO.obtenerMatriculaPorIdAlumno(idAlumno),
+                        fid_Alumno = idAlumno,
+                        nota1 = "-",
+                        bimestre = bimestre,
+                        curso=aux.curso,
+                        competencia=aux
+                    };
+                    notaBO.insertarNota(nota);
+                }
+            }
+            gvNotas.DataSource = notaBO.listarPorAlumnoCursoYBimestre(idAlumno,idCurso,bimestre);
             gvNotas.DataBind();
         }
 

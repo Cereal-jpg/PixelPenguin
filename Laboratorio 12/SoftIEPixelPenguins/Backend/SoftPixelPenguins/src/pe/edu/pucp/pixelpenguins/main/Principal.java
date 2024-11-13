@@ -78,7 +78,7 @@ public class Principal {
                     nota.setCurso(aux);
                     nota.setCompetencia(aux2);
                     if(notaBO.insertar(nota)!=0)
-                        System.out.println("Nota insertada");
+                        System.out.println(aux.getCodigoCurso()+"-"+aux2.getDescripcion()+" Insertado");
                 }
             }
         }

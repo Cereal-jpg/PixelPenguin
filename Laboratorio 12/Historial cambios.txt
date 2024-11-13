@@ -8,7 +8,7 @@ Nuevos cambios en BD
 6. Todo lo demás igual, pero las tablas muchos a muchos aún están por verse
 7. Se rellenaron datos de todas las tablas para mostrar
 8. Se reacomodó todo el Backend, quedó sin interfaz
-9. El frontend aún está donde se quedó en la carpeta del lab anterior, he creado un nuevo proyecto para el back y front (aún falta todo xd).
+9. El frontend aún está donde se quedó en la carpeta del lab anterior, nuevo proyecto para el back y front.
 
 Revisar Pago x Matrícula y Notas por Alumno y Curso.
 

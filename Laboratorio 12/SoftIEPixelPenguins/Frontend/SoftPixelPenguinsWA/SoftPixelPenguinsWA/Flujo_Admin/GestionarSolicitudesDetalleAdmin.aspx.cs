@@ -238,7 +238,7 @@ namespace SoftPixelPenguinsWA
                 {
                     for (int i = 1; i <= 4; i++)
                     {
-                        nota nota = new nota()
+                        nota nota = new nota
                         {
                             fid_Matricula = matricula.idMatricula,
                             fid_Alumno = alumno.idUsuario,

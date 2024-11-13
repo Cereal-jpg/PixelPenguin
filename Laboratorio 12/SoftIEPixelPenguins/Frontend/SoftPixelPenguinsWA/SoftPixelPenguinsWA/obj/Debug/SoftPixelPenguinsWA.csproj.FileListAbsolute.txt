@@ -313,3 +313,5 @@ D:\TAProgra\Laboratorio 12\SoftIEPixelPenguins\Frontend\SoftPixelPenguinsWA\Soft
 D:\TAProgra\Laboratorio 12\SoftIEPixelPenguins\Frontend\SoftPixelPenguinsWA\SoftPixelPenguinsWA\obj\Debug\SoftPixe.9F367AAF.Up2Date
 D:\TAProgra\Laboratorio 12\SoftIEPixelPenguins\Frontend\SoftPixelPenguinsWA\SoftPixelPenguinsWA\obj\Debug\SoftPixelPenguinsWA.dll
 D:\TAProgra\Laboratorio 12\SoftIEPixelPenguins\Frontend\SoftPixelPenguinsWA\SoftPixelPenguinsWA\obj\Debug\SoftPixelPenguinsWA.pdb
+C:\Users\Enzo\Desktop\PUCP\Github\Laboratorio 12\SoftIEPixelPenguins\Frontend\SoftPixelPenguinsWA\SoftPixelPenguinsWA\bin\BouncyCastle.Cryptography.dll
+C:\Users\Enzo\Desktop\PUCP\Github\Laboratorio 12\SoftIEPixelPenguins\Frontend\SoftPixelPenguinsWA\SoftPixelPenguinsWA\bin\BouncyCastle.Cryptography.xml

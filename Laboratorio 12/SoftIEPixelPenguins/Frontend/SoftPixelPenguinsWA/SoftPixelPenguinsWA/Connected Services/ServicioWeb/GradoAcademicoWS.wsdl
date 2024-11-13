@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftPixelPenguinsWSBL/GradoAcademicoWS?xsd=1" namespace="http://services.pixelpenguins.pucp.edu.pe" />
     </xsd:schema>
   </types>
-  <message name="eliminarGradoAcademico">
-    <part name="parameters" element="tns:eliminarGradoAcademico" />
+  <message name="listarTodosGradosAcademicos">
+    <part name="parameters" element="tns:listarTodosGradosAcademicos" />
   </message>
-  <message name="eliminarGradoAcademicoResponse">
-    <part name="parameters" element="tns:eliminarGradoAcademicoResponse" />
+  <message name="listarTodosGradosAcademicosResponse">
+    <part name="parameters" element="tns:listarTodosGradosAcademicosResponse" />
   </message>
   <message name="insertarGradoAcademico">
     <part name="parameters" element="tns:insertarGradoAcademico" />
@@ -29,16 +29,16 @@
   <message name="modificarGradoAcademicoResponse">
     <part name="parameters" element="tns:modificarGradoAcademicoResponse" />
   </message>
-  <message name="listarTodosGradosAcademicos">
-    <part name="parameters" element="tns:listarTodosGradosAcademicos" />
+  <message name="eliminarGradoAcademico">
+    <part name="parameters" element="tns:eliminarGradoAcademico" />
   </message>
-  <message name="listarTodosGradosAcademicosResponse">
-    <part name="parameters" element="tns:listarTodosGradosAcademicosResponse" />
+  <message name="eliminarGradoAcademicoResponse">
+    <part name="parameters" element="tns:eliminarGradoAcademicoResponse" />
   </message>
   <portType name="GradoAcademicoWS">
-    <operation name="eliminarGradoAcademico">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/eliminarGradoAcademicoRequest" message="tns:eliminarGradoAcademico" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/eliminarGradoAcademicoResponse" message="tns:eliminarGradoAcademicoResponse" />
+    <operation name="listarTodosGradosAcademicos">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/listarTodosGradosAcademicosRequest" message="tns:listarTodosGradosAcademicos" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/listarTodosGradosAcademicosResponse" message="tns:listarTodosGradosAcademicosResponse" />
     </operation>
     <operation name="insertarGradoAcademico">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/insertarGradoAcademicoRequest" message="tns:insertarGradoAcademico" />
@@ -52,14 +52,14 @@
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/modificarGradoAcademicoRequest" message="tns:modificarGradoAcademico" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/modificarGradoAcademicoResponse" message="tns:modificarGradoAcademicoResponse" />
     </operation>
-    <operation name="listarTodosGradosAcademicos">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/listarTodosGradosAcademicosRequest" message="tns:listarTodosGradosAcademicos" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/listarTodosGradosAcademicosResponse" message="tns:listarTodosGradosAcademicosResponse" />
+    <operation name="eliminarGradoAcademico">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/eliminarGradoAcademicoRequest" message="tns:eliminarGradoAcademico" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/eliminarGradoAcademicoResponse" message="tns:eliminarGradoAcademicoResponse" />
     </operation>
   </portType>
   <binding name="GradoAcademicoWSPortBinding" type="tns:GradoAcademicoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="eliminarGradoAcademico">
+    <operation name="listarTodosGradosAcademicos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -95,7 +95,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarTodosGradosAcademicos">
+    <operation name="eliminarGradoAcademico">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

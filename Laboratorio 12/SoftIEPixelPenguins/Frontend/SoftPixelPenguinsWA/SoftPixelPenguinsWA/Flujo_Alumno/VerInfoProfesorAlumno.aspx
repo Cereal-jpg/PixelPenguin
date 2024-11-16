@@ -24,44 +24,35 @@
     <a href="MiPerfilAlumno.aspx"><i class="fa-solid fa-user"></i> Mi Perfil</a>
 </asp:Content>
 
+
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
+    <!--<h2 style="color: black;">Cursos y Horarios</h2>-->
     <h2 id="hTitulo" style="color: black;" runat="server"></h2>
-    <link rel="stylesheet" href="../Content/Estilos-Perfil.css" />
-    <link rel="stylesheet" href="../Content/EstilosGenerico.css" />
-    <div class="container-al">
-        <div class="schedule">
-            <!-- Sección: Datos del profesor-->
-            <div class="form-section">
-                <h3>Datos del docente</h3>
-                <div class="form-group">
-                    <div class="form-row">
-                        <label>Código:</label>
-                        <asp:TextBox ID="txtCodigoProfesor" runat="server" placeholder="Código del docente"></asp:TextBox>
-                    </div>
-                    <div class="form-row">
-                        <label>Especialidad:</label>
-                        <asp:TextBox ID="txtEspecialidad" runat="server" placeholder="Especialidad"></asp:TextBox>
-                    </div>
-                    <div class="form-row">
-                        <label>Fecha de cumpleaños:</label>
-                        <asp:TextBox ID="txtFecha" runat="server" placeholder="Fecha de cumpleaños"></asp:TextBox>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-row">
-                        <label>Email de contacto:</label>
-                        <asp:TextBox ID="txtEmail" runat="server" placeholder="Email del docente"></asp:TextBox>
-                    </div>
-                    <div class="form-row">
-                        <label>Sexo:</label>
-                        <asp:TextBox ID="txtSexo" runat="server" placeholder="Sexo"></asp:TextBox>
-                    </div>
-                </div>
+    <div class="container-matricula" style="display:block;">
+        <h2 style="color: black;">Datos del Docente</h2>
+        <div class="form-group">
+            <div class="form-row">
+                <label>Nombre:</label>
+                <asp:TextBox ID="txtNombre" runat="server" placeholder="Nombres"></asp:TextBox>
             </div>
-            <div>
-                <br>
-                <asp:Button ID="btnRegresar" runat="server" Text="Regresar" OnClick="btnRegresar_Click" CssClass="btn btn-primary" />
+            <div class="form-row">
+                <label>Email:</label>
+                <asp:TextBox ID="txtEmail" runat="server" placeholder="Email"></asp:TextBox>
             </div>
+        </div>
+        <div class="form-group">
+            <div class="form-row">
+                <label>Especialidad:</label>
+                <asp:TextBox ID="txtEspecialidad" runat="server" placeholder="Especialidad"></asp:TextBox>
+            </div>
+            <div class="form-row">
+                <label>Fecha de Nacimiento:</label>
+                <asp:TextBox ID="dtpFechaNacimiento" runat="server" placeholder="Fecha de Nacimiento" CssClass="date-picker" TextMode="Date"></asp:TextBox>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <br>
+            <asp:Button ID="Button1" runat="server" Text="Regresar" OnClick="btnRegresar_Click" CssClass="btn btn-primary" />
         </div>
     </div>
 </asp:Content>

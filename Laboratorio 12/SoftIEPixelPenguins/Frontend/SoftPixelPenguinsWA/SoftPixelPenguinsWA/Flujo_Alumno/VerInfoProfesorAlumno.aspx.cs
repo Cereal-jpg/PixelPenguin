@@ -11,7 +11,9 @@ namespace SoftPixelPenguinsWA
     public partial class VerInfoProfesorAlumno : System.Web.UI.Page
     {
         private ProfesorWSClient profesorBO=new ProfesorWSClient();
+        private CursoWSClient CursoBO = new CursoWSClient();
         profesor profesor = null;
+        curso curso = null;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -20,25 +22,31 @@ namespace SoftPixelPenguinsWA
                 if (id != null)
                 {
                     int idProfesor= Int32.Parse(id);
-                    profesor = profesorBO.obtenerProfesorPorId(idProfesor);
-                    hTitulo.InnerHtml = profesor.nombreCompleto;
-                    txtCodigoProfesor.Text = profesor.codigoProfesor.ToString();
-                    txtEspecialidad.Text = profesor.especialidad.ToString();
-                    txtFecha.Text=profesor.fechaNacimiento.ToString("dd/MM/yyyy"); ;
-                    txtEmail.Text = profesor.email;
-                    txtSexo.Text = profesor.sexo.ToString();
-                    deshabilitarComponentes();
+                    if (Session["idCursoSelec"] != null)
+                    {
+                        int idCurso = (int)Session["idCursoSelec"];
+                        curso = CursoBO.obtenerCursoPorId(idCurso);
+                        profesor = profesorBO.obtenerProfesorPorId(idProfesor);
+                        if (curso != null && profesor != null)
+                        {
+                            hTitulo.InnerHtml = curso.nombre + " - Profesor Asignado";
+                            txtNombre.Text = profesor.nombreCompleto;
+                            txtEspecialidad.Text = profesor.especialidad.ToString();
+                            dtpFechaNacimiento.Text = profesor.fechaNacimiento.ToString("yyyy-MM-dd");
+                            txtEmail.Text = profesor.email;
+                            deshabilitarComponentes();
+                        }
+                    }
                 }
             }
         }
 
         private void deshabilitarComponentes()
         {
-            txtCodigoProfesor.Enabled = false;
+            txtNombre.Enabled = false;
             txtEspecialidad.Enabled = false;
-            txtFecha.Enabled = false;
+            dtpFechaNacimiento.Enabled = false;
             txtEmail.Enabled = false;
-            txtSexo.Enabled = false;
         }
 
         protected void btnRegresar_Click(object sender, EventArgs e)

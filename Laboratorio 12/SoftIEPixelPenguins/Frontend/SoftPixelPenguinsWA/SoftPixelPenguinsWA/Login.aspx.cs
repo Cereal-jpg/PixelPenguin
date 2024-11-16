@@ -1,4 +1,5 @@
-﻿using SoftPixelPenguinsWA.ServicioWeb;
+﻿using Org.BouncyCastle.Asn1.Ocsp;
+using SoftPixelPenguinsWA.ServicioWeb;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,6 +47,10 @@ namespace SoftPixelPenguinsWA
                     case 4:
                         Session["idAdmin"] = id;
                         Response.Redirect("Flujo_PersonalAdmin/IndexPersonalAdministrativo.aspx");
+                        break;
+                    case 5:
+                        Session["idUserGenerico"] = id;
+                        Response.Redirect("Flujo_Generico/IndexUserGenerico.aspx");
                         break;
                 }
             }

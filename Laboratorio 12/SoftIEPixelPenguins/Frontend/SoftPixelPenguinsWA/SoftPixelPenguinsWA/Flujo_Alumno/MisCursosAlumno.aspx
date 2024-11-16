@@ -46,7 +46,7 @@
                     <asp:BoundField HeaderText="Horas Semanales" DataField="horasPorSemana"/>
                     <asp:TemplateField>
                         <ItemTemplate>
-                            <asp:LinkButton ID="btnVerInfoProfesor" runat="server" Text="Docente asignado" class="btn btn-primary" OnClick="btnVerInfoProfesor_Click" CommandArgument='<%# Eval("fid_Profesor") %>' />
+                            <asp:LinkButton ID="btnVerInfoProfesor" runat="server" CommandName="Seleccionar" Text="Docente asignado" class="btn btn-primary" OnClick="btnVerInfoProfesor_Click" CommandArgument='<%# Eval("fid_Profesor") %>' />
                         </ItemTemplate>
                     </asp:TemplateField>
                 </columns>

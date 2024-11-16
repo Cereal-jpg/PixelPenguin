@@ -52,6 +52,9 @@ namespace SoftPixelPenguinsWA
                 txtSexo.Text = alumno.sexo;
                 txtEmail.Text = alumno.email;
                 txtDireccion.Text = alumno.direccion;
+                txtUsuario.Text = alumno.username;
+                txtCodigo.Text = alumno.codigoAlumno.ToString();
+                txtContraseña.Text = alumno.password;
                 alumno.gradoAcademico = gradoAcademicoBO.obtenerGradoAcademicoPorId(alumno.gradoAcademico.idGradoAcademico);
                 txtGradoAcademico.Text = alumno.gradoAcademico.numeroGrado.ToString() + "° " + alumno.gradoAcademico.nivel.ToString();
                 if (alumno.estado.Equals(estadoAlumno.Por_Pagar) || alumno.estado.Equals(estadoAlumno.Matriculado))
@@ -166,9 +169,9 @@ namespace SoftPixelPenguinsWA
             {
                 if (alumno.estado.Equals(estadoAlumno.Pendiente))
                 {
-                    alumno.username = txtUsuario.Text;
-                    alumno.password = txtContraseña.Text;
-                    alumno.codigoAlumno = Int32.Parse(txtCodigo.Text);
+                    alumno.username = alumno.username;
+                    alumno.password = alumno.password;
+                    alumno.codigoAlumno = alumno.codigoAlumno;
                     alumno.estado = estadoAlumno.Por_Pagar;
 
                     string cuerpo = $"Hola {alumno.nombreCompleto},\n\n" +
@@ -179,7 +182,7 @@ namespace SoftPixelPenguinsWA
                     "Atentamente,\n" +
                     "Equipo Administrativo PixelPenguins";
 
-                    enviarCorreo(alumno.email.ToString(), "Confirmación de Aceptación", cuerpo);
+                    enviarCorreo("a20220666@pucp.edu.pe"/*alumno.email.ToString()*/, "Confirmación de Aceptación", cuerpo);
 
                 }
                 else if (alumno.estado.Equals(estadoAlumno.Por_Pagar))

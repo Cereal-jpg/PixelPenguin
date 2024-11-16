@@ -84,6 +84,11 @@ namespace SoftPixelPenguinsWA
         {
             LinkButton btn = (LinkButton)sender;
             int idProfesor = int.Parse(btn.CommandArgument);
+
+            GridViewRow row = (GridViewRow)btn.NamingContainer;
+            int idCurso = int.Parse(row.Cells[2].Text);
+            Session["idCursoSelec"] = idCurso;
+
             Response.Redirect("VerInfoProfesorAlumno.aspx?idProfesor="+idProfesor);
         }
     }

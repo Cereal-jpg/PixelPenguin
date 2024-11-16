@@ -184,6 +184,9 @@
     <Content Include="Content\grafico_style.css" />
     <Content Include="Content\site.css" />
     <Content Include="Flujo_Alumno\Matricula Online.aspx" />
+    <Content Include="Flujo_Generico\ConsultarMatriculaUserGenerico.aspx" />
+    <Content Include="Flujo_Generico\IndexUserGenerico.aspx" />
+    <Content Include="Flujo_Generico\MatriculaOnlineUserGenerico.aspx" />
     <Content Include="Flujo_PersonalAdmin\MiPerfilAdmin.aspx" />
     <Content Include="Flujo_Alumno\MisPagosAlumno.aspx" />
     <Content Include="Flujo_Alumno\VisualizarPagoAlumno.aspx" />
@@ -743,6 +746,27 @@
     </Compile>
     <Compile Include="Flujo_Alumno\Matricula Online.aspx.designer.cs">
       <DependentUpon>Matricula Online.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Flujo_Generico\ConsultarMatriculaUserGenerico.aspx.cs">
+      <DependentUpon>ConsultarMatriculaUserGenerico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Flujo_Generico\ConsultarMatriculaUserGenerico.aspx.designer.cs">
+      <DependentUpon>ConsultarMatriculaUserGenerico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Flujo_Generico\IndexUserGenerico.aspx.cs">
+      <DependentUpon>IndexUserGenerico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Flujo_Generico\IndexUserGenerico.aspx.designer.cs">
+      <DependentUpon>IndexUserGenerico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Flujo_Generico\MatriculaOnlineUserGenerico.aspx.cs">
+      <DependentUpon>MatriculaOnlineUserGenerico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Flujo_Generico\MatriculaOnlineUserGenerico.aspx.designer.cs">
+      <DependentUpon>MatriculaOnlineUserGenerico.aspx</DependentUpon>
     </Compile>
     <Compile Include="Flujo_PersonalAdmin\MiPerfilAdmin.aspx.cs">
       <DependentUpon>MiPerfilAdmin.aspx</DependentUpon>

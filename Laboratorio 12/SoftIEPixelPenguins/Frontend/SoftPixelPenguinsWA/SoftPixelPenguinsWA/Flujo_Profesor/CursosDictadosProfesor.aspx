@@ -27,20 +27,24 @@
 
     <h2 style="text-align: left; color: #000f;">Profesor - Cursos Dictados</h2>
     <link rel="stylesheet" href="../Content/Estilos-Alumno.css" />
-    <div class="container-al">
-        <div class="schedule">
+    <div class="container-matricula" style="display:block;">
 
-            <asp:Label ID="myLabel" runat="server" Text="" Font-Size="Large" Font-Bold="True" CssClass="my-label"></asp:Label>
-            <br><br>
-            <asp:GridView ID="gvCursosDictados" runat="server" AllowPaging="true" PageSize="12" AutoGenerateColumns="false" CssClass="table table-hover table-responsive table-striped" ShowHeaderWhenEmpty="true">
-                <Columns>
-                    <asp:BoundField HeaderText="Codigo" DataField="codigoCurso"/>
-                    <asp:BoundField HeaderText="Nombre" DataField="nombre"/>
-                    <asp:BoundField HeaderText="Horas Semanales" DataField="horasPorSemana"/>
-                </columns>
-            </asp:GridView>
+        <asp:Label ID="myLabel" runat="server" Text="" Font-Size="X-Large" Font-Bold="True" CssClass="my-label"></asp:Label>
+        <br><br>
+        <asp:GridView ID="gvCursosDictados" runat="server" AllowPaging="true" PageSize="12" AutoGenerateColumns="false" CssClass="table table-hover table-responsive table-striped" ShowHeaderWhenEmpty="true">
+            <Columns>
+                <asp:BoundField HeaderText="Codigo" DataField="codigoCurso"/>
+                <asp:BoundField HeaderText="Nombre" DataField="nombre"/>
+                <asp:BoundField HeaderText="Horas Semanales" DataField="horasPorSemana"/>
+                <asp:TemplateField>
+                    <ItemTemplate>
+                        <asp:LinkButton ID="btnVerGrado" runat="server" CommandName="Seleccionar" Text="Ver Grado" class="btn btn-primary" OnClick="btnVerGrado_Click" CommandArgument='<%# Eval("idCurso") %>' />
+                    </ItemTemplate>
+                </asp:TemplateField>
+
+            </columns>
+        </asp:GridView>
 
 
-        </div>
     </div>
 </asp:Content>

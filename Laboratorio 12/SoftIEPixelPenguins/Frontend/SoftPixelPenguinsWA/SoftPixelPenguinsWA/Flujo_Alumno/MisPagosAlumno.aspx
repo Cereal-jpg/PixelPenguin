@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="../Content/Estilos-Alumno.css" />
     <div class="container-al">
         
-        <div class="schedule">
+         <div class="container-matricula" style="display:block;">
             <h2 style="color: black; padding-top: 10px;">Listado de Pago</h2>
             <div class="row">
                 <asp:GridView ID="gvPagos" runat="server" AllowPaging="true" PageSize="10" AutoGenerateColumns="false"

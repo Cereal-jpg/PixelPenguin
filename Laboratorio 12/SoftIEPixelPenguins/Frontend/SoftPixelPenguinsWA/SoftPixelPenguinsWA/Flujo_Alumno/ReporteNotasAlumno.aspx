@@ -30,8 +30,9 @@
     <h2 style="text-align: left; color: #000f;">Alumno - Reporte de Notas</h2>
     <link rel="stylesheet" href="../Content/EstiloCurso.css" />
 
-    <div class="container-al">
-        <div class="schedule">
+    <div id="section1" class="section" runat="server" style="display: block;">
+       <!-- Sección: Datos del alumno -->
+        <div class="container-matricula" style="display:block;">
             <asp:Label ID="myLabel" runat="server" Text="" Font-Size="Large" Font-Bold="True" CssClass="my-label"></asp:Label>
             <br><br>
             <asp:GridView ID="gvNotas" runat="server" AllowPaging="true" PageSize="12" AutoGenerateColumns="false" CssClass="table table-hover table-responsive table-striped" ShowHeaderWhenEmpty="true">

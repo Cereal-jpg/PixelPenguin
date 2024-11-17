@@ -37,8 +37,8 @@ namespace SoftPixelPenguinsWA
                 }
 
             }
-                // Cargar el encabezado del grado académico
-                if (Session["idAlumnoLogueado"] != null)
+            // Cargar el encabezado del grado académico
+            if (Session["idAlumnoLogueado"] != null)
             {
                 int idUsuario = (int)Session["idAlumnoLogueado"];
                 alumno = alumnoBO.obtenerAlumnoPorId(idUsuario);
@@ -70,6 +70,7 @@ namespace SoftPixelPenguinsWA
                 myLabel.Text = "Sesión de usuario no iniciada.";
             }
         }
+
         protected void cargarMisCursos()
         {
             if (Session["idGradoAcademico"] != null)
@@ -84,7 +85,12 @@ namespace SoftPixelPenguinsWA
         {
             LinkButton btn = (LinkButton)sender;
             int idProfesor = int.Parse(btn.CommandArgument);
-            Response.Redirect("VerInfoProfesorAlumno.aspx?idProfesor="+idProfesor);
+
+            GridViewRow row = (GridViewRow)btn.NamingContainer;
+            int idCurso = int.Parse(row.Cells[2].Text);
+            Session["idCursoSelec"] = idCurso;
+
+            Response.Redirect("VerInfoProfesorAlumno.aspx?idProfesor=" + idProfesor);
         }
     }
 }

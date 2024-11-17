@@ -49,66 +49,63 @@
     <h2 style="text-align: left; color: #000f;">Profesor - Mi Perfil</h2>
     <link rel="stylesheet" href="../Content/Estilos-Alumno.css" />
 
-    <div class="schedule">
-        <div id="section1" class="section" runat="server" style="display: block;">
+    <div id="section1" class="section" runat="server" style="display: block;">
 
-            <div class="form-section">
-                <h3>Datos del Profesor</h3>
-                <div class="form-group">
-                    <div class="form-row">
-                        <label>Nombres:</label>
-                        <asp:TextBox ID="txtNombreAlumno" runat="server" placeholder="Nombres"></asp:TextBox>
-                    </div>
-                    <div class="form-row">
-                        <label>Apellido Paterno:</label>
-                        <asp:TextBox ID="txtApellidoPaterno" runat="server" placeholder="Apellido Paterno"></asp:TextBox>
-                    </div>
-                    <div class="form-row">
-                        <label>Apellido Materno:</label>
-                        <asp:TextBox ID="txtApellidoMaterno" runat="server" placeholder="Apellido Materno"></asp:TextBox>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-row">
-                        <label>DNI:</label>
-                        <asp:TextBox ID="txtDNIAlumno" runat="server" placeholder="DNI"></asp:TextBox>
-                    </div>
-                    <div class="form-row">
-                        <label>Fecha de Nacimiento:</label>
-                        <asp:TextBox ID="dtpFechaNacimiento" runat="server" placeholder="Fecha de Nacimiento" CssClass="date-picker" TextMode="Date"></asp:TextBox>
-                    </div>
-                    <div class="form-row">
-                        <label>Sexo:</label>
-                        <asp:TextBox ID="txtSexo" runat="server" placeholder="Sexo"></asp:TextBox>
-                    </div>
-                    <div class="form-row">
-                        <label>Email:</label>
-                        <asp:TextBox ID="txtEmail" runat="server" placeholder="Email"></asp:TextBox>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-row">
-                        <label>Direccion:</label>
-                        <asp:TextBox ID="txtDireccion" runat="server" placeholder="Direccion"></asp:TextBox>
-                    </div>
-                    <div class="form-row">
-                        <label>Usuario:</label>
-                        <asp:TextBox ID="txtUsuario" runat="server" placeholder="Usuario"></asp:TextBox>
-                    </div>
-                    <div class="form-row">
-                        <label>Contraseña:</label>
-                        <div class="input-group">
-                            <asp:TextBox ID="txtContrasena" runat="server" placeholder="Contraseña" TextMode="Password" CssClass="form-control password-field"></asp:TextBox>
-                            <span class="input-icon">
-                                <i class="fa fa-eye" id="togglePassword" style="cursor: pointer;"></i>
-                            </span>
-                        </div>
-                    </div>
+    <div class="container-matricula" style="display:block;">
+        <h2 style="color: black;">Datos del Administrador</h2>
+        <div class="form-group">
+            <div class="form-row">
+                <label>Nombres:</label>
+                <asp:TextBox ID="txtNombreAlumno" runat="server" placeholder="Nombres"></asp:TextBox>
+            </div>
+            <div class="form-row">
+                <label>Apellido Paterno:</label>
+                <asp:TextBox ID="txtApellidoPaterno" runat="server" placeholder="Apellido Paterno"></asp:TextBox>
+            </div>
+            <div class="form-row">
+                <label>Apellido Materno:</label>
+                <asp:TextBox ID="txtApellidoMaterno" runat="server" placeholder="Apellido Materno"></asp:TextBox>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-row">
+                <label>DNI:</label>
+                <asp:TextBox ID="txtDNIAlumno" runat="server" placeholder="DNI"></asp:TextBox>
+            </div>
+            <div class="form-row">
+                <label>Fecha de Nacimiento:</label>
+                <asp:TextBox ID="dtpFechaNacimiento" runat="server" placeholder="Fecha de Nacimiento" CssClass="date-picker" TextMode="Date"></asp:TextBox>
+            </div>
+            <div class="form-row">
+                <label>Sexo:</label>
+                <asp:TextBox ID="txtSexo" runat="server" placeholder="Sexo"></asp:TextBox>
+            </div>
+            <div class="form-row">
+                <label>Email:</label>
+                <asp:TextBox ID="txtEmail" runat="server" placeholder="Email"></asp:TextBox>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-row">
+                <label>Direccion:</label>
+                <asp:TextBox ID="txtDireccion" runat="server" placeholder="Direccion"></asp:TextBox>
+            </div>
+            <div class="form-row">
+                <label>Usuario:</label>
+                <asp:TextBox ID="txtUsuario" runat="server" placeholder="Usuario"></asp:TextBox>
+            </div>
+            <div class="form-row">
+                <label>Contraseña:</label>
+                <div class="input-group">
+                    <asp:TextBox ID="txtContrasena" runat="server" placeholder="Contraseña" TextMode="Password" CssClass="form-control password-field"></asp:TextBox>
+                    <span class="input-icon">
+                        <i class="fa fa-eye" id="togglePassword" style="cursor: pointer;"></i>
+                    </span>
                 </div>
             </div>
-
         </div>
-
     </div>
+
+</div>
 
 </asp:Content>

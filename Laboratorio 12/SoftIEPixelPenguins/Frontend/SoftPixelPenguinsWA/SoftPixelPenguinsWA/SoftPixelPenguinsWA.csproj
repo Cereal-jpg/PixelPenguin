@@ -201,6 +201,7 @@
     <Content Include="Flujo_PersonalAdmin\GestionarSolicitudesDetallePA.aspx" />
     <Content Include="Flujo_PersonalAdmin\GestionarSolicitudesPA.aspx" />
     <Content Include="Flujo_PersonalAdmin\GestionarUsuariosAdmin.aspx" />
+    <Content Include="Flujo_Profesor\VerInfoGradoProfesor.aspx" />
     <Content Include="Images\CHICAMAT.jpg" />
     <Content Include="Images\CHICOMAT.png" />
     <Content Include="Images\Colegio.png" />
@@ -890,6 +891,13 @@
     </Compile>
     <Compile Include="Flujo_Profesor\IndexProfesor.aspx.designer.cs">
       <DependentUpon>IndexProfesor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Flujo_Profesor\VerInfoGradoProfesor.aspx.cs">
+      <DependentUpon>VerInfoGradoProfesor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Flujo_Profesor\VerInfoGradoProfesor.aspx.designer.cs">
+      <DependentUpon>VerInfoGradoProfesor.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

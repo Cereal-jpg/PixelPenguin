@@ -37,8 +37,6 @@
             <ul id="notificationList" class="notification-list" runat="server">
                 <li>Próxima fecha de pago: <asp:Literal ID="fechaPagoLiteral" runat="server"></asp:Literal></li>
                 <li>Estado de pagos: <asp:Literal ID="Estado" runat="server"></asp:Literal></li>
-                <li>Entrega de trabajos hasta el jueves.</li>
-                <li>Examen de matemáticas programado para el lunes.</li>
             </ul>
         </div>
     </div>

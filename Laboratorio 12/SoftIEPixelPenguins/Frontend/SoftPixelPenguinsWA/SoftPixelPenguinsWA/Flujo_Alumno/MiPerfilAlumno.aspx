@@ -27,7 +27,6 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
 
-    <link href="../Content/Estilos-Perfil.css" rel="stylesheet" />
     <script src="/Scripts/MostrarContraseña.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -44,14 +43,26 @@
             });
     </script>
 
+    <style> 
+
+        .input-icon {
+            position: absolute;
+            right: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+    </style>
+
 
     <h2 style="text-align: left; color: #000f;">Mi Perfil</h2>
 
-    <div class="schedule">
         <div id="section1" class="section" runat="server" style="display: block;">
 
-            <div class="form-section">
-                    <h3>Datos del alumno</h3>
+            <div class="container-matricula" style="display:block;">
+                <h2 style="color: black;">Datos del Alumno</h2>
                     <div class="form-group">
                         <div class="form-row">
                             <label>Nombres:</label>
@@ -105,8 +116,8 @@
                     </div>
                 </div>
 
-                <div class="form-section">
-                    <h3>Datos del Apoderado</h3>
+                <div class="container-matricula" style="display:block;">
+                    <h2 style="color: black;">Datos del Apoderado</h2>
                     <div class="form-group">
                         <div class="form-row">
                             <label>DNI:</label>
@@ -127,8 +138,8 @@
                     </div>
                 </div>
 
-                <div class="form-section">
-                    <h3>Certificados</h3>
+                <div class="container-matricula" style="display:block;">
+                    <h2 style="color: black;">Certificados</h2>
                     <div class="form-group">
                         <div class="form-row">
                             <label>Certificado de Estudios:</label>
@@ -145,12 +156,13 @@
                     </div>
                 </div>
 
-                <div class="button-group">
+                <div style="display: flex; justify-content: center; align-items: center;">
+                    <br>
                     <asp:Button ID="btnGuardar" runat="server" Text="Guardar Cambios" OnClick="btnGuardar_Click1" CssClass="button-style" />
                 </div>
 
+
             </div>
     
-        </div>
 
 </asp:Content>

@@ -34,9 +34,8 @@
         }
     </style>
     
-    <div class="container-al">
-        <div class="schedule">
-
+    <div id="section1" class="section" runat="server" style="display: block;">
+        <div class="container-matricula" style="display:block;">
             <asp:Label ID="myLabel" runat="server" Text="" Font-Size="Large" Font-Bold="True" CssClass="my-label"></asp:Label>
             <br><br>
             <asp:GridView ID="gvMisCursos" runat="server" AllowPaging="true" PageSize="12" AutoGenerateColumns="false" CssClass="table table-hover table-responsive table-striped" ShowHeaderWhenEmpty="true">
@@ -46,7 +45,7 @@
                     <asp:BoundField HeaderText="Horas Semanales" DataField="horasPorSemana"/>
                     <asp:TemplateField>
                         <ItemTemplate>
-                            <asp:LinkButton ID="btnVerInfoProfesor" runat="server" Text="Docente asignado" class="btn btn-primary" OnClick="btnVerInfoProfesor_Click" CommandArgument='<%# Eval("fid_Profesor") %>' />
+                            <asp:LinkButton ID="btnVerInfoProfesor" runat="server" CommandName="Seleccionar" Text="Docente asignado" class="btn btn-primary" OnClick="btnVerInfoProfesor_Click" CommandArgument='<%# Eval("fid_Profesor") %>' />
                         </ItemTemplate>
                     </asp:TemplateField>
                 </columns>

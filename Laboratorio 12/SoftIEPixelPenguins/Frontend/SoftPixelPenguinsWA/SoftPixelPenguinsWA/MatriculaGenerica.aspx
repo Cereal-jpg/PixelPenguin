@@ -24,6 +24,19 @@
                     }
                 });
 
+                // Validación específica para campos DNI
+                $("input.dni-field").each(function () {
+                    const dniValue = $(this).val().trim();
+                    console.log("Validando DNI:", dniValue); // Depuración
+                    if (!/^\d{8}$/.test(dniValue)) { // Exactamente 8 dígitos
+                        isValid = false;
+                        $(this).addClass("is-invalid");
+                        alert("El campo DNI debe contener exactamente 8 dígitos.");
+                    } else {
+                        $(this).removeClass("is-invalid");
+                    }
+                });
+
                 // Si no es válido, previene el envío del formulario
                 if (!isValid) {
                     e.preventDefault();
@@ -79,7 +92,7 @@
                     <div class="form-group">
                         <div class="form-row">
                             <label>DNI:</label>
-                            <asp:TextBox ID="txtDNIAlumno" runat="server" placeholder="DNI" required="required" CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox ID="txtDNIAlumno" runat="server" placeholder="DNI" required="required" CssClass="form-control dni-field" ClientIDMode="Static"></asp:TextBox>
                         </div>
                         <div class="form-row">
                             <label>Fecha de Nacimiento:</label>
@@ -111,7 +124,7 @@
                     <div class="form-group">
                         <div class="form-row">
                             <label>DNI:</label>
-                            <asp:TextBox ID="txtDNIApoderado" runat="server" placeholder="DNI" required="required" CssClass="form-control"></asp:TextBox>
+                            <asp:TextBox ID="txtDNIApoderado" runat="server" placeholder="DNI" required="required" CssClass="form-control dni-field"></asp:TextBox>
                         </div>
                         <div class="form-row">
                             <label>Nombre Completo:</label>

@@ -85,7 +85,7 @@ namespace SoftPixelPenguinsWA
                             $"Tu nueva contraseña es: {user.password}\n" +
                             "Gracias por elegir nuestra institución\n" +
                             "Atentamente, \nEquipoAdministrativo PixelPenguins";
-            enviarCorreo("a20220666@pucp.edu.pe"/*alumno.email.ToString()*/, "Correo de Registro de matrícula", cuerpo);
+            enviarCorreo(alumno.email.ToString(), "Correo de Registro de matrícula", cuerpo);
 
             registrarUsuario.Visible = false;
             registrarLogin.Visible = true;

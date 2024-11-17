@@ -41,14 +41,15 @@
     <a href="MiPerfilAlumno.aspx"><i class="fa-solid fa-user"></i> Mi Perfil</a>
 </asp:Content>
 
+
+
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
 
     <link rel="stylesheet" href="../Content/EstilosMatriculaG.css" />
 
 
-    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 
-    <div class="container">
+    <div class="container" runat="server">
 
         <h2>Proceso de matrícula - <span id="sectionTitle" runat="server"></span></h2><hr>
 
@@ -64,7 +65,7 @@
         </div>
 
 
-        <div class="main-content">
+        <div class="main-content" runat="server">
             <div id="section1" class="section" runat="server" style="display: block;">
                 <div class="form-section">
                     <h3>Datos del Apoderado</h3>
@@ -98,7 +99,7 @@
                 </div>
             </div>
             <div id="section2" class="section" runat="server" style="display: none;">
-                <div class="form-section">
+                <div class="form-section" runat="server">
                     <h3>Seleccionar Grado Académico</h3><hr>
                     <div class="form-row">
                         <label for="ddlGrados">Por favor seleccione el grado en el que desea matricularse:</label>
@@ -162,6 +163,6 @@
                 <asp:Button ID="Button1" runat="server" Text="Terminar proceso de matrícula" OnClick="btnVolver_Click" CssClass="button-style" />
             </div>
         </div>
-
     </div>
+
 </asp:Content>

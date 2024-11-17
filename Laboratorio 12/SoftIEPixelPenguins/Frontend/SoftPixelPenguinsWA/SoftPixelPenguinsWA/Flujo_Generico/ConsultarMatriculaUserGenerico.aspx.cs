@@ -24,6 +24,8 @@ namespace SoftPixelPenguinsWA.Flujo_Generico
         {
             if (!IsPostBack)
             {
+                //SetActiveStep(0);
+                //UpdateSectionTitle(0);
                 // Verifica si la página actual es el index
                 if (Session["idUserGenerico"] != null)
                 {
@@ -56,19 +58,24 @@ namespace SoftPixelPenguinsWA.Flujo_Generico
 
                 idUser = (int)Session["idUserGenerico"];
                 alumnoLogueado = alumnoBO.obtenerAlumnoPorId(idUser);
-                SetActiveStep(0);
-                UpdateSectionTitle(0);
-                if (alumnoLogueado.estado.ToString() == "Por_Pagar")
+                if(alumnoLogueado != null)  // Ya es alumno, sino ingresa los datos del apoderado
                 {
-                    nextSection(sender, e);
-                    nextSection(sender, e);
-                    nextSection(sender, e);
-                }
-                else
-                {
-                    if(alumnoLogueado.estado.ToString() == "Matriculado")
+                    if (alumnoLogueado.estado.ToString() == "Por_Pagar")
                     {
                         nextSection(sender, e);
+                        nextSection(sender, e);
+                        nextSection(sender, e);
+                    }
+                    else{
+                        if(alumnoLogueado.certificadoDeEstudios != null && alumnoLogueado.apoderado != null)
+                        {
+                            txtDNIApoderado.Text = alumnoLogueado.apoderado.dni;
+                            txtNombreApoderado.Text = alumnoLogueado.apoderado.nombreCompleto;
+                            txtTelefonoApoderado.Text = alumnoLogueado.apoderado.telefono;
+                            ddlRelacionApoderado.SelectedValue = alumnoLogueado.apoderado.relacion;
+                            section1.Style["display"] = "none";
+                            section2.Style["display"] = "block";
+                        }
                     }
                 }
             }
@@ -132,34 +139,34 @@ namespace SoftPixelPenguinsWA.Flujo_Generico
             {
                 section1.Style["display"] = "none";
                 section2.Style["display"] = "block";
-                SetActiveStep(1);
-                UpdateSectionTitle(1);
+                //SetActiveStep(1);
+                //UpdateSectionTitle(1);
             }
             else if (section2.Style["display"] == "block")
             {
                 section2.Style["display"] = "none";
                 section3.Style["display"] = "block";
-                SetActiveStep(2);
+               // SetActiveStep(2);
             }
             else if (section3.Style["display"] == "block")
             {
                 section3.Style["display"] = "none";
                 section4.Style["display"] = "block";
-                SetActiveStep(3);
-                UpdateSectionTitle(2);
+                //SetActiveStep(3);
+                //UpdateSectionTitle(2);
             }
             else if (section4.Style["display"] == "block")
             {
                 section4.Style["display"] = "none";
                 section5.Style["display"] = "block";
-                SetActiveStep(4);
+                //SetActiveStep(4);
             }
             else if (section5.Style["display"] == "block")
             {
                 section5.Style["display"] = "none";
                 section6.Style["display"] = "block";
-                SetActiveStep(5);
-                UpdateSectionTitle(3);
+                //SetActiveStep(5);
+                //UpdateSectionTitle(3);
             }
         }
 
@@ -217,17 +224,31 @@ namespace SoftPixelPenguinsWA.Flujo_Generico
             }
         }
 
-
         protected void btnGuardarBoucher_Click(object sender, EventArgs e)
         {
-            Session["comprobantePago"] = fileBoucherPago.FileBytes;
-            nextSection(sender, e);
+            if (fileBoucherPago.HasFile)
+            {
+                // Procesa el archivo subido
+                Session["comprobantePago"] = fileBoucherPago.FileBytes;
+                nextSection(sender, e);
+                // Puedes agregar más lógica aquí según sea necesario
+            }
+            else
+            {
+                // Maneja el caso en que no se ha seleccionado un archivo
+                Response.Write("Por favor, selecciona un archivo.");
+            }
         }
+
 
         protected void btnVolver_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Matricularse.aspx");
+            Response.Redirect("IndexUserGenerico.aspx");
         }
 
+        protected void btnPrueba_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("IndexUserGenerico.aspx");
+        }
     }
 }

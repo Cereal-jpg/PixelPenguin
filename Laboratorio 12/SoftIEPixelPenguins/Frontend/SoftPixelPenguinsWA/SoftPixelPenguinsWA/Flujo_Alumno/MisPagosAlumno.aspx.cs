@@ -43,7 +43,12 @@ namespace SoftPixelPenguinsWA
             Response.Redirect("VisualizarPagoAlumno.aspx?idPago=" + idPago);
         }
 
-
+        protected void lbEditar_Click(object sender, EventArgs e)
+        {
+            LinkButton btn = (LinkButton)sender;
+            int idPago = int.Parse(btn.CommandArgument);
+            Response.Redirect("SubirBaucher.aspx?idPago=" + idPago);
+        }
     }
 
 

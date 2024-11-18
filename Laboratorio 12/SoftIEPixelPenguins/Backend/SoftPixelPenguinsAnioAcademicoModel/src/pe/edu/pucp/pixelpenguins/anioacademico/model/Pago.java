@@ -8,11 +8,11 @@ public class Pago {
     private Date fechaCreacion;
     private Date fechaPago;
     private double monto;
-    private TipoDePago tipoPago;
+    private TipoDePago tipoPago = null;
     private EstadoDePago estado;
-    private TipoDeComprobante tipoDeComprobante;
+    private TipoDeComprobante tipoDeComprobante = null;
     private Matricula matricula; // tendrá un FK fid_matricula en la BD
-    private byte[] comprobanteDePago;
+    private byte[] comprobanteDePago = null;
 
     public Pago(){}
     

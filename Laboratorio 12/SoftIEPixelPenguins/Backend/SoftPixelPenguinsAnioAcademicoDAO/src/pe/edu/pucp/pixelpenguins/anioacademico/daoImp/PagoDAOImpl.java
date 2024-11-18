@@ -46,9 +46,9 @@ public class PagoDAOImpl extends DAOImpl implements PagoDAO {
         this.incluirParametroDate(1, this.pago.getFechaCreacion());
         this.incluirParametroDate(2, this.pago.getFechaPago());
         this.incluirParametroDouble(3, this.pago.getMonto());
-        this.incluirParametroString(4, this.pago.getTipoPago().toString()); 
+        this.incluirParametroString(4,(this.pago.getTipoPago() != null) ? this.pago.getTipoPago().toString() : null); 
         this.incluirParametroString(5, this.pago.getEstado().toString());
-        this.incluirParametroString(6, this.pago.getTipoDeComprobante().toString());
+        this.incluirParametroString(6, (this.pago.getTipoDeComprobante()!= null) ? this.pago.getTipoDeComprobante().toString() : null);
         this.incluirParametroInt(7, this.pago.getMatricula().getIdMatricula());
         this.incluirParametroBytes(8, this.pago.getComprobanteDePago());
     }
@@ -111,9 +111,11 @@ public class PagoDAOImpl extends DAOImpl implements PagoDAO {
         this.pago.setFechaCreacion(this.resultSet.getDate("fechaCreacion"));
         this.pago.setFechaPago(this.resultSet.getDate("fechaPago"));
         this.pago.setMonto(this.resultSet.getDouble("monto"));
-        this.pago.setTipoPago(TipoDePago.valueOf(this.resultSet.getString("tipoPago")));
+        String tipoPagoStr = this.resultSet.getString("tipoPago");
+        this.pago.setTipoPago(tipoPagoStr != null ? TipoDePago.valueOf(tipoPagoStr) : null);
         this.pago.setEstado(EstadoDePago.valueOf(this.resultSet.getString("estado")));
-        this.pago.setTipoDeComprobante(TipoDeComprobante.valueOf(this.resultSet.getString("tipoDeComprobante")));
+         String tipoComprobanteStr = this.resultSet.getString("tipoDeComprobante");
+        this.pago.setTipoDeComprobante(tipoComprobanteStr != null ? TipoDeComprobante.valueOf(tipoComprobanteStr) : null);
         Matricula matricula = new Matricula();
         matricula.setIdMatricula(this.resultSet.getInt("fid_matricula"));
         this.pago.setMatricula(matricula);

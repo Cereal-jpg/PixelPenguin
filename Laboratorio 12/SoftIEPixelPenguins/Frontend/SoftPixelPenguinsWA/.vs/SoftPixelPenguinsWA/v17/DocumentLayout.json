@@ -1,7 +1,20 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\papar\\PixelPenguin\\Laboratorio 12\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{38ABDAD3-D9B1-4B24-A591-021FE0E24B98}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|c:\\users\\papar\\pixelpenguin\\laboratorio 12\\softiepixelpenguins\\frontend\\softpixelpenguinswa\\softpixelpenguinswa\\flujo_alumno\\visualizarpagoalumno.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38ABDAD3-D9B1-4B24-A591-021FE0E24B98}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\flujo_alumno\\visualizarpagoalumno.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38ABDAD3-D9B1-4B24-A591-021FE0E24B98}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|c:\\users\\papar\\pixelpenguin\\laboratorio 12\\softiepixelpenguins\\frontend\\softpixelpenguinswa\\softpixelpenguinswa\\flujo_alumno\\mispagosalumno.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38ABDAD3-D9B1-4B24-A591-021FE0E24B98}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\flujo_alumno\\mispagosalumno.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38ABDAD3-D9B1-4B24-A591-021FE0E24B98}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|c:\\users\\papar\\pixelpenguin\\laboratorio 12\\softiepixelpenguins\\frontend\\softpixelpenguinswa\\softpixelpenguinswa\\flujo_alumno\\mispagosalumno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{38ABDAD3-D9B1-4B24-A591-021FE0E24B98}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\flujo_alumno\\mispagosalumno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +31,45 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VisualizarPagoAlumno.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\papar\\PixelPenguin\\Laboratorio 12\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\SoftPixelPenguinsWA\\Flujo_Alumno\\VisualizarPagoAlumno.aspx.cs",
+              "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\Flujo_Alumno\\VisualizarPagoAlumno.aspx.cs",
+              "ToolTip": "C:\\Users\\papar\\PixelPenguin\\Laboratorio 12\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\SoftPixelPenguinsWA\\Flujo_Alumno\\VisualizarPagoAlumno.aspx.cs",
+              "RelativeToolTip": "SoftPixelPenguinsWA\\Flujo_Alumno\\VisualizarPagoAlumno.aspx.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwC0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T22:30:46.455Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MisPagosAlumno.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\papar\\PixelPenguin\\Laboratorio 12\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\SoftPixelPenguinsWA\\Flujo_Alumno\\MisPagosAlumno.aspx.cs",
+              "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\Flujo_Alumno\\MisPagosAlumno.aspx.cs",
+              "ToolTip": "C:\\Users\\papar\\PixelPenguin\\Laboratorio 12\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\SoftPixelPenguinsWA\\Flujo_Alumno\\MisPagosAlumno.aspx.cs",
+              "RelativeToolTip": "SoftPixelPenguinsWA\\Flujo_Alumno\\MisPagosAlumno.aspx.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCIAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-18T22:07:13.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MisPagosAlumno.aspx",
+              "DocumentMoniker": "C:\\Users\\papar\\PixelPenguin\\Laboratorio 12\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\SoftPixelPenguinsWA\\Flujo_Alumno\\MisPagosAlumno.aspx",
+              "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\Flujo_Alumno\\MisPagosAlumno.aspx",
+              "ToolTip": "C:\\Users\\papar\\PixelPenguin\\Laboratorio 12\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\SoftPixelPenguinsWA\\Flujo_Alumno\\MisPagosAlumno.aspx",
+              "RelativeToolTip": "SoftPixelPenguinsWA\\Flujo_Alumno\\MisPagosAlumno.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-11-18T22:07:04.683Z",
+              "EditorCaption": ""
             }
           ]
         }

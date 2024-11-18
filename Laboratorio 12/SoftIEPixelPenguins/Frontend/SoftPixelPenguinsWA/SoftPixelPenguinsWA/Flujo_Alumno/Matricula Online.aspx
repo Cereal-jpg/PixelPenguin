@@ -126,8 +126,8 @@
             </div>
         </div>
         <div class="button-group">
-            <asp:Button ID="btnRegrasar" runat="server" Text="Regresar" OnClick="btnRegresar_Click" CssClass="button-style" />
-            <asp:Button ID="btnGuardar" runat="server" Text="Confirmar Matricula" OnClick="btnGuardar_Click" CssClass="btn btn-secondary" />
+            <asp:Button ID="btnRegrasar" runat="server" Text="Regresar" OnClick="btnRegresar_Click" CssClass="btn btn-primary" />
+            <asp:Button ID="btnGuardar" runat="server" Text="Confirmar Matricula" OnClick="btnGuardar_Click" CssClass="btn btn-primary" />
         </div>
     </div>
 </asp:Content>

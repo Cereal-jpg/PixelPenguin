@@ -12,11 +12,12 @@ namespace SoftPixelPenguinsWA
     {
         AlumnoWSClient alumnoBO = new AlumnoWSClient();
         ApoderadoWSClient apoderadoBO = new ApoderadoWSClient();
+        PagoWSClient pagoBO = new PagoWSClient();
+        MatriculaWSClient matriculaBO = new MatriculaWSClient();
         alumno alumnoLogueado = null;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            btnGuardar.Enabled = false;
             if (!IsPostBack)
             {
                 if (Session["idAlumnoLogueado"] != null)
@@ -110,7 +111,24 @@ namespace SoftPixelPenguinsWA
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
-
+            alumnoLogueado = alumnoBO.obtenerAlumnoPorId((int)Session["idAlumnoLogueado"]);
+            pago pago = new pago
+            {
+                estado = estadoDePago.PENDIENTE,
+                estadoSpecified = true,
+                fechaCreacion = DateTime.Now,
+                fechaCreacionSpecified = true,
+                fechaPago = DateTime.Now.AddDays(30),
+                fechaPagoSpecified = true,
+                matricula = new matricula { idMatricula = matriculaBO.obtenerMatriculaPorIdAlumno(alumnoLogueado.idUsuario), idMatriculaSpecified = true },
+                monto = 1000.00
+            };
+            pagoBO.insertarPago(pago);
+            string script = @"
+                alert('Su matrícula ha sido registrada. Tiene 30 días para realizar el pago y finalizar su matrícula.');
+                window.location.href = 'IndexAlumno.aspx';
+            ";
+            ScriptManager.RegisterStartupScript(this, GetType(), "alertRedir", script, true);
         }
 
     }

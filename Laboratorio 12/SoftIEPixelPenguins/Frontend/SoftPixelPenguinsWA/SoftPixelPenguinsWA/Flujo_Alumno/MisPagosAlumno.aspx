@@ -50,13 +50,6 @@
             <ItemStyle HorizontalAlign="Center" />
             <HeaderStyle HorizontalAlign="Center" />
         </asp:BoundField>
-        <asp:TemplateField HeaderText="Tipo de Comprobante">
-            <HeaderStyle HorizontalAlign="Center" />
-            <ItemStyle HorizontalAlign="Center" />
-            <ItemTemplate>
-                <%# Eval("tipoDeComprobante").ToString() %>
-            </ItemTemplate>
-        </asp:TemplateField>
         <asp:TemplateField HeaderText="Estado">
             <HeaderStyle HorizontalAlign="Center" />
             <ItemStyle HorizontalAlign="Center" />

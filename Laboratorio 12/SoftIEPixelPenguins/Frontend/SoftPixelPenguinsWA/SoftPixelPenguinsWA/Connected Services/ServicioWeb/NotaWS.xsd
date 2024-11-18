@@ -104,22 +104,22 @@
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:nota" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarNota">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="nota" type="tns:nota" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarNotaResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="eliminarNota">
     <xs:sequence>
       <xs:element minOccurs="0" name="nota" type="tns:nota" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarNotaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarNota">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nota" type="tns:nota" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarNotaResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>

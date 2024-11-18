@@ -8,45 +8,6 @@
     <title>Proceso de Matrícula</title>
     <link rel="stylesheet" href="../Content/EstilosMatriculaG.css" />
     <script src="jquery-3.7.1.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            // Escucha el evento submit del formulario
-            $("form").on("submit", function (e) {
-                let isValid = true;
-
-                // Valida que los campos de texto no estén vacíos
-                $(".form-section input[type='text'], .form-section input[type='date'], .form-section select").each(function () {
-                    if ($(this).val().trim() === "") {
-                        isValid = false;
-                        $(this).addClass("is-invalid"); // Añade una clase para resaltar el error
-                    } else {
-                        $(this).removeClass("is-invalid"); // Remueve la clase si es válido
-                    }
-                });
-
-                // Validación específica para campos DNI
-                $("input.dni-field").each(function () {
-                    const dniValue = $(this).val().trim();
-                    console.log("Validando DNI:", dniValue); // Depuración
-                    if (!/^\d{8}$/.test(dniValue)) { // Exactamente 8 dígitos
-                        isValid = false;
-                        $(this).addClass("is-invalid");
-                        alert("El campo DNI debe contener exactamente 8 dígitos.");
-                    } else {
-                        $(this).removeClass("is-invalid");
-                    }
-                });
-
-                // Si no es válido, previene el envío del formulario
-                if (!isValid) {
-                    e.preventDefault();
-                    alert("Por favor, completa todos los campos obligatorios.");
-                }
-            });
-        });
-    </script>
-
-
 </head>
 <body>
 <div class="header">

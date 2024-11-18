@@ -36,6 +36,21 @@ namespace SoftPixelPenguinsWA
             }
         }
 
+        protected void gvAlumnos_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                string estado = DataBinder.Eval(e.Row.DataItem, "estado").ToString();
+
+                LinkButton btnEliminar = (LinkButton)e.Row.FindControl("lbEliminar");
+
+                if (btnEliminar != null && estado.Equals(estadoAlumno.Matriculado.ToString()))
+                {
+                    btnEliminar.Visible = false;
+                }
+            }
+        }
+
         private void cargarEstados()
         {
             ddlEstado.DataSource = Enum.GetValues(typeof(estadoAlumno));

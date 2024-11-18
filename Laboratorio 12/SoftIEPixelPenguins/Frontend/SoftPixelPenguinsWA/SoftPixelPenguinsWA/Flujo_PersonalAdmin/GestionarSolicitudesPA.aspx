@@ -47,7 +47,7 @@
             </div>
         </div>
         <div class="row">
-            <asp:GridView ID="gvAlumnos" runat="server" AllowPaging="true" PageSize="10" AutoGenerateColumns="false" CssClass="table table-hover table-responsive table-striped" ShowHeaderWhenEmpty="true" OnPageIndexChanging="gvAlumnos_PageIndexChanging">
+            <asp:GridView ID="gvAlumnos" runat="server" AllowPaging="true" PageSize="10" AutoGenerateColumns="false" CssClass="table table-hover table-responsive table-striped" ShowHeaderWhenEmpty="true" OnPageIndexChanging="gvAlumnos_PageIndexChanging" OnRowDataBound="gvAlumnos_RowDataBound">
                 <Columns>
                     <asp:BoundField HeaderText="DNI" DataField="dni" />
                     <asp:BoundField HeaderText="Nombre" DataField="nombreCompleto" />
@@ -62,7 +62,7 @@
                             <div class="text-center">
                                 <asp:LinkButton runat="server" CssClass="btn btn-sm btn-info me-1" Text="<i class='fa-solid fa-eye'></i> Ver" 
                                                 OnClick="lbVisualizar_Click" CommandArgument='<%# Eval("idUsuario") %>' />
-                                <asp:LinkButton runat="server" CssClass="btn btn-sm btn-danger" Text="<i class='fa-solid fa-trash'></i> Eliminar" 
+                                <asp:LinkButton ID="lbEliminar" runat="server" CssClass="btn btn-sm btn-danger" Text="<i class='fa-solid fa-trash'></i> Eliminar" 
                                                 OnClick="lbEliminar_Click" CommandArgument='<%# Eval("idUsuario") %>' />
                             </div>
                         </ItemTemplate>

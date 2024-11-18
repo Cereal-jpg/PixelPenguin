@@ -6,6 +6,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
@@ -102,6 +103,7 @@ namespace SoftPixelPenguinsWA
 
             if (section1.Style["display"] == "block")
             {
+                if(!validaDNI()) return;
                 section1.Style["display"] = "none";
                 section2.Style["display"] = "block";
                 SetActiveStep(1);
@@ -113,6 +115,24 @@ namespace SoftPixelPenguinsWA
                 section3.Style["display"] = "block";
                 SetActiveStep(2);
             }
+        }
+
+        private bool validaDNI()
+        {
+            string dniAlumno = txtDNIAlumno.Text.Trim();
+            string dniApoderado = txtDNIApoderado.Text.Trim();
+
+            if (!validaRegex(dniAlumno) || !validaRegex(dniApoderado))
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('El campo DNI debe contener exactamente 8 dígitos.');", true);
+                return false; 
+            }
+            return true;
+        }
+
+        private bool validaRegex(string dni)
+        {
+            return System.Text.RegularExpressions.Regex.IsMatch(dni, @"^\d{8}$");
         }
 
         protected void prevSection(object sender, EventArgs e)

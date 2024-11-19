@@ -67,7 +67,8 @@
                     <asp:LinkButton ID="lnkEdit" runat="server"
                         CommandArgument='<%# Eval("idPago") %>'
                         CssClass="btn btn-warning btn-sm me-1"
-                        OnClick="lbEditar_Click">
+                        OnClick="lbEditar_Click"
+                        Enabled='<%# Eval("estado").ToString() == "PENDIENTE" %>'>
                         <i class="fa-solid fa-pen-to-square"></i> Subir Baucher
                     </asp:LinkButton>
                 </div>

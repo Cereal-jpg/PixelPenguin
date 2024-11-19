@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftPixelPenguins.Master" AutoEventWireup="true" CodeBehind=".aspx.cs" Inherits="SoftPixelPenguinsWA.NotasParcialesAlumno" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftPixelPenguins.Master" AutoEventWireup="true" CodeBehind="NotasParcialesAlumno.aspx.cs" Inherits="SoftPixelPenguinsWA.NotasParcialesAlumno" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
     Alumno - Notas
 </asp:Content>
@@ -20,7 +20,7 @@
     <a href="MiPerfilAlumno.aspx"><i class="fa-solid fa-user"></i> Mi Perfil</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem6" runat="server">
-    <a href="MisPagos.aspx"><i class="fa-solid fa-book"></i> Mis Pagos</a>
+    <a href="MisPagosAlumno.aspx"><i class="fa-solid fa-book"></i> Mis Pagos</a>
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">

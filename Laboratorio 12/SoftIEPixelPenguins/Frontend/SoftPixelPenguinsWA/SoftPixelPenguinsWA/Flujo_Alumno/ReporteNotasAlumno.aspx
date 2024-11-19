@@ -20,7 +20,7 @@
     <a href="MatriculaOnlineAlumno.aspx"><i class="fa-solid fa-archive"></i> Matrícula Online</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem5" runat="server">
-    <a href="MisPagos.aspx"><i class="fa-solid fa-book"></i> Mis Pagos</a>
+    <a href="MisPagosAlumno.aspx"><i class="fa-solid fa-book"></i> Mis Pagos</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem6" runat="server">
     <a href="MiPerfilAlumno.aspx"><i class="fa-solid fa-user"></i> Mi Perfil</a>
@@ -34,12 +34,34 @@
        <!-- Sección: Datos del alumno -->
         <div class="container-matricula" style="display:block;">
             <asp:Label ID="myLabel" runat="server" Text="" Font-Size="Large" Font-Bold="True" CssClass="my-label"></asp:Label>
+            <h2 style="color: black;">Notas Finales - Periodo 2025</h2>
+            <div class="form-group">
+                <div class="form-row">
+                    <label>Institución Educativa:</label>
+                    <asp:TextBox ID="txtInstitucion" runat="server" placeholder="Intitucion"></asp:TextBox>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <label>Dirección:</label>
+                    <asp:TextBox ID="txtDireccion" runat="server" placeholder="Direccion"></asp:TextBox>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <label>Alumno:</label>
+                    <asp:TextBox ID="txtAlumno" runat="server" placeholder="Alumno"></asp:TextBox>
+                </div>
+            </div>
             <br><br>
             <asp:GridView ID="gvNotas" runat="server" AllowPaging="true" PageSize="12" AutoGenerateColumns="false" CssClass="table table-hover table-responsive table-striped" ShowHeaderWhenEmpty="true">
                 <Columns>
-                    <asp:BoundField HeaderText="Codigo" DataField="codigoCurso"/>
-                    <asp:BoundField HeaderText="Curso" DataField="nombre"/>
-                    <asp:BoundField HeaderText="Horas Semanales" DataField="horasPorSemana"/>
+                    <asp:BoundField HeaderText="Curso" DataField="curso.nombre"/>
+                    <asp:BoundField HeaderText="Bimestre 1" DataField="notaBimestre1"/>
+                    <asp:BoundField HeaderText="Bimestre 2" DataField="notaBimestre2"/>
+                    <asp:BoundField HeaderText="Bimestre 3" DataField="notaBimestre3"/>
+                    <asp:BoundField HeaderText="Bimestre 4" DataField="notaBimestre4"/>
+                    <asp:BoundField HeaderText="Nota Final" DataField="notaFinal"/>
                 </columns>
             </asp:GridView>
             <div style="display: flex; justify-content: flex-end;">

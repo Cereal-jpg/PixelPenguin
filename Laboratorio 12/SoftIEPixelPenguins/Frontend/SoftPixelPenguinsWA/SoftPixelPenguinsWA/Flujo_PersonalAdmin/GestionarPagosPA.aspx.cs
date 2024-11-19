@@ -1,16 +1,24 @@
-﻿using System;
+﻿using SoftPixelPenguinsWA.ServicioWeb;
+using System;
+using System.Collections.Generic;
 using System.Data; // Para trabajar con DataTable
+using System.Linq;
 using System.Web.UI.WebControls;
 
 namespace SoftPixelPenguinsWA.Flujo_PersonalAdmin
 {
     public partial class GestionarPagosPA : System.Web.UI.Page
     {
+        PagoWSClient pagoBO = new PagoWSClient();
+        MatriculaWSClient matriculaBO = new MatriculaWSClient();
+        UsuarioWSClient usuarioBO = new UsuarioWSClient();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
+
                 // Carga los pagos al cargar la página por primera vez
+
                 CargarPagos();
             }
         }
@@ -23,6 +31,7 @@ namespace SoftPixelPenguinsWA.Flujo_PersonalAdmin
             // Aquí deberías llamar a tu capa de acceso a datos para obtener los pagos.
             // Por simplicidad, usamos un DataTable de ejemplo.
             DataTable pagos = ObtenerPagos();
+
             gvPagos.DataSource = pagos;
             gvPagos.DataBind();
         }
@@ -40,16 +49,20 @@ namespace SoftPixelPenguinsWA.Flujo_PersonalAdmin
             dt.Columns.Add("Fecha", typeof(DateTime));
             dt.Columns.Add("Estado", typeof(string));
             // Datos de ejemplo
-            dt.Rows.Add(1, "Juan Pérez", 500.00m, DateTime.Now,"Pagado");
-            dt.Rows.Add(2, "María López", 300.00m, DateTime.Now.AddDays(-1),"Pendiente");
-            dt.Rows.Add(3, "Carlos García", 700.00m, DateTime.Now.AddDays(-5),"Pendiente");
+            List<pago> pagos = pagoBO.listarTodosPagos().ToList();
+
+            foreach (pago p in pagos)
+            {
+                int idMatricula = p.matricula.idMatricula;
+                matricula matricula = matriculaBO.obtenerMatriculaPorId(idMatricula);
+                int idAlumno = matricula.fidAlumno;
+                usuario usuario = usuarioBO.obtenerUsuarioPorId(idAlumno);
+
+                dt.Rows.Add(p.idPago, usuario.nombreCompleto, p.monto, p.fechaPago,p.estado.ToString());
+            }
 
             return dt;
         }
-
-        /// <summary>
-        /// Filtra los pagos según el texto ingresado en el cuadro de texto.
-        /// </summary>
         protected void AgregarPago(object sender, EventArgs e)
         {
             // Lógica para agregar un nuevo pago.
@@ -60,14 +73,15 @@ namespace SoftPixelPenguinsWA.Flujo_PersonalAdmin
         /// <summary>
         /// Maneja los eventos de comando en el GridView, como editar un pago.
         /// </summary>
-        protected void gvPagos_RowCommand(object sender, GridViewCommandEventArgs e)
+        protected void lbEditar_Click(object sender, EventArgs e)
         {
-            if (e.CommandName == "Editar")
-            {
-                int idPago = Convert.ToInt32(e.CommandArgument);
-                // Redirige a una página de edición de pagos.
-                Response.Redirect($"EditarPago.aspx?IdPago={idPago}");
-            }
+
+            LinkButton btn = (LinkButton)sender;
+            int idPago = int.Parse(btn.CommandArgument);
+            Response.Redirect("EditarPago.aspx?IdPago=" + idPago);
+
+
         }
+
     }
 }

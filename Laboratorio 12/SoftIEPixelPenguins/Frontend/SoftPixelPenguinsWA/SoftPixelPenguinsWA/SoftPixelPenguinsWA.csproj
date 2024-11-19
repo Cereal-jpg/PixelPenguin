@@ -190,6 +190,7 @@
     <Content Include="Content\site.css" />
     <Content Include="Flujo_Alumno\Matricula Online.aspx" />
     <Content Include="Flujo_Alumno\SubirBaucher.aspx" />
+    <Content Include="Flujo_PersonalAdmin\EditarPago.aspx" />
     <Content Include="Flujo_PersonalAdmin\GestionarPagosPA.aspx" />
     <Content Include="Flujo_PersonalAdmin\MiPerfilAdmin.aspx" />
     <Content Include="Flujo_Alumno\MisPagosAlumno.aspx" />
@@ -779,6 +780,13 @@
     </Compile>
     <Compile Include="Flujo_Alumno\SubirBaucher.aspx.designer.cs">
       <DependentUpon>SubirBaucher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Flujo_PersonalAdmin\EditarPago.aspx.cs">
+      <DependentUpon>EditarPago.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Flujo_PersonalAdmin\EditarPago.aspx.designer.cs">
+      <DependentUpon>EditarPago.aspx</DependentUpon>
     </Compile>
     <Compile Include="Flujo_PersonalAdmin\GestionarPagosPA.aspx.cs">
       <DependentUpon>GestionarPagosPA.aspx</DependentUpon>

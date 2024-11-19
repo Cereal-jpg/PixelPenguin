@@ -46,7 +46,10 @@
                 <asp:BoundField DataField="Estado" HeaderText="Estado" />
                 <asp:TemplateField HeaderText="Acciones">
                     <ItemTemplate>
-                        <asp:Button ID="btnEditar" runat="server" Text="Editar" CommandName="Editar" CommandArgument='<%# Eval("IdPago") %>' CssClass="btn btn-primary" />
+                        <div class="text-center">
+                            <asp:LinkButton runat="server" CssClass="btn btn-sm btn-info me-1" Text="<i class='fa-solid fa-eye'></i> Ver"
+                                OnClick="lbEditar_Click" CommandArgument='<%# Eval("IdPago") %>'></asp:LinkButton>
+                        </div>
                     </ItemTemplate>
                 </asp:TemplateField>
             </Columns>

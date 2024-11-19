@@ -11,11 +11,11 @@
   <message name="insertarCursoResponse">
     <part name="parameters" element="tns:insertarCursoResponse" />
   </message>
-  <message name="listarTodosCursos">
-    <part name="parameters" element="tns:listarTodosCursos" />
+  <message name="eliminarCurso">
+    <part name="parameters" element="tns:eliminarCurso" />
   </message>
-  <message name="listarTodosCursosResponse">
-    <part name="parameters" element="tns:listarTodosCursosResponse" />
+  <message name="eliminarCursoResponse">
+    <part name="parameters" element="tns:eliminarCursoResponse" />
   </message>
   <message name="obtenerCursoPorId">
     <part name="parameters" element="tns:obtenerCursoPorId" />
@@ -29,17 +29,11 @@
   <message name="modificarCursoResponse">
     <part name="parameters" element="tns:modificarCursoResponse" />
   </message>
-  <message name="eliminarCurso">
-    <part name="parameters" element="tns:eliminarCurso" />
+  <message name="listarTodosCursos">
+    <part name="parameters" element="tns:listarTodosCursos" />
   </message>
-  <message name="eliminarCursoResponse">
-    <part name="parameters" element="tns:eliminarCursoResponse" />
-  </message>
-  <message name="listarCursosPorProfesor">
-    <part name="parameters" element="tns:listarCursosPorProfesor" />
-  </message>
-  <message name="listarCursosPorProfesorResponse">
-    <part name="parameters" element="tns:listarCursosPorProfesorResponse" />
+  <message name="listarTodosCursosResponse">
+    <part name="parameters" element="tns:listarTodosCursosResponse" />
   </message>
   <message name="listarCursosPorGrado">
     <part name="parameters" element="tns:listarCursosPorGrado" />
@@ -47,14 +41,20 @@
   <message name="listarCursosPorGradoResponse">
     <part name="parameters" element="tns:listarCursosPorGradoResponse" />
   </message>
+  <message name="listarCursosPorProfesor">
+    <part name="parameters" element="tns:listarCursosPorProfesor" />
+  </message>
+  <message name="listarCursosPorProfesorResponse">
+    <part name="parameters" element="tns:listarCursosPorProfesorResponse" />
+  </message>
   <portType name="CursoWS">
     <operation name="insertarCurso">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/insertarCursoRequest" message="tns:insertarCurso" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/insertarCursoResponse" message="tns:insertarCursoResponse" />
     </operation>
-    <operation name="listarTodosCursos">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/listarTodosCursosRequest" message="tns:listarTodosCursos" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/listarTodosCursosResponse" message="tns:listarTodosCursosResponse" />
+    <operation name="eliminarCurso">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/eliminarCursoRequest" message="tns:eliminarCurso" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/eliminarCursoResponse" message="tns:eliminarCursoResponse" />
     </operation>
     <operation name="obtenerCursoPorId">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/obtenerCursoPorIdRequest" message="tns:obtenerCursoPorId" />
@@ -64,17 +64,17 @@
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/modificarCursoRequest" message="tns:modificarCurso" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/modificarCursoResponse" message="tns:modificarCursoResponse" />
     </operation>
-    <operation name="eliminarCurso">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/eliminarCursoRequest" message="tns:eliminarCurso" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/eliminarCursoResponse" message="tns:eliminarCursoResponse" />
-    </operation>
-    <operation name="listarCursosPorProfesor">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/listarCursosPorProfesorRequest" message="tns:listarCursosPorProfesor" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/listarCursosPorProfesorResponse" message="tns:listarCursosPorProfesorResponse" />
+    <operation name="listarTodosCursos">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/listarTodosCursosRequest" message="tns:listarTodosCursos" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/listarTodosCursosResponse" message="tns:listarTodosCursosResponse" />
     </operation>
     <operation name="listarCursosPorGrado">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/listarCursosPorGradoRequest" message="tns:listarCursosPorGrado" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/listarCursosPorGradoResponse" message="tns:listarCursosPorGradoResponse" />
+    </operation>
+    <operation name="listarCursosPorProfesor">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/listarCursosPorProfesorRequest" message="tns:listarCursosPorProfesor" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/listarCursosPorProfesorResponse" message="tns:listarCursosPorProfesorResponse" />
     </operation>
   </portType>
   <binding name="CursoWSPortBinding" type="tns:CursoWS">
@@ -88,7 +88,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarTodosCursos">
+    <operation name="eliminarCurso">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -115,16 +115,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarCurso">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarCursosPorProfesor">
+    <operation name="listarTodosCursos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -134,6 +125,15 @@
       </output>
     </operation>
     <operation name="listarCursosPorGrado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCursosPorProfesor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

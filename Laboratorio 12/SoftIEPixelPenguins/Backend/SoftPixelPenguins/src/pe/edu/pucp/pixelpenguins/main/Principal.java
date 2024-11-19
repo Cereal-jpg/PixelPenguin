@@ -5,9 +5,11 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import pe.edu.pucp.pixelpenguins.anioacademico.bo.AnioAcademicoBO;
+import pe.edu.pucp.pixelpenguins.anioacademico.bo.CursoXMatriculaBO;
 import pe.edu.pucp.pixelpenguins.anioacademico.bo.MatriculaBO;
 import pe.edu.pucp.pixelpenguins.anioacademico.bo.PagoBO;
 import pe.edu.pucp.pixelpenguins.anioacademico.model.AnioAcademico;
+import pe.edu.pucp.pixelpenguins.anioacademico.model.CursoXMatricula;
 import pe.edu.pucp.pixelpenguins.anioacademico.model.Matricula;
 import pe.edu.pucp.pixelpenguins.anioacademico.model.Pago;
 import pe.edu.pucp.pixelpenguins.config.DBManager;
@@ -63,25 +65,33 @@ public class Principal {
 //        for(Nota aux: notas)
 //            System.out.println(aux.getNota());
         CursoBO cursoBO=new CursoBO();
-        CompetenciaBO competenciaBO=new CompetenciaBO();
-        NotaBO notaBO=new NotaBO();
-        ArrayList<Curso> cursos=cursoBO.listarCursosPorGrado(3);
-        for(Curso aux:cursos){
-            ArrayList<Competencia> competencias=competenciaBO.listarCompetenciasPorCurso(aux.getIdCurso());
-            for(Competencia aux2:competencias){
-                for(int i=1;i<=4;i++){
-                    Nota nota =new Nota();
-                    nota.setFid_Matricula(12);
-                    nota.setFid_Alumno(51);
-                    nota.setNota("-");
-                    nota.setBimestre(i);
-                    nota.setCurso(aux);
-                    nota.setCompetencia(aux2);
-                    if(notaBO.insertar(nota)!=0)
-                        System.out.println(aux.getCodigoCurso()+"-"+aux2.getDescripcion()+" Insertado");
-                }
-            }
-        }
+//        CompetenciaBO competenciaBO=new CompetenciaBO();
+//        NotaBO notaBO=new NotaBO();
+//        ArrayList<Curso> cursos=cursoBO.listarCursosPorGrado(3);
+//        for(Curso aux:cursos){
+//            ArrayList<Competencia> competencias=competenciaBO.listarCompetenciasPorCurso(aux.getIdCurso());
+//            for(Competencia aux2:competencias){
+//                for(int i=1;i<=4;i++){
+//                    Nota nota =new Nota();
+//                    nota.setFid_Matricula(12);
+//                    nota.setFid_Alumno(51);
+//                    nota.setNota("-");
+//                    nota.setBimestre(i);
+//                    nota.setCurso(aux);
+//                    nota.setCompetencia(aux2);
+//                    if(notaBO.insertar(nota)!=0)
+//                        System.out.println(aux.getCodigoCurso()+"-"+aux2.getDescripcion()+" Insertado");
+//                }
+//            }
+//        }
+//         MatriculaBO matriculaBO = new MatriculaBO();
+//         CursoXMatriculaBO cursoXMatriculaBO = new CursoXMatriculaBO();
+//         Curso curso=cursoBO.obtenerPorId(1);
+//         Matricula matricula=matriculaBO.obtenerPorId(2);
+//         CursoXMatricula cursoXMatricula= new CursoXMatricula(curso, matricula, 33, "A", "A", "A", "A", "A");
+//         if(cursoXMatriculaBO.insertar(cursoXMatricula)!=0){
+//             System.out.println("Las notas finales fueron insertadas con exito");
+//         }
 //        MatriculaBO matriculaBO=new MatriculaBO();
 //        Matricula matricula=matriculaBO.obtenerPorId(12);
 

@@ -28,7 +28,7 @@
     <MetadataFile FileName="CompetenciaWS.wsdl" MetadataType="Wsdl" ID="ad569cc7-cbcf-4c0e-9740-fd60b875f842" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/CompetenciaWS?wsdl" />
     <MetadataFile FileName="RolWS.wsdl" MetadataType="Wsdl" ID="8b2b232f-52a7-4845-a7bd-4329067067a8" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/RolWS?wsdl" />
     <MetadataFile FileName="NotaWS.wsdl" MetadataType="Wsdl" ID="14141b9f-6188-4f0c-b8d0-73c2bc8b2424" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/NotaWS?wsdl" />
-    <MetadataFile FileName="ApoderadoWS.xsd" MetadataType="Schema" ID="96d7a035-77a8-4076-bccb-7900844b2d8f" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/ApoderadoWS?xsd=1" />
+    <MetadataFile FileName="CursoXMatriculaWS.xsd" MetadataType="Schema" ID="2964e8c5-7638-4ce3-8914-341c62db3c2a" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/CursoXMatriculaWS?xsd=1" />
     <MetadataFile FileName="JornadaEscolarWS.xsd" MetadataType="Schema" ID="a345fc8f-8852-4fbd-a0d3-e91075434f11" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/JornadaEscolarWS?xsd=1" />
     <MetadataFile FileName="HoraAcademicaWS.wsdl" MetadataType="Wsdl" ID="55614496-cbf8-4963-874f-43cdf57ea031" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/HoraAcademicaWS?wsdl" />
     <MetadataFile FileName="InstitucionEducativaWS.wsdl" MetadataType="Wsdl" ID="f4245fd3-fb29-47ef-bb05-8aadf3b22b49" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/InstitucionEducativaWS?wsdl" />
@@ -36,6 +36,7 @@
     <MetadataFile FileName="CompetenciaWS.xsd" MetadataType="Schema" ID="f46efe6a-965d-4eaa-83ad-f78d0775476a" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/CompetenciaWS?xsd=1" />
     <MetadataFile FileName="ApoderadoWS.wsdl" MetadataType="Wsdl" ID="8a6bf5c9-1cdd-4a96-8a6d-398cac346163" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/ApoderadoWS?wsdl" />
     <MetadataFile FileName="CursoWS.wsdl" MetadataType="Wsdl" ID="c9220e17-a80b-45a9-90f5-74f574cb5675" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/CursoWS?wsdl" />
+    <MetadataFile FileName="ApoderadoWS.xsd" MetadataType="Schema" ID="96d7a035-77a8-4076-bccb-7900844b2d8f" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/ApoderadoWS?xsd=1" />
     <MetadataFile FileName="SeccionAcademicaWS.wsdl" MetadataType="Wsdl" ID="481bce58-d3f4-4d34-96a4-ba74b0e61e34" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/SeccionAcademicaWS?wsdl" />
     <MetadataFile FileName="AdministradorWS.wsdl" MetadataType="Wsdl" ID="e6936c96-2446-4192-b99d-2d7dc9244ee7" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/AdministradorWS?wsdl" />
     <MetadataFile FileName="ProfesorWS.xsd" MetadataType="Schema" ID="fe64e1d0-2e50-4372-ac73-0e063aaf5387" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/ProfesorWS?xsd=1" />
@@ -50,6 +51,7 @@
     <MetadataFile FileName="MatriculaWS.wsdl" MetadataType="Wsdl" ID="51368166-906e-41a2-8859-aa24fb076300" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/MatriculaWS?wsdl" />
     <MetadataFile FileName="AlumnoWS.wsdl" MetadataType="Wsdl" ID="972f47d7-397d-41f5-be32-775bda6d07b7" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/AlumnoWS?wsdl" />
     <MetadataFile FileName="UsuarioWS.wsdl" MetadataType="Wsdl" ID="132998a3-0ef0-4a46-bde4-29f4433bdca1" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/UsuarioWS?wsdl" />
+    <MetadataFile FileName="CursoXMatriculaWS.wsdl" MetadataType="Wsdl" ID="598d9a18-c47a-44fb-8c80-8affee2a3d2e" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/CursoXMatriculaWS?wsdl" />
     <MetadataFile FileName="HoraAcademicaWS.xsd" MetadataType="Schema" ID="cfee8078-7624-42e2-97bf-5ee052ff9680" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/HoraAcademicaWS?xsd=1" />
     <MetadataFile FileName="AnioAcademicoWS.wsdl" MetadataType="Wsdl" ID="758454a5-9806-4bc5-9330-6b8b8e2b7537" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/AnioAcademicoWS?wsdl" />
     <MetadataFile FileName="UsuarioWS.xsd" MetadataType="Schema" ID="6f22593e-8298-4dfc-a0e0-cf618709e71b" SourceId="1" SourceUrl="http://localhost:8080/SoftPixelPenguinsWSBL/UsuarioWS?xsd=1" />

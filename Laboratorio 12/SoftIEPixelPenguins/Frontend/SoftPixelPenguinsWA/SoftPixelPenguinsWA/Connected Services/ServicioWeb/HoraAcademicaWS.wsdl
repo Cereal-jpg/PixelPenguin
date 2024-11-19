@@ -11,11 +11,11 @@
   <message name="listarHorasAcademicasPorCursoResponse">
     <part name="parameters" element="tns:listarHorasAcademicasPorCursoResponse" />
   </message>
-  <message name="eliminarHoraAcademica">
-    <part name="parameters" element="tns:eliminarHoraAcademica" />
+  <message name="listarTodosHorasAcademicas">
+    <part name="parameters" element="tns:listarTodosHorasAcademicas" />
   </message>
-  <message name="eliminarHoraAcademicaResponse">
-    <part name="parameters" element="tns:eliminarHoraAcademicaResponse" />
+  <message name="listarTodosHorasAcademicasResponse">
+    <part name="parameters" element="tns:listarTodosHorasAcademicasResponse" />
   </message>
   <message name="insertarHoraAcademica">
     <part name="parameters" element="tns:insertarHoraAcademica" />
@@ -29,11 +29,11 @@
   <message name="modificarHoraAcademicaResponse">
     <part name="parameters" element="tns:modificarHoraAcademicaResponse" />
   </message>
-  <message name="listarTodosHorasAcademicas">
-    <part name="parameters" element="tns:listarTodosHorasAcademicas" />
+  <message name="eliminarHoraAcademica">
+    <part name="parameters" element="tns:eliminarHoraAcademica" />
   </message>
-  <message name="listarTodosHorasAcademicasResponse">
-    <part name="parameters" element="tns:listarTodosHorasAcademicasResponse" />
+  <message name="eliminarHoraAcademicaResponse">
+    <part name="parameters" element="tns:eliminarHoraAcademicaResponse" />
   </message>
   <message name="obtenerHoraAcademicaPorId">
     <part name="parameters" element="tns:obtenerHoraAcademicaPorId" />
@@ -46,9 +46,9 @@
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/listarHorasAcademicasPorCursoRequest" message="tns:listarHorasAcademicasPorCurso" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/listarHorasAcademicasPorCursoResponse" message="tns:listarHorasAcademicasPorCursoResponse" />
     </operation>
-    <operation name="eliminarHoraAcademica">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/eliminarHoraAcademicaRequest" message="tns:eliminarHoraAcademica" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/eliminarHoraAcademicaResponse" message="tns:eliminarHoraAcademicaResponse" />
+    <operation name="listarTodosHorasAcademicas">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/listarTodosHorasAcademicasRequest" message="tns:listarTodosHorasAcademicas" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/listarTodosHorasAcademicasResponse" message="tns:listarTodosHorasAcademicasResponse" />
     </operation>
     <operation name="insertarHoraAcademica">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/insertarHoraAcademicaRequest" message="tns:insertarHoraAcademica" />
@@ -58,9 +58,9 @@
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/modificarHoraAcademicaRequest" message="tns:modificarHoraAcademica" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/modificarHoraAcademicaResponse" message="tns:modificarHoraAcademicaResponse" />
     </operation>
-    <operation name="listarTodosHorasAcademicas">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/listarTodosHorasAcademicasRequest" message="tns:listarTodosHorasAcademicas" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/listarTodosHorasAcademicasResponse" message="tns:listarTodosHorasAcademicasResponse" />
+    <operation name="eliminarHoraAcademica">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/eliminarHoraAcademicaRequest" message="tns:eliminarHoraAcademica" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/eliminarHoraAcademicaResponse" message="tns:eliminarHoraAcademicaResponse" />
     </operation>
     <operation name="obtenerHoraAcademicaPorId">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/obtenerHoraAcademicaPorIdRequest" message="tns:obtenerHoraAcademicaPorId" />
@@ -78,7 +78,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarHoraAcademica">
+    <operation name="listarTodosHorasAcademicas">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -105,7 +105,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarTodosHorasAcademicas">
+    <operation name="eliminarHoraAcademica">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

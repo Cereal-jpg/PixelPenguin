@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.pixelpenguins.pucp.edu.pe" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="CursoXMatriculaWS" targetNamespace="http://services.pixelpenguins.pucp.edu.pe" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/SoftPixelPenguinsWSBL/CursoXMatriculaWS?xsd=1" namespace="http://services.pixelpenguins.pucp.edu.pe" />
+    </xsd:schema>
+  </types>
+  <message name="listarNotasFinalesCursosXAlumno">
+    <part name="parameters" element="tns:listarNotasFinalesCursosXAlumno" />
+  </message>
+  <message name="listarNotasFinalesCursosXAlumnoResponse">
+    <part name="parameters" element="tns:listarNotasFinalesCursosXAlumnoResponse" />
+  </message>
+  <message name="listarNotasFinalesCursosXMatricula">
+    <part name="parameters" element="tns:listarNotasFinalesCursosXMatricula" />
+  </message>
+  <message name="listarNotasFinalesCursosXMatriculaResponse">
+    <part name="parameters" element="tns:listarNotasFinalesCursosXMatriculaResponse" />
+  </message>
+  <message name="modificarCursoXMatricula">
+    <part name="parameters" element="tns:modificarCursoXMatricula" />
+  </message>
+  <message name="modificarCursoXMatriculaResponse">
+    <part name="parameters" element="tns:modificarCursoXMatriculaResponse" />
+  </message>
+  <message name="listarNotasFinalesXCurso">
+    <part name="parameters" element="tns:listarNotasFinalesXCurso" />
+  </message>
+  <message name="listarNotasFinalesXCursoResponse">
+    <part name="parameters" element="tns:listarNotasFinalesXCursoResponse" />
+  </message>
+  <message name="eliminarCursoXMatricula">
+    <part name="parameters" element="tns:eliminarCursoXMatricula" />
+  </message>
+  <message name="eliminarCursoXMatriculaResponse">
+    <part name="parameters" element="tns:eliminarCursoXMatriculaResponse" />
+  </message>
+  <message name="obtenerPorCursoYMatricula">
+    <part name="parameters" element="tns:obtenerPorCursoYMatricula" />
+  </message>
+  <message name="obtenerPorCursoYMatriculaResponse">
+    <part name="parameters" element="tns:obtenerPorCursoYMatriculaResponse" />
+  </message>
+  <message name="insertarCursoXMatricula">
+    <part name="parameters" element="tns:insertarCursoXMatricula" />
+  </message>
+  <message name="insertarCursoXMatriculaResponse">
+    <part name="parameters" element="tns:insertarCursoXMatriculaResponse" />
+  </message>
+  <message name="listarTodosCursoXMatricula">
+    <part name="parameters" element="tns:listarTodosCursoXMatricula" />
+  </message>
+  <message name="listarTodosCursoXMatriculaResponse">
+    <part name="parameters" element="tns:listarTodosCursoXMatriculaResponse" />
+  </message>
+  <portType name="CursoXMatriculaWS">
+    <operation name="listarNotasFinalesCursosXAlumno">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/listarNotasFinalesCursosXAlumnoRequest" message="tns:listarNotasFinalesCursosXAlumno" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/listarNotasFinalesCursosXAlumnoResponse" message="tns:listarNotasFinalesCursosXAlumnoResponse" />
+    </operation>
+    <operation name="listarNotasFinalesCursosXMatricula">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/listarNotasFinalesCursosXMatriculaRequest" message="tns:listarNotasFinalesCursosXMatricula" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/listarNotasFinalesCursosXMatriculaResponse" message="tns:listarNotasFinalesCursosXMatriculaResponse" />
+    </operation>
+    <operation name="modificarCursoXMatricula">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/modificarCursoXMatriculaRequest" message="tns:modificarCursoXMatricula" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/modificarCursoXMatriculaResponse" message="tns:modificarCursoXMatriculaResponse" />
+    </operation>
+    <operation name="listarNotasFinalesXCurso">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/listarNotasFinalesXCursoRequest" message="tns:listarNotasFinalesXCurso" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/listarNotasFinalesXCursoResponse" message="tns:listarNotasFinalesXCursoResponse" />
+    </operation>
+    <operation name="eliminarCursoXMatricula">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/eliminarCursoXMatriculaRequest" message="tns:eliminarCursoXMatricula" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/eliminarCursoXMatriculaResponse" message="tns:eliminarCursoXMatriculaResponse" />
+    </operation>
+    <operation name="obtenerPorCursoYMatricula">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/obtenerPorCursoYMatriculaRequest" message="tns:obtenerPorCursoYMatricula" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/obtenerPorCursoYMatriculaResponse" message="tns:obtenerPorCursoYMatriculaResponse" />
+    </operation>
+    <operation name="insertarCursoXMatricula">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/insertarCursoXMatriculaRequest" message="tns:insertarCursoXMatricula" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/insertarCursoXMatriculaResponse" message="tns:insertarCursoXMatriculaResponse" />
+    </operation>
+    <operation name="listarTodosCursoXMatricula">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/listarTodosCursoXMatriculaRequest" message="tns:listarTodosCursoXMatricula" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/listarTodosCursoXMatriculaResponse" message="tns:listarTodosCursoXMatriculaResponse" />
+    </operation>
+  </portType>
+  <binding name="CursoXMatriculaWSPortBinding" type="tns:CursoXMatriculaWS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarNotasFinalesCursosXAlumno">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarNotasFinalesCursosXMatricula">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarCursoXMatricula">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarNotasFinalesXCurso">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarCursoXMatricula">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerPorCursoYMatricula">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarCursoXMatricula">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosCursoXMatricula">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="CursoXMatriculaWS">
+    <port name="CursoXMatriculaWSPort" binding="tns:CursoXMatriculaWSPortBinding">
+      <soap:address location="http://localhost:8080/SoftPixelPenguinsWSBL/CursoXMatriculaWS" />
+    </port>
+  </service>
+</definitions>

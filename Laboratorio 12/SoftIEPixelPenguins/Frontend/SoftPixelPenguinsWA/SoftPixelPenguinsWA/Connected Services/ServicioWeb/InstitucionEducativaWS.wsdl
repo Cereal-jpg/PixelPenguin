@@ -5,6 +5,12 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftPixelPenguinsWSBL/InstitucionEducativaWS?xsd=1" namespace="http://services.pixelpenguins.pucp.edu.pe" />
     </xsd:schema>
   </types>
+  <message name="eliminarInstitucionEducativa">
+    <part name="parameters" element="tns:eliminarInstitucionEducativa" />
+  </message>
+  <message name="eliminarInstitucionEducativaResponse">
+    <part name="parameters" element="tns:eliminarInstitucionEducativaResponse" />
+  </message>
   <message name="listarTodosInstitucionesEducativas">
     <part name="parameters" element="tns:listarTodosInstitucionesEducativas" />
   </message>
@@ -17,25 +23,23 @@
   <message name="insertarInstitucionEducativaResponse">
     <part name="parameters" element="tns:insertarInstitucionEducativaResponse" />
   </message>
-  <message name="modificarInstitucionEducativa">
-    <part name="parameters" element="tns:modificarInstitucionEducativa" />
-  </message>
-  <message name="modificarInstitucionEducativaResponse">
-    <part name="parameters" element="tns:modificarInstitucionEducativaResponse" />
-  </message>
-  <message name="eliminarInstitucionEducativa">
-    <part name="parameters" element="tns:eliminarInstitucionEducativa" />
-  </message>
-  <message name="eliminarInstitucionEducativaResponse">
-    <part name="parameters" element="tns:eliminarInstitucionEducativaResponse" />
-  </message>
   <message name="obtenerInstitucionEducativaPorId">
     <part name="parameters" element="tns:obtenerInstitucionEducativaPorId" />
   </message>
   <message name="obtenerInstitucionEducativaPorIdResponse">
     <part name="parameters" element="tns:obtenerInstitucionEducativaPorIdResponse" />
   </message>
+  <message name="modificarInstitucionEducativa">
+    <part name="parameters" element="tns:modificarInstitucionEducativa" />
+  </message>
+  <message name="modificarInstitucionEducativaResponse">
+    <part name="parameters" element="tns:modificarInstitucionEducativaResponse" />
+  </message>
   <portType name="InstitucionEducativaWS">
+    <operation name="eliminarInstitucionEducativa">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/eliminarInstitucionEducativaRequest" message="tns:eliminarInstitucionEducativa" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/eliminarInstitucionEducativaResponse" message="tns:eliminarInstitucionEducativaResponse" />
+    </operation>
     <operation name="listarTodosInstitucionesEducativas">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/listarTodosInstitucionesEducativasRequest" message="tns:listarTodosInstitucionesEducativas" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/listarTodosInstitucionesEducativasResponse" message="tns:listarTodosInstitucionesEducativasResponse" />
@@ -44,21 +48,26 @@
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/insertarInstitucionEducativaRequest" message="tns:insertarInstitucionEducativa" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/insertarInstitucionEducativaResponse" message="tns:insertarInstitucionEducativaResponse" />
     </operation>
-    <operation name="modificarInstitucionEducativa">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/modificarInstitucionEducativaRequest" message="tns:modificarInstitucionEducativa" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/modificarInstitucionEducativaResponse" message="tns:modificarInstitucionEducativaResponse" />
-    </operation>
-    <operation name="eliminarInstitucionEducativa">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/eliminarInstitucionEducativaRequest" message="tns:eliminarInstitucionEducativa" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/eliminarInstitucionEducativaResponse" message="tns:eliminarInstitucionEducativaResponse" />
-    </operation>
     <operation name="obtenerInstitucionEducativaPorId">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/obtenerInstitucionEducativaPorIdRequest" message="tns:obtenerInstitucionEducativaPorId" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/obtenerInstitucionEducativaPorIdResponse" message="tns:obtenerInstitucionEducativaPorIdResponse" />
     </operation>
+    <operation name="modificarInstitucionEducativa">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/modificarInstitucionEducativaRequest" message="tns:modificarInstitucionEducativa" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/modificarInstitucionEducativaResponse" message="tns:modificarInstitucionEducativaResponse" />
+    </operation>
   </portType>
   <binding name="InstitucionEducativaWSPortBinding" type="tns:InstitucionEducativaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="eliminarInstitucionEducativa">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="listarTodosInstitucionesEducativas">
       <soap:operation soapAction="" />
       <input>
@@ -77,25 +86,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarInstitucionEducativa">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarInstitucionEducativa">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="obtenerInstitucionEducativaPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarInstitucionEducativa">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

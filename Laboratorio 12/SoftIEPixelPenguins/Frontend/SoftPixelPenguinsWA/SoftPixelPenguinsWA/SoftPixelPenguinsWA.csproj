@@ -151,6 +151,7 @@
     <Content Include="Content\Estilos-Alumno.css" />
     <Content Include="Content\Estilos-GestionarSolDetalleAdmin.css" />
     <Content Include="Content\Estilos-Matricularse.css" />
+    <Content Include="Content\Estilos-Pagos.css" />
     <Content Include="Content\Estilos-Plan.css" />
     <Content Include="Content\Estilos-ProcesoMatriculaG.css" />
     <Content Include="Content\Estilos-RecuperarContraseña.css" />
@@ -189,6 +190,7 @@
     <Content Include="Content\site.css" />
     <Content Include="Flujo_Alumno\Matricula Online.aspx" />
     <Content Include="Flujo_Alumno\SubirBaucher.aspx" />
+    <Content Include="Flujo_PersonalAdmin\GestionarPagosPA.aspx" />
     <Content Include="Flujo_PersonalAdmin\MiPerfilAdmin.aspx" />
     <Content Include="Flujo_Alumno\MisPagosAlumno.aspx" />
     <Content Include="Flujo_Alumno\VisualizarPagoAlumno.aspx" />
@@ -777,6 +779,13 @@
     </Compile>
     <Compile Include="Flujo_Alumno\SubirBaucher.aspx.designer.cs">
       <DependentUpon>SubirBaucher.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Flujo_PersonalAdmin\GestionarPagosPA.aspx.cs">
+      <DependentUpon>GestionarPagosPA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Flujo_PersonalAdmin\GestionarPagosPA.aspx.designer.cs">
+      <DependentUpon>GestionarPagosPA.aspx</DependentUpon>
     </Compile>
     <Compile Include="Flujo_PersonalAdmin\MiPerfilAdmin.aspx.cs">
       <DependentUpon>MiPerfilAdmin.aspx</DependentUpon>

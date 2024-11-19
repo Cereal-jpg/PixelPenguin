@@ -1,0 +1,43 @@
+﻿/* Contenedor principal de la tabla */
+.container-pagos {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Tabla de pagos */
+.table-full-width {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+    .table-full-width th,
+    .table-full-width td {
+        text-align: left;
+        padding: 12px;
+        border: 1px solid #ddd;
+    }
+
+    .table-full-width th {
+        background-color: #f4f4f4;
+        font-weight: bold;
+    }
+
+/* Botón de agregar */
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    padding-right: 10px;
+}
+
+.btn-small {
+    width: 160px;
+    height: 40px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #28a745;
+    border: none;
+    border-radius: 4px;
+    curs

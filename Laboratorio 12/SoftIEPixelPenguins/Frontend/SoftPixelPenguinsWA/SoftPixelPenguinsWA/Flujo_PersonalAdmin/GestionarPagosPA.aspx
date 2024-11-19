@@ -1,8 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftPixelPenguins.Master" AutoEventWireup="true" CodeBehind="IndexPersonalAdministrativo.aspx.cs" Inherits="SoftPixelPenguinsWA.IndexPersonalAdministrativo" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/SoftPixelPenguins.Master" CodeBehind="GestionarPagosPA.aspx.cs" Inherits="SoftPixelPenguinsWA.Flujo_PersonalAdmin.GestionarPagosPA" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
-    Inicio - Personal Admin
+    Gestionar Pagos - Personal Admin
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphScripts" runat="server">
+    <link rel="stylesheet" href="../Content/Estilos-Pagos.css" />
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="menuItem1" runat="server">
@@ -33,12 +35,25 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
-    <h2 style="text-align: left; color: #000f;">Personal Administrativo - Inicio</h2>
-    <link rel="stylesheet" href="../Content/Estilos-Alumno.css" />
-    <div class="container-al">
-        <div class="schedule">
-            <h3>Horario de Reuniones</h3>
-            <img src="../Images/HORARIO2.PNG" alt="Horario de Reuniones"/>
-        </div>
+    <h2 style="text-align: left; color: #000f;">Personal Administrativo - Gestionar Pagos</h2>
+    <div class="container-pagos">
+        <asp:GridView ID="gvPagos" runat="server" AutoGenerateColumns="false" CssClass="table table-full-width">
+            <Columns>
+                <asp:BoundField DataField="IdPago" HeaderText="ID Pago" />
+                <asp:BoundField DataField="NombreAlumno" HeaderText="Nombre Alumno" />
+                <asp:BoundField DataField="Monto" HeaderText="Monto" DataFormatString="{0:C}" />
+                <asp:BoundField DataField="Fecha" HeaderText="Fecha" DataFormatString="{0:dd/MM/yyyy}" />
+                <asp:BoundField DataField="Estado" HeaderText="Estado" />
+                <asp:TemplateField HeaderText="Acciones">
+                    <ItemTemplate>
+                        <asp:Button ID="btnEditar" runat="server" Text="Editar" CommandName="Editar" CommandArgument='<%# Eval("IdPago") %>' CssClass="btn btn-primary" />
+                    </ItemTemplate>
+                </asp:TemplateField>
+            </Columns>
+        </asp:GridView>
     </div>
+    <div class="btn-container">
+        <asp:Button ID="btnAgregarPago" runat="server" Text="Agregar Nuevo Pago" CssClass="btn btn-success btn-small" OnClick="AgregarPago" />
+    </div>
+
 </asp:Content>

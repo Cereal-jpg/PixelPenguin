@@ -123,7 +123,7 @@
   </xs:complexType>
   <xs:complexType name="PagoXIdMatriculaResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:pago" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:pago" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarTodosPagos">

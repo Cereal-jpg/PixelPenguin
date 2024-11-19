@@ -5,24 +5,6 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftPixelPenguinsWSBL/MatriculaWS?xsd=1" namespace="http://services.pixelpenguins.pucp.edu.pe" />
     </xsd:schema>
   </types>
-  <message name="listarMatriculasPorGradoAcademico">
-    <part name="parameters" element="tns:listarMatriculasPorGradoAcademico" />
-  </message>
-  <message name="listarMatriculasPorGradoAcademicoResponse">
-    <part name="parameters" element="tns:listarMatriculasPorGradoAcademicoResponse" />
-  </message>
-  <message name="obtenerMatriculaPorIdAlumno">
-    <part name="parameters" element="tns:obtenerMatriculaPorIdAlumno" />
-  </message>
-  <message name="obtenerMatriculaPorIdAlumnoResponse">
-    <part name="parameters" element="tns:obtenerMatriculaPorIdAlumnoResponse" />
-  </message>
-  <message name="eliminarMatricula">
-    <part name="parameters" element="tns:eliminarMatricula" />
-  </message>
-  <message name="eliminarMatriculaResponse">
-    <part name="parameters" element="tns:eliminarMatriculaResponse" />
-  </message>
   <message name="insertarMatricula">
     <part name="parameters" element="tns:insertarMatricula" />
   </message>
@@ -35,11 +17,11 @@
   <message name="modificarMatriculaResponse">
     <part name="parameters" element="tns:modificarMatriculaResponse" />
   </message>
-  <message name="listarTodosMatriculas">
-    <part name="parameters" element="tns:listarTodosMatriculas" />
+  <message name="eliminarMatricula">
+    <part name="parameters" element="tns:eliminarMatricula" />
   </message>
-  <message name="listarTodosMatriculasResponse">
-    <part name="parameters" element="tns:listarTodosMatriculasResponse" />
+  <message name="eliminarMatriculaResponse">
+    <part name="parameters" element="tns:eliminarMatriculaResponse" />
   </message>
   <message name="obtenerMatriculaPorId">
     <part name="parameters" element="tns:obtenerMatriculaPorId" />
@@ -47,19 +29,25 @@
   <message name="obtenerMatriculaPorIdResponse">
     <part name="parameters" element="tns:obtenerMatriculaPorIdResponse" />
   </message>
+  <message name="listarTodosMatriculas">
+    <part name="parameters" element="tns:listarTodosMatriculas" />
+  </message>
+  <message name="listarTodosMatriculasResponse">
+    <part name="parameters" element="tns:listarTodosMatriculasResponse" />
+  </message>
+  <message name="listarMatriculasPorGradoAcademico">
+    <part name="parameters" element="tns:listarMatriculasPorGradoAcademico" />
+  </message>
+  <message name="listarMatriculasPorGradoAcademicoResponse">
+    <part name="parameters" element="tns:listarMatriculasPorGradoAcademicoResponse" />
+  </message>
+  <message name="obtenerMatriculaPorIdAlumno">
+    <part name="parameters" element="tns:obtenerMatriculaPorIdAlumno" />
+  </message>
+  <message name="obtenerMatriculaPorIdAlumnoResponse">
+    <part name="parameters" element="tns:obtenerMatriculaPorIdAlumnoResponse" />
+  </message>
   <portType name="MatriculaWS">
-    <operation name="listarMatriculasPorGradoAcademico">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/listarMatriculasPorGradoAcademicoRequest" message="tns:listarMatriculasPorGradoAcademico" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/listarMatriculasPorGradoAcademicoResponse" message="tns:listarMatriculasPorGradoAcademicoResponse" />
-    </operation>
-    <operation name="obtenerMatriculaPorIdAlumno">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/obtenerMatriculaPorIdAlumnoRequest" message="tns:obtenerMatriculaPorIdAlumno" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/obtenerMatriculaPorIdAlumnoResponse" message="tns:obtenerMatriculaPorIdAlumnoResponse" />
-    </operation>
-    <operation name="eliminarMatricula">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/eliminarMatriculaRequest" message="tns:eliminarMatricula" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/eliminarMatriculaResponse" message="tns:eliminarMatriculaResponse" />
-    </operation>
     <operation name="insertarMatricula">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/insertarMatriculaRequest" message="tns:insertarMatricula" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/insertarMatriculaResponse" message="tns:insertarMatriculaResponse" />
@@ -68,44 +56,29 @@
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/modificarMatriculaRequest" message="tns:modificarMatricula" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/modificarMatriculaResponse" message="tns:modificarMatriculaResponse" />
     </operation>
-    <operation name="listarTodosMatriculas">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/listarTodosMatriculasRequest" message="tns:listarTodosMatriculas" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/listarTodosMatriculasResponse" message="tns:listarTodosMatriculasResponse" />
+    <operation name="eliminarMatricula">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/eliminarMatriculaRequest" message="tns:eliminarMatricula" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/eliminarMatriculaResponse" message="tns:eliminarMatriculaResponse" />
     </operation>
     <operation name="obtenerMatriculaPorId">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/obtenerMatriculaPorIdRequest" message="tns:obtenerMatriculaPorId" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/obtenerMatriculaPorIdResponse" message="tns:obtenerMatriculaPorIdResponse" />
     </operation>
+    <operation name="listarTodosMatriculas">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/listarTodosMatriculasRequest" message="tns:listarTodosMatriculas" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/listarTodosMatriculasResponse" message="tns:listarTodosMatriculasResponse" />
+    </operation>
+    <operation name="listarMatriculasPorGradoAcademico">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/listarMatriculasPorGradoAcademicoRequest" message="tns:listarMatriculasPorGradoAcademico" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/listarMatriculasPorGradoAcademicoResponse" message="tns:listarMatriculasPorGradoAcademicoResponse" />
+    </operation>
+    <operation name="obtenerMatriculaPorIdAlumno">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/obtenerMatriculaPorIdAlumnoRequest" message="tns:obtenerMatriculaPorIdAlumno" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/MatriculaWS/obtenerMatriculaPorIdAlumnoResponse" message="tns:obtenerMatriculaPorIdAlumnoResponse" />
+    </operation>
   </portType>
   <binding name="MatriculaWSPortBinding" type="tns:MatriculaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarMatriculasPorGradoAcademico">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="obtenerMatriculaPorIdAlumno">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="eliminarMatricula">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="insertarMatricula">
       <soap:operation soapAction="" />
       <input>
@@ -124,7 +97,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarTodosMatriculas">
+    <operation name="eliminarMatricula">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -134,6 +107,33 @@
       </output>
     </operation>
     <operation name="obtenerMatriculaPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosMatriculas">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarMatriculasPorGradoAcademico">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerMatriculaPorIdAlumno">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

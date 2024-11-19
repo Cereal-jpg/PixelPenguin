@@ -10,7 +10,7 @@ public interface PagoDAO {
     public Integer eliminar(Pago pago);
     public ArrayList<Pago> listarTodos();
     public Pago obtenerPorId(Integer idPago);
-    public Pago PagoXAlumnos(int idMatricula);
+    public  ArrayList<Pago> PagoXAlumnos(int idMatricula);
     public ArrayList<Pago> listarTodosXIdMatricula(int idMatricula);
     public ArrayList<Pago> listarTodosPorGrado(int idGrado);
 }

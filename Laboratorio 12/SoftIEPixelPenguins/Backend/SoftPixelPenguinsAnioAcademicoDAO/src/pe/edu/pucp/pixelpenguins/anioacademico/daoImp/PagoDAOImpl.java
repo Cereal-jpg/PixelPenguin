@@ -149,7 +149,8 @@ public class PagoDAOImpl extends DAOImpl implements PagoDAO {
     }  
         
     @Override
-    public Pago PagoXAlumnos(int idMatricula) {
+    public  ArrayList<Pago> PagoXAlumnos(int idMatricula) {
+        ArrayList<Pago> pagos = new ArrayList<Pago>();
         try {
             this.abrirConexion();
             String sql="SELECT "+this.obtenerProyeccionParaSelect()+" FROM "+this.nombre_tabla;
@@ -157,12 +158,10 @@ public class PagoDAOImpl extends DAOImpl implements PagoDAO {
             this.colocarSQLenStatement(sql);
             this.incluirParametroInt(1, idMatricula);
             this.ejecutarConsultaEnBD(sql);
-            if (this.resultSet.next()) {
-                this.instanciarObjetoDelResultSet();
+            while (this.resultSet.next()) {
+                agregarObjetoALaLista(pagos, this.resultSet);
             }
-            else{
-                this.limpiarObjetoDelResultSet();
-            }
+           
         } catch (SQLException ex) {
             System.err.println("Error");
         } finally {
@@ -172,7 +171,7 @@ public class PagoDAOImpl extends DAOImpl implements PagoDAO {
                 System.err.println("Error al cerrar la conexión - " + ex);
             }
         }
-        return this.pago;
+        return pagos;
     }
     @Override
     public ArrayList<Pago> listarTodosXIdMatricula(int idMatricula) {

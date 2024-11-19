@@ -5,6 +5,12 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftPixelPenguinsWSBL/InstitucionEducativaWS?xsd=1" namespace="http://services.pixelpenguins.pucp.edu.pe" />
     </xsd:schema>
   </types>
+  <message name="insertarInstitucionEducativa">
+    <part name="parameters" element="tns:insertarInstitucionEducativa" />
+  </message>
+  <message name="insertarInstitucionEducativaResponse">
+    <part name="parameters" element="tns:insertarInstitucionEducativaResponse" />
+  </message>
   <message name="eliminarInstitucionEducativa">
     <part name="parameters" element="tns:eliminarInstitucionEducativa" />
   </message>
@@ -16,12 +22,6 @@
   </message>
   <message name="listarTodosInstitucionesEducativasResponse">
     <part name="parameters" element="tns:listarTodosInstitucionesEducativasResponse" />
-  </message>
-  <message name="insertarInstitucionEducativa">
-    <part name="parameters" element="tns:insertarInstitucionEducativa" />
-  </message>
-  <message name="insertarInstitucionEducativaResponse">
-    <part name="parameters" element="tns:insertarInstitucionEducativaResponse" />
   </message>
   <message name="obtenerInstitucionEducativaPorId">
     <part name="parameters" element="tns:obtenerInstitucionEducativaPorId" />
@@ -36,6 +36,10 @@
     <part name="parameters" element="tns:modificarInstitucionEducativaResponse" />
   </message>
   <portType name="InstitucionEducativaWS">
+    <operation name="insertarInstitucionEducativa">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/insertarInstitucionEducativaRequest" message="tns:insertarInstitucionEducativa" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/insertarInstitucionEducativaResponse" message="tns:insertarInstitucionEducativaResponse" />
+    </operation>
     <operation name="eliminarInstitucionEducativa">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/eliminarInstitucionEducativaRequest" message="tns:eliminarInstitucionEducativa" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/eliminarInstitucionEducativaResponse" message="tns:eliminarInstitucionEducativaResponse" />
@@ -43,10 +47,6 @@
     <operation name="listarTodosInstitucionesEducativas">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/listarTodosInstitucionesEducativasRequest" message="tns:listarTodosInstitucionesEducativas" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/listarTodosInstitucionesEducativasResponse" message="tns:listarTodosInstitucionesEducativasResponse" />
-    </operation>
-    <operation name="insertarInstitucionEducativa">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/insertarInstitucionEducativaRequest" message="tns:insertarInstitucionEducativa" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/insertarInstitucionEducativaResponse" message="tns:insertarInstitucionEducativaResponse" />
     </operation>
     <operation name="obtenerInstitucionEducativaPorId">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/InstitucionEducativaWS/obtenerInstitucionEducativaPorIdRequest" message="tns:obtenerInstitucionEducativaPorId" />
@@ -59,6 +59,15 @@
   </portType>
   <binding name="InstitucionEducativaWSPortBinding" type="tns:InstitucionEducativaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="insertarInstitucionEducativa">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="eliminarInstitucionEducativa">
       <soap:operation soapAction="" />
       <input>
@@ -69,15 +78,6 @@
       </output>
     </operation>
     <operation name="listarTodosInstitucionesEducativas">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarInstitucionEducativa">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

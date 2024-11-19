@@ -69,15 +69,15 @@ public class PagoWS {
     }
     
     @WebMethod(operationName = "PagoXIdMatricula")
-    public Pago  PagoXAlumnos(@WebParam(name = "fid_Matricula") int idMatricula){
-        Pago pago = null;
+    public ArrayList<Pago>PagoXAlumnos(@WebParam(name = "fid_Matricula") int idMatricula){
+        ArrayList<Pago> pagos = null;
         try{
-            pago = pagoBO.PagoXAlumnos(idMatricula);
+            pagos = pagoBO.PagoXAlumnos(idMatricula);
         }
         catch (Exception ex){
             System.err.println(ex.getMessage());
         }
-        return pago;
+        return pagos;
     }
     
     @WebMethod(operationName = "listarPagosXIdMatricula")

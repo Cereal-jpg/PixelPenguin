@@ -32,8 +32,7 @@ public class PagoBO {
     public Pago obtenerPorId(Integer idPago){
         return this.pagoDAO.obtenerPorId(idPago);
     }
-    
-    public Pago  PagoXAlumnos(int idMatricula){
+    public ArrayList<Pago>  PagoXAlumnos(int idMatricula){
         return this.pagoDAO.PagoXAlumnos(idMatricula);
     }
     public ArrayList<Pago> listarTodosPorIdMatricula(int idMatricula){

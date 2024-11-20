@@ -33,12 +33,30 @@
     <div class="container-matricula" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
         <!-- Sección de subir archivos -->
         <div class="form-section" style="width: 50%; background-color: #f9f9f9; padding: 20px; border-radius: 8px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
-            <h2 style="text-align: center; color: #000f;">Adjuntar Baucher de Pago</h2>
+            <h2 style="text-align: center; color: #000f;">Adjuntar Documento de Pago</h2>
             <hr>
             <div class="form-group">
                 <div class="form-row" style="margin-bottom: 15px;">
-                    <label for="fileBaucher" style="display: block; font-weight: bold; margin-bottom: 5px;">Baucher de Pago:</label>
-                    <asp:FileUpload ID="fileBaucher" runat="server" CssClass="file-upload" style="width: 100%;" />
+                    <label for="fileBaucher" style="display: block; font-weight: bold; margin-bottom: 5px;">Documento de Pago:</label>
+                    <asp:FileUpload ID="fileBaucher" runat="server" CssClass="file-upload" Style="width: 100%;" />
+                </div>
+                <div class="form-row" style="margin-bottom: 15px;">
+                    <label for="ddlCategorias" style="display: block; font-weight: bold; margin-bottom: 5px;">Tipo de Pago:</label>
+                    <asp:DropDownList ID="ddlCategorias" runat="server" CssClass="dropdown" Style="width: 100%;">
+                        <asp:ListItem Text="Seleccione un tipo de pago" Value="" />
+                        <asp:ListItem Text="BANCOS_ASOCIADOS" Value="BANCOS_ASOCIADOS" />
+                        <asp:ListItem Text="TRANSFERENCIA_BANCARIA" Value="TRANSFERENCIA_BANCARIA" />
+                    </asp:DropDownList>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-row" style="margin-bottom: 15px;">
+                    <label for="ddlPagos" style="display: block; font-weight: bold; margin-bottom: 5px;">Tipo de documento:</label>
+                    <asp:DropDownList ID="ddlPagos" runat="server" CssClass="dropdown" Style="width: 100%;">
+                        <asp:ListItem Text="Seleccione un tipo de comprobante de pago" Value="" />
+                        <asp:ListItem Text="BOLETA" Value="BOLETA" />
+                        <asp:ListItem Text="FACTURA" Value="FACTURA" />
+                    </asp:DropDownList>
                 </div>
             </div>
         </div>

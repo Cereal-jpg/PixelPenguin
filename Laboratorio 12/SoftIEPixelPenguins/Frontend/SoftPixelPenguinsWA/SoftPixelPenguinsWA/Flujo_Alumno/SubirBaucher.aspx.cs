@@ -53,9 +53,31 @@ namespace SoftPixelPenguinsWA.Flujo_Alumno
             {
                 try
                 {
+                    string categoriaSeleccionada = ddlCategorias.SelectedItem.Value;
+                    string tipoComprobante = ddlPagos.SelectedItem.Value;
+                    switch (categoriaSeleccionada)
+                    {
+                        case "BANCOS_ASOCIADOS":
+                            pago.tipoPago = tipoDePago.BANCOS_ASOCIADOS;
+                            break;
+                        case "TRANSFERENCIA_BANCARIA":
+                            pago.tipoPago = tipoDePago.TRANSFERENCIA_BANCARIA;
+                            break;
+                    }
+                    switch (tipoComprobante)
+                    {
+                        case "BOLETA":
+                            pago.tipoDeComprobante = tipoDeComprobante.BOLETA;
+                            break;
+                        case "FACTURA":
+                            pago.tipoDeComprobante = tipoDeComprobante.FACTURA;
+                            break;
+                    }
                     pago.comprobanteDePago = fileBaucher.FileBytes;
+
                     pagoBO.modificarPago(pago);
                     MostrarMensajeExito("El baucher se ha subido correctamente.");
+                    Response.Redirect("MisPagosAlumno.aspx");
                 }
                 catch (Exception ex)
                 {

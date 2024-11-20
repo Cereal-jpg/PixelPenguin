@@ -38,10 +38,6 @@
                <asp:GridView ID="gvPagos" runat="server" AllowPaging="true" PageSize="10" AutoGenerateColumns="false"
     CssClass="table table-hover table-responsive table-striped text-center" ShowHeaderWhenEmpty="true">
     <Columns>
-        <asp:BoundField HeaderText="ID_Pago" DataField="idPago">
-            <ItemStyle HorizontalAlign="Center" />
-            <HeaderStyle HorizontalAlign="Center" />
-        </asp:BoundField>
         <asp:BoundField HeaderText="Fecha de Creacion" DataField="fechaCreacion" DataFormatString="{0:yyyy-MM-dd}" HtmlEncode="false">
             <ItemStyle HorizontalAlign="Center" />
             <HeaderStyle HorizontalAlign="Center" />
@@ -68,8 +64,8 @@
                         CommandArgument='<%# Eval("idPago") %>'
                         CssClass="btn btn-warning btn-sm me-1"
                         OnClick="lbEditar_Click"
-                        Enabled='<%# Eval("estado").ToString() == "PENDIENTE" %>'>
-                        <i class="fa-solid fa-pen-to-square"></i> Subir Baucher
+                        Enabled='<%# Eval("estado").ToString() != "CANCELADO" %>'>
+                        <i class="fa-solid fa-pen-to-square"></i> Subir Documento de Pago
                     </asp:LinkButton>
                 </div>
             </ItemTemplate>

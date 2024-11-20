@@ -54,6 +54,9 @@ namespace SoftPixelPenguinsWA
                 txtDireccion.Text = alumno.direccion;
                 alumno.gradoAcademico = gradoAcademicoBO.obtenerGradoAcademicoPorId(alumno.gradoAcademico.idGradoAcademico);
                 txtGradoAcademico.Text = alumno.gradoAcademico.numeroGrado.ToString() + "° " + alumno.gradoAcademico.nivel.ToString();
+                txtUsuario.Text = txtNombreAlumno.Text[0] + txtApellidoPaterno.Text[0] + txtDNIAlumno.Text.Substring(0, 4);
+                txtContraseña.Text = txtNombreAlumno.Text[0] + txtDNIAlumno.Text;
+                txtCodigo.Text = (DateTime.Now.Year * 1000 + int.Parse(txtDNIAlumno.Text.Substring(4, 3))).ToString();
                 if (alumno.estado.Equals(estadoAlumno.Por_Pagar) || alumno.estado.Equals(estadoAlumno.Matriculado))
                 {
                     btnConfirmarSolicitud.Text = "Matricular Usuario";
@@ -166,9 +169,9 @@ namespace SoftPixelPenguinsWA
             {
                 if (alumno.estado.Equals(estadoAlumno.Pendiente))
                 {
-                    alumno.username = txtUsuario.Text;
-                    alumno.password = txtContraseña.Text;
-                    alumno.codigoAlumno = Int32.Parse(txtCodigo.Text);
+                    alumno.username = txtNombreAlumno.Text[0] + txtApellidoPaterno.Text[0] + txtDNIAlumno.Text.Substring(0, 4);
+                    alumno.password = txtNombreAlumno.Text[0] + txtDNIAlumno.Text;
+                    alumno.codigoAlumno = DateTime.Now.Year * 1000 + int.Parse(txtDNIAlumno.Text.Substring(4, 3));
                     alumno.estado = estadoAlumno.Por_Pagar;
 
                     string cuerpo = $"Hola {alumno.nombreCompleto},\n\n" +

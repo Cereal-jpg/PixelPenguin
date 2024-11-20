@@ -38,7 +38,7 @@ namespace SoftPixelPenguinsWA
                 txtAlumno.Text = alumno.nombreCompleto;
                 deshabilitarComponentes();
             }
-            BindingList<cursoXMatricula> notasFinales = new BindingList<cursoXMatricula>(cursoXMatriculaBO.listarNotasFinalesCursosXAlumno(idAlumno));
+            List<cursoXMatricula> notasFinales = new List<cursoXMatricula>(cursoXMatriculaBO.listarNotasFinalesCursosXAlumno(idAlumno) ?? Array.Empty<cursoXMatricula>()).ToList();
             actualizarNotasFinales(notasFinales);
             gvNotas.DataSource = notasFinales;
             gvNotas.DataBind();
@@ -49,7 +49,7 @@ namespace SoftPixelPenguinsWA
             Response.Redirect("NotasParcialesAlumno.aspx");
         }
 
-        private void actualizarNotasFinales(BindingList<cursoXMatricula> notasFinales)
+        private void actualizarNotasFinales(List<cursoXMatricula> notasFinales)
         {
             foreach (cursoXMatricula cursoXMatricula in notasFinales)
             {

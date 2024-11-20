@@ -40,6 +40,10 @@
                     <label>Institución Educativa:</label>
                     <asp:TextBox ID="txtInstitucion" runat="server" placeholder="Intitucion"></asp:TextBox>
                 </div>
+                <div class="form-row">
+                    <label>RUC:</label>
+                    <asp:TextBox ID="txtRUC" runat="server" placeholder="RUC"></asp:TextBox>
+                </div>
             </div>
             <div class="form-group">
                 <div class="form-row">

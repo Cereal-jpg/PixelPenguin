@@ -32,7 +32,7 @@ namespace SoftPixelPenguinsWA.Flujo_PersonalAdmin
         {
             gvGrados.DataSource = gradoBO.listarTodosGradosAcademicos(); ;
             gvGrados.DataBind();
-            gradoAcademico a;
+            //gradoAcademico a;
 
         }
         protected void lbGenerar_Click(object sender, EventArgs e)

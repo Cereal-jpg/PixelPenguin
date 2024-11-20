@@ -21,6 +21,7 @@ namespace SoftPixelPenguinsWA
         private NotaWSClient notaBO = new NotaWSClient();
         competencia competencia = null;
         curso curso = null;
+        nota nota = null;
         gradoAcademico grado = null;
         BindingList<matricula> matriculas = null;
         BindingList<alumno> alumnos = null;
@@ -103,7 +104,11 @@ namespace SoftPixelPenguinsWA
                         return;
                     }
 
-                    nota nota = new nota
+                    competencia = (competencia)Session["competencia"];
+
+                    nota nota = notaBO.obtenerNotaPorParametros(matriculaAlumno.idMatricula, idAlumno,
+                        competencia.idCompetencia, Int32.Parse(ddlBimestre.SelectedValue));
+                    nota newNota = new nota
                     {
                         bimestre = Int32.Parse(ddlBimestre.SelectedValue),
                         competencia = (competencia)Session["competencia"],
@@ -112,8 +117,11 @@ namespace SoftPixelPenguinsWA
                         fid_Matricula = matriculaAlumno.idMatricula,
                         nota1 = notaSeleccionada
                     };
-
-                    notas.Add(nota);
+                    if (nota != null)    // Hay nota
+                    {
+                        newNota.idNota = nota.idNota;
+                    }
+                    notas.Add(newNota);
                 }
             }
             registrarNotasEnBD(notas);
@@ -121,12 +129,20 @@ namespace SoftPixelPenguinsWA
 
         private void registrarNotasEnBD(BindingList<nota> notas)
         {
-            foreach (nota nota in notas)
+            foreach (nota n in notas)
             {
                 // más que insertar, debería ser un modificar la nota creo
                 // al matricularse el alumno se insertan todas sus notas correspondientes a '-'
                 // y el profesor puede ir actualizando conforme va avanzando el curso
-                notaBO.insertarNota(nota);
+
+                if(n.nota1.Length > 0 || n.nota1 != null)
+                {
+                    notaBO.modificarNota(n);
+                }
+                else
+                {
+                    notaBO.insertarNota(n);
+                }
             }
         }
 

@@ -13,32 +13,39 @@ namespace SoftPixelPenguinsWA.Flujo_Profesor
         curso curso = null;
         gradoAcademico grado = null;
         GradoAcademicoWSClient gradoBO = new GradoAcademicoWSClient();
+        SeccionAcademicaWSClient seccionBO = new SeccionAcademicaWSClient();
+        seccionAcademica seccion = null;
+        int idGrado = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
+            string id = Request.QueryString["idGrado"];
             if (!IsPostBack)
             {
-                string id = Request.QueryString["idGrado"];
                 if (id != null)
                 {
-                    int idGrado = Int32.Parse(id);
+                    idGrado = Int32.Parse(id);
                     grado = gradoBO.obtenerGradoAcademicoPorId(idGrado);
                     if(grado != null)
                     {
                         txtGrado.Text = grado.numeroGrado.ToString();
                         txtNivel.Text = grado.nivel.ToString();
-                        txtCantAlumnos.Text = grado.cantidadAlumnos.ToString();
                         deshabilitarComponentes();
                     }
                 }
+            }
+            grado = gradoBO.obtenerGradoAcademicoPorId(idGrado);
+            if(grado != null)
+            {
+                List<seccionAcademica> listaSecciones = (seccionBO.listarSeccionesPorGrado(grado) ?? Array.Empty<seccionAcademica>()).ToList();
+                gvSalones.DataSource = listaSecciones;
+                gvSalones.DataBind();
             }
         }
 
         private void deshabilitarComponentes()
         {
-
             txtGrado.Enabled = false;
             txtNivel.Enabled = false;
-            txtCantAlumnos.Enabled = false;
         }
 
         protected void btnRegresar_Click(object sender, EventArgs e)

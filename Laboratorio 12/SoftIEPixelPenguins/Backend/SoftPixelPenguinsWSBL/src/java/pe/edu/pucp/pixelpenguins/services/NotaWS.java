@@ -92,4 +92,17 @@ public class NotaWS {
         return notas;
     }
     
+    @WebMethod(operationName = "obtenerNotaPorParametros")
+    public Nota obtenerNotaPorParametros(@WebParam(name = "idAlumno") Integer idAlumno,
+            @WebParam(name = "idCurso") Integer idCurso, @WebParam(name = "bimestre") Integer bimestre,
+            @WebParam(name = "idCompetencia") Integer idCompetencia) {
+        Nota nota = null;
+        try {
+            nota = notaBO.obtenerNotaPorParametros(idAlumno, idCurso, bimestre,
+                    idCompetencia);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return nota;
+    }
 }

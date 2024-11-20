@@ -33,12 +33,14 @@
                 <asp:TextBox ID="txtNivel" runat="server" placeholder="Nivel"></asp:TextBox>
             </div>
         </div>
-        <div class="form-group">
-            <div class="form-row">
-                <label>Cantidad de Alumnos:</label>
-                <asp:TextBox ID="txtCantAlumnos" runat="server" placeholder="CantAlumnos"></asp:TextBox>
-            </div>
-        </div>
+
+        <asp:GridView ID="gvSalones" runat="server" AutoGenerateColumns="False" CssClass="table table-hover table-responsive table-striped table-bordered" >
+            <Columns>
+                <asp:BoundField DataField="aula" HeaderText="Aula" />
+                <asp:BoundField DataField="cantidadAlumnos" HeaderText="Cantidad de Estudiantes" />
+            </Columns>
+        </asp:GridView>
+
         <div style="display: flex; justify-content: center; align-items: center;">
             <br>
             <asp:Button ID="btnRegresar" runat="server" Text="Regresar" OnClick="btnRegresar_Click" CssClass="btn btn-primary" />

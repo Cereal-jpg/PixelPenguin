@@ -33,13 +33,13 @@ namespace SoftPixelPenguinsWA.Flujo_Profesor
         protected global::System.Web.UI.WebControls.TextBox txtNivel;
 
         /// <summary>
-        /// Control txtCantAlumnos.
+        /// Control gvSalones.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCantAlumnos;
+        protected global::System.Web.UI.WebControls.GridView gvSalones;
 
         /// <summary>
         /// Control btnRegresar.

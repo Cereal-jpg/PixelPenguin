@@ -11,4 +11,5 @@ public interface NotaDAO {
     public Nota obtenerPorId(Integer idNota);
     public ArrayList<Nota> listarPorAlumnoYCurso(Integer idAlumno,Integer idCurso);
     public ArrayList<Nota> listarPorAlumnoCursoYBimestre(Integer idAlumno,Integer idCurso,Integer bimestre);
+    public Nota obtenerNotaPorParametros(Integer idAlumno,Integer idCurso,Integer bimestre,Integer idCompetencia);
 }

@@ -744,6 +744,9 @@
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.obtenerPorCursoYMatriculaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.obtenerNotaPorParametrosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\ServicioWeb\UsuarioWS.wsdl" />
     <None Include="Connected Services\ServicioWeb\UsuarioWS.xsd">
       <SubType>Designer</SubType>

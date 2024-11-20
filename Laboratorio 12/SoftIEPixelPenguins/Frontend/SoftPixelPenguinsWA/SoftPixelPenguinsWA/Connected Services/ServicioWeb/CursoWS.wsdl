@@ -5,23 +5,17 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftPixelPenguinsWSBL/CursoWS?xsd=1" namespace="http://services.pixelpenguins.pucp.edu.pe" />
     </xsd:schema>
   </types>
-  <message name="insertarCurso">
-    <part name="parameters" element="tns:insertarCurso" />
-  </message>
-  <message name="insertarCursoResponse">
-    <part name="parameters" element="tns:insertarCursoResponse" />
-  </message>
   <message name="listarTodosCursos">
     <part name="parameters" element="tns:listarTodosCursos" />
   </message>
   <message name="listarTodosCursosResponse">
     <part name="parameters" element="tns:listarTodosCursosResponse" />
   </message>
-  <message name="modificarCurso">
-    <part name="parameters" element="tns:modificarCurso" />
+  <message name="insertarCurso">
+    <part name="parameters" element="tns:insertarCurso" />
   </message>
-  <message name="modificarCursoResponse">
-    <part name="parameters" element="tns:modificarCursoResponse" />
+  <message name="insertarCursoResponse">
+    <part name="parameters" element="tns:insertarCursoResponse" />
   </message>
   <message name="eliminarCurso">
     <part name="parameters" element="tns:eliminarCurso" />
@@ -34,6 +28,12 @@
   </message>
   <message name="obtenerCursoPorIdResponse">
     <part name="parameters" element="tns:obtenerCursoPorIdResponse" />
+  </message>
+  <message name="modificarCurso">
+    <part name="parameters" element="tns:modificarCurso" />
+  </message>
+  <message name="modificarCursoResponse">
+    <part name="parameters" element="tns:modificarCursoResponse" />
   </message>
   <message name="listarCursosPorProfesor">
     <part name="parameters" element="tns:listarCursosPorProfesor" />
@@ -48,17 +48,13 @@
     <part name="parameters" element="tns:listarCursosPorGradoResponse" />
   </message>
   <portType name="CursoWS">
-    <operation name="insertarCurso">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/insertarCursoRequest" message="tns:insertarCurso" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/insertarCursoResponse" message="tns:insertarCursoResponse" />
-    </operation>
     <operation name="listarTodosCursos">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/listarTodosCursosRequest" message="tns:listarTodosCursos" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/listarTodosCursosResponse" message="tns:listarTodosCursosResponse" />
     </operation>
-    <operation name="modificarCurso">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/modificarCursoRequest" message="tns:modificarCurso" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/modificarCursoResponse" message="tns:modificarCursoResponse" />
+    <operation name="insertarCurso">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/insertarCursoRequest" message="tns:insertarCurso" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/insertarCursoResponse" message="tns:insertarCursoResponse" />
     </operation>
     <operation name="eliminarCurso">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/eliminarCursoRequest" message="tns:eliminarCurso" />
@@ -67,6 +63,10 @@
     <operation name="obtenerCursoPorId">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/obtenerCursoPorIdRequest" message="tns:obtenerCursoPorId" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/obtenerCursoPorIdResponse" message="tns:obtenerCursoPorIdResponse" />
+    </operation>
+    <operation name="modificarCurso">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/modificarCursoRequest" message="tns:modificarCurso" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/modificarCursoResponse" message="tns:modificarCursoResponse" />
     </operation>
     <operation name="listarCursosPorProfesor">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/listarCursosPorProfesorRequest" message="tns:listarCursosPorProfesor" />
@@ -79,15 +79,6 @@
   </portType>
   <binding name="CursoWSPortBinding" type="tns:CursoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="insertarCurso">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="listarTodosCursos">
       <soap:operation soapAction="" />
       <input>
@@ -97,7 +88,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarCurso">
+    <operation name="insertarCurso">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -116,6 +107,15 @@
       </output>
     </operation>
     <operation name="obtenerCursoPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarCurso">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

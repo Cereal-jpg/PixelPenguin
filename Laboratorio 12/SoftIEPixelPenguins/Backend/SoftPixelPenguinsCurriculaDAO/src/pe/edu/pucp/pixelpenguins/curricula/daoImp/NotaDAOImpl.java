@@ -207,4 +207,34 @@ public class NotaDAOImpl extends DAOImpl implements NotaDAO {
         
         return notas;
     }
+
+    @Override
+    public Nota obtenerNotaPorParametros(Integer idAlumno, Integer idCurso, Integer bimestre, Integer idCompetencia) {
+        this.nota = new Nota();
+        try {
+            this.abrirConexion();
+            String sql = "select " + obtenerProyeccionParaSelect();
+            sql += " from " + this.nombre_tabla + " where fid_Alumno = ? AND fid_Curso = ? AND bimestre = ? AND fid_Competencia = ?";
+            this.colocarSQLenStatement(sql);
+            this.incluirParametroInt(1, idAlumno);
+            this.incluirParametroInt(2, idCurso);
+            this.incluirParametroInt(3, bimestre);
+            this.incluirParametroInt(4, idCompetencia);
+            this.ejecutarConsultaEnBD(sql);
+            if (this.resultSet.next()) {
+                instanciarObjetoDelResultSet();
+            } else {
+                limpiarObjetoDelResultSet();
+            }
+        } catch (SQLException ex) {
+            System.err.println("Error al intentar obtenerNotaPorParametros - " + ex);
+        } finally {
+            try {
+                this.cerrarConexion();
+            } catch (SQLException ex) {
+                System.err.println("Error al cerrar la conexión - " + ex);
+            }
+        }
+        return this.nota;
+    }
 }

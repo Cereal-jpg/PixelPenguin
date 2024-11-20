@@ -34,7 +34,7 @@
        <!-- Sección: Datos del alumno -->
         <div class="container-matricula" style="display:block;">
             <asp:Label ID="myLabel" runat="server" Text="" Font-Size="Large" Font-Bold="True" CssClass="my-label"></asp:Label>
-            <h2 style="color: black;">Notas Finales - Periodo 2025</h2>
+            <h2 style="color: black;">Notas Finales - Periodo 2024</h2>
             <div class="form-group">
                 <div class="form-row">
                     <label>Institución Educativa:</label>
@@ -68,7 +68,8 @@
                     <asp:BoundField HeaderText="Nota Final" DataField="notaFinal"/>
                 </columns>
             </asp:GridView>
-            <div style="display: flex; justify-content: flex-end;">
+            <div style="display: flex; justify-content: flex-end; gap: 10px;">
+                <asp:Button ID="btnDownloadPDF" runat="server" Text="Descargar Reporte Notas" OnClick="btnDownloadPDF_Click" CssClass="login-button"/>
                 <asp:Button ID="Notas" runat="server" Text="Ver Notas Parciales" CssClass="login-button" OnClick="btnVerNotasParciales_Click"/>
             </div>
         </div>

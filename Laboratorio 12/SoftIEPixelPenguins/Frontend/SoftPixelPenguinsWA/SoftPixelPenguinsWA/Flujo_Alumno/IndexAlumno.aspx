@@ -33,10 +33,9 @@
             <img src="../Images/HORARIO1.png" alt="Horario Académico" class="centered-image"/>
         </div>
         <div class="notifications">
-            <h3>Notificaciones</h3>
+            <h3>Fechas de Pago: </h3>
             <ul id="notificationList" class="notification-list" runat="server">
-                <li>Próxima fecha de pago: <asp:Literal ID="fechaPagoLiteral" runat="server"></asp:Literal></li>
-                <li>Estado de pagos: <asp:Literal ID="Estado" runat="server"></asp:Literal></li>
+                <li><asp:Literal ID="fechaPagoLiteral" runat="server"></asp:Literal></li>
             </ul>
         </div>
     </div>

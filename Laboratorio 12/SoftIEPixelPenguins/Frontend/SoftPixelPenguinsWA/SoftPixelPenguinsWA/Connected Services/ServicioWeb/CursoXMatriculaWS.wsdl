@@ -17,29 +17,23 @@
   <message name="listarNotasFinalesCursosXAlumnoResponse">
     <part name="parameters" element="tns:listarNotasFinalesCursosXAlumnoResponse" />
   </message>
-  <message name="eliminarCursoXMatricula">
-    <part name="parameters" element="tns:eliminarCursoXMatricula" />
-  </message>
-  <message name="eliminarCursoXMatriculaResponse">
-    <part name="parameters" element="tns:eliminarCursoXMatriculaResponse" />
-  </message>
-  <message name="listarNotasFinalesXCurso">
-    <part name="parameters" element="tns:listarNotasFinalesXCurso" />
-  </message>
-  <message name="listarNotasFinalesXCursoResponse">
-    <part name="parameters" element="tns:listarNotasFinalesXCursoResponse" />
-  </message>
   <message name="insertarCursoXMatricula">
     <part name="parameters" element="tns:insertarCursoXMatricula" />
   </message>
   <message name="insertarCursoXMatriculaResponse">
     <part name="parameters" element="tns:insertarCursoXMatriculaResponse" />
   </message>
-  <message name="obtenerPorCursoYMatricula">
-    <part name="parameters" element="tns:obtenerPorCursoYMatricula" />
+  <message name="modificarCursoXMatricula">
+    <part name="parameters" element="tns:modificarCursoXMatricula" />
   </message>
-  <message name="obtenerPorCursoYMatriculaResponse">
-    <part name="parameters" element="tns:obtenerPorCursoYMatriculaResponse" />
+  <message name="modificarCursoXMatriculaResponse">
+    <part name="parameters" element="tns:modificarCursoXMatriculaResponse" />
+  </message>
+  <message name="eliminarCursoXMatricula">
+    <part name="parameters" element="tns:eliminarCursoXMatricula" />
+  </message>
+  <message name="eliminarCursoXMatriculaResponse">
+    <part name="parameters" element="tns:eliminarCursoXMatriculaResponse" />
   </message>
   <message name="listarTodosCursoXMatricula">
     <part name="parameters" element="tns:listarTodosCursoXMatricula" />
@@ -47,11 +41,17 @@
   <message name="listarTodosCursoXMatriculaResponse">
     <part name="parameters" element="tns:listarTodosCursoXMatriculaResponse" />
   </message>
-  <message name="modificarCursoXMatricula">
-    <part name="parameters" element="tns:modificarCursoXMatricula" />
+  <message name="obtenerPorCursoYMatricula">
+    <part name="parameters" element="tns:obtenerPorCursoYMatricula" />
   </message>
-  <message name="modificarCursoXMatriculaResponse">
-    <part name="parameters" element="tns:modificarCursoXMatriculaResponse" />
+  <message name="obtenerPorCursoYMatriculaResponse">
+    <part name="parameters" element="tns:obtenerPorCursoYMatriculaResponse" />
+  </message>
+  <message name="listarNotasFinalesXCurso">
+    <part name="parameters" element="tns:listarNotasFinalesXCurso" />
+  </message>
+  <message name="listarNotasFinalesXCursoResponse">
+    <part name="parameters" element="tns:listarNotasFinalesXCursoResponse" />
   </message>
   <portType name="CursoXMatriculaWS">
     <operation name="listarNotasFinalesCursosXMatricula">
@@ -62,29 +62,29 @@
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/listarNotasFinalesCursosXAlumnoRequest" message="tns:listarNotasFinalesCursosXAlumno" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/listarNotasFinalesCursosXAlumnoResponse" message="tns:listarNotasFinalesCursosXAlumnoResponse" />
     </operation>
-    <operation name="eliminarCursoXMatricula">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/eliminarCursoXMatriculaRequest" message="tns:eliminarCursoXMatricula" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/eliminarCursoXMatriculaResponse" message="tns:eliminarCursoXMatriculaResponse" />
-    </operation>
-    <operation name="listarNotasFinalesXCurso">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/listarNotasFinalesXCursoRequest" message="tns:listarNotasFinalesXCurso" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/listarNotasFinalesXCursoResponse" message="tns:listarNotasFinalesXCursoResponse" />
-    </operation>
     <operation name="insertarCursoXMatricula">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/insertarCursoXMatriculaRequest" message="tns:insertarCursoXMatricula" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/insertarCursoXMatriculaResponse" message="tns:insertarCursoXMatriculaResponse" />
     </operation>
-    <operation name="obtenerPorCursoYMatricula">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/obtenerPorCursoYMatriculaRequest" message="tns:obtenerPorCursoYMatricula" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/obtenerPorCursoYMatriculaResponse" message="tns:obtenerPorCursoYMatriculaResponse" />
+    <operation name="modificarCursoXMatricula">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/modificarCursoXMatriculaRequest" message="tns:modificarCursoXMatricula" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/modificarCursoXMatriculaResponse" message="tns:modificarCursoXMatriculaResponse" />
+    </operation>
+    <operation name="eliminarCursoXMatricula">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/eliminarCursoXMatriculaRequest" message="tns:eliminarCursoXMatricula" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/eliminarCursoXMatriculaResponse" message="tns:eliminarCursoXMatriculaResponse" />
     </operation>
     <operation name="listarTodosCursoXMatricula">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/listarTodosCursoXMatriculaRequest" message="tns:listarTodosCursoXMatricula" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/listarTodosCursoXMatriculaResponse" message="tns:listarTodosCursoXMatriculaResponse" />
     </operation>
-    <operation name="modificarCursoXMatricula">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/modificarCursoXMatriculaRequest" message="tns:modificarCursoXMatricula" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/modificarCursoXMatriculaResponse" message="tns:modificarCursoXMatriculaResponse" />
+    <operation name="obtenerPorCursoYMatricula">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/obtenerPorCursoYMatriculaRequest" message="tns:obtenerPorCursoYMatricula" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/obtenerPorCursoYMatriculaResponse" message="tns:obtenerPorCursoYMatriculaResponse" />
+    </operation>
+    <operation name="listarNotasFinalesXCurso">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/listarNotasFinalesXCursoRequest" message="tns:listarNotasFinalesXCurso" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoXMatriculaWS/listarNotasFinalesXCursoResponse" message="tns:listarNotasFinalesXCursoResponse" />
     </operation>
   </portType>
   <binding name="CursoXMatriculaWSPortBinding" type="tns:CursoXMatriculaWS">
@@ -107,24 +107,6 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarCursoXMatricula">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarNotasFinalesXCurso">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="insertarCursoXMatricula">
       <soap:operation soapAction="" />
       <input>
@@ -134,7 +116,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="obtenerPorCursoYMatricula">
+    <operation name="modificarCursoXMatricula">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarCursoXMatricula">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -152,7 +143,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarCursoXMatricula">
+    <operation name="obtenerPorCursoYMatricula">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarNotasFinalesXCurso">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

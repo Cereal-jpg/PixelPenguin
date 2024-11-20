@@ -40,7 +40,7 @@ namespace SoftPixelPenguinsWA
                 // Define la fecha de pago
                 int idMatricula = matriculaBO.obtenerMatriculaPorIdAlumno(idUsuario);
 
-                List<pago> listaPagos = pagoBO.PagoXIdMatricula(idMatricula).ToList();
+                List<pago> listaPagos = (pagoBO.PagoXIdMatricula(idMatricula) ?? Array.Empty<pago>()).ToList();
 
                 Session["idMatriculaAlumnoLogueado"] = idMatricula;
                 string textoFechaPago = "";

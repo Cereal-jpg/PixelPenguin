@@ -124,6 +124,8 @@ namespace SoftPixelPenguinsWA
                 monto = 1000.00
             };
             pagoBO.insertarPago(pago);
+            alumnoLogueado.estado = estadoAlumno.Por_Pagar;
+            alumnoBO.modificarAlumno(alumnoLogueado);
             string script = @"
                 alert('Su matrícula ha sido registrada. Tiene 30 días para realizar el pago y finalizar su matrícula.');
                 window.location.href = 'IndexAlumno.aspx';

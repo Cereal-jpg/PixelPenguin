@@ -142,7 +142,7 @@ public class PagoDAOImpl extends DAOImpl implements PagoDAO {
 
     @Override
     protected String obtenerPredicadoParaListado() {
-        return " WHERE fid_Matricula=? AND estado='PENDIENTE' OR estado='ATRASADO'";
+        return " WHERE fid_Matricula=? AND (estado='PENDIENTE' OR estado='ATRASADO')";
     }
     protected  String obtenerPredicadoParaListadoPoridMatricula(){
         return " WHERE fid_Matricula=?";

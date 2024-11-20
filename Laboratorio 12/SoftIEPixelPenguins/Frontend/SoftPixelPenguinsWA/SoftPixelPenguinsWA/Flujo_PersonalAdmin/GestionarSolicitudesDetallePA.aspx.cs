@@ -241,7 +241,7 @@ namespace SoftPixelPenguinsWA
 
                     };
                     matricula.idMatricula = matriculaBO.insertarMatricula(matricula);
-                    insercionNotasNuevoAlumno(matricula);
+                    //insercionNotasNuevoAlumno(matricula);
                 }
                 Session["gradoSeleccionado"] = null;
             }

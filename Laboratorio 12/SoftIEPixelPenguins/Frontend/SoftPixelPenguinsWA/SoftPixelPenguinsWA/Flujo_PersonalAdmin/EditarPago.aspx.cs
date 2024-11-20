@@ -17,26 +17,26 @@ namespace SoftPixelPenguinsWA.Flujo_PersonalAdmin
         pago pago = null;
         protected void Page_Load(object sender, EventArgs e)
         {
-         
-                string idPago = Request.QueryString["idPago"];
-                if (!string.IsNullOrEmpty(idPago))
-                {
-                    CargarDatosPago(int.Parse(idPago));
-                }
-                else
-                {
-                    lblMensaje.Text = "No se proporcionó un ID de pago válido.";
-                    lblMensaje.CssClass = "alert alert-danger";
-                    lblMensaje.Visible = true;
-                }
-            
+
+            string idPago = Request.QueryString["idPago"];
+            if (!string.IsNullOrEmpty(idPago))
+            {
+                CargarDatosPago(int.Parse(idPago));
+            }
+            else
+            {
+                lblMensaje.Text = "No se proporcionó un ID de pago válido.";
+                lblMensaje.CssClass = "alert alert-danger";
+                lblMensaje.Visible = true;
+            }
+
         }
 
         private void CargarDatosPago(int idPago)
         {
             // Simula la obtención de datos desde la base de datos.
 
-             pago = pagoBO.obtenerPagoPorId(idPago); // Implementa este método.
+            pago = pagoBO.obtenerPagoPorId(idPago); // Implementa este método.
 
             if (pago != null)
             {
@@ -47,7 +47,7 @@ namespace SoftPixelPenguinsWA.Flujo_PersonalAdmin
                 txtNombreAlumno.Text = usuario.nombreCompleto;
                 txtMonto.Text = pago.monto.ToString("C");
                 txtFecha.Text = pago.fechaPago.ToString("dd/MM/yyyy");
-                
+
             }
             else
             {
@@ -61,7 +61,7 @@ namespace SoftPixelPenguinsWA.Flujo_PersonalAdmin
         {
             int idPago = int.Parse(txtIdPago.Text);
             string nuevoEstado = ddlEstado.SelectedItem.Value;
-           
+
 
             Console.WriteLine("Estado seleccionado: " + nuevoEstado);
 

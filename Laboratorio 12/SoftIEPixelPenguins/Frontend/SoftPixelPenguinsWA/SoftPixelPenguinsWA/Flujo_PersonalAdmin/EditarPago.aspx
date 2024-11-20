@@ -37,40 +37,46 @@
     <h2 style="text-align: left; color: #000f;">Editar Estado del Pago</h2>
     <div class="form-container">
         <asp:Label ID="lblMensaje" runat="server" Text="" CssClass="alert" Visible="false"></asp:Label>
+        
         <div>
             <asp:Label ID="lblIdPago" runat="server" Text="ID Pago:" AssociatedControlID="txtIdPago"></asp:Label>
             <asp:TextBox ID="txtIdPago" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
         </div>
+        
         <div>
             <asp:Label ID="lblNombreAlumno" runat="server" Text="Nombre Alumno:" AssociatedControlID="txtNombreAlumno"></asp:Label>
             <asp:TextBox ID="txtNombreAlumno" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
         </div>
+        
         <div>
             <asp:Label ID="lblMonto" runat="server" Text="Monto:" AssociatedControlID="txtMonto"></asp:Label>
             <asp:TextBox ID="txtMonto" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
         </div>
+        
         <div>
             <asp:Label ID="lblFecha" runat="server" Text="Fecha:" AssociatedControlID="txtFecha"></asp:Label>
             <asp:TextBox ID="txtFecha" runat="server" ReadOnly="true" CssClass="form-control"></asp:TextBox>
         </div>
+        
         <div>
-            <asp:DropDownList ID="ddlEstado" runat="server">
+            <asp:Label ID="lblEstado" runat="server" Text="Estado de Pago:" AssociatedControlID="ddlEstado"></asp:Label>
+            <asp:DropDownList ID="ddlEstado" runat="server" CssClass="form-control">
                 <asp:ListItem Text="Pendiente" Value="PENDIENTE"></asp:ListItem>
                 <asp:ListItem Text="Cancelado" Value="CANCELADO"></asp:ListItem>
                 <asp:ListItem Text="Atrasado" Value="ATRASADO"></asp:ListItem>
             </asp:DropDownList>
-
         </div>
+        
         <div>
             <label>Comprobante del pago: </label>
             <asp:LinkButton ID="lnkDescargarComprobante" runat="server" CssClass="btn btn-info me-2" OnClick="lnkDescargarComprobante_Click">
-    Descargar Comprobante del pago
+                Descargar Comprobante del pago
             </asp:LinkButton>
         </div>
+        
         <div class="btn-container">
             <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-primary" OnClick="btnGuardar_Click" />
             <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-secondary" OnClick="btnCancelar_Click" />
         </div>
     </div>
-
 </asp:Content>

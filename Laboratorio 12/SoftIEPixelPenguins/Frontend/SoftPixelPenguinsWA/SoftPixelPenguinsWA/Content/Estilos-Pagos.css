@@ -10,11 +10,13 @@
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Asegura que los bordes redondeados se apliquen correctamente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para mejorar el diseño */
 }
 
     .table-full-width th,
     .table-full-width td {
-        text-align: left;
         padding: 12px;
         border: 1px solid #ddd;
     }
@@ -22,7 +24,52 @@
     .table-full-width th {
         background-color: #f4f4f4;
         font-weight: bold;
+        text-align: left;
     }
+
+/* Estilo centrado para encabezados */
+.table-center th {
+    text-align: center;
+    vertical-align: middle;
+    background-color: #f8f9fa; /* Color del encabezado */
+    color: #212529; /* Color del texto del encabezado */
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* Celdas con alineación vertical centrada */
+.table-center td {
+    vertical-align: middle;
+    padding: 8px;
+}
+
+/* Estilo para alternar colores de las filas */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f2f2f2; /* Alternar color de filas */
+}
+
+/* Bordeado completo para la tabla */
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+
+    .table-bordered th,
+    .table-bordered td {
+        border: 1px solid #dee2e6;
+    }
+
+/* Alineaciones específicas */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
 
 /* Botón de agregar */
 .btn-container {
@@ -40,4 +87,46 @@
     background-color: #28a745;
     border: none;
     border-radius: 4px;
-    curs
+    cursor: pointer;
+}
+
+    .btn-small:hover {
+        background-color: #218838;
+    }
+
+/* Estilos del DropDownList */
+#ddlEstado {
+    width: 100%;
+    padding: 12px; /* Aumento un poco el padding para mejor tamaño */
+    font-size: 16px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    color: #495057;
+    box-sizing: border-box; /* Para asegurarnos de que el padding no afecte el tamaño */
+    margin-top: 10px;
+}
+
+    /* Efecto cuando se hace foco en el DropDownList */
+    #ddlEstado:focus {
+        border-color: #80bdff;
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Agregar sombra azul cuando está en foco */
+    }
+
+    /* Añadir algunos efectos al cambiar el color de fondo del DropDown */
+    #ddlEstado option {
+        padding: 10px;
+        background-color: #ffffff; /* Fondo blanco para las opciones */
+    }
+
+        #ddlEstado option:hover {
+            background-color: #f1f1f1; /* Fondo gris claro cuando se pasa por encima */
+        }
+
+/* Mejorar apariencia en dispositivos pequeños */
+@media (max-width: 576px) {
+    #ddlEstado {
+        font-size: 14px;
+    }
+}

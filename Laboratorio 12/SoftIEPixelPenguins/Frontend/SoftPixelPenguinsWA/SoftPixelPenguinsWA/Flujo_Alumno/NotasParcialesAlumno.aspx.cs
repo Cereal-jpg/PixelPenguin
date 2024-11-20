@@ -18,7 +18,6 @@ namespace SoftPixelPenguinsWA
         MatriculaWSClient matriculaBO = new MatriculaWSClient();
         gradoAcademico grado = null;
         alumno alumno = null;
-        curso curso = null;
         int idAlumno;
         BindingList<nota> notas = new BindingList<nota>();
         BindingList<curso> cursos = null;

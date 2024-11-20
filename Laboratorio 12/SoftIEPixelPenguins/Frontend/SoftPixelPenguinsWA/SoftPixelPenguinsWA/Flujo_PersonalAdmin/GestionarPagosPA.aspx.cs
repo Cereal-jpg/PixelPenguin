@@ -67,7 +67,7 @@ namespace SoftPixelPenguinsWA.Flujo_PersonalAdmin
         {
             // Lógica para agregar un nuevo pago.
             // Podrías redirigir a una página de "AgregarPago" o mostrar un modal.
-            Response.Redirect("AgregarPago.aspx");
+            Response.Redirect("AgregarPagoPA.aspx");
         }
 
         /// <summary>

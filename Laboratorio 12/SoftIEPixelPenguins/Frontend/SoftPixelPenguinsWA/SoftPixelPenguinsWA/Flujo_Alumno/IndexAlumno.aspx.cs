@@ -43,52 +43,31 @@ namespace SoftPixelPenguinsWA
                 List<pago> listaPagos = pagoBO.PagoXIdMatricula(idMatricula).ToList();
 
                 Session["idMatriculaAlumnoLogueado"] = idMatricula;
+                fechaPagoLiteral.Text = "";
                 string textoFechaPago = "";
                 string textoDiasRestantes = "";
 
                 if (listaPagos != null && listaPagos.Count > 0)
                 {
+                    int contador = 1;
                     foreach (pago pago in listaPagos)
                     {
                         int diasRestantes = (pago.fechaPago - DateTime.Now).Days;
-                        textoFechaPago = pago.fechaPago.ToString("dd/MM/yyyy");
+                        textoFechaPago = contador.ToString() + ")  " + pago.fechaPago.ToString("dd/MM/yyyy");
                         textoDiasRestantes = diasRestantes > 0
                             ? $" (faltan {diasRestantes} días)"
                             : " (El pago es hoy o ha pasado)";
-                        fechaPagoLiteral.Text += $"{textoFechaPago}{textoDiasRestantes}\n" ;
-
+                        string estado = "<br />    Estado: " + pago.estado.ToString() + "<br /><br /> ";
+                        fechaPagoLiteral.Text += $"{textoFechaPago}{textoDiasRestantes}{estado}";
+                        contador++;
                     }
                 }
                 else
                 {
                     textoFechaPago = "Usted no tiene pagos cercanos.";
                     fechaPagoLiteral.Text = $"{textoFechaPago}";
-                    Estado.Text = "";
                 }
 
-                // Valida si cuenta con pagos 
-                    /*if (pago != null)
-                    {
-                        int diasRestantes = (pago.fechaPago - DateTime.Now).Days;
-
-                        // Construye el texto para mostrar la fecha y los días restantes
-                        string textoFechaPago = pago.fechaPago.ToString("dd/MM/yyyy");
-                        string textoDiasRestantes = diasRestantes > 0
-                            ? $" (faltan {diasRestantes} días)"
-                            : " (El pago es hoy o ha pasado)";
-
-                        // Asigna el texto al Literal
-                        fechaPagoLiteral.Text = $"{textoFechaPago}{textoDiasRestantes}";
-                        Estado.Text = pago.estado.ToString();
-                    }
-                    else
-                    {
-                        string textoFechaPago = "Usted no tiene pagos cercanos.";
-                        fechaPagoLiteral.Text = $"{textoFechaPago}";
-                        Estado.Text = "";
-                    }
-
-                    */
             }
         }
     }

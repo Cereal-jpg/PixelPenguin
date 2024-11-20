@@ -19,12 +19,15 @@
     <a href="GestionarSolicitudesPA.aspx"><i class="fa-solid fa-user-plus"></i>Gestionar Solicitudes</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem5" runat="server">
-    <a href="GestionarPlanesPA.aspx"><i class="fa-solid fa-list-check"></i>Gestionar Planes</a>
+    <a href="GestionarPagosPA.aspx"><i class="fa-solid fa-money-bill"></i>Gestionar Pagos</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem6" runat="server">
-    <a href="MiPerfilPA.aspx"><i class="fa-solid fa-user"></i>Mi Perfil</a>
+    <a href="GestionarPlanesPA.aspx"><i class="fa-solid fa-list-check"></i>Gestionar Planes</a>
 </asp:Content>
 <asp:Content ContentPlaceHolderID="menuItem7" runat="server">
+    <a href="MiPerfilPA.aspx"><i class="fa-solid fa-user"></i>Mi Perfil</a>
+</asp:Content>
+<asp:Content ContentPlaceHolderID="menuItem8" runat="server">
     <asp:Panel ID="panelGestionarUsuarios" runat="server" Visible="false" CssClass="ocularItem">
         <a href="GestionarUsuariosAdmin.aspx"><i class="fa-solid fa-plus-circle"></i>Gestionar Usuarios</a>
     </asp:Panel>

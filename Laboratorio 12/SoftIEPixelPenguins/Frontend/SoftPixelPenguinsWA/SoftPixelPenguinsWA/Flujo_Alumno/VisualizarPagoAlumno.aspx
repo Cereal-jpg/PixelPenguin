@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftPixelPenguins.Master" AutoEventWireup="true" CodeBehind="VisualizarPagoAlumno.aspx.cs" Inherits="SoftPixelPenguinsWA.VisualizarPagoAlumno" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
-    Visualizar - Pago
+    Visualizar Pago - Alumno
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphScripts" runat="server">
     <link rel="stylesheet" href="../Content/Estilo-VisualizarPagoAlumno.css" />

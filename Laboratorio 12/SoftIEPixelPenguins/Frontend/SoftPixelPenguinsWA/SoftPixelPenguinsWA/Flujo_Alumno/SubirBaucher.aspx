@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftPixelPenguins.Master" AutoEventWireup="true" CodeBehind="SubirBaucher.aspx.cs" Inherits="SoftPixelPenguinsWA.Flujo_Alumno.SubirBaucher" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
-    Home - Alumno
+    Subir Documento de Pago - Alumno
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphScripts" runat="server">
 </asp:Content>

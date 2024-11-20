@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftPixelPenguins.Master" AutoEventWireup="true" CodeBehind="RegistroNotasProfesor_Competencias.aspx.cs" Inherits="SoftPixelPenguinsWA.RegistroNotasProfesor_Competencias" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
+    Registro Notas - Profesor
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphScripts" runat="server">
 </asp:Content>

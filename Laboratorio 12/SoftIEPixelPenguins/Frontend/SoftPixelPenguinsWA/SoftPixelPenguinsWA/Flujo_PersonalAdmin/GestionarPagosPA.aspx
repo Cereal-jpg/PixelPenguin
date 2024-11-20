@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/SoftPixelPenguins.Master" CodeBehind="GestionarPagosPA.aspx.cs" Inherits="SoftPixelPenguinsWA.Flujo_PersonalAdmin.GestionarPagosPA" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
-    Gestionar Pagos - Personal Admin
+    Gestionar Pagos - Personal Administrativo
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphScripts" runat="server">
     <link rel="stylesheet" href="../Content/Estilos-Pagos.css" />

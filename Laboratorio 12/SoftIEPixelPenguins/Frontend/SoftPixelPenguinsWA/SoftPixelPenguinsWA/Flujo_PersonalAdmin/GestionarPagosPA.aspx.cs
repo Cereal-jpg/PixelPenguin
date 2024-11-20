@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data; // Para trabajar con DataTable
+using System.Diagnostics;
 using System.Linq;
 using System.Web.UI.WebControls;
 
@@ -65,9 +66,33 @@ namespace SoftPixelPenguinsWA.Flujo_PersonalAdmin
         }
         protected void AgregarPago(object sender, EventArgs e)
         {
-            // Lógica para agregar un nuevo pago.
-            // Podrías redirigir a una página de "AgregarPago" o mostrar un modal.
-            Response.Redirect("AgregarPagoPA.aspx");
+            List<matricula> matriculas = new List<matricula>();
+            matriculas = matriculaBO.listarTodosMatriculas().ToList();
+
+            foreach(matricula mat in matriculas)
+            {
+                pago nuevoPago = new pago();
+                nuevoPago.matricula = new matricula();
+                nuevoPago.matricula = mat;
+                nuevoPago.monto = 500;
+                nuevoPago.fechaCreacion = DateTime.Today;
+                nuevoPago.fechaPago = DateTime.Today.AddDays(30);
+                nuevoPago.estado = estadoDePago.PENDIENTE;
+                nuevoPago.comprobanteDePago = null;
+                nuevoPago.tipoDeComprobante = tipoDeComprobante.BOLETA;
+                nuevoPago.tipoPago = tipoDePago.TRANSFERENCIA_BANCARIA;
+
+                int resultado = pagoBO.insertarPago(nuevoPago);  // Asegúrate de que esto devuelve el ID o el resultado esperado.
+                //Console.WriteLine($"Pago insertado con resultado: {resultado}");  // Muestra el resultado en la consola.
+                Debug.WriteLine($"Pago insertado con éxito. ID: {resultado}");  // Muestra el resultado en el panel de salida de depuración.
+                Debug.WriteLine($"Monto: {nuevoPago.monto}, FechaCreacion: {nuevoPago.fechaCreacion}, FechaPago: {nuevoPago.fechaPago}");
+
+
+            }
+
+            Response.Redirect("GestionarPagosPA.aspx", false);
+            Context.ApplicationInstance.CompleteRequest();
+
         }
 
         /// <summary>
@@ -83,5 +108,19 @@ namespace SoftPixelPenguinsWA.Flujo_PersonalAdmin
 
         }
 
+        protected string MostrarEstado(string estado)
+        {
+            switch (estado.ToLower())
+            {
+                case "atrasado":
+                    return "<span style='color: red;'>⚠️ Atrasado</span>";
+                case "pendiente":
+                    return "<span style='color: orange;'>🕒 Pendiente</span>";
+                case "cancelado":
+                    return "<span style='color: green;'>✅ Cancelado</span>";
+                default:
+                    return "<span style='color: gray;'>🔘 Desconocido</span>";
+            }
+        }
     }
 }

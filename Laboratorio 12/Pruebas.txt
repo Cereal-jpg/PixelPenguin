@@ -3,6 +3,9 @@ Ver variación notas
 email:		a20220111@example.com
 password:	pass12
 
+email:		afernandez@gmail.com
+password: 	pass12
+
 Certificado y correo funcional
 email:		a20220954@pucp.edu.pe
 password:	password12

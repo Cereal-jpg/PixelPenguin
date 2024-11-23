@@ -16,12 +16,17 @@
   <xs:element name="obtenerNotaPorIdResponse" type="tns:obtenerNotaPorIdResponse" />
   <xs:element name="obtenerNotaPorParametros" type="tns:obtenerNotaPorParametros" />
   <xs:element name="obtenerNotaPorParametrosResponse" type="tns:obtenerNotaPorParametrosResponse" />
-  <xs:complexType name="listarTodosNotas">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarTodosNotasResponse">
+  <xs:complexType name="obtenerNotaPorParametros">
     <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:nota" />
+      <xs:element minOccurs="0" name="idAlumno" type="xs:int" />
+      <xs:element minOccurs="0" name="idCurso" type="xs:int" />
+      <xs:element minOccurs="0" name="bimestre" type="xs:int" />
+      <xs:element minOccurs="0" name="idCompetencia" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerNotaPorParametrosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:nota" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="nota">
@@ -63,17 +68,12 @@
       <xs:element name="vacantes" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="obtenerNotaPorParametros">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="idAlumno" type="xs:int" />
-      <xs:element minOccurs="0" name="idCurso" type="xs:int" />
-      <xs:element minOccurs="0" name="bimestre" type="xs:int" />
-      <xs:element minOccurs="0" name="idCompetencia" type="xs:int" />
-    </xs:sequence>
+  <xs:complexType name="listarTodosNotas">
+    <xs:sequence />
   </xs:complexType>
-  <xs:complexType name="obtenerNotaPorParametrosResponse">
+  <xs:complexType name="listarTodosNotasResponse">
     <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="tns:nota" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:nota" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="obtenerNotaPorId">
@@ -86,16 +86,6 @@
       <xs:element minOccurs="0" name="return" type="tns:nota" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="modificarNota">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="nota" type="tns:nota" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="modificarNotaResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="listarPorAlumnoCursoYBimestre">
     <xs:sequence>
       <xs:element minOccurs="0" name="idAlumno" type="xs:int" />
@@ -106,6 +96,16 @@
   <xs:complexType name="listarPorAlumnoCursoYBimestreResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:nota" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarNota">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nota" type="tns:nota" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarNotaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarPorAlumnoYCurso">

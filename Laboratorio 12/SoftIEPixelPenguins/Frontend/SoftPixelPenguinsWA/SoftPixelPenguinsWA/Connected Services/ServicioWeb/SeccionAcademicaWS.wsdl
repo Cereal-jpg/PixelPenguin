@@ -17,11 +17,11 @@
   <message name="obtenerSeccionAcademicaPorIdResponse">
     <part name="parameters" element="tns:obtenerSeccionAcademicaPorIdResponse" />
   </message>
-  <message name="modificarSeccionAcademica">
-    <part name="parameters" element="tns:modificarSeccionAcademica" />
+  <message name="listarSeccionesPorGrado">
+    <part name="parameters" element="tns:listarSeccionesPorGrado" />
   </message>
-  <message name="modificarSeccionAcademicaResponse">
-    <part name="parameters" element="tns:modificarSeccionAcademicaResponse" />
+  <message name="listarSeccionesPorGradoResponse">
+    <part name="parameters" element="tns:listarSeccionesPorGradoResponse" />
   </message>
   <message name="eliminarSeccionAcademica">
     <part name="parameters" element="tns:eliminarSeccionAcademica" />
@@ -29,11 +29,11 @@
   <message name="eliminarSeccionAcademicaResponse">
     <part name="parameters" element="tns:eliminarSeccionAcademicaResponse" />
   </message>
-  <message name="listarSeccionesPorGrado">
-    <part name="parameters" element="tns:listarSeccionesPorGrado" />
+  <message name="modificarSeccionAcademica">
+    <part name="parameters" element="tns:modificarSeccionAcademica" />
   </message>
-  <message name="listarSeccionesPorGradoResponse">
-    <part name="parameters" element="tns:listarSeccionesPorGradoResponse" />
+  <message name="modificarSeccionAcademicaResponse">
+    <part name="parameters" element="tns:modificarSeccionAcademicaResponse" />
   </message>
   <message name="insertarSeccionAcademica">
     <part name="parameters" element="tns:insertarSeccionAcademica" />
@@ -50,17 +50,17 @@
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/obtenerSeccionAcademicaPorIdRequest" message="tns:obtenerSeccionAcademicaPorId" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/obtenerSeccionAcademicaPorIdResponse" message="tns:obtenerSeccionAcademicaPorIdResponse" />
     </operation>
-    <operation name="modificarSeccionAcademica">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/modificarSeccionAcademicaRequest" message="tns:modificarSeccionAcademica" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/modificarSeccionAcademicaResponse" message="tns:modificarSeccionAcademicaResponse" />
+    <operation name="listarSeccionesPorGrado">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/listarSeccionesPorGradoRequest" message="tns:listarSeccionesPorGrado" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/listarSeccionesPorGradoResponse" message="tns:listarSeccionesPorGradoResponse" />
     </operation>
     <operation name="eliminarSeccionAcademica">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/eliminarSeccionAcademicaRequest" message="tns:eliminarSeccionAcademica" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/eliminarSeccionAcademicaResponse" message="tns:eliminarSeccionAcademicaResponse" />
     </operation>
-    <operation name="listarSeccionesPorGrado">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/listarSeccionesPorGradoRequest" message="tns:listarSeccionesPorGrado" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/listarSeccionesPorGradoResponse" message="tns:listarSeccionesPorGradoResponse" />
+    <operation name="modificarSeccionAcademica">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/modificarSeccionAcademicaRequest" message="tns:modificarSeccionAcademica" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/modificarSeccionAcademicaResponse" message="tns:modificarSeccionAcademicaResponse" />
     </operation>
     <operation name="insertarSeccionAcademica">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/insertarSeccionAcademicaRequest" message="tns:insertarSeccionAcademica" />
@@ -87,7 +87,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarSeccionAcademica">
+    <operation name="listarSeccionesPorGrado">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -105,7 +105,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarSeccionesPorGrado">
+    <operation name="modificarSeccionAcademica">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

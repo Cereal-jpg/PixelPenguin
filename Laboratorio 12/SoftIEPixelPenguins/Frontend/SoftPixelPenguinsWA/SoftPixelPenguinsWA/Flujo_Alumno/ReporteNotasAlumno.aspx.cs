@@ -23,7 +23,7 @@ namespace SoftPixelPenguinsWA
         institucionEducativa institucion = null;
         alumno alumno = null;
         AnioAcademicoWSClient anioBO = new AnioAcademicoWSClient();
-        int idAlumno;
+        int idAlumno; 
         anioAcademico anio = null;
         protected void Page_Load(object sender, EventArgs e)
         {

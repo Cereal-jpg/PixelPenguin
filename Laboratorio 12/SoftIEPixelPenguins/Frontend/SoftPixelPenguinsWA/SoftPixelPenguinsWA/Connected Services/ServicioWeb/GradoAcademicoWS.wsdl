@@ -11,11 +11,14 @@
   <message name="listarTodosGradosAcademicosResponse">
     <part name="parameters" element="tns:listarTodosGradosAcademicosResponse" />
   </message>
-  <message name="insertarGradoAcademico">
-    <part name="parameters" element="tns:insertarGradoAcademico" />
+  <message name="generarBuffer">
+    <part name="parameters" element="tns:generarBuffer" />
   </message>
-  <message name="insertarGradoAcademicoResponse">
-    <part name="parameters" element="tns:insertarGradoAcademicoResponse" />
+  <message name="generarBufferResponse">
+    <part name="parameters" element="tns:generarBufferResponse" />
+  </message>
+  <message name="Exception">
+    <part name="fault" element="tns:Exception" />
   </message>
   <message name="modificarGradoAcademico">
     <part name="parameters" element="tns:modificarGradoAcademico" />
@@ -23,38 +26,60 @@
   <message name="modificarGradoAcademicoResponse">
     <part name="parameters" element="tns:modificarGradoAcademicoResponse" />
   </message>
-  <message name="eliminarGradoAcademico">
-    <part name="parameters" element="tns:eliminarGradoAcademico" />
-  </message>
-  <message name="eliminarGradoAcademicoResponse">
-    <part name="parameters" element="tns:eliminarGradoAcademicoResponse" />
-  </message>
   <message name="obtenerGradoAcademicoPorId">
     <part name="parameters" element="tns:obtenerGradoAcademicoPorId" />
   </message>
   <message name="obtenerGradoAcademicoPorIdResponse">
     <part name="parameters" element="tns:obtenerGradoAcademicoPorIdResponse" />
   </message>
+  <message name="reporteMatriculasPorGrado">
+    <part name="parameters" element="tns:reporteMatriculasPorGrado" />
+  </message>
+  <message name="reporteMatriculasPorGradoResponse">
+    <part name="parameters" element="tns:reporteMatriculasPorGradoResponse" />
+  </message>
+  <message name="eliminarGradoAcademico">
+    <part name="parameters" element="tns:eliminarGradoAcademico" />
+  </message>
+  <message name="eliminarGradoAcademicoResponse">
+    <part name="parameters" element="tns:eliminarGradoAcademicoResponse" />
+  </message>
+  <message name="insertarGradoAcademico">
+    <part name="parameters" element="tns:insertarGradoAcademico" />
+  </message>
+  <message name="insertarGradoAcademicoResponse">
+    <part name="parameters" element="tns:insertarGradoAcademicoResponse" />
+  </message>
   <portType name="GradoAcademicoWS">
     <operation name="listarTodosGradosAcademicos">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/listarTodosGradosAcademicosRequest" message="tns:listarTodosGradosAcademicos" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/listarTodosGradosAcademicosResponse" message="tns:listarTodosGradosAcademicosResponse" />
     </operation>
-    <operation name="insertarGradoAcademico">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/insertarGradoAcademicoRequest" message="tns:insertarGradoAcademico" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/insertarGradoAcademicoResponse" message="tns:insertarGradoAcademicoResponse" />
+    <operation name="generarBuffer">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/generarBufferRequest" message="tns:generarBuffer" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/generarBufferResponse" message="tns:generarBufferResponse" />
+      <fault wsam:Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/generarBuffer/Fault/Exception" name="Exception" message="tns:Exception" />
     </operation>
     <operation name="modificarGradoAcademico">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/modificarGradoAcademicoRequest" message="tns:modificarGradoAcademico" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/modificarGradoAcademicoResponse" message="tns:modificarGradoAcademicoResponse" />
     </operation>
+    <operation name="obtenerGradoAcademicoPorId">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/obtenerGradoAcademicoPorIdRequest" message="tns:obtenerGradoAcademicoPorId" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/obtenerGradoAcademicoPorIdResponse" message="tns:obtenerGradoAcademicoPorIdResponse" />
+    </operation>
+    <operation name="reporteMatriculasPorGrado">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/reporteMatriculasPorGradoRequest" message="tns:reporteMatriculasPorGrado" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/reporteMatriculasPorGradoResponse" message="tns:reporteMatriculasPorGradoResponse" />
+      <fault wsam:Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/reporteMatriculasPorGrado/Fault/Exception" name="Exception" message="tns:Exception" />
+    </operation>
     <operation name="eliminarGradoAcademico">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/eliminarGradoAcademicoRequest" message="tns:eliminarGradoAcademico" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/eliminarGradoAcademicoResponse" message="tns:eliminarGradoAcademicoResponse" />
     </operation>
-    <operation name="obtenerGradoAcademicoPorId">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/obtenerGradoAcademicoPorIdRequest" message="tns:obtenerGradoAcademicoPorId" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/obtenerGradoAcademicoPorIdResponse" message="tns:obtenerGradoAcademicoPorIdResponse" />
+    <operation name="insertarGradoAcademico">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/insertarGradoAcademicoRequest" message="tns:insertarGradoAcademico" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/GradoAcademicoWS/insertarGradoAcademicoResponse" message="tns:insertarGradoAcademicoResponse" />
     </operation>
   </portType>
   <binding name="GradoAcademicoWSPortBinding" type="tns:GradoAcademicoWS">
@@ -68,7 +93,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarGradoAcademico">
+    <operation name="generarBuffer">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -76,6 +101,9 @@
       <output>
         <soap:body use="literal" />
       </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
     </operation>
     <operation name="modificarGradoAcademico">
       <soap:operation soapAction="" />
@@ -86,6 +114,27 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="obtenerGradoAcademicoPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="reporteMatriculasPorGrado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+      <fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </fault>
+    </operation>
     <operation name="eliminarGradoAcademico">
       <soap:operation soapAction="" />
       <input>
@@ -95,7 +144,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="obtenerGradoAcademicoPorId">
+    <operation name="insertarGradoAcademico">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

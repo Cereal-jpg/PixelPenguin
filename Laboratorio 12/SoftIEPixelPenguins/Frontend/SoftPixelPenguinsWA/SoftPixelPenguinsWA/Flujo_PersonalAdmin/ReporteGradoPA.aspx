@@ -1,8 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftPixelPenguins.Master" AutoEventWireup="true" CodeBehind="ReporteGradoPA.aspx.cs" Inherits="SoftPixelPenguinsWA.ReporteGradoPA" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphScripts" runat="server">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <style>
-    </style>
 </asp:Content>
 
 <asp:Content ContentPlaceHolderID="menuItem1" runat="server">
@@ -30,17 +28,22 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="cphContenido" runat="server">
-    <h2 style="color: black;">Reporte de Matriculados por Grado</h2>
-    <asp:GridView ID="gridReporte" runat="server" AutoGenerateColumns="true" CssClass="table table-bordered border-black" HeaderStyle-CssClass="table-secondary text-center border-black"  ></asp:GridView>
     <div class="d-flex align-items-center justify-content-between" style="padding: 5px; border-bottom: 2px solid #000;">
-        <h2 class="mb-0" style="color: black; border-bottom: none; padding-bottom: 0px;">Gráfico de Barras</h2>
-        <asp:Button ID="btnDownloadPDF" runat="server" Text="Descargar PDF" OnClick="btnDownloadPDF_Click" CssClass="btn btn-primary"/>
+        <h2 class="mb-0" style="color: black; border-bottom: none; padding-bottom: 0px;">Reporte de Matriculados por Grado</h2>
+        <asp:Button ID="btnDownloadPDF" runat="server" Text="Descargar PDF" OnClick="btnDownloadPDF_Click" OnClientClick="openInNewTab();" CssClass="btn btn-primary"/>
     </div>
     <canvas id="barChart" width="400" height="200" style="background-color: white;"></canvas>
+    <h2 style="color: black; padding-top: 5px;">Detalle</h2>
+    <asp:GridView ID="gridReporte" runat="server" AutoGenerateColumns="true" CssClass="table table-bordered border-black" HeaderStyle-CssClass="table-secondary text-center border-black"  ></asp:GridView>
     <asp:HiddenField ID="hdnChartImage" runat="server" />
     <asp:HiddenField ID="hdnLabels" runat="server" />
     <asp:HiddenField ID="hdnData" runat="server" />
     <script>
+        function openInNewTab() {
+            window.document.forms[1].target = '_blank';
+            setTimeout(function () { window.document.forms[0].target = ''; }, 0);
+        }
+
         function createChart() {
             const labels = JSON.parse(document.getElementById('<%= hdnLabels.ClientID %>').value || '[]');
             const data = JSON.parse(document.getElementById('<%= hdnData.ClientID %>').value || '{}');

@@ -206,7 +206,7 @@ namespace SoftPixelPenguinsWA
 
                 Response.Redirect("GestionarSolicitudesPA.aspx");
             }
-            catch (Exception ex)
+            catch (System.Exception ex)
             {
                 Console.WriteLine("Ocurrió un error: " + ex.Message);
             }
@@ -250,7 +250,7 @@ namespace SoftPixelPenguinsWA
             }
             else
             {
-                throw new Exception();
+                throw new System.Exception();
             }
         }
 
@@ -300,7 +300,7 @@ namespace SoftPixelPenguinsWA
                 smtp.Send(mail);
                 Response.Write("Correo enviado exitosamente.");
             }
-            catch (Exception ex)
+            catch (System.Exception ex)
             {
                 Response.Write("Error al enviar el correo: " + ex.ToString());
             }

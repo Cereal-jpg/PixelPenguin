@@ -28,7 +28,7 @@ namespace SoftPixelPenguinsWA.Flujo_Alumno
                             Response.Redirect("MisPagosAlumno.aspx");
                         }
                     }
-                    catch (Exception ex)
+                    catch (System.Exception ex)
                     {
                         MostrarMensajeError("Error al obtener el pago: " + ex.Message);
                         Response.Redirect("MisPagosAlumno.aspx");
@@ -79,7 +79,7 @@ namespace SoftPixelPenguinsWA.Flujo_Alumno
                     MostrarMensajeExito("El baucher se ha subido correctamente.");
                     Response.Redirect("MisPagosAlumno.aspx");
                 }
-                catch (Exception ex)
+                catch (System.Exception ex)
                 {
                     MostrarMensajeError("Error al guardar el baucher: " + ex.Message);
                 }

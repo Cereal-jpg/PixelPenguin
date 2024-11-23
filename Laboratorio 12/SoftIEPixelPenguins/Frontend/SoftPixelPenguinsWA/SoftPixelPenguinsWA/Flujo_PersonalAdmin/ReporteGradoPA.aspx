@@ -30,7 +30,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cphContenido" runat="server">
     <div class="d-flex align-items-center justify-content-between" style="padding: 5px; border-bottom: 2px solid #000;">
         <h2 class="mb-0" style="color: black; border-bottom: none; padding-bottom: 0px;">Reporte de Matriculados por Grado</h2>
-        <asp:Button ID="btnDownloadPDF" runat="server" Text="Descargar PDF" OnClick="btnDownloadPDF_Click" OnClientClick="openInNewTab();" CssClass="btn btn-primary"/>
+        <asp:Button ID="btnDownloadPDF" runat="server" Text="Visualizar PDF" OnClick="btnDownloadPDF_Click" OnClientClick="openInNewTab();" CssClass="btn btn-primary"/>
     </div>
     <canvas id="barChart" width="400" height="200" style="background-color: white;"></canvas>
     <h2 style="color: black; padding-top: 5px;">Detalle</h2>

@@ -69,7 +69,7 @@
 				<itemLabel/>
 			</plot>
 		</element>
-		<element kind="image" uuid="a74f0703-860b-4e64-9913-9315045d83d7" x="28" y="0" width="70" height="60" scaleImage="RealSize">
+		<element kind="image" uuid="a74f0703-860b-4e64-9913-9315045d83d7" x="28" y="0" width="70" height="60" scaleImage="RealSize" onErrorType="Icon">
 			<expression><![CDATA[$P{Logo}]]></expression>
 		</element>
 	</title>

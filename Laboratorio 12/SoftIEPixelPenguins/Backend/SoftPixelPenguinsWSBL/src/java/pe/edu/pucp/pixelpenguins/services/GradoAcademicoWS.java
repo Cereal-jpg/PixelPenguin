@@ -86,8 +86,8 @@ public class GradoAcademicoWS {
     public byte[] reporteMatriculasPorGrado() throws Exception {
         try {            
             Map<String, Object> params = new HashMap<>();
-            params.put("Logo",ImageIO.read(new File(getFileResource("PIXEL.png")))); 
-            return generarBuffer(getFileResource("ReporteMatriculasGrado.jrxml"), params);                    
+            params.put("Logo",ImageIO.read(new File(getFileResource("logo.png")))); 
+            return generarBuffer(getFileResource("ReporteMatriculasXGrado.jrxml"), params);                    
          } catch (Exception ex) {
             Logger.getLogger(GradoAcademicoWS.class.getName()).log(Level.SEVERE, null, ex);
         }

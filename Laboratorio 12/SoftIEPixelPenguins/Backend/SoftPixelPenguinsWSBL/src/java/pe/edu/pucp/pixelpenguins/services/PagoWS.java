@@ -4,6 +4,7 @@ import jakarta.jws.WebService;
 import jakarta.jws.WebMethod;
 import jakarta.jws.WebParam;
 import java.util.ArrayList;
+import java.util.Date;
 import pe.edu.pucp.pixelpenguins.anioacademico.bo.PagoBO;
 import pe.edu.pucp.pixelpenguins.anioacademico.model.Pago;
 
@@ -91,11 +92,24 @@ public class PagoWS {
         }
         return pagos;
     }
+    
     @WebMethod(operationName = "listarPagosPoridGrado")
      public ArrayList<Pago> listarTodosPorGrado(int idGrado){
          ArrayList<Pago> pagos = null;
          try{
              pagos = pagoBO.listarTodosPorGrado(idGrado);
+         }
+         catch (Exception ex){
+             System.out.println(ex.getMessage());
+         }
+         return pagos;
+     }
+     
+     @WebMethod(operationName = "listarPagosXFechaLimite")
+     public ArrayList<Pago> listarPagosXFechaLimite(@WebParam(name = "desde") Date desde, @WebParam(name = "hasta") Date hasta){
+         ArrayList<Pago> pagos = null;
+         try{
+             pagos = pagoBO.listarPagosXFechaLimite(desde,hasta);
          }
          catch (Exception ex){
              System.out.println(ex.getMessage());

@@ -2,6 +2,7 @@
 package pe.edu.pucp.pixelpenguins.anioacademico.dao;
 
 import java.util.ArrayList;
+import java.util.Date;
 import pe.edu.pucp.pixelpenguins.anioacademico.model.Pago;
 
 public interface PagoDAO {
@@ -13,4 +14,5 @@ public interface PagoDAO {
     public  ArrayList<Pago> PagoXAlumnos(int idMatricula);
     public ArrayList<Pago> listarTodosXIdMatricula(int idMatricula);
     public ArrayList<Pago> listarTodosPorGrado(int idGrado);
+    public ArrayList<Pago> listarPagosXFechaLimite(Date desde, Date hasta);
 }

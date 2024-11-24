@@ -31,7 +31,7 @@ namespace SoftPixelPenguinsWA.Flujo_PersonalAdmin
         {
             // Aquí deberías llamar a tu capa de acceso a datos para obtener los pagos.
             // Por simplicidad, usamos un DataTable de ejemplo.
-            DataTable pagos = ObtenerPagos();
+            DataTable pagos = ObtenerPagos(int.Parse(ddlFiltros.SelectedValue));
 
             gvPagos.DataSource = pagos;
             gvPagos.DataBind();
@@ -41,7 +41,7 @@ namespace SoftPixelPenguinsWA.Flujo_PersonalAdmin
         /// Simula la obtención de datos de pagos desde una base de datos.
         /// </summary>
         /// <returns>Un DataTable con los pagos.</returns>
-        private DataTable ObtenerPagos()
+        private DataTable ObtenerPagos(int meses)
         {
             DataTable dt = new DataTable();
             dt.Columns.Add("IdPago", typeof(int));
@@ -49,8 +49,18 @@ namespace SoftPixelPenguinsWA.Flujo_PersonalAdmin
             dt.Columns.Add("Monto", typeof(decimal));
             dt.Columns.Add("Fecha", typeof(DateTime));
             dt.Columns.Add("Estado", typeof(string));
-            // Datos de ejemplo
-            List<pago> pagos = pagoBO.listarTodosPagos().ToList();
+
+            List<pago> pagos = new List<pago>();
+            if (meses == -1)
+            {
+                pagos = pagoBO.listarTodosPagos().ToList();
+            }
+            else
+            {
+                DateTime fechaHasta = DateTime.Now;
+                DateTime fechaDesde = fechaHasta.AddMonths(-meses);
+                pagos = pagoBO.listarPagosXFechaLimite(fechaDesde, fechaHasta).ToList();
+            }
 
             foreach (pago p in pagos)
             {
@@ -122,5 +132,11 @@ namespace SoftPixelPenguinsWA.Flujo_PersonalAdmin
                     return "<span style='color: gray;'>🔘 Desconocido</span>";
             }
         }
+
+        protected void ddlFiltro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CargarPagos();
+        }
+
     }
 }

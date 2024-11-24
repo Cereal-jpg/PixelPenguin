@@ -11,6 +11,18 @@
   <message name="listarUsuariosPorNombreResponse">
     <part name="parameters" element="tns:listarUsuariosPorNombreResponse" />
   </message>
+  <message name="listarTodosUsuarios">
+    <part name="parameters" element="tns:listarTodosUsuarios" />
+  </message>
+  <message name="listarTodosUsuariosResponse">
+    <part name="parameters" element="tns:listarTodosUsuariosResponse" />
+  </message>
+  <message name="ValidarCorreoElectronico">
+    <part name="parameters" element="tns:ValidarCorreoElectronico" />
+  </message>
+  <message name="ValidarCorreoElectronicoResponse">
+    <part name="parameters" element="tns:ValidarCorreoElectronicoResponse" />
+  </message>
   <message name="obtenerUsuarioPorId">
     <part name="parameters" element="tns:obtenerUsuarioPorId" />
   </message>
@@ -23,17 +35,17 @@
   <message name="ActualizarContrasenaResponse">
     <part name="parameters" element="tns:ActualizarContrasenaResponse" />
   </message>
-  <message name="ValidarCorreoElectronico">
-    <part name="parameters" element="tns:ValidarCorreoElectronico" />
+  <message name="existeUsuario">
+    <part name="parameters" element="tns:existeUsuario" />
   </message>
-  <message name="ValidarCorreoElectronicoResponse">
-    <part name="parameters" element="tns:ValidarCorreoElectronicoResponse" />
+  <message name="existeUsuarioResponse">
+    <part name="parameters" element="tns:existeUsuarioResponse" />
   </message>
-  <message name="listarTodosUsuarios">
-    <part name="parameters" element="tns:listarTodosUsuarios" />
+  <message name="ValidarDatos">
+    <part name="parameters" element="tns:ValidarDatos" />
   </message>
-  <message name="listarTodosUsuariosResponse">
-    <part name="parameters" element="tns:listarTodosUsuariosResponse" />
+  <message name="ValidarDatosResponse">
+    <part name="parameters" element="tns:ValidarDatosResponse" />
   </message>
   <message name="eliminarUsuario">
     <part name="parameters" element="tns:eliminarUsuario" />
@@ -47,28 +59,24 @@
   <message name="insertarUsuarioResponse">
     <part name="parameters" element="tns:insertarUsuarioResponse" />
   </message>
-  <message name="existeUsuario">
-    <part name="parameters" element="tns:existeUsuario" />
-  </message>
-  <message name="existeUsuarioResponse">
-    <part name="parameters" element="tns:existeUsuarioResponse" />
-  </message>
   <message name="modificarUsuario">
     <part name="parameters" element="tns:modificarUsuario" />
   </message>
   <message name="modificarUsuarioResponse">
     <part name="parameters" element="tns:modificarUsuarioResponse" />
   </message>
-  <message name="ValidarDatos">
-    <part name="parameters" element="tns:ValidarDatos" />
-  </message>
-  <message name="ValidarDatosResponse">
-    <part name="parameters" element="tns:ValidarDatosResponse" />
-  </message>
   <portType name="UsuarioWS">
     <operation name="listarUsuariosPorNombre">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/listarUsuariosPorNombreRequest" message="tns:listarUsuariosPorNombre" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/listarUsuariosPorNombreResponse" message="tns:listarUsuariosPorNombreResponse" />
+    </operation>
+    <operation name="listarTodosUsuarios">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/listarTodosUsuariosRequest" message="tns:listarTodosUsuarios" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/listarTodosUsuariosResponse" message="tns:listarTodosUsuariosResponse" />
+    </operation>
+    <operation name="ValidarCorreoElectronico">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/ValidarCorreoElectronicoRequest" message="tns:ValidarCorreoElectronico" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/ValidarCorreoElectronicoResponse" message="tns:ValidarCorreoElectronicoResponse" />
     </operation>
     <operation name="obtenerUsuarioPorId">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/obtenerUsuarioPorIdRequest" message="tns:obtenerUsuarioPorId" />
@@ -78,13 +86,13 @@
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/ActualizarContrasenaRequest" message="tns:ActualizarContrasena" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/ActualizarContrasenaResponse" message="tns:ActualizarContrasenaResponse" />
     </operation>
-    <operation name="ValidarCorreoElectronico">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/ValidarCorreoElectronicoRequest" message="tns:ValidarCorreoElectronico" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/ValidarCorreoElectronicoResponse" message="tns:ValidarCorreoElectronicoResponse" />
+    <operation name="existeUsuario">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/existeUsuarioRequest" message="tns:existeUsuario" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/existeUsuarioResponse" message="tns:existeUsuarioResponse" />
     </operation>
-    <operation name="listarTodosUsuarios">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/listarTodosUsuariosRequest" message="tns:listarTodosUsuarios" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/listarTodosUsuariosResponse" message="tns:listarTodosUsuariosResponse" />
+    <operation name="ValidarDatos">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/ValidarDatosRequest" message="tns:ValidarDatos" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/ValidarDatosResponse" message="tns:ValidarDatosResponse" />
     </operation>
     <operation name="eliminarUsuario">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/eliminarUsuarioRequest" message="tns:eliminarUsuario" />
@@ -94,17 +102,9 @@
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/insertarUsuarioRequest" message="tns:insertarUsuario" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/insertarUsuarioResponse" message="tns:insertarUsuarioResponse" />
     </operation>
-    <operation name="existeUsuario">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/existeUsuarioRequest" message="tns:existeUsuario" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/existeUsuarioResponse" message="tns:existeUsuarioResponse" />
-    </operation>
     <operation name="modificarUsuario">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/modificarUsuarioRequest" message="tns:modificarUsuario" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/modificarUsuarioResponse" message="tns:modificarUsuarioResponse" />
-    </operation>
-    <operation name="ValidarDatos">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/ValidarDatosRequest" message="tns:ValidarDatos" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/UsuarioWS/ValidarDatosResponse" message="tns:ValidarDatosResponse" />
     </operation>
   </portType>
   <binding name="UsuarioWSPortBinding" type="tns:UsuarioWS">
@@ -118,6 +118,24 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="listarTodosUsuarios">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ValidarCorreoElectronico">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="obtenerUsuarioPorId">
       <soap:operation soapAction="" />
       <input>
@@ -136,7 +154,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="ValidarCorreoElectronico">
+    <operation name="existeUsuario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -145,7 +163,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarTodosUsuarios">
+    <operation name="ValidarDatos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -172,25 +190,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="existeUsuario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="modificarUsuario">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="ValidarDatos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

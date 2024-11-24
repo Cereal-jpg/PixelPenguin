@@ -1,6 +1,7 @@
 package pe.edu.pucp.pixelpenguins.anioacademico.bo;
 
 import java.util.ArrayList;
+import java.util.Date;
 import pe.edu.pucp.pixelpenguins.anioacademico.dao.PagoDAO;
 import pe.edu.pucp.pixelpenguins.anioacademico.daoImp.PagoDAOImpl;
 import pe.edu.pucp.pixelpenguins.anioacademico.model.Pago;
@@ -40,5 +41,9 @@ public class PagoBO {
     }
     public ArrayList<Pago> listarTodosPorGrado(int idGrado){
         return this.pagoDAO.listarTodosPorGrado(idGrado);
+    }
+    
+    public ArrayList<Pago> listarPagosXFechaLimite(Date desde, Date hasta){
+        return this.pagoDAO.listarPagosXFechaLimite(desde, hasta);
     }
 }

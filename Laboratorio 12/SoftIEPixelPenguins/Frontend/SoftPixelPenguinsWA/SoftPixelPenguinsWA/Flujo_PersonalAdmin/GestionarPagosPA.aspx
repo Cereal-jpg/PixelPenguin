@@ -36,62 +36,76 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <h2 style="text-align: left; color: #000f;">Personal Administrativo - Gestionar Pagos</h2>
-    <div class="container-pagos">
-        <asp:GridView
-            ID="gvPagos"
-            runat="server"
-            AutoGenerateColumns="false"
-            CssClass="table table-full-width table-striped table-bordered table-center">
-            <Columns>
-                <asp:BoundField DataField="IdPago" HeaderText="ID Pago" Visible="false" />
-                <asp:BoundField
-                    DataField="NombreAlumno"
-                    HeaderText="Nombre Alumno"
-                    ItemStyle-CssClass="text-left"
-                    HeaderStyle-CssClass="text-center" />
-                <asp:BoundField
-                    DataField="Monto"
-                    HeaderText="Monto"
-                    DataFormatString="{0:C}"
-                    ItemStyle-CssClass="text-right"
-                    HeaderStyle-CssClass="text-center" />
-                <asp:BoundField
-                    DataField="Fecha"
-                    HeaderText="Fecha"
-                    DataFormatString="{0:dd/MM/yyyy}"
-                    ItemStyle-CssClass="text-center"
-                    HeaderStyle-CssClass="text-center" />
-                <asp:TemplateField HeaderText="Estado">
-                    <HeaderStyle CssClass="text-center" />
-                    <ItemTemplate>
-                        <div class="text-center">
-                            <%# MostrarEstado(Eval("Estado").ToString()) %>
-                        </div>
-                    </ItemTemplate>
-                </asp:TemplateField>
-                <asp:TemplateField HeaderText="Acciones">
-                    <HeaderStyle CssClass="text-center" />
-                    <ItemTemplate>
-                        <div class="text-center">
-                            <asp:LinkButton
-                                runat="server"
-                                CssClass="btn btn-sm btn-info me-1"
-                                Text="<i class='fa-solid fa-pen'></i> Editar"
-                                OnClick="lbEditar_Click"
-                                CommandArgument='<%# Eval("IdPago") %>'>
-                            </asp:LinkButton>
-                        </div>
-                    </ItemTemplate>
-                </asp:TemplateField>
-            </Columns>
-        </asp:GridView>
+    <div class="container-matricula" style="display:block;">
+        <div class="d-flex align-items-center justify-content-between mb-3" style="padding: 5px; border-bottom: 2px solid #000;">
+            <h2 class="mb-0" style="color: black; border-bottom: none; padding-bottom: 0px;">Listado de Pagos</h2>
+            <div class="input-group w-25">
+                <asp:DropDownList ID="ddlFiltros" runat="server" CssClass="form-select" AutoPostBack="True" OnSelectedIndexChanged="ddlFiltro_SelectedIndexChanged">
+                    <asp:ListItem Text="Selecciona un filtro" Value="-1" />
+                    <asp:ListItem Text="El último mes" Value="1" />
+                    <asp:ListItem Text="Los últimos dos meses" Value="2" />
+                    <asp:ListItem Text="Los últimos seis meses" Value="6" />
+                    <asp:ListItem Text="El último año" Value="12" />
+                </asp:DropDownList>
+            </div>
+        </div>
+        <div class="container-pagos">
+            <asp:GridView
+                ID="gvPagos"
+                runat="server"
+                AutoGenerateColumns="false"
+                CssClass="table table-full-width table-striped table-bordered table-center">
+                <Columns>
+                    <asp:BoundField DataField="IdPago" HeaderText="ID Pago" Visible="false" />
+                    <asp:BoundField
+                        DataField="NombreAlumno"
+                        HeaderText="Nombre Alumno"
+                        ItemStyle-CssClass="text-left"
+                        HeaderStyle-CssClass="text-center" />
+                    <asp:BoundField
+                        DataField="Monto"
+                        HeaderText="Monto"
+                        DataFormatString="{0:C2}"
+                        ItemStyle-CssClass="text-right"
+                        HeaderStyle-CssClass="text-center" />
+                    <asp:BoundField
+                        DataField="Fecha"
+                        HeaderText="Fecha Límite"
+                        DataFormatString="{0:dd/MM/yyyy}"
+                        ItemStyle-CssClass="text-center"
+                        HeaderStyle-CssClass="text-center" />
+                    <asp:TemplateField HeaderText="Estado">
+                        <HeaderStyle CssClass="text-center" />
+                        <ItemTemplate>
+                            <div class="text-center">
+                                <%# MostrarEstado(Eval("Estado").ToString()) %>
+                            </div>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Acciones">
+                        <HeaderStyle CssClass="text-center" />
+                        <ItemTemplate>
+                            <div class="text-center">
+                                <asp:LinkButton
+                                    runat="server"
+                                    CssClass="btn btn-sm btn-info me-1"
+                                    Text="<i class='fa-solid fa-pen'></i> Editar"
+                                    OnClick="lbEditar_Click"
+                                    CommandArgument='<%# Eval("IdPago") %>'>
+                                </asp:LinkButton>
+                            </div>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+            </asp:GridView>
+        </div>
+        <div class="btn-container mt-0">
+            <asp:Button
+                ID="btnAgregarPago"
+                runat="server"
+                Text="Agregar Nuevo Pago"
+                CssClass="btn btn-success btn-small"
+                OnClick="AgregarPago" />
+        </div>  
     </div>
-    <div class="btn-container">
-        <asp:Button
-            ID="btnAgregarPago"
-            runat="server"
-            Text="Agregar Nuevo Pago"
-            CssClass="btn btn-success btn-small"
-            OnClick="AgregarPago" />
-    </div>  
 </asp:Content>

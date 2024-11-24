@@ -173,6 +173,7 @@ public class PagoDAOImpl extends DAOImpl implements PagoDAO {
         }
         return pagos;
     }
+    
     @Override
     public ArrayList<Pago> listarTodosXIdMatricula(int idMatricula) {
         ArrayList<Pago> pagos = new ArrayList<Pago>();
@@ -189,6 +190,33 @@ public class PagoDAOImpl extends DAOImpl implements PagoDAO {
             }
         } catch (SQLException ex) {
             System.err.println("Error al intentar listarTodos - " + ex);
+        } finally {
+            try {
+                this.cerrarConexion();
+            } catch (SQLException ex) {
+                System.err.println("Error al cerrar la conexión - " + ex);
+            }
+        }
+        return pagos;
+    }
+    
+    @Override
+    public ArrayList<Pago> listarPagosXFechaLimite(Date desde, Date hasta) {
+        ArrayList<Pago> pagos = new ArrayList<Pago>();
+
+        try {
+            this.abrirConexion();
+            String sql = "SELECT " + this.obtenerProyeccionParaSelect() + " FROM " + this.nombre_tabla;
+            sql += " WHERE fechaPago BETWEEN ? AND ?";
+            this.colocarSQLenStatement(sql);
+            this.incluirParametroDate(1, desde);
+            this.incluirParametroDate(2, hasta);
+            this.ejecutarConsultaEnBD(sql);
+            while (this.resultSet.next()) {
+                agregarObjetoALaLista(pagos, this.resultSet);
+            }
+        } catch (SQLException ex) {
+            System.err.println("Error al intentar listarPagosXFechaLimite - " + ex);
         } finally {
             try {
                 this.cerrarConexion();

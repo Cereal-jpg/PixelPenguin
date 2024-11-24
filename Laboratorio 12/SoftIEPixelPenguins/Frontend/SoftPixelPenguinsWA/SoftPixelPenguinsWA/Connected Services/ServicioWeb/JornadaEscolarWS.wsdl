@@ -5,17 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftPixelPenguinsWSBL/JornadaEscolarWS?xsd=1" namespace="http://services.pixelpenguins.pucp.edu.pe" />
     </xsd:schema>
   </types>
-  <message name="listarTodosJornadasEscolares">
-    <part name="parameters" element="tns:listarTodosJornadasEscolares" />
+  <message name="eliminarJornadaEscolar">
+    <part name="parameters" element="tns:eliminarJornadaEscolar" />
   </message>
-  <message name="listarTodosJornadasEscolaresResponse">
-    <part name="parameters" element="tns:listarTodosJornadasEscolaresResponse" />
-  </message>
-  <message name="insertarJornadaEscolar">
-    <part name="parameters" element="tns:insertarJornadaEscolar" />
-  </message>
-  <message name="insertarJornadaEscolarResponse">
-    <part name="parameters" element="tns:insertarJornadaEscolarResponse" />
+  <message name="eliminarJornadaEscolarResponse">
+    <part name="parameters" element="tns:eliminarJornadaEscolarResponse" />
   </message>
   <message name="modificarJornadaEscolar">
     <part name="parameters" element="tns:modificarJornadaEscolar" />
@@ -23,11 +17,11 @@
   <message name="modificarJornadaEscolarResponse">
     <part name="parameters" element="tns:modificarJornadaEscolarResponse" />
   </message>
-  <message name="eliminarJornadaEscolar">
-    <part name="parameters" element="tns:eliminarJornadaEscolar" />
+  <message name="insertarJornadaEscolar">
+    <part name="parameters" element="tns:insertarJornadaEscolar" />
   </message>
-  <message name="eliminarJornadaEscolarResponse">
-    <part name="parameters" element="tns:eliminarJornadaEscolarResponse" />
+  <message name="insertarJornadaEscolarResponse">
+    <part name="parameters" element="tns:insertarJornadaEscolarResponse" />
   </message>
   <message name="obtenerJornadaEscolarPorId">
     <part name="parameters" element="tns:obtenerJornadaEscolarPorId" />
@@ -35,40 +29,37 @@
   <message name="obtenerJornadaEscolarPorIdResponse">
     <part name="parameters" element="tns:obtenerJornadaEscolarPorIdResponse" />
   </message>
+  <message name="listarTodosJornadasEscolares">
+    <part name="parameters" element="tns:listarTodosJornadasEscolares" />
+  </message>
+  <message name="listarTodosJornadasEscolaresResponse">
+    <part name="parameters" element="tns:listarTodosJornadasEscolaresResponse" />
+  </message>
   <portType name="JornadaEscolarWS">
-    <operation name="listarTodosJornadasEscolares">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/listarTodosJornadasEscolaresRequest" message="tns:listarTodosJornadasEscolares" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/listarTodosJornadasEscolaresResponse" message="tns:listarTodosJornadasEscolaresResponse" />
-    </operation>
-    <operation name="insertarJornadaEscolar">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/insertarJornadaEscolarRequest" message="tns:insertarJornadaEscolar" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/insertarJornadaEscolarResponse" message="tns:insertarJornadaEscolarResponse" />
+    <operation name="eliminarJornadaEscolar">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/eliminarJornadaEscolarRequest" message="tns:eliminarJornadaEscolar" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/eliminarJornadaEscolarResponse" message="tns:eliminarJornadaEscolarResponse" />
     </operation>
     <operation name="modificarJornadaEscolar">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/modificarJornadaEscolarRequest" message="tns:modificarJornadaEscolar" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/modificarJornadaEscolarResponse" message="tns:modificarJornadaEscolarResponse" />
     </operation>
-    <operation name="eliminarJornadaEscolar">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/eliminarJornadaEscolarRequest" message="tns:eliminarJornadaEscolar" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/eliminarJornadaEscolarResponse" message="tns:eliminarJornadaEscolarResponse" />
+    <operation name="insertarJornadaEscolar">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/insertarJornadaEscolarRequest" message="tns:insertarJornadaEscolar" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/insertarJornadaEscolarResponse" message="tns:insertarJornadaEscolarResponse" />
     </operation>
     <operation name="obtenerJornadaEscolarPorId">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/obtenerJornadaEscolarPorIdRequest" message="tns:obtenerJornadaEscolarPorId" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/obtenerJornadaEscolarPorIdResponse" message="tns:obtenerJornadaEscolarPorIdResponse" />
     </operation>
+    <operation name="listarTodosJornadasEscolares">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/listarTodosJornadasEscolaresRequest" message="tns:listarTodosJornadasEscolares" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/JornadaEscolarWS/listarTodosJornadasEscolaresResponse" message="tns:listarTodosJornadasEscolaresResponse" />
+    </operation>
   </portType>
   <binding name="JornadaEscolarWSPortBinding" type="tns:JornadaEscolarWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarTodosJornadasEscolares">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarJornadaEscolar">
+    <operation name="eliminarJornadaEscolar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -86,7 +77,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarJornadaEscolar">
+    <operation name="insertarJornadaEscolar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -96,6 +87,15 @@
       </output>
     </operation>
     <operation name="obtenerJornadaEscolarPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosJornadasEscolares">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

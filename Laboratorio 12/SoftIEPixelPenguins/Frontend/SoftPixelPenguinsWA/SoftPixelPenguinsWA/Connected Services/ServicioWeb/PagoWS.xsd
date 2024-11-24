@@ -8,6 +8,8 @@
   <xs:element name="insertarPagoResponse" type="tns:insertarPagoResponse" />
   <xs:element name="listarPagosPoridGrado" type="tns:listarPagosPoridGrado" />
   <xs:element name="listarPagosPoridGradoResponse" type="tns:listarPagosPoridGradoResponse" />
+  <xs:element name="listarPagosXFechaLimite" type="tns:listarPagosXFechaLimite" />
+  <xs:element name="listarPagosXFechaLimiteResponse" type="tns:listarPagosXFechaLimiteResponse" />
   <xs:element name="listarPagosXIdMatricula" type="tns:listarPagosXIdMatricula" />
   <xs:element name="listarPagosXIdMatriculaResponse" type="tns:listarPagosXIdMatriculaResponse" />
   <xs:element name="listarTodosPagos" type="tns:listarTodosPagos" />
@@ -112,6 +114,17 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarPagosPoridGradoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:pago" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPagosXFechaLimite">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="desde" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="hasta" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPagosXFechaLimiteResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:pago" />
     </xs:sequence>

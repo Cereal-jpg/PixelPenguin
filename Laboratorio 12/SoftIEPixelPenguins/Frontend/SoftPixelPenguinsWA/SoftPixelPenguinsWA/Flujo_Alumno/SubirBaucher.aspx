@@ -26,33 +26,30 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
+    <h3 style="text-align: left; color: #2c3e50;">Subir Pago</h3>
+    <link rel="stylesheet" href="../Content/Estilos-SubirDocumento.css" />
 
-   <h3 style="text-align: left; color: #000f;">Subir Pago</h3>
-<link rel="stylesheet" href="../Content/Estilos-Alumno.css" />
-<div id="section1" class="section" runat="server" style="display: block;">
-    <div class="container-matricula" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
-        <!-- Sección de subir archivos -->
-        <div class="form-section" style="width: 50%; background-color: #f9f9f9; padding: 20px; border-radius: 8px; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
-            <h2 style="text-align: center; color: #000f;">Adjuntar Documento de Pago</h2>
-            <hr>
-            <div class="form-group">
-                <div class="form-row" style="margin-bottom: 15px;">
-                    <label for="fileBaucher" style="display: block; font-weight: bold; margin-bottom: 5px;">Documento de Pago:</label>
-                    <asp:FileUpload ID="fileBaucher" runat="server" CssClass="file-upload" Style="width: 100%;" />
+    <div id="section1" class="section" runat="server" style="display: block;">
+        <div class="container-matricula">
+            <!-- Sección de subir archivos -->
+            <div class="form-section">
+                <h2>Adjuntar Documento de Pago</h2>
+                <hr>
+                <div class="form-group">
+                    <label for="fileBaucher">Documento de Pago:</label>
+                    <asp:FileUpload ID="fileBaucher" runat="server" CssClass="file-upload" />
                 </div>
-                <div class="form-row" style="margin-bottom: 15px;">
-                    <label for="ddlCategorias" style="display: block; font-weight: bold; margin-bottom: 5px;">Tipo de Pago:</label>
-                    <asp:DropDownList ID="ddlCategorias" runat="server" CssClass="dropdown" Style="width: 100%;">
+                <div class="form-group">
+                    <label for="ddlCategorias">Tipo de Pago:</label>
+                    <asp:DropDownList ID="ddlCategorias" runat="server" CssClass="dropdownPago">
                         <asp:ListItem Text="Seleccione un tipo de pago" Value="" />
                         <asp:ListItem Text="BANCOS_ASOCIADOS" Value="BANCOS_ASOCIADOS" />
                         <asp:ListItem Text="TRANSFERENCIA_BANCARIA" Value="TRANSFERENCIA_BANCARIA" />
                     </asp:DropDownList>
                 </div>
-            </div>
-            <div class="form-group">
-                <div class="form-row" style="margin-bottom: 15px;">
-                    <label for="ddlPagos" style="display: block; font-weight: bold; margin-bottom: 5px;">Tipo de documento:</label>
-                    <asp:DropDownList ID="ddlPagos" runat="server" CssClass="dropdown" Style="width: 100%;">
+                <div class="form-group">
+                    <label for="ddlPagos">Tipo de Documento:</label>
+                    <asp:DropDownList ID="ddlPagos" runat="server" CssClass="dropdownPago">
                         <asp:ListItem Text="Seleccione un tipo de comprobante de pago" Value="" />
                         <asp:ListItem Text="BOLETA" Value="BOLETA" />
                         <asp:ListItem Text="FACTURA" Value="FACTURA" />
@@ -60,14 +57,13 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Sección de botones -->
-    <div style="display: flex; justify-content: center; align-items: center; margin-top: 20px;">
-        <asp:Button ID="btnRegresar2" runat="server" Text="Regresar" OnClick="prevSection" CssClass="button-style" style="margin-right: 10px;" />
-        <asp:Button ID="btnGuardar" runat="server" Text="Grabar y Continuar" OnClick="btnGuardar_Click" CssClass="button-style" />
+        <!-- Sección de botones -->
+        <div class="buttons-container">
+            <asp:Button ID="btnRegresar2" runat="server" Text="Regresar" OnClick="prevSection" CssClass="buttonPago-style" />
+            <asp:Button ID="btnGuardar" runat="server" Text="Grabar y Continuar" OnClick="btnGuardar_Click" CssClass="buttonPago-style" />
+        </div>
     </div>
-</div>
-
 </asp:Content>
+
 

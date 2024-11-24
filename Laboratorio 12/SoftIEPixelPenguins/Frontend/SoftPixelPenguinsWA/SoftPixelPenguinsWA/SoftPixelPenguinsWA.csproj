@@ -151,6 +151,7 @@
     <Content Include="Content\Estilos-Plan.css" />
     <Content Include="Content\Estilos-ProcesoMatriculaG.css" />
     <Content Include="Content\Estilos-RecuperarContraseña.css" />
+    <Content Include="Content\Estilos-SubirDocumento.css" />
     <Content Include="Content\Estilos-VerCompetenciasG.css" />
     <Content Include="Content\Estilos-VisualizarPagoAlumno.css" />
     <Content Include="Content\Estilos.css" />

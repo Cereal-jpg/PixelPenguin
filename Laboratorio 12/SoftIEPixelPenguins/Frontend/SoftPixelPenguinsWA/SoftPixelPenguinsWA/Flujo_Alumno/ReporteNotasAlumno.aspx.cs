@@ -25,6 +25,8 @@ namespace SoftPixelPenguinsWA
         AnioAcademicoWSClient anioBO = new AnioAcademicoWSClient();
         int idAlumno; 
         anioAcademico anio = null;
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["idAlumnoLogueado"] != null)
@@ -303,6 +305,18 @@ namespace SoftPixelPenguinsWA
             Response.AddHeader("Content-Disposition", "attachment; filename=ReporteNotasAlumno.pdf");
             Response.BinaryWrite(bytes);
             Response.End();
+        }
+
+        protected void btnReporte_Click(object sender, EventArgs e)
+        {
+            idAlumno = (int)Session["idAlumnoLogueado"];
+            Byte[] FileBuffer = cursoXMatriculaBO.reporteNotasAlumno(idAlumno);
+            if (FileBuffer != null)
+            {
+                Response.ContentType = "application/pdf";
+                Response.AddHeader("content-length", FileBuffer.Length.ToString());
+                Response.BinaryWrite(FileBuffer);
+            }
         }
     }
 }

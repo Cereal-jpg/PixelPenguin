@@ -29,7 +29,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <h2 style="text-align: left; color: #000f;">Alumno - Reporte de Notas</h2>
     <link rel="stylesheet" href="../Content/EstiloCurso.css" />
-
+    
     <div id="section1" class="section" runat="server" style="display: block;">
        <!-- Sección: Datos del alumno -->
         <div class="container-matricula" style="display:block;">
@@ -69,10 +69,21 @@
                 </columns>
             </asp:GridView>
             <div style="display: flex; justify-content: flex-end; gap: 10px;">
+                <asp:Button ID="btnReporte" runat="server" Text="Ver Reporte" CssClass="login-button" OnClick="btnReporte_Click" OnClientClick="openInNewTab();"/>
                 <asp:Button ID="btnDownloadPDF" runat="server" Text="Descargar Reporte Notas" OnClick="btnDownloadPDF_Click" CssClass="login-button"/>
                 <asp:Button ID="Notas" runat="server" Text="Ver Notas Parciales" CssClass="login-button" OnClick="btnVerNotasParciales_Click"/>
             </div>
         </div>
     </div>
+
+    <script>
+
+        function openInNewTab() {
+            window.document.forms[1].target = '_blank';
+            setTimeout(function () { window.document.forms[0].target = ''; }, 0);
+        }
+
+        window.onload = createChart;
+    </script>
 
 </asp:Content>

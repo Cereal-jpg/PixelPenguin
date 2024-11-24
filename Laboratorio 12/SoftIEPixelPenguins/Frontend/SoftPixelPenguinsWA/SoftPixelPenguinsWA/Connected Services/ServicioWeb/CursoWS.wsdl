@@ -5,17 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftPixelPenguinsWSBL/CursoWS?xsd=1" namespace="http://services.pixelpenguins.pucp.edu.pe" />
     </xsd:schema>
   </types>
-  <message name="listarCursosPorProfesor">
-    <part name="parameters" element="tns:listarCursosPorProfesor" />
+  <message name="listarTodosCursos">
+    <part name="parameters" element="tns:listarTodosCursos" />
   </message>
-  <message name="listarCursosPorProfesorResponse">
-    <part name="parameters" element="tns:listarCursosPorProfesorResponse" />
-  </message>
-  <message name="listarCursosPorGrado">
-    <part name="parameters" element="tns:listarCursosPorGrado" />
-  </message>
-  <message name="listarCursosPorGradoResponse">
-    <part name="parameters" element="tns:listarCursosPorGradoResponse" />
+  <message name="listarTodosCursosResponse">
+    <part name="parameters" element="tns:listarTodosCursosResponse" />
   </message>
   <message name="insertarCurso">
     <part name="parameters" element="tns:insertarCurso" />
@@ -23,17 +17,17 @@
   <message name="insertarCursoResponse">
     <part name="parameters" element="tns:insertarCursoResponse" />
   </message>
-  <message name="modificarCurso">
-    <part name="parameters" element="tns:modificarCurso" />
-  </message>
-  <message name="modificarCursoResponse">
-    <part name="parameters" element="tns:modificarCursoResponse" />
-  </message>
   <message name="eliminarCurso">
     <part name="parameters" element="tns:eliminarCurso" />
   </message>
   <message name="eliminarCursoResponse">
     <part name="parameters" element="tns:eliminarCursoResponse" />
+  </message>
+  <message name="modificarCurso">
+    <part name="parameters" element="tns:modificarCurso" />
+  </message>
+  <message name="modificarCursoResponse">
+    <part name="parameters" element="tns:modificarCursoResponse" />
   </message>
   <message name="obtenerCursoPorId">
     <part name="parameters" element="tns:obtenerCursoPorId" />
@@ -41,54 +35,51 @@
   <message name="obtenerCursoPorIdResponse">
     <part name="parameters" element="tns:obtenerCursoPorIdResponse" />
   </message>
-  <message name="listarTodosCursos">
-    <part name="parameters" element="tns:listarTodosCursos" />
+  <message name="listarCursosPorGrado">
+    <part name="parameters" element="tns:listarCursosPorGrado" />
   </message>
-  <message name="listarTodosCursosResponse">
-    <part name="parameters" element="tns:listarTodosCursosResponse" />
+  <message name="listarCursosPorGradoResponse">
+    <part name="parameters" element="tns:listarCursosPorGradoResponse" />
+  </message>
+  <message name="listarCursosPorProfesor">
+    <part name="parameters" element="tns:listarCursosPorProfesor" />
+  </message>
+  <message name="listarCursosPorProfesorResponse">
+    <part name="parameters" element="tns:listarCursosPorProfesorResponse" />
   </message>
   <portType name="CursoWS">
-    <operation name="listarCursosPorProfesor">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/listarCursosPorProfesorRequest" message="tns:listarCursosPorProfesor" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/listarCursosPorProfesorResponse" message="tns:listarCursosPorProfesorResponse" />
-    </operation>
-    <operation name="listarCursosPorGrado">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/listarCursosPorGradoRequest" message="tns:listarCursosPorGrado" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/listarCursosPorGradoResponse" message="tns:listarCursosPorGradoResponse" />
+    <operation name="listarTodosCursos">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/listarTodosCursosRequest" message="tns:listarTodosCursos" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/listarTodosCursosResponse" message="tns:listarTodosCursosResponse" />
     </operation>
     <operation name="insertarCurso">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/insertarCursoRequest" message="tns:insertarCurso" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/insertarCursoResponse" message="tns:insertarCursoResponse" />
     </operation>
-    <operation name="modificarCurso">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/modificarCursoRequest" message="tns:modificarCurso" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/modificarCursoResponse" message="tns:modificarCursoResponse" />
-    </operation>
     <operation name="eliminarCurso">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/eliminarCursoRequest" message="tns:eliminarCurso" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/eliminarCursoResponse" message="tns:eliminarCursoResponse" />
+    </operation>
+    <operation name="modificarCurso">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/modificarCursoRequest" message="tns:modificarCurso" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/modificarCursoResponse" message="tns:modificarCursoResponse" />
     </operation>
     <operation name="obtenerCursoPorId">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/obtenerCursoPorIdRequest" message="tns:obtenerCursoPorId" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/obtenerCursoPorIdResponse" message="tns:obtenerCursoPorIdResponse" />
     </operation>
-    <operation name="listarTodosCursos">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/listarTodosCursosRequest" message="tns:listarTodosCursos" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/listarTodosCursosResponse" message="tns:listarTodosCursosResponse" />
+    <operation name="listarCursosPorGrado">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/listarCursosPorGradoRequest" message="tns:listarCursosPorGrado" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/listarCursosPorGradoResponse" message="tns:listarCursosPorGradoResponse" />
+    </operation>
+    <operation name="listarCursosPorProfesor">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/listarCursosPorProfesorRequest" message="tns:listarCursosPorProfesor" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/CursoWS/listarCursosPorProfesorResponse" message="tns:listarCursosPorProfesorResponse" />
     </operation>
   </portType>
   <binding name="CursoWSPortBinding" type="tns:CursoWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarCursosPorProfesor">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarCursosPorGrado">
+    <operation name="listarTodosCursos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -106,7 +97,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarCurso">
+    <operation name="eliminarCurso">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -115,7 +106,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarCurso">
+    <operation name="modificarCurso">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -133,7 +124,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarTodosCursos">
+    <operation name="listarCursosPorGrado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarCursosPorProfesor">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

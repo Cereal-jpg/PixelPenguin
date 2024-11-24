@@ -36,6 +36,7 @@
 
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <h2 style="text-align: left; color: #000f;">Personal Administrativo - Gestionar Pagos</h2>
+    
     <div class="container-matricula" style="display:block;">
         <div class="d-flex align-items-center justify-content-between mb-3" style="padding: 5px; border-bottom: 2px solid #000;">
             <h2 class="mb-0" style="color: black; border-bottom: none; padding-bottom: 0px;">Listado de Pagos</h2>
@@ -108,4 +109,6 @@
                 OnClick="AgregarPago" />
         </div>  
     </div>
+
+
 </asp:Content>

@@ -23,17 +23,17 @@
   <message name="insertarApoderadoResponse">
     <part name="parameters" element="tns:insertarApoderadoResponse" />
   </message>
-  <message name="modificarApoderado">
-    <part name="parameters" element="tns:modificarApoderado" />
-  </message>
-  <message name="modificarApoderadoResponse">
-    <part name="parameters" element="tns:modificarApoderadoResponse" />
-  </message>
   <message name="eliminarApoderado">
     <part name="parameters" element="tns:eliminarApoderado" />
   </message>
   <message name="eliminarApoderadoResponse">
     <part name="parameters" element="tns:eliminarApoderadoResponse" />
+  </message>
+  <message name="modificarApoderado">
+    <part name="parameters" element="tns:modificarApoderado" />
+  </message>
+  <message name="modificarApoderadoResponse">
+    <part name="parameters" element="tns:modificarApoderadoResponse" />
   </message>
   <portType name="ApoderadoWS">
     <operation name="obtenerApoderadoPorId">
@@ -48,13 +48,13 @@
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/ApoderadoWS/insertarApoderadoRequest" message="tns:insertarApoderado" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/ApoderadoWS/insertarApoderadoResponse" message="tns:insertarApoderadoResponse" />
     </operation>
-    <operation name="modificarApoderado">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/ApoderadoWS/modificarApoderadoRequest" message="tns:modificarApoderado" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/ApoderadoWS/modificarApoderadoResponse" message="tns:modificarApoderadoResponse" />
-    </operation>
     <operation name="eliminarApoderado">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/ApoderadoWS/eliminarApoderadoRequest" message="tns:eliminarApoderado" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/ApoderadoWS/eliminarApoderadoResponse" message="tns:eliminarApoderadoResponse" />
+    </operation>
+    <operation name="modificarApoderado">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/ApoderadoWS/modificarApoderadoRequest" message="tns:modificarApoderado" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/ApoderadoWS/modificarApoderadoResponse" message="tns:modificarApoderadoResponse" />
     </operation>
   </portType>
   <binding name="ApoderadoWSPortBinding" type="tns:ApoderadoWS">
@@ -86,7 +86,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="modificarApoderado">
+    <operation name="eliminarApoderado">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -95,7 +95,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="eliminarApoderado">
+    <operation name="modificarApoderado">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

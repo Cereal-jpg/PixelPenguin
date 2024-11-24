@@ -17,23 +17,11 @@
   <message name="listarPagosXIdMatriculaResponse">
     <part name="parameters" element="tns:listarPagosXIdMatriculaResponse" />
   </message>
-  <message name="listarPagosXFechaLimite">
-    <part name="parameters" element="tns:listarPagosXFechaLimite" />
-  </message>
-  <message name="listarPagosXFechaLimiteResponse">
-    <part name="parameters" element="tns:listarPagosXFechaLimiteResponse" />
-  </message>
   <message name="PagoXIdMatricula">
     <part name="parameters" element="tns:PagoXIdMatricula" />
   </message>
   <message name="PagoXIdMatriculaResponse">
     <part name="parameters" element="tns:PagoXIdMatriculaResponse" />
-  </message>
-  <message name="insertarPago">
-    <part name="parameters" element="tns:insertarPago" />
-  </message>
-  <message name="insertarPagoResponse">
-    <part name="parameters" element="tns:insertarPagoResponse" />
   </message>
   <message name="modificarPago">
     <part name="parameters" element="tns:modificarPago" />
@@ -59,6 +47,12 @@
   <message name="obtenerPagoPorIdResponse">
     <part name="parameters" element="tns:obtenerPagoPorIdResponse" />
   </message>
+  <message name="insertarPago">
+    <part name="parameters" element="tns:insertarPago" />
+  </message>
+  <message name="insertarPagoResponse">
+    <part name="parameters" element="tns:insertarPagoResponse" />
+  </message>
   <portType name="PagoWS">
     <operation name="listarPagosPoridGrado">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/listarPagosPoridGradoRequest" message="tns:listarPagosPoridGrado" />
@@ -68,17 +62,9 @@
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/listarPagosXIdMatriculaRequest" message="tns:listarPagosXIdMatricula" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/listarPagosXIdMatriculaResponse" message="tns:listarPagosXIdMatriculaResponse" />
     </operation>
-    <operation name="listarPagosXFechaLimite">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/listarPagosXFechaLimiteRequest" message="tns:listarPagosXFechaLimite" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/listarPagosXFechaLimiteResponse" message="tns:listarPagosXFechaLimiteResponse" />
-    </operation>
     <operation name="PagoXIdMatricula">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/PagoXIdMatriculaRequest" message="tns:PagoXIdMatricula" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/PagoXIdMatriculaResponse" message="tns:PagoXIdMatriculaResponse" />
-    </operation>
-    <operation name="insertarPago">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/insertarPagoRequest" message="tns:insertarPago" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/insertarPagoResponse" message="tns:insertarPagoResponse" />
     </operation>
     <operation name="modificarPago">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/modificarPagoRequest" message="tns:modificarPago" />
@@ -95,6 +81,10 @@
     <operation name="obtenerPagoPorId">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/obtenerPagoPorIdRequest" message="tns:obtenerPagoPorId" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/obtenerPagoPorIdResponse" message="tns:obtenerPagoPorIdResponse" />
+    </operation>
+    <operation name="insertarPago">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/insertarPagoRequest" message="tns:insertarPago" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/PagoWS/insertarPagoResponse" message="tns:insertarPagoResponse" />
     </operation>
   </portType>
   <binding name="PagoWSPortBinding" type="tns:PagoWS">
@@ -117,25 +107,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarPagosXFechaLimite">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
     <operation name="PagoXIdMatricula">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="insertarPago">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -172,6 +144,15 @@
       </output>
     </operation>
     <operation name="obtenerPagoPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertarPago">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

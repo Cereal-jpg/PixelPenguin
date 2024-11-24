@@ -151,7 +151,6 @@
     <Content Include="Content\Estilos-Plan.css" />
     <Content Include="Content\Estilos-ProcesoMatriculaG.css" />
     <Content Include="Content\Estilos-RecuperarContraseña.css" />
-    <Content Include="Content\Estilos-SubirDocumento.css" />
     <Content Include="Content\Estilos-VerCompetenciasG.css" />
     <Content Include="Content\Estilos-VisualizarPagoAlumno.css" />
     <Content Include="Content\Estilos.css" />
@@ -625,9 +624,6 @@
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.insertarUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarPagosXFechaLimiteResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.modificarAdministradorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -749,6 +745,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.reporteMatriculasPorGradoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.reporteNotasAlumnoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.ValidarCorreoElectronicoResponse.datasource">

@@ -82,6 +82,7 @@ namespace SoftPixelPenguinsWA.Flujo_PersonalAdmin
             foreach (matricula mat in matriculas)
             {
                 pago nuevoPago = new pago();
+                nuevoPago.idPagoSpecified = true;
                 nuevoPago.matricula = new matricula();
                 nuevoPago.matricula = mat;
                 nuevoPago.monto = 500;
@@ -93,6 +94,7 @@ namespace SoftPixelPenguinsWA.Flujo_PersonalAdmin
                 nuevoPago.tipoPago = tipoDePago.TRANSFERENCIA_BANCARIA;
 
                 int resultado = pagoBO.insertarPago(nuevoPago);  // Asegúrate de que esto devuelve el ID o el resultado esperado.
+                nuevoPago.idPagoSpecified = true;
                 //Console.WriteLine($"Pago insertado con resultado: {resultado}");  // Muestra el resultado en la consola.
                 Debug.WriteLine($"Pago insertado con éxito. ID: {resultado}");  // Muestra el resultado en el panel de salida de depuración.
                 Debug.WriteLine($"Monto: {nuevoPago.monto}, FechaCreacion: {nuevoPago.fechaCreacion}, FechaPago: {nuevoPago.fechaPago}");

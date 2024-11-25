@@ -21,6 +21,35 @@
   <xs:element name="obtenerPorCursoYMatriculaResponse" type="tns:obtenerPorCursoYMatriculaResponse" />
   <xs:element name="reporteNotasAlumno" type="tns:reporteNotasAlumno" />
   <xs:element name="reporteNotasAlumnoResponse" type="tns:reporteNotasAlumnoResponse" />
+  <xs:complexType name="generarBuffer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element name="arg1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" maxOccurs="unbounded" name="entry">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element minOccurs="0" name="key" type="xs:string" />
+                  <xs:element minOccurs="0" name="value" type="xs:anyType" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="generarBufferResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="listarNotasFinalesCursosXAlumno">
     <xs:sequence>
       <xs:element minOccurs="0" name="idAlumno" type="xs:int" />
@@ -89,35 +118,6 @@
       <xs:element minOccurs="0" name="idSeccionAcademica" type="xs:int" />
       <xs:element name="seccion" type="xs:unsignedShort" />
       <xs:element name="vacantes" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="generarBuffer">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="arg0" type="xs:string" />
-      <xs:element name="arg1">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element minOccurs="0" maxOccurs="unbounded" name="entry">
-              <xs:complexType>
-                <xs:sequence>
-                  <xs:element minOccurs="0" name="key" type="xs:string" />
-                  <xs:element minOccurs="0" name="value" type="xs:anyType" />
-                </xs:sequence>
-              </xs:complexType>
-            </xs:element>
-          </xs:sequence>
-        </xs:complexType>
-      </xs:element>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="generarBufferResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="Exception">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="message" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="obtenerPorCursoYMatricula">

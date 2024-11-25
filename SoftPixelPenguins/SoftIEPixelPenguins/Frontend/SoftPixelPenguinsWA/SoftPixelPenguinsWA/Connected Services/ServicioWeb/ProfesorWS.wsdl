@@ -5,17 +5,17 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftPixelPenguinsWSBL/ProfesorWS?xsd=1" namespace="http://services.pixelpenguins.pucp.edu.pe" />
     </xsd:schema>
   </types>
-  <message name="listarTodosProfesores">
-    <part name="parameters" element="tns:listarTodosProfesores" />
-  </message>
-  <message name="listarTodosProfesoresResponse">
-    <part name="parameters" element="tns:listarTodosProfesoresResponse" />
-  </message>
   <message name="listarProfesoresPorNombre">
     <part name="parameters" element="tns:listarProfesoresPorNombre" />
   </message>
   <message name="listarProfesoresPorNombreResponse">
     <part name="parameters" element="tns:listarProfesoresPorNombreResponse" />
+  </message>
+  <message name="listarTodosProfesores">
+    <part name="parameters" element="tns:listarTodosProfesores" />
+  </message>
+  <message name="listarTodosProfesoresResponse">
+    <part name="parameters" element="tns:listarTodosProfesoresResponse" />
   </message>
   <message name="obtenerProfesorPorId">
     <part name="parameters" element="tns:obtenerProfesorPorId" />
@@ -48,13 +48,13 @@
     <part name="parameters" element="tns:existeprofesorResponse" />
   </message>
   <portType name="ProfesorWS">
-    <operation name="listarTodosProfesores">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/listarTodosProfesoresRequest" message="tns:listarTodosProfesores" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/listarTodosProfesoresResponse" message="tns:listarTodosProfesoresResponse" />
-    </operation>
     <operation name="listarProfesoresPorNombre">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/listarProfesoresPorNombreRequest" message="tns:listarProfesoresPorNombre" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/listarProfesoresPorNombreResponse" message="tns:listarProfesoresPorNombreResponse" />
+    </operation>
+    <operation name="listarTodosProfesores">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/listarTodosProfesoresRequest" message="tns:listarTodosProfesores" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/listarTodosProfesoresResponse" message="tns:listarTodosProfesoresResponse" />
     </operation>
     <operation name="obtenerProfesorPorId">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/ProfesorWS/obtenerProfesorPorIdRequest" message="tns:obtenerProfesorPorId" />
@@ -79,7 +79,7 @@
   </portType>
   <binding name="ProfesorWSPortBinding" type="tns:ProfesorWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarTodosProfesores">
+    <operation name="listarProfesoresPorNombre">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -88,7 +88,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarProfesoresPorNombre">
+    <operation name="listarTodosProfesores">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

@@ -1,9 +1,14 @@
 package pe.edu.pucp.pixelpenguins.rmi.servidor;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.Naming;
+import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import pe.edu.pucp.pixelpenguins.rmi.interfaces.AdministradorBO;
@@ -43,13 +48,13 @@ import pe.edu.pucp.pixelpenguins.rmi.interfacesImpl.UsuarioBOImpl;
 
 public class SoftPixelPenguinsRMI_Servidor {
 
-    private static String IP = "127.0.0.1";
-    private static Integer puerto = 1234;
+    private static final String ARCHIVO_CONFIGURACION = "rmi.properties";
+    private static String IP;
+    private static Integer puerto;
 
     public static void main(String[] args) {
         try {
-            // TODO
-            //cargarConfiguracionServidorRMI();
+            cargarConfiguracionServidorRMI();
 
             LocateRegistry.createRegistry(puerto);
 
@@ -130,6 +135,23 @@ public class SoftPixelPenguinsRMI_Servidor {
 
     public static String retornarNombreDelServicio(String nombreDelObjetoRemoto) {
         return "//" + IP + ":" + puerto + "/" + nombreDelObjetoRemoto;
+    }
+    
+    public static void cargarConfiguracionServidorRMI() {
+        Properties properties = new Properties();
+        try {
+            String nmArchivoConf = "c:" + "\\" + ARCHIVO_CONFIGURACION;
+            properties.load(new FileInputStream(new File(nmArchivoConf)));
+            IP = properties.getProperty("ip");
+            puerto = Integer.valueOf(properties.getProperty("puerto"));
+            System.out.println("Configuración cargada desde " + nmArchivoConf + ": IP=" + IP + ", Puerto=" + puerto);
+        } catch (FileNotFoundException ex) {
+            System.err.println("Error: No se encontró el archivo de configuración en " + "C:\\" + ARCHIVO_CONFIGURACION);
+        } catch (IOException ex) {
+            System.err.println("Error al leer el archivo de configuración: " + ex.getMessage());
+        } catch (NumberFormatException ex) {
+            System.err.println("Error: El puerto debe ser un número entero válido. Usando puerto por defecto: " + puerto);
+        }
     }
 
 }

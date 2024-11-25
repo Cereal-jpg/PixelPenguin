@@ -18,11 +18,12 @@ import pe.edu.pucp.pixelpenguins.rmi.servidor.SoftPixelPenguinsRMI_Servidor;
         = "http://services.pixelpenguins.pucp.edu.pe")
 public class CompetenciaWS {
 
-    private String IP = "localhost";
-    private Integer puerto = 1234;
+    private String IP;
+    private Integer puerto;
     CompetenciaBO competenciaBO;
     
     public CompetenciaWS() {
+        SoftPixelPenguinsRMI_Servidor.cargarConfiguracionServidorRMI();
         try {
             String nombreServicio = SoftPixelPenguinsRMI_Servidor.retornarNombreDelServicio("competenciaBO");
             this.competenciaBO = (CompetenciaBO) Naming.lookup(nombreServicio);

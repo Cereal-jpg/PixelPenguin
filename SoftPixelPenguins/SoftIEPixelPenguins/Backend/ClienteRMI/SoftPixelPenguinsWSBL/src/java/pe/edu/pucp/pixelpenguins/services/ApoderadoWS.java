@@ -18,11 +18,12 @@ import pe.edu.pucp.pixelpenguins.usuario.model.Apoderado;
         = "http://services.pixelpenguins.pucp.edu.pe")
 public class ApoderadoWS {
 
-    private String IP = "localhost";
-    private Integer puerto = 1234;
+    private String IP;
+    private Integer puerto;
     private ApoderadoBO apoderadoBO;
     
     public ApoderadoWS() {
+        SoftPixelPenguinsRMI_Servidor.cargarConfiguracionServidorRMI();
         try {
             String nombreServicio = SoftPixelPenguinsRMI_Servidor.retornarNombreDelServicio("apoderadoBO");
             this.apoderadoBO = (ApoderadoBO) Naming.lookup(nombreServicio);

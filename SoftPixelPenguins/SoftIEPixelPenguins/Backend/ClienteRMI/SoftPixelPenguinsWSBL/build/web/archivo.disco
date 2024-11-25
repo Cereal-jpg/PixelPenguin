@@ -1,7 +1,6 @@
 <discovery xmlns="http://schemas.xmlsoap.org/disco/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" >
     <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/SoftPixelPenguinsWSBL/PersonalAdministrativoWS?wsdl"/>
     <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/SoftPixelPenguinsWSBL/CompetenciaWS?wsdl"/>
-    <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/SoftPixelPenguinsWSBL/JornadaEscolarWS?wsdl"/>
     <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/SoftPixelPenguinsWSBL/NotaWS?wsdl"/>
     <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/SoftPixelPenguinsWSBL/UsuarioWS?wsdl"/>
     <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/SoftPixelPenguinsWSBL/HoraAcademicaWS?wsdl"/>
@@ -15,7 +14,6 @@
     <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/SoftPixelPenguinsWSBL/AlumnoWS?wsdl"/>
     <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/SoftPixelPenguinsWSBL/AdministradorWS?wsdl"/>
     <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/SoftPixelPenguinsWSBL/ProfesorWS?wsdl"/>
-    <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/SoftPixelPenguinsWSBL/InstitucionEducativaWS?wsdl"/>
     <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/SoftPixelPenguinsWSBL/ApoderadoWS?wsdl"/>
     <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/SoftPixelPenguinsWSBL/CursoXMatriculaWS?wsdl"/>
     <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/SoftPixelPenguinsWSBL/Reportes?wsdl"/>

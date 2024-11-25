@@ -18,11 +18,12 @@ import pe.edu.pucp.pixelpenguins.usuario.model.Administrador;
         = "http://services.pixelpenguins.pucp.edu.pe")
 public class AdministradorWS {
 
-    private String IP = "localhost";
-    private Integer puerto = 1234;
+    private String IP;
+    private Integer puerto;
     private AdministradorBO administradorBO;
     
     public AdministradorWS() {
+        SoftPixelPenguinsRMI_Servidor.cargarConfiguracionServidorRMI();
         try {
             String nombreServicio = SoftPixelPenguinsRMI_Servidor.retornarNombreDelServicio("administradorBO");
             this.administradorBO = (AdministradorBO) Naming.lookup(nombreServicio);

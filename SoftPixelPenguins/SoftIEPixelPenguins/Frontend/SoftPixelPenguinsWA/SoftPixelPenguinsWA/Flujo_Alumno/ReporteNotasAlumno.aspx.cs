@@ -18,10 +18,8 @@ namespace SoftPixelPenguinsWA
     {
         CursoXMatriculaWSClient cursoXMatriculaBO = new CursoXMatriculaWSClient();
         AlumnoWSClient alumnoBO = new AlumnoWSClient();
-        InstitucionEducativaWSClient institucionBO = new InstitucionEducativaWSClient();
         GradoAcademicoWSClient gradoBO = new GradoAcademicoWSClient();
         NotaWSClient notaBO = new NotaWSClient();
-        institucionEducativa institucion = null;
         alumno alumno = null;
         AnioAcademicoWSClient anioBO = new AnioAcademicoWSClient();
         int idAlumno; 
@@ -34,10 +32,6 @@ namespace SoftPixelPenguinsWA
             if (Session["idAlumnoLogueado"] != null)
             {
                 idAlumno = (int)Session["idAlumnoLogueado"];
-                institucion = institucionBO.obtenerInstitucionEducativaPorId(1);
-                txtInstitucion.Text = institucion.nombre;
-                txtRUC.Text = institucion.ruc;
-                txtDireccion.Text = institucion.direccion;
                 alumno = alumnoBO.obtenerAlumnoPorId(idAlumno);
                 gradoAcademico = gradoBO.obtenerGradoAcademicoPorId(alumno.gradoAcademico.idGradoAcademico);
                 txtAlumno.Text = alumno.nombreCompleto;
@@ -150,10 +144,7 @@ namespace SoftPixelPenguinsWA
         }
         private void deshabilitarComponentes()
         {
-            txtInstitucion.Enabled = false;
-            txtDireccion.Enabled = false;
             txtAlumno.Enabled = false;
-            txtRUC.Enabled = false;
             txtGrado.Enabled = false;
         }
         protected void btnDownloadPDF_Click(object sender, EventArgs e)
@@ -212,9 +203,7 @@ namespace SoftPixelPenguinsWA
 
             // Datos del alumno
             string[] nombreCompleto = alumno.nombreCompleto.Trim().Split(' ');
-            string datosEstudiante = "    IIEE: " + institucion.nombre + "\n";
-            datosEstudiante += "    Dirección: " + institucion.direccion + "\n";
-            datosEstudiante += "    Apellidos y Nombres: " + nombreCompleto[nombreCompleto.Length - 2];
+            string datosEstudiante = "    Apellidos y Nombres: " + nombreCompleto[nombreCompleto.Length - 2];
             datosEstudiante += " " + nombreCompleto[nombreCompleto.Length - 1] + " ";
             for (int i = 0; i < nombreCompleto.Length - 2; i++)
             {

@@ -19,11 +19,12 @@ import pe.edu.pucp.pixelpenguins.usuario.model.Rol;
         = "http://services.pixelpenguins.pucp.edu.pe")
 public class RolWS {
 
-    private String IP = "localhost";
-    private Integer puerto = 1234;
+    private static String IP;
+    private static Integer puerto;
     private RolBO rolBO;
 
     public RolWS() {
+        SoftPixelPenguinsRMI_Servidor.cargarConfiguracionServidorRMI();
         try {
             String nombreServicio = SoftPixelPenguinsRMI_Servidor.retornarNombreDelServicio("rolBO");
             this.rolBO = (RolBO) Naming.lookup(nombreServicio);

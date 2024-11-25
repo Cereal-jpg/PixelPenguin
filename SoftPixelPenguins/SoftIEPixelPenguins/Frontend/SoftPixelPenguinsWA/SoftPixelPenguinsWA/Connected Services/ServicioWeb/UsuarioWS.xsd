@@ -20,6 +20,16 @@
   <xs:element name="modificarUsuarioResponse" type="tns:modificarUsuarioResponse" />
   <xs:element name="obtenerUsuarioPorId" type="tns:obtenerUsuarioPorId" />
   <xs:element name="obtenerUsuarioPorIdResponse" type="tns:obtenerUsuarioPorIdResponse" />
+  <xs:complexType name="ValidarCorreoElectronico">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ValidarCorreoElectronicoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="listarTodosUsuarios">
     <xs:sequence />
   </xs:complexType>
@@ -46,16 +56,6 @@
     <xs:sequence>
       <xs:element name="idRol" type="xs:int" />
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="ValidarCorreoElectronico">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="email" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="ValidarCorreoElectronicoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ActualizarContrasena">

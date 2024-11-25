@@ -1,3 +1,0 @@
-hostname= softiepixelpenguins.cnck8gk84159.us-east-1.rds.amazonaws.com
-username= admin
-password= 1inf30softiepixelpenguins

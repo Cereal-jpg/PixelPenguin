@@ -1,8 +1,0 @@
-INSERT INTO Usuario (direccion, dni, email, fechaNacimiento, fid_rol, nombreCompleto, password, sexo, username) 
-VALUES ('Av. Las Flores 123', '12345678', 'a20220111@example.com', '2000-01-01', 1, 'Andres Melgar', 'password123', 'Masculino', 'ManuelT');
-
-INSERT INTO Usuario (direccion, dni, email, fechaNacimiento, fid_rol, nombreCompleto, password, sexo, username) 
-VALUES ('Av. Principal 123', '12345678', 'p20220111@example.com', '2000-01-01', 2, 'Andres Melgar', 'password123', 'Masculino', 'AndresM');
-
-INSERT INTO Usuario (direccion, dni, email, fechaNacimiento, fid_rol, nombreCompleto, password, sexo, username) 
-VALUES ('Av. Quiroz 123', '12345678', 'm20220111@example.com', '2000-01-01', 3, 'Fernanda Saens', 'password123', 'Femenino', 'FernandaS');

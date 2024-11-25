@@ -19,12 +19,14 @@ namespace SoftPixelPenguinsWA
         CursoXMatriculaWSClient cursoXMatriculaBO = new CursoXMatriculaWSClient();
         AlumnoWSClient alumnoBO = new AlumnoWSClient();
         InstitucionEducativaWSClient institucionBO = new InstitucionEducativaWSClient();
+        GradoAcademicoWSClient gradoBO = new GradoAcademicoWSClient();
         NotaWSClient notaBO = new NotaWSClient();
         institucionEducativa institucion = null;
         alumno alumno = null;
         AnioAcademicoWSClient anioBO = new AnioAcademicoWSClient();
         int idAlumno; 
         anioAcademico anio = null;
+        gradoAcademico gradoAcademico = null;
 
 
         protected void Page_Load(object sender, EventArgs e)
@@ -37,7 +39,9 @@ namespace SoftPixelPenguinsWA
                 txtRUC.Text = institucion.ruc;
                 txtDireccion.Text = institucion.direccion;
                 alumno = alumnoBO.obtenerAlumnoPorId(idAlumno);
+                gradoAcademico = gradoBO.obtenerGradoAcademicoPorId(alumno.gradoAcademico.idGradoAcademico);
                 txtAlumno.Text = alumno.nombreCompleto;
+                txtGrado.Text = gradoAcademico.numeroGrado + "° " + gradoAcademico.nivel.ToString();
                 deshabilitarComponentes();
             }
             List<cursoXMatricula> notasFinales = new List<cursoXMatricula>(cursoXMatriculaBO.listarNotasFinalesCursosXAlumno(idAlumno) ?? Array.Empty<cursoXMatricula>()).ToList();
@@ -130,7 +134,7 @@ namespace SoftPixelPenguinsWA
         {
             double promedioFinal = obtenerPromNotas(notasAux);
             cursoXMatricula.notaFinal = obtenerNotaPromedio(promedioFinal);
-            //cursoXMatriculaBO.modificarCursoXMatricula(cursoXMatricula);
+            cursoXMatriculaBO.modificarCursoXMatricula(cursoXMatricula);
         }
         private double obtenerPromNotas(BindingList<string> notas)
         {
@@ -150,6 +154,7 @@ namespace SoftPixelPenguinsWA
             txtDireccion.Enabled = false;
             txtAlumno.Enabled = false;
             txtRUC.Enabled = false;
+            txtGrado.Enabled = false;
         }
         protected void btnDownloadPDF_Click(object sender, EventArgs e)
         {
@@ -216,6 +221,7 @@ namespace SoftPixelPenguinsWA
                 datosEstudiante += nombreCompleto[i];
             }
             datosEstudiante += "\n";
+            datosEstudiante += "    Grado: " + gradoAcademico.numeroGrado + "° " + gradoAcademico.nivel.ToString() + "\n";
 
             Paragraph dataEstudiante = new Paragraph(datosEstudiante, bodyFont)
             {

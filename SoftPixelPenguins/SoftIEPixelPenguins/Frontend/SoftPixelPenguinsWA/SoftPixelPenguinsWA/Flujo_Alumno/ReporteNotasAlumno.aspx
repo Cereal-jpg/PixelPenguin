@@ -56,6 +56,10 @@
                     <label>Alumno:</label>
                     <asp:TextBox ID="txtAlumno" runat="server" placeholder="Alumno"></asp:TextBox>
                 </div>
+                <div class="form-row">
+                    <label>Grado:</label>
+                    <asp:TextBox ID="txtGrado" runat="server" placeholder="Grado"></asp:TextBox>
+                </div>
             </div>
             <br><br>
             <asp:GridView ID="gvNotas" runat="server" AllowPaging="true" PageSize="12" AutoGenerateColumns="false" CssClass="table table-hover table-responsive table-striped" ShowHeaderWhenEmpty="true">

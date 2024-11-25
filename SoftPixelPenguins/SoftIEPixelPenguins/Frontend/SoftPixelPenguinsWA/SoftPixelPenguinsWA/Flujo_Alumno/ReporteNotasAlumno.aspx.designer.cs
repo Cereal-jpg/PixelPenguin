@@ -69,6 +69,15 @@ namespace SoftPixelPenguinsWA
         protected global::System.Web.UI.WebControls.TextBox txtAlumno;
 
         /// <summary>
+        /// Control txtGrado.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtGrado;
+
+        /// <summary>
         /// Control gvNotas.
         /// </summary>
         /// <remarks>

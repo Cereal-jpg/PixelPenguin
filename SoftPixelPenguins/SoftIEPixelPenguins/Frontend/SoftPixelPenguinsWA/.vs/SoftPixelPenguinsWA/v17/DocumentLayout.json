@@ -1,0 +1,225 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{38ABDAD3-D9B1-4B24-A591-021FE0E24B98}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\softpixelpenguinswa\\flujo_alumno\\reportenotasalumno.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38ABDAD3-D9B1-4B24-A591-021FE0E24B98}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\flujo_alumno\\reportenotasalumno.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38ABDAD3-D9B1-4B24-A591-021FE0E24B98}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|c:\\users\\papar\\pixelpenguin\\softpixelpenguins\\softiepixelpenguins\\frontend\\softpixelpenguinswa\\softpixelpenguinswa\\flujo_alumno\\reportenotasalumno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{38ABDAD3-D9B1-4B24-A591-021FE0E24B98}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\flujo_alumno\\reportenotasalumno.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38ABDAD3-D9B1-4B24-A591-021FE0E24B98}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\softpixelpenguinswa\\flujo_alumno\\miperfilalumno.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38ABDAD3-D9B1-4B24-A591-021FE0E24B98}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\flujo_alumno\\miperfilalumno.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38ABDAD3-D9B1-4B24-A591-021FE0E24B98}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|c:\\users\\papar\\pixelpenguin\\softpixelpenguins\\softiepixelpenguins\\frontend\\softpixelpenguinswa\\softpixelpenguinswa\\flujo_personaladmin\\gestionarpagospa.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38ABDAD3-D9B1-4B24-A591-021FE0E24B98}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\flujo_personaladmin\\gestionarpagospa.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38ABDAD3-D9B1-4B24-A591-021FE0E24B98}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\softpixelpenguinswa\\flujo_personaladmin\\gestionarpagospa.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{38ABDAD3-D9B1-4B24-A591-021FE0E24B98}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\flujo_personaladmin\\gestionarpagospa.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38ABDAD3-D9B1-4B24-A591-021FE0E24B98}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\softpixelpenguinswa\\flujo_personaladmin\\agregarpagopa.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38ABDAD3-D9B1-4B24-A591-021FE0E24B98}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\flujo_personaladmin\\agregarpagopa.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38ABDAD3-D9B1-4B24-A591-021FE0E24B98}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\softpixelpenguinswa\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{38ABDAD3-D9B1-4B24-A591-021FE0E24B98}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38ABDAD3-D9B1-4B24-A591-021FE0E24B98}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\softpixelpenguinswa\\flujo_personaladmin\\agregarpagopa.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{38ABDAD3-D9B1-4B24-A591-021FE0E24B98}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\flujo_personaladmin\\agregarpagopa.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38ABDAD3-D9B1-4B24-A591-021FE0E24B98}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\softpixelpenguinswa\\flujo_personaladmin\\reportegradopa.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38ABDAD3-D9B1-4B24-A591-021FE0E24B98}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\flujo_personaladmin\\reportegradopa.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38ABDAD3-D9B1-4B24-A591-021FE0E24B98}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\softpixelpenguinswa\\flujo_profesor\\registronotasprofesor_alumnos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{38ABDAD3-D9B1-4B24-A591-021FE0E24B98}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\flujo_profesor\\registronotasprofesor_alumnos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38ABDAD3-D9B1-4B24-A591-021FE0E24B98}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\softpixelpenguinswa\\softpixelpenguins.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{38ABDAD3-D9B1-4B24-A591-021FE0E24B98}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\softpixelpenguins.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{38ABDAD3-D9B1-4B24-A591-021FE0E24B98}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\softpixelpenguinswa\\content\\estilos-subirdocumento.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{38ABDAD3-D9B1-4B24-A591-021FE0E24B98}|SoftPixelPenguinsWA\\SoftPixelPenguinsWA.csproj|solutionrelative:softpixelpenguinswa\\content\\estilos-subirdocumento.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ReporteNotasAlumno.aspx",
+              "DocumentMoniker": "C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\SoftPixelPenguinsWA\\Flujo_Alumno\\ReporteNotasAlumno.aspx",
+              "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\Flujo_Alumno\\ReporteNotasAlumno.aspx",
+              "ToolTip": "C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\SoftPixelPenguinsWA\\Flujo_Alumno\\ReporteNotasAlumno.aspx",
+              "RelativeToolTip": "SoftPixelPenguinsWA\\Flujo_Alumno\\ReporteNotasAlumno.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-11-25T05:24:56.962Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\SoftPixelPenguinsWA\\Web.config",
+              "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\Web.config",
+              "ToolTip": "C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\SoftPixelPenguinsWA\\Web.config",
+              "RelativeToolTip": "SoftPixelPenguinsWA\\Web.config",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAAC8AAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-11-25T00:31:19.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MiPerfilAlumno.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\SoftPixelPenguinsWA\\Flujo_Alumno\\MiPerfilAlumno.aspx.cs",
+              "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\Flujo_Alumno\\MiPerfilAlumno.aspx.cs",
+              "ToolTip": "C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\SoftPixelPenguinsWA\\Flujo_Alumno\\MiPerfilAlumno.aspx.cs",
+              "RelativeToolTip": "SoftPixelPenguinsWA\\Flujo_Alumno\\MiPerfilAlumno.aspx.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAAAkwBIAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T18:17:16.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SoftPixelPenguins.Master",
+              "DocumentMoniker": "C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\SoftPixelPenguinsWA\\SoftPixelPenguins.Master",
+              "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\SoftPixelPenguins.Master",
+              "ToolTip": "C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\SoftPixelPenguinsWA\\SoftPixelPenguins.Master",
+              "RelativeToolTip": "SoftPixelPenguinsWA\\SoftPixelPenguins.Master",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-11-24T03:29:17.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Estilos-SubirDocumento.css",
+              "DocumentMoniker": "C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\SoftPixelPenguinsWA\\Content\\Estilos-SubirDocumento.css",
+              "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\Content\\Estilos-SubirDocumento.css",
+              "ToolTip": "C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\SoftPixelPenguinsWA\\Content\\Estilos-SubirDocumento.css",
+              "RelativeToolTip": "SoftPixelPenguinsWA\\Content\\Estilos-SubirDocumento.css",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-11-24T03:21:11.459Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GestionarPagosPA.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\SoftPixelPenguinsWA\\Flujo_PersonalAdmin\\GestionarPagosPA.aspx.cs",
+              "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\Flujo_PersonalAdmin\\GestionarPagosPA.aspx.cs",
+              "ToolTip": "C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\SoftPixelPenguinsWA\\Flujo_PersonalAdmin\\GestionarPagosPA.aspx.cs",
+              "RelativeToolTip": "SoftPixelPenguinsWA\\Flujo_PersonalAdmin\\GestionarPagosPA.aspx.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAewE0AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T00:17:01.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReporteNotasAlumno.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\SoftPixelPenguinsWA\\Flujo_Alumno\\ReporteNotasAlumno.aspx.cs",
+              "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\Flujo_Alumno\\ReporteNotasAlumno.aspx.cs",
+              "ToolTip": "C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\SoftPixelPenguinsWA\\Flujo_Alumno\\ReporteNotasAlumno.aspx.cs",
+              "RelativeToolTip": "SoftPixelPenguinsWA\\Flujo_Alumno\\ReporteNotasAlumno.aspx.cs",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAEwN8AAAB6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T02:15:44.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AgregarPagoPA.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\SoftPixelPenguinsWA\\Flujo_PersonalAdmin\\AgregarPagoPA.aspx.cs",
+              "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\Flujo_PersonalAdmin\\AgregarPagoPA.aspx.cs",
+              "ToolTip": "C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\SoftPixelPenguinsWA\\Flujo_PersonalAdmin\\AgregarPagoPA.aspx.cs",
+              "RelativeToolTip": "SoftPixelPenguinsWA\\Flujo_PersonalAdmin\\AgregarPagoPA.aspx.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T02:03:36.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GestionarPagosPA.aspx",
+              "DocumentMoniker": "C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\SoftPixelPenguinsWA\\Flujo_PersonalAdmin\\GestionarPagosPA.aspx",
+              "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\Flujo_PersonalAdmin\\GestionarPagosPA.aspx",
+              "ToolTip": "C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\SoftPixelPenguinsWA\\Flujo_PersonalAdmin\\GestionarPagosPA.aspx",
+              "RelativeToolTip": "SoftPixelPenguinsWA\\Flujo_PersonalAdmin\\GestionarPagosPA.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-11-24T00:20:48.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RegistroNotasProfesor_Alumnos.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\SoftPixelPenguinsWA\\Flujo_Profesor\\RegistroNotasProfesor_Alumnos.aspx.cs",
+              "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\Flujo_Profesor\\RegistroNotasProfesor_Alumnos.aspx.cs",
+              "ToolTip": "C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\SoftPixelPenguinsWA\\Flujo_Profesor\\RegistroNotasProfesor_Alumnos.aspx.cs",
+              "RelativeToolTip": "SoftPixelPenguinsWA\\Flujo_Profesor\\RegistroNotasProfesor_Alumnos.aspx.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAADwvxQAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T18:18:22.458Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ReporteGradoPA.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\SoftPixelPenguinsWA\\Flujo_PersonalAdmin\\ReporteGradoPA.aspx.cs",
+              "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\Flujo_PersonalAdmin\\ReporteGradoPA.aspx.cs",
+              "ToolTip": "C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\SoftPixelPenguinsWA\\Flujo_PersonalAdmin\\ReporteGradoPA.aspx.cs",
+              "RelativeToolTip": "SoftPixelPenguinsWA\\Flujo_PersonalAdmin\\ReporteGradoPA.aspx.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAwwEwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-24T18:41:49.245Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AgregarPagoPA.aspx",
+              "DocumentMoniker": "C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\SoftPixelPenguinsWA\\Flujo_PersonalAdmin\\AgregarPagoPA.aspx",
+              "RelativeDocumentMoniker": "SoftPixelPenguinsWA\\Flujo_PersonalAdmin\\AgregarPagoPA.aspx",
+              "ToolTip": "C:\\Users\\papar\\PixelPenguin\\SoftPixelPenguins\\SoftIEPixelPenguins\\Frontend\\SoftPixelPenguinsWA\\SoftPixelPenguinsWA\\Flujo_PersonalAdmin\\AgregarPagoPA.aspx",
+              "RelativeToolTip": "SoftPixelPenguinsWA\\Flujo_PersonalAdmin\\AgregarPagoPA.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-11-25T02:03:33.659Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

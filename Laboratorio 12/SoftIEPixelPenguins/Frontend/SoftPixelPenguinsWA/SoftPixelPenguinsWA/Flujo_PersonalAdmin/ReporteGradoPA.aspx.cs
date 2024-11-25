@@ -16,6 +16,7 @@ namespace SoftPixelPenguinsWA
     public partial class ReporteGradoPA : System.Web.UI.Page
     {
         GradoAcademicoWSClient gradoAcademicoBO = new GradoAcademicoWSClient();
+        ReportesClient Reportes = new ReportesClient();
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -67,7 +68,7 @@ namespace SoftPixelPenguinsWA
 
         protected void btnDownloadPDF_Click(object sender, EventArgs e)
         {
-            Byte[] FileBuffer = gradoAcademicoBO.reporteMatriculasPorGrado();
+            Byte[] FileBuffer = Reportes.reporteMatriculasXGrado();
             if (FileBuffer != null)
             {
                 Response.ContentType = "application/pdf";

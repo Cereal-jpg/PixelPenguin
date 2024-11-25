@@ -82,33 +82,5 @@ public class GradoAcademicoWS {
         return gradoAcademico;
     }
     
-    @WebMethod(operationName = "reporteMatriculasPorGrado")
-    public byte[] reporteMatriculasPorGrado() throws Exception {
-        try {            
-            Map<String, Object> params = new HashMap<>();
-            params.put("Logo",ImageIO.read(new File(getFileResource("logo.png")))); 
-            return generarBuffer(getFileResource("ReporteMatriculasXGrado.jrxml"), params);                    
-         } catch (Exception ex) {
-            Logger.getLogger(GradoAcademicoWS.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return null;
-    }
-    
-    private String getFileResource(String fileName){ 
-        String filePath = GradoAcademicoWS.class.getResource("/pe/edu/pucp/pixelpenguins/resources/"+fileName).getPath();
-        filePath = filePath.replace("%20", " ");
-        return filePath;
-    }
-    
-    public byte[] generarBuffer(String inFileXML, Map<String, Object> params) throws Exception{
-        String fileJasper = inFileXML +".jasper";
-        if(!new File(fileJasper).exists()){
-            JasperCompileManager.compileReportToFile(inFileXML, fileJasper);         
-        }
-        JasperReport jr = (JasperReport) JRLoader.loadObjectFromFile(fileJasper);
-        Connection conn = DBManager.getInstance().getConnection();
-        JasperPrint jp = JasperFillManager.fillReport(jr,params, conn);          
-        return JasperExportManager.exportReportToPdf(jp);
-    }
     
 }

@@ -18,4 +18,5 @@
     <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/SoftPixelPenguinsWSBL/InstitucionEducativaWS?wsdl"/>
     <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/SoftPixelPenguinsWSBL/ApoderadoWS?wsdl"/>
     <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/SoftPixelPenguinsWSBL/CursoXMatriculaWS?wsdl"/>
+    <contractRef xmlns="http://schemas.xmlsoap.org/disco/scl/" ref="http://localhost:8080/SoftPixelPenguinsWSBL/Reportes?wsdl"/>
 </discovery>

@@ -5,6 +5,12 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftPixelPenguinsWSBL/SeccionAcademicaWS?xsd=1" namespace="http://services.pixelpenguins.pucp.edu.pe" />
     </xsd:schema>
   </types>
+  <message name="listarSeccionesPorGrado">
+    <part name="parameters" element="tns:listarSeccionesPorGrado" />
+  </message>
+  <message name="listarSeccionesPorGradoResponse">
+    <part name="parameters" element="tns:listarSeccionesPorGradoResponse" />
+  </message>
   <message name="insertarSeccionAcademica">
     <part name="parameters" element="tns:insertarSeccionAcademica" />
   </message>
@@ -16,12 +22,6 @@
   </message>
   <message name="eliminarSeccionAcademicaResponse">
     <part name="parameters" element="tns:eliminarSeccionAcademicaResponse" />
-  </message>
-  <message name="listarSeccionesPorGrado">
-    <part name="parameters" element="tns:listarSeccionesPorGrado" />
-  </message>
-  <message name="listarSeccionesPorGradoResponse">
-    <part name="parameters" element="tns:listarSeccionesPorGradoResponse" />
   </message>
   <message name="modificarSeccionAcademica">
     <part name="parameters" element="tns:modificarSeccionAcademica" />
@@ -42,6 +42,10 @@
     <part name="parameters" element="tns:listarTodosSeccionesAcademicasResponse" />
   </message>
   <portType name="SeccionAcademicaWS">
+    <operation name="listarSeccionesPorGrado">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/listarSeccionesPorGradoRequest" message="tns:listarSeccionesPorGrado" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/listarSeccionesPorGradoResponse" message="tns:listarSeccionesPorGradoResponse" />
+    </operation>
     <operation name="insertarSeccionAcademica">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/insertarSeccionAcademicaRequest" message="tns:insertarSeccionAcademica" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/insertarSeccionAcademicaResponse" message="tns:insertarSeccionAcademicaResponse" />
@@ -49,10 +53,6 @@
     <operation name="eliminarSeccionAcademica">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/eliminarSeccionAcademicaRequest" message="tns:eliminarSeccionAcademica" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/eliminarSeccionAcademicaResponse" message="tns:eliminarSeccionAcademicaResponse" />
-    </operation>
-    <operation name="listarSeccionesPorGrado">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/listarSeccionesPorGradoRequest" message="tns:listarSeccionesPorGrado" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/listarSeccionesPorGradoResponse" message="tns:listarSeccionesPorGradoResponse" />
     </operation>
     <operation name="modificarSeccionAcademica">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/SeccionAcademicaWS/modificarSeccionAcademicaRequest" message="tns:modificarSeccionAcademica" />
@@ -69,6 +69,15 @@
   </portType>
   <binding name="SeccionAcademicaWSPortBinding" type="tns:SeccionAcademicaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="listarSeccionesPorGrado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="insertarSeccionAcademica">
       <soap:operation soapAction="" />
       <input>
@@ -79,15 +88,6 @@
       </output>
     </operation>
     <operation name="eliminarSeccionAcademica">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarSeccionesPorGrado">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

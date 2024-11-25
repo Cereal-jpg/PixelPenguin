@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services.pixelpenguins.pucp.edu.pe" targetNamespace="http://services.pixelpenguins.pucp.edu.pe" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="Exception" type="tns:Exception" />
   <xs:element name="eliminarGradoAcademico" type="tns:eliminarGradoAcademico" />
   <xs:element name="eliminarGradoAcademicoResponse" type="tns:eliminarGradoAcademicoResponse" />
-  <xs:element name="generarBuffer" type="tns:generarBuffer" />
-  <xs:element name="generarBufferResponse" type="tns:generarBufferResponse" />
   <xs:element name="insertarGradoAcademico" type="tns:insertarGradoAcademico" />
   <xs:element name="insertarGradoAcademicoResponse" type="tns:insertarGradoAcademicoResponse" />
   <xs:element name="listarTodosGradosAcademicos" type="tns:listarTodosGradosAcademicos" />
@@ -13,8 +10,6 @@
   <xs:element name="modificarGradoAcademicoResponse" type="tns:modificarGradoAcademicoResponse" />
   <xs:element name="obtenerGradoAcademicoPorId" type="tns:obtenerGradoAcademicoPorId" />
   <xs:element name="obtenerGradoAcademicoPorIdResponse" type="tns:obtenerGradoAcademicoPorIdResponse" />
-  <xs:element name="reporteMatriculasPorGrado" type="tns:reporteMatriculasPorGrado" />
-  <xs:element name="reporteMatriculasPorGradoResponse" type="tns:reporteMatriculasPorGradoResponse" />
   <xs:complexType name="listarTodosGradosAcademicos">
     <xs:sequence />
   </xs:complexType>
@@ -43,35 +38,6 @@
       <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="generarBuffer">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="arg0" type="xs:string" />
-      <xs:element name="arg1">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element minOccurs="0" maxOccurs="unbounded" name="entry">
-              <xs:complexType>
-                <xs:sequence>
-                  <xs:element minOccurs="0" name="key" type="xs:string" />
-                  <xs:element minOccurs="0" name="value" type="xs:anyType" />
-                </xs:sequence>
-              </xs:complexType>
-            </xs:element>
-          </xs:sequence>
-        </xs:complexType>
-      </xs:element>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="generarBufferResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="Exception">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="message" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="eliminarGradoAcademico">
     <xs:sequence>
       <xs:element minOccurs="0" name="gradoAcademico" type="tns:gradoAcademico" />
@@ -80,14 +46,6 @@
   <xs:complexType name="eliminarGradoAcademicoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="reporteMatriculasPorGrado">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="reporteMatriculasPorGradoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="obtenerGradoAcademicoPorId">

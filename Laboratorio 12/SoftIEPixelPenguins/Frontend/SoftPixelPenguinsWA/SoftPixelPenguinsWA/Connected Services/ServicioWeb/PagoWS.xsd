@@ -108,16 +108,6 @@
       <xs:element minOccurs="0" name="return" type="tns:pago" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarPagosPoridGrado">
-    <xs:sequence>
-      <xs:element name="arg0" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="listarPagosPoridGradoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:pago" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="listarPagosXFechaLimite">
     <xs:sequence>
       <xs:element minOccurs="0" name="desde" type="xs:dateTime" />
@@ -125,6 +115,16 @@
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarPagosXFechaLimiteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:pago" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPagosPoridGrado">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarPagosPoridGradoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:pago" />
     </xs:sequence>

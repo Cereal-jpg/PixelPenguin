@@ -237,7 +237,7 @@ namespace SoftPixelPenguinsWA
                     matricula matricula = new matricula
                     {
                         fidAlumno = alumno.idUsuario,
-                        // Suponiendo el anio académico 2025 por ahora
+                        // Suponiendo el anio académico 2024 por ahora
                         anioAcademico = anioAcademicoBO.obtenerAnioAcademicoPorId(1),
                         gradoAcademico = grado,
                         seccionAcademica = seccionMatricula

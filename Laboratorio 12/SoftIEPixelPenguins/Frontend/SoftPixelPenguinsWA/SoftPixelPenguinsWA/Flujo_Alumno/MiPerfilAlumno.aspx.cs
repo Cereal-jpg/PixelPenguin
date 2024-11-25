@@ -14,14 +14,8 @@ namespace SoftPixelPenguinsWA
     public partial class MiPerfilAlumno : System.Web.UI.Page
     {
         AlumnoWSClient alumnoBO = new AlumnoWSClient();
-        GradoAcademicoWSClient gradoAcademicoBO = new GradoAcademicoWSClient();
-        SeccionAcademicaWSClient seccionAcademicaBO = new SeccionAcademicaWSClient();
-        AnioAcademicoWSClient anioAcademicoBO = new AnioAcademicoWSClient();
-        MatriculaWSClient matriculaBO = new MatriculaWSClient();
         ApoderadoWSClient apoderadoBO = new ApoderadoWSClient();
         alumno alumno = null;
-        RolWSClient rolBO = new RolWSClient();
-        GradoAcademicoWSClient gradoBO = new GradoAcademicoWSClient();
 
         protected void Page_Load(object sender, EventArgs e)
         {

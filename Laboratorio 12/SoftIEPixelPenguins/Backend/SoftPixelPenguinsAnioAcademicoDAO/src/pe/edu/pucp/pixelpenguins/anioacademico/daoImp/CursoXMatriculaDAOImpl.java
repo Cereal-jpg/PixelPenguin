@@ -59,7 +59,7 @@ public class CursoXMatriculaDAOImpl extends DAOImpl implements CursoXMatriculaDA
     @Override
     protected String obtenerListaDeValoresYAtributosParaModificacion() {
         return "fid_Alumno=?, notaBimestre1=?, notaBimestre2=?,"
-                + " notaBimestre3=?, notaBimestre4=?, notaFinal=?,";
+                + " notaBimestre3=?, notaBimestre4=?, notaFinal=?";
     }
     
     @Override

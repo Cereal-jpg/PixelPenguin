@@ -151,6 +151,7 @@
     <Content Include="Content\Estilos-Plan.css" />
     <Content Include="Content\Estilos-ProcesoMatriculaG.css" />
     <Content Include="Content\Estilos-RecuperarContraseña.css" />
+    <Content Include="Content\Estilos-SubirDocumento.css" />
     <Content Include="Content\Estilos-VerCompetenciasG.css" />
     <Content Include="Content\Estilos-VisualizarPagoAlumno.css" />
     <Content Include="Content\Estilos.css" />
@@ -313,6 +314,10 @@
     <None Include="Connected Services\ServicioWeb\ProfesorWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\ServicioWeb\Reportes.wsdl" />
+    <None Include="Connected Services\ServicioWeb\Reportes.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\ServicioWeb\RolWS.wsdl" />
     <None Include="Connected Services\ServicioWeb\RolWS.xsd">
       <SubType>Designer</SubType>
@@ -321,6 +326,9 @@
     <None Include="Connected Services\ServicioWeb\SeccionAcademicaWS.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.ActualizarContrasenaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.administrador.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -342,156 +350,6 @@
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.cursoXMatricula.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.gradoAcademico.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.horaAcademica.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.institucionEducativa.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.jornadaEscolar.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarAlumnosPorNombreResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarAlumnosPorNombreYEstadoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarCompetenciasPorCursoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarCursosPorGradoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarCursosPorProfesorResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarHorasAcademicasPorCursoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarMatriculasPorGradoAcademicoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarNotasFinalesCursosXAlumnoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarNotasFinalesCursosXMatriculaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarNotasFinalesXCursoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarPagosPoridGradoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarPagosXIdMatriculaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarPorAlumnoCursoYBimestreResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarPorAlumnoYCursoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarProfesoresPorNombreResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarSeccionesPorGradoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosAdministradoresResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosAlumnosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosAniosAcademicosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosApoderadosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosCompetenciasResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosCursosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosCursoXMatriculaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosGradosAcademicosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosHorasAcademicasResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosInstitucionesEducativasResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosJornadasEscolaresResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosMatriculasResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosNotasResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosPagosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosPersonalAdministrativoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosProfesoresResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosRolesResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosSeccionesAcademicasResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosUsuariosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarUsuariosPorNombreResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.matricula.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.nota.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.pago.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.PagoXIdMatriculaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.personalAdministrativo.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.profesor.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.rol.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.seccionAcademica.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.usuario.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.ActualizarContrasenaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.eliminarAdministradorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -511,9 +369,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.eliminarCursoXMatriculaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.eliminarGradoAcademicoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.eliminarHoraAcademicaResponse.datasource">
@@ -564,7 +419,7 @@
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.existeUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.generarBufferResponse.datasource">
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.horaAcademica.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.insertarAdministradorResponse.datasource">
@@ -586,9 +441,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.insertarCursoXMatriculaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.insertarGradoAcademicoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.insertarHoraAcademicaResponse.datasource">
@@ -624,6 +476,123 @@
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.insertarUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.institucionEducativa.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.jornadaEscolar.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarAlumnosPorNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarAlumnosPorNombreYEstadoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarCompetenciasPorCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarCursosPorGradoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarCursosPorProfesorResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarHorasAcademicasPorCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarMatriculasPorGradoAcademicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarNotasFinalesCursosXAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarNotasFinalesCursosXMatriculaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarNotasFinalesXCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarPagosPoridGradoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarPagosXFechaLimiteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarPagosXIdMatriculaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarPorAlumnoCursoYBimestreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarPorAlumnoYCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarProfesoresPorNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarSeccionesPorGradoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosAdministradoresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosAlumnosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosAniosAcademicosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosApoderadosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosCompetenciasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosCursosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosCursoXMatriculaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosHorasAcademicasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosInstitucionesEducativasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosJornadasEscolaresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosMatriculasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosNotasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosPagosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosPersonalAdministrativoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosProfesoresResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosRolesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosSeccionesAcademicasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosUsuariosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarUsuariosPorNombreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.matricula.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.modificarAdministradorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -643,9 +612,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.modificarCursoXMatriculaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.modificarGradoAcademicoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.modificarHoraAcademicaResponse.datasource">
@@ -681,6 +647,9 @@
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.modificarUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.nota.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.obtenerAdministradorPorIdResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -697,9 +666,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.obtenerCursoPorIdResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.obtenerGradoAcademicoPorIdResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.obtenerHoraAcademicaPorIdResponse.datasource">
@@ -744,10 +710,28 @@
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.obtenerUsuarioPorIdResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.reporteMatriculasPorGradoResponse.datasource">
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.pago.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.reporteNotasAlumnoResponse.datasource">
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.PagoXIdMatriculaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.personalAdministrativo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.profesor.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.reportePagosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.rol.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.seccionAcademica.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.usuario.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.ValidarCorreoElectronicoResponse.datasource">
@@ -756,7 +740,25 @@
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.ValidarDatosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarPagosXFechaLimiteResponse1.datasource">
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.eliminarGradoAcademicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.gradoAcademico.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.insertarGradoAcademicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosGradosAcademicosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.modificarGradoAcademicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.obtenerGradoAcademicoPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.reporteMatriculasXGradoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\ServicioWeb\UsuarioWS.wsdl" />

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.pixelpenguins.pucp.edu.pe/" targetNamespace="http://services.pixelpenguins.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="IOException" type="tns:IOException" />
+  <xs:element name="reporteMatriculasXGrado" type="tns:reporteMatriculasXGrado" />
+  <xs:element name="reporteMatriculasXGradoResponse" type="tns:reporteMatriculasXGradoResponse" />
+  <xs:element name="reportePagos" type="tns:reportePagos" />
+  <xs:element name="reportePagosResponse" type="tns:reportePagosResponse" />
+  <xs:complexType name="reportePagos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reportePagosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="IOException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reporteMatriculasXGrado">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="reporteMatriculasXGradoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

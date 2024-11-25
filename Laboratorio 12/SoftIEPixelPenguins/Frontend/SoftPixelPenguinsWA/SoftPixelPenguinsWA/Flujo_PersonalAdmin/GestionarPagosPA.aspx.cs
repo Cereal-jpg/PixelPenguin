@@ -83,7 +83,6 @@ namespace SoftPixelPenguinsWA.Flujo_PersonalAdmin
             {
                 pago nuevoPago = new pago();
                 nuevoPago.idPagoSpecified = true;
-                nuevoPago.matricula = new matricula();
                 nuevoPago.matricula = mat;
                 nuevoPago.monto = 500;
                 nuevoPago.fechaCreacion = DateTime.Today;
@@ -91,6 +90,11 @@ namespace SoftPixelPenguinsWA.Flujo_PersonalAdmin
                 nuevoPago.estado = estadoDePago.PENDIENTE;
                 nuevoPago.comprobanteDePago = null;
                 nuevoPago.tipoDeComprobante = tipoDeComprobante.BOLETA;
+                nuevoPago.estadoSpecified = true;
+                nuevoPago.fechaCreacionSpecified = true;
+                nuevoPago.tipoPagoSpecified = true;
+                nuevoPago.tipoDeComprobanteSpecified = true;
+                nuevoPago.fechaPagoSpecified = true;
                 nuevoPago.tipoPago = tipoDePago.TRANSFERENCIA_BANCARIA;
 
                 int resultado = pagoBO.insertarPago(nuevoPago);  // Asegúrate de que esto devuelve el ID o el resultado esperado.

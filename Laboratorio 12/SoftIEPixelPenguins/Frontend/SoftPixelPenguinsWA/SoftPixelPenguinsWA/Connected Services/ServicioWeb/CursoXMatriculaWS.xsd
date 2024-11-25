@@ -120,16 +120,6 @@
       <xs:element minOccurs="0" name="message" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="insertarCursoXMatricula">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="CursoXMatricula" type="tns:cursoXMatricula" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="insertarCursoXMatriculaResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="obtenerPorCursoYMatricula">
     <xs:sequence>
       <xs:element minOccurs="0" name="idCurso" type="xs:int" />
@@ -139,6 +129,16 @@
   <xs:complexType name="obtenerPorCursoYMatriculaResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:cursoXMatricula" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCursoXMatricula">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CursoXMatricula" type="tns:cursoXMatricula" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="insertarCursoXMatriculaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarCursoXMatricula">

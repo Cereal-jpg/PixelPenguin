@@ -30,8 +30,8 @@ namespace SoftPixelPenguinsWA
 
         private void CargarUsuarios()
         {
-            var usuariosList = usuarioBO.listarUsuariosPorNombre(txtBuscarUsuario.Text);
-            if (usuariosList != null)
+            List<usuario> usuariosList = (usuarioBO.listarUsuariosPorNombre(txtBuscarUsuario.Text) ?? Array.Empty<usuario>()).ToList();
+            if (usuariosList.Count > 0)
             {
                 BindingList<usuario> usuarios = new BindingList<usuario>(usuariosList);
                 foreach (usuario usu in usuarios) usu.rol = rolBO.obtenerRolPorId(usu.rol.idRol);

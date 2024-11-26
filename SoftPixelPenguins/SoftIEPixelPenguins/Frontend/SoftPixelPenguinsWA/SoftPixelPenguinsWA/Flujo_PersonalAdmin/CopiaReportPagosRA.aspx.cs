@@ -12,6 +12,8 @@ namespace SoftPixelPenguinsWA.Flujo_PersonalAdmin
     public partial class CopiaReportPagosRA : System.Web.UI.Page
     {
         PagoWSClient pagoBO = new PagoWSClient();
+        ReportesClient Reportes = new ReportesClient();
+        string id;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -20,6 +22,7 @@ namespace SoftPixelPenguinsWA.Flujo_PersonalAdmin
             }
 
             string idGrado = Request.QueryString["idGradoAcademico"];
+            id = idGrado;
             if (idGrado != null)
             {
                 gvPagos.DataSource = pagoBO.listarPagosPoridGrado(int.Parse(idGrado));
@@ -58,6 +61,25 @@ namespace SoftPixelPenguinsWA.Flujo_PersonalAdmin
                 }
             }
         }
+        protected void gvPagos_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            // Actualizar el índice de la página
+            gvPagos.PageIndex = e.NewPageIndex;
+            gvPagos.DataSource = pagoBO.listarPagosPoridGrado(int.Parse(id));
+            gvPagos.DataBind();
+        }
+        protected void btnDownloadPDF_Click(object sender, EventArgs e)
+        {
+            Byte[] FileBuffer = Reportes.reportePagos(int.Parse(id));
+            if (FileBuffer != null)
+            {
+                Response.ContentType = "application/pdf";
+                Response.AddHeader("content-length", FileBuffer.Length.ToString());
+                Response.BinaryWrite(FileBuffer);
+            }
+        }
+
+
 
     }
 }

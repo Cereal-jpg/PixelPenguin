@@ -40,12 +40,29 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="cphContenido" runat="server">
     <div class="d-flex justify-content-between align-items-center mt-3 mx-3">
         <h1>Visualizar Pagos</h1>
+        <asp:Button ID="btnDownloadPDF" runat="server" Text="Visualizar PDF" OnClick="btnDownloadPDF_Click" OnClientClick="openInNewTab();" CssClass="btn mb-3 btn-primary"/>
     </div>
     <hr class="mx-3" />
+
+    <!-- Gráficos estadísticos -->
+<h2 style="color: black; padding-top: 10px;">Gráfico Estadístico</h2>
+<div class="container">
+    <div class="chart">
+        <canvas id="barchart" style="width: 300px; height: 200px;"></canvas>
+    </div>
+    <div class="chart">
+        <canvas id="doughnut" style="width: 300px; height: 200px;"></canvas>
+    </div>
+</div>
+
+
+    <!-- Listado de pagos -->
     <h2 style="color: black; padding-top: 10px;">Listado de Pago</h2>
+    
     <div class="row">
         <asp:GridView ID="gvPagos" runat="server" AllowPaging="true" PageSize="10" AutoGenerateColumns="false"
-            CssClass="table table-hover table-responsive table-striped text-center" ShowHeaderWhenEmpty="true">
+     CssClass="table table-hover table-responsive table-striped text-center" ShowHeaderWhenEmpty="true"
+        OnPageIndexChanging="gvPagos_PageIndexChanging">
             <Columns>
                 <asp:BoundField HeaderText="ID_Pago" DataField="idPago">
                     <ItemStyle HorizontalAlign="Center" />
@@ -72,15 +89,7 @@
                 </asp:BoundField>
             </Columns>
         </asp:GridView>
-        <h2 style="color: black; padding-top: 10px;">Grafico Estadistico</h2>
-        <div class="container">
-            <div class="chart">
-                <canvas id="barchart" width="50" height="50"></canvas>
-            </div>
-            <div class="chart">
-                <canvas id="doughnut" width="50" height="50"></canvas>
-            </div>
-        </div>
     </div>
 </asp:Content>
+
 

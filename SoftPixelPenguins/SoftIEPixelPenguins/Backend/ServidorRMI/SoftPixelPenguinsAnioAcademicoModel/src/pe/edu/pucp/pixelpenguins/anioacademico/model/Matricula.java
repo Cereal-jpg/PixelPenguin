@@ -11,7 +11,7 @@ public class Matricula implements Serializable  {
     private GradoAcademico gradoAcademico; // tendrá un FK fid_GradoAcademico en la BD
     private AnioAcademico anioAcademico; // tendrá un FK fid_AnioAcademico en la BD
     private SeccionAcademica seccionAcademica;
-    private ArrayList <Pago> pagos;
+    private String notaFinal;
 
     public Matricula(){}
     
@@ -22,7 +22,6 @@ public class Matricula implements Serializable  {
         this.gradoAcademico = gradoAcademico;
         this.anioAcademico = anioAcademico;
         this.seccionAcademica = seccionAcademica;
-        this.pagos=new ArrayList<Pago>();
     }
 
     public Integer getIdMatricula() {

@@ -247,6 +247,7 @@ CREATE TABLE IF NOT EXISTS `pixelpenguins`.`Matricula` (
   `fid_AnioAcademico` INT NOT NULL,
   `fid_GradoAcademico` INT NOT NULL,
   `fid_SeccionAcademica` INT NOT NULL,
+  `NotaFinal` VARCHAR(10) NULL DEFAULT '-',
   PRIMARY KEY (`idMatricula`),
   INDEX `fid_Alumno` (`fid_Alumno` ASC) VISIBLE,
   INDEX `fid_AnioAcademico` (`fid_AnioAcademico` ASC) VISIBLE,

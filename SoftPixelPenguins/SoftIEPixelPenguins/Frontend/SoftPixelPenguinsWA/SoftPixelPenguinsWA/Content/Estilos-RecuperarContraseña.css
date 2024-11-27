@@ -1,89 +1,198 @@
-﻿.titulo {
-    margin-top: 40px; /* Ajusta este valor según tus necesidades */
+﻿:root {
+    /* Paleta de colores */
+    --color-primary: #007bff;
+    --color-primary-light: #0056b3;
+    --color-white: #ffffff;
+    --color-background: #f4f7f6;
+    --color-text: #333;
+    --color-error: #dc3545;
+    --color-error-light: #ffe6e6;
+    --color-border-light: #ccc;
+    /* Espaciados */
+    --spacing-small: 10px;
+    --spacing-medium: 15px;
+    --spacing-large: 20px;
+    /* Transiciones */
+    --transition-smooth: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-background);
+    line-height: 1.6;
+}
+
+.titulo {
+    text-align: center;
+    margin: 10px 0;
+    color: var(--color-primary);
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 .form-containerDentro {
     max-width: 600px;
     display: flex;
     flex-direction: column;
-    background-color: white;
-    padding: 20px;
-    border-radius: 6px;
-    gap: 20px;
+    background-color: var(--color-white);
+    padding: 30px;
+    border-radius: 10px;
+    gap: var(--spacing-large);
     margin: auto;
     margin-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.form-select {
-    color: white;
-    background-color: #000072;
-    border: 2px solid #000072;
-    border-radius: 20px;
-    padding: 10px 25px 10px 10px;
-    font-size: 16px;
-    width: 100%;
-    text-align: center;
-    text-align-last: center;
-    position: relative;
-}
-
-.error-message {
-    border: 2px solid red; /* Establece un borde de 2px de color rojo */
-    padding: 10px; /* Espacio interno alrededor del texto */
-    color: red; /* Color del texto (opcional, si quieres que sea rojo) */
-    display: inline-block; /* Permite que el borde se ajuste al contenido */
-    margin-top: 10px; /* Espacio superior (opcional) */
-    background-color: #ffe6e6; /* Fondo claro (opcional, para destacar el error) */
-}
-
-
-.login-button {
-    background-color: #000072;
-    color: white;
-    height: 45px;
-    border-radius: 20px;
-    cursor: pointer;
-    width: 100%;
-    text-align: center;
-}
-
-/* Contenedor para alinear la imagen y el grupo de droplist y botón */
 .content-row {
     display: flex;
     gap: 40px;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
-
-/* Contenedor para apilar el droplist y el botón verticalmente */
-
 
 .form-group-cont {
-    width: 400px;
-    margin-bottom: 30px; /* Espacio entre grupos */
-    align-content: center;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: var(--spacing-large);
 }
 
-    /* Etiquetas dentro de los grupos de formulario */
     .form-group-cont label {
-        display: block; /* Hace que la etiqueta ocupe todo el ancho */
-        font-size: 14px; /* Tamaño de fuente */
-        margin-top: 5px; /* Mayor espacio antes del botón */
-        margin-bottom: 5px; /* Espacio debajo de la etiqueta */
+        display: block;
+        font-size: 14px;
+        margin-bottom: var(--spacing-small);
+        color: var(--color-text);
+        font-weight: 600;
     }
 
-    /* Estilos para los campos de entrada */
-    .form-group-cont input {
-        width: 90%; /* Ancho del campo de entrada */
-        padding: 10px; /* Espaciado interno */
-        border: 1px solid #ccc; /* Borde gris claro */
-        border-radius: 4px; /* Bordes redondeados */
-        font-size: 14px; /* Tamaño de fuente */
+    .form-group-cont input,
+    .form-select {
+        width: 100%;
+        padding: var(--spacing-medium);
+        border: 1px solid var(--color-border-light);
+        border-radius: 6px;
+        font-size: 16px;
+        transition: var(--transition-smooth);
     }
+
+        .form-group-cont input:focus,
+        .form-select:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 0.2rem rgba(0, 0, 123, 0.25);
+        }
+
+.form-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    text-align: center;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+}
+
+    .form-select:hover {
+        background-color: var(--color-primary-light);
+    }
+
+    .form-select option {
+        color: var(--color-text);
+        background-color: var(--color-white);
+    }
+
+.login-button {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    height: 45px;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: var(--transition-smooth);
+}
+
+    .login-button:hover {
+        background-color: var(--color-primary-light);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+.error-message {
+    border: 2px solid var(--color-error);
+    padding: var(--spacing-small);
+    color: var(--color-error);
+    display: inline-block;
+    margin-top: var(--spacing-small);
+    background-color: var(--color-error-light);
+    border-radius: 4px;
+    width: 100%;
+    text-align: center;
+}
 
 .actions {
-    display: flex; /* Habilita flexbox */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente (opcional) */
-    margin-top: 5px; /* Espacio superior (opcional) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: var(--spacing-small);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .titulo {
+        margin: 10px 0;
+        font-size: 1.5rem;
+    }
+
+    .form-containerDentro {
+        width: 90%;
+        max-width: 100%;
+        padding: var(--spacing-medium);
+        margin: 0 auto;
+    }
+
+    .form-group-cont {
+        max-width: 100%;
+    }
+
+    .form-select,
+    .login-button {
+        padding: var(--spacing-small);
+        font-size: 14px;
+    }
+
+    .content-row {
+        gap: var(--spacing-medium);
+    }
+}
+
+/* Mejoras de accesibilidad para dispositivos táctiles */
+@media (hover: hover) {
+    .login-button:hover,
+    .form-select:hover {
+        transition: var(--transition-smooth);
+    }
+}
+
+/* Estilos para dispositivos muy pequeños */
+@media screen and (max-width: 375px) {
+    .form-containerDentro {
+        padding: var(--spacing-small);
+    }
+
+    .titulo {
+        font-size: 1.3rem;
+    }
 }

@@ -1,64 +1,79 @@
-﻿/* Contenedor principal de la tabla */
-.container-pagos {
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px 0;
+﻿:root {
+    /* Color Palette */
+    --primary-color: #28a745;
+    --primary-hover: #218838;
+    --background-light: #f8f9fa;
+    --background-white: #ffffff;
+    --text-dark: #212529;
+    --text-muted: #495057;
+    --border-color: #dee2e6;
+    --border-light: #ced4da;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-focus: rgba(0, 123, 255, 0.5);
 }
 
-/* Tabla de pagos */
+/* Container Styles */
+.container-pagos {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Table Base Styles */
 .table-full-width {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
+    border-spacing: 0;
     margin-bottom: 20px;
-    border-radius: 8px; /* Bordes redondeados */
-    overflow: hidden; /* Asegura que los bordes redondeados se apliquen correctamente */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para mejorar el diseño */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px var(--shadow-light);
 }
 
     .table-full-width th,
     .table-full-width td {
-        padding: 12px;
-        border: 1px solid #ddd;
+        padding: 15px;
+        border: 1px solid var(--border-color);
     }
 
     .table-full-width th {
-        background-color: #f4f4f4;
-        font-weight: bold;
+        background-color: var(--background-light);
+        font-weight: 600;
         text-align: left;
+        color: var(--text-dark);
     }
 
-/* Estilo centrado para encabezados */
+/* Table Variation Styles */
 .table-center th {
     text-align: center;
     vertical-align: middle;
-    background-color: #f8f9fa; /* Color del encabezado */
-    color: #212529; /* Color del texto del encabezado */
-    font-weight: bold;
-    padding: 10px;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    font-weight: 700;
+    padding: 12px;
 }
 
-/* Celdas con alineación vertical centrada */
 .table-center td {
     vertical-align: middle;
-    padding: 8px;
+    padding: 10px;
+    text-align: center;
 }
 
-/* Estilo para alternar colores de las filas */
 .table-striped tbody tr:nth-of-type(odd) {
-    background-color: #f2f2f2; /* Alternar color de filas */
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
-/* Bordeado completo para la tabla */
 .table-bordered {
-    border: 1px solid #dee2e6;
+    border: 1px solid var(--border-color);
 }
 
     .table-bordered th,
     .table-bordered td {
-        border: 1px solid #dee2e6;
+        border: 1px solid var(--border-color);
     }
 
-/* Alineaciones específicas */
+/* Text Alignment Utilities */
 .text-center {
     text-align: center;
 }
@@ -71,62 +86,103 @@
     text-align: right;
 }
 
-/* Botón de agregar */
+/* Button Styles */
 .btn-container {
     display: flex;
     justify-content: flex-end;
-    margin-top: 10px;
+    margin-top: 15px;
     padding-right: 10px;
 }
 
 .btn-small {
-    width: 160px;
-    height: 40px;
-    font-size: 14px;
-    color: #fff;
-    background-color: #28a745;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 45px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--background-white);
+    background-color: var(--primary-color);
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
     .btn-small:hover {
-        background-color: #218838;
+        background-color: var(--primary-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-/* Estilos del DropDownList */
+    .btn-small:active {
+        transform: translateY(0);
+        box-shadow: none;
+    }
+
+/* Dropdown List Styles */
 #ddlEstado {
     width: 100%;
-    padding: 12px; /* Aumento un poco el padding para mejor tamaño */
+    padding: 12px;
     font-size: 16px;
-    border: 1px solid #ced4da;
-    border-radius: 5px;
-    background-color: #f8f9fa;
-    color: #495057;
-    box-sizing: border-box; /* Para asegurarnos de que el padding no afecte el tamaño */
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    background-color: var(--background-light);
+    color: var(--text-muted);
+    box-sizing: border-box;
     margin-top: 10px;
+    transition: all 0.3s ease;
+    appearance: none; /* Remove default browser styling */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M1 4l5 5 5-5' fill='none' stroke='%23495057' stroke-width='2'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
 }
 
-    /* Efecto cuando se hace foco en el DropDownList */
     #ddlEstado:focus {
-        border-color: #80bdff;
+        border-color: var(--primary-color);
         outline: none;
-        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Agregar sombra azul cuando está en foco */
+        box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.25);
     }
 
-    /* Añadir algunos efectos al cambiar el color de fondo del DropDown */
     #ddlEstado option {
         padding: 10px;
-        background-color: #ffffff; /* Fondo blanco para las opciones */
+        background-color: var(--background-white);
     }
 
         #ddlEstado option:hover {
-            background-color: #f1f1f1; /* Fondo gris claro cuando se pasa por encima */
+            background-color: var(--background-light);
         }
 
-/* Mejorar apariencia en dispositivos pequeños */
-@media (max-width: 576px) {
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .container-pagos {
+        padding: 10px;
+    }
+
+    .table-full-width,
+    .table-full-width th,
+    .table-full-width td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
     #ddlEstado {
         font-size: 14px;
+        padding: 10px;
+    }
+
+    .btn-small {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+/* Accessibility Enhancements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
     }
 }

@@ -1,69 +1,199 @@
-﻿/* Contenedor principal para la imagen y el formulario */
-.main-container {
-    display: flex;
-    justify-content: flex-start; /* Coloca el formulario a la izquierda */
-    align-items: center;
-    gap: 10px; /* Espacio entre el formulario y la imagen */
+﻿:root {
+    /* Paleta de colores */
+    --color-primary: #000072;
+    --color-secondary: #007bff;
+    --color-background: #f4f7f6;
+    --color-text: #333;
+    --color-white: #ffffff;
+    /* Espaciados */
+    --spacing-small: 10px;
+    --spacing-medium: 20px;
+    --spacing-large: 25px;
+    /* Transiciones */
+    --transition-smooth: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
     margin: 0;
-    max-width: 800px;
     padding: 0;
-    background-color: transparent; /* Totalmente transparente */
-    border-color: transparent;
+    font-family: 'Arial', sans-serif;
 }
 
-.containerM {
-    width: 100%; /* Ancho completo */
-    max-width: 1200px; /* Ancho máximo */
-    background-color: transparent; /* Fondo blanco */
-    border-radius: 8px; /* Bordes redondeados */
-    overflow: hidden; /* Oculta cualquier contenido desbordado */
-}
-
-/* Contenedor del formulario */
-.form-containerM {
-    max-width: 400px;
+body {
+    background-image: url("../Images/Matricula.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    background-color: white;
-    padding: 20px;
-    border-radius: 6px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
 }
 
-/* Contenedor de la imagen */
-.image-container {
+/* Header Mejorado */
+.containerM {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-medium);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+    .header img {
+        height: 40px;
+        margin-right: var(--spacing-small);
+        transition: transform var(--transition-smooth);
+    }
+
+        .header img:hover {
+            transform: scale(1.1);
+        }
+
+    .header h1 {
+        font-size: 1.5rem;
+        color: var(--color-white);
+    }
+
+/* Navegación */
+.nav {
+    display: flex;
+    gap: var(--spacing-medium);
+}
+
+    .nav a {
+        text-decoration: none;
+        color: var(--color-white);
+        font-weight: bold;
+        position: relative;
+        transition: color var(--transition-smooth);
+    }
+
+        .nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--color-white);
+            transition: width var(--transition-smooth);
+        }
+
+        .nav a:hover::after {
+            width: 100%;
+        }
+
+/* Contenedor principal para la imagen y el formulario */
+.main-container {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    max-width: 300px;
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 800px;
+    margin: 100px auto 0;
+    padding: var(--spacing-large);
 }
 
-    /* Estilo para la imagen */
-    .image-container img {
-        width: 100%;
-        height: auto;
-        border-radius: 6px;
-    }
+/* Contenedor del formulario */
+.form-containerM {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
 
 .form-title {
-    text-align: center;
-    margin-bottom: 20px;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-medium);
+    font-size: 1.8rem;
+}
+
+.form-containerM p {
+    margin-bottom: var(--spacing-large);
+    color: var(--color-text);
+    line-height: 1.6;
 }
 
 .button-container {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: var(--spacing-medium);
 }
 
 .login-button {
     width: 100%;
-    background-color: #000072;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
 }
 
-/* Fondo de pantalla completo */
-body {
-    background-image: url("../Images/Matricula.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    .login-button:hover {
+        background-color: #0000a0;
+        transform: translateY(-2px);
+    }
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        height: 140px;
+        padding: var(--spacing-small);
+    }
+
+        .header h1 {
+            font-size: 1.2rem;
+        }
+
+    .nav {
+        margin-top: var(--spacing-small);
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-small);
+    }
+
+    .main-container {
+        flex-direction: column;
+        margin: 120px auto 0;
+        padding: var(--spacing-medium);
+    }
+
+    .form-containerM {
+        max-width: 100%;
+        width: 100%;
+        padding: var(--spacing-medium);
+    }
+
+    body {
+        padding-top: 110px;
+    }
 }

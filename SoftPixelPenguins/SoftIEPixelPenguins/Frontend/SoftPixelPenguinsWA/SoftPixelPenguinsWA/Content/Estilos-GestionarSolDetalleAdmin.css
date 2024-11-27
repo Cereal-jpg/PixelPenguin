@@ -1,88 +1,179 @@
-﻿* {
+﻿:root {
+    /* Color Palette */
+    --primary-color: #007bff;
+    --primary-hover: #0056b3;
+    --background-light: #e8f0ff;
+    --background-form: #cfe2f3;
+    --text-dark: #333;
+    --text-light: #555;
+    --white: #fff;
+    --gray-light: #f5f5f5;
+    --gray-border: #ccc;
+}
+
+/* Reset and Base Styles */
+* {
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
+body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: var(--text-dark);
+}
+
+/* Container Styles */
 .container {
-    width: 80%;
-    margin: auto;
-    margin-top: 50px;
-    background-color: #e8f0ff;
-    padding: 15px;
-    border-radius: 8px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    background-color: var(--background-light);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Form Section Styles */
 .form-section {
-    background-color: #cfe2f3;
-    padding: 15px;
-    padding-top: 5px;
-    border-radius: 8px;
+    background-color: var(--background-form);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .form-group {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    gap: 10px;
-    margin-bottom: 15px;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
 .form-row {
     flex: 1;
-    min-width: 160px;
+    min-width: 200px;
 }
 
+/* Label Styles */
 label {
     display: block;
-    margin: 10px 0;
-    color: black;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+    font-weight: 600;
 }
 
-input[type="text"], input[type="date"], input[type="email"], input[type="file"] {
+/* Input Styles */
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="file"]
+input[type="password"] {
     width: 100%;
-    padding: 8px;
-    border: none;
-    border-radius: 4px;
+    padding: 10px;
+    border: 1px solid var(--gray-border);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    outline: none;
 }
 
+    input[type="text"]:focus,
+    input[type="date"]:focus,
+    input[type="email"]:focus,
+    input[type="file"]:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+    }
+
+/* Button Container Styles */
 .button-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 20px;
 }
 
 .button-group {
     display: flex;
-    gap: 10px;
+    gap: 15px;
 }
 
+/* Button Styles */
 .button-style {
-    padding: 10px 20px;
-    margin: 5px;
-    background-color: #666;
-    background-color: #007bff;
-    color: #fff;
+    padding: 12px 25px;
+    background-color: var(--primary-color);
+    color: var(--white);
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
 }
 
-button:hover {
-    background-color: #0056b3;
-}
+    .button-style:hover {
+        background-color: var(--primary-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 
+    .button-style:active {
+        transform: translateY(0);
+        box-shadow: none;
+    }
+
+/* File Upload Styles */
 .file-upload {
-    display: inline-block;
+    display: block;
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     font-size: 14px;
-    color: #555;
-    background-color: #f5f5f5;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    color: var(--text-light);
+    background-color: var(--gray-light);
+    border: 1px solid var(--gray-border);
+    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    text-align: center;
 }
 
-.h3 {
-    margin-top: 10px;
+    .file-upload:hover {
+        background-color: var(--gray-border);
+    }
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .form-group {
+        flex-direction: column;
+    }
+
+    .form-row {
+        min-width: 100%;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .button-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Accessibility Enhancements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
 }

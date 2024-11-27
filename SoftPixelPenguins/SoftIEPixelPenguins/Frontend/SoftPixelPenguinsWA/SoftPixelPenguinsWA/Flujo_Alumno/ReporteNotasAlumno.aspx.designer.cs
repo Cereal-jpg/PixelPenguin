@@ -60,15 +60,6 @@ namespace SoftPixelPenguinsWA
         protected global::System.Web.UI.WebControls.GridView gvNotas;
 
         /// <summary>
-        /// Control btnReporte.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnReporte;
-
-        /// <summary>
         /// Control btnDownloadPDF.
         /// </summary>
         /// <remarks>

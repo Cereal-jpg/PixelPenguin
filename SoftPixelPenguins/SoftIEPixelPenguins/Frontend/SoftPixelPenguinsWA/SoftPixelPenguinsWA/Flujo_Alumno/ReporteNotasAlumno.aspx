@@ -57,7 +57,6 @@
                 </columns>
             </asp:GridView>
             <div style="display: flex; justify-content: flex-end; gap: 10px;">
-                <asp:Button ID="btnReporte" runat="server" Text="Ver Reporte" CssClass="login-button" OnClick="btnReporte_Click" OnClientClick="openInNewTab();"/>
                 <asp:Button ID="btnDownloadPDF" runat="server" Text="Descargar Reporte Notas" OnClick="btnDownloadPDF_Click" CssClass="login-button"/>
                 <asp:Button ID="Notas" runat="server" Text="Ver Notas Parciales" CssClass="login-button" OnClick="btnVerNotasParciales_Click"/>
             </div>

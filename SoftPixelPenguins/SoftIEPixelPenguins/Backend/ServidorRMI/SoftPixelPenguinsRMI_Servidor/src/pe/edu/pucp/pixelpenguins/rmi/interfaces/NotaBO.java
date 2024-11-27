@@ -22,7 +22,7 @@ public interface NotaBO extends Remote {
     public ArrayList<Nota> listarPorAlumnoCursoYBimestre(Integer idAlumno,
             Integer idCurso, Integer bimestre) throws RemoteException;
     
-    public Nota obtenerNotaPorParametros(Integer idAlumno,Integer idCurso,
+    public Nota obtenerNotaPorParametros(Integer idMatricula, Integer idAlumno,Integer idCurso,
             Integer bimestre,Integer idCompetencia) throws RemoteException;
     
 }

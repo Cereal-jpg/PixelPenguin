@@ -66,13 +66,13 @@ public class NotaDAOImpl extends DAOImpl implements NotaDAO {
 
     @Override
     protected void incluirValorDeParametrosParaModificacion() throws SQLException {
-        this.incluirParametroInt(1, this.nota.getIdNota());
-        this.incluirParametroString(2, this.nota.getNota());
-        this.incluirParametroInt(3, this.nota.getBimestre());
-        this.incluirParametroInt(4, this.nota.getCurso().getIdCurso());
-        this.incluirParametroInt(5, this.nota.getCompetencia().getIdCompetencia());
-        this.incluirParametroInt(6, this.nota.getFid_Matricula());
-        this.incluirParametroInt(7, this.nota.getFid_Alumno());
+        this.incluirParametroInt(7, this.nota.getIdNota());
+        this.incluirParametroString(1, this.nota.getNota());
+        this.incluirParametroInt(2, this.nota.getBimestre());
+        this.incluirParametroInt(3, this.nota.getCurso().getIdCurso());
+        this.incluirParametroInt(4, this.nota.getCompetencia().getIdCompetencia());
+        this.incluirParametroInt(5, this.nota.getFid_Matricula());
+        this.incluirParametroInt(6, this.nota.getFid_Alumno());
     }
 
     @Override
@@ -209,17 +209,18 @@ public class NotaDAOImpl extends DAOImpl implements NotaDAO {
     }
 
     @Override
-    public Nota obtenerNotaPorParametros(Integer idAlumno, Integer idCurso, Integer bimestre, Integer idCompetencia) {
+    public Nota obtenerNotaPorParametros(Integer idMatricula, Integer idAlumno, Integer idCurso, Integer bimestre, Integer idCompetencia) {
         this.nota = new Nota();
         try {
             this.abrirConexion();
             String sql = "select " + obtenerProyeccionParaSelect();
-            sql += " from " + this.nombre_tabla + " where fid_Alumno = ? AND fid_Curso = ? AND bimestre = ? AND fid_Competencia = ?";
+            sql += " from " + this.nombre_tabla + " where fid_Matricula=? AND fid_Alumno = ? AND fid_Curso = ? AND bimestre = ? AND fid_Competencia = ?";
             this.colocarSQLenStatement(sql);
-            this.incluirParametroInt(1, idAlumno);
-            this.incluirParametroInt(2, idCurso);
-            this.incluirParametroInt(3, bimestre);
-            this.incluirParametroInt(4, idCompetencia);
+            this.incluirParametroInt(1, idMatricula);
+            this.incluirParametroInt(2, idAlumno);
+            this.incluirParametroInt(3, idCurso);
+            this.incluirParametroInt(4, bimestre);
+            this.incluirParametroInt(5, idCompetencia);
             this.ejecutarConsultaEnBD(sql);
             if (this.resultSet.next()) {
                 instanciarObjetoDelResultSet();

@@ -38,6 +38,7 @@
                 <asp:TemplateField HeaderText="Nota">
                     <ItemTemplate>
                         <asp:DropDownList ID="ddlNotas" runat="server" CssClass="form-select">
+                            <asp:ListItem Text="-" Value="-" />
                             <asp:ListItem Text="AD" Value="AD" />
                             <asp:ListItem Text="A" Value="A" />
                             <asp:ListItem Text="B" Value="B" />

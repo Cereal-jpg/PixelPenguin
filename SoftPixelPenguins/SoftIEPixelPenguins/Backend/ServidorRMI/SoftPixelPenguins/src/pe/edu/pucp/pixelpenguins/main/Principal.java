@@ -135,10 +135,10 @@ public class Principal {
 //            MatriculaBO matri = new MatriculaBO();
 //            int id = matri.obtenerPorIdAlumno(20);
 //            System.out.println(id);
-//        NotaBO no = new NotaBO();
-//        Nota nota = no.obtenerNotaPorParametros(31, 1, 1, 2);
-//        
-//        System.out.println(nota.getIdNota());
+        NotaBO no = new NotaBO();
+        Nota nota = no.obtenerNotaPorParametros(1,31, 78, 1, 23);
+      
+       System.out.println(nota.getIdNota());
 
     }
 }

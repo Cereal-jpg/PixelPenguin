@@ -65,6 +65,7 @@
   </xs:complexType>
   <xs:complexType name="obtenerNotaPorParametros">
     <xs:sequence>
+      <xs:element minOccurs="0" name="idMatricula" type="xs:int" />
       <xs:element minOccurs="0" name="idAlumno" type="xs:int" />
       <xs:element minOccurs="0" name="idCurso" type="xs:int" />
       <xs:element minOccurs="0" name="bimestre" type="xs:int" />

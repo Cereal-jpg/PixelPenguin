@@ -113,12 +113,12 @@ public class NotaWS {
     }
     
     @WebMethod(operationName = "obtenerNotaPorParametros")
-    public Nota obtenerNotaPorParametros(@WebParam(name = "idAlumno") Integer idAlumno,
+    public Nota obtenerNotaPorParametros(@WebParam(name = "idMatricula") Integer idMatricula,@WebParam(name = "idAlumno") Integer idAlumno,
             @WebParam(name = "idCurso") Integer idCurso, @WebParam(name = "bimestre") Integer bimestre,
             @WebParam(name = "idCompetencia") Integer idCompetencia) {
         Nota nota = null;
         try {
-            nota = notaBO.obtenerNotaPorParametros(idAlumno, idCurso, bimestre,
+            nota = notaBO.obtenerNotaPorParametros(idMatricula, idAlumno, idCurso, bimestre,
                     idCompetencia);
         } catch (RemoteException ex) {
             System.out.println(ex.getMessage());

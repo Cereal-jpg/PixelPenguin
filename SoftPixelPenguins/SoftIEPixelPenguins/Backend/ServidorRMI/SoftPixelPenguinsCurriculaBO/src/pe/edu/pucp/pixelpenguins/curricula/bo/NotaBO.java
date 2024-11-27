@@ -42,8 +42,8 @@ public class NotaBO {
         return this.notaDAO.listarPorAlumnoCursoYBimestre(idAlumno, idCurso, bimestre);
     }
     
-    public Nota obtenerNotaPorParametros(Integer idAlumno,Integer idCurso,
+    public Nota obtenerNotaPorParametros(Integer idMatricula, Integer idAlumno,Integer idCurso,
             Integer bimestre,Integer idCompetencia){
-        return this.notaDAO.obtenerNotaPorParametros(idAlumno, idCurso, bimestre, idCompetencia);
+        return this.notaDAO.obtenerNotaPorParametros(idMatricula, idAlumno, idCurso, bimestre, idCompetencia);
     }
 }

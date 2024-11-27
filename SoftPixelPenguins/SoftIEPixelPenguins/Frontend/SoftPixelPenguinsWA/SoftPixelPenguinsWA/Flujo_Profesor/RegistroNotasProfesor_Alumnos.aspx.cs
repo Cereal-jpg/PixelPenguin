@@ -107,7 +107,7 @@ namespace SoftPixelPenguinsWA
                     competencia = (competencia)Session["competencia"];
 
                     nota nota = notaBO.obtenerNotaPorParametros(matriculaAlumno.idMatricula, idAlumno,
-                        competencia.idCompetencia, Int32.Parse(ddlBimestre.SelectedValue));
+                        competencia.curso.idCurso, Int32.Parse(ddlBimestre.SelectedValue),competencia.idCompetencia);
                     nota newNota = new nota
                     {
                         bimestre = Int32.Parse(ddlBimestre.SelectedValue),
@@ -115,27 +115,29 @@ namespace SoftPixelPenguinsWA
                         curso = (curso)Session["curso"],
                         fid_Alumno = idAlumno,
                         fid_Matricula = matriculaAlumno.idMatricula,
-                        nota1 = notaSeleccionada
+                        nota1 = notaSeleccionada,
                     };
                     if (nota != null)    // Hay nota
                     {
                         newNota.idNota = nota.idNota;
+                        newNota.idNotaSpecified = true;
+                        notaBO.modificarNota(newNota);
                     }
-                    notas.Add(newNota);
+                    else
+                    {
+                        notaBO.insertarNota(newNota);
+                    }
                 }
             }
-            registrarNotasEnBD(notas);
+            //registrarNotasEnBD(notas);
         }
 
         private void registrarNotasEnBD(BindingList<nota> notas)
         {
             foreach (nota n in notas)
             {
-                // más que insertar, debería ser un modificar la nota creo
-                // al matricularse el alumno se insertan todas sus notas correspondientes a '-'
-                // y el profesor puede ir actualizando conforme va avanzando el curso
 
-                if(n.nota1.Length > 0 || n.nota1 != null)
+                if(n.idNota > 0)
                 {
                     notaBO.modificarNota(n);
                 }

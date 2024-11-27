@@ -51,8 +51,8 @@ public class NotaBOImpl extends UnicastRemoteObject implements NotaBO {
     }
 
     @Override
-    public Nota obtenerNotaPorParametros(Integer idAlumno, Integer idCurso, Integer bimestre, Integer idCompetencia) throws RemoteException {
-        return this.notaBO.obtenerNotaPorParametros(idAlumno,idCurso,bimestre,idCompetencia);
+    public Nota obtenerNotaPorParametros(Integer idMatricula, Integer idAlumno, Integer idCurso, Integer bimestre, Integer idCompetencia) throws RemoteException {
+        return this.notaBO.obtenerNotaPorParametros(idMatricula, idAlumno,idCurso,bimestre,idCompetencia);
     }
 
 }

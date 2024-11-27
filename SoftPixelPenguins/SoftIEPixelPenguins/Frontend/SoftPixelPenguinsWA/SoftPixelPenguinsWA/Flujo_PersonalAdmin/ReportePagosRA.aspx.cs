@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace SoftPixelPenguinsWA.Flujo_PersonalAdmin
 {
-    public partial class CopiaReportPagosRA : System.Web.UI.Page
+    public partial class ReportePagosRA : System.Web.UI.Page
     {
         PagoWSClient pagoBO = new PagoWSClient();
         ReportesClient Reportes = new ReportesClient();

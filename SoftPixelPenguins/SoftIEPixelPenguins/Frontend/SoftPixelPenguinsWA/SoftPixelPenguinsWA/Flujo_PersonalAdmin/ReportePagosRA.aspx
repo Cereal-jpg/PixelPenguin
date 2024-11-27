@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftPixelPenguins.Master" AutoEventWireup="true" CodeBehind="CopiaReportPagosRA.aspx.cs" Inherits="SoftPixelPenguinsWA.Flujo_PersonalAdmin.CopiaReportPagosRA" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SoftPixelPenguins.Master" AutoEventWireup="true" CodeBehind="ReportePagosRA.aspx.cs" Inherits="SoftPixelPenguinsWA.Flujo_PersonalAdmin.ReportePagosRA" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="cphTitulo" runat="server">
     Reporte Pagos - Personal Administrativo
 </asp:Content>

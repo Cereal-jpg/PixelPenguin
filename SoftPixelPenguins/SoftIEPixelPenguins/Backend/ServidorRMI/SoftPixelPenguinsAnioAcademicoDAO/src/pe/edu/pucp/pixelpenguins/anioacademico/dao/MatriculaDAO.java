@@ -12,4 +12,6 @@ public interface MatriculaDAO {
     public Matricula obtenerPorId(Integer idMatricula);
     public Integer obtenerPorIdAlumno(Integer idAlumno);
     public ArrayList<Matricula>listarMatriculasPorGradoAcademico(GradoAcademico gradoAcademico);
+    public ArrayList<String>listarNotasFinalesPorGradoAcademico(GradoAcademico gradoAcademico);
+    public Integer actualizarNotaFinal(Integer idMatricula, String notaFinal);
 }

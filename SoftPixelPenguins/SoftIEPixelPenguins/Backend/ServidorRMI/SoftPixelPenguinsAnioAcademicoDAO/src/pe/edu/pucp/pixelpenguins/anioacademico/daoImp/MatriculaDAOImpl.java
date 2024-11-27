@@ -87,7 +87,7 @@ public class MatriculaDAOImpl extends DAOImpl implements MatriculaDAO {
 
     @Override
     protected String obtenerProyeccionParaSelect() {
-        return "idMatricula, fid_Alumno, fid_GradoAcademico, fid_AnioAcademico, fid_SeccionAcademica";
+        return "idMatricula, fid_Alumno, fid_GradoAcademico, fid_AnioAcademico, fid_SeccionAcademica, NotaFinal";
     }
 
     @Override
@@ -112,6 +112,8 @@ public class MatriculaDAOImpl extends DAOImpl implements MatriculaDAO {
         SeccionAcademica seccion = new SeccionAcademica();
         seccion.setIdSeccionAcademica(this.resultSet.getInt("fid_SeccionAcademica"));
         this.matricula.setSeccionAcademica(seccion);
+        
+        this.matricula.setNotaFinal(this.resultSet.getString("NotaFinal"));
     }
 
     @Override
@@ -147,9 +149,9 @@ public class MatriculaDAOImpl extends DAOImpl implements MatriculaDAO {
         this.usarPredicadoParaListado = true;
         this.matricula = new Matricula();
         this.matricula.setGradoAcademico(gradoAcademico);
-        ArrayList<Matricula>usuarios = (ArrayList<Matricula>)super.listarTodos(null);
+        ArrayList<Matricula>matriculas = (ArrayList<Matricula>)super.listarTodos(null);
         this.usarPredicadoParaListado = false;
-        return usuarios;
+        return matriculas;
     }
 
     @Override
@@ -176,5 +178,50 @@ public class MatriculaDAOImpl extends DAOImpl implements MatriculaDAO {
        return idMatricula;
     }
     
-
+    @ Override
+    public ArrayList<String>listarNotasFinalesPorGradoAcademico(GradoAcademico gradoAcademico){
+        ArrayList<String> notasFinales = new ArrayList<>();
+        try {
+            this.abrirConexion();
+            String sql = "SELECT NotaFinal FROM Matricula WHERE fid_GradoAcademico=?";
+            this.colocarSQLenStatement(sql);
+            this.incluirParametroInt(1, gradoAcademico.getIdGradoAcademico());
+            this.ejecutarConsultaEnBD(sql);
+            while (this.resultSet.next()) {
+                notasFinales.add(this.resultSet.getString("NotaFinal"));
+            }
+        } catch (SQLException ex) {
+            System.err.println("Error al listar notas finales - " + ex);
+        } finally {
+            try {
+                this.cerrarConexion();
+            } catch (SQLException ex) {
+                System.err.println("Error al cerrar la conexión - " + ex);
+            }
+        }
+        return notasFinales;
+    }
+    
+    @Override
+    public Integer actualizarNotaFinal(Integer idMatricula, String notaFinal) {
+        Integer resultado = 0;
+        try {
+            this.abrirConexion();
+            String sql = "UPDATE Matricula SET NotaFinal = ? WHERE idMatricula = ?";
+            this.colocarSQLenStatement(sql);
+            this.incluirParametroString(1, notaFinal);
+            this.incluirParametroInt(2, idMatricula);
+            resultado = this.ejecutarModificacionEnBD(sql);
+        } catch (SQLException ex) {
+            System.err.println("Error al actualizar NotaFinal - " + ex);
+        } finally {
+            try {
+                this.cerrarConexion();
+            } catch (SQLException ex) {
+                System.err.println("Error al cerrar la conexión - " + ex);
+            }
+        }
+    return resultado;
+    }
+    
 }

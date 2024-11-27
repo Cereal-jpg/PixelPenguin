@@ -5,11 +5,17 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftPixelPenguinsWSBL/HoraAcademicaWS?xsd=1" namespace="http://services.pixelpenguins.pucp.edu.pe" />
     </xsd:schema>
   </types>
-  <message name="listarHorasAcademicasPorCurso">
-    <part name="parameters" element="tns:listarHorasAcademicasPorCurso" />
+  <message name="insertarHoraAcademica">
+    <part name="parameters" element="tns:insertarHoraAcademica" />
   </message>
-  <message name="listarHorasAcademicasPorCursoResponse">
-    <part name="parameters" element="tns:listarHorasAcademicasPorCursoResponse" />
+  <message name="insertarHoraAcademicaResponse">
+    <part name="parameters" element="tns:insertarHoraAcademicaResponse" />
+  </message>
+  <message name="listarTodosHorasAcademicas">
+    <part name="parameters" element="tns:listarTodosHorasAcademicas" />
+  </message>
+  <message name="listarTodosHorasAcademicasResponse">
+    <part name="parameters" element="tns:listarTodosHorasAcademicasResponse" />
   </message>
   <message name="eliminarHoraAcademica">
     <part name="parameters" element="tns:eliminarHoraAcademica" />
@@ -29,22 +35,20 @@
   <message name="modificarHoraAcademicaResponse">
     <part name="parameters" element="tns:modificarHoraAcademicaResponse" />
   </message>
-  <message name="insertarHoraAcademica">
-    <part name="parameters" element="tns:insertarHoraAcademica" />
+  <message name="listarHorasAcademicasPorCurso">
+    <part name="parameters" element="tns:listarHorasAcademicasPorCurso" />
   </message>
-  <message name="insertarHoraAcademicaResponse">
-    <part name="parameters" element="tns:insertarHoraAcademicaResponse" />
-  </message>
-  <message name="listarTodosHorasAcademicas">
-    <part name="parameters" element="tns:listarTodosHorasAcademicas" />
-  </message>
-  <message name="listarTodosHorasAcademicasResponse">
-    <part name="parameters" element="tns:listarTodosHorasAcademicasResponse" />
+  <message name="listarHorasAcademicasPorCursoResponse">
+    <part name="parameters" element="tns:listarHorasAcademicasPorCursoResponse" />
   </message>
   <portType name="HoraAcademicaWS">
-    <operation name="listarHorasAcademicasPorCurso">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/listarHorasAcademicasPorCursoRequest" message="tns:listarHorasAcademicasPorCurso" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/listarHorasAcademicasPorCursoResponse" message="tns:listarHorasAcademicasPorCursoResponse" />
+    <operation name="insertarHoraAcademica">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/insertarHoraAcademicaRequest" message="tns:insertarHoraAcademica" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/insertarHoraAcademicaResponse" message="tns:insertarHoraAcademicaResponse" />
+    </operation>
+    <operation name="listarTodosHorasAcademicas">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/listarTodosHorasAcademicasRequest" message="tns:listarTodosHorasAcademicas" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/listarTodosHorasAcademicasResponse" message="tns:listarTodosHorasAcademicasResponse" />
     </operation>
     <operation name="eliminarHoraAcademica">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/eliminarHoraAcademicaRequest" message="tns:eliminarHoraAcademica" />
@@ -58,18 +62,23 @@
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/modificarHoraAcademicaRequest" message="tns:modificarHoraAcademica" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/modificarHoraAcademicaResponse" message="tns:modificarHoraAcademicaResponse" />
     </operation>
-    <operation name="insertarHoraAcademica">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/insertarHoraAcademicaRequest" message="tns:insertarHoraAcademica" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/insertarHoraAcademicaResponse" message="tns:insertarHoraAcademicaResponse" />
-    </operation>
-    <operation name="listarTodosHorasAcademicas">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/listarTodosHorasAcademicasRequest" message="tns:listarTodosHorasAcademicas" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/listarTodosHorasAcademicasResponse" message="tns:listarTodosHorasAcademicasResponse" />
+    <operation name="listarHorasAcademicasPorCurso">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/listarHorasAcademicasPorCursoRequest" message="tns:listarHorasAcademicasPorCurso" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/HoraAcademicaWS/listarHorasAcademicasPorCursoResponse" message="tns:listarHorasAcademicasPorCursoResponse" />
     </operation>
   </portType>
   <binding name="HoraAcademicaWSPortBinding" type="tns:HoraAcademicaWS">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="listarHorasAcademicasPorCurso">
+    <operation name="insertarHoraAcademica">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosHorasAcademicas">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -105,16 +114,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="insertarHoraAcademica">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarTodosHorasAcademicas">
+    <operation name="listarHorasAcademicasPorCurso">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

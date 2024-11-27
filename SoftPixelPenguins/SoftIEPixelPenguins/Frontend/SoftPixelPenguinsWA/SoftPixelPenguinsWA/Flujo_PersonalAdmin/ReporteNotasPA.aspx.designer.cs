@@ -7,11 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace SoftPixelPenguinsWA.Flujo_PersonalAdmin
+namespace SoftPixelPenguinsWA
 {
 
 
-    public partial class CopiaReportPagosRA
+    public partial class ReporteNotasPA
     {
 
         /// <summary>
@@ -24,21 +24,12 @@ namespace SoftPixelPenguinsWA.Flujo_PersonalAdmin
         protected global::System.Web.UI.WebControls.Panel panelGestionarUsuarios;
 
         /// <summary>
-        /// Control btnDownloadPDF.
+        /// Control gvAlumnos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnDownloadPDF;
-
-        /// <summary>
-        /// Control gvPagos.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvPagos;
+        protected global::System.Web.UI.WebControls.GridView gvAlumnos;
     }
 }

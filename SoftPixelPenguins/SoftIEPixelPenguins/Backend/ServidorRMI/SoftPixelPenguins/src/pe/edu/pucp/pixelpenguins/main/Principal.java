@@ -139,5 +139,6 @@ public class Principal {
 //        Nota nota = no.obtenerNotaPorParametros(31, 1, 1, 2);
 //        
 //        System.out.println(nota.getIdNota());
+
     }
 }

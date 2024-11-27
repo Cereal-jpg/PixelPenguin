@@ -64,4 +64,12 @@ public class Matricula implements Serializable  {
         this.seccionAcademica = seccionAcademica;
     }
     
+    public String getNotaFinal() {
+        return notaFinal;
+    }
+
+    public void setNotaFinal(String notaFinal) {
+        this.notaFinal = notaFinal;
+    }
+    
 }

@@ -51,4 +51,14 @@ public class MatriculaBOImpl extends UnicastRemoteObject implements MatriculaBO 
         return this.matriculaBO.listarMatriculasPorGradoAcademico(gradoAcademico);
     }
     
+    @Override
+    public ArrayList<String>listarNotasFinalesPorGradoAcademico(GradoAcademico gradoAcademico) throws RemoteException{
+        return this.matriculaBO.listarNotasFinalesPorGradoAcademico(gradoAcademico);
+    }
+    
+    @Override
+    public Integer actualizarNotaFinal(Integer idMatricula, String notaFinal) throws RemoteException{
+        return this.matriculaBO.actualizarNotaFinal(idMatricula, notaFinal);
+    }
+    
 }

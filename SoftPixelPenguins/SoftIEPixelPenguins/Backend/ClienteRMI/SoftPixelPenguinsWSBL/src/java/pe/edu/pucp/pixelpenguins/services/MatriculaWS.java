@@ -105,10 +105,33 @@ public class MatriculaWS {
     public ArrayList<Matricula>listarMatriculasPorGradoAcademico(GradoAcademico gradoAcademico){
         ArrayList<Matricula> matriculas = null;
         try {
-            matriculas = matriculaBO.listarTodos();
+            matriculas = matriculaBO.listarMatriculasPorGradoAcademico(gradoAcademico);
         } catch (RemoteException ex) {
             System.out.println(ex.getMessage());
         }
         return matriculas;
     }
+    
+    @WebMethod(operationName = "listarNotasFinalesPorGradoAcademico")
+    public ArrayList<String>listarNotasFinalesPorGradoAcademico(@WebParam(name = "gradoAcademico")GradoAcademico gradoAcademico){
+        ArrayList<String> notas = null;
+        try {
+            notas = matriculaBO.listarNotasFinalesPorGradoAcademico(gradoAcademico);
+        } catch (RemoteException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return notas;
+    }
+    
+    @WebMethod(operationName = "actualizarNotaFinal")
+    public Integer actualizarNotaFinal(@WebParam(name = "idMatricula") Integer idMatricula,@WebParam(name = "notaFinal") String notaFinal){
+        Integer resultado = 0;
+        try {
+            resultado = matriculaBO.actualizarNotaFinal(idMatricula, notaFinal);
+        } catch (RemoteException ex) {
+            System.out.println(ex.getMessage());
+        }
+        return resultado;
+    }
+    
 }

@@ -37,10 +37,10 @@
     <div class="container-matricula">
         <div class="form-container">
             <h2 style="color: black; font-size:20px">Consultar Reportes</h2>
-            <div class="row">
-                <div class="col-md-12">
-                    <asp:Label ID="lblReportes" runat="server" Text="Tipo de Reporte:" CssClass="col-form-label" ></asp:Label>
-                    <div class="form-control d-flex justify-content-center">
+            <div class="row d-flex align-items-center">
+                 <asp:Label ID="lblReportes" runat="server" Text="Tipo de Reporte:" CssClass="col-form-label" ></asp:Label>
+                <div class="col-md-10">
+                    <div class="form-control d-flex justify-content-start w-100">
                         <div class="form-check form-check-inline m-auto">
                             <input id="rbNotas" class="form-check-input" type="radio" runat="server" name="reporte"/>
                             <label id="lblNotas" class="form-check-label" for="cphContenido_rbNotas">Notas por Grado Académico</label>
@@ -54,6 +54,10 @@
                             <label id="lblPensiones" class="form-check-label" for="cphContenido_rbPensiones">Pensiones por Grado</label>
                         </div>
                     </div>
+                </div>
+                <div class="col-md-2 d-flex justify-content-end">
+                    <asp:DropDownList ID="ddlGrados" runat="server" CssClass="form-select me-2" style="width: 200px;" AutoPostBack="true">
+                    </asp:DropDownList>
                 </div>
              </div>
             <div class="button-container">

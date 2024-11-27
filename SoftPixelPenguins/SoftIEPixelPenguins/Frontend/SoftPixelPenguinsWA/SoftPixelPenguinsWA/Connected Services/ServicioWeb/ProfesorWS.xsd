@@ -55,14 +55,6 @@
       <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarTodosProfesores">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarTodosProfesoresResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:profesor" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="insertarProfesor">
     <xs:sequence>
       <xs:element minOccurs="0" name="profesor" type="tns:profesor" />
@@ -71,6 +63,14 @@
   <xs:complexType name="insertarProfesorResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodosProfesores">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosProfesoresResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:profesor" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="existeprofesor">

@@ -41,4 +41,12 @@ public class MatriculaBO {
     public ArrayList<Matricula>listarMatriculasPorGradoAcademico(GradoAcademico gradoAcademico){
         return this.matriculaDAO.listarMatriculasPorGradoAcademico(gradoAcademico);
     }
+    
+    public ArrayList<String>listarNotasFinalesPorGradoAcademico(GradoAcademico gradoAcademico){
+        return this.matriculaDAO.listarNotasFinalesPorGradoAcademico(gradoAcademico);
+    }
+    
+    public Integer actualizarNotaFinal(Integer idMatricula, String notaFinal){
+        return this.matriculaDAO.actualizarNotaFinal(idMatricula, notaFinal);
+    }
 }

@@ -193,12 +193,13 @@
     <Content Include="Flujo_PersonalAdmin\MiPerfilAdmin.aspx" />
     <Content Include="Flujo_Alumno\MisPagosAlumno.aspx" />
     <Content Include="Flujo_Alumno\VisualizarPagoAlumno.aspx" />
-    <Content Include="Flujo_PersonalAdmin\CopiaReportPagosRA.aspx" />
+    <Content Include="Flujo_PersonalAdmin\ReportePagosRA.aspx" />
     <Content Include="Flujo_PersonalAdmin\GestionarCursosPlanPA.aspx" />
     <Content Include="Flujo_PersonalAdmin\GestionarPlanesPA.aspx" />
     <Content Include="Flujo_PersonalAdmin\MiPerfilPA.aspx" />
     <Content Include="Flujo_Alumno\NotasParcialesAlumno.aspx" />
     <Content Include="Flujo_PersonalAdmin\CopiaReporteXPagos.aspx" />
+    <Content Include="Flujo_PersonalAdmin\ReporteNotasPA.aspx" />
     <Content Include="Flujo_Profesor\CursosDictadosProfesor.aspx" />
     <Content Include="Flujo_PersonalAdmin\GestionarHorariosPA.aspx" />
     <Content Include="Flujo_PersonalAdmin\CursosPorProfesorPA.aspx" />
@@ -339,9 +340,6 @@
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.curso.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.cursoXMatricula.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.eliminarAdministradorResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -358,9 +356,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.eliminarCursoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.eliminarCursoXMatriculaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.eliminarGradoAcademicoResponse.datasource">
@@ -408,9 +403,6 @@
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.existeUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.generarBufferResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.gradoAcademico.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -433,9 +425,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.insertarCursoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.insertarCursoXMatriculaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.insertarGradoAcademicoResponse.datasource">
@@ -489,15 +478,6 @@
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarMatriculasPorGradoAcademicoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarNotasFinalesCursosXAlumnoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarNotasFinalesCursosXMatriculaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarNotasFinalesXCursoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarPagosPoridGradoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -535,9 +515,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosCursosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosCursoXMatriculaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosGradosAcademicosResponse.datasource">
@@ -592,9 +569,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.modificarCursoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.modificarCursoXMatriculaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.modificarGradoAcademicoResponse.datasource">
@@ -672,9 +646,6 @@
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.obtenerPersonalAdministrativoPorIdResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.obtenerPorCursoYMatriculaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.obtenerProfesorPorIdResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -702,9 +673,6 @@
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.reporteMatriculasXGradoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.reporteNotasAlumnoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.reportePagosResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
@@ -721,6 +689,39 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.ValidarDatosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.actualizarNotaFinalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarNotasFinalesPorGradoAcademicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.cursoXMatricula.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.eliminarCursoXMatriculaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.insertarCursoXMatriculaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarNotasFinalesCursosXAlumnoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarNotasFinalesCursosXMatriculaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarNotasFinalesXCursoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.listarTodosCursoXMatriculaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.modificarCursoXMatriculaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServicioWeb\SoftPixelPenguinsWA.ServicioWeb.obtenerPorCursoYMatriculaResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\ServicioWeb\UsuarioWS.wsdl" />
@@ -803,12 +804,12 @@
     <Compile Include="Flujo_Alumno\VisualizarPagoAlumno.aspx.designer.cs">
       <DependentUpon>VisualizarPagoAlumno.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Flujo_PersonalAdmin\CopiaReportPagosRA.aspx.cs">
-      <DependentUpon>CopiaReportPagosRA.aspx</DependentUpon>
+    <Compile Include="Flujo_PersonalAdmin\ReportePagosRA.aspx.cs">
+      <DependentUpon>ReportePagosRA.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Flujo_PersonalAdmin\CopiaReportPagosRA.aspx.designer.cs">
-      <DependentUpon>CopiaReportPagosRA.aspx</DependentUpon>
+    <Compile Include="Flujo_PersonalAdmin\ReportePagosRA.aspx.designer.cs">
+      <DependentUpon>ReportePagosRA.aspx</DependentUpon>
     </Compile>
     <Compile Include="Flujo_PersonalAdmin\GestionarCursosPlanPA.aspx.cs">
       <DependentUpon>GestionarCursosPlanPA.aspx</DependentUpon>
@@ -844,6 +845,13 @@
     </Compile>
     <Compile Include="Flujo_PersonalAdmin\CopiaReporteXPagos.aspx.designer.cs">
       <DependentUpon>CopiaReporteXPagos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Flujo_PersonalAdmin\ReporteNotasPA.aspx.cs">
+      <DependentUpon>ReporteNotasPA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Flujo_PersonalAdmin\ReporteNotasPA.aspx.designer.cs">
+      <DependentUpon>ReporteNotasPA.aspx</DependentUpon>
     </Compile>
     <Compile Include="Flujo_Profesor\CursosDictadosProfesor.aspx.cs">
       <DependentUpon>CursosDictadosProfesor.aspx</DependentUpon>

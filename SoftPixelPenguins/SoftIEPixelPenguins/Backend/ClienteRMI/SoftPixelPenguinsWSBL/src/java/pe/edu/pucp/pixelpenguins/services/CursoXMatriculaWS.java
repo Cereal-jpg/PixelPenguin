@@ -136,44 +136,4 @@ public class CursoXMatriculaWS {
         return notas;
     }
     
-    @WebMethod(operationName = "reporteNotasAlumno")
-    public byte[] reporteNotasAlumno(@WebParam(name = "fid_Alumno") Integer idAlumno) throws Exception {
-        try {            
-            Map<String, Object> params = new HashMap<>();
-            params.put("Logo",ImageIO.read(new File(getFileResource("logo.png")))); 
-            params.put("fid_Alumno",idAlumno); 
-            return generarBuffer(getFileResource("ReportePrueba.jrxml"), params);                    
-         } catch (Exception ex) {
-            Logger.getLogger(CursoXMatriculaWS.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        return null;
-    }
-    
-    private String getFileResource(String fileName){ 
-        String filePath = CursoXMatriculaWS.class.getResource("/pe/edu/pucp/pixelpenguins/resources/"+fileName).getPath();
-        filePath = filePath.replace("%20", " ");
-        return filePath;
-    }
-    
-    public byte[] generarBuffer(String inFileXML, Map<String, Object> params) throws Exception{
-        String fileJasper = inFileXML +".jasper";
-        Connection conn = null;
-        if(!new File(fileJasper).exists()){
-            JasperCompileManager.compileReportToFile(inFileXML, fileJasper);         
-        }
-        JasperReport jr = (JasperReport) JRLoader.loadObjectFromFile(fileJasper);
-        try{
-            conn = DBManager.getInstance().getConnection();
-            JasperPrint jp = JasperFillManager.fillReport(jr,params, conn);
-            return JasperExportManager.exportReportToPdf(jp);
-        } finally{
-            if (conn != null) {
-                try {
-                    conn.close();
-                } catch (SQLException ex) {
-                    Logger.getLogger(CursoXMatriculaWS.class.getName()).log(Level.SEVERE, "Error cerrando la conexión", ex);
-                }
-            }
-        }
-    }
 }

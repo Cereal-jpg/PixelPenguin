@@ -5,36 +5,36 @@
       <xsd:import schemaLocation="http://localhost:8080/SoftPixelPenguinsWSBL/Reportes?xsd=1" namespace="http://services.pixelpenguins.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="reporteMatriculasXGrado">
-    <part name="parameters" element="tns:reporteMatriculasXGrado" />
-  </message>
-  <message name="reporteMatriculasXGradoResponse">
-    <part name="parameters" element="tns:reporteMatriculasXGradoResponse" />
-  </message>
-  <message name="IOException">
-    <part name="fault" element="tns:IOException" />
-  </message>
   <message name="reportePagos">
     <part name="parameters" element="tns:reportePagos" />
   </message>
   <message name="reportePagosResponse">
     <part name="parameters" element="tns:reportePagosResponse" />
   </message>
+  <message name="IOException">
+    <part name="fault" element="tns:IOException" />
+  </message>
+  <message name="reporteMatriculasXGrado">
+    <part name="parameters" element="tns:reporteMatriculasXGrado" />
+  </message>
+  <message name="reporteMatriculasXGradoResponse">
+    <part name="parameters" element="tns:reporteMatriculasXGradoResponse" />
+  </message>
   <portType name="Reportes">
-    <operation name="reporteMatriculasXGrado">
-      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/Reportes/reporteMatriculasXGradoRequest" message="tns:reporteMatriculasXGrado" />
-      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/Reportes/reporteMatriculasXGradoResponse" message="tns:reporteMatriculasXGradoResponse" />
-      <fault wsam:Action="http://services.pixelpenguins.pucp.edu.pe/Reportes/reporteMatriculasXGrado/Fault/IOException" name="IOException" message="tns:IOException" />
-    </operation>
     <operation name="reportePagos">
       <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/Reportes/reportePagosRequest" message="tns:reportePagos" />
       <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/Reportes/reportePagosResponse" message="tns:reportePagosResponse" />
       <fault wsam:Action="http://services.pixelpenguins.pucp.edu.pe/Reportes/reportePagos/Fault/IOException" name="IOException" message="tns:IOException" />
     </operation>
+    <operation name="reporteMatriculasXGrado">
+      <input wsam:Action="http://services.pixelpenguins.pucp.edu.pe/Reportes/reporteMatriculasXGradoRequest" message="tns:reporteMatriculasXGrado" />
+      <output wsam:Action="http://services.pixelpenguins.pucp.edu.pe/Reportes/reporteMatriculasXGradoResponse" message="tns:reporteMatriculasXGradoResponse" />
+      <fault wsam:Action="http://services.pixelpenguins.pucp.edu.pe/Reportes/reporteMatriculasXGrado/Fault/IOException" name="IOException" message="tns:IOException" />
+    </operation>
   </portType>
   <binding name="ReportesPortBinding" type="tns:Reportes">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="reporteMatriculasXGrado">
+    <operation name="reportePagos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -46,7 +46,7 @@
         <soap:fault use="literal" name="IOException" namespace="" />
       </fault>
     </operation>
-    <operation name="reportePagos">
+    <operation name="reporteMatriculasXGrado">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

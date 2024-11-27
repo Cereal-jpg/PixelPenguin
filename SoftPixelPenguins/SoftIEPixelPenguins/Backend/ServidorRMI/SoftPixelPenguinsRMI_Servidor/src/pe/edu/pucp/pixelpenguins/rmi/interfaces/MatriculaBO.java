@@ -22,4 +22,8 @@ public interface MatriculaBO extends Remote {
      
     public ArrayList<Matricula>listarMatriculasPorGradoAcademico(GradoAcademico gradoAcademico) throws RemoteException;
     
+    public ArrayList<String>listarNotasFinalesPorGradoAcademico(GradoAcademico gradoAcademico) throws RemoteException;
+    
+    public Integer actualizarNotaFinal(Integer idMatricula, String notaFinal) throws RemoteException;
+    
 }

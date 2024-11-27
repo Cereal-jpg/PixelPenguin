@@ -47,6 +47,7 @@
       <xs:element name="fidAlumno" type="xs:int" />
       <xs:element minOccurs="0" name="gradoAcademico" type="tns:gradoAcademico" />
       <xs:element minOccurs="0" name="idMatricula" type="xs:int" />
+      <xs:element minOccurs="0" name="notaFinal" type="xs:string" />
       <xs:element minOccurs="0" name="seccionAcademica" type="tns:seccionAcademica" />
     </xs:sequence>
   </xs:complexType>

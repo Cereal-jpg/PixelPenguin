@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://services.pixelpenguins.pucp.edu.pe" targetNamespace="http://services.pixelpenguins.pucp.edu.pe" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="Exception" type="tns:Exception" />
   <xs:element name="eliminarCursoXMatricula" type="tns:eliminarCursoXMatricula" />
   <xs:element name="eliminarCursoXMatriculaResponse" type="tns:eliminarCursoXMatriculaResponse" />
-  <xs:element name="generarBuffer" type="tns:generarBuffer" />
-  <xs:element name="generarBufferResponse" type="tns:generarBufferResponse" />
   <xs:element name="insertarCursoXMatricula" type="tns:insertarCursoXMatricula" />
   <xs:element name="insertarCursoXMatriculaResponse" type="tns:insertarCursoXMatriculaResponse" />
   <xs:element name="listarNotasFinalesCursosXAlumno" type="tns:listarNotasFinalesCursosXAlumno" />
@@ -19,37 +16,6 @@
   <xs:element name="modificarCursoXMatriculaResponse" type="tns:modificarCursoXMatriculaResponse" />
   <xs:element name="obtenerPorCursoYMatricula" type="tns:obtenerPorCursoYMatricula" />
   <xs:element name="obtenerPorCursoYMatriculaResponse" type="tns:obtenerPorCursoYMatriculaResponse" />
-  <xs:element name="reporteNotasAlumno" type="tns:reporteNotasAlumno" />
-  <xs:element name="reporteNotasAlumnoResponse" type="tns:reporteNotasAlumnoResponse" />
-  <xs:complexType name="generarBuffer">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="arg0" type="xs:string" />
-      <xs:element name="arg1">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element minOccurs="0" maxOccurs="unbounded" name="entry">
-              <xs:complexType>
-                <xs:sequence>
-                  <xs:element minOccurs="0" name="key" type="xs:string" />
-                  <xs:element minOccurs="0" name="value" type="xs:anyType" />
-                </xs:sequence>
-              </xs:complexType>
-            </xs:element>
-          </xs:sequence>
-        </xs:complexType>
-      </xs:element>
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="generarBufferResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="Exception">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="message" type="xs:string" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="listarNotasFinalesCursosXAlumno">
     <xs:sequence>
       <xs:element minOccurs="0" name="idAlumno" type="xs:int" />
@@ -99,6 +65,7 @@
       <xs:element name="fidAlumno" type="xs:int" />
       <xs:element minOccurs="0" name="gradoAcademico" type="tns:gradoAcademico" />
       <xs:element minOccurs="0" name="idMatricula" type="xs:int" />
+      <xs:element minOccurs="0" name="notaFinal" type="xs:string" />
       <xs:element minOccurs="0" name="seccionAcademica" type="tns:seccionAcademica" />
     </xs:sequence>
   </xs:complexType>
@@ -179,16 +146,6 @@
   <xs:complexType name="listarNotasFinalesXCursoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:cursoXMatricula" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="reporteNotasAlumno">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="fid_Alumno" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="reporteNotasAlumnoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="listarTodosCursoXMatricula">
